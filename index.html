@@ -181,6 +181,19 @@
         body.theme-dark .modal-doi a {
             color: #64B5F6;
         }
+        
+        body.theme-dark .modal-footer {
+            background: #3a3a3a;
+            border-top-color: #4a4a4a;
+        }
+        
+        body.theme-dark .modal-done-btn {
+            background: #2196F3;
+        }
+        
+        body.theme-dark .modal-done-btn:hover {
+            background: #1976D2;
+        }
 
         /* Blue Theme */
         body.theme-blue {
@@ -786,6 +799,37 @@
         .modal-close:hover {
             background: rgba(0, 0, 0, 0.7);
         }
+        
+        .modal-footer {
+            padding: 20px 30px;
+            border-top: 1px solid #e0e0e0;
+            display: flex;
+            justify-content: flex-end;
+            background: #f8f8f8;
+        }
+        
+        .modal-done-btn {
+            padding: 12px 32px;
+            background: #2196F3;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .modal-done-btn:hover {
+            background: #1976D2;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+        
+        .modal-done-btn:active {
+            transform: translateY(0);
+        }
 
         .modal-image {
             width: 100%;
@@ -1004,6 +1048,15 @@
 
             .modal-info {
                 padding: 20px;
+            }
+            
+            .modal-footer {
+                padding: 15px 20px;
+            }
+            
+            .modal-done-btn {
+                padding: 10px 24px;
+                font-size: 14px;
             }
 
             .modal-title {
@@ -1274,6 +1327,10 @@
                     <h3>User Experience & Design Factors</h3>
                     <div class="tag-list" id="uxTags"></div>
                 </div>
+            </div>
+            <!-- Done Button at Bottom -->
+            <div class="modal-footer">
+                <button class="modal-done-btn" id="modalDone">Done</button>
             </div>
         </div>
     </div>

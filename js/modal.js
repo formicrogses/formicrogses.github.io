@@ -76,6 +76,12 @@ class PaperModal {
             closeBtn.onclick = () => this.hide();
         }
         
+        // Add Done button handler
+        const doneBtn = document.getElementById('modalDone');
+        if (doneBtn) {
+            doneBtn.onclick = () => this.hide();
+        }
+        
         this.modal.onclick = (e) => {
             if (e.target === this.modal) {
                 this.hide();
