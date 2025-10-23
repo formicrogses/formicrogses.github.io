@@ -551,6 +551,27 @@
         .modal-info {
             padding: 30px;
         }
+        
+        .modal-doi {
+            margin: 10px 0 15px 0;
+            padding: 10px;
+            background: #f0f7ff;
+            border-radius: 5px;
+            border-left: 3px solid #2196F3;
+        }
+        
+        .modal-doi a {
+            color: #2196F3;
+            text-decoration: none;
+            word-break: break-all;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+        
+        .modal-doi a:hover {
+            color: #1976D2;
+            text-decoration: underline;
+        }
 
         .modal-title {
             font-size: 24px;
@@ -922,6 +943,9 @@
             <img class="modal-image" id="modalImage" src="" alt="">
             <div class="modal-info">
                 <h2 class="modal-title" id="modalTitle"></h2>
+                <div class="modal-doi" id="modalDoi" style="display:none;">
+                    <a href="" target="_blank" rel="noopener" style="color: #2196F3; text-decoration: none;">DOI Link</a>
+                </div>
                 <div class="modal-meta">
                     <div class="meta-item">
                         <span class="meta-label">Year:</span>
@@ -930,6 +954,14 @@
                     <div class="meta-item">
                         <span class="meta-label">Category:</span>
                         <span class="meta-value" id="modalCategory"></span>
+                    </div>
+                    <div class="meta-item" id="modalAuthorsContainer" style="display:none;">
+                        <span class="meta-label">Authors:</span>
+                        <span class="meta-value" id="modalAuthors"></span>
+                    </div>
+                    <div class="meta-item" id="modalJournalContainer" style="display:none;">
+                        <span class="meta-label">Journal/Conference:</span>
+                        <span class="meta-value" id="modalJournal"></span>
                     </div>
                 </div>
                 

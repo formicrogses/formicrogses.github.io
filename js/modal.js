@@ -17,6 +17,35 @@ class PaperModal {
         document.getElementById('modalYear').textContent = this.paper.year;
         document.getElementById('modalCategory').textContent = this.formatCategory(this.paper.category);
         
+        // Show DOI if available
+        const doiDiv = document.getElementById('modalDoi');
+        if (this.paper.doi && this.paper.doi.trim()) {
+            doiDiv.style.display = 'block';
+            const doiLink = doiDiv.querySelector('a');
+            doiLink.href = this.paper.doi;
+            doiLink.textContent = this.paper.doi;
+        } else {
+            doiDiv.style.display = 'none';
+        }
+        
+        // Show authors if available
+        const authorsContainer = document.getElementById('modalAuthorsContainer');
+        if (this.paper.authors && this.paper.authors.trim()) {
+            authorsContainer.style.display = 'block';
+            document.getElementById('modalAuthors').textContent = this.paper.authors;
+        } else {
+            authorsContainer.style.display = 'none';
+        }
+        
+        // Show journal/conference if available
+        const journalContainer = document.getElementById('modalJournalContainer');
+        if (this.paper.journal && this.paper.journal.trim()) {
+            journalContainer.style.display = 'block';
+            document.getElementById('modalJournal').textContent = this.paper.journal;
+        } else {
+            journalContainer.style.display = 'none';
+        }
+        
         // Show all tag groups
         this.showTags('hardware', this.paper.hardwareDevices, 'tag-hardware');
         this.showTags('sensing', this.paper.sensingTechnology, 'tag-sensing');

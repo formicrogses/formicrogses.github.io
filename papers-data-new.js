@@ -1,6 +1,6 @@
-// 自动生成的论文数据文件 V3
-// 只包含Papers文件夹中的图片
-// 生成时间: 2025-10-23T13:10:07.209069
+// Auto-generated papers data file V3 with DOI information
+// Generated from Papers folder images and DOI.xlsx
+// Generation time: 2025-10-23T21:55:42.677995
 
 const PAPERS_DATA = {
   "papers": [
@@ -48,7 +48,10 @@ const PAPERS_DATA = {
         "OneHandUse",
         "TouchOptimized"
       ],
-      "image": "Papers/HARDWARE/Hardware预览图/2005 - Towards keyboard independent touch typing in VR.png"
+      "image": "Papers/HARDWARE/Hardware预览图/2005 - Towards keyboard independent touch typing in VR.png",
+      "doi": "https://doi.org/10.1145/1101616.1101635",
+      "authors": "Kuester Falko, Chen Michelle, Phair Mark E., Mehring Carsten",
+      "journal": "VRST05: The ACM Symposium on Virtual Reality Software and Technology 2005"
     },
     {
       "id": 2,
@@ -93,7 +96,10 @@ const PAPERS_DATA = {
         "HighAccuracy",
         "SocialAcceptability"
       ],
-      "image": "Papers/HARDWARE/Hardware预览图/2008 - Demonstrating the feasibility of using forearm electromyography for muscle-computer interfaces.png"
+      "image": "Papers/HARDWARE/Hardware预览图/2008 - Demonstrating the feasibility of using forearm electromyography for muscle-computer interfaces.png",
+      "doi": "https://doi.org/10.1145/1357054.1357138",
+      "authors": "Saponas T. Scott, Tan Desney S., Morris Dan, Balakrishnan Ravin",
+      "journal": "CHI '08: CHI Conference on Human Factors in Computing Systems"
     },
     {
       "id": 3,
@@ -137,7 +143,10 @@ const PAPERS_DATA = {
         "LowLatency",
         "PortableDesign"
       ],
-      "image": "Papers/HARDWARE/Hardware预览图/2009 - Hand gesture recognition and virtual game control based on 3D accelerometer and EMG sensors.png"
+      "image": "Papers/HARDWARE/Hardware预览图/2009 - Hand gesture recognition and virtual game control based on 3D accelerometer and EMG sensors.png",
+      "doi": "https://doi.org/10.1145/1502650.1502708",
+      "authors": "Zhang Xu, Chen Xiang, Wang Wen-hui, Yang Ji-hai, Lantz Vuokko, Wang Kong-qiao",
+      "journal": "IUI09: 14th International Conference on Intelligent User Interfaces"
     },
     {
       "id": 4,
@@ -183,7 +192,10 @@ const PAPERS_DATA = {
         "PortableDesign",
         "SocialAcceptability"
       ],
-      "image": "Papers/HARDWARE/Hardware预览图/2011 - A prototype of gesture-based interface.png"
+      "image": "Papers/HARDWARE/Hardware预览图/2011 - A prototype of gesture-based interface.png",
+      "doi": "https://doi.org/10.1145/2037373.2037380",
+      "authors": "Lu Zhiyuan, Chen Xiang, Zhao Zhangyan, Wang Kongqiao",
+      "journal": "MobileHCI '11: 13th International Conference on Human Computer Interaction with Mobile Devices and Services"
     },
     {
       "id": 5,
@@ -236,7 +248,10 @@ const PAPERS_DATA = {
         "TouchOptimized",
         "UserAdaptation"
       ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2012 - Design space for finger gestures with hand-held tablets.png"
+      "image": "Papers/GestureDesign/GestureDesign预览图/2012 - Design space for finger gestures with hand-held tablets.png",
+      "doi": "https://doi.org/10.1145/2388676.2388748",
+      "authors": "Wolf Katrin",
+      "journal": "ICMI '12: INTERNATIONAL CONFERENCE ON MULTIMODAL INTERACTION"
     },
     {
       "id": 6,
@@ -288,7 +303,10 @@ const PAPERS_DATA = {
         "PortableDesign",
         "SocialAcceptability"
       ],
-      "image": "Papers/HARDWARE/Hardware预览图/2013 - Augmenting the input space of portable displays using add-on hall-sensor grid.png"
+      "image": "Papers/HARDWARE/Hardware预览图/2013 - Augmenting the input space of portable displays using add-on hall-sensor grid.png",
+      "doi": "https://doi.org/10.1145/2508468.2508470",
+      "authors": "Liang Rong-Hao",
+      "journal": "the adjunct publication of the 26th annual ACM symposium"
     },
     {
       "id": 7,
@@ -338,7 +356,10 @@ const PAPERS_DATA = {
         "PortableDesign",
         "SocialAcceptability"
       ],
-      "image": "Papers/HARDWARE/Hardware预览图/2014 - EarPut augmenting ear-worn devices for ear-based interaction.png"
+      "image": "Papers/HARDWARE/Hardware预览图/2014 - EarPut augmenting ear-worn devices for ear-based interaction.png",
+      "doi": "https://doi.org/10.1145/2686612.2686655",
+      "authors": "Lissermann Roman, Huber Jochen, Hadjakos Aristotelis, Nanayakkara Suranga, Mühlhäuser Max",
+      "journal": "OzCHI '14: the Future of Design"
     },
     {
       "id": 8,
@@ -382,7 +403,10 @@ const PAPERS_DATA = {
         "HighAccuracy",
         "UserAdaptation"
       ],
-      "image": "Papers/HARDWARE/Hardware预览图/2015 - Advancing muscle-computer interfaces with high-density electromyography.png"
+      "image": "Papers/HARDWARE/Hardware预览图/2015 - Advancing muscle-computer interfaces with high-density electromyography.png",
+      "doi": "https://doi.org/10.1145/2702123.2702501",
+      "authors": "Amma Christoph, Krings Thomas, Böer Jonas, Schultz Tanja",
+      "journal": "CHI '15: CHI Conference on Human Factors in Computing Systems"
     },
     {
       "id": 9,
@@ -432,7 +456,10 @@ const PAPERS_DATA = {
         "PortableDesign",
         "SocialAcceptability"
       ],
-      "image": "Papers/HARDWARE/Hardware预览图/2015 - eRing multiple finger gesture recognition with one ring using an electric field.png"
+      "image": "Papers/HARDWARE/Hardware预览图/2015 - eRing multiple finger gesture recognition with one ring using an electric field.png",
+      "doi": "https://doi.org/10.1145/2790044.2790047",
+      "authors": "Wilhelm Mathias, Krakowczyk Daniel, Trollmann Frank, Albayrak Sahin",
+      "journal": "iWOAR '15: 2nd international Workshop on Sensor-based Activity Recognition and Interaction"
     },
     {
       "id": 10,
@@ -489,7 +516,10 @@ const PAPERS_DATA = {
         "PortableDesign",
         "SocialAcceptability"
       ],
-      "image": "Papers/SOFTWARE/Software预览图/2015 - Finger-writing with smartwatch a case for finger and hand gesture recognition using smartwatch.png"
+      "image": "Papers/SOFTWARE/Software预览图/2015 - Finger-writing with smartwatch a case for finger and hand gesture recognition using smartwatch.png",
+      "doi": "https://doi.org/10.1145/2699343.2699350",
+      "authors": "Xu Chao, Pathak Parth H., Mohapatra Prasant",
+      "journal": "HotMobile '15: The 16th International Workshop on Mobile Computing Systems and Applications"
     },
     {
       "id": 11,
@@ -545,7 +575,10 @@ const PAPERS_DATA = {
         "OneHandUse",
         "TouchOptimized"
       ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2015 - Gunslinger subtle arms-down mid-air interaction.png"
+      "image": "Papers/GestureDesign/GestureDesign预览图/2015 - Gunslinger subtle arms-down mid-air interaction.png",
+      "doi": "https://doi.org/10.1145/2807442.2807489",
+      "authors": "Liu Mingyu, Nancel Mathieu, Vogel Daniel",
+      "journal": "UIST '15: The 28th Annual ACM Symposium on User Interface Software and Technology"
     },
     {
       "id": 12,
@@ -601,7 +634,10 @@ const PAPERS_DATA = {
         "PortableDesign",
         "SocialAcceptability"
       ],
-      "image": "Papers/HARDWARE/Hardware预览图/2016 - Microgesture detection for remote interaction with mobile devices.png"
+      "image": "Papers/HARDWARE/Hardware预览图/2016 - Microgesture detection for remote interaction with mobile devices.png",
+      "doi": "https://doi.org/10.1145/2957265.2961865",
+      "authors": "Wolf Katrin, Mayer Sven, Meyer Stephan",
+      "journal": "MobileHCI '16: 18th International Conference on Human-Computer Interaction with Mobile Devices and Services"
     },
     {
       "id": 13,
@@ -662,7 +698,10 @@ const PAPERS_DATA = {
         "SocialAcceptability",
         "TouchOptimized"
       ],
-      "image": "Papers/HARDWARE/Hardware预览图/2016 - Designing a willing-to-use-in-public hand gestural interaction technique for smart glasses.png"
+      "image": "Papers/HARDWARE/Hardware预览图/2016 - Designing a willing-to-use-in-public hand gestural interaction technique for smart glasses.png",
+      "doi": "https://doi.org/10.1145/2858036.2858436",
+      "authors": "Hsieh Yi-Ta, Jylhä Antti, Orso Valeria, Gamberini Luciano, Jacucci Giulio",
+      "journal": "CHI'16: CHI Conference on Human Factors in Computing Systems"
     },
     {
       "id": 15,
@@ -727,7 +766,10 @@ const PAPERS_DATA = {
         "SmallScreen",
         "SocialAcceptability"
       ],
-      "image": "Papers/HARDWARE/Hardware预览图/2017 - DeformWear deformation input on tiny wearable devices.png"
+      "image": "Papers/HARDWARE/Hardware预览图/2017 - DeformWear deformation input on tiny wearable devices.png",
+      "doi": "https://doi.org/10.1145/3090093",
+      "authors": "Weigel Martin, Steimle Jürgen",
+      "journal": "Proc ACM Interact Mob Wearable Ubiquitous Technol"
     },
     {
       "id": 17,
@@ -768,7 +810,10 @@ const PAPERS_DATA = {
         "TouchOptimized",
         "UserAdaptation"
       ],
-      "image": "Papers/HARDWARE/Hardware预览图/2018 - GestAKey touch interaction on individual keycaps.png"
+      "image": "Papers/HARDWARE/Hardware预览图/2018 - GestAKey touch interaction on individual keycaps.png",
+      "doi": "https://doi.org/10.1145/3173574.3174170",
+      "authors": "Shi Yilei, Zhang Haimo, Rajapakse Hasitha, Perera Nuwan Tharaka, Vega Gálvez Tomás, Nanayakkara Suranga",
+      "journal": "CHI '18: CHI Conference on Human Factors in Computing Systems"
     },
     {
       "id": 18,
@@ -815,7 +860,10 @@ const PAPERS_DATA = {
         "SocialAcceptability",
         "UserAdaptation"
       ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2018 - Gestures for smart rings empirical results, insights, and design implications.png"
+      "image": "Papers/GestureDesign/GestureDesign预览图/2018 - Gestures for smart rings empirical results, insights, and design implications.png",
+      "doi": "https://doi.org/10.1145/3196709.3196741",
+      "authors": "Gheran Bogdan-Florin, Vanderdonckt Jean, Vatavu Radu-Daniel",
+      "journal": "DIS '18: Designing Interactive Systems Conference 2018"
     },
     {
       "id": 19,
@@ -863,7 +911,10 @@ const PAPERS_DATA = {
         "OneHandUse",
         "PortableDesign"
       ],
-      "image": "Papers/HARDWARE/Hardware预览图/2018 - Thumb-in-motion evaluating thumb-to-ring microgestures for athletic activity.png"
+      "image": "Papers/HARDWARE/Hardware预览图/2018 - Thumb-in-motion evaluating thumb-to-ring microgestures for athletic activity.png",
+      "doi": "https://doi.org/10.1145/3267782.3267796",
+      "authors": "Boldu Roger, Dancu Alexandru, Matthies Denys J. C., Cascón Pablo Gallego, Ransir Shanaka, Nanayakkara Suranga",
+      "journal": "SUI '18: Symposium on Spatial User Interaction"
     },
     {
       "id": 20,
@@ -919,7 +970,10 @@ const PAPERS_DATA = {
         "SmallScreen",
         "TouchOptimized"
       ],
-      "image": "Papers/SOFTWARE/Software预览图/2018 - Touch+finger extending touch-based user interface capabilities with idle finger gestures in the air.png"
+      "image": "Papers/SOFTWARE/Software预览图/2018 - Touch+finger extending touch-based user interface capabilities with idle finger gestures in the air.png",
+      "doi": "https://doi.org/10.1145/3242587.3242651",
+      "authors": "Lim Hyunchul, Chung Jungmin, Oh Changhoon, Park SoHyun, Lee Joonhwan, Suh Bongwon",
+      "journal": "UIST '18: The 31st Annual ACM Symposium on User Interface Software and Technology"
     },
     {
       "id": 21,
@@ -971,7 +1025,10 @@ const PAPERS_DATA = {
         "HighAccuracy",
         "OneHandUse"
       ],
-      "image": "Papers/SOFTWARE/Software预览图/2018-FingerInput Capturing Expressive Single-Hand Thumb-to-Finger Microgestures.png"
+      "image": "Papers/SOFTWARE/Software预览图/2018-FingerInput Capturing Expressive Single-Hand Thumb-to-Finger Microgestures.png",
+      "doi": "https://doi.org/10.1145/3279778.3279799",
+      "authors": "Soliman Mohamed, Mueller Franziska, Hegemann Lena, Roo Joan Sol, Theobalt Christian, Steimle Jürgen",
+      "journal": "ISS '18: 2018 ACM International Conference on Interactive Surfaces and Spaces"
     },
     {
       "id": 22,
@@ -1018,7 +1075,10 @@ const PAPERS_DATA = {
         "OneHandUse",
         "PortableDesign"
       ],
-      "image": "Papers/HARDWARE/Hardware预览图/2019 - AudioTouch minimally invasive sensing of micro-gestures via active bio-acoustic sensing.png"
+      "image": "Papers/HARDWARE/Hardware预览图/2019 - AudioTouch minimally invasive sensing of micro-gestures via active bio-acoustic sensing.png",
+      "doi": "https://doi.org/10.1145/3338286.3340147",
+      "authors": "Kubo Yuki, Koguchi Yuto, Shizuki Buntarou, Takahashi Shin, Hilliges Otmar",
+      "journal": "MobileHCI '19: 21st International Conference on Human-Computer Interaction with Mobile Devices and Services"
     },
     {
       "id": 23,
@@ -1069,7 +1129,10 @@ const PAPERS_DATA = {
         "SmallScreen",
         "SocialAcceptability"
       ],
-      "image": "Papers/SOFTWARE/Software预览图/2019 - TipText eyes-free text entry on a fingertip keyboard.png"
+      "image": "Papers/SOFTWARE/Software预览图/2019 - TipText eyes-free text entry on a fingertip keyboard.png",
+      "doi": "https://doi.org/10.1145/3332165.3347865",
+      "authors": "Xu Zheer, Wong Pui Chung, Gong Jun, Wu Te-Yen, Nittala Aditya Shekhar, Bi Xiaojun, Steimle Jürgen, Fu Hongbo, Zhu Kening, Yang Xing-Dong",
+      "journal": "UIST '19: The 32nd Annual ACM Symposium on User Interface Software and Technology"
     },
     {
       "id": 24,
@@ -1125,7 +1188,10 @@ const PAPERS_DATA = {
         "PortableDesign",
         "UserAdaptation"
       ],
-      "image": "Papers/HARDWARE/Hardware预览图/2020 - E-textile microinteractions augmenting twist with flick, slide and grasp gestures for soft electronics.png"
+      "image": "Papers/HARDWARE/Hardware预览图/2020 - E-textile microinteractions augmenting twist with flick, slide and grasp gestures for soft electronics.png",
+      "doi": "https://doi.org/10.1145/3313831.3376236",
+      "authors": "Olwal Alex, Starner Thad, Mainini Gowa",
+      "journal": "CHI '20: CHI Conference on Human Factors in Computing Systems"
     },
     {
       "id": 25,
@@ -1182,7 +1248,10 @@ const PAPERS_DATA = {
         "SocialAcceptability",
         "UserAdaptation"
       ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2020 - Exploring user defined gestures for ear-based interactions.png"
+      "image": "Papers/GestureDesign/GestureDesign预览图/2020 - Exploring user defined gestures for ear-based interactions.png",
+      "doi": "https://doi.org/10.1145/3427314",
+      "authors": "Chen Yu-Chun, Liao Chia-Ying, Hsu Shuo-wen, Huang Da-Yuan, Chen Bing-Yu",
+      "journal": "Proc ACM Hum Comput Interact"
     },
     {
       "id": 26,
@@ -1236,7 +1305,10 @@ const PAPERS_DATA = {
         "LowLatency",
         "PortableDesign"
       ],
-      "image": "Papers/HARDWARE/Hardware预览图/2020 - Fabriccio touchless gestural input on interactive fabrics.png"
+      "image": "Papers/HARDWARE/Hardware预览图/2020 - Fabriccio touchless gestural input on interactive fabrics.png",
+      "doi": "https://doi.org/10.1145/3313831.3376681",
+      "authors": "Wu Te-Yen, Qi Shutong, Chen Junchi, Shang MuJie, Gong Jun, Seyed Teddy, Yang Xing-Dong",
+      "journal": "CHI '20: CHI Conference on Human Factors in Computing Systems"
     },
     {
       "id": 27,
@@ -1294,7 +1366,10 @@ const PAPERS_DATA = {
         "PortableDesign",
         "UserAdaptation"
       ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2020 - Finger gesture tracking for interactive applications a pilot study with sign languages.png"
+      "image": "Papers/GestureDesign/GestureDesign预览图/2020 - Finger gesture tracking for interactive applications a pilot study with sign languages.png",
+      "doi": "https://doi.org/10.1145/3414117",
+      "authors": "Liu Yilin, Jiang Fengyang, Gowda Mahanth",
+      "journal": "Proc ACM Interact Mob Wearable Ubiquitous Technol"
     },
     {
       "id": 28,
@@ -1345,7 +1420,10 @@ const PAPERS_DATA = {
         "OneHandUse",
         "SocialAcceptability"
       ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2020 - How subtle can it get A trimodal study of ring-sized interfaces for one-handed drone control.png"
+      "image": "Papers/GestureDesign/GestureDesign预览图/2020 - How subtle can it get A trimodal study of ring-sized interfaces for one-handed drone control.png",
+      "doi": "https://doi.org/10.1145/3397319",
+      "authors": "Yau Yui-Pan, Lee Lik Hang, Li Zheng, Braud Tristan, Ho Yi-Hsuan, Hui Pan",
+      "journal": "Proc ACM Interact Mob Wearable Ubiquitous Technol"
     },
     {
       "id": 29,
@@ -1393,7 +1471,10 @@ const PAPERS_DATA = {
         "OneHandUse",
         "SocialAcceptability"
       ],
-      "image": "Papers/HARDWARE/Hardware预览图/2020 - Nailz sensing hand input with touch sensitive nails.png"
+      "image": "Papers/HARDWARE/Hardware预览图/2020 - Nailz sensing hand input with touch sensitive nails.png",
+      "doi": "https://doi.org/10.1145/3313831.3376778",
+      "authors": "Lee DoYoung, Lee SooHwan, Oakley Ian",
+      "journal": "CHI '20: CHI Conference on Human Factors in Computing Systems"
     },
     {
       "id": 30,
@@ -1443,7 +1524,10 @@ const PAPERS_DATA = {
         "PortableDesign",
         "SocialAcceptability"
       ],
-      "image": "Papers/HARDWARE/Hardware预览图/2020 - ThermalRing gesture and tag inputs enabled by a thermal imaging smart ring.png"
+      "image": "Papers/HARDWARE/Hardware预览图/2020 - ThermalRing gesture and tag inputs enabled by a thermal imaging smart ring.png",
+      "doi": "https://doi.org/10.1145/3313831.3376323",
+      "authors": "Zhang Tengxiang, Zeng Xin, Zhang Yinshuai, Sun Ke, Wang Yuntao, Chen Yiqiang",
+      "journal": "CHI '20: CHI Conference on Human Factors in Computing Systems"
     },
     {
       "id": 32,
@@ -1495,7 +1579,10 @@ const PAPERS_DATA = {
         "OneHandUse",
         "PortableDesign"
       ],
-      "image": "Papers/HARDWARE/Hardware预览图/2021 - ElectroRing subtle pinch and touch detection with a ring.png"
+      "image": "Papers/HARDWARE/Hardware预览图/2021 - ElectroRing subtle pinch and touch detection with a ring.png",
+      "doi": "https://doi.org/10.1145/3411764.3445094",
+      "authors": "Kienzle Wolf, Whitmire Eric, Rittaler Chris, Benko Hrvoje",
+      "journal": "CHI '21: CHI Conference on Human Factors in Computing Systems"
     },
     {
       "id": 33,
@@ -1539,7 +1626,10 @@ const PAPERS_DATA = {
         "EncumberedInteraction",
         "HighAccuracy"
       ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2021 - SoloFinger robust microgestures while grasping everyday objects.png"
+      "image": "Papers/GestureDesign/GestureDesign预览图/2021 - SoloFinger robust microgestures while grasping everyday objects.png",
+      "doi": "https://doi.org/10.1145/3411764.3445197",
+      "authors": "Sharma Adwait, Hedderich Michael A., Bhardwaj Divyanshu, Fruchard Bruno, McIntosh Jess, Nittala Aditya Shekhar, Klakow Dietrich, Ashbrook Daniel, Steimle Jürgen",
+      "journal": "CHI '21: CHI Conference on Human Factors in Computing Systems"
     },
     {
       "id": 34,
@@ -1589,7 +1679,9 @@ const PAPERS_DATA = {
         "PortableDesign",
         "SocialAcceptability"
       ],
-      "image": "Papers/HARDWARE/Hardware预览图/2021 - ThumbTrak recognizing micro-finger poses using a ring with proximity sensing.png"
+      "image": "Papers/HARDWARE/Hardware预览图/2021 - ThumbTrak recognizing micro-finger poses using a ring with proximity sensing.png",
+      "authors": "Sun Wei, Li Franklin Mingzhe, Huang Congshu, Lei Zhenyu, Steeper Benjamin, Tao Songyun, Tian Feng, Zhang Cheng",
+      "journal": "Proceedings of the 23rd International Conference on Mobile Human-Computer Interaction"
     },
     {
       "id": 36,
@@ -1653,7 +1745,10 @@ const PAPERS_DATA = {
         "PortableDesign",
         "SocialAcceptability"
       ],
-      "image": "Papers/HARDWARE/Hardware预览图/2021-DualRing Enabling Subtle and Expressive Hand Interaction with Dual IMU Rings.png"
+      "image": "Papers/HARDWARE/Hardware预览图/2021-DualRing Enabling Subtle and Expressive Hand Interaction with Dual IMU Rings.png",
+      "doi": "https://doi.org/10.1145/3478114",
+      "authors": "Liang Chen, Yu Chun, Qin Yue, Wang Yuntao, Shi Yuanchun",
+      "journal": "Proc ACM Interact Mob Wearable Ubiquitous Technol"
     },
     {
       "id": 37,
@@ -1710,7 +1805,10 @@ const PAPERS_DATA = {
         "PortableDesign",
         "SocialAcceptability"
       ],
-      "image": "Papers/HARDWARE/Hardware预览图/2022 - MicroPress detecting pressure and hover distance in thumb-to-finger interactions.png"
+      "image": "Papers/HARDWARE/Hardware预览图/2022 - MicroPress detecting pressure and hover distance in thumb-to-finger interactions.png",
+      "doi": "https://doi.org/10.1145/3565970.3567698",
+      "authors": "Dobinson Rhett, Teyssier Marc, Steimle Jürgen, Fruchard Bruno",
+      "journal": "SUI '22: Symposium on Spatial User Interaction"
     },
     {
       "id": 39,
@@ -1759,7 +1857,10 @@ const PAPERS_DATA = {
         "QWERTYLayout",
         "SmallScreen"
       ],
-      "image": "Papers/HARDWARE/Hardware预览图/2023-DRG-Keyboard Enabling Subtle Gesture Typing on the Fingertip with Dual IMU Rings.png"
+      "image": "Papers/HARDWARE/Hardware预览图/2023-DRG-Keyboard Enabling Subtle Gesture Typing on the Fingertip with Dual IMU Rings.png",
+      "doi": "https://doi.org/10.1145/3569463",
+      "authors": "Liang Chen, Hsia Chi, Yu Chun, Yan Yukang, Wang Yuntao, Shi Yuanchun",
+      "journal": "Proc ACM Interact Mob Wearable Ubiquitous Technol"
     },
     {
       "id": 40,
@@ -1811,7 +1912,10 @@ const PAPERS_DATA = {
         "PortableDesign",
         "SocialAcceptability"
       ],
-      "image": "Papers/HARDWARE/Hardware预览图/2023-EFRing Enabling Thumb-to-Index-Finger Microgesture Interaction through Electric Field Sensing Using Single Smart Ring.png"
+      "image": "Papers/HARDWARE/Hardware预览图/2023-EFRing Enabling Thumb-to-Index-Finger Microgesture Interaction through Electric Field Sensing Using Single Smart Ring.png",
+      "doi": "https://doi.org/10.1145/3569478",
+      "authors": "Chen Taizhou, Li Tianpei, Yang Xingyu, Zhu Kening",
+      "journal": "Proc ACM Interact Mob Wearable Ubiquitous Technol"
     },
     {
       "id": 41,
@@ -1869,7 +1973,10 @@ const PAPERS_DATA = {
         "OneHandUse",
         "PortableDesign"
       ],
-      "image": "Papers/HARDWARE/Hardware预览图/2023-SparseIMU Computational Design of Sparse IMU Layouts for Sensing Fine-grained Finger Microgestures.png"
+      "image": "Papers/HARDWARE/Hardware预览图/2023-SparseIMU Computational Design of Sparse IMU Layouts for Sensing Fine-grained Finger Microgestures.png",
+      "doi": "https://doi.org/10.1145/3569894",
+      "authors": "Sharma Adwait, Salchow-Hömmen Christina, Mollyn Vimal Suresh, Nittala Aditya Shekhar, Hedderich Michael A., Koelle Marion, Seel Thomas, Steimle Jürgen",
+      "journal": "ACM Trans Comput-Hum Interact"
     },
     {
       "id": 42,
@@ -1925,7 +2032,10 @@ const PAPERS_DATA = {
         "PortableDesign",
         "SocialAcceptability"
       ],
-      "image": "Papers/HARDWARE/Hardware预览图/2023-VibAware Context-Aware Tap and Swipe Gestures Using Bio-Acoustic Sensing.png"
+      "image": "Papers/HARDWARE/Hardware预览图/2023-VibAware Context-Aware Tap and Swipe Gestures Using Bio-Acoustic Sensing.png",
+      "doi": "https://doi.org/10.1145/3607822.3614544",
+      "authors": "Kim Jina, Kim Minyung, Lee Woo Suk, Yoon Sang Ho",
+      "journal": "SUI '23: ACM Symposium on Spatial User Interaction"
     },
     {
       "id": 43,
@@ -1977,7 +2087,10 @@ const PAPERS_DATA = {
         "PortableDesign",
         "SocialAcceptability"
       ],
-      "image": "Papers/HARDWARE/Hardware预览图/2024 - MAF exploring mobile acoustic field for hand-to-face gesture interactions.png"
+      "image": "Papers/HARDWARE/Hardware预览图/2024 - MAF exploring mobile acoustic field for hand-to-face gesture interactions.png",
+      "doi": "https://doi.org/10.1145/3613904.3642437",
+      "authors": "Yang Yongjie, Chen Tao, Huang Yujing, Guo Xiuzhen, Shangguan Longfei",
+      "journal": "CHI '24: CHI Conference on Human Factors in Computing Systems"
     },
     {
       "id": 44,
@@ -2030,7 +2143,10 @@ const PAPERS_DATA = {
         "SmallScreen",
         "SocialAcceptability"
       ],
-      "image": "Papers/HARDWARE/Hardware预览图/2024 - RadarHand a wrist-worn radar for on-skin touch-based proprioceptive gestures.png"
+      "image": "Papers/HARDWARE/Hardware预览图/2024 - RadarHand a wrist-worn radar for on-skin touch-based proprioceptive gestures.png",
+      "doi": "https://doi.org/10.1145/3617365",
+      "authors": "Hajika Ryo, Gunasekaran Tamil Selvan, Haigh Chloe Dolma Si Ying, Pai Yun Suen, Hayashi Eiji, Lien Jaime, Lottridge Danielle, Billinghurst Mark",
+      "journal": "ACM Trans Comput-Hum Interact"
     },
     {
       "id": 45,
@@ -2084,7 +2200,10 @@ const PAPERS_DATA = {
         "PortableDesign",
         "SocialAcceptability"
       ],
-      "image": "Papers/HARDWARE/Hardware预览图/2024 - Ring-a-pose a ring for continuous hand pose tracking.png"
+      "image": "Papers/HARDWARE/Hardware预览图/2024 - Ring-a-pose a ring for continuous hand pose tracking.png",
+      "doi": "https://doi.org/10.1145/3699741",
+      "authors": "Yu Tianhong Catherine, Hu Guilin, Zhang Ruidong, Lim Hyunchul, Mahmud Saif, Lee Chi-Jung, Li Ke, Agarwal Devansh, Nie Shuyang, Oh Jinseok",
+      "journal": "Proc ACM Interact Mob Wearable Ubiquitous Technol"
     },
     {
       "id": 46,
@@ -2132,7 +2251,10 @@ const PAPERS_DATA = {
         "SmallScreen",
         "SocialAcceptability"
       ],
-      "image": "Papers/SOFTWARE/Software预览图/2024 - Studying the simultaneous visual representation of microgestures.png"
+      "image": "Papers/SOFTWARE/Software预览图/2024 - Studying the simultaneous visual representation of microgestures.png",
+      "doi": "https://doi.org/10.1145/3676523",
+      "authors": "Lambert Vincent, Goguey Alix, Malacria Sylvain, Nigay Laurence",
+      "journal": "Proc ACM Hum Comput Interact"
     },
     {
       "id": 47,
@@ -2183,7 +2305,10 @@ const PAPERS_DATA = {
         "OneHandUse",
         "PortableDesign"
       ],
-      "image": "Papers/HARDWARE/Hardware预览图/2024-HCMG Human-Capacitance based Micro Gesture for VR AR.png"
+      "image": "Papers/HARDWARE/Hardware预览图/2024-HCMG Human-Capacitance based Micro Gesture for VR AR.png",
+      "doi": "https://doi.org/10.1145/3675094.3678386",
+      "authors": "Lu Yu, Ding Dian, Wang Ran, Xue Guangtao",
+      "journal": "UbiComp '24: The 2024 ACM International Joint Conference on Pervasive and Ubiquitous Computing"
     },
     {
       "id": 48,
@@ -2233,7 +2358,10 @@ const PAPERS_DATA = {
         "PortableDesign",
         "SocialAcceptability"
       ],
-      "image": "Papers/HARDWARE/Hardware预览图/2025 - BudsID mobile-ready and expressive finger identification input for earbuds.png"
+      "image": "Papers/HARDWARE/Hardware预览图/2025 - BudsID mobile-ready and expressive finger identification input for earbuds.png",
+      "doi": "https://doi.org/10.1145/3706598.3714133",
+      "authors": "Kim Jiwan, Han Mingyu, Oakley Ian",
+      "journal": "CHI 2025: CHI Conference on Human Factors in Computing Systems"
     },
     {
       "id": 49,
@@ -2281,7 +2409,10 @@ const PAPERS_DATA = {
         "SocialAcceptability",
         "UserAdaptation"
       ],
-      "image": "Papers/SOFTWARE/Software预览图/2025 - Gesture and audio-haptic guidance techniques to direct conversations with intelligent voice interfaces.png"
+      "image": "Papers/SOFTWARE/Software预览图/2025 - Gesture and audio-haptic guidance techniques to direct conversations with intelligent voice interfaces.png",
+      "doi": "https://doi.org/10.1145/3706598.3714310",
+      "authors": "Rajaram Shwetha, Surale Hemant Bhaskar, McConkey Codie, Rognon Carine, Mehta Hrim, Glueck Michael, Collins Christopher",
+      "journal": "CHI 2025: CHI Conference on Human Factors in Computing Systems"
     },
     {
       "id": 50,
@@ -2332,7 +2463,10 @@ const PAPERS_DATA = {
         "LowLatency",
         "PortableDesign"
       ],
-      "image": "Papers/SOFTWARE/Software预览图/2025 - LeakyFeeder In-air gesture control through leaky acoustic waves.png"
+      "image": "Papers/SOFTWARE/Software预览图/2025 - LeakyFeeder In-air gesture control through leaky acoustic waves.png",
+      "doi": "https://doi.org/10.1145/3715014.3722054",
+      "authors": "Yang Yongjie, Chen Tao, An Zhenlin, Cao Shirui, Fan Xiaoran, Shangguan Longfei",
+      "journal": "SenSys '25: 23rd ACM Conference on Embedded Networked Sensor Systems"
     },
     {
       "id": 51,
@@ -2388,7 +2522,10 @@ const PAPERS_DATA = {
         "PortableDesign",
         "UserAdaptation"
       ],
-      "image": "Papers/HARDWARE/Hardware预览图/2025-DCSNN An Efficient and High-speed sEMG-based Transient-state Micro-gesture Recognition Method on Wearable Devices.png"
+      "image": "Papers/HARDWARE/Hardware预览图/2025-DCSNN An Efficient and High-speed sEMG-based Transient-state Micro-gesture Recognition Method on Wearable Devices.png",
+      "doi": "https://doi.org/10.1145/3729494",
+      "authors": "Han Youfang, Zhao Wei, Gao Ge, Chen Xiangjin, Yin Jiliang, Wang Lin, Meng Xin, Yu Yang, Zhang Tengxiang",
+      "journal": "Proc ACM Interact Mob Wearable Ubiquitous Technol"
     },
     {
       "id": 52,
@@ -2438,7 +2575,10 @@ const PAPERS_DATA = {
         "SocialAcceptability",
         "UserAdaptation"
       ],
-      "image": "Papers/HARDWARE/Hardware预览图/2025-VibRing A Wearable Vibroacoustic Sensor for Single-Handed Gesture Recognition.png"
+      "image": "Papers/HARDWARE/Hardware预览图/2025-VibRing A Wearable Vibroacoustic Sensor for Single-Handed Gesture Recognition.png",
+      "doi": "https://doi.org/10.1145/3733052",
+      "authors": "Li Bu, Huang Xincheng, Xiao Robert",
+      "journal": "Proc ACM Hum Comput Interact"
     },
     {
       "id": 53,
@@ -2486,7 +2626,10 @@ const PAPERS_DATA = {
         "HighAccuracy",
         "SocialAcceptability"
       ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2017 - Exploring mixed-scale gesture interaction.png"
+      "image": "Papers/GestureDesign/GestureDesign预览图/2017 - Exploring mixed-scale gesture interaction.png",
+      "doi": "https://doi.org/10.1145/3145690.3145740",
+      "authors": "Ens Barrett, Quigley Aaron, Yeo Hui-Shyong, Irani Pourang, Piumsomboon Thammathip, Billinghurst Mark",
+      "journal": "SA '17: SIGGRAPH Asia 2017"
     },
     {
       "id": 54,
@@ -2537,7 +2680,10 @@ const PAPERS_DATA = {
         "HighAccuracy",
         "LowLatency"
       ],
-      "image": "Papers/SOFTWARE/Software预览图/2018 - Depth aware finger tapping on virtual displays.png"
+      "image": "Papers/SOFTWARE/Software预览图/2018 - Depth aware finger tapping on virtual displays.png",
+      "doi": "https://doi.org/10.1145/3210240.3210315",
+      "authors": "Sun Ke, Wang Wei, Liu Alex X., Dai Haipeng",
+      "journal": "MobiSys '18: The 16th Annual International Conference on Mobile Systems, Applications, and Services"
     },
     {
       "id": 55,
@@ -2584,7 +2730,10 @@ const PAPERS_DATA = {
         "LowLatency",
         "UserAdaptation"
       ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2019 - Experimental analysis of barehand mid-air mode-switching techniques in virtual reality.png"
+      "image": "Papers/GestureDesign/GestureDesign预览图/2019 - Experimental analysis of barehand mid-air mode-switching techniques in virtual reality.png",
+      "doi": "https://doi.org/10.1145/3290605.3300426",
+      "authors": "Surale Hemant Bhaskar, Matulic Fabrice, Vogel Daniel",
+      "journal": "CHI '19: CHI Conference on Human Factors in Computing Systems"
     },
     {
       "id": 56,
@@ -2632,7 +2781,10 @@ const PAPERS_DATA = {
         "HighAccuracy",
         "QWERTYLayout"
       ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2020 - Characterizing in-air eyes-free typing movements in VR.png"
+      "image": "Papers/GestureDesign/GestureDesign预览图/2020 - Characterizing in-air eyes-free typing movements in VR.png",
+      "doi": "https://doi.org/10.1145/3385956.3418963",
+      "authors": "Gil Hyunjae, Shin Yonghwan, Son Hyungki, Hwang Inwook, Oakley Ian, Kim Jin Ryong",
+      "journal": "VRST '20: 26th ACM Symposium on Virtual Reality Software and Technology"
     },
     {
       "id": 57,
@@ -2680,7 +2832,10 @@ const PAPERS_DATA = {
         "SocialAcceptability",
         "UserAdaptation"
       ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2020-User gesture elicitation of common smartphone tasks for hand proximate user interfaces.png"
+      "image": "Papers/GestureDesign/GestureDesign预览图/2020-User gesture elicitation of common smartphone tasks for hand proximate user interfaces.png",
+      "doi": "https://doi.org/10.1145/3396339.3396363",
+      "authors": "Faleel Shariff A. M., Gammon Michael, Sakamoto Yumiko, Menon Carlo, Irani Pourang",
+      "journal": "AH '20: 11th Augmented Human International Conference"
     },
     {
       "id": 58,
@@ -2726,7 +2881,10 @@ const PAPERS_DATA = {
         "OcclusionAvoidance",
         "OneHandUse"
       ],
-      "image": "Papers/HARDWARE/Hardware预览图/2021 - AtaTouch robust finger pinch detection for a VR controller using RF return loss.png"
+      "image": "Papers/HARDWARE/Hardware预览图/2021 - AtaTouch robust finger pinch detection for a VR controller using RF return loss.png",
+      "doi": "https://doi.org/10.1145/3411764.3445442",
+      "authors": "Kim Daehwa, Park Keunwoo, Lee Geehyuk",
+      "journal": "CHI '21: CHI Conference on Human Factors in Computing Systems"
     },
     {
       "id": 60,
@@ -2770,7 +2928,10 @@ const PAPERS_DATA = {
         "OneHandUse",
         "UserAdaptation"
       ],
-      "image": "Papers/SOFTWARE/Software预览图/2024 - GraV grasp volume data for the design of one-handed XR interfaces.png"
+      "image": "Papers/SOFTWARE/Software预览图/2024 - GraV grasp volume data for the design of one-handed XR interfaces.png",
+      "doi": "https://doi.org/10.1145/3643834.3661567",
+      "authors": "Aponte Alejandro, Caetano Arthur, Luo Yunhao, Sra Misha",
+      "journal": "DIS '24: Designing Interactive Systems Conference"
     },
     {
       "id": 61,
@@ -2812,7 +2973,10 @@ const PAPERS_DATA = {
         "LowLatency",
         "UserAdaptation"
       ],
-      "image": "Papers/SOFTWARE/Software预览图/2024 - HapticPilot authoring in-situ hand posture-adaptive vibrotactile feedback for virtual reality.png"
+      "image": "Papers/SOFTWARE/Software预览图/2024 - HapticPilot authoring in-situ hand posture-adaptive vibrotactile feedback for virtual reality.png",
+      "doi": "https://doi.org/10.1145/3631453",
+      "authors": "Sung Youjin, Kim Rachel, Song Kun Woo, Shao Yitian, Yoon Sang Ho",
+      "journal": "Proc ACM Interact Mob Wearable Ubiquitous Technol"
     },
     {
       "id": 62,
@@ -2863,7 +3027,10 @@ const PAPERS_DATA = {
         "SocialAcceptability",
         "TouchOptimized"
       ],
-      "image": "Papers/SOFTWARE/Software预览图/2024 - TriPad touch input in AR on ordinary surfaces with hand tracking only.png"
+      "image": "Papers/SOFTWARE/Software预览图/2024 - TriPad touch input in AR on ordinary surfaces with hand tracking only.png",
+      "doi": "https://doi.org/10.1145/3613904.3642323",
+      "authors": "Dupré Camille, Appert Caroline, Rey Stéphanie, Saidi Houssem, Pietriga Emmanuel",
+      "journal": "CHI '24: CHI Conference on Human Factors in Computing Systems"
     },
     {
       "id": 63,
@@ -2915,7 +3082,10 @@ const PAPERS_DATA = {
         "SocialAcceptability",
         "UserAdaptation"
       ],
-      "image": "Papers/SOFTWARE/Software预览图/2024-GraspUI Seamlessly Integrating Object-Centric Gestures within the Seven Phases of Grasping.png"
+      "image": "Papers/SOFTWARE/Software预览图/2024-GraspUI Seamlessly Integrating Object-Centric Gestures within the Seven Phases of Grasping.png",
+      "doi": "https://doi.org/10.1145/3643834.3661551",
+      "authors": "Sharma Adwait, Ivanov Alexander, Lai Frances, Grossman Tovi, Santosa Stephanie",
+      "journal": "DIS '24: Designing Interactive Systems Conference"
     },
     {
       "id": 64,
@@ -2964,7 +3134,10 @@ const PAPERS_DATA = {
         "PortableDesign",
         "UserAdaptation"
       ],
-      "image": "Papers/HARDWARE/Hardware预览图/2024-Stick-To-XR Understanding Stick-Based User Interface Design for Extended Reality.png"
+      "image": "Papers/HARDWARE/Hardware预览图/2024-Stick-To-XR Understanding Stick-Based User Interface Design for Extended Reality.png",
+      "doi": "https://doi.org/10.1145/3643834.3661627",
+      "authors": "Zhang Yaying, Shi Rongkai, Liang Hai-Ning",
+      "journal": "DIS '24: Designing Interactive Systems Conference"
     },
     {
       "id": 65,
@@ -3019,7 +3192,10 @@ const PAPERS_DATA = {
         "OneHandUse",
         "UserAdaptation"
       ],
-      "image": "Papers/SOFTWARE/Software预览图/2024-STMG A Machine Learning Microgesture Recognition System for Supporting Thumb-Based VR AR Input.png"
+      "image": "Papers/SOFTWARE/Software预览图/2024-STMG A Machine Learning Microgesture Recognition System for Supporting Thumb-Based VR AR Input.png",
+      "doi": "https://doi.org/10.1145/3613904.3642702",
+      "authors": "Kin Kenrick, Wan Chengde, Koh Ken, Marin Andrei, Camgöz Necati Cihan, Zhang Yubo, Cai Yujun, Kovalev Fedor, Ben-Zacharia Moshe, Hoople Shannon, Nunes-Ueno Marcos, Sanchez-Rodriguez Mariel, Bhargava Ayush, Wang Robert, Sauser Eric, Ma Shugao",
+      "journal": "CHI '24: CHI Conference on Human Factors in Computing Systems"
     },
     {
       "id": 66,
@@ -3069,7 +3245,10 @@ const PAPERS_DATA = {
         "OneHandUse",
         "SocialAcceptability"
       ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2024-Understanding Gesture and Microgesture Inputs for Augmented Reality Maps.png"
+      "image": "Papers/GestureDesign/GestureDesign预览图/2024-Understanding Gesture and Microgesture Inputs for Augmented Reality Maps.png",
+      "doi": "https://doi.org/10.1145/3643834.3661630",
+      "authors": "Danyluk Kurtis, Klueber Simon, Nittala Aditya Shekhar, Willett Wesley",
+      "journal": "DIS '24: Designing Interactive Systems Conference"
     },
     {
       "id": 67,
@@ -3117,7 +3296,10 @@ const PAPERS_DATA = {
         "OneHandUse",
         "SocialAcceptability"
       ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2025-T2IRay Design of Thumb-to-Index based Indirect Pointing for Continuous and Robust AR VR Input.png"
+      "image": "Papers/GestureDesign/GestureDesign预览图/2025-T2IRay Design of Thumb-to-Index based Indirect Pointing for Continuous and Robust AR VR Input.png",
+      "doi": "https://doi.org/10.1145/3706598.3713442",
+      "authors": "Kim Jina, Zhang Yang, Yoon Sang Ho",
+      "journal": "CHI 2025: CHI Conference on Human Factors in Computing Systems"
     },
     {
       "id": 68,
@@ -3168,7 +3350,10 @@ const PAPERS_DATA = {
         "PortableDesign",
         "SocialAcceptability"
       ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2010 - Key-press gestures recognition and interaction based on SEMG signals.png"
+      "image": "Papers/GestureDesign/GestureDesign预览图/2010 - Key-press gestures recognition and interaction based on SEMG signals.png",
+      "doi": "https://doi.org/10.1145/1891903.1891950",
+      "authors": "Cheng Juan, Chen Xiang, Lu Zhiyuan, Wang Kongqiao, Shen Minfen",
+      "journal": "ICMI-MLMI '10: International Conference on Multimodal Interfaces / Workshop on Machine Learning for Multimodal Interfaces"
     },
     {
       "id": 69,
@@ -3208,7 +3393,10 @@ const PAPERS_DATA = {
         "OcclusionAvoidance",
         "OneHandUse"
       ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2012 - A study of on-device gestures.png"
+      "image": "Papers/GestureDesign/GestureDesign预览图/2012 - A study of on-device gestures.png",
+      "doi": "https://doi.org/10.1145/2371664.2371669",
+      "authors": "Wolf Katrin, McGee-Lennon Marilyn, Brewster Stephen",
+      "journal": "MobileHCI '12: 14th International Conference on Human Computer Interaction with Mobile Devices and Services"
     },
     {
       "id": 70,
@@ -3250,7 +3438,10 @@ const PAPERS_DATA = {
         "OcclusionAvoidance",
         "OneHandUse"
       ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2012 - PinchPad performance of touch-based gestures while grasping devices.png"
+      "image": "Papers/GestureDesign/GestureDesign预览图/2012 - PinchPad performance of touch-based gestures while grasping devices.png",
+      "doi": "https://doi.org/10.1145/2148131.2148155",
+      "authors": "Wolf Katrin, Müller-Tomfelde Christian, Cheng Kelvin, Wechsung Ina",
+      "journal": "TEI'12: Sixth International Conference on Tangible, Embedded, and Embodied Interaction"
     },
     {
       "id": 71,
@@ -3290,7 +3481,10 @@ const PAPERS_DATA = {
         "SmallScreen",
         "TouchOptimized"
       ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2012 - The fat thumb using the thumb's contact size for single-handed mobile interaction.png"
+      "image": "Papers/GestureDesign/GestureDesign预览图/2012 - The fat thumb using the thumb's contact size for single-handed mobile interaction.png",
+      "doi": "https://doi.org/10.1145/2371574.2371582",
+      "authors": "Boring Sebastian, Ledo David, Chen Xiang'Anthony', Marquardt Nicolai, Tang Anthony, Greenberg Saul",
+      "journal": "Proceedings of the 14th international conference on Human-computer interaction with mobile devices and services"
     },
     {
       "id": 72,
@@ -3329,7 +3523,10 @@ const PAPERS_DATA = {
         "SmallScreen",
         "TouchOptimized"
       ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2013 - Exploring pinch and spread gestures on mobile devices.png"
+      "image": "Papers/GestureDesign/GestureDesign预览图/2013 - Exploring pinch and spread gestures on mobile devices.png",
+      "doi": "https://doi.org/10.1145/2493190.2493221",
+      "authors": "Tran Jessica J., Trewin Shari, Swart Calvin, John Bonnie E., Thomas John C.",
+      "journal": "MobileHCI '13: 15th International Conference on Human-Computer Interaction with Mobile Devices and Services"
     },
     {
       "id": 74,
@@ -3372,7 +3569,10 @@ const PAPERS_DATA = {
         "SocialAcceptability",
         "UserAdaptation"
       ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2014 - Leap gestures for TV insights from an elicitation study.png"
+      "image": "Papers/GestureDesign/GestureDesign预览图/2014 - Leap gestures for TV insights from an elicitation study.png",
+      "doi": "https://doi.org/10.1145/2602299.2602316",
+      "authors": "Vatavu Radu-Daniel, Zaiti Ionut-Alexandru",
+      "journal": "TVX '14: ACM International Conference on Interactive Experiences for TV and Online Video"
     },
     {
       "id": 75,
@@ -3416,7 +3616,10 @@ const PAPERS_DATA = {
         "SmallScreen",
         "TouchOptimized"
       ],
-      "image": "Papers/SOFTWARE/Software预览图/2014 - Tactile feedback for above-device gesture interfaces adding touch to touchless interactions.png"
+      "image": "Papers/SOFTWARE/Software预览图/2014 - Tactile feedback for above-device gesture interfaces adding touch to touchless interactions.png",
+      "doi": "https://doi.org/10.1145/2663204.2663280",
+      "authors": "Freeman Euan, Brewster Stephen, Lantz Vuokko",
+      "journal": "Proceedings of the 16th international conference on multimodal interaction"
     },
     {
       "id": 76,
@@ -3462,7 +3665,10 @@ const PAPERS_DATA = {
       "userExperienceDesign": [
         "UserAdaptation"
       ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2015 - Interaction proxemics combining physical spaces for seamless gesture interaction.png"
+      "image": "Papers/GestureDesign/GestureDesign预览图/2015 - Interaction proxemics combining physical spaces for seamless gesture interaction.png",
+      "doi": "https://doi.org/10.1145/2757710.2757722",
+      "authors": "Dingler Tilman, Funk Markus, Alt Florian",
+      "journal": "PerDis '15: The International Symposium on Pervasive Displays"
     },
     {
       "id": 77,
@@ -3510,7 +3716,10 @@ const PAPERS_DATA = {
         "SmallScreen",
         "SocialAcceptability"
       ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2016 - Exploring non-touchscreen gestures for smartwatches.png"
+      "image": "Papers/GestureDesign/GestureDesign预览图/2016 - Exploring non-touchscreen gestures for smartwatches.png",
+      "doi": "https://doi.org/10.1145/2858036.2858385",
+      "authors": "Arefin Shimon Shaikh Shawon, Lutton Courtney, Xu Zichun, Morrison-Smith Sarah, Boucher Christina, Ruiz Jaime",
+      "journal": "CHI'16: CHI Conference on Human Factors in Computing Systems"
     },
     {
       "id": 78,
@@ -3548,7 +3757,10 @@ const PAPERS_DATA = {
         "QWERTYLayout",
         "UserAdaptation"
       ],
-      "image": "Papers/SOFTWARE/Software预览图/2016 - Finger-aware shortcuts.png"
+      "image": "Papers/SOFTWARE/Software预览图/2016 - Finger-aware shortcuts.png",
+      "doi": "https://doi.org/10.1145/2858036.2858355",
+      "authors": "Zheng Jingjie, Vogel Daniel",
+      "journal": "CHI'16: CHI Conference on Human Factors in Computing Systems"
     },
     {
       "id": 79,
@@ -3598,7 +3810,10 @@ const PAPERS_DATA = {
         "OcclusionAvoidance",
         "PortableDesign"
       ],
-      "image": "Papers/HARDWARE/Hardware预览图/2016 - Interacting with soli exploring fine-grained dynamic gesture recognition in the radio-frequency spectrum.png"
+      "image": "Papers/HARDWARE/Hardware预览图/2016 - Interacting with soli exploring fine-grained dynamic gesture recognition in the radio-frequency spectrum.png",
+      "doi": "https://doi.org/10.1145/2984511.2984565",
+      "authors": "Wang Saiwen, Song Jie, Lien Jaime, Poupyrev Ivan, Hilliges Otmar",
+      "journal": "UIST '16: The 29th Annual ACM Symposium on User Interface Software and Technology"
     },
     {
       "id": 80,
@@ -3639,7 +3854,10 @@ const PAPERS_DATA = {
         "OneHandUse",
         "TouchOptimized"
       ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2016 - Investigating how the hand interacts with different mobile phones.png"
+      "image": "Papers/GestureDesign/GestureDesign预览图/2016 - Investigating how the hand interacts with different mobile phones.png",
+      "doi": "https://doi.org/10.1145/2957265.2961840",
+      "authors": "Eardley Rachel, Gill Steve, Roudaut Anne, Thompson Stephen, Hare Joanna",
+      "journal": "MobileHCI '16: 18th International Conference on Human-Computer Interaction with Mobile Devices and Services"
     },
     {
       "id": 81,
@@ -3679,7 +3897,10 @@ const PAPERS_DATA = {
         "HandsFree",
         "HighAccuracy"
       ],
-      "image": "Papers/SOFTWARE/Software预览图/2016 - WiFinger talk to your smart devices with finger-grained gesture.png"
+      "image": "Papers/SOFTWARE/Software预览图/2016 - WiFinger talk to your smart devices with finger-grained gesture.png",
+      "doi": "https://doi.org/10.1145/2971648.2971738",
+      "authors": "Li Hong, Yang Wei, Wang Jianxin, Xu Yang, Huang Liusheng",
+      "journal": "UbiComp '16: The 2016 ACM International Joint Conference on Pervasive and Ubiquitous Computing"
     },
     {
       "id": 82,
@@ -3723,7 +3944,10 @@ const PAPERS_DATA = {
         "SmallScreen",
         "TouchOptimized"
       ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2017 - Understanding grip shifts how form factors impact hand movements on mobile phones.png"
+      "image": "Papers/GestureDesign/GestureDesign预览图/2017 - Understanding grip shifts how form factors impact hand movements on mobile phones.png",
+      "doi": "https://doi.org/10.1145/3025453.3025835",
+      "authors": "Eardley Rachel, Roudaut Anne, Gill Steve, Thompson Stephen J.",
+      "journal": "CHI '17: CHI Conference on Human Factors in Computing Systems"
     },
     {
       "id": 83,
@@ -3769,7 +3993,10 @@ const PAPERS_DATA = {
         "ElicitationStudy",
         "TouchOptimized"
       ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2018 - Characterizing finger pitch and roll orientation during atomic touch actions.png"
+      "image": "Papers/GestureDesign/GestureDesign预览图/2018 - Characterizing finger pitch and roll orientation during atomic touch actions.png",
+      "doi": "https://doi.org/10.1145/3173574.3174163",
+      "authors": "Goguey Alix, Casiez Géry, Vogel Daniel, Gutwin Carl",
+      "journal": "CHI '18: CHI Conference on Human Factors in Computing Systems"
     },
     {
       "id": 84,
@@ -3814,7 +4041,10 @@ const PAPERS_DATA = {
         "PortableDesign",
         "TouchOptimized"
       ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2018 - Fingers' range and comfortable area for one-handed smartphone interaction beyond the touchscreen.png"
+      "image": "Papers/GestureDesign/GestureDesign预览图/2018 - Fingers' range and comfortable area for one-handed smartphone interaction beyond the touchscreen.png",
+      "doi": "https://doi.org/10.1145/3173574.3173605",
+      "authors": "Le Huy Viet, Mayer Sven, Bader Patrick, Henze Niels",
+      "journal": "CHI '18: CHI Conference on Human Factors in Computing Systems"
     },
     {
       "id": 85,
@@ -3868,7 +4098,10 @@ const PAPERS_DATA = {
         "LowLatency",
         "OneHandUse"
       ],
-      "image": "Papers/HARDWARE/Hardware预览图/2018 - InfiniTouch finger-aware interaction on fully touch sensitive smartphones.png"
+      "image": "Papers/HARDWARE/Hardware预览图/2018 - InfiniTouch finger-aware interaction on fully touch sensitive smartphones.png",
+      "doi": "https://doi.org/10.1145/3242587.3242605",
+      "authors": "Le Huy Viet, Mayer Sven, Henze Niels",
+      "journal": "UIST '18: The 31st Annual ACM Symposium on User Interface Software and Technology"
     },
     {
       "id": 86,
@@ -3917,7 +4150,10 @@ const PAPERS_DATA = {
         "EncumberedInteraction",
         "UserAdaptation"
       ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2018 - Pen + mid-air gestures eliciting contextual gestures.png"
+      "image": "Papers/GestureDesign/GestureDesign预览图/2018 - Pen + mid-air gestures eliciting contextual gestures.png",
+      "doi": "https://doi.org/10.1145/3242969.3242979",
+      "authors": "Aslan Ilhan, Schmidt Tabea, Woehrle Jens, Vogel Lukas, André Elisabeth",
+      "journal": "ICMI '18: International Conference on Multimodal Interaction"
     },
     {
       "id": 87,
@@ -3962,7 +4198,10 @@ const PAPERS_DATA = {
         "OneHandUse",
         "UserAdaptation"
       ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2018-Unimanual Pen Touch Input Using Variations of Precision Grip Postures.png"
+      "image": "Papers/GestureDesign/GestureDesign预览图/2018-Unimanual Pen Touch Input Using Variations of Precision Grip Postures.png",
+      "doi": "https://doi.org/10.1145/3242587.3242652",
+      "authors": "Cami Drini, Matulic Fabrice, Calland Richard G., Vogel Brian, Vogel Daniel",
+      "journal": "UIST '18: The 31st Annual ACM Symposium on User Interface Software and Technology"
     },
     {
       "id": 88,
@@ -4012,7 +4251,10 @@ const PAPERS_DATA = {
         "OneHandUse",
         "UserAdaptation"
       ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2019 - Gaze-assisted typing for smart glasses.png"
+      "image": "Papers/GestureDesign/GestureDesign预览图/2019 - Gaze-assisted typing for smart glasses.png",
+      "doi": "https://doi.org/10.1145/3332165.3347883",
+      "authors": "Ahn Sunggeun, Lee Geehyuk",
+      "journal": "UIST '19: The 32nd Annual ACM Symposium on User Interface Software and Technology"
     },
     {
       "id": 89,
@@ -4058,7 +4300,10 @@ const PAPERS_DATA = {
         "SocialAcceptability",
         "UserAdaptation"
       ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2019 - Investigating unintended inputs for one-handed touch interaction beyond the touchscreen.png"
+      "image": "Papers/GestureDesign/GestureDesign预览图/2019 - Investigating unintended inputs for one-handed touch interaction beyond the touchscreen.png",
+      "doi": "https://doi.org/10.1145/3338286.3340145",
+      "authors": "Le Huy Viet, Mayer Sven, Steuerlein Benedict, Henze Niels",
+      "journal": "MobileHCI '19: 21st International Conference on Human-Computer Interaction with Mobile Devices and Services"
     },
     {
       "id": 90,
@@ -4109,7 +4354,10 @@ const PAPERS_DATA = {
         "OneHandUse",
         "PortableDesign"
       ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2020 - Expanding side touch input on mobile phones finger reachability and two-dimensional taps and flicks using the index and.png"
+      "image": "Papers/GestureDesign/GestureDesign预览图/2020 - Expanding side touch input on mobile phones finger reachability and two-dimensional taps and flicks using the index and.png",
+      "doi": "https://doi.org/10.1145/3427334",
+      "authors": "Yeh Yen-Ting, Roy Quentin, Irudayaraj Antony Albert Raj, Vogel Daniel",
+      "journal": "Proc ACM Hum Comput Interact"
     },
     {
       "id": 91,
@@ -4155,7 +4403,10 @@ const PAPERS_DATA = {
         "PortableDesign",
         "SocialAcceptability"
       ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2020 - MagTouch robust finger identification for a smartwatch using a magnet ring and a built-in magnetometer.png"
+      "image": "Papers/GestureDesign/GestureDesign预览图/2020 - MagTouch robust finger identification for a smartwatch using a magnet ring and a built-in magnetometer.png",
+      "doi": "https://doi.org/10.1145/3313831.3376234",
+      "authors": "Park Keunwoo, Kim Daehwa, Heo Seongkook, Lee Geehyuk",
+      "journal": "CHI '20: CHI Conference on Human Factors in Computing Systems"
     },
     {
       "id": 92,
@@ -4208,7 +4459,10 @@ const PAPERS_DATA = {
         "OcclusionAvoidance",
         "PortableDesign"
       ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2020 - PenSight enhanced interaction with a pen-top camera.png"
+      "image": "Papers/GestureDesign/GestureDesign预览图/2020 - PenSight enhanced interaction with a pen-top camera.png",
+      "doi": "https://doi.org/10.1145/3313831.3376147",
+      "authors": "Matulic Fabrice, Arakawa Riku, Vogel Brian, Vogel Daniel",
+      "journal": "CHI '20: CHI Conference on Human Factors in Computing Systems"
     },
     {
       "id": 93,
@@ -4258,7 +4512,10 @@ const PAPERS_DATA = {
         "OneHandUse",
         "UserAdaptation"
       ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2020 - Shortcut gestures for mobile text editing on fully touch sensitive smartphones.png"
+      "image": "Papers/GestureDesign/GestureDesign预览图/2020 - Shortcut gestures for mobile text editing on fully touch sensitive smartphones.png",
+      "doi": "https://doi.org/10.1145/3396233",
+      "authors": "Le Huy Viet, Mayer Sven, Weiß Maximilian, Vogelsang Jonas, Weingärtner Henrike, Henze Niels",
+      "journal": "ACM Trans Comput-Hum Interact"
     },
     {
       "id": 94,
@@ -4300,7 +4557,10 @@ const PAPERS_DATA = {
         "ElicitationStudy",
         "EncumberedInteraction"
       ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2020 - Eliciting tangible and gestural user interactions with and on a cooking pan.png"
+      "image": "Papers/GestureDesign/GestureDesign预览图/2020 - Eliciting tangible and gestural user interactions with and on a cooking pan.png",
+      "doi": "https://doi.org/10.1145/3404983.3405516",
+      "authors": "Beruscha Frank, Mueller Katharina, Sohnke Thorsten",
+      "journal": "MuC'20: Mensch und Computer 2020"
     },
     {
       "id": 95,
@@ -4353,7 +4613,10 @@ const PAPERS_DATA = {
         "OcclusionAvoidance",
         "UserAdaptation"
       ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2021 - 3D hand pose estimation on conventional capacitive touchscreens.png"
+      "image": "Papers/GestureDesign/GestureDesign预览图/2021 - 3D hand pose estimation on conventional capacitive touchscreens.png",
+      "doi": "https://doi.org/10.1145/3447526.3472045",
+      "authors": "Choi Frederick, Mayer Sven, Harrison Chris",
+      "journal": "MobileHCI '21: 23rd International Conference on Mobile Human-Computer Interaction"
     },
     {
       "id": 96,
@@ -4409,7 +4672,10 @@ const PAPERS_DATA = {
         "TouchOptimized",
         "UserAdaptation"
       ],
-      "image": "Papers/SOFTWARE/Software预览图/2021 - TouchPose hand pose prediction, depth estimation, and touch classification from capacitive images.png"
+      "image": "Papers/SOFTWARE/Software预览图/2021 - TouchPose hand pose prediction, depth estimation, and touch classification from capacitive images.png",
+      "doi": "https://doi.org/10.1145/3472749.3474801",
+      "authors": "Ahuja Karan, Streli Paul, Holz Christian",
+      "journal": "UIST '21: The 34th Annual ACM Symposium on User Interface Software and Technology"
     },
     {
       "id": 97,
@@ -4459,7 +4725,10 @@ const PAPERS_DATA = {
         "PortableDesign",
         "UserAdaptation"
       ],
-      "image": "Papers/SOFTWARE/Software预览图/2021 - Watching your phone's back gesture recognition by sensing acoustical structure-borne propagation.png"
+      "image": "Papers/SOFTWARE/Software预览图/2021 - Watching your phone's back gesture recognition by sensing acoustical structure-borne propagation.png",
+      "doi": "https://doi.org/10.1145/3463522",
+      "authors": "Wang Lei, Zhang Xiang, Jiang Yuanshuang, Zhang Yong, Xu Chenren, Gao Ruiyang, Zhang Daqing",
+      "journal": "Proc ACM Interact Mob Wearable Ubiquitous Technol"
     },
     {
       "id": 98,
@@ -4498,7 +4767,10 @@ const PAPERS_DATA = {
       "userExperienceDesign": [
         "ElicitationStudy"
       ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2021-A User-based Mid-air Hand Gesture Set for Spreadsheets.png"
+      "image": "Papers/GestureDesign/GestureDesign预览图/2021-A User-based Mid-air Hand Gesture Set for Spreadsheets.png",
+      "doi": "https://doi.org/10.1145/3429360.3468193",
+      "authors": "Takayama Yuta, Ichikawa Yuu, Shizuki Buntarou, Kawaguchi Ikkaku, Takahashi Shin",
+      "journal": "CHI '21: CHI Conference on Human Factors in Computing Systems"
     },
     {
       "id": 99,
@@ -4548,7 +4820,10 @@ const PAPERS_DATA = {
         "LowLatency",
         "UserAdaptation"
       ],
-      "image": "Papers/SOFTWARE/Software预览图/2022 - Leveraging the properties of mmWave signals for 3D finger motion tracking for interactive IoT applications.png"
+      "image": "Papers/SOFTWARE/Software预览图/2022 - Leveraging the properties of mmWave signals for 3D finger motion tracking for interactive IoT applications.png",
+      "doi": "https://doi.org/10.1145/3570613",
+      "authors": "Liu Yilin, Zhang Shijia, Gowda Mahanth, Nelakuditi Srihari",
+      "journal": "Proc ACM Meas Anal Comput Syst"
     },
     {
       "id": 100,
@@ -4600,7 +4875,10 @@ const PAPERS_DATA = {
         "SocialAcceptability",
         "UserAdaptation"
       ],
-      "image": "Papers/SOFTWARE/Software预览图/2022-IndexPen Two Finger Text Input with Millimeter Wave Radar.png"
+      "image": "Papers/SOFTWARE/Software预览图/2022-IndexPen Two Finger Text Input with Millimeter Wave Radar.png",
+      "doi": "https://doi.org/10.1145/3534619",
+      "authors": "Yu Du, Yongquan Hu, Ke He, Yongkang Xing, Yubing Wang, Zhaojie Huang, Chun Yu, Yukang Yan, Yuanchun Shi",
+      "journal": "IMWUT Proc. ACM Interact. Mob. Wearable Ubiquitous Technol."
     },
     {
       "id": 101,
@@ -4645,7 +4923,10 @@ const PAPERS_DATA = {
         "LowLatency",
         "OneHandUse"
       ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2021 - SoloFinger robust microgestures while grasping everyday objects.png"
+      "image": "Papers/GestureDesign/GestureDesign预览图/2021 - SoloFinger robust microgestures while grasping everyday objects.png",
+      "doi": "https://doi.org/10.1145/3411764.3445197",
+      "authors": "Sharma Adwait, Hedderich Michael A., Bhardwaj Divyanshu, Fruchard Bruno, McIntosh Jess, Nittala Aditya Shekhar, Klakow Dietrich, Ashbrook Daniel, Steimle Jürgen",
+      "journal": "CHI '21: CHI Conference on Human Factors in Computing Systems"
     },
     {
       "id": 102,
@@ -4698,7 +4979,10 @@ const PAPERS_DATA = {
         "PortableDesign",
         "SocialAcceptability"
       ],
-      "image": "Papers/HARDWARE/Hardware预览图/2021-ARO Exploring the Design of Smart-Ring Interactions for Encumbered Hands.png"
+      "image": "Papers/HARDWARE/Hardware预览图/2021-ARO Exploring the Design of Smart-Ring Interactions for Encumbered Hands.png",
+      "doi": "https://doi.org/10.1145/3447526.3472037",
+      "authors": "Bardot Sandra, Rawat Surya, Nguyen Duy Thai, Rempel Sawyer, Zheng Huizhe, Rey Bradley, Li Jun, Fan Kevin, Huang Da-Yuan, Li Wei, Irani Pourang",
+      "journal": "MobileHCI '21: 23rd International Conference on Mobile Human-Computer Interaction"
     },
     {
       "id": 103,
@@ -4745,7 +5029,10 @@ const PAPERS_DATA = {
         "LowLatency",
         "SocialAcceptability"
       ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2023 - Enabling voice-accompanying hand-to-face gesture recognition with cross-device sensing.png"
+      "image": "Papers/GestureDesign/GestureDesign预览图/2023 - Enabling voice-accompanying hand-to-face gesture recognition with cross-device sensing.png",
+      "doi": "https://doi.org/10.1145/3544548.3581008",
+      "authors": "Li Zisu, Liang Chen, Wang Yuntao, Qin Yue, Yu Chun, Yan Yukang, Fan Mingming, Shi Yuanchun",
+      "journal": "Proceedings of the 2023 CHI Conference on Human Factors in Computing Systems"
     },
     {
       "id": 104,
@@ -4800,7 +5087,10 @@ const PAPERS_DATA = {
         "SocialAcceptability",
         "UserAdaptation"
       ],
-      "image": "Papers/SOFTWARE/Software预览图/2023-iFAD Gestures Understanding Users’ Gesture Input Performance with Index-Finger Augmentation Devices.png"
+      "image": "Papers/SOFTWARE/Software预览图/2023-iFAD Gestures Understanding Users’ Gesture Input Performance with Index-Finger Augmentation Devices.png",
+      "doi": "https://doi.org/10.1145/3544548.3580928",
+      "authors": "Vatavu Radu-Daniel",
+      "journal": "CHI '23: CHI Conference on Human Factors in Computing Systems"
     },
     {
       "id": 105,
@@ -4850,7 +5140,10 @@ const PAPERS_DATA = {
         "SocialAcceptability",
         "UserAdaptation"
       ],
-      "image": "Papers/SOFTWARE/Software预览图/2025 - Persistent assistant seamless everyday AI interactions via intent grounding and multimodal feedback.png"
+      "image": "Papers/SOFTWARE/Software预览图/2025 - Persistent assistant seamless everyday AI interactions via intent grounding and multimodal feedback.png",
+      "doi": "https://doi.org/10.1145/3706598.3714317",
+      "authors": "Cho Hyunsung, Fashimpaur Jacqui, Sendhilnathan Naveen, Browder Jonathan, Lindlbauer David, Jonker Tanya R., Todi Kashyap",
+      "journal": "CHI 2025: CHI Conference on Human Factors in Computing Systems"
     },
     {
       "id": 106,
@@ -4905,7 +5198,9 @@ const PAPERS_DATA = {
         "SmallScreen",
         "TouchOptimized"
       ],
-      "image": "Papers/SOFTWARE/Software预览图/2011-Grasp Interaction with Tablets.png"
+      "image": "Papers/SOFTWARE/Software预览图/2011-Grasp Interaction with Tablets.png",
+      "authors": "Wolf Katrin",
+      "journal": "Springer International Publishing"
     },
     {
       "id": 107,
@@ -4955,7 +5250,10 @@ const PAPERS_DATA = {
         "SocialAcceptability",
         "UserAdaptation"
       ],
-      "image": "Papers/SOFTWARE/Software预览图/2013 - Opportunistic synergy a classifier fusion engine for micro-gesture recognition.png"
+      "image": "Papers/SOFTWARE/Software预览图/2013 - Opportunistic synergy a classifier fusion engine for micro-gesture recognition.png",
+      "doi": "https://doi.org/10.1145/2516540.2516563",
+      "authors": "Angelini Leonardo, Carrino Francesco, Carrino Stefano, Caon Maurizio, Lalanne Denis, Khaled Omar Abou, Mugellini Elena",
+      "journal": "AutomotiveUI '13: Automotive User Interfaces and Interactive Vehicular Applications"
     },
     {
       "id": 109,
@@ -5004,7 +5302,10 @@ const PAPERS_DATA = {
         "TouchOptimized",
         "UserAdaptation"
       ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2016 - The performance and preference of different fingers and chords for pointing, dragging, and object transformation.png"
+      "image": "Papers/GestureDesign/GestureDesign预览图/2016 - The performance and preference of different fingers and chords for pointing, dragging, and object transformation.png",
+      "doi": "https://doi.org/10.1145/2858036.2858194",
+      "authors": "Goguey Alix, Nancel Mathieu, Casiez Géry, Vogel Daniel",
+      "journal": "CHI'16: CHI Conference on Human Factors in Computing Systems"
     },
     {
       "id": 110,
@@ -5052,7 +5353,10 @@ const PAPERS_DATA = {
         "LowLatency",
         "SocialAcceptability"
       ],
-      "image": "Papers/HARDWARE/Hardware预览图/2017 - BikeGesture user elicitation and performance of micro hand gesture as input for cycling.png"
+      "image": "Papers/HARDWARE/Hardware预览图/2017 - BikeGesture user elicitation and performance of micro hand gesture as input for cycling.png",
+      "doi": "https://doi.org/10.1145/3027063.3053075",
+      "authors": "Tan Yanke, Yoon Sang Ho, Ramani Karthik",
+      "journal": "CHI '17: CHI Conference on Human Factors in Computing Systems"
     },
     {
       "id": 112,
@@ -5101,7 +5405,10 @@ const PAPERS_DATA = {
         "MidasTouchProblem",
         "OneHandUse"
       ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2021 - M[eye]cro eye-gaze+microgestures for multitasking and interruptions.png"
+      "image": "Papers/GestureDesign/GestureDesign预览图/2021 - M[eye]cro eye-gaze+microgestures for multitasking and interruptions.png",
+      "doi": "https://doi.org/10.1145/3461732",
+      "authors": "Wambecke Jérémy, Goguey Alix, Nigay Laurence, Dargent Lauren, Hauret Daniel, Lafon Stéphanie, De Visme Jean-Samuel Louis",
+      "journal": "Proc ACM Hum Comput Interact"
     },
     {
       "id": 115,
@@ -5149,7 +5456,10 @@ const PAPERS_DATA = {
         "PortableDesign",
         "SocialAcceptability"
       ],
-      "image": "Papers/HARDWARE/Hardware预览图/2014 - AnyButton unpowered, modeless and highly available mobile input using unmodified clothing buttons.png"
+      "image": "Papers/HARDWARE/Hardware预览图/2014 - AnyButton unpowered, modeless and highly available mobile input using unmodified clothing buttons.png",
+      "doi": "https://doi.org/10.1145/2582051.2582075",
+      "authors": "Chan Liwei, Weng Chien-Ting, Liang Rong-Hao, Chen Bing-Yu",
+      "journal": "AH '14: 5th Augmented Human International Conference"
     },
     {
       "id": 116,
@@ -5201,7 +5511,10 @@ const PAPERS_DATA = {
         "TouchOptimized",
         "UserAdaptation"
       ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2012 - Towards the establishment of a framework for intuitive multi-touch interaction design.png"
+      "image": "Papers/GestureDesign/GestureDesign预览图/2012 - Towards the establishment of a framework for intuitive multi-touch interaction design.png",
+      "doi": "https://doi.org/10.1145/2254556.2254571",
+      "authors": "Ingram Amy, Wang Xiaoyu, Ribarsky William",
+      "journal": "AVI'12: International Working Conference on Advanced Visual Interfaces"
     },
     {
       "id": 117,
@@ -5252,7 +5565,10 @@ const PAPERS_DATA = {
         "EncumberedInteraction",
         "OneHandUse"
       ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2019 - Grasping microgestures eliciting single-hand microgestures for handheld objects.png"
+      "image": "Papers/GestureDesign/GestureDesign预览图/2019 - Grasping microgestures eliciting single-hand microgestures for handheld objects.png",
+      "doi": "https://doi.org/10.1145/3290605.3300632",
+      "authors": "Sharma Adwait, Roo Joan Sol, Steimle Jürgen",
+      "journal": "CHI '19: CHI Conference on Human Factors in Computing Systems"
     },
     {
       "id": 118,
@@ -5301,7 +5617,10 @@ const PAPERS_DATA = {
         "PortableDesign",
         "SocialAcceptability"
       ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2017 - Rhythmic micro-gestures discreet interaction on-the-go.png"
+      "image": "Papers/GestureDesign/GestureDesign预览图/2017 - Rhythmic micro-gestures discreet interaction on-the-go.png",
+      "doi": "https://doi.org/10.1145/3136755.3136815",
+      "authors": "Freeman Euan, Griffiths Gareth, Brewster Stephen A.",
+      "journal": "ICMI '17: International Conference on Multimodal Interaction"
     },
     {
       "id": 119,
@@ -5341,7 +5660,10 @@ const PAPERS_DATA = {
         "ElicitationStudy",
         "OneHandUse"
       ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2023 - Studying the visual representation of microgestures.png"
+      "image": "Papers/GestureDesign/GestureDesign预览图/2023 - Studying the visual representation of microgestures.png",
+      "doi": "https://doi.org/10.1145/3604272",
+      "authors": "Lambert Vincent, Chaffangeon Caillet Adrien, Goguey Alix, Malacria Sylvain, Nigay Laurence",
+      "journal": "Proc ACM Hum Comput Interact"
     },
     {
       "id": 120,
@@ -5378,7 +5700,10 @@ const PAPERS_DATA = {
         "DiscreetInput",
         "OneHandUse"
       ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2023 - µGlyph a microgesture notation.png"
+      "image": "Papers/GestureDesign/GestureDesign预览图/2023 - µGlyph a microgesture notation.png",
+      "doi": "https://doi.org/10.1145/3544548.3580693",
+      "authors": "Chaffangeon Caillet Adrien, Goguey Alix, Nigay Laurence",
+      "journal": "CHI '23: CHI Conference on Human Factors in Computing Systems"
     },
     {
       "id": 121,
@@ -5421,7 +5746,10 @@ const PAPERS_DATA = {
         "OneHandUse",
         "SocialAcceptability"
       ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2016 - User elicitation on single-hand microgestures.png"
+      "image": "Papers/GestureDesign/GestureDesign预览图/2016 - User elicitation on single-hand microgestures.png",
+      "doi": "https://doi.org/10.1145/2858036.2858589",
+      "authors": "Chan Edwin, Seyed Teddy, Stuerzlinger Wolfgang, Yang Xing-Dong, Maurer Frank",
+      "journal": "CHI'16: CHI Conference on Human Factors in Computing Systems"
     },
     {
       "id": 122,
@@ -5466,7 +5794,10 @@ const PAPERS_DATA = {
         "SocialAcceptability",
         "UserAdaptation"
       ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2010 - Would you do that understanding social acceptance of gestural interfaces.png"
+      "image": "Papers/GestureDesign/GestureDesign预览图/2010 - Would you do that understanding social acceptance of gestural interfaces.png",
+      "doi": "https://doi.org/10.1145/1851600.1851647",
+      "authors": "Montero Calkin S., Alexander Jason, Marshall Mark T., Subramanian Sriram",
+      "journal": "MobileHCI '10: 12th International Conference on Human Computer Interaction with Mobile Devices and Services"
     },
     {
       "id": 123,
@@ -5513,7 +5844,10 @@ const PAPERS_DATA = {
         "ElicitationStudy",
         "SocialAcceptability"
       ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2017 - Hands as a controller user preferences for hand specific on-skin gestures.png"
+      "image": "Papers/GestureDesign/GestureDesign预览图/2017 - Hands as a controller user preferences for hand specific on-skin gestures.png",
+      "doi": "https://doi.org/10.1145/3064663.3064766",
+      "authors": "Bostan Idil, Buruk Oğuz Turan, Canat Mert, Tezcan Mustafa Ozan, Yurdakul Celalettin, Göksun Tilbe, Özcan Oğuzhan",
+      "journal": "DIS '17: Designing Interactive Systems Conference 2017"
     },
     {
       "id": 124,
@@ -5556,7 +5890,10 @@ const PAPERS_DATA = {
         "DiscreetInput",
         "SocialAcceptability"
       ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2024-Designing More Private and Socially Acceptable Hand-to-Face Gestures for Heads-Up Computing.png"
+      "image": "Papers/GestureDesign/GestureDesign预览图/2024-Designing More Private and Socially Acceptable Hand-to-Face Gestures for Heads-Up Computing.png",
+      "doi": "https://doi.org/10.1145/3675094.3678994",
+      "authors": "Gao Xing, Sun Minghui, Zhao Kaixing",
+      "journal": "UbiComp '24: The 2024 ACM International Joint Conference on Pervasive and Ubiquitous Computing"
     },
     {
       "id": 125,
@@ -5598,7 +5935,9 @@ const PAPERS_DATA = {
         "TouchOptimized",
         "UserAdaptation"
       ],
-      "image": "Papers/SOFTWARE/Software预览图/2011 - Blind people and mobile touch-based text-entry acknowledging the need for different flavors.png"
+      "image": "Papers/SOFTWARE/Software预览图/2011 - Blind people and mobile touch-based text-entry acknowledging the need for different flavors.png",
+      "authors": "Oliveira João, Guerreiro Tiago, Nicolau Hugo, Jorge Joaquim, Gonçalves Daniel",
+      "journal": "The proceedings of the 13th international ACM SIGACCESS conference on Computers and accessibility"
     },
     {
       "id": 126,
@@ -5645,7 +5984,10 @@ const PAPERS_DATA = {
         "PortableDesign",
         "UserAdaptation"
       ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2016 - Interaction gestures for a wearable device defined by visually impaired children.png"
+      "image": "Papers/GestureDesign/GestureDesign预览图/2016 - Interaction gestures for a wearable device defined by visually impaired children.png",
+      "doi": "https://doi.org/10.1145/2971485.2996752",
+      "authors": "Magnusson Charlotte, Caltenco Héctor, Finocchietti Sara, Gori Monica, Cocchi Elena, Porquis Lope Ben, Baud-Bovy Gabriel",
+      "journal": "NordiCHI '16: 9th Nordic Conference on Human-Computer Interaction"
     },
     {
       "id": 127,
@@ -5695,7 +6037,10 @@ const PAPERS_DATA = {
         "SocialAcceptability",
         "UserAdaptation"
       ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2017 - Investigating microinteractions for people with visual impairments and the potential role of on-body interaction.png"
+      "image": "Papers/GestureDesign/GestureDesign预览图/2017 - Investigating microinteractions for people with visual impairments and the potential role of on-body interaction.png",
+      "doi": "https://doi.org/10.1145/3132525.3132536",
+      "authors": "Oh Uran, Stearns Lee, Pradhan Alisha, Froehlich Jon E., Findlater Leah",
+      "journal": "ASSETS '17: The 19th International ACM SIGACCESS Conference on Computers and Accessibility"
     },
     {
       "id": 128,
@@ -5731,7 +6076,10 @@ const PAPERS_DATA = {
         "HighAccuracy",
         "UserAdaptation"
       ],
-      "image": "Papers/SOFTWARE/Software预览图/2018 - Static fingerspelling recognition based on boundary tracing algorithm and chain code.png"
+      "image": "Papers/SOFTWARE/Software预览图/2018 - Static fingerspelling recognition based on boundary tracing algorithm and chain code.png",
+      "doi": "https://doi.org/10.1145/3206185.3206195",
+      "authors": "Dawod Ahmad Yahya, Nordin Md Jan, Abdullah Junaidi",
+      "journal": "ISMSI '18: 2018 2nd International Conference on Intelligent Systems, Metaheuristics & Swarm Intelligence"
     },
     {
       "id": 129,
@@ -5774,7 +6122,10 @@ const PAPERS_DATA = {
         "PortableDesign",
         "SocialAcceptability"
       ],
-      "image": "Papers/HARDWARE/Hardware预览图/2020 - Keep the phone in your pocket enabling smartphone operation with an IMU ring for visually impaired people.png"
+      "image": "Papers/HARDWARE/Hardware预览图/2020 - Keep the phone in your pocket enabling smartphone operation with an IMU ring for visually impaired people.png",
+      "doi": "https://doi.org/10.1145/3397308",
+      "authors": "Liu Guanhong, Gu Yizheng, Yin Yiwen, Yu Chun, Wang Yuntao, Mi Haipeng, Shi Yuanchun",
+      "journal": "Proc ACM Interact Mob Wearable Ubiquitous Technol"
     },
     {
       "id": 130,
@@ -5814,7 +6165,10 @@ const PAPERS_DATA = {
         "CommunicationAid",
         "HighAccuracy"
       ],
-      "image": "Papers/SOFTWARE/Software预览图/2020 - Performance evaluation of pattern recognition networks using electromyography signal and time-domain features for the cl.png"
+      "image": "Papers/SOFTWARE/Software预览图/2020 - Performance evaluation of pattern recognition networks using electromyography signal and time-domain features for the cl.png",
+      "doi": "https://doi.org/10.1177/0954411920912119",
+      "authors": "Vasanthi S. Mary, Jayasree T.",
+      "journal": "Proc Inst Mech Eng H: J Eng Med"
     },
     {
       "id": 131,
@@ -5864,7 +6218,10 @@ const PAPERS_DATA = {
         "OneHandUse",
         "TouchOptimized"
       ],
-      "image": "Papers/SOFTWARE/Software预览图/2022 - Keep in touch combining touch interaction with thumb-to-finger µGestures for people with visual impairment.png"
+      "image": "Papers/SOFTWARE/Software预览图/2022 - Keep in touch combining touch interaction with thumb-to-finger µGestures for people with visual impairment.png",
+      "doi": "https://doi.org/10.1145/3536221.3556589",
+      "authors": "Faisandaz Gauthier Robert Jean, Goguey Alix, Jouffrais Christophe, Nigay Laurence",
+      "journal": "ICMI '22: International Conference on Multimodal Interaction"
     },
     {
       "id": 132,
@@ -5911,7 +6268,10 @@ const PAPERS_DATA = {
         "OneHandUse",
         "TouchOptimized"
       ],
-      "image": "Papers/SOFTWARE/Software预览图/2023 - µGeT multimodal eyes-free text selection technique combining touch interaction and microgestures.png"
+      "image": "Papers/SOFTWARE/Software预览图/2023 - µGeT multimodal eyes-free text selection technique combining touch interaction and microgestures.png",
+      "doi": "https://doi.org/10.1145/3577190.3614131",
+      "authors": "Faisandaz Gauthier Robert Jean, Goguey Alix, Jouffrais Christophe, Nigay Laurence",
+      "journal": "ICMI '23: International Conference on Multimodal Interaction"
     },
     {
       "id": 133,
@@ -5956,7 +6316,10 @@ const PAPERS_DATA = {
         "OneHandUse",
         "UserAdaptation"
       ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2024 - Designing upper-body gesture interaction with and for people with spinal muscular atrophy in VR.png"
+      "image": "Papers/GestureDesign/GestureDesign预览图/2024 - Designing upper-body gesture interaction with and for people with spinal muscular atrophy in VR.png",
+      "doi": "https://doi.org/10.1145/3613904.364288",
+      "authors": "Tian Jingze, Wang Yingna, Yu Keye, Xu Liyi, Xie Junan, Li Franklin Mingzhe, Niu Yafeng, Fan Mingming",
+      "journal": "Proceedings of the 2024 CHI Conference on Human Factors in Computing Systems"
     },
     {
       "id": 134,
@@ -6005,7 +6368,10 @@ const PAPERS_DATA = {
         "SocialAcceptability",
         "UserAdaptation"
       ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2020 - Finger gesture tracking for interactive applications a pilot study with sign languages.png"
+      "image": "Papers/GestureDesign/GestureDesign预览图/2020 - Finger gesture tracking for interactive applications a pilot study with sign languages.png",
+      "doi": "https://doi.org/10.1145/3414117",
+      "authors": "Liu Yilin, Jiang Fengyang, Gowda Mahanth",
+      "journal": "Proc ACM Interact Mob Wearable Ubiquitous Technol"
     },
     {
       "id": 135,
@@ -6045,7 +6411,10 @@ const PAPERS_DATA = {
         "HighAccuracy",
         "SocialAcceptability"
       ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2002-A non-linear model of shape  and motion for tracking finger spelt American sign language.png"
+      "image": "Papers/GestureDesign/GestureDesign预览图/2002-A non-linear model of shape  and motion for tracking finger spelt American sign language.png",
+      "doi": "https://doi.org/10.1016/S0262-8856(02)00049-5",
+      "authors": "Bowden Richard, Sarhadi Mansoor",
+      "journal": "Image Vision Comput"
     },
     {
       "id": 140,
@@ -6090,7 +6459,10 @@ const PAPERS_DATA = {
         "PortableDesign",
         "SocialAcceptability"
       ],
-      "image": "Papers/HARDWARE/Hardware预览图/2014 - WristFlex- low-power gesture input with wrist-worn pressure sensors.png"
+      "image": "Papers/HARDWARE/Hardware预览图/2014 - WristFlex- low-power gesture input with wrist-worn pressure sensors.png",
+      "doi": "https://doi.org/10.1145/2642918.2647396",
+      "authors": "Dementyev Artem, Paradiso Joseph A.",
+      "journal": "UIST '14: The 27th Annual ACM Symposium on User Interface Software and Technology"
     },
     {
       "id": 141,
@@ -6143,7 +6515,10 @@ const PAPERS_DATA = {
         "PortableDesign",
         "QWERTYLayout"
       ],
-      "image": "Papers/HARDWARE/Hardware预览图/2015 - CyclopsRing- Enabling Whole-Hand and  Context-Aware Interactions Through a Fisheye Ring.png"
+      "image": "Papers/HARDWARE/Hardware预览图/2015 - CyclopsRing- Enabling Whole-Hand and  Context-Aware Interactions Through a Fisheye Ring.png",
+      "doi": "https://doi.org/10.1145/2807442.2807450",
+      "authors": "Chan Liwei, Chen Yi-Ling, Hsieh Chi-Hao, Liang Rong-Hao, Chen Bing-Yu",
+      "journal": "UIST '15: The 28th Annual ACM Symposium on User Interface Software and Technology"
     },
     {
       "id": 142,
@@ -6200,7 +6575,10 @@ const PAPERS_DATA = {
         "LowLatency",
         "PortableDesign"
       ],
-      "image": "Papers/SOFTWARE/Software预览图/2016 - Combining Ring Input with Hand  Tracking for Precise, Natural Interaction with Spatial Analytic Interfaces..png"
+      "image": "Papers/SOFTWARE/Software预览图/2016 - Combining Ring Input with Hand  Tracking for Precise, Natural Interaction with Spatial Analytic Interfaces..png",
+      "doi": "https://doi.org/10.1145/2983310.2985757",
+      "authors": "Ens Barrett, Byagowi Ahmad, Han Teng, Hincapié-Ramos Juan David, Irani Pourang",
+      "journal": "SUI '16: Symposium on Spatial User Interaction"
     },
     {
       "id": 143,
@@ -6248,7 +6626,10 @@ const PAPERS_DATA = {
         "PortableDesign",
         "UserAdaptation"
       ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2016 - DigitSpace Designing Thumb-to-Fingers Touch Interfaces for One-Handed and Eyes-Free Interactions.png"
+      "image": "Papers/GestureDesign/GestureDesign预览图/2016 - DigitSpace Designing Thumb-to-Fingers Touch Interfaces for One-Handed and Eyes-Free Interactions.png",
+      "doi": "https://doi.org/10.1145/2858036.2858483",
+      "authors": "Huang Da-Yuan, Chan Liwei, Yang Shuo, Wang Fan, Liang Rong-Hao, Yang De-Nian, Hung Yi-Ping, Chen Bing-Yu",
+      "journal": "CHI'16: CHI Conference on Human Factors in Computing Systems"
     },
     {
       "id": 144,
@@ -6301,7 +6682,10 @@ const PAPERS_DATA = {
         "PortableDesign",
         "SocialAcceptability"
       ],
-      "image": "Papers/HARDWARE/Hardware预览图/2016 - ThumbRing- private interactions using one-handed thumb motion input on  finger segments.png"
+      "image": "Papers/HARDWARE/Hardware预览图/2016 - ThumbRing- private interactions using one-handed thumb motion input on  finger segments.png",
+      "doi": "https://doi.org/10.1145/2957265.2961859",
+      "authors": "Tsai Hsin-Ruey, Wu Cheng-Yuan, Huang Lee-Ting, Hung Yi-Ping",
+      "journal": "MobileHCI '16: 18th International Conference on Human-Computer Interaction with Mobile Devices and Services"
     },
     {
       "id": 145,
@@ -6348,7 +6732,10 @@ const PAPERS_DATA = {
         "LowLatency",
         "OcclusionAvoidance"
       ],
-      "image": "Papers/SOFTWARE/Software预览图/2016-Interacting with Soli- Exploring Fine-Grained Dynamic  Gesture Recognition in the Radio-Frequency Spectrum.png"
+      "image": "Papers/SOFTWARE/Software预览图/2016-Interacting with Soli- Exploring Fine-Grained Dynamic  Gesture Recognition in the Radio-Frequency Spectrum.png",
+      "doi": "https://doi.org/10.1145/2984511.2984565",
+      "authors": "Wang Saiwen, Song Jie, Lien Jaime, Poupyrev Ivan, Hilliges Otmar",
+      "journal": "UIST '16: The 29th Annual ACM Symposium on User Interface Software and Technology"
     },
     {
       "id": 146,
@@ -6406,7 +6793,10 @@ const PAPERS_DATA = {
         "PortableDesign",
         "SocialAcceptability"
       ],
-      "image": "Papers/HARDWARE/Hardware预览图/2016-Soli- Ubiquitous Gesture Sensing with Millimeter Wave Radar..png"
+      "image": "Papers/HARDWARE/Hardware预览图/2016-Soli- Ubiquitous Gesture Sensing with Millimeter Wave Radar..png",
+      "doi": "https://doi.org/10.1145/2897824.2925953",
+      "authors": "Lien Jaime, Gillian Nicholas, Karagozler M. Emre, Amihood Patrick, Schwesig Carsten, Olson Erik, Raja Hakim, Poupyrev Ivan",
+      "journal": "ACM Trans Graphics"
     },
     {
       "id": 147,
@@ -6454,7 +6844,10 @@ const PAPERS_DATA = {
         "SocialAcceptability",
         "TouchOptimized"
       ],
-      "image": "Papers/HARDWARE/Hardware预览图/2016-TouchRing- Subtle and  Always-Available Input Using a Multi-Touch Ring.png"
+      "image": "Papers/HARDWARE/Hardware预览图/2016-TouchRing- Subtle and  Always-Available Input Using a Multi-Touch Ring.png",
+      "doi": "https://doi.org/10.1145/2957265.2961860",
+      "authors": "Tsai Hsin-Ruey, Hsiu Min-Chieh, Hsiao Jui-Chun, Huang Lee-Ting, Chen Mike, Hung Yi-Ping",
+      "journal": "MobileHCI '16: 18th International Conference on Human-Computer Interaction with Mobile Devices and Services"
     },
     {
       "id": 148,
@@ -6507,7 +6900,10 @@ const PAPERS_DATA = {
         "SocialAcceptability",
         "UserAdaptation"
       ],
-      "image": "Papers/HARDWARE/Hardware预览图/2017 - DigiTouch- Reconfigurable Thumb-to-Finger Input and Text Entry on Head-mounted Displays.png"
+      "image": "Papers/HARDWARE/Hardware预览图/2017 - DigiTouch- Reconfigurable Thumb-to-Finger Input and Text Entry on Head-mounted Displays.png",
+      "doi": "https://doi.org/10.1145/3130978",
+      "authors": "Whitmire Eric, Jain Mohit, Jain Divye, Nelson Greg, Karkar Ravi, Patel Shwetak, Goel Mayank",
+      "journal": "Proc ACM Interact Mob Wearable Ubiquitous Technol"
     },
     {
       "id": 149,
@@ -6561,7 +6957,10 @@ const PAPERS_DATA = {
         "PortableDesign",
         "SocialAcceptability"
       ],
-      "image": "Papers/HARDWARE/Hardware预览图/2017 - FingerSound- Recognizing unistroke thumb gestures using a ring..png"
+      "image": "Papers/HARDWARE/Hardware预览图/2017 - FingerSound- Recognizing unistroke thumb gestures using a ring..png",
+      "doi": "https://doi.org/10.1145/3130985",
+      "authors": "Zhang Cheng, Waghmare Anandghan, Kundra Pranav, Pu Yiming, Gilliland Scott, Ploetz Thomas, Starner Thad E., Inan Omer T., Abowd Gregory D.",
+      "journal": "Proc ACM Interact Mob Wearable Ubiquitous Technol"
     },
     {
       "id": 152,
@@ -6610,7 +7009,10 @@ const PAPERS_DATA = {
         "SmallScreen",
         "UserAdaptation"
       ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2018 - Fingert9- Leveraging  thumb-to-finger interaction for same-side-hand text entry on smartwatches.png"
+      "image": "Papers/GestureDesign/GestureDesign预览图/2018 - Fingert9- Leveraging  thumb-to-finger interaction for same-side-hand text entry on smartwatches.png",
+      "doi": "https://doi.org/10.1145/3173574.3173752",
+      "authors": "Wong Pui Chung, Zhu Kening, Fu Hongbo",
+      "journal": "CHI '18: CHI Conference on Human Factors in Computing Systems"
     },
     {
       "id": 153,
@@ -6660,7 +7062,9 @@ const PAPERS_DATA = {
         "SmallScreen",
         "UserAdaptation"
       ],
-      "image": "Papers/HARDWARE/Hardware预览图/2018 - ThumbText- Text Entry for Wearable Devices Using a Miniature Ring.png"
+      "image": "Papers/HARDWARE/Hardware预览图/2018 - ThumbText- Text Entry for Wearable Devices Using a Miniature Ring.png",
+      "authors": "Kim Junhyeok, Delamare William, Irani Pourang",
+      "journal": "Graphics Interface"
     },
     {
       "id": 154,
@@ -6705,7 +7109,10 @@ const PAPERS_DATA = {
         "PortableDesign",
         "SocialAcceptability"
       ],
-      "image": "Papers/HARDWARE/Hardware预览图/2019- Tip-tap- battery-free discrete 2D fingertip input..png"
+      "image": "Papers/HARDWARE/Hardware预览图/2019- Tip-tap- battery-free discrete 2D fingertip input..png",
+      "doi": "https://doi.org/10.1145/3332165.3347907",
+      "authors": "Katsuragawa Keiko, Wang Ju, Shan Ziyang, Ouyang Ningshan, Abari Omid, Vogel Daniel",
+      "journal": "UIST '19: The 32nd Annual ACM Symposium on User Interface Software and Technology"
     },
     {
       "id": 155,
@@ -6751,7 +7158,10 @@ const PAPERS_DATA = {
         "OneHandUse",
         "PortableDesign"
       ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2019-The missing interface- Micro-gestures on augmented objects.png"
+      "image": "Papers/GestureDesign/GestureDesign预览图/2019-The missing interface- Micro-gestures on augmented objects.png",
+      "doi": "https://doi.org/10.1145/3290607.3312986",
+      "authors": "Čopič Pucihar Klen, Sandor Christian, Kljun Matjaž, Huerst Wolfgang, Plopski Alexander, Taketomi Takafumi, Kato Hirokazu, Leiva Luis A.",
+      "journal": "CHI '19: CHI Conference on Human Factors in Computing Systems"
     },
     {
       "id": 156,
@@ -6805,7 +7215,10 @@ const PAPERS_DATA = {
         "TouchOptimized",
         "UserAdaptation"
       ],
-      "image": "Papers/HARDWARE/Hardware预览图/2020 - . QwertyRing- Text Entry on Physical Surfaces  Using a Ring..png"
+      "image": "Papers/HARDWARE/Hardware预览图/2020 - . QwertyRing- Text Entry on Physical Surfaces  Using a Ring..png",
+      "doi": "https://doi.org/10.1145/3432204",
+      "authors": "Gu Yizheng, Yu Chun, Li Zhipeng, Li Zhaoheng, Wei Xiaoying, Shi Yuanchun",
+      "journal": "Proc ACM Interact Mob Wearable Ubiquitous Technol"
     },
     {
       "id": 157,
@@ -6857,7 +7270,10 @@ const PAPERS_DATA = {
         "TouchOptimized",
         "UserAdaptation"
       ],
-      "image": "Papers/HARDWARE/Hardware预览图/2020-BiTipText- Bimanual Eyes-Free Text Entry on a Fingertip Keyboard.png"
+      "image": "Papers/HARDWARE/Hardware预览图/2020-BiTipText- Bimanual Eyes-Free Text Entry on a Fingertip Keyboard.png",
+      "doi": "https://doi.org/10.1145/3313831.3376306",
+      "authors": "Xu Zheer, Chen Weihao, Zhao Dongyang, Luo Jiehui, Wu Te-Yen, Gong Jun, Yin Sicheng, Zhai Jialun, Yang Xing-Dong",
+      "journal": "CHI '20: CHI Conference on Human Factors in Computing Systems"
     },
     {
       "id": 158,
@@ -6904,7 +7320,10 @@ const PAPERS_DATA = {
         "PortableDesign",
         "SocialAcceptability"
       ],
-      "image": "Papers/SOFTWARE/Software预览图/2020-EarBuddy- Enabling On-Face Interaction via Wireless Earbuds.png"
+      "image": "Papers/SOFTWARE/Software预览图/2020-EarBuddy- Enabling On-Face Interaction via Wireless Earbuds.png",
+      "doi": "https://doi.org/10.1145/3313831.3376836",
+      "authors": "Xu Xuhai, Shi Haitian, Yi Xin, Liu WenJia, Yan Yukang, Shi Yuanchun, Mariakakis Alex, Mankoff Jennifer, Dey Anind K.",
+      "journal": "CHI '20: CHI Conference on Human Factors in Computing Systems"
     },
     {
       "id": 159,
@@ -6960,7 +7379,10 @@ const PAPERS_DATA = {
         "SocialAcceptability",
         "TouchOptimized"
       ],
-      "image": "Papers/HARDWARE/Hardware预览图/2020-Ready, Steady, Touch! Sensing  Physical Contact with a Finger-Mounted IMU.png"
+      "image": "Papers/HARDWARE/Hardware预览图/2020-Ready, Steady, Touch! Sensing  Physical Contact with a Finger-Mounted IMU.png",
+      "doi": "https://doi.org/10.1145/3397309",
+      "authors": "Shi Yilei, Zhang Haimo, Zhao Kaixing, Cao Jiashuo, Sun Mengmeng, Nanayakkara Suranga",
+      "journal": "Proc ACM Interact Mob Wearable Ubiquitous Technol"
     },
     {
       "id": 162,
@@ -7014,7 +7436,10 @@ const PAPERS_DATA = {
         "SocialAcceptability",
         "UserAdaptation"
       ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2023- Design of 3D Microgestures for Commands in Virtual Reality or Augmented Reality.png"
+      "image": "Papers/GestureDesign/GestureDesign预览图/2023- Design of 3D Microgestures for Commands in Virtual Reality or Augmented Reality.png",
+      "doi": "https://doi.org/10.3390/app11146375",
+      "authors": "Li Guangchuan, Rempel David, Liu Yue, Song Weitao, Adamson Carisa Harris",
+      "journal": "Appl Sci"
     },
     {
       "id": 164,
@@ -7063,7 +7488,10 @@ const PAPERS_DATA = {
         "PortableDesign",
         "SmallScreen"
       ],
-      "image": "Papers/HARDWARE/Hardware预览图/2009-Abracadabra Wireless, High-Precision, and Unpowered Finger Input for Very Small Mobile Devices.png"
+      "image": "Papers/HARDWARE/Hardware预览图/2009-Abracadabra Wireless, High-Precision, and Unpowered Finger Input for Very Small Mobile Devices.png",
+      "doi": "https://doi.org/10.1145/1622176.1622199",
+      "authors": "Harrison Chris, Hudson Scott E.",
+      "journal": "UIST '09: The 22nd Annual ACM Symposium on User Interface Software and Technology"
     },
     {
       "id": 165,
@@ -7114,7 +7542,10 @@ const PAPERS_DATA = {
         "LowLatency",
         "PortableDesign"
       ],
-      "image": "Papers/HARDWARE/Hardware预览图/2012-Digits Freehand 3D Interactions Anywhere Using a Wrist-Worn Gloveless Sensor.png"
+      "image": "Papers/HARDWARE/Hardware预览图/2012-Digits Freehand 3D Interactions Anywhere Using a Wrist-Worn Gloveless Sensor.png",
+      "doi": "https://doi.org/10.1145/2380116.2380139",
+      "authors": "Kim David, Hilliges Otmar, Izadi Shahram, Butler Alex D., Chen Jiawen, Oikonomidis Iason, Olivier Patrick",
+      "journal": "UIST '12: The 25th Annual ACM Symposium on User Interface Software and Technology"
     },
     {
       "id": 166,
@@ -7163,7 +7594,10 @@ const PAPERS_DATA = {
         "PortableDesign",
         "SocialAcceptability"
       ],
-      "image": "Papers/HARDWARE/Hardware预览图/2015-TIMMi Finger-worn Textile Input Device with Multimodal Sensing in Mobile Interaction.png"
+      "image": "Papers/HARDWARE/Hardware预览图/2015-TIMMi Finger-worn Textile Input Device with Multimodal Sensing in Mobile Interaction.png",
+      "doi": "https://doi.org/10.1145/2677199.2680560",
+      "authors": "Yoon Sang Ho, Huo Ke, Nguyen Vinh P., Ramani Karthik",
+      "journal": "TEI '15: Ninth International Conference on Tangible, Embedded, and Embodied Interaction"
     },
     {
       "id": 167,
@@ -7211,7 +7645,10 @@ const PAPERS_DATA = {
         "HandsFree",
         "SocialAcceptability"
       ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2015-User-Defined Game Input for Smart Glasses in Public Space.png"
+      "image": "Papers/GestureDesign/GestureDesign预览图/2015-User-Defined Game Input for Smart Glasses in Public Space.png",
+      "doi": "https://doi.org/10.1145/2702123.2702214",
+      "authors": "Tung Ying-Chao, Hsu Chun-Yen, Wang Han-Yu, Chyou Silvia, Lin Jhe-Wei, Wu Pei-Jung, Valstar Andries, Chen Mike Y.",
+      "journal": "CHI '15: CHI Conference on Human Factors in Computing Systems"
     },
     {
       "id": 168,
@@ -7264,7 +7701,10 @@ const PAPERS_DATA = {
         "PortableDesign",
         "SmallScreen"
       ],
-      "image": "Papers/HARDWARE/Hardware预览图/2015-zSense Enabling Shallow Depth Gesture Recognition for Greater Input Expressivity on Smart Wearables.png"
+      "image": "Papers/HARDWARE/Hardware预览图/2015-zSense Enabling Shallow Depth Gesture Recognition for Greater Input Expressivity on Smart Wearables.png",
+      "doi": "https://doi.org/10.1145/2702123.2702371",
+      "authors": "Withana Anusha, Peiris Roshan, Samarasekara Nipuna, Nanayakkara Suranga",
+      "journal": "CHI '15: CHI Conference on Human Factors in Computing Systems"
     },
     {
       "id": 171,
@@ -7311,7 +7751,10 @@ const PAPERS_DATA = {
         "SocialAcceptability",
         "UserAdaptation"
       ],
-      "image": "Papers/SOFTWARE/Software预览图/2014-A Usability User Study Concerning Free-Hand Microgesture and Wrist-Worn Sensors.png"
+      "image": "Papers/SOFTWARE/Software预览图/2014-A Usability User Study Concerning Free-Hand Microgesture and Wrist-Worn Sensors.png",
+      "doi": "https://doi.org/10.1109/BSN.2014.32",
+      "authors": "Way David, Paradiso Joseph",
+      "journal": "2014 11th International Conference on Wearable and Implantable Body Sensor Networks (BSN)"
     },
     {
       "id": 172,
@@ -7357,7 +7800,9 @@ const PAPERS_DATA = {
         "EyesFree",
         "OneHandUse"
       ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2011-A Taxonomy of Microinteractions Defining Microgestures based on Ergonomic and Scenario-dependent Requirements.png"
+      "image": "Papers/GestureDesign/GestureDesign预览图/2011-A Taxonomy of Microinteractions Defining Microgestures based on Ergonomic and Scenario-dependent Requirements.png",
+      "authors": "Wolf Katrin, Naumann Anja, Rohs Michael, Müller Jörg",
+      "journal": "Springer Berlin Heidelberg"
     },
     {
       "id": 173,
@@ -7372,7 +7817,10 @@ const PAPERS_DATA = {
       "gestureTypes": [],
       "applicationScenarios": [],
       "feedbackOutput": [],
-      "userExperienceDesign": []
+      "userExperienceDesign": [],
+      "doi": "https://doi.org/10.1145/2671015.2671029",
+      "authors": "Prätorius Manuel, Valkov Dimitar, Burgbacher Ulrich, Hinrichs Klaus",
+      "journal": "VRST '14: The 20th ACM Symposium on Virtual Reality Software and Technology"
     },
     {
       "id": 174,
@@ -7387,7 +7835,10 @@ const PAPERS_DATA = {
       "gestureTypes": [],
       "applicationScenarios": [],
       "feedbackOutput": [],
-      "userExperienceDesign": []
+      "userExperienceDesign": [],
+      "doi": "https://doi.org/10.1145/2642918.2647376",
+      "authors": "Kienzle Wolf, Hinckley Ken",
+      "journal": "UIST '14: The 27th Annual ACM Symposium on User Interface Software and Technology"
     },
     {
       "id": 175,
@@ -7402,7 +7853,10 @@ const PAPERS_DATA = {
       "gestureTypes": [],
       "applicationScenarios": [],
       "feedbackOutput": [],
-      "userExperienceDesign": []
+      "userExperienceDesign": [],
+      "doi": "https://doi.org/10.1145/3607822.3614538",
+      "authors": "Waghmare Anandghan, Boldu Roger, Whitmire Eric, Kienzle Wolf",
+      "journal": "SUI '23: ACM Symposium on Spatial User Interaction"
     },
     {
       "id": 176,
@@ -7417,7 +7871,9 @@ const PAPERS_DATA = {
       "gestureTypes": [],
       "applicationScenarios": [],
       "feedbackOutput": [],
-      "userExperienceDesign": []
+      "userExperienceDesign": [],
+      "authors": "Loclair Christian, Gustafson Sean, Baudisch Patrick",
+      "journal": "Proc MobileHCI"
     },
     {
       "id": 177,
@@ -7432,7 +7888,10 @@ const PAPERS_DATA = {
       "gestureTypes": [],
       "applicationScenarios": [],
       "feedbackOutput": [],
-      "userExperienceDesign": []
+      "userExperienceDesign": [],
+      "doi": "https://doi.org/10.1145/2702123.2702391",
+      "authors": "Weigel Martin, Lu Tong, Bailly Gilles, Oulasvirta Antti, Majidi Carmel, Steimle Jürgen",
+      "journal": "CHI '15: CHI Conference on Human Factors in Computing Systems"
     },
     {
       "id": 178,
@@ -7447,7 +7906,10 @@ const PAPERS_DATA = {
       "gestureTypes": [],
       "applicationScenarios": [],
       "feedbackOutput": [],
-      "userExperienceDesign": []
+      "userExperienceDesign": [],
+      "doi": "https://doi.org/10.1145/3126594.3126615",
+      "authors": "Gong Jun, Zhang Yang, Zhou Xia, Yang Xing-Dong",
+      "journal": "UIST '17: The 30th Annual ACM Symposium on User Interface Software and Technology"
     },
     {
       "id": 179,
@@ -7462,7 +7924,10 @@ const PAPERS_DATA = {
       "gestureTypes": [],
       "applicationScenarios": [],
       "feedbackOutput": [],
-      "userExperienceDesign": []
+      "userExperienceDesign": [],
+      "doi": "https://doi.org/10.1145/2501988.2502016",
+      "authors": "Chan Liwei, Liang Rong-Hao, Tsai Ming-Chang, Cheng Kai-Yin, Su Chao-Huai, Chen Mike Y., Cheng Wen-Huang, Chen Bing-Yu",
+      "journal": "UIST'13: The 26th Annual ACM Symposium on User Interface Software and Technology"
     },
     {
       "id": 180,
@@ -7477,7 +7942,10 @@ const PAPERS_DATA = {
       "gestureTypes": [],
       "applicationScenarios": [],
       "feedbackOutput": [],
-      "userExperienceDesign": []
+      "userExperienceDesign": [],
+      "doi": "https://doi.org/10.1145/3025453.3025704",
+      "authors": "Weigel Martin, Nittala Aditya Shekhar, Olwal Alex, Steimle Jürgen",
+      "journal": "CHI '17: CHI Conference on Human Factors in Computing Systems"
     },
     {
       "id": 181,
@@ -7492,7 +7960,10 @@ const PAPERS_DATA = {
       "gestureTypes": [],
       "applicationScenarios": [],
       "feedbackOutput": [],
-      "userExperienceDesign": []
+      "userExperienceDesign": [],
+      "doi": "https://doi.org/10.1145/3457146",
+      "authors": "Lee Lik Hang, Zhu Yiming, Yau Yui-Pan, Hui Pan, Pirttikangas Susanna",
+      "journal": "Proc ACM Hum Comput Interact"
     },
     {
       "id": 182,
@@ -7507,7 +7978,10 @@ const PAPERS_DATA = {
       "gestureTypes": [],
       "applicationScenarios": [],
       "feedbackOutput": [],
-      "userExperienceDesign": []
+      "userExperienceDesign": [],
+      "doi": "https://doi.org/10.1145/2556288.2556964",
+      "authors": "Markussen Anders, Jakobsen Mikkel Rønne, Hornbæk Kasper",
+      "journal": "CHI '14: CHI Conference on Human Factors in Computing Systems"
     },
     {
       "id": 183,
@@ -7522,7 +7996,10 @@ const PAPERS_DATA = {
       "gestureTypes": [],
       "applicationScenarios": [],
       "feedbackOutput": [],
-      "userExperienceDesign": []
+      "userExperienceDesign": [],
+      "doi": "https://doi.org/10.1007/s10209-019-00647-0",
+      "authors": "Xiao Yiqi, He Renke",
+      "journal": "Univers Access Inf Soc"
     },
     {
       "id": 184,
@@ -7537,7 +8014,10 @@ const PAPERS_DATA = {
       "gestureTypes": [],
       "applicationScenarios": [],
       "feedbackOutput": [],
-      "userExperienceDesign": []
+      "userExperienceDesign": [],
+      "doi": "https://doi.org/10.1145/3586183.3606713",
+      "authors": "Joshi Nikhita, Abtahi Parastoo, Sodhi Raj, Bartov Nitzan, Rushing Jackson, Collins Christopher, Vogel Daniel, Glueck Michael",
+      "journal": "UIST '23: The 36th Annual ACM Symposium on User Interface Software and Technology"
     },
     {
       "id": 185,
@@ -7552,7 +8032,10 @@ const PAPERS_DATA = {
       "gestureTypes": [],
       "applicationScenarios": [],
       "feedbackOutput": [],
-      "userExperienceDesign": []
+      "userExperienceDesign": [],
+      "doi": "https://doi.org/10.1145/3027063.3053109",
+      "authors": "Tsai Hsin-Ruey, Wu Te-Yen, Huang Da-Yuan, Hsiu Min-Chieh, Hsiao Jui-Chun, Hung Yi-Ping, Chen Mike Y., Chen Bing-Yu",
+      "journal": "CHI '17: CHI Conference on Human Factors in Computing Systems"
     },
     {
       "id": 186,
@@ -7567,7 +8050,10 @@ const PAPERS_DATA = {
       "gestureTypes": [],
       "applicationScenarios": [],
       "feedbackOutput": [],
-      "userExperienceDesign": []
+      "userExperienceDesign": [],
+      "doi": "https://doi.org/10.1145/2512349.2512795",
+      "authors": "Ghomi Emilien, Huot Stéphane, Bau Olivier, Beaudouin-Lafon Michel, Mackay Wendy E.",
+      "journal": "ITS '13: The ACM International Conference on Interactive Tabletops and Surfaces"
     },
     {
       "id": 187,
@@ -7582,7 +8068,10 @@ const PAPERS_DATA = {
       "gestureTypes": [],
       "applicationScenarios": [],
       "feedbackOutput": [],
-      "userExperienceDesign": []
+      "userExperienceDesign": [],
+      "doi": "https://doi.org/10.1145/2785830.2785886",
+      "authors": "Wang Cheng-Yao, Chu Wei-Chen, Chiu Po-Tsung, Hsiu Min-Chieh, Chiang Yih-Harn, Chen Mike Y.",
+      "journal": "MobileHCI '15: 17th International Conference on Human-Computer Interaction with Mobile Devices and Services"
     }
   ],
   "categories": {
@@ -15186,8 +15675,3 @@ const PAPERS_DATA = {
     }
   }
 };
-
-// 导出数据
-if (typeof module !== 'undefined' && module.exports) {
-    module.exports = PAPERS_DATA;
-}
