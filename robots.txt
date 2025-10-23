@@ -1,0 +1,16 @@
+# Robots.txt for Gesture Interaction Research Gallery
+User-agent: *
+Allow: /
+Sitemap: https://formicrogses.github.io/sitemap.xml
+
+# Allow search engines to index all content
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Disallow crawling of certain file types if needed
+User-agent: *
+Disallow: /*.json$
+Disallow: /sw.js

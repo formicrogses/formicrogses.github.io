@@ -1,0 +1,13 @@
+<svg width="400" height="225" viewBox="0 0 400 225" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="225" fill="#f0f4f8"/>
+  <g transform="translate(200, 112.5)">
+    <rect x="-40" y="-30" width="80" height="60" rx="4" fill="#e2e8f0" stroke="#cbd5e1" stroke-width="2"/>
+    <circle cx="0" cy="-5" r="8" fill="#cbd5e1"/>
+    <path d="M -30 10 L -10 -10 L 10 10 L 30 -10" 
+          stroke="#cbd5e1" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="-20" cy="-15" r="6" fill="#fbbf24"/>
+  </g>
+  <text x="200" y="160" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#94a3b8">
+    Image Placeholder
+  </text>
+</svg>

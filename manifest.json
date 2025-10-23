@@ -1,0 +1,32 @@
+{
+  "name": "Gesture Interaction Research Gallery",
+  "short_name": "Gesture Gallery",
+  "description": "A comprehensive collection of gesture interaction research papers with advanced filtering and search capabilities",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "images/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "images/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["education", "research", "science"],
+  "screenshots": [
+    {
+      "src": "images/screenshot1.png",
+      "sizes": "540x720",
+      "type": "image/png"
+    }
+  ]
+}
