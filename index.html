@@ -194,6 +194,20 @@
         body.theme-dark .modal-done-btn:hover {
             background: #1976D2;
         }
+        
+        /* Fix paper item hover for dark theme */
+        body.theme-dark .paper-item {
+            background: #2a2a2a;
+            border-color: #3a3a3a;
+        }
+        
+        body.theme-dark .paper-item:hover {
+            background: #2a2a2a;
+        }
+        
+        body.theme-dark .image-container {
+            background: linear-gradient(135deg, #4a4a4a 0%, #3a3a3a 100%);
+        }
 
         /* Blue Theme */
         body.theme-blue {
@@ -244,6 +258,22 @@
         body.theme-sunset .search-input {
             background: rgba(255, 255, 255, 0.95);
             color: #333;
+        }
+        
+        /* Fix hover issues for gradient themes */
+        body.theme-blue .paper-item,
+        body.theme-green .paper-item,
+        body.theme-sunset .paper-item,
+        body.theme-ocean .paper-item {
+            isolation: isolate;
+        }
+        
+        body.theme-blue .paper-item:hover,
+        body.theme-green .paper-item:hover,
+        body.theme-sunset .paper-item:hover,
+        body.theme-ocean .paper-item:hover {
+            z-index: 30;
+            position: relative;
         }
         
         /* Fix tag colors for gradient themes */
@@ -587,11 +617,14 @@
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             transform-style: preserve-3d;
             perspective: 1000px;
+            background: white;
+            border-radius: 8px;
+            padding: 0;
         }
 
         .paper-item:hover {
             transform: translateY(-10px) scale(1.02);
-            z-index: 10;
+            z-index: 20;
         }
 
         /* Image container */
@@ -604,12 +637,15 @@
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 1;
         }
 
         .paper-item:hover .image-container {
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2),
                         0 0 30px rgba(102, 126, 234, 0.4);
             transform: perspective(1000px) rotateX(-3deg) rotateY(3deg);
+            overflow: visible;
+            z-index: 10;
         }
 
         .paper-image {
@@ -620,11 +656,12 @@
             display: block;
             transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
             position: relative;
+            border-radius: 8px;
         }
 
         .paper-item:hover .paper-image {
-            transform: scale(1.1);
-            filter: brightness(1.1) contrast(1.05);
+            transform: scale(1.05);
+            filter: brightness(1.05) contrast(1.02);
         }
 
         .paper-title {
@@ -1079,6 +1116,16 @@
             .gallery {
                 grid-template-columns: repeat(2, 1fr);
                 gap: 15px;
+            }
+            
+            /* Fix mobile hover issues */
+            .paper-item:hover .image-container {
+                overflow: hidden;
+                transform: none;
+            }
+            
+            .paper-item:hover .paper-image {
+                transform: scale(1.02);
             }
 
             .paper-title {
