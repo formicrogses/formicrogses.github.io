@@ -266,14 +266,26 @@
         body.theme-sunset .paper-item,
         body.theme-ocean .paper-item {
             isolation: isolate;
+            z-index: 1;
         }
         
         body.theme-blue .paper-item:hover,
         body.theme-green .paper-item:hover,
         body.theme-sunset .paper-item:hover,
-        body.theme-ocean .paper-item:hover {
-            z-index: 30;
+        body.theme-ocean .paper-item:hover,
+        body.theme-dark .paper-item:hover {
+            z-index: 100;
             position: relative;
+        }
+        
+        /* Fix image clipping in non-white themes */
+        body.theme-blue .paper-item:hover .image-container,
+        body.theme-green .paper-item:hover .image-container,
+        body.theme-sunset .paper-item:hover .image-container,
+        body.theme-ocean .paper-item:hover .image-container,
+        body.theme-dark .paper-item:hover .image-container {
+            overflow: visible;
+            z-index: 10;
         }
         
         /* Fix tag colors for gradient themes */
@@ -617,14 +629,11 @@
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             transform-style: preserve-3d;
             perspective: 1000px;
-            background: white;
-            border-radius: 8px;
-            padding: 0;
         }
 
         .paper-item:hover {
             transform: translateY(-10px) scale(1.02);
-            z-index: 20;
+            z-index: 10;
         }
 
         /* Image container */
@@ -637,15 +646,12 @@
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            z-index: 1;
         }
 
         .paper-item:hover .image-container {
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2),
                         0 0 30px rgba(102, 126, 234, 0.4);
             transform: perspective(1000px) rotateX(-3deg) rotateY(3deg);
-            overflow: visible;
-            z-index: 10;
         }
 
         .paper-image {
@@ -656,12 +662,11 @@
             display: block;
             transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
             position: relative;
-            border-radius: 8px;
         }
 
         .paper-item:hover .paper-image {
-            transform: scale(1.05);
-            filter: brightness(1.05) contrast(1.02);
+            transform: scale(1.1);
+            filter: brightness(1.1) contrast(1.05);
         }
 
         .paper-title {
