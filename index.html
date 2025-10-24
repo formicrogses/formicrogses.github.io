@@ -118,6 +118,7 @@
         body.theme-dark .paper-item {
             background: #2a2a2a;
             border-color: #3a3a3a;
+            isolation: isolate;
         }
         
         body.theme-dark .search-input {
@@ -202,7 +203,15 @@
         }
         
         body.theme-dark .paper-item:hover {
-            background: #2a2a2a;
+            background: transparent !important;
+            overflow: visible !important;
+            z-index: 200 !important;
+        }
+        
+        body.theme-dark .paper-item:hover .paper-title {
+            position: relative;
+            z-index: 1;
+            background: transparent;
         }
         
         body.theme-dark .image-container {
@@ -618,10 +627,16 @@
             grid-template-columns: repeat(4, 1fr);
             gap: 30px;
             transition: all 0.3s ease;
+            position: relative;
         }
 
         .gallery.filter-active {
             grid-template-columns: repeat(3, 1fr);
+        }
+        
+        /* Ensure gallery doesn't block hover items in dark theme */
+        body.theme-dark .gallery {
+            overflow: visible;
         }
 
         /* Paper card */
