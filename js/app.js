@@ -181,6 +181,7 @@ class GestureResearchGallery {
         }
         
         this.applyFilters();
+        this.updateFilterCounts();
         this.updateURL();
     }
 
@@ -434,6 +435,51 @@ class GestureResearchGallery {
         document.getElementById('totalCount').textContent = this.filteredPapers.length;
     }
 
+    updateFilterCounts() {
+        // Calculate counts for each tag based on currently filtered papers
+        const tagCounts = {};
+        
+        // For each paper in the current filtered set
+        this.filteredPapers.forEach(paper => {
+            // Count main category
+            if (paper.category) {
+                tagCounts[`category_${paper.category}`] = (tagCounts[`category_${paper.category}`] || 0) + 1;
+            }
+            
+            // Count other tags
+            const tagCategories = {
+                hardwareDevices: 'hardwareDevices',
+                sensingTechnology: 'sensingTechnology',
+                recognitionClassification: 'recognitionClassification',
+                interactionModalities: 'interactionModalities',
+                gestureTypes: 'gestureTypes',
+                applicationScenarios: 'applicationScenarios',
+                feedbackOutput: 'feedbackOutput',
+                userExperienceDesign: 'userExperienceDesign'
+            };
+            
+            Object.entries(tagCategories).forEach(([key, categoryKey]) => {
+                if (paper[key]) {
+                    paper[key].forEach(tag => {
+                        tagCounts[`${categoryKey}_${tag}`] = (tagCounts[`${categoryKey}_${tag}`] || 0) + 1;
+                    });
+                }
+            });
+        });
+        
+        // Update all filter count displays
+        document.querySelectorAll('.filter-option').forEach(option => {
+            const checkbox = option.querySelector('input[type="checkbox"]');
+            const countSpan = option.querySelector('.filter-count');
+            
+            if (checkbox && countSpan) {
+                const countKey = checkbox.id;
+                const count = tagCounts[countKey] || 0;
+                countSpan.textContent = count;
+            }
+        });
+    }
+
     formatTag(tag) {
         tag = tag.replace(/^#/, '');
         tag = tag.replace(/([A-Z])/g, ' $1');
@@ -519,6 +565,7 @@ class GestureResearchGallery {
         });
         
         this.applyFilters();
+        this.updateFilterCounts();
     }
 
     clearAllFilters() {
@@ -548,6 +595,7 @@ class GestureResearchGallery {
         }
         
         this.applyFilters();
+        this.updateFilterCounts();
         this.updateURL();
     }
 
@@ -560,6 +608,7 @@ class GestureResearchGallery {
             searchInput.addEventListener('input', this.debounce(() => {
                 this.searchQuery = searchInput.value;
                 this.applyFilters();
+                this.updateFilterCounts();
                 this.updateURL();
             }, 300));
         }
