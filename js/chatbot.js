@@ -319,7 +319,13 @@ Help users discover papers, understand concepts, and answer questions about gest
         
         const textDiv = document.createElement('div');
         textDiv.className = 'message-text';
-        textDiv.textContent = text;
+        
+        // Format text with basic markdown support
+        if (type === 'bot') {
+            textDiv.innerHTML = this.formatMarkdown(text);
+        } else {
+            textDiv.textContent = text;
+        }
         
         content.appendChild(senderSpan);
         content.appendChild(textDiv);
@@ -331,6 +337,66 @@ Help users discover papers, understand concepts, and answer questions about gest
         
         // Scroll to bottom
         messagesContainer.scrollTop = messagesContainer.scrollHeight;
+    }
+
+    formatMarkdown(text) {
+        // Escape HTML first
+        let html = text
+            .replace(/&/g, '&amp;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;');
+        
+        // Code blocks (triple backticks)
+        html = html.replace(/```([\s\S]*?)```/g, '<pre><code>$1</code></pre>');
+        
+        // Inline code (single backticks)
+        html = html.replace(/`([^`]+)`/g, '<code>$1</code>');
+        
+        // Bold (**text** or __text__)
+        html = html.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+        html = html.replace(/__(.+?)__/g, '<strong>$1</strong>');
+        
+        // Italic (*text* or _text_)
+        html = html.replace(/\*(.+?)\*/g, '<em>$1</em>');
+        html = html.replace(/_(.+?)_/g, '<em>$1</em>');
+        
+        // Headers
+        html = html.replace(/^### (.+)$/gm, '<h3>$1</h3>');
+        html = html.replace(/^## (.+)$/gm, '<h2>$1</h2>');
+        html = html.replace(/^# (.+)$/gm, '<h1>$1</h1>');
+        
+        // Lists (unordered)
+        html = html.replace(/^\* (.+)$/gm, '<li>$1</li>');
+        html = html.replace(/^- (.+)$/gm, '<li>$1</li>');
+        
+        // Lists (ordered)
+        html = html.replace(/^\d+\. (.+)$/gm, '<li>$1</li>');
+        
+        // Wrap list items in ul/ol tags
+        html = html.replace(/(<li>.*<\/li>\n?)+/g, match => {
+            return '<ul>' + match + '</ul>';
+        });
+        
+        // Links [text](url)
+        html = html.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>');
+        
+        // Blockquotes
+        html = html.replace(/^&gt; (.+)$/gm, '<blockquote>$1</blockquote>');
+        
+        // Line breaks (double newline = paragraph)
+        html = html.split('\n\n').map(para => {
+            if (para.trim() && 
+                !para.startsWith('<h') && 
+                !para.startsWith('<ul') && 
+                !para.startsWith('<ol') && 
+                !para.startsWith('<pre') &&
+                !para.startsWith('<blockquote')) {
+                return '<p>' + para.trim() + '</p>';
+            }
+            return para;
+        }).join('\n');
+        
+        return html;
     }
 
     showLoading() {
