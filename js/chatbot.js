@@ -2,7 +2,7 @@
 class GeminiChatbot {
     constructor() {
         this.apiKey = '';
-        this.apiEndpoint = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent';
+        this.apiEndpoint = 'https://generativelanguage.googleapis.com/v1/models/gemini-2.0-flash:generateContent';
         this.conversationHistory = [];
         this.isOpen = false;
         this.isLoading = false;
