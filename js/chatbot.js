@@ -9,6 +9,7 @@ class GeminiChatbot {
         this.currentPaper = null;  // 当前讨论的论文
         this.papersIndex = null;   // 论文索引（轻量级）
         this.papersTexts = null;   // 完整论文文本数据（按需加载）
+        this.websiteData = null;   // 网站数据（从PAPERS_DATA加载）
         
         // 对话管理
         this.conversations = [];   // 所有对话列表
@@ -23,6 +24,7 @@ class GeminiChatbot {
         this.loadApiKey();
         this.loadConversations();
         this.loadPapersTexts();
+        this.loadWebsiteData();
     }
 
     async loadPapersTexts() {
@@ -35,6 +37,16 @@ class GeminiChatbot {
             }
         } catch (error) {
             console.warn('⚠️ 无法加载论文索引:', error);
+        }
+    }
+
+    loadWebsiteData() {
+        // 加载网站论文数据（从全局变量PAPERS_DATA）
+        if (typeof PAPERS_DATA !== 'undefined') {
+            this.websiteData = PAPERS_DATA;
+            console.log(`✅ 已加载网站数据：${PAPERS_DATA.papers.length} 篇论文`);
+        } else {
+            console.warn('⚠️ PAPERS_DATA未加载');
         }
     }
 
@@ -506,50 +518,125 @@ class GeminiChatbot {
         return aiResponse;
     }
 
-    buildContext() {
-        let context = '';
+    generateWebsiteDataSummary() {
+        if (!this.websiteData || !this.websiteData.papers) {
+            return '';
+        }
         
-        // 如果有当前论文，优先使用论文内容
+        const papers = this.websiteData.papers;
+        const totalPapers = papers.length;
+        
+        // 统计年份
+        const yearCounts = {};
+        papers.forEach(p => {
+            const year = p.year || 'Unknown';
+            yearCounts[year] = (yearCounts[year] || 0) + 1;
+        });
+        const yearsList = Object.entries(yearCounts)
+            .sort((a, b) => b[0].localeCompare(a[0]))
+            .slice(0, 8)
+            .map(([year, count]) => `${year}年: ${count}篇`)
+            .join(', ');
+        
+        // 统计分类
+        const categoryCounts = {};
+        papers.forEach(p => {
+            const cat = p.category || 'other';
+            categoryCounts[cat] = (categoryCounts[cat] || 0) + 1;
+        });
+        const categoryList = Object.entries(categoryCounts)
+            .map(([cat, count]) => `${cat}: ${count}篇`)
+            .join(', ');
+        
+        // 统计前10硬件设备
+        const deviceCounts = {};
+        papers.forEach(p => {
+            if (p.hardwareDevices) {
+                p.hardwareDevices.forEach(d => {
+                    deviceCounts[d] = (deviceCounts[d] || 0) + 1;
+                });
+            }
+        });
+        const topDevices = Object.entries(deviceCounts)
+            .sort((a, b) => b[1] - a[1])
+            .slice(0, 8)
+            .map(([dev, count]) => `${dev}(${count})`)
+            .join(', ');
+        
+        // 统计应用场景
+        const appCounts = {};
+        papers.forEach(p => {
+            if (p.applicationScenarios) {
+                p.applicationScenarios.forEach(a => {
+                    appCounts[a] = (appCounts[a] || 0) + 1;
+                });
+            }
+        });
+        const topApps = Object.entries(appCounts)
+            .sort((a, b) => b[1] - a[1])
+            .slice(0, 8)
+            .map(([app, count]) => `${app}(${count})`)
+            .join(', ');
+        
+        return `
+## 📊 网站数据库统计
+
+**论文总数**: ${totalPapers}篇手势交互研究论文
+
+**年份分布**: ${yearsList}
+
+**研究分类**: ${categoryList}
+
+**常用硬件**: ${topDevices}
+
+**应用领域**: ${topApps}
+
+**你可以回答的问题类型**:
+- 统计类: "网站有多少篇论文？" "2020年有几篇？" "VR相关的论文有多少？"
+- 推荐类: "推荐几篇关于EMG的论文" "有哪些使用DataGlove的研究？"
+- 对比类: "AR和VR哪个研究得多？" "近几年的研究趋势如何？"
+
+注意: 用户询问具体数据时，请基于上述统计信息准确回答。如需查找具体论文，建议用户使用网站的筛选功能。
+`;
+    }
+
+    buildContext() {
+        let context = 'You are a helpful AI assistant for a gesture interaction research paper gallery.';
+        
+        // 添加网站数据统计（始终包含）
+        if (this.websiteData) {
+            context += '\n\n' + this.generateWebsiteDataSummary();
+        }
+        
+        // 如果有当前论文，添加论文内容
         if (this.currentPaper && this.currentPaper.text) {
             const paperText = this.currentPaper.text;
-            const maxChars = 30000; // Gemini限制，避免过长
+            const maxChars = 20000; // 减少以留空间给网站数据
             
             const truncatedText = paperText.length > maxChars 
                 ? paperText.substring(0, maxChars) + '\n\n[论文内容过长，已截断...]'
                 : paperText;
             
-            context = `You are a helpful AI assistant discussing a research paper about gesture interaction.
+            context += `\n\n## 📄 当前讨论的论文
 
-**Current Paper:**
-Title: ${this.currentPaper.title}
+**标题**: ${this.currentPaper.title}
 
-**Paper Content:**
+**论文内容**:
 ${truncatedText}
 
-Instructions:
-- Answer questions based on the paper content above
-- Cite specific sections when possible
-- If the user asks something not in the paper, say so clearly
-- Use clear, structured responses with headings and lists
-- Keep responses concise but informative`;
-            
-            return context;
+**回答要求**:
+- 优先基于论文内容回答
+- 引用具体段落
+- 如果论文中没有相关信息，明确告知
+- 使用清晰的结构（标题、列表）
+- 保持简洁但信息丰富`;
+        } else {
+            context += `\n\n**当前状态**: 没有选择具体论文，可以回答关于网站数据的统计问题，或帮助用户寻找相关论文。
+
+**使用建议**: 用户可以点击📄按钮选择论文进行深入讨论。`;
         }
         
-        // 否则使用通用上下文
-        if (typeof app !== 'undefined' && app.allPapers) {
-            const totalPapers = app.allPapers.length;
-            const categories = [...new Set(app.allPapers.map(p => p.category))];
-            const years = [...new Set(app.allPapers.map(p => p.year))].sort().reverse();
-            
-            return `You are a helpful AI assistant for a gesture interaction research paper gallery. 
-The gallery contains ${totalPapers} research papers about gesture interaction.
-Categories available: ${categories.join(', ')}.
-Papers span from ${years[years.length - 1]} to ${years[0]}.
-Help users discover papers, understand concepts, and answer questions about gesture interaction research.`;
-        }
-        
-        return 'You are a helpful AI assistant for a gesture interaction research paper gallery. Help users discover papers and answer questions about gesture interaction research.';
+        return context;
     }
 
     addMessage(sender, text, type = 'user', saveToConversation = true) {
