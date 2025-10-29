@@ -432,19 +432,73 @@ class GeminiChatbot {
         // Add user message
         this.addMessage('You', message, 'user');
         
-        // 🔍 智能知识库检索
+        // 🎯 智能分析系统 - 检测查询类型并处理
         let relevantPapers = [];
+        let specialAnalysis = null;
+        
         if (this.websiteData && this.websiteData.papers) {
-            relevantPapers = this.searchPapers(message).slice(0, 5); // 最相关的5篇
+            // 1️⃣ 检测统计分析查询
+            const analysis = this.analyzeDatabase(message);
+            if (analysis) {
+                const analysisText = this.formatAnalysisResult(analysis, message);
+                this.addMessage('System', analysisText, 'system');
+                // 统计查询不需要加载论文全文
+                specialAnalysis = 'statistics';
+            }
             
-            if (relevantPapers.length > 0) {
-                // 显示检索信息
-                const paperTitles = relevantPapers.slice(0, 3).map(p => `"${p.title}"`).join(', ');
-                const moreText = relevantPapers.length > 3 ? ` and ${relevantPapers.length - 3} more` : '';
-                this.addMessage('System', `🔍 Searching knowledge base... Found ${relevantPapers.length} relevant papers: ${paperTitles}${moreText}`, 'system');
+            // 2️⃣ 检测术语解释查询
+            if (/what is|define|explain|meaning of/i.test(message)) {
+                const knowledge = this.getDomainKnowledge();
+                const lowerMsg = message.toLowerCase();
                 
-                // 异步加载论文全文
-                await this.loadPaperTexts(relevantPapers);
+                // 查找匹配的术语
+                for (const [term, definition] of Object.entries(knowledge.terms)) {
+                    if (lowerMsg.includes(term)) {
+                        const termInfo = `📖 **${term.toUpperCase()}**: ${definition}\n\nRelated papers in database using this technology: ${this.websiteData.papers.filter(p => {
+                            const text = JSON.stringify(p).toLowerCase();
+                            return text.includes(term);
+                        }).length} papers`;
+                        this.addMessage('System', termInfo, 'system');
+                        break;
+                    }
+                }
+            }
+            
+            // 3️⃣ 常规知识库检索
+            if (!specialAnalysis) {
+                relevantPapers = this.searchPapers(message);
+                
+                if (relevantPapers.length > 0) {
+                    // 检测对比查询
+                    const isCompare = /compare|versus|vs|difference/i.test(message);
+                    
+                    if (isCompare && relevantPapers.length >= 2) {
+                        // 对比分析
+                        const comparison = this.comparePapers(relevantPapers.slice(0, 3), message);
+                        if (comparison) {
+                            const compText = this.formatComparisonResult(comparison);
+                            this.addMessage('System', compText, 'system');
+                        }
+                    }
+                    
+                    // 显示检索信息
+                    const paperTitles = relevantPapers.slice(0, 3).map(p => `"${p.title}"`).join(', ');
+                    const moreText = relevantPapers.length > 3 ? ` and ${relevantPapers.length - 3} more` : '';
+                    this.addMessage('System', `🔍 Knowledge base search: Found ${relevantPapers.length} relevant papers: ${paperTitles}${moreText}`, 'system');
+                    
+                    // 加载前5篇论文全文
+                    relevantPapers = relevantPapers.slice(0, 5);
+                    await this.loadPaperTexts(relevantPapers);
+                    
+                    // 4️⃣ 检测推荐请求
+                    if (/recommend|suggest|similar|related|also|like this/i.test(message) && relevantPapers.length > 0) {
+                        const recommendations = this.recommendPapers(relevantPapers[0], 5);
+                        if (recommendations.length > 0) {
+                            const recText = this.formatRecommendations(recommendations, relevantPapers[0]);
+                            this.addMessage('System', recText, 'system');
+                        }
+                    }
+                }
             }
         }
         
@@ -560,7 +614,7 @@ class GeminiChatbot {
             try {
                 const response = await fetch('papers-texts.json');
                 this.papersTexts = await response.json();
-                console.log('📚 Papers full texts loaded');
+                console.log('📚 Papers full texts loaded:', Object.keys(this.papersTexts).length, 'papers');
             } catch (error) {
                 console.error('Error loading papers texts:', error);
                 return;
@@ -572,8 +626,168 @@ class GeminiChatbot {
             const filename = paper.pdfFile || paper.filename;
             if (filename && this.papersTexts[filename]) {
                 paper.fullText = this.papersTexts[filename].text;
+                paper.fullTextLength = this.papersTexts[filename].length || paper.fullText.length;
             }
         });
+    }
+
+    /**
+     * 📊 方案1：智能统计分析系统
+     */
+    analyzeDatabase(query) {
+        if (!this.websiteData || !this.websiteData.papers) {
+            return null;
+        }
+
+        const papers = this.websiteData.papers;
+        const lowerQuery = query.toLowerCase();
+        
+        // 检测查询意图
+        const isStatQuery = /how many|count|number of|statistics|trend|popular|most used|distribution|compare.*papers/i.test(query);
+        const isTrendQuery = /trend|evolution|history|over time|year|timeline/i.test(query);
+        const isHardwareQuery = /hardware|device|sensor|equipment/i.test(query);
+        const isAppQuery = /application|scenario|use case|domain/i.test(query);
+        const isYearQuery = /\b20\d{2}\b/.test(query);
+        
+        if (!isStatQuery && !isTrendQuery && !isHardwareQuery && !isAppQuery && !isYearQuery) {
+            return null; // 不是统计类查询
+        }
+
+        const analysis = {
+            type: 'statistical_analysis',
+            total: papers.length,
+            yearRange: {},
+            hardware: {},
+            applications: {},
+            gestures: {},
+            categories: {},
+            conferences: {}
+        };
+
+        // 统计各维度数据
+        papers.forEach(paper => {
+            // 年份统计
+            const year = paper.year || 'Unknown';
+            analysis.yearRange[year] = (analysis.yearRange[year] || 0) + 1;
+
+            // 类别统计
+            const category = paper.category || 'Unknown';
+            analysis.categories[category] = (analysis.categories[category] || 0) + 1;
+
+            // 硬件统计
+            if (paper.hardwareDevices) {
+                paper.hardwareDevices.forEach(hw => {
+                    analysis.hardware[hw] = (analysis.hardware[hw] || 0) + 1;
+                });
+            }
+
+            // 应用场景统计
+            if (paper.applicationScenarios) {
+                paper.applicationScenarios.forEach(app => {
+                    analysis.applications[app] = (analysis.applications[app] || 0) + 1;
+                });
+            }
+
+            // 手势类型统计
+            if (paper.gestureTypes) {
+                paper.gestureTypes.forEach(gest => {
+                    analysis.gestures[gest] = (analysis.gestures[gest] || 0) + 1;
+                });
+            }
+
+            // 会议统计
+            if (paper.conferenceName) {
+                const conf = paper.conferenceName.split(':')[0].trim(); // 提取会议简称
+                analysis.conferences[conf] = (analysis.conferences[conf] || 0) + 1;
+            }
+        });
+
+        // 排序
+        analysis.topHardware = Object.entries(analysis.hardware)
+            .sort((a, b) => b[1] - a[1])
+            .slice(0, 10);
+        
+        analysis.topApplications = Object.entries(analysis.applications)
+            .sort((a, b) => b[1] - a[1])
+            .slice(0, 10);
+        
+        analysis.topGestures = Object.entries(analysis.gestures)
+            .sort((a, b) => b[1] - a[1])
+            .slice(0, 10);
+
+        analysis.topConferences = Object.entries(analysis.conferences)
+            .sort((a, b) => b[1] - a[1])
+            .slice(0, 10);
+
+        analysis.yearTrend = Object.entries(analysis.yearRange)
+            .filter(([year]) => year !== 'Unknown')
+            .sort((a, b) => a[0] - b[0]);
+
+        return analysis;
+    }
+
+    /**
+     * 格式化统计分析结果为可读文本
+     */
+    formatAnalysisResult(analysis, query) {
+        if (!analysis) return null;
+
+        let result = '📊 **Database Statistical Analysis**\n\n';
+        result += `**Overview:** ${analysis.total} gesture interaction research papers (${analysis.yearTrend[0]?.[0] || '2002'}-${analysis.yearTrend[analysis.yearTrend.length-1]?.[0] || '2025'})\n\n`;
+
+        // 年份趋势
+        if (/trend|timeline|evolution|history|over time/i.test(query)) {
+            result += '## 📈 Research Trend by Year\n';
+            const recentYears = analysis.yearTrend.slice(-10);
+            recentYears.forEach(([year, count]) => {
+                const bar = '█'.repeat(Math.ceil(count / 2));
+                result += `${year}: ${bar} (${count} papers)\n`;
+            });
+            result += '\n';
+        }
+
+        // 硬件统计
+        if (/hardware|device|sensor/i.test(query) || analysis.topHardware.length > 0) {
+            result += '## 🔧 Most Used Hardware/Sensors\n';
+            analysis.topHardware.slice(0, 8).forEach(([hw, count], idx) => {
+                result += `${idx + 1}. **${hw}**: ${count} papers\n`;
+            });
+            result += '\n';
+        }
+
+        // 应用场景统计
+        if (/application|scenario|use case/i.test(query) || analysis.topApplications.length > 0) {
+            result += '## 🎯 Application Scenarios\n';
+            analysis.topApplications.slice(0, 8).forEach(([app, count], idx) => {
+                result += `${idx + 1}. **${app}**: ${count} papers\n`;
+            });
+            result += '\n';
+        }
+
+        // 研究类别
+        if (Object.keys(analysis.categories).length > 0) {
+            result += '## 📚 Research Categories\n';
+            Object.entries(analysis.categories)
+                .sort((a, b) => b[1] - a[1])
+                .forEach(([cat, count]) => {
+                    const percentage = ((count / analysis.total) * 100).toFixed(1);
+                    result += `- **${cat}**: ${count} papers (${percentage}%)\n`;
+                });
+            result += '\n';
+        }
+
+        // 顶会分布
+        if (analysis.topConferences.length > 0) {
+            result += '## 🏆 Top Conferences/Journals\n';
+            analysis.topConferences.slice(0, 5).forEach(([conf, count], idx) => {
+                result += `${idx + 1}. ${conf}: ${count} papers\n`;
+            });
+            result += '\n';
+        }
+
+        result += '\n*This analysis is generated from the complete database of ' + analysis.total + ' papers.*';
+        
+        return result;
     }
 
     /**
@@ -619,7 +833,7 @@ class GeminiChatbot {
     }
 
     /**
-     * 智能论文检索 - 多关键词、多字段、相关性评分
+     * 📊 方案3：增强RAG检索系统 - 智能论文检索
      */
     searchPapers(query) {
         if (!this.websiteData || !this.websiteData.papers) {
@@ -635,11 +849,17 @@ class GeminiChatbot {
             .filter(word => word.length > 2 && !stopWords.includes(word))
             .slice(0, 10);
         
+        // 检测查询意图
+        const isCompareQuery = /compare|versus|vs|difference|better|which/i.test(query);
+        const isMethodQuery = /method|approach|technique|algorithm|how.*work/i.test(query);
+        const isResultQuery = /accuracy|precision|result|performance|evaluation/i.test(query);
+        
         // 计算每篇论文的相关性分数
         const scoredPapers = this.websiteData.papers.map(paper => {
             let score = 0;
             const title = (paper.title || '').toLowerCase();
             const author = (paper.authors || paper.firstAuthor || '').toLowerCase();
+            const conf = (paper.conferenceName || '').toLowerCase();
             const allTags = [
                 ...(paper.hardwareDevices || []),
                 ...(paper.applicationScenarios || []),
@@ -650,11 +870,12 @@ class GeminiChatbot {
             // 完全匹配 - 最高分
             if (title.includes(lowerQuery)) score += 100;
             
-            // 标题关键词匹配
+            // 标题关键词匹配（加权）
             keywords.forEach(kw => {
                 if (title.includes(kw)) score += 15;
                 if (author.includes(kw)) score += 8;
                 if (allTags.includes(kw)) score += 5;
+                if (conf.includes(kw)) score += 3;
             });
             
             // 年份匹配
@@ -662,14 +883,270 @@ class GeminiChatbot {
                 score += 10;
             }
             
+            // 根据查询意图调整分数
+            if (isMethodQuery && (title.includes('method') || title.includes('approach'))) {
+                score += 10;
+            }
+            if (isResultQuery && (title.includes('evaluat') || title.includes('study'))) {
+                score += 10;
+            }
+            
+            // 顶会论文加分（CHI, UIST等）
+            const topConferences = ['CHI', 'UIST', 'MobileHCI', 'SIGGRAPH'];
+            if (topConferences.some(tc => conf.includes(tc.toLowerCase()))) {
+                score += 5;
+            }
+            
+            // 近期论文轻微加分
+            if (paper.year && paper.year >= 2020) {
+                score += 2;
+            }
+            
             return { paper, score };
         });
         
         // 过滤并排序
-        return scoredPapers
+        const results = scoredPapers
             .filter(item => item.score > 0)
             .sort((a, b) => b.score - a.score)
             .map(item => item.paper);
+        
+        // 如果是对比查询，返回更多结果以便对比
+        const limit = isCompareQuery ? 10 : 5;
+        return results.slice(0, limit);
+    }
+
+    /**
+     * 方案4：专业领域知识库
+     */
+    getDomainKnowledge() {
+        return {
+            // 常见术语解释
+            terms: {
+                'imu': 'Inertial Measurement Unit - sensors that measure motion via accelerometer and gyroscope',
+                'emg': 'Electromyography - measures electrical activity of muscles',
+                'capacitive': 'Sensing based on changes in electrical capacitance',
+                'rf': 'Radio Frequency - wireless electromagnetic signals',
+                'acoustic': 'Sound-based sensing using speakers and microphones',
+                'depth camera': 'Cameras that capture 3D depth information (e.g., Kinect)',
+                'time-of-flight': 'ToF - measures distance by timing light reflection',
+                'machine learning': 'ML - algorithms that learn patterns from data',
+                'deep learning': 'Neural networks with multiple layers',
+                'cnn': 'Convolutional Neural Network - effective for spatial data',
+                'rnn': 'Recurrent Neural Network - good for sequential data',
+                'lstm': 'Long Short-Term Memory - type of RNN for long sequences',
+                'svm': 'Support Vector Machine - classification algorithm',
+                'random forest': 'Ensemble learning method using decision trees',
+                'k-nn': 'K-Nearest Neighbors - simple classification algorithm',
+                'dtw': 'Dynamic Time Warping - compares time series',
+                'hmm': 'Hidden Markov Model - statistical sequential model',
+                'accuracy': 'Percentage of correct predictions',
+                'precision': 'Ratio of true positives to all positives',
+                'recall': 'Ratio of true positives to all actual positives',
+                'f1-score': 'Harmonic mean of precision and recall',
+                'latency': 'Time delay between input and response',
+                'throughput': 'Amount of data processed per time unit',
+                'user study': 'Research involving human participants',
+                'micro-gesture': 'Small, subtle hand or finger movements',
+                'on-body': 'Interaction on body surface (skin)',
+                'mid-air': 'Gestures performed in空中 without touching surface',
+                'smartwatch': 'Wrist-worn computer with sensors',
+                'smart ring': 'Finger-worn wearable device',
+                'ar': 'Augmented Reality - overlay digital on physical world',
+                'vr': 'Virtual Reality - fully immersive digital environment',
+                'gesture elicitation': 'Study method to discover user-preferred gestures'
+            },
+            
+            // 研究方法
+            methods: {
+                'vision-based': 'Uses cameras to track hand/finger movements',
+                'sensor-based': 'Uses wearable sensors (IMU, EMG, etc.)',
+                'acoustic': 'Uses sound waves for gesture sensing',
+                'rf-based': 'Uses radio frequency signals',
+                'hybrid': 'Combines multiple sensing modalities'
+            },
+            
+            // 顶级会议
+            conferences: {
+                'CHI': 'ACM Conference on Human Factors in Computing Systems (top HCI conference)',
+                'UIST': 'ACM Symposium on User Interface Software and Technology',
+                'MobileHCI': 'International Conference on Human-Computer Interaction with Mobile Devices',
+                'SIGGRAPH': 'Special Interest Group on Computer Graphics',
+                'UbiComp': 'ACM International Joint Conference on Pervasive and Ubiquitous Computing',
+                'ISMAR': 'International Symposium on Mixed and Augmented Reality',
+                'IUI': 'International Conference on Intelligent User Interfaces',
+                'ISS': 'Interactive Surfaces and Spaces'
+            }
+        };
+    }
+
+    /**
+     * 方案5：智能对比分析引擎
+     */
+    comparePapers(papers, query) {
+        if (!papers || papers.length < 2) {
+            return null;
+        }
+
+        const comparison = {
+            papers: papers.map(p => ({
+                title: p.title,
+                author: p.firstAuthor || p.authors,
+                year: p.year,
+                conference: p.conferenceName,
+                hardware: p.hardwareDevices || [],
+                applications: p.applicationScenarios || [],
+                gestures: p.gestureTypes || []
+            })),
+            commonHardware: [],
+            commonApplications: [],
+            differences: []
+        };
+
+        // 找出共同点
+        if (papers.length >= 2) {
+            const hw1 = new Set(papers[0].hardwareDevices || []);
+            const hw2 = new Set(papers[1].hardwareDevices || []);
+            comparison.commonHardware = [...hw1].filter(h => hw2.has(h));
+
+            const app1 = new Set(papers[0].applicationScenarios || []);
+            const app2 = new Set(papers[1].applicationScenarios || []);
+            comparison.commonApplications = [...app1].filter(a => app2.has(a));
+        }
+
+        // 分析差异
+        const yearDiff = Math.abs((papers[0].year || 2020) - (papers[1].year || 2020));
+        if (yearDiff > 5) {
+            comparison.differences.push(`Significant time gap: ${yearDiff} years between papers`);
+        }
+
+        return comparison;
+    }
+
+    /**
+     * 格式化对比结果
+     */
+    formatComparisonResult(comparison) {
+        if (!comparison) return null;
+
+        let result = '📊 **Paper Comparison Analysis**\n\n';
+        
+        comparison.papers.forEach((p, idx) => {
+            result += `### Paper ${idx + 1}: ${p.title}\n`;
+            result += `- **Author:** ${p.author || 'Unknown'}\n`;
+            result += `- **Year:** ${p.year || 'Unknown'}\n`;
+            result += `- **Hardware:** ${p.hardware.slice(0, 3).join(', ') || 'Not specified'}\n`;
+            result += `- **Applications:** ${p.applications.slice(0, 3).join(', ') || 'Not specified'}\n\n`;
+        });
+
+        if (comparison.commonHardware.length > 0) {
+            result += `**Common Hardware:** ${comparison.commonHardware.join(', ')}\n\n`;
+        }
+
+        if (comparison.commonApplications.length > 0) {
+            result += `**Common Applications:** ${comparison.commonApplications.join(', ')}\n\n`;
+        }
+
+        if (comparison.differences.length > 0) {
+            result += `**Key Differences:**\n`;
+            comparison.differences.forEach(diff => {
+                result += `- ${diff}\n`;
+            });
+        }
+
+        return result;
+    }
+
+    /**
+     * 方案6：智能推荐系统
+     */
+    recommendPapers(basePaper, count = 5) {
+        if (!basePaper || !this.websiteData) {
+            return [];
+        }
+
+        const papers = this.websiteData.papers.filter(p => p.id !== basePaper.id);
+        
+        // 计算相似度
+        const scoredPapers = papers.map(paper => {
+            let similarity = 0;
+            
+            // 硬件相似度
+            const baseHW = new Set(basePaper.hardwareDevices || []);
+            const paperHW = new Set(paper.hardwareDevices || []);
+            const hwOverlap = [...baseHW].filter(h => paperHW.has(h)).length;
+            similarity += hwOverlap * 10;
+            
+            // 应用场景相似度
+            const baseApp = new Set(basePaper.applicationScenarios || []);
+            const paperApp = new Set(paper.applicationScenarios || []);
+            const appOverlap = [...baseApp].filter(a => paperApp.has(a)).length;
+            similarity += appOverlap * 8;
+            
+            // 年份接近度（±3年内）
+            const yearDiff = Math.abs((paper.year || 2020) - (basePaper.year || 2020));
+            if (yearDiff <= 3) {
+                similarity += (3 - yearDiff) * 2;
+            }
+            
+            // 同一类别
+            if (paper.category === basePaper.category) {
+                similarity += 5;
+            }
+            
+            // 同一作者
+            if (paper.firstAuthor === basePaper.firstAuthor) {
+                similarity += 15;
+            }
+            
+            return { paper, similarity };
+        });
+        
+        return scoredPapers
+            .filter(item => item.similarity > 0)
+            .sort((a, b) => b.similarity - a.similarity)
+            .slice(0, count)
+            .map(item => item.paper);
+    }
+
+    /**
+     * 格式化推荐结果
+     */
+    formatRecommendations(papers, basePaper) {
+        if (!papers || papers.length === 0) return null;
+
+        let result = `💡 **Recommended Papers** (based on "${basePaper.title}")\n\n`;
+        
+        papers.forEach((paper, idx) => {
+            result += `${idx + 1}. **${paper.title}**\n`;
+            result += `   - Author: ${paper.firstAuthor || paper.authors || 'Unknown'}\n`;
+            result += `   - Year: ${paper.year || 'Unknown'}\n`;
+            
+            // 说明推荐原因
+            const reasons = [];
+            if (paper.hardwareDevices && basePaper.hardwareDevices) {
+                const common = paper.hardwareDevices.filter(h => 
+                    basePaper.hardwareDevices.includes(h)
+                );
+                if (common.length > 0) {
+                    reasons.push(`Similar hardware: ${common.slice(0, 2).join(', ')}`);
+                }
+            }
+            if (paper.applicationScenarios && basePaper.applicationScenarios) {
+                const common = paper.applicationScenarios.filter(a => 
+                    basePaper.applicationScenarios.includes(a)
+                );
+                if (common.length > 0) {
+                    reasons.push(`Similar applications: ${common.slice(0, 2).join(', ')}`);
+                }
+            }
+            if (reasons.length > 0) {
+                result += `   - Why: ${reasons.join('; ')}\n`;
+            }
+            result += '\n';
+        });
+
+        return result;
     }
 
     generateWebsiteDataSummary() {
