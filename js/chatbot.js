@@ -7,7 +7,8 @@ class GeminiChatbot {
         this.isOpen = false;
         this.isLoading = false;
         this.currentPaper = null;  // 当前讨论的论文
-        this.papersTexts = {};     // 所有论文文本数据
+        this.papersIndex = null;   // 论文索引（轻量级）
+        this.papersTexts = null;   // 完整论文文本数据（按需加载）
         
         this.init();
     }
@@ -20,16 +21,36 @@ class GeminiChatbot {
     }
 
     async loadPapersTexts() {
-        // 加载论文文本数据
+        // 先加载轻量级索引（快速显示列表）
         try {
-            const response = await fetch('papers-texts.json');
+            const response = await fetch('papers-index.json');
             if (response.ok) {
-                this.papersTexts = await response.json();
-                console.log(`✅ 已加载 ${Object.keys(this.papersTexts).length} 篇论文文本`);
+                this.papersIndex = await response.json();
+                console.log(`✅ 已加载 ${Object.keys(this.papersIndex).length} 篇论文索引`);
             }
         } catch (error) {
-            console.warn('⚠️ 无法加载论文文本数据:', error);
+            console.warn('⚠️ 无法加载论文索引:', error);
         }
+    }
+
+    async loadFullPaperText(filename) {
+        // 按需加载完整论文文本
+        if (!this.papersTexts) {
+            console.log('📥 正在加载完整论文数据...');
+            try {
+                const response = await fetch('papers-texts.json');
+                if (response.ok) {
+                    this.papersTexts = await response.json();
+                    console.log('✅ 完整数据加载成功');
+                } else {
+                    throw new Error('无法加载论文数据');
+                }
+            } catch (error) {
+                console.error('❌ 加载失败:', error);
+                throw error;
+            }
+        }
+        return this.papersTexts[filename];
     }
 
     loadPaper(paperTitle, paperData) {
@@ -201,11 +222,11 @@ class GeminiChatbot {
         const selector = document.getElementById('chatbotPaperSelector');
         selector.style.display = 'flex';
         
-        // 加载论文列表
-        if (Object.keys(this.papersTexts).length > 0) {
+        // 加载论文列表（使用索引）
+        if (this.papersIndex && Object.keys(this.papersIndex).length > 0) {
             this.renderPaperList();
         } else {
-            document.getElementById('paperList').innerHTML = '<div class="paper-loading">论文数据加载中...</div>';
+            document.getElementById('paperList').innerHTML = '<div class="paper-loading">论文列表加载中...</div>';
         }
     }
 
@@ -217,7 +238,7 @@ class GeminiChatbot {
 
     renderPaperList(filterText = '') {
         const paperList = document.getElementById('paperList');
-        const papers = Object.values(this.papersTexts);
+        const papers = Object.values(this.papersIndex || {});
         
         // 过滤论文
         const filtered = filterText
@@ -239,10 +260,9 @@ class GeminiChatbot {
         
         // 添加点击事件
         paperList.querySelectorAll('.paper-item-selector').forEach(item => {
-            item.addEventListener('click', () => {
+            item.addEventListener('click', async () => {
                 const filename = item.dataset.filename;
-                const paper = this.papersTexts[filename];
-                this.selectPaper(paper);
+                await this.selectPaperByFilename(filename);
             });
         });
     }
@@ -251,16 +271,34 @@ class GeminiChatbot {
         this.renderPaperList(filterText);
     }
 
-    selectPaper(paper) {
-        this.currentPaper = paper;
-        this.hidePaperSelector();
-        
-        // 清空当前对话
-        const messagesContainer = document.getElementById('chatbotMessages');
-        messagesContainer.innerHTML = '';
-        
-        // 显示加载论文的消息
-        this.addMessage('System', `📚 已加载论文：《${paper.title}》\n\n现在您可以向我提问关于这篇论文的任何内容！\n\n例如：\n- 这篇论文的主要贡献是什么？\n- 研究方法是怎样的？\n- 实验结果如何？\n- 有哪些局限性？`, 'system');
+    async selectPaperByFilename(filename) {
+        try {
+            // 显示加载中
+            this.hidePaperSelector();
+            const messagesContainer = document.getElementById('chatbotMessages');
+            messagesContainer.innerHTML = '';
+            this.addMessage('System', '📥 正在加载论文内容，请稍候...', 'system');
+            
+            // 加载完整论文文本
+            const paper = await this.loadFullPaperText(filename);
+            
+            if (!paper) {
+                throw new Error('论文数据加载失败');
+            }
+            
+            // 设置当前论文
+            this.currentPaper = paper;
+            
+            // 清空对话历史
+            this.conversationHistory = [];
+            messagesContainer.innerHTML = '';
+            
+            // 显示成功消息
+            this.addMessage('System', `📚 已加载论文：《${paper.title}》\n\n现在您可以向我提问关于这篇论文的任何内容！\n\n💡 示例问题：\n- 这篇论文的主要贡献是什么？\n- 使用了什么研究方法？\n- 实验结果如何？\n- 有哪些局限性？\n- 对未来工作有什么建议？`, 'system');
+            
+        } catch (error) {
+            this.addMessage('System', `❌ 加载失败：${error.message}\n请检查网络连接后重试。`, 'error');
+        }
     }
 
     autoResizeTextarea(textarea) {
@@ -377,9 +415,36 @@ class GeminiChatbot {
     }
 
     async callGeminiAPI(message) {
-        // Add context about the papers
-        const context = this.buildContext();
-        const fullMessage = `${context}\n\nUser question: ${message}`;
+        // 构建对话内容
+        const contents = [];
+        
+        // 第一次对话：添加系统上下文
+        if (this.conversationHistory.length === 0) {
+            const context = this.buildContext();
+            contents.push({
+                role: 'user',
+                parts: [{ text: context }]
+            });
+            contents.push({
+                role: 'model',
+                parts: [{ text: '好的，我已了解当前的论文内容。请问您想了解什么？' }]
+            });
+        }
+        
+        // 添加历史对话（最多保留最近5轮对话）
+        const recentHistory = this.conversationHistory.slice(-10); // 最近10条消息 = 5轮对话
+        recentHistory.forEach(item => {
+            contents.push({
+                role: item.role,
+                parts: [{ text: item.text }]
+            });
+        });
+        
+        // 添加当前用户消息
+        contents.push({
+            role: 'user',
+            parts: [{ text: message }]
+        });
         
         const response = await fetch(`${this.apiEndpoint}?key=${this.apiKey}`, {
             method: 'POST',
@@ -387,14 +452,10 @@ class GeminiChatbot {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({
-                contents: [{
-                    parts: [{
-                        text: fullMessage
-                    }]
-                }],
+                contents: contents,
                 generationConfig: {
                     temperature: 0.7,
-                    maxOutputTokens: 1024,
+                    maxOutputTokens: 2048,
                 }
             })
         });
@@ -405,7 +466,19 @@ class GeminiChatbot {
         }
         
         const data = await response.json();
-        return data.candidates[0]?.content?.parts[0]?.text || 'No response generated';
+        const aiResponse = data.candidates[0]?.content?.parts[0]?.text || 'No response generated';
+        
+        // 保存到历史记录
+        this.conversationHistory.push({
+            role: 'user',
+            text: message
+        });
+        this.conversationHistory.push({
+            role: 'model',
+            text: aiResponse
+        });
+        
+        return aiResponse;
     }
 
     buildContext() {
