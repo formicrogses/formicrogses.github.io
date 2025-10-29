@@ -6,6 +6,8 @@ class GeminiChatbot {
         this.conversationHistory = [];
         this.isOpen = false;
         this.isLoading = false;
+        this.currentPaper = null;  // 当前讨论的论文
+        this.papersTexts = {};     // 所有论文文本数据
         
         this.init();
     }
@@ -14,6 +16,38 @@ class GeminiChatbot {
         this.createChatInterface();
         this.setupEventListeners();
         this.loadApiKey();
+        this.loadPapersTexts();
+    }
+
+    async loadPapersTexts() {
+        // 加载论文文本数据
+        try {
+            const response = await fetch('papers-texts.json');
+            if (response.ok) {
+                this.papersTexts = await response.json();
+                console.log(`✅ 已加载 ${Object.keys(this.papersTexts).length} 篇论文文本`);
+            }
+        } catch (error) {
+            console.warn('⚠️ 无法加载论文文本数据:', error);
+        }
+    }
+
+    loadPaper(paperTitle, paperData) {
+        // 加载论文到当前上下文
+        this.currentPaper = {
+            title: paperTitle,
+            ...paperData
+        };
+        
+        // 打开聊天窗口
+        if (!this.isOpen) {
+            this.openChat();
+        }
+        
+        // 显示欢迎消息
+        setTimeout(() => {
+            this.addMessage('System', `📚 已加载论文：《${paperTitle}》\n现在您可以向我提问关于这篇论文的任何内容！`, 'system');
+        }, 500);
     }
 
     loadApiKey() {
@@ -61,6 +95,12 @@ class GeminiChatbot {
                 </div>
                 
                 <div class="chatbot-input-container">
+                    <button class="chatbot-paper-btn" id="chatbotPaperBtn" title="选择论文讨论">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                        </svg>
+                    </button>
                     <textarea 
                         class="chatbot-input" 
                         id="chatbotInput" 
@@ -73,6 +113,19 @@ class GeminiChatbot {
                             <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
                         </svg>
                     </button>
+                </div>
+                
+                <div class="chatbot-paper-selector" id="chatbotPaperSelector" style="display: none;">
+                    <div class="paper-selector-header">
+                        <h4>选择论文讨论</h4>
+                        <button class="paper-selector-close" id="paperSelectorClose">×</button>
+                    </div>
+                    <div class="paper-search">
+                        <input type="text" id="paperSearchInput" placeholder="搜索论文标题..." />
+                    </div>
+                    <div class="paper-list" id="paperList">
+                        <div class="paper-loading">加载中...</div>
+                    </div>
                 </div>
                 
                 <div class="chatbot-settings" id="chatbotSettings" style="display: none;">
@@ -112,6 +165,9 @@ class GeminiChatbot {
         const input = document.getElementById('chatbotInput');
         const settingsSave = document.getElementById('settingsSave');
         const settingsCancel = document.getElementById('settingsCancel');
+        const paperBtn = document.getElementById('chatbotPaperBtn');
+        const paperSelectorClose = document.getElementById('paperSelectorClose');
+        const paperSearchInput = document.getElementById('paperSearchInput');
         
         toggle.addEventListener('click', () => this.toggleChat());
         close.addEventListener('click', () => this.closeChat());
@@ -130,6 +186,81 @@ class GeminiChatbot {
         
         settingsSave.addEventListener('click', () => this.saveSettings());
         settingsCancel.addEventListener('click', () => this.hideSettings());
+        
+        // 论文选择按钮
+        paperBtn.addEventListener('click', () => this.showPaperSelector());
+        paperSelectorClose.addEventListener('click', () => this.hidePaperSelector());
+        
+        // 论文搜索
+        paperSearchInput.addEventListener('input', (e) => {
+            this.filterPapers(e.target.value);
+        });
+    }
+
+    showPaperSelector() {
+        const selector = document.getElementById('chatbotPaperSelector');
+        selector.style.display = 'flex';
+        
+        // 加载论文列表
+        if (Object.keys(this.papersTexts).length > 0) {
+            this.renderPaperList();
+        } else {
+            document.getElementById('paperList').innerHTML = '<div class="paper-loading">论文数据加载中...</div>';
+        }
+    }
+
+    hidePaperSelector() {
+        const selector = document.getElementById('chatbotPaperSelector');
+        selector.style.display = 'none';
+        document.getElementById('paperSearchInput').value = '';
+    }
+
+    renderPaperList(filterText = '') {
+        const paperList = document.getElementById('paperList');
+        const papers = Object.values(this.papersTexts);
+        
+        // 过滤论文
+        const filtered = filterText
+            ? papers.filter(p => p.title.toLowerCase().includes(filterText.toLowerCase()))
+            : papers;
+        
+        if (filtered.length === 0) {
+            paperList.innerHTML = '<div class="paper-empty">未找到匹配的论文</div>';
+            return;
+        }
+        
+        // 渲染论文列表
+        paperList.innerHTML = filtered.map(paper => `
+            <div class="paper-item-selector" data-filename="${paper.filename}">
+                <div class="paper-item-title">${paper.title}</div>
+                <div class="paper-item-preview">${paper.preview}</div>
+            </div>
+        `).join('');
+        
+        // 添加点击事件
+        paperList.querySelectorAll('.paper-item-selector').forEach(item => {
+            item.addEventListener('click', () => {
+                const filename = item.dataset.filename;
+                const paper = this.papersTexts[filename];
+                this.selectPaper(paper);
+            });
+        });
+    }
+
+    filterPapers(filterText) {
+        this.renderPaperList(filterText);
+    }
+
+    selectPaper(paper) {
+        this.currentPaper = paper;
+        this.hidePaperSelector();
+        
+        // 清空当前对话
+        const messagesContainer = document.getElementById('chatbotMessages');
+        messagesContainer.innerHTML = '';
+        
+        // 显示加载论文的消息
+        this.addMessage('System', `📚 已加载论文：《${paper.title}》\n\n现在您可以向我提问关于这篇论文的任何内容！\n\n例如：\n- 这篇论文的主要贡献是什么？\n- 研究方法是怎样的？\n- 实验结果如何？\n- 有哪些局限性？`, 'system');
     }
 
     autoResizeTextarea(textarea) {
@@ -278,7 +409,36 @@ class GeminiChatbot {
     }
 
     buildContext() {
-        // Get information about current papers (if app is available)
+        let context = '';
+        
+        // 如果有当前论文，优先使用论文内容
+        if (this.currentPaper && this.currentPaper.text) {
+            const paperText = this.currentPaper.text;
+            const maxChars = 30000; // Gemini限制，避免过长
+            
+            const truncatedText = paperText.length > maxChars 
+                ? paperText.substring(0, maxChars) + '\n\n[论文内容过长，已截断...]'
+                : paperText;
+            
+            context = `You are a helpful AI assistant discussing a research paper about gesture interaction.
+
+**Current Paper:**
+Title: ${this.currentPaper.title}
+
+**Paper Content:**
+${truncatedText}
+
+Instructions:
+- Answer questions based on the paper content above
+- Cite specific sections when possible
+- If the user asks something not in the paper, say so clearly
+- Use clear, structured responses with headings and lists
+- Keep responses concise but informative`;
+            
+            return context;
+        }
+        
+        // 否则使用通用上下文
         if (typeof app !== 'undefined' && app.allPapers) {
             const totalPapers = app.allPapers.length;
             const categories = [...new Set(app.allPapers.map(p => p.category))];
