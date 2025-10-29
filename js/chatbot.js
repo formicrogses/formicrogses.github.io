@@ -53,17 +53,17 @@ class GeminiChatbot {
     async loadFullPaperText(filename) {
         // 按需加载完整论文文本
         if (!this.papersTexts) {
-            console.log('📥 正在加载完整论文数据...');
+            console.log('📥 Loading complete paper data...');
             try {
                 const response = await fetch('papers-texts.json');
                 if (response.ok) {
                     this.papersTexts = await response.json();
-                    console.log('✅ 完整数据加载成功');
+                    console.log('✅ Complete data loaded successfully');
                 } else {
-                    throw new Error('无法加载论文数据');
+                    throw new Error('Failed to load paper data');
                 }
             } catch (error) {
-                console.error('❌ 加载失败:', error);
+                console.error('❌ Loading failed:', error);
                 throw error;
             }
         }
@@ -109,7 +109,7 @@ class GeminiChatbot {
                     <div class="sidebar-header">
                         <button id="newChatBtn" class="new-chat-btn">
                             <span style="font-size: 18px;">+</span>
-                            <span>新建对话</span>
+                            <span>New Chat</span>
                         </button>
                     </div>
                     <div id="conversationsList" class="conversations-list">
@@ -148,7 +148,7 @@ class GeminiChatbot {
                 </div>
                 
                 <div class="chatbot-input-container">
-                    <button class="chatbot-paper-btn" id="chatbotPaperBtn" title="选择论文讨论">
+                    <button class="chatbot-paper-btn" id="chatbotPaperBtn" title="Select Paper to Discuss">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
                             <polyline points="14 2 14 8 20 8"></polyline>
@@ -171,14 +171,14 @@ class GeminiChatbot {
                 
                 <div class="chatbot-paper-selector" id="chatbotPaperSelector" style="display: none;">
                     <div class="paper-selector-header">
-                        <h4>选择论文讨论</h4>
+                        <h4>Select a Paper to Discuss</h4>
                         <button class="paper-selector-close" id="paperSelectorClose">×</button>
                     </div>
                     <div class="paper-search">
-                        <input type="text" id="paperSearchInput" placeholder="搜索论文标题..." />
+                        <input type="text" id="paperSearchInput" placeholder="Search paper title..." />
                     </div>
                     <div class="paper-list" id="paperList">
-                        <div class="paper-loading">加载中...</div>
+                        <div class="paper-loading">Loading...</div>
                     </div>
                 </div>
                 
@@ -263,7 +263,7 @@ class GeminiChatbot {
         if (this.papersIndex && Object.keys(this.papersIndex).length > 0) {
             this.renderPaperList();
         } else {
-            document.getElementById('paperList').innerHTML = '<div class="paper-loading">论文列表加载中...</div>';
+            document.getElementById('paperList').innerHTML = '<div class="paper-loading">Loading paper list...</div>';
         }
     }
 
@@ -283,7 +283,7 @@ class GeminiChatbot {
             : papers;
         
         if (filtered.length === 0) {
-            paperList.innerHTML = '<div class="paper-empty">未找到匹配的论文</div>';
+            paperList.innerHTML = '<div class="paper-empty">No matching papers found</div>';
             return;
         }
         
@@ -314,13 +314,13 @@ class GeminiChatbot {
             this.hidePaperSelector();
             const messagesContainer = document.getElementById('chatbotMessages');
             messagesContainer.innerHTML = '';
-            this.addMessage('System', '📥 正在加载论文内容，请稍候...', 'system');
+            this.addMessage('System', '📥 Loading paper content, please wait...', 'system');
             
             // 加载完整论文文本
             const paper = await this.loadFullPaperText(filename);
             
             if (!paper) {
-                throw new Error('论文数据加载失败');
+                throw new Error('Failed to load paper data');
             }
             
             // 设置当前论文
@@ -331,10 +331,10 @@ class GeminiChatbot {
             messagesContainer.innerHTML = '';
             
             // 显示成功消息
-            this.addMessage('System', `📚 已加载论文：《${paper.title}》\n\n现在您可以向我提问关于这篇论文的任何内容！\n\n💡 示例问题：\n- 这篇论文的主要贡献是什么？\n- 使用了什么研究方法？\n- 实验结果如何？\n- 有哪些局限性？\n- 对未来工作有什么建议？`, 'system');
+            this.addMessage('System', `📚 Paper loaded: "${paper.title}"\n\nYou can now ask me anything about this paper!\n\n💡 Example questions:\n- What are the main contributions?\n- What research methods were used?\n- What are the experimental results?\n- What are the limitations?\n- What future work is suggested?`, 'system');
             
         } catch (error) {
-            this.addMessage('System', `❌ 加载失败：${error.message}\n请检查网络连接后重试。`, 'error');
+            this.addMessage('System', `❌ Loading failed: ${error.message}\nPlease check your network connection and try again.`, 'error');
         }
     }
 
@@ -413,7 +413,7 @@ class GeminiChatbot {
 
     async sendMessage() {
         const input = document.getElementById('chatbotInput');
-        const message = input.value.trim();
+        let message = input.value.trim();
         
         if (!message) return;
         
@@ -429,11 +429,23 @@ class GeminiChatbot {
         // Add user message
         this.addMessage('You', message, 'user');
         
+        // 智能搜索：如果用户询问特定论文，先搜索再注入结果
+        let enrichedMessage = message;
+        if (this.websiteData && this.websiteData.papers) {
+            const searchResults = this.searchPapers(message);
+            if (searchResults.length > 0) {
+                const resultsInfo = searchResults.slice(0, 5).map(p => 
+                    `[ID:${p.id}] "${p.title}" (${p.year}) | Hardware: ${(p.hardwareDevices||[]).slice(0,2).join(',')} | App: ${(p.applicationScenarios||[]).slice(0,2).join(',')}`
+                ).join('\n');
+                enrichedMessage = `${message}\n\n[System: Found ${searchResults.length} matching papers in database:\n${resultsInfo}]`;
+            }
+        }
+        
         // Show loading
         this.showLoading();
         
         try {
-            const response = await this.callGeminiAPI(message);
+            const response = await this.callGeminiAPI(enrichedMessage);
             this.hideLoading();
             this.addMessage('AI', response, 'bot');
         } catch (error) {
@@ -564,21 +576,8 @@ class GeminiChatbot {
             const year = p.year || 'Unknown';
             yearCounts[year] = (yearCounts[year] || 0) + 1;
         });
-        const yearsList = Object.entries(yearCounts)
-            .sort((a, b) => b[0].localeCompare(a[0]))
-            .slice(0, 8)
-            .map(([year, count]) => `${year}年: ${count}篇`)
-            .join(', ');
-        
-        // 统计分类
-        const categoryCounts = {};
-        papers.forEach(p => {
-            const cat = p.category || 'other';
-            categoryCounts[cat] = (categoryCounts[cat] || 0) + 1;
-        });
-        const categoryList = Object.entries(categoryCounts)
-            .map(([cat, count]) => `${cat}: ${count}篇`)
-            .join(', ');
+        const yearsData = Object.entries(yearCounts)
+            .sort((a, b) => b[0].localeCompare(a[0]));
         
         // 统计硬件设备
         const deviceCounts = {};
@@ -591,9 +590,7 @@ class GeminiChatbot {
         });
         const topDevices = Object.entries(deviceCounts)
             .sort((a, b) => b[1] - a[1])
-            .slice(0, 8)
-            .map(([dev, count]) => `${dev}(${count})`)
-            .join(', ');
+            .slice(0, 15);
         
         // 统计应用场景
         const appCounts = {};
@@ -606,54 +603,84 @@ class GeminiChatbot {
         });
         const topApps = Object.entries(appCounts)
             .sort((a, b) => b[1] - a[1])
-            .slice(0, 8)
-            .map(([app, count]) => `${app}(${count})`)
-            .join(', ');
+            .slice(0, 15);
         
-        // 生成精简的论文列表（所有330篇）
-        const papersList = papers.map(p => {
-            const tags = [];
-            if (p.hardwareDevices && p.hardwareDevices.length > 0) {
-                tags.push(p.hardwareDevices.slice(0, 2).join(','));
+        // 统计手势类型
+        const gestureCounts = {};
+        papers.forEach(p => {
+            if (p.gestureTypes) {
+                p.gestureTypes.forEach(g => {
+                    gestureCounts[g] = (gestureCounts[g] || 0) + 1;
+                });
             }
-            if (p.applicationScenarios && p.applicationScenarios.length > 0) {
-                tags.push(p.applicationScenarios.slice(0, 2).join(','));
-            }
-            const tagsStr = tags.length > 0 ? ` [${tags.join('|')}]` : '';
-            
-            return `${p.id}. "${p.title}" (${p.year})${tagsStr}`;
-        }).join('\n');
+        });
+        const topGestures = Object.entries(gestureCounts)
+            .sort((a, b) => b[1] - a[1])
+            .slice(0, 15);
+        
+        // 为每个标签类别生成精简的论文索引
+        const generatePaperIndex = (filterFn, limit = 30) => {
+            return papers.filter(filterFn).slice(0, limit).map(p => 
+                `[${p.id}] "${p.title}" (${p.year})`
+            ).join('; ');
+        };
         
         return `
-## 📊 网站数据库信息
+## 📊 Website Database Overview
 
-### 统计概览
-**论文总数**: ${totalPapers}篇手势交互研究论文
-**年份跨度**: 2005-2023年
-**年份分布**: ${yearsList}
-**研究分类**: ${categoryList}
-**常用硬件**: ${topDevices}
-**应用领域**: ${topApps}
+**Total Papers**: ${totalPapers} gesture interaction research papers (2005-2023)
+**Your current website**: https://formicrogses.github.io
 
-### 完整论文列表 (${totalPapers}篇)
-${papersList}
+### Statistics Summary
+**Years**: ${yearsData.map(([y,c]) => `${y}(${c})`).join(', ')}
 
-### 重要说明
-1. **查找论文**: 当用户询问具体论文时，从上面列表中搜索匹配的标题、年份或标签
-2. **提供链接**: 每篇论文都有DOI链接，格式为 https://doi.org/[DOI]
-3. **详细信息**: 告诉用户论文ID，说明可以在网站上点击查看详情
-4. **搜索功能**: 可以根据关键词（EMG、VR、DataGlove等）在列表中找到相关论文
-5. **推荐论文**: 基于标签[硬件|应用]推荐相关研究
+**Top Hardware** (15): ${topDevices.map(([d,c]) => `${d}(${c})`).join(', ')}
 
-### 你可以回答的问题
-✅ "给我一篇关于EMG的论文链接" → 搜索列表找到EMG相关论文，提供ID和建议
-✅ "有哪些2020年的论文？" → 列出2020年的论文ID和标题
-✅ "推荐几篇VR手势交互的研究" → 找到标签含VR的论文
-✅ "XX作者有哪些论文？" → 搜索作者名
-✅ "这篇论文的DOI是什么？" → 查找对应论文信息
+**Top Applications** (15): ${topApps.map(([a,c]) => `${a}(${c})`).join(', ')}
 
-**回答格式**: 提供论文ID、标题、年份，并告诉用户"您可以在网站上点击这篇论文查看详情和访问链接"
-`;
+**Top Gestures** (15): ${topGestures.map(([g,c]) => `${g}(${c})`).join(', ')}
+
+### How to Search & Recommend Papers
+
+**When user asks for papers**, use this search logic:
+1. **By keyword** (e.g., "EMG", "VR", "DataGlove"): Match against title, hardware, applications, gestures
+2. **By year** (e.g., "2020"): Filter papers from that year
+3. **By author**: Search in authors field
+4. **By combination**: Multiple criteria (e.g., "VR EMG 2020")
+
+**Response Format**:
+\`\`\`
+I found several papers about [topic]:
+
+1. **Paper #ID**: "[Full Title]" (Year)
+   - Hardware: [devices]
+   - Applications: [scenarios]
+   - 🔗 View on website: Click the paper card or search by title
+
+2. **Paper #ID**: "[Title]" (Year)
+   ...
+
+To access these papers:
+- Click on any paper card on the website
+- Each paper has detailed information and DOI link
+- Use website filters to narrow down your search
+\`\`\`
+
+### Available Search Criteria:
+- **Title keywords**: Any word from paper titles
+- **Years**: ${yearsData.map(([y]) => y).join(', ')}
+- **Hardware**: ${topDevices.slice(0,10).map(([d]) => d).join(', ')}, etc.
+- **Applications**: ${topApps.slice(0,10).map(([a]) => a).join(', ')}, etc.
+- **Gestures**: ${topGestures.slice(0,10).map(([g]) => g).join(', ')}, etc.
+
+### Example Queries You Can Handle:
+✅ "Find EMG papers" → Search papers with EMG in hardware/title
+✅ "Papers from 2020" → List 2020 papers
+✅ "VR gesture interaction" → Find papers with VR+gesture tags
+✅ "DataGlove research" → Papers using DataGlove hardware
+✅ "Recommend papers about X" → Smart recommendations based on tags
+
+**IMPORTANT**: You have access to ALL ${totalPapers} papers. When user asks, search by their criteria (keywords, year, tags) and provide specific paper IDs and titles. Tell users they can click papers on the website to see full details and DOI links.`;
     }
 
     generateCompactWebsiteData() {
@@ -901,7 +928,7 @@ ${truncatedText}
     createNewConversation() {
         const newConv = {
             id: Date.now().toString(),
-            title: '新对话',
+            title: 'New Conversation',
             messages: [],
             paper: null,
             createdAt: new Date().toISOString(),
@@ -946,7 +973,7 @@ ${truncatedText}
     deleteConversation(convId, event) {
         event.stopPropagation();
         
-        if (!confirm('确定要删除这个对话吗？')) return;
+        if (!confirm('Are you sure you want to delete this conversation?')) return;
         
         this.conversations = this.conversations.filter(c => c.id !== convId);
         this.saveConversations();
@@ -1005,7 +1032,7 @@ ${truncatedText}
         if (!list) return;
         
         if (this.conversations.length === 0) {
-            list.innerHTML = '<div style="padding: 20px; text-align: center; color: #999; font-size: 12px;">暂无对话记录</div>';
+            list.innerHTML = '<div style="padding: 20px; text-align: center; color: #999; font-size: 12px;">No conversations yet</div>';
             return;
         }
         
@@ -1014,14 +1041,14 @@ ${truncatedText}
             const time = this.formatTime(conv.updatedAt);
             const preview = conv.messages.length > 0 
                 ? conv.messages[conv.messages.length - 1].text.slice(0, 30) 
-                : '无消息';
+                : 'No messages';
             
             return `
                 <div class="conversation-item ${isActive ? 'active' : ''}" data-id="${conv.id}" style="position: relative;">
                     <div class="conversation-title">${conv.title}</div>
                     <div class="conversation-preview">${preview}</div>
                     <div class="conversation-time">${time}</div>
-                    <button class="conversation-delete" data-id="${conv.id}" title="删除">×</button>
+                    <button class="conversation-delete" data-id="${conv.id}" title="Delete">×</button>
                 </div>
             `;
         }).join('');
@@ -1051,10 +1078,10 @@ ${truncatedText}
         const hours = Math.floor(diff / 3600000);
         const days = Math.floor(diff / 86400000);
         
-        if (minutes < 1) return '刚刚';
-        if (minutes < 60) return `${minutes}分钟前`;
-        if (hours < 24) return `${hours}小时前`;
-        if (days < 7) return `${days}天前`;
+        if (minutes < 1) return 'just now';
+        if (minutes < 60) return `${minutes}m ago`;
+        if (hours < 24) return `${hours}h ago`;
+        if (days < 7) return `${days}d ago`;
         
         return date.toLocaleDateString('zh-CN', { month: '2-digit', day: '2-digit' });
     }
