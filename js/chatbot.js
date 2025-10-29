@@ -10,6 +10,10 @@ class GeminiChatbot {
         this.papersIndex = null;   // 论文索引（轻量级）
         this.papersTexts = null;   // 完整论文文本数据（按需加载）
         
+        // 对话管理
+        this.conversations = [];   // 所有对话列表
+        this.currentConversationId = null; // 当前对话ID
+        
         this.init();
     }
 
@@ -17,6 +21,7 @@ class GeminiChatbot {
         this.createChatInterface();
         this.setupEventListeners();
         this.loadApiKey();
+        this.loadConversations();
         this.loadPapersTexts();
     }
 
@@ -87,27 +92,42 @@ class GeminiChatbot {
     createChatInterface() {
         const chatHTML = `
             <div class="chatbot-container" id="chatbotContainer">
-                <div class="chatbot-header">
-                    <div class="chatbot-header-content">
-                        <div class="chatbot-avatar">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-                            </svg>
-                        </div>
-                        <div class="chatbot-title">
-                            <h3>AI Assistant</h3>
-                            <p>Powered by Gemini</p>
-                        </div>
+                <!-- Conversation Sidebar -->
+                <div class="chatbot-sidebar">
+                    <div class="sidebar-header">
+                        <button id="newChatBtn" class="new-chat-btn">
+                            <span style="font-size: 18px;">+</span>
+                            <span>新建对话</span>
+                        </button>
                     </div>
-                    <button class="chatbot-close" id="chatbotClose">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <line x1="18" y1="6" x2="6" y2="18"></line>
-                            <line x1="6" y1="6" x2="18" y2="18"></line>
-                        </svg>
-                    </button>
+                    <div id="conversationsList" class="conversations-list">
+                        <!-- Conversation items will be added here -->
+                    </div>
                 </div>
                 
-                <div class="chatbot-messages" id="chatbotMessages">
+                <!-- Main Chat Area -->
+                <div class="chatbot-main">
+                    <div class="chatbot-header">
+                        <div class="chatbot-header-content">
+                            <div class="chatbot-avatar">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                                </svg>
+                            </div>
+                            <div class="chatbot-title">
+                                <h3>AI Assistant</h3>
+                                <p>Powered by Gemini</p>
+                            </div>
+                        </div>
+                        <button class="chatbot-close" id="chatbotClose">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="18" y1="6" x2="6" y2="18"></line>
+                                <line x1="6" y1="6" x2="18" y2="18"></line>
+                            </svg>
+                        </button>
+                    </div>
+                    
+                    <div class="chatbot-messages" id="chatbotMessages">
                     <div class="chatbot-welcome">
                         <div class="welcome-icon">👋</div>
                         <h4>Welcome to AI Assistant!</h4>
@@ -134,6 +154,7 @@ class GeminiChatbot {
                             <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
                         </svg>
                     </button>
+                </div>
                 </div>
                 
                 <div class="chatbot-paper-selector" id="chatbotPaperSelector" style="display: none;">
@@ -189,10 +210,14 @@ class GeminiChatbot {
         const paperBtn = document.getElementById('chatbotPaperBtn');
         const paperSelectorClose = document.getElementById('paperSelectorClose');
         const paperSearchInput = document.getElementById('paperSearchInput');
+        const newChatBtn = document.getElementById('newChatBtn');
         
         toggle.addEventListener('click', () => this.toggleChat());
         close.addEventListener('click', () => this.closeChat());
         send.addEventListener('click', () => this.sendMessage());
+        
+        // 新建对话按钮
+        newChatBtn.addEventListener('click', () => this.createNewConversation());
         
         input.addEventListener('keydown', (e) => {
             if (e.key === 'Enter' && !e.shiftKey) {
@@ -527,7 +552,7 @@ Help users discover papers, understand concepts, and answer questions about gest
         return 'You are a helpful AI assistant for a gesture interaction research paper gallery. Help users discover papers and answer questions about gesture interaction research.';
     }
 
-    addMessage(sender, text, type = 'user') {
+    addMessage(sender, text, type = 'user', saveToConversation = true) {
         const messagesContainer = document.getElementById('chatbotMessages');
         const welcome = messagesContainer.querySelector('.chatbot-welcome');
         
@@ -570,6 +595,11 @@ Help users discover papers, understand concepts, and answer questions about gest
         
         // Scroll to bottom
         messagesContainer.scrollTop = messagesContainer.scrollHeight;
+        
+        // Save to conversation
+        if (saveToConversation && (type === 'user' || type === 'bot')) {
+            this.saveMessageToConversation(sender, text, type);
+        }
     }
 
     formatMarkdown(text) {
@@ -663,6 +693,186 @@ Help users discover papers, understand concepts, and answer questions about gest
         if (loading) {
             loading.remove();
         }
+    }
+
+    // ===== 对话管理方法 =====
+    
+    loadConversations() {
+        const saved = localStorage.getItem('chatbot_conversations');
+        if (saved) {
+            this.conversations = JSON.parse(saved);
+        }
+        this.renderConversationsList();
+        
+        // 如果有对话，加载最后一个
+        if (this.conversations.length > 0) {
+            this.loadConversation(this.conversations[0].id);
+        }
+    }
+
+    saveConversations() {
+        localStorage.setItem('chatbot_conversations', JSON.stringify(this.conversations));
+    }
+
+    createNewConversation() {
+        const newConv = {
+            id: Date.now().toString(),
+            title: '新对话',
+            messages: [],
+            paper: null,
+            createdAt: new Date().toISOString(),
+            updatedAt: new Date().toISOString()
+        };
+        
+        this.conversations.unshift(newConv);
+        this.saveConversations();
+        this.loadConversation(newConv.id);
+        this.renderConversationsList();
+    }
+
+    loadConversation(convId) {
+        const conv = this.conversations.find(c => c.id === convId);
+        if (!conv) return;
+        
+        this.currentConversationId = convId;
+        this.conversationHistory = [];
+        this.currentPaper = conv.paper;
+        
+        // 清空消息区域
+        const messagesContainer = document.getElementById('chatbotMessages');
+        messagesContainer.innerHTML = '';
+        
+        // 加载历史消息
+        conv.messages.forEach(msg => {
+            this.addMessage(msg.sender, msg.text, msg.type, false); // false = 不保存
+        });
+        
+        // 重建conversationHistory（用于API调用）
+        conv.messages.forEach(msg => {
+            if (msg.type === 'user') {
+                this.conversationHistory.push({ role: 'user', text: msg.text });
+            } else if (msg.type === 'bot') {
+                this.conversationHistory.push({ role: 'model', text: msg.text });
+            }
+        });
+        
+        this.renderConversationsList();
+    }
+
+    deleteConversation(convId, event) {
+        event.stopPropagation();
+        
+        if (!confirm('确定要删除这个对话吗？')) return;
+        
+        this.conversations = this.conversations.filter(c => c.id !== convId);
+        this.saveConversations();
+        
+        // 如果删除的是当前对话，创建新对话
+        if (this.currentConversationId === convId) {
+            if (this.conversations.length > 0) {
+                this.loadConversation(this.conversations[0].id);
+            } else {
+                this.createNewConversation();
+            }
+        }
+        
+        this.renderConversationsList();
+    }
+
+    updateConversationTitle(convId) {
+        const conv = this.conversations.find(c => c.id === convId);
+        if (!conv || conv.messages.length === 0) return;
+        
+        // 使用第一条用户消息作为标题
+        const firstUserMsg = conv.messages.find(m => m.type === 'user');
+        if (firstUserMsg) {
+            conv.title = firstUserMsg.text.slice(0, 20) + (firstUserMsg.text.length > 20 ? '...' : '');
+        } else if (conv.paper) {
+            conv.title = conv.paper.title.slice(0, 20) + '...';
+        }
+        
+        conv.updatedAt = new Date().toISOString();
+        this.saveConversations();
+        this.renderConversationsList();
+    }
+
+    saveMessageToConversation(sender, text, type) {
+        if (!this.currentConversationId) {
+            this.createNewConversation();
+        }
+        
+        const conv = this.conversations.find(c => c.id === this.currentConversationId);
+        if (!conv) return;
+        
+        conv.messages.push({ sender, text, type, timestamp: new Date().toISOString() });
+        conv.paper = this.currentPaper;
+        conv.updatedAt = new Date().toISOString();
+        
+        // 更新标题
+        if (conv.messages.length === 1) {
+            this.updateConversationTitle(conv.id);
+        }
+        
+        this.saveConversations();
+    }
+
+    renderConversationsList() {
+        const list = document.getElementById('conversationsList');
+        if (!list) return;
+        
+        if (this.conversations.length === 0) {
+            list.innerHTML = '<div style="padding: 20px; text-align: center; color: #999; font-size: 12px;">暂无对话记录</div>';
+            return;
+        }
+        
+        list.innerHTML = this.conversations.map(conv => {
+            const isActive = conv.id === this.currentConversationId;
+            const time = this.formatTime(conv.updatedAt);
+            const preview = conv.messages.length > 0 
+                ? conv.messages[conv.messages.length - 1].text.slice(0, 30) 
+                : '无消息';
+            
+            return `
+                <div class="conversation-item ${isActive ? 'active' : ''}" data-id="${conv.id}" style="position: relative;">
+                    <div class="conversation-title">${conv.title}</div>
+                    <div class="conversation-preview">${preview}</div>
+                    <div class="conversation-time">${time}</div>
+                    <button class="conversation-delete" data-id="${conv.id}" title="删除">×</button>
+                </div>
+            `;
+        }).join('');
+        
+        // 绑定点击事件
+        list.querySelectorAll('.conversation-item').forEach(item => {
+            item.addEventListener('click', () => {
+                const id = item.dataset.id;
+                this.loadConversation(id);
+            });
+        });
+        
+        list.querySelectorAll('.conversation-delete').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                const id = btn.dataset.id;
+                this.deleteConversation(id, e);
+            });
+        });
+    }
+
+    formatTime(isoString) {
+        const date = new Date(isoString);
+        const now = new Date();
+        const diff = now - date;
+        
+        const minutes = Math.floor(diff / 60000);
+        const hours = Math.floor(diff / 3600000);
+        const days = Math.floor(diff / 86400000);
+        
+        if (minutes < 1) return '刚刚';
+        if (minutes < 60) return `${minutes}分钟前`;
+        if (hours < 24) return `${hours}小时前`;
+        if (days < 7) return `${days}天前`;
+        
+        return date.toLocaleDateString('zh-CN', { month: '2-digit', day: '2-digit' });
     }
 }
 
