@@ -518,6 +518,38 @@ class GeminiChatbot {
         return aiResponse;
     }
 
+    searchPapers(query) {
+        // 在论文数据中搜索
+        if (!this.websiteData || !this.websiteData.papers) {
+            return [];
+        }
+        
+        const lowerQuery = query.toLowerCase();
+        const results = this.websiteData.papers.filter(paper => {
+            // 搜索标题
+            if (paper.title && paper.title.toLowerCase().includes(lowerQuery)) return true;
+            
+            // 搜索年份
+            if (paper.year && paper.year.toString().includes(lowerQuery)) return true;
+            
+            // 搜索作者
+            if (paper.authors && paper.authors.toLowerCase().includes(lowerQuery)) return true;
+            
+            // 搜索硬件设备
+            if (paper.hardwareDevices && paper.hardwareDevices.some(d => d.toLowerCase().includes(lowerQuery))) return true;
+            
+            // 搜索应用场景
+            if (paper.applicationScenarios && paper.applicationScenarios.some(a => a.toLowerCase().includes(lowerQuery))) return true;
+            
+            // 搜索手势类型
+            if (paper.gestureTypes && paper.gestureTypes.some(g => g.toLowerCase().includes(lowerQuery))) return true;
+            
+            return false;
+        });
+        
+        return results.slice(0, 10); // 最多返回10个结果
+    }
+
     generateWebsiteDataSummary() {
         if (!this.websiteData || !this.websiteData.papers) {
             return '';
@@ -548,7 +580,7 @@ class GeminiChatbot {
             .map(([cat, count]) => `${cat}: ${count}篇`)
             .join(', ');
         
-        // 统计前10硬件设备
+        // 统计硬件设备
         const deviceCounts = {};
         papers.forEach(p => {
             if (p.hardwareDevices) {
@@ -578,40 +610,87 @@ class GeminiChatbot {
             .map(([app, count]) => `${app}(${count})`)
             .join(', ');
         
+        // 生成精简的论文列表（所有330篇）
+        const papersList = papers.map(p => {
+            const tags = [];
+            if (p.hardwareDevices && p.hardwareDevices.length > 0) {
+                tags.push(p.hardwareDevices.slice(0, 2).join(','));
+            }
+            if (p.applicationScenarios && p.applicationScenarios.length > 0) {
+                tags.push(p.applicationScenarios.slice(0, 2).join(','));
+            }
+            const tagsStr = tags.length > 0 ? ` [${tags.join('|')}]` : '';
+            
+            return `${p.id}. "${p.title}" (${p.year})${tagsStr}`;
+        }).join('\n');
+        
         return `
-## 📊 网站数据库统计
+## 📊 网站数据库信息
 
+### 统计概览
 **论文总数**: ${totalPapers}篇手势交互研究论文
-
+**年份跨度**: 2005-2023年
 **年份分布**: ${yearsList}
-
 **研究分类**: ${categoryList}
-
 **常用硬件**: ${topDevices}
-
 **应用领域**: ${topApps}
 
-**你可以回答的问题类型**:
-- 统计类: "网站有多少篇论文？" "2020年有几篇？" "VR相关的论文有多少？"
-- 推荐类: "推荐几篇关于EMG的论文" "有哪些使用DataGlove的研究？"
-- 对比类: "AR和VR哪个研究得多？" "近几年的研究趋势如何？"
+### 完整论文列表 (${totalPapers}篇)
+${papersList}
 
-注意: 用户询问具体数据时，请基于上述统计信息准确回答。如需查找具体论文，建议用户使用网站的筛选功能。
+### 重要说明
+1. **查找论文**: 当用户询问具体论文时，从上面列表中搜索匹配的标题、年份或标签
+2. **提供链接**: 每篇论文都有DOI链接，格式为 https://doi.org/[DOI]
+3. **详细信息**: 告诉用户论文ID，说明可以在网站上点击查看详情
+4. **搜索功能**: 可以根据关键词（EMG、VR、DataGlove等）在列表中找到相关论文
+5. **推荐论文**: 基于标签[硬件|应用]推荐相关研究
+
+### 你可以回答的问题
+✅ "给我一篇关于EMG的论文链接" → 搜索列表找到EMG相关论文，提供ID和建议
+✅ "有哪些2020年的论文？" → 列出2020年的论文ID和标题
+✅ "推荐几篇VR手势交互的研究" → 找到标签含VR的论文
+✅ "XX作者有哪些论文？" → 搜索作者名
+✅ "这篇论文的DOI是什么？" → 查找对应论文信息
+
+**回答格式**: 提供论文ID、标题、年份，并告诉用户"您可以在网站上点击这篇论文查看详情和访问链接"
+`;
+    }
+
+    generateCompactWebsiteData() {
+        // 生成紧凑版的网站数据（用于有论文时）
+        if (!this.websiteData || !this.websiteData.papers) {
+            return '';
+        }
+        
+        const papers = this.websiteData.papers;
+        const totalPapers = papers.length;
+        
+        // 只提供统计摘要
+        const yearCounts = {};
+        papers.forEach(p => {
+            const year = p.year || 'Unknown';
+            yearCounts[year] = (yearCounts[year] || 0) + 1;
+        });
+        
+        return `
+## 📊 网站数据库概览
+**总计**: ${totalPapers}篇论文 (2005-2023)
+**搜索功能**: 可以帮助用户搜索和推荐相关论文
+**查看方式**: 告诉用户论文标题，建议在网站上搜索查看详情和链接
 `;
     }
 
     buildContext() {
         let context = 'You are a helpful AI assistant for a gesture interaction research paper gallery.';
         
-        // 添加网站数据统计（始终包含）
-        if (this.websiteData) {
-            context += '\n\n' + this.generateWebsiteDataSummary();
-        }
-        
-        // 如果有当前论文，添加论文内容
+        // 如果有当前论文，提供紧凑的数据摘要
         if (this.currentPaper && this.currentPaper.text) {
+            if (this.websiteData) {
+                context += '\n\n' + this.generateCompactWebsiteData();
+            }
+            
             const paperText = this.currentPaper.text;
-            const maxChars = 20000; // 减少以留空间给网站数据
+            const maxChars = 25000; // 增加论文内容空间
             
             const truncatedText = paperText.length > maxChars 
                 ? paperText.substring(0, maxChars) + '\n\n[论文内容过长，已截断...]'
@@ -628,12 +707,30 @@ ${truncatedText}
 - 优先基于论文内容回答
 - 引用具体段落
 - 如果论文中没有相关信息，明确告知
+- 可以结合网站数据对比分析（如：这篇论文与其他研究的关系）
 - 使用清晰的结构（标题、列表）
 - 保持简洁但信息丰富`;
         } else {
-            context += `\n\n**当前状态**: 没有选择具体论文，可以回答关于网站数据的统计问题，或帮助用户寻找相关论文。
+            // 没有选择论文时，提供完整的论文列表
+            if (this.websiteData) {
+                context += '\n\n' + this.generateWebsiteDataSummary();
+            }
+            
+            context += `\n\n**当前状态**: 没有选择具体论文。
 
-**使用建议**: 用户可以点击📄按钮选择论文进行深入讨论。`;
+**你的任务**:
+1. 回答关于网站的统计问题
+2. 根据用户需求从上面的论文列表中搜索和推荐论文
+3. 提供论文的ID、标题、年份、相关标签
+4. 告诉用户可以在网站上点击查看详情和访问链接
+5. 如果用户要讨论具体论文，建议使用📄按钮选择
+
+**回答示例**:
+- 用户问: "给我一篇EMG的论文"
+- 回答: "我找到了几篇EMG相关的论文：
+  - 论文ID 2: 'Demonstrating the feasibility of using forearm electromyography for muscle-computer interfaces' (2008)
+  - 论文ID X: '...'
+  您可以在网站上搜索这些标题，或点击论文卡片查看详情和访问链接。"`;
         }
         
         return context;
