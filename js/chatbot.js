@@ -541,9 +541,9 @@ class GeminiChatbot {
             });
         }
         
-        // 📚 动态知识库注入：如果有相关论文，注入完整内容
+        // 📚 动态知识库注入：如果有相关论文，注入完整内容（智能选择）
         if (relevantPapers.length > 0) {
-            const knowledgeContext = this.buildKnowledgeContext(relevantPapers);
+            const knowledgeContext = this.buildKnowledgeContext(relevantPapers, message);
             if (knowledgeContext) {
                 contents.push({
                     role: 'user',
@@ -551,7 +551,7 @@ class GeminiChatbot {
                 });
                 contents.push({
                     role: 'model',
-                    parts: [{ text: 'I have reviewed the relevant papers. Please ask your question.' }]
+                    parts: [{ text: 'I have analyzed the relevant papers with focus on the specific information needed for your question. Please proceed with your query.' }]
                 });
             }
         }
@@ -607,7 +607,7 @@ class GeminiChatbot {
     }
 
     /**
-     * 加载论文全文内容
+     * 🔬 高级知识库：加载并预处理论文全文
      */
     async loadPaperTexts(papers) {
         if (!this.papersTexts) {
@@ -621,14 +621,206 @@ class GeminiChatbot {
             }
         }
         
-        // 为每篇论文附加全文
+        // 为每篇论文附加全文并进行智能预处理
         papers.forEach(paper => {
             const filename = paper.pdfFile || paper.filename;
             if (filename && this.papersTexts[filename]) {
                 paper.fullText = this.papersTexts[filename].text;
                 paper.fullTextLength = this.papersTexts[filename].length || paper.fullText.length;
+                
+                // 🔬 智能预处理：提取结构化信息
+                paper.extractedData = this.extractPaperStructure(paper.fullText, paper);
             }
         });
+    }
+
+    /**
+     * 🔬 论文结构化提取 - 提取关键信息
+     */
+    extractPaperStructure(fullText, paper) {
+        if (!fullText) return null;
+
+        const extracted = {
+            abstract: '',
+            methods: '',
+            results: '',
+            evaluation: '',
+            metrics: {},
+            contributions: [],
+            limitations: []
+        };
+
+        // 1. 提取摘要（前1000字符通常包含摘要）
+        extracted.abstract = fullText.substring(0, 1000);
+
+        // 2. 查找方法部分
+        const methodSections = this.findSections(fullText, [
+            'method', 'approach', 'technique', 'implementation', 'system design', 'algorithm'
+        ]);
+        extracted.methods = methodSections.slice(0, 3000).join(' ');
+
+        // 3. 查找结果/评估部分
+        const resultSections = this.findSections(fullText, [
+            'result', 'evaluation', 'experiment', 'user study', 'performance', 'accuracy'
+        ]);
+        extracted.results = resultSections.slice(0, 3000).join(' ');
+
+        // 4. 提取数值指标
+        extracted.metrics = this.extractMetrics(fullText);
+
+        // 5. 提取贡献点
+        extracted.contributions = this.extractContributions(fullText);
+
+        // 6. 提取局限性
+        extracted.limitations = this.extractLimitations(fullText);
+
+        return extracted;
+    }
+
+    /**
+     * 查找特定章节
+     */
+    findSections(text, keywords) {
+        const sections = [];
+        const lines = text.split('\n');
+        
+        for (let i = 0; i < lines.length; i++) {
+            const line = lines[i].toLowerCase();
+            
+            // 检测章节标题
+            for (const keyword of keywords) {
+                if (line.includes(keyword) && line.length < 100) {
+                    // 找到章节，提取后续内容
+                    const sectionText = lines.slice(i, Math.min(i + 50, lines.length)).join(' ');
+                    sections.push(sectionText);
+                    break;
+                }
+            }
+        }
+        
+        return sections;
+    }
+
+    /**
+     * 🔬 提取数值指标（准确率、延迟、用户数等）
+     */
+    extractMetrics(text) {
+        const metrics = {
+            accuracy: [],
+            precision: [],
+            recall: [],
+            f1_score: [],
+            latency: [],
+            fps: [],
+            users: [],
+            gestures: []
+        };
+
+        // 准确率 (accuracy, recognition rate)
+        const accuracyRegex = /(\d+\.?\d*)\s*%?\s*(accuracy|recognition rate|correct|success rate)/gi;
+        let match;
+        while ((match = accuracyRegex.exec(text)) !== null) {
+            const value = parseFloat(match[1]);
+            if (value > 50 && value <= 100) { // 合理的准确率范围
+                metrics.accuracy.push(value);
+            }
+        }
+
+        // 延迟 (latency, delay, response time)
+        const latencyRegex = /(\d+\.?\d*)\s*(ms|millisecond|second)/gi;
+        while ((match = latencyRegex.exec(text)) !== null) {
+            const value = parseFloat(match[1]);
+            const unit = match[2].toLowerCase();
+            // 转换为ms
+            const latencyMs = unit.includes('second') && !unit.includes('milli') ? value * 1000 : value;
+            if (latencyMs < 10000) { // 合理的延迟范围
+                metrics.latency.push(latencyMs);
+            }
+        }
+
+        // FPS (frames per second)
+        const fpsRegex = /(\d+\.?\d*)\s*(fps|frame.*per.*second)/gi;
+        while ((match = fpsRegex.exec(text)) !== null) {
+            metrics.fps.push(parseFloat(match[1]));
+        }
+
+        // 用户数 (participants, users, subjects)
+        const userRegex = /(\d+)\s*(participant|user|subject|people)/gi;
+        while ((match = userRegex.exec(text)) !== null) {
+            const value = parseInt(match[1]);
+            if (value > 0 && value < 1000) { // 合理的用户数
+                metrics.users.push(value);
+            }
+        }
+
+        // 手势数量
+        const gestureRegex = /(\d+)\s*(gesture|motion|action|class|command)/gi;
+        while ((match = gestureRegex.exec(text)) !== null) {
+            const value = parseInt(match[1]);
+            if (value > 0 && value < 100) {
+                metrics.gestures.push(value);
+            }
+        }
+
+        // 计算平均值
+        for (const key in metrics) {
+            if (metrics[key].length > 0) {
+                const avg = metrics[key].reduce((a, b) => a + b, 0) / metrics[key].length;
+                metrics[key + '_avg'] = Math.round(avg * 100) / 100;
+                metrics[key + '_max'] = Math.max(...metrics[key]);
+                metrics[key + '_count'] = metrics[key].length;
+            }
+        }
+
+        return metrics;
+    }
+
+    /**
+     * 提取贡献点
+     */
+    extractContributions(text) {
+        const contributions = [];
+        const contributionKeywords = [
+            'we contribute', 'our contribution', 'we present', 'we propose',
+            'we introduce', 'we demonstrate', 'our work', 'key contribution'
+        ];
+
+        const sentences = text.split(/[.!?]\s+/);
+        for (const sentence of sentences) {
+            const lower = sentence.toLowerCase();
+            for (const keyword of contributionKeywords) {
+                if (lower.includes(keyword) && sentence.length < 300) {
+                    contributions.push(sentence.trim());
+                    break;
+                }
+            }
+        }
+
+        return contributions.slice(0, 5); // 最多5个
+    }
+
+    /**
+     * 提取局限性
+     */
+    extractLimitations(text) {
+        const limitations = [];
+        const limitKeywords = [
+            'limitation', 'limit', 'drawback', 'weakness', 'challenge',
+            'future work', 'not able to', 'unable to', 'however'
+        ];
+
+        const sentences = text.split(/[.!?]\s+/);
+        for (const sentence of sentences) {
+            const lower = sentence.toLowerCase();
+            for (const keyword of limitKeywords) {
+                if (lower.includes(keyword) && sentence.length < 300) {
+                    limitations.push(sentence.trim());
+                    break;
+                }
+            }
+        }
+
+        return limitations.slice(0, 5); // 最多5个
     }
 
     /**
@@ -791,10 +983,17 @@ class GeminiChatbot {
     }
 
     /**
-     * 构建知识库上下文 - 将相关论文注入AI上下文
+     * 🔬 智能知识库上下文构建 - 根据问题类型动态选择内容
      */
-    buildKnowledgeContext(papers) {
+    buildKnowledgeContext(papers, query = '') {
         if (!papers || papers.length === 0) return '';
+        
+        // 检测问题类型
+        const queryLower = query.toLowerCase();
+        const isMethodQuery = /method|approach|technique|algorithm|how.*work|implement/i.test(query);
+        const isResultQuery = /accuracy|precision|result|performance|evaluation|metric|achieve/i.test(query);
+        const isCompareQuery = /compare|versus|vs|difference|better/i.test(query);
+        const isOverviewQuery = /overview|summary|introduce|what is|tell me about/i.test(query);
         
         let context = '📚 **KNOWLEDGE BASE - Relevant Research Papers:**\n\n';
         
@@ -805,29 +1004,111 @@ class GeminiChatbot {
             context += `**Conference:** ${paper.conferenceName || 'Unknown'}\n`;
             
             if (paper.hardwareDevices && paper.hardwareDevices.length > 0) {
-                context += `**Hardware:** ${paper.hardwareDevices.slice(0, 3).join(', ')}\n`;
+                context += `**Hardware:** ${paper.hardwareDevices.join(', ')}\n`;
             }
             if (paper.applicationScenarios && paper.applicationScenarios.length > 0) {
-                context += `**Applications:** ${paper.applicationScenarios.slice(0, 3).join(', ')}\n`;
+                context += `**Applications:** ${paper.applicationScenarios.join(', ')}\n`;
             }
             
-            // 注入论文全文（限制长度）
-            if (paper.fullText) {
-                const maxLength = 8000; // 每篇论文最多8000字符
+            // 🔬 根据提取的结构化数据智能注入内容
+            if (paper.extractedData) {
+                const data = paper.extractedData;
+                
+                // 总是包含摘要（概览）
+                if (data.abstract) {
+                    context += `\n**ABSTRACT:**\n${data.abstract.substring(0, 800)}...\n`;
+                }
+                
+                // 如果是方法查询，重点提供方法部分
+                if (isMethodQuery && data.methods) {
+                    context += `\n**METHODS:**\n${data.methods.substring(0, 2000)}...\n`;
+                }
+                
+                // 如果是结果查询，重点提供结果和指标
+                if (isResultQuery) {
+                    if (data.results) {
+                        context += `\n**RESULTS:**\n${data.results.substring(0, 2000)}...\n`;
+                    }
+                    
+                    // 添加提取的数值指标
+                    if (data.metrics && Object.keys(data.metrics).length > 0) {
+                        context += `\n**KEY METRICS:**\n`;
+                        if (data.metrics.accuracy_avg) {
+                            context += `- Accuracy: ${data.metrics.accuracy_avg}% (from ${data.metrics.accuracy_count} measurements)\n`;
+                        }
+                        if (data.metrics.latency_avg) {
+                            context += `- Latency: ${data.metrics.latency_avg}ms (max: ${data.metrics.latency_max}ms)\n`;
+                        }
+                        if (data.metrics.users_avg) {
+                            context += `- User Study: ${Math.round(data.metrics.users_avg)} participants\n`;
+                        }
+                        if (data.metrics.gestures_avg) {
+                            context += `- Gestures: ${Math.round(data.metrics.gestures_avg)} gesture types\n`;
+                        }
+                    }
+                }
+                
+                // 如果是对比查询，提供全面信息
+                if (isCompareQuery) {
+                    if (data.methods) {
+                        context += `\n**METHODS:**\n${data.methods.substring(0, 1500)}...\n`;
+                    }
+                    if (data.results) {
+                        context += `\n**RESULTS:**\n${data.results.substring(0, 1500)}...\n`;
+                    }
+                    // 指标
+                    if (data.metrics.accuracy_avg) {
+                        context += `\n**Performance:** Accuracy: ${data.metrics.accuracy_avg}%\n`;
+                    }
+                }
+                
+                // 如果是概览查询或通用查询，提供平衡的内容
+                if (isOverviewQuery || (!isMethodQuery && !isResultQuery && !isCompareQuery)) {
+                    if (data.contributions && data.contributions.length > 0) {
+                        context += `\n**KEY CONTRIBUTIONS:**\n`;
+                        data.contributions.slice(0, 3).forEach((contrib, i) => {
+                            context += `${i + 1}. ${contrib}\n`;
+                        });
+                    }
+                    
+                    if (data.limitations && data.limitations.length > 0) {
+                        context += `\n**LIMITATIONS:**\n`;
+                        data.limitations.slice(0, 2).forEach((limit, i) => {
+                            context += `${i + 1}. ${limit}\n`;
+                        });
+                    }
+                }
+            } else if (paper.fullText) {
+                // 如果没有提取的数据，回退到原始方法
+                const maxLength = 8000;
                 const text = paper.fullText.length > maxLength 
                     ? paper.fullText.substring(0, maxLength) + '...(truncated)'
                     : paper.fullText;
-                context += `\n**FULL TEXT:**\n${text}\n`;
+                context += `\n**CONTENT:**\n${text}\n`;
             }
             
             context += '\n' + '='.repeat(80) + '\n\n';
         });
         
+        // 根据问题类型提供不同的指令
         context += '\n**INSTRUCTIONS:**\n';
-        context += '- Answer the user\'s question based on the papers above\n';
-        context += '- Cite specific papers by title when relevant\n';
-        context += '- Provide paper details (author, year) in your response\n';
-        context += '- If information is not in these papers, say so clearly\n\n';
+        context += '- Answer based on the papers above with specific citations\n';
+        context += '- Always mention paper title, author, and year when discussing results\n';
+        context += '- Provide quantitative data (accuracy %, latency ms, etc.) when available\n';
+        
+        if (isMethodQuery) {
+            context += '- Focus on technical methods, algorithms, and implementation details\n';
+            context += '- Explain how the system works step-by-step\n';
+        } else if (isResultQuery) {
+            context += '- Emphasize numerical results and evaluation metrics\n';
+            context += '- Compare performance across papers if multiple are provided\n';
+        } else if (isCompareQuery) {
+            context += '- Provide systematic comparison across all papers\n';
+            context += '- Highlight similarities, differences, and tradeoffs\n';
+            context += '- Use tables or structured format for clarity\n';
+        }
+        
+        context += '- If information is not in these papers, clearly state that\n\n';
         
         return context;
     }
