@@ -141,9 +141,10 @@ class GeminiChatbot {
                     
                     <div class="chatbot-messages" id="chatbotMessages">
                     <div class="chatbot-welcome">
-                        <div class="welcome-icon">👋</div>
-                        <h4>Welcome to AI Assistant!</h4>
-                        <p>I can help you explore gesture interaction research papers. Ask me anything!</p>
+                        <div class="welcome-icon">📚</div>
+                        <h4>AI Research Assistant</h4>
+                        <p>I have access to 165+ gesture interaction research papers. Ask me about any topic, and I'll search the knowledge base to provide detailed answers!</p>
+                        <p style="font-size: 13px; opacity: 0.8; margin-top: 8px;">Try: "What papers discuss smartwatch gestures?" or "Tell me about finger-counting methods"</p>
                     </div>
                 </div>
                 
@@ -431,15 +432,19 @@ class GeminiChatbot {
         // Add user message
         this.addMessage('You', message, 'user');
         
-        // 智能搜索：如果用户询问特定论文，先搜索再注入结果
-        let enrichedMessage = message;
+        // 🔍 智能知识库检索
+        let relevantPapers = [];
         if (this.websiteData && this.websiteData.papers) {
-            const searchResults = this.searchPapers(message);
-            if (searchResults.length > 0) {
-                const resultsInfo = searchResults.slice(0, 5).map(p => 
-                    `[ID:${p.id}] "${p.title}" (${p.year}) | Hardware: ${(p.hardwareDevices||[]).slice(0,2).join(',')} | App: ${(p.applicationScenarios||[]).slice(0,2).join(',')}`
-                ).join('\n');
-                enrichedMessage = `${message}\n\n[System: Found ${searchResults.length} matching papers in database:\n${resultsInfo}]`;
+            relevantPapers = this.searchPapers(message).slice(0, 5); // 最相关的5篇
+            
+            if (relevantPapers.length > 0) {
+                // 显示检索信息
+                const paperTitles = relevantPapers.slice(0, 3).map(p => `"${p.title}"`).join(', ');
+                const moreText = relevantPapers.length > 3 ? ` and ${relevantPapers.length - 3} more` : '';
+                this.addMessage('System', `🔍 Searching knowledge base... Found ${relevantPapers.length} relevant papers: ${paperTitles}${moreText}`, 'system');
+                
+                // 异步加载论文全文
+                await this.loadPaperTexts(relevantPapers);
             }
         }
         
@@ -447,7 +452,7 @@ class GeminiChatbot {
         this.showLoading();
         
         try {
-            const response = await this.callGeminiAPI(enrichedMessage);
+            const response = await this.callGeminiAPI(message, relevantPapers);
             this.hideLoading();
             this.addMessage('AI', response, 'bot');
         } catch (error) {
@@ -465,7 +470,7 @@ class GeminiChatbot {
         }
     }
 
-    async callGeminiAPI(message) {
+    async callGeminiAPI(message, relevantPapers = []) {
         // 构建对话内容
         const contents = [];
         
@@ -478,8 +483,23 @@ class GeminiChatbot {
             });
             contents.push({
                 role: 'model',
-                parts: [{ text: '好的，我已了解当前的论文内容。请问您想了解什么？' }]
+                parts: [{ text: 'I understand. I\'m ready to help you explore the gesture interaction research papers database. What would you like to know?' }]
             });
+        }
+        
+        // 📚 动态知识库注入：如果有相关论文，注入完整内容
+        if (relevantPapers.length > 0) {
+            const knowledgeContext = this.buildKnowledgeContext(relevantPapers);
+            if (knowledgeContext) {
+                contents.push({
+                    role: 'user',
+                    parts: [{ text: knowledgeContext }]
+                });
+                contents.push({
+                    role: 'model',
+                    parts: [{ text: 'I have reviewed the relevant papers. Please ask your question.' }]
+                });
+            }
         }
         
         // 添加历史对话（最多保留最近5轮对话）
@@ -532,36 +552,124 @@ class GeminiChatbot {
         return aiResponse;
     }
 
+    /**
+     * 加载论文全文内容
+     */
+    async loadPaperTexts(papers) {
+        if (!this.papersTexts) {
+            try {
+                const response = await fetch('papers-texts.json');
+                this.papersTexts = await response.json();
+                console.log('📚 Papers full texts loaded');
+            } catch (error) {
+                console.error('Error loading papers texts:', error);
+                return;
+            }
+        }
+        
+        // 为每篇论文附加全文
+        papers.forEach(paper => {
+            const filename = paper.pdfFile || paper.filename;
+            if (filename && this.papersTexts[filename]) {
+                paper.fullText = this.papersTexts[filename].text;
+            }
+        });
+    }
+
+    /**
+     * 构建知识库上下文 - 将相关论文注入AI上下文
+     */
+    buildKnowledgeContext(papers) {
+        if (!papers || papers.length === 0) return '';
+        
+        let context = '📚 **KNOWLEDGE BASE - Relevant Research Papers:**\n\n';
+        
+        papers.forEach((paper, index) => {
+            context += `## Paper ${index + 1}: ${paper.title}\n`;
+            context += `**Author:** ${paper.firstAuthor || paper.authors || 'Unknown'}\n`;
+            context += `**Year:** ${paper.year || 'Unknown'}\n`;
+            context += `**Conference:** ${paper.conferenceName || 'Unknown'}\n`;
+            
+            if (paper.hardwareDevices && paper.hardwareDevices.length > 0) {
+                context += `**Hardware:** ${paper.hardwareDevices.slice(0, 3).join(', ')}\n`;
+            }
+            if (paper.applicationScenarios && paper.applicationScenarios.length > 0) {
+                context += `**Applications:** ${paper.applicationScenarios.slice(0, 3).join(', ')}\n`;
+            }
+            
+            // 注入论文全文（限制长度）
+            if (paper.fullText) {
+                const maxLength = 8000; // 每篇论文最多8000字符
+                const text = paper.fullText.length > maxLength 
+                    ? paper.fullText.substring(0, maxLength) + '...(truncated)'
+                    : paper.fullText;
+                context += `\n**FULL TEXT:**\n${text}\n`;
+            }
+            
+            context += '\n' + '='.repeat(80) + '\n\n';
+        });
+        
+        context += '\n**INSTRUCTIONS:**\n';
+        context += '- Answer the user\'s question based on the papers above\n';
+        context += '- Cite specific papers by title when relevant\n';
+        context += '- Provide paper details (author, year) in your response\n';
+        context += '- If information is not in these papers, say so clearly\n\n';
+        
+        return context;
+    }
+
+    /**
+     * 智能论文检索 - 多关键词、多字段、相关性评分
+     */
     searchPapers(query) {
-        // 在论文数据中搜索
         if (!this.websiteData || !this.websiteData.papers) {
             return [];
         }
         
         const lowerQuery = query.toLowerCase();
-        const results = this.websiteData.papers.filter(paper => {
-            // 搜索标题
-            if (paper.title && paper.title.toLowerCase().includes(lowerQuery)) return true;
+        
+        // 提取关键词（移除停用词）
+        const stopWords = ['the', 'a', 'an', 'and', 'or', 'but', 'in', 'on', 'at', 'to', 'for', 'of', 'with', 'by', 'is', 'are', 'was', 'were', 'what', 'how', 'which', 'about', 'can', 'you', 'i', 'tell', 'me', 'show', 'please', 'find', 'search'];
+        const keywords = lowerQuery
+            .split(/\s+/)
+            .filter(word => word.length > 2 && !stopWords.includes(word))
+            .slice(0, 10);
+        
+        // 计算每篇论文的相关性分数
+        const scoredPapers = this.websiteData.papers.map(paper => {
+            let score = 0;
+            const title = (paper.title || '').toLowerCase();
+            const author = (paper.authors || paper.firstAuthor || '').toLowerCase();
+            const allTags = [
+                ...(paper.hardwareDevices || []),
+                ...(paper.applicationScenarios || []),
+                ...(paper.gestureTypes || []),
+                ...(paper.recognitionClassification || [])
+            ].map(t => t.toLowerCase()).join(' ');
             
-            // 搜索年份
-            if (paper.year && paper.year.toString().includes(lowerQuery)) return true;
+            // 完全匹配 - 最高分
+            if (title.includes(lowerQuery)) score += 100;
             
-            // 搜索作者
-            if (paper.authors && paper.authors.toLowerCase().includes(lowerQuery)) return true;
+            // 标题关键词匹配
+            keywords.forEach(kw => {
+                if (title.includes(kw)) score += 15;
+                if (author.includes(kw)) score += 8;
+                if (allTags.includes(kw)) score += 5;
+            });
             
-            // 搜索硬件设备
-            if (paper.hardwareDevices && paper.hardwareDevices.some(d => d.toLowerCase().includes(lowerQuery))) return true;
+            // 年份匹配
+            if (paper.year && lowerQuery.includes(paper.year.toString())) {
+                score += 10;
+            }
             
-            // 搜索应用场景
-            if (paper.applicationScenarios && paper.applicationScenarios.some(a => a.toLowerCase().includes(lowerQuery))) return true;
-            
-            // 搜索手势类型
-            if (paper.gestureTypes && paper.gestureTypes.some(g => g.toLowerCase().includes(lowerQuery))) return true;
-            
-            return false;
+            return { paper, score };
         });
         
-        return results.slice(0, 10); // 最多返回10个结果
+        // 过滤并排序
+        return scoredPapers
+            .filter(item => item.score > 0)
+            .sort((a, b) => b.score - a.score)
+            .map(item => item.paper);
     }
 
     generateWebsiteDataSummary() {
@@ -710,16 +818,30 @@ To access these papers:
     }
 
     buildContext() {
-        let context = 'You are a helpful AI assistant for a gesture interaction research paper gallery.';
+        let context = `You are an AI Research Assistant with access to a comprehensive knowledge base of gesture interaction research papers.
+
+**YOUR CAPABILITIES:**
+- You have access to 165+ research papers on gesture interaction (2005-2023)
+- When users ask questions, relevant papers will be automatically loaded and provided to you
+- You can discuss paper content, methodologies, findings, and comparisons
+- You can recommend papers based on user interests
+
+**HOW TO RESPOND:**
+- Always cite papers by title and author when discussing specific research
+- Provide detailed answers based on the actual paper content
+- If asked about papers not in your current context, indicate that and offer to search
+- Format responses clearly with proper citations
+
+**DATABASE OVERVIEW:**`;
         
-        // 如果有当前论文，提供紧凑的数据摘要
+        if (this.websiteData) {
+            context += '\n' + this.generateCompactWebsiteData();
+        }
+        
+        // 如果有当前选中的论文，提供其详细内容
         if (this.currentPaper && this.currentPaper.text) {
-            if (this.websiteData) {
-                context += '\n\n' + this.generateCompactWebsiteData();
-            }
-            
             const paperText = this.currentPaper.text;
-            const maxChars = 25000; // 增加论文内容空间
+            const maxChars = 25000;
             
             const truncatedText = paperText.length > maxChars 
                 ? paperText.substring(0, maxChars) + '\n\n[论文内容过长，已截断...]'
