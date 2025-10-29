@@ -148,24 +148,19 @@ class GeminiChatbot {
                 </div>
                 
                 <div class="chatbot-input-container">
-                    <button class="chatbot-paper-btn" id="chatbotPaperBtn" title="Select Paper to Discuss">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                            <polyline points="14 2 14 8 20 8"></polyline>
-                        </svg>
-                    </button>
-                    <textarea 
-                        class="chatbot-input" 
-                        id="chatbotInput" 
-                        placeholder="Ask me anything about the papers..."
-                        rows="1"
-                    ></textarea>
-                    <button class="chatbot-send" id="chatbotSend">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <line x1="22" y1="2" x2="11" y2="13"></line>
-                            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
-                        </svg>
-                    </button>
+                    <div class="chatbot-input-wrapper">
+                        <textarea 
+                            class="chatbot-input" 
+                            id="chatbotInput" 
+                            placeholder="Message AI Research Assistant..."
+                            rows="1"
+                        ></textarea>
+                        <button class="chatbot-send" id="chatbotSend">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
+                            </svg>
+                        </button>
+                    </div>
                 </div>
                 </div>
                 
