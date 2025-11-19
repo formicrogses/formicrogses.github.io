@@ -20,7 +20,9 @@ class GestureResearchGallery {
             gestureTypes: [],
             applicationScenarios: [],
             feedbackOutput: [],
-            userExperienceDesign: []
+            userExperienceDesign: [],
+            yearStart: 2005,
+            yearEnd: 2025
         };
 
         this.init();
@@ -146,7 +148,18 @@ class GestureResearchGallery {
         if (!container) return;
 
         container.innerHTML = '';
-        tags.sort().forEach(tag => {
+        
+        // Sort tags with "Other*" at the end
+        const sortedTags = tags.sort((a, b) => {
+            const aIsOther = a.startsWith('Other');
+            const bIsOther = b.startsWith('Other');
+            
+            if (aIsOther && !bIsOther) return 1;
+            if (!aIsOther && bIsOther) return -1;
+            return a.localeCompare(b);
+        });
+        
+        sortedTags.forEach(tag => {
             const countKey = categoryKey === 'category' ? `category_${tag}` : `${categoryKey}_${tag}`;
             const count = tagCounts[countKey] || 0;
             
@@ -187,6 +200,12 @@ class GestureResearchGallery {
 
     applyFilters() {
         let papers = [...this.allPapers];
+        
+        // Apply year filter
+        papers = papers.filter(paper => {
+            const year = parseInt(paper.year);
+            return year >= this.filterState.yearStart && year <= this.filterState.yearEnd;
+        });
         
         // Apply search filter
         if (this.searchQuery) {
@@ -481,16 +500,39 @@ class GestureResearchGallery {
     }
 
     formatTag(tag) {
+        // Direct mappings for specific tags
+        const tagMap = {
+            'GestureDesign': 'Gesture Design',
+            'SmartPhone': 'Smart Phone',
+            'ARGlasses': 'AR Glasses',
+            'VRHeadset': 'VR Headset',
+            'E-Textile': 'E-Textile',
+            'Bio-Sensor': 'Bio-Sensor',
+            'EMG': 'EMG',
+            'IMU': 'IMU',
+            'RFSensing': 'RF Sensing',
+            '3DPoseEstimation': '3D Pose Estimation',
+            'BackofDevices': 'Back of Devices',
+            'Thumb-Index': 'Thumb-Index',
+            'AR': 'AR',
+            'VR': 'VR',
+            'MR': 'MR',
+            'IoT': 'IoT',
+            'IOT': 'IoT',
+            'QWERTYLayout': 'QWERTY Layout',
+            'OtherDevices': 'Other Devices',
+            'OtherTechnology': 'Other Technology',
+            'OtherScenarios': 'Other Scenarios'
+        };
+        
+        // Return direct mapping if exists
+        if (tagMap[tag]) {
+            return tagMap[tag];
+        }
+        
+        // Default formatting
         tag = tag.replace(/^#/, '');
         tag = tag.replace(/([A-Z])/g, ' $1');
-        tag = tag.replace(/EMG/g, 'EMG');
-        tag = tag.replace(/VR/g, 'VR');
-        tag = tag.replace(/AR/g, 'AR');
-        tag = tag.replace(/IMU/g, 'IMU');
-        tag = tag.replace(/IOT/g, 'IoT');
-        tag = tag.replace(/3D/g, '3D');
-        tag = tag.replace(/2D/g, '2D');
-        tag = tag.replace(/QWERTY/g, 'QWERTY');
         return tag.trim().replace(/\b\w/g, l => l.toUpperCase());
     }
 
@@ -602,6 +644,46 @@ class GestureResearchGallery {
 
 
     setupEventListeners() {
+        // Year slider functionality
+        const yearSliderStart = document.getElementById('yearSliderStart');
+        const yearSliderEnd = document.getElementById('yearSliderEnd');
+        const yearRangeStart = document.getElementById('yearRangeStart');
+        const yearRangeEnd = document.getElementById('yearRangeEnd');
+        
+        if (yearSliderStart && yearSliderEnd) {
+            yearSliderStart.addEventListener('input', () => {
+                let startYear = parseInt(yearSliderStart.value);
+                let endYear = parseInt(yearSliderEnd.value);
+                
+                if (startYear > endYear) {
+                    startYear = endYear;
+                    yearSliderStart.value = startYear;
+                }
+                
+                this.filterState.yearStart = startYear;
+                yearRangeStart.textContent = startYear;
+                this.applyFilters();
+                this.updateFilterCounts();
+                this.updateURL();
+            });
+            
+            yearSliderEnd.addEventListener('input', () => {
+                let startYear = parseInt(yearSliderStart.value);
+                let endYear = parseInt(yearSliderEnd.value);
+                
+                if (endYear < startYear) {
+                    endYear = startYear;
+                    yearSliderEnd.value = endYear;
+                }
+                
+                this.filterState.yearEnd = endYear;
+                yearRangeEnd.textContent = endYear;
+                this.applyFilters();
+                this.updateFilterCounts();
+                this.updateURL();
+            });
+        }
+        
         // Search functionality
         const searchInput = document.getElementById('searchInput');
         if (searchInput) {

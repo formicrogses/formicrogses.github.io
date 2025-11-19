@@ -32,7 +32,7 @@ const PAPERS_DATA = {
         "Pinch",
         "SingleHand",
         "Tap",
-        "ThumbIndex"
+        "Thumb-Index"
       ],
       "applicationScenarios": [
         "AR",
@@ -62,7 +62,7 @@ const PAPERS_DATA = {
         "WearableSensor"
       ],
       "sensingTechnology": [
-        "BioSensor",
+        "Bio-Sensor",
         "EMG"
       ],
       "recognitionClassification": [
@@ -111,7 +111,7 @@ const PAPERS_DATA = {
       ],
       "sensingTechnology": [
         "Accelerometer",
-        "BioSensor",
+        "Bio-Sensor",
         "EMG",
         "MotionSensor"
       ],
@@ -154,13 +154,13 @@ const PAPERS_DATA = {
       "year": "2011",
       "category": "hardware",
       "hardwareDevices": [
-        "Smartphone",
+        "SmartPhone",
         "WearableSensor",
         "Wearables"
       ],
       "sensingTechnology": [
         "Accelerometer",
-        "BioSensor",
+        "Bio-Sensor",
         "EMG"
       ],
       "recognitionClassification": [
@@ -201,7 +201,7 @@ const PAPERS_DATA = {
       "id": 5,
       "title": "Design space for finger gestures with hand-held tablets",
       "year": "2012",
-      "category": "gesture-design",
+      "category": "GestureDesign",
       "hardwareDevices": [
         "Tablet",
         "TouchScreen",
@@ -259,7 +259,7 @@ const PAPERS_DATA = {
       "year": "2013",
       "category": "hardware",
       "hardwareDevices": [
-        "Smartphone",
+        "SmartPhone",
         "Tablet",
         "WearableSensor",
         "Wearables"
@@ -276,7 +276,7 @@ const PAPERS_DATA = {
         "StaticGestureRecognition"
       ],
       "interactionModalities": [
-        "BackOfDeviceInteraction",
+        "BackofDevices",
         "DirectTouch",
         "NonContactBased",
         "TangibleInteraction"
@@ -285,7 +285,7 @@ const PAPERS_DATA = {
         "Pinch",
         "Swipe",
         "Tap",
-        "ThumbIndex"
+        "Thumb-Index"
       ],
       "applicationScenarios": [
         "Gaming",
@@ -315,7 +315,7 @@ const PAPERS_DATA = {
       "category": "hardware",
       "hardwareDevices": [
         "OtherDevices",
-        "Smartphone",
+        "SmartPhone",
         "WearableSensor",
         "Wearables"
       ],
@@ -370,7 +370,7 @@ const PAPERS_DATA = {
         "WearableSensor"
       ],
       "sensingTechnology": [
-        "BioSensor",
+        "Bio-Sensor",
         "EMG"
       ],
       "recognitionClassification": [
@@ -438,7 +438,7 @@ const PAPERS_DATA = {
         "SingleHand",
         "Swipe",
         "Tap",
-        "ThumbIndex"
+        "Thumb-Index"
       ],
       "applicationScenarios": [
         "IoTControl",
@@ -496,7 +496,7 @@ const PAPERS_DATA = {
         "SingleHand",
         "Swipe",
         "Tap",
-        "ThumbIndex"
+        "Thumb-Index"
       ],
       "applicationScenarios": [
         "IoTControl",
@@ -525,7 +525,7 @@ const PAPERS_DATA = {
       "id": 11,
       "title": "Gunslinger subtle arms-down mid-air interaction",
       "year": "2015",
-      "category": "gesture-design",
+      "category": "GestureDesign",
       "hardwareDevices": [
         "TouchScreen",
         "WearableSensor",
@@ -554,7 +554,7 @@ const PAPERS_DATA = {
         "Pinch",
         "SingleHand",
         "Tap",
-        "ThumbIndex"
+        "Thumb-Index"
       ],
       "applicationScenarios": [
         "MediaControl",
@@ -587,7 +587,7 @@ const PAPERS_DATA = {
       "category": "hardware",
       "hardwareDevices": [
         "SmartRing",
-        "Smartphone",
+        "SmartPhone",
         "WearableSensor",
         "Wearables"
       ],
@@ -612,7 +612,7 @@ const PAPERS_DATA = {
         "SingleHand",
         "Swipe",
         "Tap",
-        "ThumbIndex"
+        "Thumb-Index"
       ],
       "applicationScenarios": [
         "InVehicleInteraction",
@@ -643,7 +643,7 @@ const PAPERS_DATA = {
       "id": 13,
       "title": "Designing a willing-to-use-in-public hand gestural interaction technique for smart glasses",
       "year": "2016",
-      "category": "gesture-design",
+      "category": "GestureDesign",
       "hardwareDevices": [
         "DataGloves",
         "HapticDevice",
@@ -676,7 +676,7 @@ const PAPERS_DATA = {
         "SingleHand",
         "Swipe",
         "Tap",
-        "ThumbIndex"
+        "Thumb-Index"
       ],
       "applicationScenarios": [
         "AR",
@@ -740,7 +740,7 @@ const PAPERS_DATA = {
         "Hold",
         "Pinch",
         "SingleHand",
-        "ThumbIndex"
+        "Thumb-Index"
       ],
       "applicationScenarios": [
         "AR",
@@ -819,7 +819,7 @@ const PAPERS_DATA = {
       "id": 18,
       "title": "Gestures for smart rings empirical results, insights, and design implications",
       "year": "2018",
-      "category": "gesture-design",
+      "category": "GestureDesign",
       "hardwareDevices": [
         "SmartRing",
         "Wearables"
@@ -892,7 +892,7 @@ const PAPERS_DATA = {
         "SingleHand",
         "Swipe",
         "Tap",
-        "ThumbIndex"
+        "Thumb-Index"
       ],
       "applicationScenarios": [
         "Healthcare",
@@ -1008,7 +1008,7 @@ const PAPERS_DATA = {
         "SingleHand",
         "Swipe",
         "Tap",
-        "ThumbIndex"
+        "Thumb-Index"
       ],
       "applicationScenarios": [
         "DigitalArt",
@@ -1040,7 +1040,7 @@ const PAPERS_DATA = {
         "Wearables"
       ],
       "sensingTechnology": [
-        "BioSensor",
+        "Bio-Sensor",
         "PressureSensor",
         "UltrasonicSensor"
       ],
@@ -1058,7 +1058,7 @@ const PAPERS_DATA = {
         "Pinch",
         "SingleHand",
         "Tap",
-        "ThumbIndex"
+        "Thumb-Index"
       ],
       "applicationScenarios": [
         "MediaControl",
@@ -1107,7 +1107,7 @@ const PAPERS_DATA = {
       "gestureTypes": [
         "SingleHand",
         "Tap",
-        "ThumbIndex"
+        "Thumb-Index"
       ],
       "applicationScenarios": [
         "AR",
@@ -1197,7 +1197,7 @@ const PAPERS_DATA = {
       "id": 25,
       "title": "Exploring user defined gestures for ear-based interactions",
       "year": "2020",
-      "category": "gesture-design",
+      "category": "GestureDesign",
       "hardwareDevices": [
         "OtherDevices",
         "SmartGlasses",
@@ -1285,7 +1285,7 @@ const PAPERS_DATA = {
         "SingleHand",
         "Swipe",
         "Tap",
-        "ThumbIndex"
+        "Thumb-Index"
       ],
       "applicationScenarios": [
         "IoTControl",
@@ -1375,11 +1375,11 @@ const PAPERS_DATA = {
       "id": 28,
       "title": "How subtle can it get A trimodal study of ring-sized interfaces for one-handed drone control",
       "year": "2020",
-      "category": "gesture-design",
+      "category": "GestureDesign",
       "hardwareDevices": [
         "OtherDevices",
         "SmartRing",
-        "Smartphone",
+        "SmartPhone",
         "Wearables"
       ],
       "sensingTechnology": [
@@ -1403,7 +1403,7 @@ const PAPERS_DATA = {
         "Flex",
         "Hold",
         "SingleHand",
-        "ThumbIndex"
+        "Thumb-Index"
       ],
       "applicationScenarios": [
         "OtherScenarios"
@@ -1452,7 +1452,7 @@ const PAPERS_DATA = {
         "SingleHand",
         "Swipe",
         "Tap",
-        "ThumbIndex"
+        "Thumb-Index"
       ],
       "applicationScenarios": [
         "AR",
@@ -1558,7 +1558,7 @@ const PAPERS_DATA = {
         "Pinch",
         "Swipe",
         "Tap",
-        "ThumbIndex"
+        "Thumb-Index"
       ],
       "applicationScenarios": [
         "DigitalArt",
@@ -1588,7 +1588,7 @@ const PAPERS_DATA = {
       "id": 33,
       "title": "SoloFinger robust microgestures while grasping everyday objects",
       "year": "2021",
-      "category": "gesture-design",
+      "category": "GestureDesign",
       "hardwareDevices": [
         "DataGloves",
         "OtherDevices"
@@ -1656,7 +1656,7 @@ const PAPERS_DATA = {
       "gestureTypes": [
         "SingleHand",
         "Tap",
-        "ThumbIndex"
+        "Thumb-Index"
       ],
       "applicationScenarios": [
         "AR",
@@ -1723,7 +1723,7 @@ const PAPERS_DATA = {
         "SingleHand",
         "Swipe",
         "Tap",
-        "ThumbIndex"
+        "Thumb-Index"
       ],
       "applicationScenarios": [
         "AR",
@@ -1783,7 +1783,7 @@ const PAPERS_DATA = {
         "Hold",
         "Pinch",
         "SingleHand",
-        "ThumbIndex"
+        "Thumb-Index"
       ],
       "applicationScenarios": [
         "AR",
@@ -1839,7 +1839,7 @@ const PAPERS_DATA = {
         "SingleHand",
         "Swipe",
         "Tap",
-        "ThumbIndex"
+        "Thumb-Index"
       ],
       "applicationScenarios": [
         "AR",
@@ -1892,7 +1892,7 @@ const PAPERS_DATA = {
         "SingleHand",
         "Swipe",
         "Tap",
-        "ThumbIndex"
+        "Thumb-Index"
       ],
       "applicationScenarios": [
         "DigitalArt",
@@ -1990,7 +1990,7 @@ const PAPERS_DATA = {
       ],
       "sensingTechnology": [
         "Accelerometer",
-        "BioSensor",
+        "Bio-Sensor",
         "OtherTechnology"
       ],
       "recognitionClassification": [
@@ -2009,7 +2009,7 @@ const PAPERS_DATA = {
         "SingleHand",
         "Swipe",
         "Tap",
-        "ThumbIndex"
+        "Thumb-Index"
       ],
       "applicationScenarios": [
         "AR",
@@ -2113,7 +2113,7 @@ const PAPERS_DATA = {
         "StaticGestureRecognition"
       ],
       "interactionModalities": [
-        "BackOfDeviceInteraction",
+        "BackofDevices",
         "BodyContactGesture",
         "ContactBased"
       ],
@@ -2212,7 +2212,7 @@ const PAPERS_DATA = {
       "category": "software",
       "hardwareDevices": [
         "SmartWatch",
-        "Smartphone",
+        "SmartPhone",
         "Wearables"
       ],
       "sensingTechnology": [
@@ -2234,7 +2234,7 @@ const PAPERS_DATA = {
         "SingleHand",
         "Swipe",
         "Tap",
-        "ThumbIndex"
+        "Thumb-Index"
       ],
       "applicationScenarios": [
         "MediaControl",
@@ -2268,7 +2268,7 @@ const PAPERS_DATA = {
         "Wearables"
       ],
       "sensingTechnology": [
-        "BioSensor",
+        "Bio-Sensor",
         "CapacitiveSensor"
       ],
       "recognitionClassification": [
@@ -2480,7 +2480,7 @@ const PAPERS_DATA = {
         "Wearables"
       ],
       "sensingTechnology": [
-        "BioSensor",
+        "Bio-Sensor",
         "EMG",
         "IMU"
       ],
@@ -2501,7 +2501,7 @@ const PAPERS_DATA = {
         "Pinch",
         "Swipe",
         "Tap",
-        "ThumbIndex"
+        "Thumb-Index"
       ],
       "applicationScenarios": [
         "AR",
@@ -2554,7 +2554,7 @@ const PAPERS_DATA = {
       "gestureTypes": [
         "SingleHand",
         "Tap",
-        "ThumbIndex"
+        "Thumb-Index"
       ],
       "applicationScenarios": [
         "AR",
@@ -2584,7 +2584,7 @@ const PAPERS_DATA = {
       "id": 53,
       "title": "Exploring mixed-scale gesture interaction",
       "year": "2017",
-      "category": "gesture-design",
+      "category": "GestureDesign",
       "hardwareDevices": [
         "ARGlasses",
         "WearableSensor"
@@ -2638,7 +2638,7 @@ const PAPERS_DATA = {
       "category": "software",
       "hardwareDevices": [
         "ARGlasses",
-        "Smartphone",
+        "SmartPhone",
         "VRHeadset"
       ],
       "sensingTechnology": [
@@ -2689,7 +2689,7 @@ const PAPERS_DATA = {
       "id": 55,
       "title": "Experimental analysis of barehand mid-air mode-switching techniques in virtual reality",
       "year": "2019",
-      "category": "gesture-design",
+      "category": "GestureDesign",
       "hardwareDevices": [
         "VRHeadset",
         "WearableSensor"
@@ -2739,7 +2739,7 @@ const PAPERS_DATA = {
       "id": 56,
       "title": "Characterizing in-air eyes-free typing movements in VR",
       "year": "2020",
-      "category": "gesture-design",
+      "category": "GestureDesign",
       "hardwareDevices": [
         "OtherDevices",
         "VRHeadset"
@@ -2790,11 +2790,11 @@ const PAPERS_DATA = {
       "id": 57,
       "title": "User gesture elicitation of common smartphone tasks for hand proximate user interfaces",
       "year": "2020",
-      "category": "gesture-design",
+      "category": "GestureDesign",
       "hardwareDevices": [
         "ARGlasses",
         "SmartGlasses",
-        "Smartphone"
+        "SmartPhone"
       ],
       "sensingTechnology": [
         "ComputerVision"
@@ -2816,7 +2816,7 @@ const PAPERS_DATA = {
         "SingleHand",
         "Swipe",
         "Tap",
-        "ThumbIndex"
+        "Thumb-Index"
       ],
       "applicationScenarios": [
         "AR",
@@ -2864,7 +2864,7 @@ const PAPERS_DATA = {
         "Grasp",
         "Pinch",
         "SingleHand",
-        "ThumbIndex"
+        "Thumb-Index"
       ],
       "applicationScenarios": [
         "Gaming",
@@ -2912,7 +2912,7 @@ const PAPERS_DATA = {
       "gestureTypes": [
         "Grasp",
         "SingleHand",
-        "ThumbIndex"
+        "Thumb-Index"
       ],
       "applicationScenarios": [
         "AR",
@@ -3171,7 +3171,7 @@ const PAPERS_DATA = {
         "SingleHand",
         "Swipe",
         "Tap",
-        "ThumbIndex"
+        "Thumb-Index"
       ],
       "applicationScenarios": [
         "AR",
@@ -3201,7 +3201,7 @@ const PAPERS_DATA = {
       "id": 66,
       "title": "Understanding Gesture and Microgesture Inputs for Augmented Reality Maps",
       "year": "2024",
-      "category": "gesture-design",
+      "category": "GestureDesign",
       "hardwareDevices": [
         "ARGlasses",
         "SmartGlasses",
@@ -3254,7 +3254,7 @@ const PAPERS_DATA = {
       "id": 67,
       "title": "T2IRay Design of Thumb-to-Index based Indirect Pointing for Continuous and Robust AR VR Input",
       "year": "2025",
-      "category": "gesture-design",
+      "category": "GestureDesign",
       "hardwareDevices": [
         "ARGlasses",
         "VRHeadset"
@@ -3278,7 +3278,7 @@ const PAPERS_DATA = {
         "DirectionalGesture",
         "SingleHand",
         "Tap",
-        "ThumbIndex"
+        "Thumb-Index"
       ],
       "applicationScenarios": [
         "AR",
@@ -3305,14 +3305,14 @@ const PAPERS_DATA = {
       "id": 68,
       "title": "Key-press gestures recognition and interaction based on SEMG signals",
       "year": "2010",
-      "category": "gesture-design",
+      "category": "GestureDesign",
       "hardwareDevices": [
-        "Smartphone",
+        "SmartPhone",
         "WearableSensor",
         "Wearables"
       ],
       "sensingTechnology": [
-        "BioSensor",
+        "Bio-Sensor",
         "EMG"
       ],
       "recognitionClassification": [
@@ -3359,9 +3359,9 @@ const PAPERS_DATA = {
       "id": 69,
       "title": "A study of on-device gestures",
       "year": "2012",
-      "category": "gesture-design",
+      "category": "GestureDesign",
       "hardwareDevices": [
-        "Smartphone"
+        "SmartPhone"
       ],
       "sensingTechnology": [
         "PressureSensor"
@@ -3371,7 +3371,7 @@ const PAPERS_DATA = {
         "MotionAnalysis"
       ],
       "interactionModalities": [
-        "BackOfDeviceInteraction",
+        "BackofDevices",
         "ContactBased",
         "DeviceContactGesture"
       ],
@@ -3402,7 +3402,7 @@ const PAPERS_DATA = {
       "id": 70,
       "title": "PinchPad performance of touch-based gestures while grasping devices",
       "year": "2012",
-      "category": "gesture-design",
+      "category": "GestureDesign",
       "hardwareDevices": [
         "Tablet"
       ],
@@ -3415,7 +3415,7 @@ const PAPERS_DATA = {
         "MotionAnalysis"
       ],
       "interactionModalities": [
-        "BackOfDeviceInteraction",
+        "BackofDevices",
         "ContactBased",
         "DeviceContactGesture",
         "DirectTouch"
@@ -3447,9 +3447,9 @@ const PAPERS_DATA = {
       "id": 71,
       "title": "The fat thumb using the thumb's contact size for single-handed mobile interaction",
       "year": "2012",
-      "category": "gesture-design",
+      "category": "GestureDesign",
       "hardwareDevices": [
-        "Smartphone"
+        "SmartPhone"
       ],
       "sensingTechnology": [
         "CapacitiveSensor",
@@ -3465,7 +3465,7 @@ const PAPERS_DATA = {
       ],
       "gestureTypes": [
         "SingleHand",
-        "ThumbIndex"
+        "Thumb-Index"
       ],
       "applicationScenarios": [
         "MediaControl",
@@ -3490,9 +3490,9 @@ const PAPERS_DATA = {
       "id": 72,
       "title": "Exploring pinch and spread gestures on mobile devices",
       "year": "2013",
-      "category": "gesture-design",
+      "category": "GestureDesign",
       "hardwareDevices": [
-        "Smartphone",
+        "SmartPhone",
         "Tablet"
       ],
       "sensingTechnology": [
@@ -3510,7 +3510,7 @@ const PAPERS_DATA = {
         "DualHand",
         "MultiTouch",
         "Pinch",
-        "ThumbIndex"
+        "Thumb-Index"
       ],
       "applicationScenarios": [
         "MediaControl"
@@ -3532,7 +3532,7 @@ const PAPERS_DATA = {
       "id": 74,
       "title": "Leap gestures for TV insights from an elicitation study",
       "year": "2014",
-      "category": "gesture-design",
+      "category": "GestureDesign",
       "hardwareDevices": [
         "OtherDevices"
       ],
@@ -3583,7 +3583,7 @@ const PAPERS_DATA = {
         "HapticDevice",
         "SmartRing",
         "SmartWatch",
-        "Smartphone",
+        "SmartPhone",
         "Wearables"
       ],
       "sensingTechnology": [
@@ -3625,7 +3625,7 @@ const PAPERS_DATA = {
       "id": 76,
       "title": "Interaction proxemics combining physical spaces for seamless gesture interaction",
       "year": "2015",
-      "category": "gesture-design",
+      "category": "GestureDesign",
       "hardwareDevices": [
         "OtherDevices",
         "TouchScreen"
@@ -3674,7 +3674,7 @@ const PAPERS_DATA = {
       "id": 77,
       "title": "Exploring non-touchscreen gestures for smartwatches",
       "year": "2016",
-      "category": "gesture-design",
+      "category": "GestureDesign",
       "hardwareDevices": [
         "SmartWatch",
         "Wearables"
@@ -3819,10 +3819,10 @@ const PAPERS_DATA = {
       "id": 80,
       "title": "Investigating how the hand interacts with different mobile phones",
       "year": "2016",
-      "category": "gesture-design",
+      "category": "GestureDesign",
       "hardwareDevices": [
         "Keyboard",
-        "Smartphone",
+        "SmartPhone",
         "TouchScreen"
       ],
       "sensingTechnology": [
@@ -3866,7 +3866,7 @@ const PAPERS_DATA = {
       "category": "software",
       "hardwareDevices": [
         "OtherDevices",
-        "Smartphone"
+        "SmartPhone"
       ],
       "sensingTechnology": [
         "RFSensing"
@@ -3906,9 +3906,9 @@ const PAPERS_DATA = {
       "id": 82,
       "title": "Understanding grip shifts how form factors impact hand movements on mobile phones",
       "year": "2017",
-      "category": "gesture-design",
+      "category": "GestureDesign",
       "hardwareDevices": [
-        "Smartphone",
+        "SmartPhone",
         "TouchScreen"
       ],
       "sensingTechnology": [
@@ -3929,7 +3929,7 @@ const PAPERS_DATA = {
         "Hold",
         "SingleHand",
         "Tap",
-        "ThumbIndex"
+        "Thumb-Index"
       ],
       "applicationScenarios": [
         "Navigation",
@@ -3953,7 +3953,7 @@ const PAPERS_DATA = {
       "id": 83,
       "title": "Characterizing finger pitch and roll orientation during atomic touch actions",
       "year": "2018",
-      "category": "gesture-design",
+      "category": "GestureDesign",
       "hardwareDevices": [
         "Tablet",
         "TouchScreen"
@@ -3981,7 +3981,7 @@ const PAPERS_DATA = {
         "SingleHand",
         "Swipe",
         "Tap",
-        "ThumbIndex"
+        "Thumb-Index"
       ],
       "applicationScenarios": [
         "ObjectManipulation"
@@ -4002,9 +4002,9 @@ const PAPERS_DATA = {
       "id": 84,
       "title": "Fingers' range and comfortable area for one-handed smartphone interaction beyond the touchscreen",
       "year": "2018",
-      "category": "gesture-design",
+      "category": "GestureDesign",
       "hardwareDevices": [
-        "Smartphone",
+        "SmartPhone",
         "TouchScreen"
       ],
       "sensingTechnology": [
@@ -4016,7 +4016,7 @@ const PAPERS_DATA = {
         "MotionAnalysis"
       ],
       "interactionModalities": [
-        "BackOfDeviceInteraction",
+        "BackofDevices",
         "ContactBased",
         "DirectTouch"
       ],
@@ -4024,7 +4024,7 @@ const PAPERS_DATA = {
         "SingleHand",
         "Swipe",
         "Tap",
-        "ThumbIndex"
+        "Thumb-Index"
       ],
       "applicationScenarios": [
         "MediaControl",
@@ -4052,7 +4052,7 @@ const PAPERS_DATA = {
       "year": "2018",
       "category": "hardware",
       "hardwareDevices": [
-        "Smartphone",
+        "SmartPhone",
         "TouchScreen",
         "WearableSensor"
       ],
@@ -4069,7 +4069,7 @@ const PAPERS_DATA = {
         "StaticGestureRecognition"
       ],
       "interactionModalities": [
-        "BackOfDeviceInteraction",
+        "BackofDevices",
         "ContactBased",
         "DirectTouch",
         "MultiModalInteraction"
@@ -4079,7 +4079,7 @@ const PAPERS_DATA = {
         "Pinch",
         "SingleHand",
         "Swipe",
-        "ThumbIndex"
+        "Thumb-Index"
       ],
       "applicationScenarios": [
         "AccessibilitySupport",
@@ -4107,7 +4107,7 @@ const PAPERS_DATA = {
       "id": 86,
       "title": "Pen + mid-air gestures eliciting contextual gestures",
       "year": "2018",
-      "category": "gesture-design",
+      "category": "GestureDesign",
       "hardwareDevices": [
         "Tablet",
         "TouchScreen"
@@ -4159,7 +4159,7 @@ const PAPERS_DATA = {
       "id": 87,
       "title": "Unimanual Pen Touch Input Using Variations of Precision Grip Postures",
       "year": "2018",
-      "category": "gesture-design",
+      "category": "GestureDesign",
       "hardwareDevices": [
         "Tablet",
         "TouchScreen"
@@ -4207,7 +4207,7 @@ const PAPERS_DATA = {
       "id": 88,
       "title": "Gaze-assisted typing for smart glasses",
       "year": "2019",
-      "category": "gesture-design",
+      "category": "GestureDesign",
       "hardwareDevices": [
         "SmartGlasses",
         "VRHeadset",
@@ -4260,9 +4260,9 @@ const PAPERS_DATA = {
       "id": 89,
       "title": "Investigating unintended inputs for one-handed touch interaction beyond the touchscreen",
       "year": "2019",
-      "category": "gesture-design",
+      "category": "GestureDesign",
       "hardwareDevices": [
-        "Smartphone",
+        "SmartPhone",
         "Wearables"
       ],
       "sensingTechnology": [
@@ -4276,7 +4276,7 @@ const PAPERS_DATA = {
         "StaticGestureRecognition"
       ],
       "interactionModalities": [
-        "BackOfDeviceInteraction",
+        "BackofDevices",
         "ContactBased",
         "DeviceContactGesture"
       ],
@@ -4309,9 +4309,9 @@ const PAPERS_DATA = {
       "id": 90,
       "title": "Expanding Side Touch Input on Mobile Phones",
       "year": "2020",
-      "category": "gesture-design",
+      "category": "GestureDesign",
       "hardwareDevices": [
-        "Smartphone",
+        "SmartPhone",
         "TouchScreen"
       ],
       "sensingTechnology": [
@@ -4325,7 +4325,7 @@ const PAPERS_DATA = {
         "GestureRecognition"
       ],
       "interactionModalities": [
-        "BackOfDeviceInteraction",
+        "BackofDevices",
         "ContactBased",
         "DirectTouch"
       ],
@@ -4334,7 +4334,7 @@ const PAPERS_DATA = {
         "SingleHand",
         "Swipe",
         "Tap",
-        "ThumbIndex"
+        "Thumb-Index"
       ],
       "applicationScenarios": [
         "AccessibilitySupport",
@@ -4363,7 +4363,7 @@ const PAPERS_DATA = {
       "id": 91,
       "title": "MagTouch robust finger identification for a smartwatch using a magnet ring and a built-in magnetometer",
       "year": "2020",
-      "category": "gesture-design",
+      "category": "GestureDesign",
       "hardwareDevices": [
         "SmartRing",
         "SmartWatch",
@@ -4412,7 +4412,7 @@ const PAPERS_DATA = {
       "id": 92,
       "title": "PenSight enhanced interaction with a pen-top camera",
       "year": "2020",
-      "category": "gesture-design",
+      "category": "GestureDesign",
       "hardwareDevices": [
         "OtherDevices",
         "Tablet"
@@ -4468,9 +4468,9 @@ const PAPERS_DATA = {
       "id": 93,
       "title": "Shortcut gestures for mobile text editing on fully touch sensitive smartphones",
       "year": "2020",
-      "category": "gesture-design",
+      "category": "GestureDesign",
       "hardwareDevices": [
-        "Smartphone",
+        "SmartPhone",
         "TouchScreen",
         "Wearables"
       ],
@@ -4483,7 +4483,7 @@ const PAPERS_DATA = {
         "GestureRecognition"
       ],
       "interactionModalities": [
-        "BackOfDeviceInteraction",
+        "BackofDevices",
         "ContactBased",
         "DeviceContactGesture",
         "MultiModalInteraction"
@@ -4521,7 +4521,7 @@ const PAPERS_DATA = {
       "id": 94,
       "title": "Eliciting tangible and gestural user interactions with and on a cooking pan",
       "year": "2020",
-      "category": "gesture-design",
+      "category": "GestureDesign",
       "hardwareDevices": [
         "OtherDevices"
       ],
@@ -4566,7 +4566,7 @@ const PAPERS_DATA = {
       "id": 95,
       "title": "3D hand pose estimation on conventional capacitive touchscreens",
       "year": "2021",
-      "category": "gesture-design",
+      "category": "GestureDesign",
       "hardwareDevices": [
         "Tablet",
         "TouchScreen"
@@ -4624,7 +4624,7 @@ const PAPERS_DATA = {
       "year": "2021",
       "category": "software",
       "hardwareDevices": [
-        "Smartphone",
+        "SmartPhone",
         "Tablet",
         "TouchScreen",
         "WearableSensor"
@@ -4684,7 +4684,7 @@ const PAPERS_DATA = {
       "category": "software",
       "hardwareDevices": [
         "OtherDevices",
-        "Smartphone",
+        "SmartPhone",
         "WearableSensor"
       ],
       "sensingTechnology": [
@@ -4698,7 +4698,7 @@ const PAPERS_DATA = {
         "GestureRecognition"
       ],
       "interactionModalities": [
-        "BackOfDeviceInteraction",
+        "BackofDevices",
         "DeviceContactGesture",
         "NonContactBased"
       ],
@@ -4734,7 +4734,7 @@ const PAPERS_DATA = {
       "id": 98,
       "title": "A User-based Mid-air Hand Gesture Set for Spreadsheets",
       "year": "2021",
-      "category": "gesture-design",
+      "category": "GestureDesign",
       "hardwareDevices": [
         "OtherDevices",
         "VRHeadset"
@@ -4779,7 +4779,7 @@ const PAPERS_DATA = {
       "category": "software",
       "hardwareDevices": [
         "OtherDevices",
-        "Smartphone",
+        "SmartPhone",
         "WearableSensor"
       ],
       "sensingTechnology": [
@@ -4832,7 +4832,7 @@ const PAPERS_DATA = {
       "category": "software",
       "hardwareDevices": [
         "OtherDevices",
-        "Smartphone",
+        "SmartPhone",
         "WearableSensor"
       ],
       "sensingTechnology": [
@@ -4853,7 +4853,7 @@ const PAPERS_DATA = {
       "gestureTypes": [
         "SingleHand",
         "Tap",
-        "ThumbIndex"
+        "Thumb-Index"
       ],
       "applicationScenarios": [
         "AR",
@@ -4884,7 +4884,7 @@ const PAPERS_DATA = {
       "id": 101,
       "title": "SoloFinger Robust Microgestures while Grasping Everyday Objects",
       "year": "2021",
-      "category": "gesture-design",
+      "category": "GestureDesign",
       "hardwareDevices": [
         "DataGloves",
         "WearableSensor"
@@ -4960,7 +4960,7 @@ const PAPERS_DATA = {
         "SingleHand",
         "Swipe",
         "Tap",
-        "ThumbIndex"
+        "Thumb-Index"
       ],
       "applicationScenarios": [
         "MediaControl",
@@ -4988,7 +4988,7 @@ const PAPERS_DATA = {
       "id": 103,
       "title": "Enabling voice-accompanying hand-to-face gesture recognition with cross-device sensing",
       "year": "2023",
-      "category": "gesture-design",
+      "category": "GestureDesign",
       "hardwareDevices": [
         "SmartRing",
         "SmartWatch",
@@ -5068,7 +5068,7 @@ const PAPERS_DATA = {
         "SingleHand",
         "Swipe",
         "Tap",
-        "ThumbIndex"
+        "Thumb-Index"
       ],
       "applicationScenarios": [
         "MediaControl",
@@ -5169,7 +5169,7 @@ const PAPERS_DATA = {
         "StaticGestureRecognition"
       ],
       "interactionModalities": [
-        "BackOfDeviceInteraction",
+        "BackofDevices",
         "ContactBased",
         "DirectTouch",
         "MultiModalInteraction"
@@ -5213,7 +5213,7 @@ const PAPERS_DATA = {
         "Wearables"
       ],
       "sensingTechnology": [
-        "BioSensor",
+        "Bio-Sensor",
         "EMG",
         "PressureSensor"
       ],
@@ -5259,7 +5259,7 @@ const PAPERS_DATA = {
       "id": 109,
       "title": "The performance and preference of different fingers and chords for pointing, dragging, and object transformation",
       "year": "2016",
-      "category": "gesture-design",
+      "category": "GestureDesign",
       "hardwareDevices": [
         "Tablet",
         "TouchScreen"
@@ -5287,7 +5287,7 @@ const PAPERS_DATA = {
         "Pinch",
         "SingleHand",
         "Tap",
-        "ThumbIndex"
+        "Thumb-Index"
       ],
       "applicationScenarios": [
         "ObjectManipulation"
@@ -5319,7 +5319,7 @@ const PAPERS_DATA = {
       ],
       "sensingTechnology": [
         "Accelerometer",
-        "BioSensor",
+        "Bio-Sensor",
         "IMU",
         "PressureSensor"
       ],
@@ -5362,7 +5362,7 @@ const PAPERS_DATA = {
       "id": 112,
       "title": "M[eye]cro eye-gaze+microgestures for multitasking and interruptions",
       "year": "2021",
-      "category": "gesture-design",
+      "category": "GestureDesign",
       "hardwareDevices": [
         "OtherDevices",
         "WearableSensor"
@@ -5386,7 +5386,7 @@ const PAPERS_DATA = {
         "Pinch",
         "SingleHand",
         "Tap",
-        "ThumbIndex"
+        "Thumb-Index"
       ],
       "applicationScenarios": [
         "InVehicleInteraction",
@@ -5441,7 +5441,7 @@ const PAPERS_DATA = {
         "Pinch",
         "SingleHand",
         "Tap",
-        "ThumbIndex"
+        "Thumb-Index"
       ],
       "applicationScenarios": [
         "MediaControl",
@@ -5465,9 +5465,9 @@ const PAPERS_DATA = {
       "id": 116,
       "title": "Towards the establishment of a framework for intuitive multi-touch interaction design",
       "year": "2012",
-      "category": "gesture-design",
+      "category": "GestureDesign",
       "hardwareDevices": [
-        "Smartphone",
+        "SmartPhone",
         "Tablet",
         "TouchScreen"
       ],
@@ -5520,10 +5520,10 @@ const PAPERS_DATA = {
       "id": 117,
       "title": "Grasping microgestures eliciting single-hand microgestures for handheld objects",
       "year": "2019",
-      "category": "gesture-design",
+      "category": "GestureDesign",
       "hardwareDevices": [
         "OtherDevices",
-        "Smartphone"
+        "SmartPhone"
       ],
       "sensingTechnology": [
         "ComputerVision",
@@ -5574,7 +5574,7 @@ const PAPERS_DATA = {
       "id": 118,
       "title": "Rhythmic micro-gestures discreet interaction on-the-go",
       "year": "2017",
-      "category": "gesture-design",
+      "category": "GestureDesign",
       "hardwareDevices": [
         "OtherDevices"
       ],
@@ -5626,7 +5626,7 @@ const PAPERS_DATA = {
       "id": 119,
       "title": "Studying the visual representation of microgestures",
       "year": "2023",
-      "category": "gesture-design",
+      "category": "GestureDesign",
       "hardwareDevices": [
         "ARGlasses",
         "OtherDevices"
@@ -5646,7 +5646,7 @@ const PAPERS_DATA = {
         "SingleHand",
         "Swipe",
         "Tap",
-        "ThumbIndex"
+        "Thumb-Index"
       ],
       "applicationScenarios": [
         "AR",
@@ -5669,7 +5669,7 @@ const PAPERS_DATA = {
       "id": 120,
       "title": "µGlyph a microgesture notation",
       "year": "2023",
-      "category": "gesture-design",
+      "category": "GestureDesign",
       "hardwareDevices": [
         "OtherDevices"
       ],
@@ -5688,7 +5688,7 @@ const PAPERS_DATA = {
         "SingleHand",
         "Swipe",
         "Tap",
-        "ThumbIndex"
+        "Thumb-Index"
       ],
       "applicationScenarios": [
         "Education"
@@ -5709,7 +5709,7 @@ const PAPERS_DATA = {
       "id": 121,
       "title": "User elicitation on single-hand microgestures",
       "year": "2016",
-      "category": "gesture-design",
+      "category": "GestureDesign",
       "hardwareDevices": [
         "OtherDevices",
         "Wearables"
@@ -5755,10 +5755,10 @@ const PAPERS_DATA = {
       "id": 122,
       "title": "Would you do that understanding social acceptance of gestural interfaces",
       "year": "2010",
-      "category": "gesture-design",
+      "category": "GestureDesign",
       "hardwareDevices": [
         "OtherDevices",
-        "Smartphone"
+        "SmartPhone"
       ],
       "sensingTechnology": [
         "Accelerometer",
@@ -5803,7 +5803,7 @@ const PAPERS_DATA = {
       "id": 123,
       "title": "Hands as a controller user preferences for hand specific on-skin gestures",
       "year": "2017",
-      "category": "gesture-design",
+      "category": "GestureDesign",
       "hardwareDevices": [
         "OtherDevices"
       ],
@@ -5853,7 +5853,7 @@ const PAPERS_DATA = {
       "id": 124,
       "title": "Designing More Private and Socially Acceptable Hand-to-Face Gestures for Heads-Up Computing",
       "year": "2024",
-      "category": "gesture-design",
+      "category": "GestureDesign",
       "hardwareDevices": [
         "ARGlasses",
         "SmartGlasses",
@@ -5901,7 +5901,7 @@ const PAPERS_DATA = {
       "year": "2011",
       "category": "software",
       "hardwareDevices": [
-        "Smartphone",
+        "SmartPhone",
         "TouchScreen"
       ],
       "sensingTechnology": [
@@ -5943,7 +5943,7 @@ const PAPERS_DATA = {
       "id": 126,
       "title": "Interaction gestures for a wearable device defined by visually impaired children",
       "year": "2016",
-      "category": "gesture-design",
+      "category": "GestureDesign",
       "hardwareDevices": [
         "WearableSensor",
         "Wearables"
@@ -5993,10 +5993,10 @@ const PAPERS_DATA = {
       "id": 127,
       "title": "Investigating microinteractions for people with visual impairments and the potential role of on-body interaction",
       "year": "2017",
-      "category": "gesture-design",
+      "category": "GestureDesign",
       "hardwareDevices": [
         "SmartWatch",
-        "Smartphone",
+        "SmartPhone",
         "WearableSensor",
         "Wearables"
       ],
@@ -6088,7 +6088,7 @@ const PAPERS_DATA = {
       "category": "hardware",
       "hardwareDevices": [
         "SmartRing",
-        "Smartphone",
+        "SmartPhone",
         "WearableSensor"
       ],
       "sensingTechnology": [
@@ -6136,7 +6136,7 @@ const PAPERS_DATA = {
         "WearableSensor"
       ],
       "sensingTechnology": [
-        "BioSensor",
+        "Bio-Sensor",
         "EMG"
       ],
       "recognitionClassification": [
@@ -6152,7 +6152,7 @@ const PAPERS_DATA = {
         "Flex",
         "Grasp",
         "SingleHand",
-        "ThumbIndex"
+        "Thumb-Index"
       ],
       "applicationScenarios": [
         "AccessibilitySupport",
@@ -6198,7 +6198,7 @@ const PAPERS_DATA = {
         "SingleHand",
         "Swipe",
         "Tap",
-        "ThumbIndex"
+        "Thumb-Index"
       ],
       "applicationScenarios": [
         "AccessibilitySupport",
@@ -6252,7 +6252,7 @@ const PAPERS_DATA = {
         "SingleHand",
         "Swipe",
         "Tap",
-        "ThumbIndex"
+        "Thumb-Index"
       ],
       "applicationScenarios": [
         "AccessibilitySupport",
@@ -6277,7 +6277,7 @@ const PAPERS_DATA = {
       "id": 133,
       "title": "Designing upper-body gesture interaction with and for people with spinal muscular atrophy in VR",
       "year": "2024",
-      "category": "gesture-design",
+      "category": "GestureDesign",
       "hardwareDevices": [
         "VRHeadset",
         "Wearables"
@@ -6300,7 +6300,7 @@ const PAPERS_DATA = {
         "DirectionalGesture",
         "Pinch",
         "SingleHand",
-        "ThumbIndex"
+        "Thumb-Index"
       ],
       "applicationScenarios": [
         "AccessibilitySupport",
@@ -6325,7 +6325,7 @@ const PAPERS_DATA = {
       "id": 134,
       "title": "Finger gesture tracking for interactive applications a pilot study with sign languages",
       "year": "2020",
-      "category": "gesture-design",
+      "category": "GestureDesign",
       "hardwareDevices": [
         "SmartRing",
         "SmartWatch",
@@ -6377,7 +6377,7 @@ const PAPERS_DATA = {
       "id": 135,
       "title": "A non-linear model of shape  and motion for tracking finger spelt American sign language",
       "year": "2002",
-      "category": "gesture-design",
+      "category": "GestureDesign",
       "hardwareDevices": [
         "OtherDevices"
       ],
@@ -6441,7 +6441,7 @@ const PAPERS_DATA = {
       "gestureTypes": [
         "Pinch",
         "SingleHand",
-        "ThumbIndex"
+        "Thumb-Index"
       ],
       "applicationScenarios": [
         "AthleticActivity",
@@ -6584,7 +6584,7 @@ const PAPERS_DATA = {
       "id": 143,
       "title": "DigitSpace Designing Thumb-to-Fingers Touch Interfaces for One-Handed and Eyes-Free Interactions",
       "year": "2016",
-      "category": "gesture-design",
+      "category": "GestureDesign",
       "hardwareDevices": [
         "SmartWatch",
         "WearableSensor",
@@ -6608,7 +6608,7 @@ const PAPERS_DATA = {
         "SingleHand",
         "Swipe",
         "Tap",
-        "ThumbIndex"
+        "Thumb-Index"
       ],
       "applicationScenarios": [
         "MediaControl",
@@ -6664,7 +6664,7 @@ const PAPERS_DATA = {
         "SingleHand",
         "Swipe",
         "Tap",
-        "ThumbIndex"
+        "Thumb-Index"
       ],
       "applicationScenarios": [
         "AR",
@@ -6770,7 +6770,7 @@ const PAPERS_DATA = {
         "SingleHand",
         "Swipe",
         "Tap",
-        "ThumbIndex"
+        "Thumb-Index"
       ],
       "applicationScenarios": [
         "Gaming",
@@ -6827,7 +6827,7 @@ const PAPERS_DATA = {
         "SingleHand",
         "Swipe",
         "Tap",
-        "ThumbIndex"
+        "Thumb-Index"
       ],
       "applicationScenarios": [
         "MediaControl",
@@ -6878,7 +6878,7 @@ const PAPERS_DATA = {
         "SingleHand",
         "Swipe",
         "Tap",
-        "ThumbIndex"
+        "Thumb-Index"
       ],
       "applicationScenarios": [
         "AR",
@@ -6935,7 +6935,7 @@ const PAPERS_DATA = {
         "DirectionalGesture",
         "SingleHand",
         "Swipe",
-        "ThumbIndex"
+        "Thumb-Index"
       ],
       "applicationScenarios": [
         "AR",
@@ -6966,7 +6966,7 @@ const PAPERS_DATA = {
       "id": 152,
       "title": "Fingert9- Leveraging  thumb-to-finger interaction for same-side-hand text entry on smartwatches",
       "year": "2018",
-      "category": "gesture-design",
+      "category": "GestureDesign",
       "hardwareDevices": [
         "SmartWatch",
         "TouchScreen",
@@ -6991,7 +6991,7 @@ const PAPERS_DATA = {
         "Hold",
         "SingleHand",
         "Tap",
-        "ThumbIndex"
+        "Thumb-Index"
       ],
       "applicationScenarios": [
         "TextInput"
@@ -7045,7 +7045,7 @@ const PAPERS_DATA = {
         "SingleHand",
         "Swipe",
         "Tap",
-        "ThumbIndex"
+        "Thumb-Index"
       ],
       "applicationScenarios": [
         "TextInput"
@@ -7091,7 +7091,7 @@ const PAPERS_DATA = {
       "gestureTypes": [
         "SingleHand",
         "Tap",
-        "ThumbIndex"
+        "Thumb-Index"
       ],
       "applicationScenarios": [
         "Healthcare",
@@ -7118,7 +7118,7 @@ const PAPERS_DATA = {
       "id": 155,
       "title": "The missing interface- Micro-gestures on augmented objects",
       "year": "2019",
-      "category": "gesture-design",
+      "category": "GestureDesign",
       "hardwareDevices": [
         "ARGlasses",
         "WearableSensor",
@@ -7251,7 +7251,7 @@ const PAPERS_DATA = {
         "DualHand",
         "Swipe",
         "Tap",
-        "ThumbIndex"
+        "Thumb-Index"
       ],
       "applicationScenarios": [
         "AR",
@@ -7281,12 +7281,12 @@ const PAPERS_DATA = {
       "year": "2020",
       "category": "software",
       "hardwareDevices": [
-        "Smartphone",
+        "SmartPhone",
         "WearableSensor",
         "Wearables"
       ],
       "sensingTechnology": [
-        "BioSensor",
+        "Bio-Sensor",
         "OtherTechnology"
       ],
       "recognitionClassification": [
@@ -7347,7 +7347,7 @@ const PAPERS_DATA = {
         "FingerTracking"
       ],
       "interactionModalities": [
-        "BackOfDeviceInteraction",
+        "BackofDevices",
         "ContactBased",
         "DeviceContactGesture",
         "TangibleInteraction"
@@ -7357,7 +7357,7 @@ const PAPERS_DATA = {
         "SingleHand",
         "Swipe",
         "Tap",
-        "ThumbIndex"
+        "Thumb-Index"
       ],
       "applicationScenarios": [
         "AR",
@@ -7388,7 +7388,7 @@ const PAPERS_DATA = {
       "id": 162,
       "title": "Design of 3D Microgestures for Commands in Virtual Reality or Augmented Reality",
       "year": "2023",
-      "category": "gesture-design",
+      "category": "GestureDesign",
       "hardwareDevices": [
         "ARGlasses",
         "TouchScreen",
@@ -7577,7 +7577,7 @@ const PAPERS_DATA = {
         "SingleHand",
         "Swipe",
         "Tap",
-        "ThumbIndex"
+        "Thumb-Index"
       ],
       "applicationScenarios": [
         "MediaControl",
@@ -7603,7 +7603,7 @@ const PAPERS_DATA = {
       "id": 167,
       "title": "User-Defined Game Input for Smart Glasses in Public Space",
       "year": "2015",
-      "category": "gesture-design",
+      "category": "GestureDesign",
       "hardwareDevices": [
         "SmartGlasses"
       ],
@@ -7760,7 +7760,7 @@ const PAPERS_DATA = {
       "id": 172,
       "title": "A Taxonomy of Microinteractions Defining Microgestures based on Ergonomic and Scenario-dependent Requirements",
       "year": "2011",
-      "category": "gesture-design",
+      "category": "GestureDesign",
       "hardwareDevices": [
         "WearableSensor",
         "Wearables"
@@ -7987,7 +7987,7 @@ const PAPERS_DATA = {
       "id": 183,
       "title": "The intuitive grasp interface design and evaluation of micro-gestures on the steering wheel for driving scenario",
       "year": "2020",
-      "category": "gesture-design",
+      "category": "GestureDesign",
       "image": "Papers/GestureDesign/GestureDesign预览图/2020 - The intuitive grasp interface design and evaluation of micro-gestures on the steering wheel for driving scenario.png",
       "hardwareDevices": [],
       "sensingTechnology": [],
@@ -8005,7 +8005,7 @@ const PAPERS_DATA = {
       "id": 184,
       "title": "Transferable Microgestures Across Hand Posture and Location Constraints- Leveraging the Middle, Ring, and Pinky Fingers",
       "year": "2023",
-      "category": "gesture-design",
+      "category": "GestureDesign",
       "image": "Papers/GestureDesign/GestureDesign预览图/2023 - Transferable Microgestures Across Hand Posture and Location Constraints- Leveraging the Middle, Ring, and Pinky Fingers.png",
       "hardwareDevices": [],
       "sensingTechnology": [],
@@ -8023,7 +8023,7 @@ const PAPERS_DATA = {
       "id": 185,
       "title": "Segtouch",
       "year": "2017",
-      "category": "gesture-design",
+      "category": "GestureDesign",
       "image": "Papers/GestureDesign/GestureDesign预览图/2017-Segtouch.png",
       "hardwareDevices": [],
       "sensingTechnology": [],
@@ -8041,7 +8041,7 @@ const PAPERS_DATA = {
       "id": 186,
       "title": "Arpège learning multitouch chord gestures vocabularies",
       "year": "2013",
-      "category": "gesture-design",
+      "category": "GestureDesign",
       "image": "Papers/GestureDesign/GestureDesign预览图/2013 - Arpège learning multitouch chord gestures vocabularies.png",
       "hardwareDevices": [],
       "sensingTechnology": [],
@@ -8059,7 +8059,7 @@ const PAPERS_DATA = {
       "id": 187,
       "title": "PalmType Using Palms as Keyboards for Smart Glasses",
       "year": "2015",
-      "category": "gesture-design",
+      "category": "GestureDesign",
       "image": "Papers/GestureDesign/GestureDesign预览图/2015-PalmType Using Palms as Keyboards for Smart Glasses.png",
       "hardwareDevices": [],
       "sensingTechnology": [],
@@ -8104,7 +8104,7 @@ const PAPERS_DATA = {
           "Pinch",
           "SingleHand",
           "Tap",
-          "ThumbIndex"
+          "Thumb-Index"
         ],
         "applicationScenarios": [
           "AR",
@@ -8131,7 +8131,7 @@ const PAPERS_DATA = {
           "WearableSensor"
         ],
         "sensingTechnology": [
-          "BioSensor",
+          "Bio-Sensor",
           "EMG"
         ],
         "recognitionClassification": [
@@ -8177,7 +8177,7 @@ const PAPERS_DATA = {
         ],
         "sensingTechnology": [
           "Accelerometer",
-          "BioSensor",
+          "Bio-Sensor",
           "EMG",
           "MotionSensor"
         ],
@@ -8217,13 +8217,13 @@ const PAPERS_DATA = {
         "year": "2011",
         "category": "hardware",
         "hardwareDevices": [
-          "Smartphone",
+          "SmartPhone",
           "WearableSensor",
           "Wearables"
         ],
         "sensingTechnology": [
           "Accelerometer",
-          "BioSensor",
+          "Bio-Sensor",
           "EMG"
         ],
         "recognitionClassification": [
@@ -8263,7 +8263,7 @@ const PAPERS_DATA = {
         "year": "2013",
         "category": "hardware",
         "hardwareDevices": [
-          "Smartphone",
+          "SmartPhone",
           "Tablet",
           "WearableSensor",
           "Wearables"
@@ -8280,7 +8280,7 @@ const PAPERS_DATA = {
           "StaticGestureRecognition"
         ],
         "interactionModalities": [
-          "BackOfDeviceInteraction",
+          "BackofDevices",
           "DirectTouch",
           "NonContactBased",
           "TangibleInteraction"
@@ -8289,7 +8289,7 @@ const PAPERS_DATA = {
           "Pinch",
           "Swipe",
           "Tap",
-          "ThumbIndex"
+          "Thumb-Index"
         ],
         "applicationScenarios": [
           "Gaming",
@@ -8316,7 +8316,7 @@ const PAPERS_DATA = {
         "category": "hardware",
         "hardwareDevices": [
           "OtherDevices",
-          "Smartphone",
+          "SmartPhone",
           "WearableSensor",
           "Wearables"
         ],
@@ -8368,7 +8368,7 @@ const PAPERS_DATA = {
           "WearableSensor"
         ],
         "sensingTechnology": [
-          "BioSensor",
+          "Bio-Sensor",
           "EMG"
         ],
         "recognitionClassification": [
@@ -8433,7 +8433,7 @@ const PAPERS_DATA = {
           "SingleHand",
           "Swipe",
           "Tap",
-          "ThumbIndex"
+          "Thumb-Index"
         ],
         "applicationScenarios": [
           "IoTControl",
@@ -8460,7 +8460,7 @@ const PAPERS_DATA = {
         "category": "hardware",
         "hardwareDevices": [
           "SmartRing",
-          "Smartphone",
+          "SmartPhone",
           "WearableSensor",
           "Wearables"
         ],
@@ -8485,7 +8485,7 @@ const PAPERS_DATA = {
           "SingleHand",
           "Swipe",
           "Tap",
-          "ThumbIndex"
+          "Thumb-Index"
         ],
         "applicationScenarios": [
           "InVehicleInteraction",
@@ -8546,7 +8546,7 @@ const PAPERS_DATA = {
           "Hold",
           "Pinch",
           "SingleHand",
-          "ThumbIndex"
+          "Thumb-Index"
         ],
         "applicationScenarios": [
           "AR",
@@ -8642,7 +8642,7 @@ const PAPERS_DATA = {
           "SingleHand",
           "Swipe",
           "Tap",
-          "ThumbIndex"
+          "Thumb-Index"
         ],
         "applicationScenarios": [
           "Healthcare",
@@ -8673,7 +8673,7 @@ const PAPERS_DATA = {
           "Wearables"
         ],
         "sensingTechnology": [
-          "BioSensor",
+          "Bio-Sensor",
           "PressureSensor",
           "UltrasonicSensor"
         ],
@@ -8691,7 +8691,7 @@ const PAPERS_DATA = {
           "Pinch",
           "SingleHand",
           "Tap",
-          "ThumbIndex"
+          "Thumb-Index"
         ],
         "applicationScenarios": [
           "MediaControl",
@@ -8798,7 +8798,7 @@ const PAPERS_DATA = {
           "SingleHand",
           "Swipe",
           "Tap",
-          "ThumbIndex"
+          "Thumb-Index"
         ],
         "applicationScenarios": [
           "IoTControl",
@@ -8847,7 +8847,7 @@ const PAPERS_DATA = {
           "SingleHand",
           "Swipe",
           "Tap",
-          "ThumbIndex"
+          "Thumb-Index"
         ],
         "applicationScenarios": [
           "AR",
@@ -8947,7 +8947,7 @@ const PAPERS_DATA = {
           "Pinch",
           "Swipe",
           "Tap",
-          "ThumbIndex"
+          "Thumb-Index"
         ],
         "applicationScenarios": [
           "DigitalArt",
@@ -8995,7 +8995,7 @@ const PAPERS_DATA = {
         "gestureTypes": [
           "SingleHand",
           "Tap",
-          "ThumbIndex"
+          "Thumb-Index"
         ],
         "applicationScenarios": [
           "AR",
@@ -9060,7 +9060,7 @@ const PAPERS_DATA = {
           "SingleHand",
           "Swipe",
           "Tap",
-          "ThumbIndex"
+          "Thumb-Index"
         ],
         "applicationScenarios": [
           "AR",
@@ -9117,7 +9117,7 @@ const PAPERS_DATA = {
           "Hold",
           "Pinch",
           "SingleHand",
-          "ThumbIndex"
+          "Thumb-Index"
         ],
         "applicationScenarios": [
           "AR",
@@ -9170,7 +9170,7 @@ const PAPERS_DATA = {
           "SingleHand",
           "Swipe",
           "Tap",
-          "ThumbIndex"
+          "Thumb-Index"
         ],
         "applicationScenarios": [
           "AR",
@@ -9220,7 +9220,7 @@ const PAPERS_DATA = {
           "SingleHand",
           "Swipe",
           "Tap",
-          "ThumbIndex"
+          "Thumb-Index"
         ],
         "applicationScenarios": [
           "DigitalArt",
@@ -9312,7 +9312,7 @@ const PAPERS_DATA = {
         ],
         "sensingTechnology": [
           "Accelerometer",
-          "BioSensor",
+          "Bio-Sensor",
           "OtherTechnology"
         ],
         "recognitionClassification": [
@@ -9331,7 +9331,7 @@ const PAPERS_DATA = {
           "SingleHand",
           "Swipe",
           "Tap",
-          "ThumbIndex"
+          "Thumb-Index"
         ],
         "applicationScenarios": [
           "AR",
@@ -9429,7 +9429,7 @@ const PAPERS_DATA = {
           "StaticGestureRecognition"
         ],
         "interactionModalities": [
-          "BackOfDeviceInteraction",
+          "BackofDevices",
           "BodyContactGesture",
           "ContactBased"
         ],
@@ -9527,7 +9527,7 @@ const PAPERS_DATA = {
           "Wearables"
         ],
         "sensingTechnology": [
-          "BioSensor",
+          "Bio-Sensor",
           "CapacitiveSensor"
         ],
         "recognitionClassification": [
@@ -9628,7 +9628,7 @@ const PAPERS_DATA = {
           "Wearables"
         ],
         "sensingTechnology": [
-          "BioSensor",
+          "Bio-Sensor",
           "EMG",
           "IMU"
         ],
@@ -9649,7 +9649,7 @@ const PAPERS_DATA = {
           "Pinch",
           "Swipe",
           "Tap",
-          "ThumbIndex"
+          "Thumb-Index"
         ],
         "applicationScenarios": [
           "AR",
@@ -9699,7 +9699,7 @@ const PAPERS_DATA = {
         "gestureTypes": [
           "SingleHand",
           "Tap",
-          "ThumbIndex"
+          "Thumb-Index"
         ],
         "applicationScenarios": [
           "AR",
@@ -9749,7 +9749,7 @@ const PAPERS_DATA = {
           "Grasp",
           "Pinch",
           "SingleHand",
-          "ThumbIndex"
+          "Thumb-Index"
         ],
         "applicationScenarios": [
           "Gaming",
@@ -9873,7 +9873,7 @@ const PAPERS_DATA = {
         "year": "2018",
         "category": "hardware",
         "hardwareDevices": [
-          "Smartphone",
+          "SmartPhone",
           "TouchScreen",
           "WearableSensor"
         ],
@@ -9890,7 +9890,7 @@ const PAPERS_DATA = {
           "StaticGestureRecognition"
         ],
         "interactionModalities": [
-          "BackOfDeviceInteraction",
+          "BackofDevices",
           "ContactBased",
           "DirectTouch",
           "MultiModalInteraction"
@@ -9900,7 +9900,7 @@ const PAPERS_DATA = {
           "Pinch",
           "SingleHand",
           "Swipe",
-          "ThumbIndex"
+          "Thumb-Index"
         ],
         "applicationScenarios": [
           "AccessibilitySupport",
@@ -9953,7 +9953,7 @@ const PAPERS_DATA = {
           "SingleHand",
           "Swipe",
           "Tap",
-          "ThumbIndex"
+          "Thumb-Index"
         ],
         "applicationScenarios": [
           "MediaControl",
@@ -9986,7 +9986,7 @@ const PAPERS_DATA = {
         ],
         "sensingTechnology": [
           "Accelerometer",
-          "BioSensor",
+          "Bio-Sensor",
           "IMU",
           "PressureSensor"
         ],
@@ -10053,7 +10053,7 @@ const PAPERS_DATA = {
           "Pinch",
           "SingleHand",
           "Tap",
-          "ThumbIndex"
+          "Thumb-Index"
         ],
         "applicationScenarios": [
           "MediaControl",
@@ -10077,7 +10077,7 @@ const PAPERS_DATA = {
         "category": "hardware",
         "hardwareDevices": [
           "SmartRing",
-          "Smartphone",
+          "SmartPhone",
           "WearableSensor"
         ],
         "sensingTechnology": [
@@ -10138,7 +10138,7 @@ const PAPERS_DATA = {
         "gestureTypes": [
           "Pinch",
           "SingleHand",
-          "ThumbIndex"
+          "Thumb-Index"
         ],
         "applicationScenarios": [
           "AthleticActivity",
@@ -10244,7 +10244,7 @@ const PAPERS_DATA = {
           "SingleHand",
           "Swipe",
           "Tap",
-          "ThumbIndex"
+          "Thumb-Index"
         ],
         "applicationScenarios": [
           "AR",
@@ -10297,7 +10297,7 @@ const PAPERS_DATA = {
           "SingleHand",
           "Swipe",
           "Tap",
-          "ThumbIndex"
+          "Thumb-Index"
         ],
         "applicationScenarios": [
           "Gaming",
@@ -10351,7 +10351,7 @@ const PAPERS_DATA = {
           "SingleHand",
           "Swipe",
           "Tap",
-          "ThumbIndex"
+          "Thumb-Index"
         ],
         "applicationScenarios": [
           "MediaControl",
@@ -10399,7 +10399,7 @@ const PAPERS_DATA = {
           "SingleHand",
           "Swipe",
           "Tap",
-          "ThumbIndex"
+          "Thumb-Index"
         ],
         "applicationScenarios": [
           "AR",
@@ -10453,7 +10453,7 @@ const PAPERS_DATA = {
           "DirectionalGesture",
           "SingleHand",
           "Swipe",
-          "ThumbIndex"
+          "Thumb-Index"
         ],
         "applicationScenarios": [
           "AR",
@@ -10508,7 +10508,7 @@ const PAPERS_DATA = {
           "SingleHand",
           "Swipe",
           "Tap",
-          "ThumbIndex"
+          "Thumb-Index"
         ],
         "applicationScenarios": [
           "TextInput"
@@ -10552,7 +10552,7 @@ const PAPERS_DATA = {
         "gestureTypes": [
           "SingleHand",
           "Tap",
-          "ThumbIndex"
+          "Thumb-Index"
         ],
         "applicationScenarios": [
           "Healthcare",
@@ -10657,7 +10657,7 @@ const PAPERS_DATA = {
           "DualHand",
           "Swipe",
           "Tap",
-          "ThumbIndex"
+          "Thumb-Index"
         ],
         "applicationScenarios": [
           "AR",
@@ -10700,7 +10700,7 @@ const PAPERS_DATA = {
           "FingerTracking"
         ],
         "interactionModalities": [
-          "BackOfDeviceInteraction",
+          "BackofDevices",
           "ContactBased",
           "DeviceContactGesture",
           "TangibleInteraction"
@@ -10710,7 +10710,7 @@ const PAPERS_DATA = {
           "SingleHand",
           "Swipe",
           "Tap",
-          "ThumbIndex"
+          "Thumb-Index"
         ],
         "applicationScenarios": [
           "AR",
@@ -10864,7 +10864,7 @@ const PAPERS_DATA = {
           "SingleHand",
           "Swipe",
           "Tap",
-          "ThumbIndex"
+          "Thumb-Index"
         ],
         "applicationScenarios": [
           "MediaControl",
@@ -11093,7 +11093,7 @@ const PAPERS_DATA = {
           "SingleHand",
           "Swipe",
           "Tap",
-          "ThumbIndex"
+          "Thumb-Index"
         ],
         "applicationScenarios": [
           "IoTControl",
@@ -11204,7 +11204,7 @@ const PAPERS_DATA = {
           "SingleHand",
           "Swipe",
           "Tap",
-          "ThumbIndex"
+          "Thumb-Index"
         ],
         "applicationScenarios": [
           "DigitalArt",
@@ -11250,7 +11250,7 @@ const PAPERS_DATA = {
         "gestureTypes": [
           "SingleHand",
           "Tap",
-          "ThumbIndex"
+          "Thumb-Index"
         ],
         "applicationScenarios": [
           "AR",
@@ -11339,7 +11339,7 @@ const PAPERS_DATA = {
         "category": "software",
         "hardwareDevices": [
           "SmartWatch",
-          "Smartphone",
+          "SmartPhone",
           "Wearables"
         ],
         "sensingTechnology": [
@@ -11361,7 +11361,7 @@ const PAPERS_DATA = {
           "SingleHand",
           "Swipe",
           "Tap",
-          "ThumbIndex"
+          "Thumb-Index"
         ],
         "applicationScenarios": [
           "MediaControl",
@@ -11486,7 +11486,7 @@ const PAPERS_DATA = {
         "category": "software",
         "hardwareDevices": [
           "ARGlasses",
-          "Smartphone",
+          "SmartPhone",
           "VRHeadset"
         ],
         "sensingTechnology": [
@@ -11556,7 +11556,7 @@ const PAPERS_DATA = {
         "gestureTypes": [
           "Grasp",
           "SingleHand",
-          "ThumbIndex"
+          "Thumb-Index"
         ],
         "applicationScenarios": [
           "AR",
@@ -11751,7 +11751,7 @@ const PAPERS_DATA = {
           "SingleHand",
           "Swipe",
           "Tap",
-          "ThumbIndex"
+          "Thumb-Index"
         ],
         "applicationScenarios": [
           "AR",
@@ -11783,7 +11783,7 @@ const PAPERS_DATA = {
           "HapticDevice",
           "SmartRing",
           "SmartWatch",
-          "Smartphone",
+          "SmartPhone",
           "Wearables"
         ],
         "sensingTechnology": [
@@ -11863,7 +11863,7 @@ const PAPERS_DATA = {
         "category": "software",
         "hardwareDevices": [
           "OtherDevices",
-          "Smartphone"
+          "SmartPhone"
         ],
         "sensingTechnology": [
           "RFSensing"
@@ -11902,7 +11902,7 @@ const PAPERS_DATA = {
         "year": "2021",
         "category": "software",
         "hardwareDevices": [
-          "Smartphone",
+          "SmartPhone",
           "Tablet",
           "TouchScreen",
           "WearableSensor"
@@ -11959,7 +11959,7 @@ const PAPERS_DATA = {
         "category": "software",
         "hardwareDevices": [
           "OtherDevices",
-          "Smartphone",
+          "SmartPhone",
           "WearableSensor"
         ],
         "sensingTechnology": [
@@ -11973,7 +11973,7 @@ const PAPERS_DATA = {
           "GestureRecognition"
         ],
         "interactionModalities": [
-          "BackOfDeviceInteraction",
+          "BackofDevices",
           "DeviceContactGesture",
           "NonContactBased"
         ],
@@ -12009,7 +12009,7 @@ const PAPERS_DATA = {
         "category": "software",
         "hardwareDevices": [
           "OtherDevices",
-          "Smartphone",
+          "SmartPhone",
           "WearableSensor"
         ],
         "sensingTechnology": [
@@ -12059,7 +12059,7 @@ const PAPERS_DATA = {
         "category": "software",
         "hardwareDevices": [
           "OtherDevices",
-          "Smartphone",
+          "SmartPhone",
           "WearableSensor"
         ],
         "sensingTechnology": [
@@ -12080,7 +12080,7 @@ const PAPERS_DATA = {
         "gestureTypes": [
           "SingleHand",
           "Tap",
-          "ThumbIndex"
+          "Thumb-Index"
         ],
         "applicationScenarios": [
           "AR",
@@ -12138,7 +12138,7 @@ const PAPERS_DATA = {
           "SingleHand",
           "Swipe",
           "Tap",
-          "ThumbIndex"
+          "Thumb-Index"
         ],
         "applicationScenarios": [
           "MediaControl",
@@ -12233,7 +12233,7 @@ const PAPERS_DATA = {
           "StaticGestureRecognition"
         ],
         "interactionModalities": [
-          "BackOfDeviceInteraction",
+          "BackofDevices",
           "ContactBased",
           "DirectTouch",
           "MultiModalInteraction"
@@ -12275,7 +12275,7 @@ const PAPERS_DATA = {
           "Wearables"
         ],
         "sensingTechnology": [
-          "BioSensor",
+          "Bio-Sensor",
           "EMG",
           "PressureSensor"
         ],
@@ -12320,7 +12320,7 @@ const PAPERS_DATA = {
         "year": "2011",
         "category": "software",
         "hardwareDevices": [
-          "Smartphone",
+          "SmartPhone",
           "TouchScreen"
         ],
         "sensingTechnology": [
@@ -12401,7 +12401,7 @@ const PAPERS_DATA = {
           "WearableSensor"
         ],
         "sensingTechnology": [
-          "BioSensor",
+          "Bio-Sensor",
           "EMG"
         ],
         "recognitionClassification": [
@@ -12417,7 +12417,7 @@ const PAPERS_DATA = {
           "Flex",
           "Grasp",
           "SingleHand",
-          "ThumbIndex"
+          "Thumb-Index"
         ],
         "applicationScenarios": [
           "AccessibilitySupport",
@@ -12460,7 +12460,7 @@ const PAPERS_DATA = {
           "SingleHand",
           "Swipe",
           "Tap",
-          "ThumbIndex"
+          "Thumb-Index"
         ],
         "applicationScenarios": [
           "AccessibilitySupport",
@@ -12511,7 +12511,7 @@ const PAPERS_DATA = {
           "SingleHand",
           "Swipe",
           "Tap",
-          "ThumbIndex"
+          "Thumb-Index"
         ],
         "applicationScenarios": [
           "AccessibilitySupport",
@@ -12639,12 +12639,12 @@ const PAPERS_DATA = {
         "year": "2020",
         "category": "software",
         "hardwareDevices": [
-          "Smartphone",
+          "SmartPhone",
           "WearableSensor",
           "Wearables"
         ],
         "sensingTechnology": [
-          "BioSensor",
+          "Bio-Sensor",
           "OtherTechnology"
         ],
         "recognitionClassification": [
@@ -12758,12 +12758,12 @@ const PAPERS_DATA = {
         "userExperienceDesign": []
       }
     ],
-    "gesture-design": [
+    "GestureDesign": [
       {
         "id": 5,
         "title": "Design space for finger gestures with hand-held tablets",
         "year": "2012",
-        "category": "gesture-design",
+        "category": "GestureDesign",
         "hardwareDevices": [
           "Tablet",
           "TouchScreen",
@@ -12816,7 +12816,7 @@ const PAPERS_DATA = {
         "id": 11,
         "title": "Gunslinger subtle arms-down mid-air interaction",
         "year": "2015",
-        "category": "gesture-design",
+        "category": "GestureDesign",
         "hardwareDevices": [
           "TouchScreen",
           "WearableSensor",
@@ -12845,7 +12845,7 @@ const PAPERS_DATA = {
           "Pinch",
           "SingleHand",
           "Tap",
-          "ThumbIndex"
+          "Thumb-Index"
         ],
         "applicationScenarios": [
           "MediaControl",
@@ -12872,7 +12872,7 @@ const PAPERS_DATA = {
         "id": 13,
         "title": "Designing a willing-to-use-in-public hand gestural interaction technique for smart glasses",
         "year": "2016",
-        "category": "gesture-design",
+        "category": "GestureDesign",
         "hardwareDevices": [
           "DataGloves",
           "HapticDevice",
@@ -12905,7 +12905,7 @@ const PAPERS_DATA = {
           "SingleHand",
           "Swipe",
           "Tap",
-          "ThumbIndex"
+          "Thumb-Index"
         ],
         "applicationScenarios": [
           "AR",
@@ -12933,7 +12933,7 @@ const PAPERS_DATA = {
         "id": 18,
         "title": "Gestures for smart rings empirical results, insights, and design implications",
         "year": "2018",
-        "category": "gesture-design",
+        "category": "GestureDesign",
         "hardwareDevices": [
           "SmartRing",
           "Wearables"
@@ -12980,7 +12980,7 @@ const PAPERS_DATA = {
         "id": 25,
         "title": "Exploring user defined gestures for ear-based interactions",
         "year": "2020",
-        "category": "gesture-design",
+        "category": "GestureDesign",
         "hardwareDevices": [
           "OtherDevices",
           "SmartGlasses",
@@ -13037,11 +13037,11 @@ const PAPERS_DATA = {
         "id": 28,
         "title": "How subtle can it get A trimodal study of ring-sized interfaces for one-handed drone control",
         "year": "2020",
-        "category": "gesture-design",
+        "category": "GestureDesign",
         "hardwareDevices": [
           "OtherDevices",
           "SmartRing",
-          "Smartphone",
+          "SmartPhone",
           "Wearables"
         ],
         "sensingTechnology": [
@@ -13065,7 +13065,7 @@ const PAPERS_DATA = {
           "Flex",
           "Hold",
           "SingleHand",
-          "ThumbIndex"
+          "Thumb-Index"
         ],
         "applicationScenarios": [
           "OtherScenarios"
@@ -13088,7 +13088,7 @@ const PAPERS_DATA = {
         "id": 33,
         "title": "SoloFinger robust microgestures while grasping everyday objects",
         "year": "2021",
-        "category": "gesture-design",
+        "category": "GestureDesign",
         "hardwareDevices": [
           "DataGloves",
           "OtherDevices"
@@ -13132,7 +13132,7 @@ const PAPERS_DATA = {
         "id": 53,
         "title": "Exploring mixed-scale gesture interaction",
         "year": "2017",
-        "category": "gesture-design",
+        "category": "GestureDesign",
         "hardwareDevices": [
           "ARGlasses",
           "WearableSensor"
@@ -13180,7 +13180,7 @@ const PAPERS_DATA = {
         "id": 55,
         "title": "Experimental analysis of barehand mid-air mode-switching techniques in virtual reality",
         "year": "2019",
-        "category": "gesture-design",
+        "category": "GestureDesign",
         "hardwareDevices": [
           "VRHeadset",
           "WearableSensor"
@@ -13227,7 +13227,7 @@ const PAPERS_DATA = {
         "id": 56,
         "title": "Characterizing in-air eyes-free typing movements in VR",
         "year": "2020",
-        "category": "gesture-design",
+        "category": "GestureDesign",
         "hardwareDevices": [
           "OtherDevices",
           "VRHeadset"
@@ -13275,11 +13275,11 @@ const PAPERS_DATA = {
         "id": 57,
         "title": "User gesture elicitation of common smartphone tasks for hand proximate user interfaces",
         "year": "2020",
-        "category": "gesture-design",
+        "category": "GestureDesign",
         "hardwareDevices": [
           "ARGlasses",
           "SmartGlasses",
-          "Smartphone"
+          "SmartPhone"
         ],
         "sensingTechnology": [
           "ComputerVision"
@@ -13301,7 +13301,7 @@ const PAPERS_DATA = {
           "SingleHand",
           "Swipe",
           "Tap",
-          "ThumbIndex"
+          "Thumb-Index"
         ],
         "applicationScenarios": [
           "AR",
@@ -13323,7 +13323,7 @@ const PAPERS_DATA = {
         "id": 66,
         "title": "Understanding Gesture and Microgesture Inputs for Augmented Reality Maps",
         "year": "2024",
-        "category": "gesture-design",
+        "category": "GestureDesign",
         "hardwareDevices": [
           "ARGlasses",
           "SmartGlasses",
@@ -13373,7 +13373,7 @@ const PAPERS_DATA = {
         "id": 67,
         "title": "T2IRay Design of Thumb-to-Index based Indirect Pointing for Continuous and Robust AR VR Input",
         "year": "2025",
-        "category": "gesture-design",
+        "category": "GestureDesign",
         "hardwareDevices": [
           "ARGlasses",
           "VRHeadset"
@@ -13397,7 +13397,7 @@ const PAPERS_DATA = {
           "DirectionalGesture",
           "SingleHand",
           "Tap",
-          "ThumbIndex"
+          "Thumb-Index"
         ],
         "applicationScenarios": [
           "AR",
@@ -13421,14 +13421,14 @@ const PAPERS_DATA = {
         "id": 68,
         "title": "Key-press gestures recognition and interaction based on SEMG signals",
         "year": "2010",
-        "category": "gesture-design",
+        "category": "GestureDesign",
         "hardwareDevices": [
-          "Smartphone",
+          "SmartPhone",
           "WearableSensor",
           "Wearables"
         ],
         "sensingTechnology": [
-          "BioSensor",
+          "Bio-Sensor",
           "EMG"
         ],
         "recognitionClassification": [
@@ -13472,9 +13472,9 @@ const PAPERS_DATA = {
         "id": 69,
         "title": "A study of on-device gestures",
         "year": "2012",
-        "category": "gesture-design",
+        "category": "GestureDesign",
         "hardwareDevices": [
-          "Smartphone"
+          "SmartPhone"
         ],
         "sensingTechnology": [
           "PressureSensor"
@@ -13484,7 +13484,7 @@ const PAPERS_DATA = {
           "MotionAnalysis"
         ],
         "interactionModalities": [
-          "BackOfDeviceInteraction",
+          "BackofDevices",
           "ContactBased",
           "DeviceContactGesture"
         ],
@@ -13512,7 +13512,7 @@ const PAPERS_DATA = {
         "id": 70,
         "title": "PinchPad performance of touch-based gestures while grasping devices",
         "year": "2012",
-        "category": "gesture-design",
+        "category": "GestureDesign",
         "hardwareDevices": [
           "Tablet"
         ],
@@ -13525,7 +13525,7 @@ const PAPERS_DATA = {
           "MotionAnalysis"
         ],
         "interactionModalities": [
-          "BackOfDeviceInteraction",
+          "BackofDevices",
           "ContactBased",
           "DeviceContactGesture",
           "DirectTouch"
@@ -13554,9 +13554,9 @@ const PAPERS_DATA = {
         "id": 71,
         "title": "The fat thumb using the thumb's contact size for single-handed mobile interaction",
         "year": "2012",
-        "category": "gesture-design",
+        "category": "GestureDesign",
         "hardwareDevices": [
-          "Smartphone"
+          "SmartPhone"
         ],
         "sensingTechnology": [
           "CapacitiveSensor",
@@ -13572,7 +13572,7 @@ const PAPERS_DATA = {
         ],
         "gestureTypes": [
           "SingleHand",
-          "ThumbIndex"
+          "Thumb-Index"
         ],
         "applicationScenarios": [
           "MediaControl",
@@ -13594,9 +13594,9 @@ const PAPERS_DATA = {
         "id": 72,
         "title": "Exploring pinch and spread gestures on mobile devices",
         "year": "2013",
-        "category": "gesture-design",
+        "category": "GestureDesign",
         "hardwareDevices": [
-          "Smartphone",
+          "SmartPhone",
           "Tablet"
         ],
         "sensingTechnology": [
@@ -13614,7 +13614,7 @@ const PAPERS_DATA = {
           "DualHand",
           "MultiTouch",
           "Pinch",
-          "ThumbIndex"
+          "Thumb-Index"
         ],
         "applicationScenarios": [
           "MediaControl"
@@ -13633,7 +13633,7 @@ const PAPERS_DATA = {
         "id": 74,
         "title": "Leap gestures for TV insights from an elicitation study",
         "year": "2014",
-        "category": "gesture-design",
+        "category": "GestureDesign",
         "hardwareDevices": [
           "OtherDevices"
         ],
@@ -13676,7 +13676,7 @@ const PAPERS_DATA = {
         "id": 76,
         "title": "Interaction proxemics combining physical spaces for seamless gesture interaction",
         "year": "2015",
-        "category": "gesture-design",
+        "category": "GestureDesign",
         "hardwareDevices": [
           "OtherDevices",
           "TouchScreen"
@@ -13722,7 +13722,7 @@ const PAPERS_DATA = {
         "id": 77,
         "title": "Exploring non-touchscreen gestures for smartwatches",
         "year": "2016",
-        "category": "gesture-design",
+        "category": "GestureDesign",
         "hardwareDevices": [
           "SmartWatch",
           "Wearables"
@@ -13770,10 +13770,10 @@ const PAPERS_DATA = {
         "id": 80,
         "title": "Investigating how the hand interacts with different mobile phones",
         "year": "2016",
-        "category": "gesture-design",
+        "category": "GestureDesign",
         "hardwareDevices": [
           "Keyboard",
-          "Smartphone",
+          "SmartPhone",
           "TouchScreen"
         ],
         "sensingTechnology": [
@@ -13811,9 +13811,9 @@ const PAPERS_DATA = {
         "id": 82,
         "title": "Understanding grip shifts how form factors impact hand movements on mobile phones",
         "year": "2017",
-        "category": "gesture-design",
+        "category": "GestureDesign",
         "hardwareDevices": [
-          "Smartphone",
+          "SmartPhone",
           "TouchScreen"
         ],
         "sensingTechnology": [
@@ -13834,7 +13834,7 @@ const PAPERS_DATA = {
           "Hold",
           "SingleHand",
           "Tap",
-          "ThumbIndex"
+          "Thumb-Index"
         ],
         "applicationScenarios": [
           "Navigation",
@@ -13855,7 +13855,7 @@ const PAPERS_DATA = {
         "id": 83,
         "title": "Characterizing finger pitch and roll orientation during atomic touch actions",
         "year": "2018",
-        "category": "gesture-design",
+        "category": "GestureDesign",
         "hardwareDevices": [
           "Tablet",
           "TouchScreen"
@@ -13883,7 +13883,7 @@ const PAPERS_DATA = {
           "SingleHand",
           "Swipe",
           "Tap",
-          "ThumbIndex"
+          "Thumb-Index"
         ],
         "applicationScenarios": [
           "ObjectManipulation"
@@ -13901,9 +13901,9 @@ const PAPERS_DATA = {
         "id": 84,
         "title": "Fingers' range and comfortable area for one-handed smartphone interaction beyond the touchscreen",
         "year": "2018",
-        "category": "gesture-design",
+        "category": "GestureDesign",
         "hardwareDevices": [
-          "Smartphone",
+          "SmartPhone",
           "TouchScreen"
         ],
         "sensingTechnology": [
@@ -13915,7 +13915,7 @@ const PAPERS_DATA = {
           "MotionAnalysis"
         ],
         "interactionModalities": [
-          "BackOfDeviceInteraction",
+          "BackofDevices",
           "ContactBased",
           "DirectTouch"
         ],
@@ -13923,7 +13923,7 @@ const PAPERS_DATA = {
           "SingleHand",
           "Swipe",
           "Tap",
-          "ThumbIndex"
+          "Thumb-Index"
         ],
         "applicationScenarios": [
           "MediaControl",
@@ -13946,7 +13946,7 @@ const PAPERS_DATA = {
         "id": 86,
         "title": "Pen + mid-air gestures eliciting contextual gestures",
         "year": "2018",
-        "category": "gesture-design",
+        "category": "GestureDesign",
         "hardwareDevices": [
           "Tablet",
           "TouchScreen"
@@ -13995,7 +13995,7 @@ const PAPERS_DATA = {
         "id": 87,
         "title": "Unimanual Pen Touch Input Using Variations of Precision Grip Postures",
         "year": "2018",
-        "category": "gesture-design",
+        "category": "GestureDesign",
         "hardwareDevices": [
           "Tablet",
           "TouchScreen"
@@ -14040,7 +14040,7 @@ const PAPERS_DATA = {
         "id": 88,
         "title": "Gaze-assisted typing for smart glasses",
         "year": "2019",
-        "category": "gesture-design",
+        "category": "GestureDesign",
         "hardwareDevices": [
           "SmartGlasses",
           "VRHeadset",
@@ -14090,9 +14090,9 @@ const PAPERS_DATA = {
         "id": 89,
         "title": "Investigating unintended inputs for one-handed touch interaction beyond the touchscreen",
         "year": "2019",
-        "category": "gesture-design",
+        "category": "GestureDesign",
         "hardwareDevices": [
-          "Smartphone",
+          "SmartPhone",
           "Wearables"
         ],
         "sensingTechnology": [
@@ -14106,7 +14106,7 @@ const PAPERS_DATA = {
           "StaticGestureRecognition"
         ],
         "interactionModalities": [
-          "BackOfDeviceInteraction",
+          "BackofDevices",
           "ContactBased",
           "DeviceContactGesture"
         ],
@@ -14136,9 +14136,9 @@ const PAPERS_DATA = {
         "id": 90,
         "title": "Expanding Side Touch Input on Mobile Phones",
         "year": "2020",
-        "category": "gesture-design",
+        "category": "GestureDesign",
         "hardwareDevices": [
-          "Smartphone",
+          "SmartPhone",
           "TouchScreen"
         ],
         "sensingTechnology": [
@@ -14152,7 +14152,7 @@ const PAPERS_DATA = {
           "GestureRecognition"
         ],
         "interactionModalities": [
-          "BackOfDeviceInteraction",
+          "BackofDevices",
           "ContactBased",
           "DirectTouch"
         ],
@@ -14161,7 +14161,7 @@ const PAPERS_DATA = {
           "SingleHand",
           "Swipe",
           "Tap",
-          "ThumbIndex"
+          "Thumb-Index"
         ],
         "applicationScenarios": [
           "AccessibilitySupport",
@@ -14187,7 +14187,7 @@ const PAPERS_DATA = {
         "id": 91,
         "title": "MagTouch robust finger identification for a smartwatch using a magnet ring and a built-in magnetometer",
         "year": "2020",
-        "category": "gesture-design",
+        "category": "GestureDesign",
         "hardwareDevices": [
           "SmartRing",
           "SmartWatch",
@@ -14233,7 +14233,7 @@ const PAPERS_DATA = {
         "id": 92,
         "title": "PenSight enhanced interaction with a pen-top camera",
         "year": "2020",
-        "category": "gesture-design",
+        "category": "GestureDesign",
         "hardwareDevices": [
           "OtherDevices",
           "Tablet"
@@ -14286,9 +14286,9 @@ const PAPERS_DATA = {
         "id": 93,
         "title": "Shortcut gestures for mobile text editing on fully touch sensitive smartphones",
         "year": "2020",
-        "category": "gesture-design",
+        "category": "GestureDesign",
         "hardwareDevices": [
-          "Smartphone",
+          "SmartPhone",
           "TouchScreen",
           "Wearables"
         ],
@@ -14301,7 +14301,7 @@ const PAPERS_DATA = {
           "GestureRecognition"
         ],
         "interactionModalities": [
-          "BackOfDeviceInteraction",
+          "BackofDevices",
           "ContactBased",
           "DeviceContactGesture",
           "MultiModalInteraction"
@@ -14336,7 +14336,7 @@ const PAPERS_DATA = {
         "id": 94,
         "title": "Eliciting tangible and gestural user interactions with and on a cooking pan",
         "year": "2020",
-        "category": "gesture-design",
+        "category": "GestureDesign",
         "hardwareDevices": [
           "OtherDevices"
         ],
@@ -14378,7 +14378,7 @@ const PAPERS_DATA = {
         "id": 95,
         "title": "3D hand pose estimation on conventional capacitive touchscreens",
         "year": "2021",
-        "category": "gesture-design",
+        "category": "GestureDesign",
         "hardwareDevices": [
           "Tablet",
           "TouchScreen"
@@ -14431,7 +14431,7 @@ const PAPERS_DATA = {
         "id": 98,
         "title": "A User-based Mid-air Hand Gesture Set for Spreadsheets",
         "year": "2021",
-        "category": "gesture-design",
+        "category": "GestureDesign",
         "hardwareDevices": [
           "OtherDevices",
           "VRHeadset"
@@ -14470,7 +14470,7 @@ const PAPERS_DATA = {
         "id": 101,
         "title": "SoloFinger Robust Microgestures while Grasping Everyday Objects",
         "year": "2021",
-        "category": "gesture-design",
+        "category": "GestureDesign",
         "hardwareDevices": [
           "DataGloves",
           "WearableSensor"
@@ -14515,7 +14515,7 @@ const PAPERS_DATA = {
         "id": 103,
         "title": "Enabling voice-accompanying hand-to-face gesture recognition with cross-device sensing",
         "year": "2023",
-        "category": "gesture-design",
+        "category": "GestureDesign",
         "hardwareDevices": [
           "SmartRing",
           "SmartWatch",
@@ -14562,7 +14562,7 @@ const PAPERS_DATA = {
         "id": 109,
         "title": "The performance and preference of different fingers and chords for pointing, dragging, and object transformation",
         "year": "2016",
-        "category": "gesture-design",
+        "category": "GestureDesign",
         "hardwareDevices": [
           "Tablet",
           "TouchScreen"
@@ -14590,7 +14590,7 @@ const PAPERS_DATA = {
           "Pinch",
           "SingleHand",
           "Tap",
-          "ThumbIndex"
+          "Thumb-Index"
         ],
         "applicationScenarios": [
           "ObjectManipulation"
@@ -14611,7 +14611,7 @@ const PAPERS_DATA = {
         "id": 112,
         "title": "M[eye]cro eye-gaze+microgestures for multitasking and interruptions",
         "year": "2021",
-        "category": "gesture-design",
+        "category": "GestureDesign",
         "hardwareDevices": [
           "OtherDevices",
           "WearableSensor"
@@ -14635,7 +14635,7 @@ const PAPERS_DATA = {
           "Pinch",
           "SingleHand",
           "Tap",
-          "ThumbIndex"
+          "Thumb-Index"
         ],
         "applicationScenarios": [
           "InVehicleInteraction",
@@ -14660,9 +14660,9 @@ const PAPERS_DATA = {
         "id": 116,
         "title": "Towards the establishment of a framework for intuitive multi-touch interaction design",
         "year": "2012",
-        "category": "gesture-design",
+        "category": "GestureDesign",
         "hardwareDevices": [
-          "Smartphone",
+          "SmartPhone",
           "Tablet",
           "TouchScreen"
         ],
@@ -14712,10 +14712,10 @@ const PAPERS_DATA = {
         "id": 117,
         "title": "Grasping microgestures eliciting single-hand microgestures for handheld objects",
         "year": "2019",
-        "category": "gesture-design",
+        "category": "GestureDesign",
         "hardwareDevices": [
           "OtherDevices",
-          "Smartphone"
+          "SmartPhone"
         ],
         "sensingTechnology": [
           "ComputerVision",
@@ -14763,7 +14763,7 @@ const PAPERS_DATA = {
         "id": 118,
         "title": "Rhythmic micro-gestures discreet interaction on-the-go",
         "year": "2017",
-        "category": "gesture-design",
+        "category": "GestureDesign",
         "hardwareDevices": [
           "OtherDevices"
         ],
@@ -14812,7 +14812,7 @@ const PAPERS_DATA = {
         "id": 119,
         "title": "Studying the visual representation of microgestures",
         "year": "2023",
-        "category": "gesture-design",
+        "category": "GestureDesign",
         "hardwareDevices": [
           "ARGlasses",
           "OtherDevices"
@@ -14832,7 +14832,7 @@ const PAPERS_DATA = {
           "SingleHand",
           "Swipe",
           "Tap",
-          "ThumbIndex"
+          "Thumb-Index"
         ],
         "applicationScenarios": [
           "AR",
@@ -14852,7 +14852,7 @@ const PAPERS_DATA = {
         "id": 120,
         "title": "µGlyph a microgesture notation",
         "year": "2023",
-        "category": "gesture-design",
+        "category": "GestureDesign",
         "hardwareDevices": [
           "OtherDevices"
         ],
@@ -14871,7 +14871,7 @@ const PAPERS_DATA = {
           "SingleHand",
           "Swipe",
           "Tap",
-          "ThumbIndex"
+          "Thumb-Index"
         ],
         "applicationScenarios": [
           "Education"
@@ -14889,7 +14889,7 @@ const PAPERS_DATA = {
         "id": 121,
         "title": "User elicitation on single-hand microgestures",
         "year": "2016",
-        "category": "gesture-design",
+        "category": "GestureDesign",
         "hardwareDevices": [
           "OtherDevices",
           "Wearables"
@@ -14932,10 +14932,10 @@ const PAPERS_DATA = {
         "id": 122,
         "title": "Would you do that understanding social acceptance of gestural interfaces",
         "year": "2010",
-        "category": "gesture-design",
+        "category": "GestureDesign",
         "hardwareDevices": [
           "OtherDevices",
-          "Smartphone"
+          "SmartPhone"
         ],
         "sensingTechnology": [
           "Accelerometer",
@@ -14977,7 +14977,7 @@ const PAPERS_DATA = {
         "id": 123,
         "title": "Hands as a controller user preferences for hand specific on-skin gestures",
         "year": "2017",
-        "category": "gesture-design",
+        "category": "GestureDesign",
         "hardwareDevices": [
           "OtherDevices"
         ],
@@ -15024,7 +15024,7 @@ const PAPERS_DATA = {
         "id": 124,
         "title": "Designing More Private and Socially Acceptable Hand-to-Face Gestures for Heads-Up Computing",
         "year": "2024",
-        "category": "gesture-design",
+        "category": "GestureDesign",
         "hardwareDevices": [
           "ARGlasses",
           "SmartGlasses",
@@ -15067,7 +15067,7 @@ const PAPERS_DATA = {
         "id": 126,
         "title": "Interaction gestures for a wearable device defined by visually impaired children",
         "year": "2016",
-        "category": "gesture-design",
+        "category": "GestureDesign",
         "hardwareDevices": [
           "WearableSensor",
           "Wearables"
@@ -15114,10 +15114,10 @@ const PAPERS_DATA = {
         "id": 127,
         "title": "Investigating microinteractions for people with visual impairments and the potential role of on-body interaction",
         "year": "2017",
-        "category": "gesture-design",
+        "category": "GestureDesign",
         "hardwareDevices": [
           "SmartWatch",
-          "Smartphone",
+          "SmartPhone",
           "WearableSensor",
           "Wearables"
         ],
@@ -15164,7 +15164,7 @@ const PAPERS_DATA = {
         "id": 133,
         "title": "Designing upper-body gesture interaction with and for people with spinal muscular atrophy in VR",
         "year": "2024",
-        "category": "gesture-design",
+        "category": "GestureDesign",
         "hardwareDevices": [
           "VRHeadset",
           "Wearables"
@@ -15187,7 +15187,7 @@ const PAPERS_DATA = {
           "DirectionalGesture",
           "Pinch",
           "SingleHand",
-          "ThumbIndex"
+          "Thumb-Index"
         ],
         "applicationScenarios": [
           "AccessibilitySupport",
@@ -15209,7 +15209,7 @@ const PAPERS_DATA = {
         "id": 134,
         "title": "Finger gesture tracking for interactive applications a pilot study with sign languages",
         "year": "2020",
-        "category": "gesture-design",
+        "category": "GestureDesign",
         "hardwareDevices": [
           "SmartRing",
           "SmartWatch",
@@ -15258,7 +15258,7 @@ const PAPERS_DATA = {
         "id": 135,
         "title": "A non-linear model of shape  and motion for tracking finger spelt American sign language",
         "year": "2002",
-        "category": "gesture-design",
+        "category": "GestureDesign",
         "hardwareDevices": [
           "OtherDevices"
         ],
@@ -15298,7 +15298,7 @@ const PAPERS_DATA = {
         "id": 143,
         "title": "DigitSpace Designing Thumb-to-Fingers Touch Interfaces for One-Handed and Eyes-Free Interactions",
         "year": "2016",
-        "category": "gesture-design",
+        "category": "GestureDesign",
         "hardwareDevices": [
           "SmartWatch",
           "WearableSensor",
@@ -15322,7 +15322,7 @@ const PAPERS_DATA = {
           "SingleHand",
           "Swipe",
           "Tap",
-          "ThumbIndex"
+          "Thumb-Index"
         ],
         "applicationScenarios": [
           "MediaControl",
@@ -15346,7 +15346,7 @@ const PAPERS_DATA = {
         "id": 152,
         "title": "Fingert9- Leveraging  thumb-to-finger interaction for same-side-hand text entry on smartwatches",
         "year": "2018",
-        "category": "gesture-design",
+        "category": "GestureDesign",
         "hardwareDevices": [
           "SmartWatch",
           "TouchScreen",
@@ -15371,7 +15371,7 @@ const PAPERS_DATA = {
           "Hold",
           "SingleHand",
           "Tap",
-          "ThumbIndex"
+          "Thumb-Index"
         ],
         "applicationScenarios": [
           "TextInput"
@@ -15395,7 +15395,7 @@ const PAPERS_DATA = {
         "id": 155,
         "title": "The missing interface- Micro-gestures on augmented objects",
         "year": "2019",
-        "category": "gesture-design",
+        "category": "GestureDesign",
         "hardwareDevices": [
           "ARGlasses",
           "WearableSensor",
@@ -15441,7 +15441,7 @@ const PAPERS_DATA = {
         "id": 162,
         "title": "Design of 3D Microgestures for Commands in Virtual Reality or Augmented Reality",
         "year": "2023",
-        "category": "gesture-design",
+        "category": "GestureDesign",
         "hardwareDevices": [
           "ARGlasses",
           "TouchScreen",
@@ -15495,7 +15495,7 @@ const PAPERS_DATA = {
         "id": 167,
         "title": "User-Defined Game Input for Smart Glasses in Public Space",
         "year": "2015",
-        "category": "gesture-design",
+        "category": "GestureDesign",
         "hardwareDevices": [
           "SmartGlasses"
         ],
@@ -15543,7 +15543,7 @@ const PAPERS_DATA = {
         "id": 172,
         "title": "A Taxonomy of Microinteractions Defining Microgestures based on Ergonomic and Scenario-dependent Requirements",
         "year": "2011",
-        "category": "gesture-design",
+        "category": "GestureDesign",
         "hardwareDevices": [
           "WearableSensor",
           "Wearables"
@@ -15589,7 +15589,7 @@ const PAPERS_DATA = {
         "id": 183,
         "title": "The intuitive grasp interface design and evaluation of micro-gestures on the steering wheel for driving scenario",
         "year": "2020",
-        "category": "gesture-design",
+        "category": "GestureDesign",
         "image": "Papers/GestureDesign/GestureDesign预览图/2020 - The intuitive grasp interface design and evaluation of micro-gestures on the steering wheel for driving scenario.png",
         "hardwareDevices": [],
         "sensingTechnology": [],
@@ -15604,7 +15604,7 @@ const PAPERS_DATA = {
         "id": 184,
         "title": "Transferable Microgestures Across Hand Posture and Location Constraints- Leveraging the Middle, Ring, and Pinky Fingers",
         "year": "2023",
-        "category": "gesture-design",
+        "category": "GestureDesign",
         "image": "Papers/GestureDesign/GestureDesign预览图/2023 - Transferable Microgestures Across Hand Posture and Location Constraints- Leveraging the Middle, Ring, and Pinky Fingers.png",
         "hardwareDevices": [],
         "sensingTechnology": [],
@@ -15619,7 +15619,7 @@ const PAPERS_DATA = {
         "id": 185,
         "title": "Segtouch",
         "year": "2017",
-        "category": "gesture-design",
+        "category": "GestureDesign",
         "image": "Papers/GestureDesign/GestureDesign预览图/2017-Segtouch.png",
         "hardwareDevices": [],
         "sensingTechnology": [],
@@ -15634,7 +15634,7 @@ const PAPERS_DATA = {
         "id": 186,
         "title": "Arpège learning multitouch chord gestures vocabularies",
         "year": "2013",
-        "category": "gesture-design",
+        "category": "GestureDesign",
         "image": "Papers/GestureDesign/GestureDesign预览图/2013 - Arpège learning multitouch chord gestures vocabularies.png",
         "hardwareDevices": [],
         "sensingTechnology": [],
@@ -15649,7 +15649,7 @@ const PAPERS_DATA = {
         "id": 187,
         "title": "PalmType Using Palms as Keyboards for Smart Glasses",
         "year": "2015",
-        "category": "gesture-design",
+        "category": "GestureDesign",
         "image": "Papers/GestureDesign/GestureDesign预览图/2015-PalmType Using Palms as Keyboards for Smart Glasses.png",
         "hardwareDevices": [],
         "sensingTechnology": [],
@@ -15667,7 +15667,7 @@ const PAPERS_DATA = {
     "categories": {
       "hardware": 64,
       "software": 36,
-      "gesture-design": 65
+      "GestureDesign": 65
     },
     "yearRange": {
       "min": 2002,

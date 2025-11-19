@@ -117,22 +117,46 @@ class PaperModal {
         const map = {
             'hardware': 'Hardware',
             'software': 'Software',
+            'GestureDesign': 'Gesture Design',
             'gesture-design': 'Gesture Design'
         };
         return map[category] || category;
     }
 
     formatTag(tag) {
+        // Direct mappings for specific tags
+        const tagMap = {
+            'GestureDesign': 'Gesture Design',
+            'SmartPhone': 'Smart Phone',
+            'ARGlasses': 'AR Glasses',
+            'VRHeadset': 'VR Headset',
+            'E-Textile': 'E-Textile',
+            'Bio-Sensor': 'Bio-Sensor',
+            'EMG': 'EMG',
+            'IMU': 'IMU',
+            'RFSensing': 'RF Sensing',
+            '3DPoseEstimation': '3D Pose Estimation',
+            'BackofDevices': 'Back of Devices',
+            'Thumb-Index': 'Thumb-Index',
+            'AR': 'AR',
+            'VR': 'VR',
+            'MR': 'MR',
+            'IoT': 'IoT',
+            'IOT': 'IoT',
+            'QWERTYLayout': 'QWERTY Layout',
+            'OtherDevices': 'Other Devices',
+            'OtherTechnology': 'Other Technology',
+            'OtherScenarios': 'Other Scenarios'
+        };
+        
+        // Return direct mapping if exists
+        if (tagMap[tag]) {
+            return tagMap[tag];
+        }
+        
+        // Default formatting
         tag = tag.replace(/^#/, '');
         tag = tag.replace(/([A-Z])/g, ' $1');
-        tag = tag.replace(/EMG/g, 'EMG');
-        tag = tag.replace(/VR/g, 'VR');
-        tag = tag.replace(/AR/g, 'AR');
-        tag = tag.replace(/IMU/g, 'IMU');
-        tag = tag.replace(/IOT/g, 'IoT');
-        tag = tag.replace(/3D/g, '3D');
-        tag = tag.replace(/2D/g, '2D');
-        tag = tag.replace(/QWERTY/g, 'QWERTY');
         return tag.trim().replace(/\b\w/g, l => l.toUpperCase());
     }
 }
