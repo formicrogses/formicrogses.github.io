@@ -21,7 +21,7 @@ class GestureResearchGallery {
             applicationScenarios: [],
             feedbackOutput: [],
             userExperienceDesign: [],
-            yearStart: 2005,
+            yearStart: 1990,
             yearEnd: 2025
         };
 
@@ -219,7 +219,10 @@ class GestureResearchGallery {
         }
         
         // Apply category filters
-        const hasActiveFilters = Object.values(this.filterState).some(arr => arr.length > 0);
+        const hasActiveFilters = Object.entries(this.filterState).some(([key, val]) => {
+            return Array.isArray(val) && val.length > 0;
+        });
+        
         if (hasActiveFilters) {
             papers = papers.filter(paper => {
                 // Check main category
@@ -231,7 +234,8 @@ class GestureResearchGallery {
                 
                 // Check other tags (OR logic within each category)
                 for (const [key, selectedTags] of Object.entries(this.filterState)) {
-                    if (key === 'mainCategory' || selectedTags.length === 0) continue;
+                    if (key === 'mainCategory' || key === 'yearStart' || key === 'yearEnd') continue;
+                    if (!Array.isArray(selectedTags) || selectedTags.length === 0) continue;
                     
                     const paperTags = paper[key] || [];
                     const hasMatch = selectedTags.some(tag => paperTags.includes(tag));
