@@ -9,9 +9,19 @@ class GestureResearchGallery {
         this.searchQuery = '';
         this.sortBy = 'year';
         this.sortOrder = 'desc';
+        this.defaultYearRange = {
+            start: 1990,
+            end: 2025
+        };
         
         // Filter state
-        this.filterState = {
+        this.filterState = this.createDefaultFilterState();
+
+        this.init();
+    }
+
+    createDefaultFilterState() {
+        return {
             mainCategory: [],
             hardwareDevices: [],
             sensingTechnology: [],
@@ -21,11 +31,9 @@ class GestureResearchGallery {
             applicationScenarios: [],
             feedbackOutput: [],
             userExperienceDesign: [],
-            yearStart: 1990,
-            yearEnd: 2025
+            yearStart: this.defaultYearRange.start,
+            yearEnd: this.defaultYearRange.end
         };
-
-        this.init();
     }
 
     async init() {
@@ -168,7 +176,7 @@ class GestureResearchGallery {
             
             const checkbox = document.createElement('input');
             checkbox.type = 'checkbox';
-            checkbox.id = `${categoryKey}_${tag}`;
+            checkbox.id = this.createFilterOptionId(categoryKey, tag);
             checkbox.value = tag;
             checkbox.addEventListener('change', () => this.handleFilterChange(categoryKey, tag, checkbox.checked));
             
@@ -180,6 +188,11 @@ class GestureResearchGallery {
             optionDiv.appendChild(label);
             container.appendChild(optionDiv);
         });
+    }
+
+    createFilterOptionId(categoryKey, tag) {
+        const rawId = `${categoryKey}_${tag}`;
+        return rawId.replace(/[^a-zA-Z0-9_-]/g, (character) => `_${character.charCodeAt(0).toString(16)}`);
     }
 
     handleFilterChange(categoryKey, tag, isChecked) {
@@ -401,6 +414,9 @@ class GestureResearchGallery {
         const item = document.createElement('div');
         item.className = 'paper-item';
         item.style.setProperty('--item-index', index % this.itemsPerBatch);
+        item.tabIndex = 0;
+        item.setAttribute('role', 'button');
+        item.setAttribute('aria-label', `Open details for ${paper.title}`);
         
         const imageContainer = document.createElement('div');
         imageContainer.className = 'image-container loading';
@@ -423,22 +439,39 @@ class GestureResearchGallery {
         const title = document.createElement('div');
         title.className = 'paper-title';
         title.textContent = paper.title;
+
+        const cardBody = document.createElement('div');
+        cardBody.className = 'paper-card-body';
+
+        const category = document.createElement('div');
+        category.className = 'paper-category';
+        category.textContent = this.formatCategory(paper.category);
         
         const year = document.createElement('div');
         year.className = 'paper-year';
         year.textContent = paper.year;
         
         item.appendChild(imageContainer);
-        item.appendChild(title);
+        cardBody.appendChild(category);
+        cardBody.appendChild(title);
+        item.appendChild(cardBody);
         item.appendChild(year);
-        
-        item.addEventListener('click', () => {
+
+        const openPaper = () => {
             item.classList.add('clicked');
             setTimeout(() => {
                 item.classList.remove('clicked');
             }, 600);
             
             this.showModal(paper);
+        };
+
+        item.addEventListener('click', openPaper);
+        item.addEventListener('keydown', (event) => {
+            if (event.key === 'Enter' || event.key === ' ') {
+                event.preventDefault();
+                openPaper();
+            }
         });
         
         return item;
@@ -451,11 +484,12 @@ class GestureResearchGallery {
     }
 
     updateStatistics() {
-        const totalSelected = Object.values(this.filterState).reduce((sum, arr) => sum + arr.length, 0);
+        const totalSelected = Number(this.getSelectedFilterCount()) || 0;
         document.getElementById('selectedCount').textContent = totalSelected;
         document.getElementById('filteredCount').textContent = this.filteredPapers.length;
         document.getElementById('currentCount').textContent = Math.min(this.currentIndex, this.filteredPapers.length);
         document.getElementById('totalCount').textContent = this.filteredPapers.length;
+        this.renderActiveFilters();
     }
 
     updateFilterCounts() {
@@ -511,6 +545,7 @@ class GestureResearchGallery {
             'ARGlasses': 'AR Glasses',
             'VRHeadset': 'VR Headset',
             'E-Textile': 'E-Textile',
+            'Etextile': 'E-Textile',
             'Bio-Sensor': 'Bio-Sensor',
             'EMG': 'EMG',
             'IMU': 'IMU',
@@ -523,6 +558,12 @@ class GestureResearchGallery {
             'MR': 'MR',
             'IoT': 'IoT',
             'IOT': 'IoT',
+            '\u952e\u76d8': 'Keyboard',
+            '\u6309\u4f4f': 'Hold',
+            '\u634f\u5408': 'Pinch',
+            '\u6ed1\u52a8': 'Swipe',
+            '\u5bfc\u822a': 'Navigation',
+            '\u8bad\u7ec3\u4e2d': 'Training',
             'QWERTYLayout': 'QWERTY Layout',
             'OtherDevices': 'Other Devices',
             'OtherTechnology': 'Other Technology',
@@ -536,8 +577,200 @@ class GestureResearchGallery {
         
         // Default formatting
         tag = tag.replace(/^#/, '');
-        tag = tag.replace(/([A-Z])/g, ' $1');
-        return tag.trim().replace(/\b\w/g, l => l.toUpperCase());
+        tag = tag.replace(/([a-z0-9])([A-Z])/g, '$1 $2');
+        tag = tag.replace(/[_/]+/g, ' ');
+        return tag.replace(/\s+/g, ' ').trim().replace(/\b\w/g, l => l.toUpperCase());
+    }
+
+    formatCategory(category) {
+        const categoryMap = {
+            hardware: 'Hardware',
+            software: 'Software',
+            GestureDesign: 'Gesture Design',
+            'gesture-design': 'Gesture Design'
+        };
+
+        return categoryMap[category] || this.formatTag(category || '');
+    }
+
+    isYearFilterActive() {
+        return this.filterState.yearStart !== this.defaultYearRange.start ||
+            this.filterState.yearEnd !== this.defaultYearRange.end;
+    }
+
+    getSelectedFilterCount() {
+        const safeFilterState = this.filterState && typeof this.filterState === 'object'
+            ? this.filterState
+            : this.createDefaultFilterState();
+
+        const selectedTagCount = Object.values(safeFilterState).reduce((sum, value) => {
+            const nextValue = Array.isArray(value) ? value.length : 0;
+            return sum + (Number.isFinite(nextValue) ? nextValue : 0);
+        }, 0);
+
+        const totalSelected = selectedTagCount + (this.isYearFilterActive() ? 1 : 0);
+        return Number.isFinite(totalSelected) ? totalSelected : 0;
+    }
+
+    syncYearControls() {
+        const yearSliderStart = document.getElementById('yearSliderStart');
+        const yearSliderEnd = document.getElementById('yearSliderEnd');
+        const yearRangeStart = document.getElementById('yearRangeStart');
+        const yearRangeEnd = document.getElementById('yearRangeEnd');
+
+        if (yearSliderStart) {
+            yearSliderStart.value = this.filterState.yearStart;
+        }
+
+        if (yearSliderEnd) {
+            yearSliderEnd.value = this.filterState.yearEnd;
+        }
+
+        if (yearRangeStart) {
+            yearRangeStart.textContent = this.filterState.yearStart;
+        }
+
+        if (yearRangeEnd) {
+            yearRangeEnd.textContent = this.filterState.yearEnd;
+        }
+    }
+
+    setFilterPanelOpen(isOpen) {
+        const filterToggleBtn = document.getElementById('filterToggle');
+        const filterPanel = document.getElementById('filterPanel');
+        const gallery = document.getElementById('gallery');
+        const mainContainer = document.querySelector('.main-container');
+
+        if (!filterToggleBtn || !filterPanel || !gallery || !mainContainer) {
+            return;
+        }
+
+        filterToggleBtn.classList.toggle('active', isOpen);
+        filterPanel.classList.toggle('active', isOpen);
+        gallery.classList.toggle('filter-active', isOpen);
+        mainContainer.classList.toggle('filter-active', isOpen);
+        document.body.classList.toggle('filter-panel-open', isOpen);
+        filterToggleBtn.setAttribute('aria-expanded', String(isOpen));
+    }
+
+    getActiveConstraints() {
+        const constraints = [];
+
+        if (this.searchQuery.trim()) {
+            constraints.push({
+                type: 'search',
+                label: `Search: "${this.searchQuery.trim()}"`
+            });
+        }
+
+        if (this.isYearFilterActive()) {
+            constraints.push({
+                type: 'year',
+                label: `Years: ${this.filterState.yearStart}-${this.filterState.yearEnd}`
+            });
+        }
+
+        Object.entries(this.filterState).forEach(([key, values]) => {
+            if (!Array.isArray(values) || values.length === 0) {
+                return;
+            }
+
+            values.forEach((value) => {
+                constraints.push({
+                    type: 'filter',
+                    key,
+                    value,
+                    label: this.getActiveFilterLabel(key, value)
+                });
+            });
+        });
+
+        return constraints;
+    }
+
+    renderActiveFilters() {
+        const summary = document.getElementById('activeFilterSummary');
+        const chipContainer = document.getElementById('activeFilterChips');
+
+        if (!summary || !chipContainer) {
+            return;
+        }
+
+        const chips = this.getActiveConstraints();
+
+        chipContainer.innerHTML = '';
+
+        if (chips.length === 0) {
+            summary.hidden = true;
+            return;
+        }
+
+        chips.forEach((chip) => {
+            const chipButton = document.createElement('button');
+            chipButton.type = 'button';
+            chipButton.className = 'active-filter-chip';
+            chipButton.setAttribute('aria-label', `Remove ${chip.label}`);
+
+            const labelSpan = document.createElement('span');
+            labelSpan.textContent = chip.label;
+
+            const removeSpan = document.createElement('span');
+            removeSpan.className = 'chip-remove';
+            removeSpan.setAttribute('aria-hidden', 'true');
+            removeSpan.textContent = '×';
+
+            chipButton.appendChild(labelSpan);
+            chipButton.appendChild(removeSpan);
+            chipButton.addEventListener('click', () => this.removeActiveFilter(chip));
+            chipContainer.appendChild(chipButton);
+        });
+
+        summary.hidden = false;
+    }
+
+    getActiveFilterLabel(key, value) {
+        const prefixes = {
+            mainCategory: 'Category',
+            hardwareDevices: 'Device',
+            sensingTechnology: 'Sensing',
+            recognitionClassification: 'Recognition',
+            interactionModalities: 'Interaction',
+            gestureTypes: 'Gesture',
+            applicationScenarios: 'Scenario',
+            feedbackOutput: 'Feedback',
+            userExperienceDesign: 'UX'
+        };
+
+        const formattedValue = key === 'mainCategory'
+            ? this.formatCategory(value)
+            : this.formatTag(value);
+
+        return `${prefixes[key] || 'Filter'}: ${formattedValue}`;
+    }
+
+    removeActiveFilter(chip) {
+        if (chip.type === 'search') {
+            this.searchQuery = '';
+            const searchInput = document.getElementById('searchInput');
+            if (searchInput) {
+                searchInput.value = '';
+            }
+        } else if (chip.type === 'year') {
+            this.filterState.yearStart = this.defaultYearRange.start;
+            this.filterState.yearEnd = this.defaultYearRange.end;
+            this.syncYearControls();
+        } else if (chip.type === 'filter' && chip.key) {
+            this.filterState[chip.key] = (this.filterState[chip.key] || []).filter((value) => value !== chip.value);
+            const checkboxId = this.createFilterOptionId(chip.key === 'mainCategory' ? 'category' : chip.key, chip.value);
+            const checkbox = document.getElementById(checkboxId);
+            if (checkbox) {
+                checkbox.checked = false;
+            }
+        }
+
+        this.applyFilters();
+        this.updateFilterCounts();
+        this.updateURL();
     }
 
     // URL State Management
@@ -558,10 +791,15 @@ class GestureResearchGallery {
         
         // Add filter states
         Object.entries(this.filterState).forEach(([key, values]) => {
-            if (values.length > 0) {
+            if (Array.isArray(values) && values.length > 0) {
                 params.set(key, values.join(','));
             }
         });
+
+        if (this.isYearFilterActive()) {
+            params.set('yearStart', String(this.filterState.yearStart));
+            params.set('yearEnd', String(this.filterState.yearEnd));
+        }
         
         const url = params.toString() ? `?${params.toString()}` : window.location.pathname;
         window.history.replaceState({}, '', url);
@@ -569,46 +807,61 @@ class GestureResearchGallery {
 
     loadStateFromURL() {
         const params = new URLSearchParams(window.location.search);
+        const sortOrderBtn = document.getElementById('sortOrder');
+        const searchInput = document.getElementById('searchInput');
+
+        this.filterState = this.createDefaultFilterState();
+        document.querySelectorAll('.filter-option input[type="checkbox"]').forEach(checkbox => {
+            checkbox.checked = false;
+        });
         
         // Load search query
         const query = params.get('q');
-        if (query) {
-            this.searchQuery = query;
-            const searchInput = document.getElementById('searchInput');
-            if (searchInput) {
-                searchInput.value = query;
-            }
+        this.searchQuery = query || '';
+        if (searchInput) {
+            searchInput.value = this.searchQuery;
         }
         
         // Load sort settings
         const sort = params.get('sort');
-        if (sort) {
-            this.sortBy = sort;
-            const sortSelect = document.getElementById('sortBy');
-            if (sortSelect) {
-                sortSelect.value = sort;
-            }
+        this.sortBy = sort || 'year';
+        const sortSelect = document.getElementById('sortBy');
+        if (sortSelect) {
+            sortSelect.value = this.sortBy;
         }
         
         const order = params.get('order');
-        if (order) {
-            this.sortOrder = order;
+        this.sortOrder = order || 'desc';
+        if (sortOrderBtn) {
+            sortOrderBtn.innerHTML = this.sortOrder === 'desc' ? '↓' : '↑';
         }
         
         // Load filter states
         Object.keys(this.filterState).forEach(key => {
+            if (key === 'yearStart' || key === 'yearEnd') {
+                return;
+            }
+
             const values = params.get(key);
             if (values) {
                 this.filterState[key] = values.split(',');
                 // Update checkboxes
                 values.split(',').forEach(value => {
-                    const checkbox = document.querySelector(`#${key === 'mainCategory' ? 'category' : key}_${value}`);
+                    const checkbox = document.getElementById(
+                        this.createFilterOptionId(key === 'mainCategory' ? 'category' : key, value)
+                    );
                     if (checkbox) {
                         checkbox.checked = true;
                     }
                 });
             }
         });
+
+        const yearStart = parseInt(params.get('yearStart') || this.defaultYearRange.start, 10);
+        const yearEnd = parseInt(params.get('yearEnd') || this.defaultYearRange.end, 10);
+        this.filterState.yearStart = Number.isNaN(yearStart) ? this.defaultYearRange.start : yearStart;
+        this.filterState.yearEnd = Number.isNaN(yearEnd) ? this.defaultYearRange.end : yearEnd;
+        this.syncYearControls();
         
         this.applyFilters();
         this.updateFilterCounts();
@@ -616,9 +869,7 @@ class GestureResearchGallery {
 
     clearAllFilters() {
         // Clear filter state
-        Object.keys(this.filterState).forEach(key => {
-            this.filterState[key] = [];
-        });
+        this.filterState = this.createDefaultFilterState();
         
         // Clear checkboxes
         document.querySelectorAll('.filter-option input[type="checkbox"]').forEach(checkbox => {
@@ -639,6 +890,13 @@ class GestureResearchGallery {
         if (sortSelect) {
             sortSelect.value = 'year';
         }
+
+        const sortOrderBtn = document.getElementById('sortOrder');
+        if (sortOrderBtn) {
+            sortOrderBtn.innerHTML = '↓';
+        }
+
+        this.syncYearControls();
         
         this.applyFilters();
         this.updateFilterCounts();
@@ -724,15 +982,11 @@ class GestureResearchGallery {
         // Filter panel toggle
         const filterToggleBtn = document.getElementById('filterToggle');
         const filterPanel = document.getElementById('filterPanel');
-        const gallery = document.getElementById('gallery');
-        const mainContainer = document.querySelector('.main-container');
         
         if (filterToggleBtn && filterPanel) {
             filterToggleBtn.addEventListener('click', () => {
-                filterToggleBtn.classList.toggle('active');
-                filterPanel.classList.toggle('active');
-                gallery.classList.toggle('filter-active');
-                mainContainer.classList.toggle('filter-active');
+                const isOpen = !filterPanel.classList.contains('active');
+                this.setFilterPanelOpen(isOpen);
             });
         }
 
@@ -788,4 +1042,5 @@ class GestureResearchGallery {
 let app;
 document.addEventListener('DOMContentLoaded', () => {
     app = new GestureResearchGallery();
+    window.app = app;
 });

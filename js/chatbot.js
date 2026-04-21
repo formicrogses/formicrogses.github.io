@@ -1,57 +1,104 @@
 // Chatbot using Google Gemini API
 class GeminiChatbot {
     constructor() {
+        this.config = {
+            provider: 'openai',
+            model: '[L]gemini-3-flash-preview',
+            modelLabel: 'Gemini 3 Flash Preview',
+            apiEndpoint: 'https://new.lemonapi.site/v1/chat/completions',
+            apiKey: '',
+            embeddedMode: false,
+            retrieval: {
+                maxRelevantPapers: 6,
+                maxLoadedPapers: 4,
+                maxHistoryMessages: 12,
+                maxKnowledgeChars: 7000
+            }
+        };
         this.apiKey = '';
-        this.apiEndpoint = 'https://generativelanguage.googleapis.com/v1/models/gemini-2.0-flash:generateContent';
+        this.model = this.config.model;
+        this.apiEndpoint = this.config.apiEndpoint;
+        this.modelLabel = this.config.modelLabel;
+        this.provider = this.config.provider;
+        this.hasEmbeddedKey = false;
         this.conversationHistory = [];
         this.isOpen = false;
         this.isLoading = false;
-        this.currentPaper = null;  // 当前讨论的论文
-        this.papersIndex = null;   // 论文索引（轻量级）
-        this.papersTexts = null;   // 完整论文文本数据（按需加载）
-        this.websiteData = null;   // 网站数据（从PAPERS_DATA加载）
+        this.currentPaper = null;  // 
+        this.papersIndex = null;   // （）
+        this.papersTexts = null;   // （）
+        this.websiteData = null;   // （PAPERS_DATA）
         
-        // 对话管理
-        this.conversations = [];   // 所有对话列表
-        this.currentConversationId = null; // 当前对话ID
+        // 
+        this.conversations = [];   // 
+        this.currentConversationId = null; // ID
         
         this.init();
     }
 
     init() {
+        this.loadConfig();
         this.createChatInterface();
         this.setupEventListeners();
         this.loadApiKey();
         this.loadConversations();
         this.loadPapersTexts();
         this.loadWebsiteData();
+        this.updateApiStatusUI();
+        this.updatePaperContextUI();
+    }
+
+    loadConfig() {
+        if (typeof window === 'undefined' || !window.CHATBOT_CONFIG) {
+            return;
+        }
+
+        const incoming = window.CHATBOT_CONFIG;
+        this.config = {
+            ...this.config,
+            ...incoming,
+            retrieval: {
+                ...this.config.retrieval,
+                ...(incoming.retrieval || {})
+            }
+        };
+
+        this.provider = this.config.provider || 'gemini';
+        this.model = this.config.model || this.model;
+        this.modelLabel = this.config.modelLabel || 'Gemini 3 Flash Preview';
+        this.apiEndpoint = this.config.apiEndpoint || this.apiEndpoint;
+
+        if (this.config.apiKey && this.config.apiKey.trim() && !this.config.apiKey.includes('PASTE_')) {
+            this.apiKey = this.config.apiKey.trim();
+            this.hasEmbeddedKey = true;
+        }
     }
 
     async loadPapersTexts() {
-        // 先加载轻量级索引（快速显示列表）
+        // （）
         try {
             const response = await fetch('papers-index.json');
             if (response.ok) {
                 this.papersIndex = await response.json();
-                console.log(`✅ 已加载 ${Object.keys(this.papersIndex).length} 篇论文索引`);
+                console.log(`Loaded ${Object.keys(this.papersIndex).length} paper index entries`);
             }
         } catch (error) {
-            console.warn('⚠️ 无法加载论文索引:', error);
+            console.warn('Unable to load paper index:', error);
         }
     }
 
     loadWebsiteData() {
-        // 加载网站论文数据（从全局变量PAPERS_DATA）
+        // （PAPERS_DATA）
         if (typeof PAPERS_DATA !== 'undefined') {
             this.websiteData = PAPERS_DATA;
-            console.log(`✅ 已加载网站数据：${PAPERS_DATA.papers.length} 篇论文`);
+            console.log(`Loaded website data: ${PAPERS_DATA.papers.length} papers`);
         } else {
-            console.warn('⚠️ PAPERS_DATA未加载');
+            console.warn('PAPERS_DATA is not available');
         }
     }
 
     async loadFullPaperText(filename) {
-        // 按需加载完整论文文本
+        // 
         if (!this.papersTexts) {
             console.log('📥 Loading complete paper data...');
             try {
@@ -71,25 +118,28 @@ class GeminiChatbot {
     }
 
     loadPaper(paperTitle, paperData) {
-        // 加载论文到当前上下文
+        // 
         this.currentPaper = {
             title: paperTitle,
             ...paperData
         };
+        this.updatePaperContextUI();
         
-        // 打开聊天窗口
+        // 
         if (!this.isOpen) {
             this.openChat();
         }
         
-        // 显示欢迎消息
+        // 
         setTimeout(() => {
-            this.addMessage('System', `📚 已加载论文：《${paperTitle}》\n现在您可以向我提问关于这篇论文的任何内容！`, 'system');
+            this.addMessage('System', `Loaded paper: "${paperTitle}"\nYou can now ask anything about this paper.`, 'system');
         }, 500);
     }
 
     loadApiKey() {
-        // Load API key from localStorage
+        if (this.hasEmbeddedKey) {
+            return;
+        }
         const savedKey = localStorage.getItem('gemini_api_key');
         if (savedKey) {
             this.apiKey = savedKey;
@@ -99,70 +149,94 @@ class GeminiChatbot {
     saveApiKey(key) {
         this.apiKey = key;
         localStorage.setItem('gemini_api_key', key);
+        this.updateApiStatusUI();
     }
 
     createChatInterface() {
+        const apiStatusLabel = this.hasEmbeddedKey
+            ? 'Embedded API Ready'
+            : (this.apiKey ? 'API Configured' : 'API Needed');
+
         const chatHTML = `
             <div class="chatbot-container" id="chatbotContainer">
-                <!-- Conversation Sidebar -->
                 <div class="chatbot-sidebar">
                     <div class="sidebar-header">
                         <button id="newChatBtn" class="new-chat-btn">
-                            <span style="font-size: 18px;">+</span>
-                            <span>New Chat</span>
+                            <span>+</span>
+                            <span>New chat</span>
                         </button>
+                        <div class="sidebar-caption">Research sessions</div>
                     </div>
                     <div id="conversationsList" class="conversations-list">
-                        <!-- Conversation items will be added here -->
                     </div>
                 </div>
                 
-                <!-- Main Chat Area -->
                 <div class="chatbot-main">
                     <div class="chatbot-header">
-                        <div class="chatbot-header-content">
-                            <div class="chatbot-avatar">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-                                </svg>
+                        <div class="chatbot-header-main">
+                            <div class="chatbot-header-content">
+                                <div class="chatbot-avatar">AI</div>
+                                <div class="chatbot-title">
+                                    <h3>Research Assistant</h3>
+                                    <p id="chatbotModelLabel">${this.modelLabel}</p>
+                                </div>
                             </div>
-                            <div class="chatbot-title">
-                                <h3>AI Assistant</h3>
-                                <p>Powered by Gemini</p>
+                            <div class="chatbot-toolbar">
+                                <span class="chatbot-status ${this.apiKey ? 'ready' : 'missing'}" id="chatbotApiStatus">${apiStatusLabel}</span>
+                                <button type="button" class="chatbot-toolbar-btn" id="chatbotPaperBtn">Browse papers</button>
+                                <button type="button" class="chatbot-toolbar-btn" id="chatbotSettingsBtn">${this.hasEmbeddedKey ? 'Config' : 'API'}</button>
                             </div>
                         </div>
-                        <button class="chatbot-close" id="chatbotClose" title="Close Chat (Esc)">
+                        <button class="chatbot-close" id="chatbotClose" title="Close Chat (Esc)" aria-label="Close chatbot">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                                 <line x1="18" y1="6" x2="6" y2="18"></line>
                                 <line x1="6" y1="6" x2="18" y2="18"></line>
                             </svg>
                         </button>
                     </div>
+
+                    <div class="chatbot-paper-context" id="chatbotPaperContext" hidden>
+                        <div class="chatbot-paper-context-copy">
+                            <span class="chatbot-paper-context-label">Current paper</span>
+                            <strong id="chatbotCurrentPaperTitle">No paper selected</strong>
+                        </div>
+                        <button type="button" class="chatbot-paper-context-clear" id="chatbotClearPaper">Clear</button>
+                    </div>
                     
                     <div class="chatbot-messages" id="chatbotMessages">
-                    <div class="chatbot-welcome">
-                        <div class="welcome-icon">📚</div>
-                        <h4>AI Research Assistant</h4>
-                        <p>I have access to 165+ gesture interaction research papers. Ask me about any topic, and I'll search the knowledge base to provide detailed answers!</p>
-                        <p style="font-size: 13px; opacity: 0.8; margin-top: 8px;">Try: "What papers discuss smartwatch gestures?" or "Tell me about finger-counting methods"</p>
+                        <div class="chatbot-welcome">
+                            <div class="welcome-icon">◌</div>
+                            <h4>Ask about the paper archive</h4>
+                            <p>Search papers, compare methods, summarize a selected paper, or ask for trends across the archive.</p>
+                            <div class="chatbot-suggestions">
+                                <button type="button" class="chatbot-suggestion" data-prompt="Find papers about smart ring interaction.">Smart ring papers</button>
+                                <button type="button" class="chatbot-suggestion" data-prompt="Compare EMG-based and IMU-based gesture research.">Compare EMG vs IMU</button>
+                                <button type="button" class="chatbot-suggestion" data-prompt="What are the recent trends in microgesture research after 2020?">Recent trends</button>
+                                <button type="button" class="chatbot-suggestion" data-prompt="Recommend papers about text input on wearables.">Recommend text input papers</button>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                
-                <div class="chatbot-input-container">
-                    <div class="chatbot-input-wrapper">
-                        <textarea 
-                            class="chatbot-input" 
-                            id="chatbotInput" 
-                            placeholder="Message AI Research Assistant..."
-                            rows="1"
-                        ></textarea>
-                        <button class="chatbot-send" id="chatbotSend">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
-                            </svg>
-                        </button>
+
+                    <div class="chatbot-input-shell">
+                        <div class="chatbot-input-container">
+                            <div class="chatbot-input-wrapper">
+                                <textarea 
+                                    class="chatbot-input" 
+                                    id="chatbotInput" 
+                                    placeholder="Message the research assistant..."
+                                    rows="1"
+                                ></textarea>
+                                <div class="chatbot-input-actions">
+                                    <span class="chatbot-input-hint">Enter to send, Shift+Enter for a new line</span>
+                                    <button class="chatbot-send" id="chatbotSend" aria-label="Send message">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
                 </div>
                 
                 <div class="chatbot-paper-selector" id="chatbotPaperSelector" style="display: none;">
@@ -180,8 +254,8 @@ class GeminiChatbot {
                 
                 <div class="chatbot-settings" id="chatbotSettings" style="display: none;">
                     <div class="settings-content">
-                        <h4>API Settings</h4>
-                        <p class="settings-description">Enter your Google Gemini API key to start chatting.</p>
+                        <h4>API Configuration</h4>
+                        <p class="settings-description" id="chatbotSettingsDescription">${this.hasEmbeddedKey ? 'An embedded API configuration is active for this build. You can still inspect or replace it here for testing.' : 'Enter your Google Gemini API key to start chatting.'}</p>
                         <a href="https://makersuite.google.com/app/apikey" target="_blank" class="api-link">Get API Key →</a>
                         <input 
                             type="password" 
@@ -201,7 +275,6 @@ class GeminiChatbot {
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
                 </svg>
-                <span class="chatbot-badge" id="chatbotBadge" style="display: none;">1</span>
             </button>
         `;
         
@@ -213,26 +286,36 @@ class GeminiChatbot {
         const close = document.getElementById('chatbotClose');
         const send = document.getElementById('chatbotSend');
         const input = document.getElementById('chatbotInput');
+        const settingsBtn = document.getElementById('chatbotSettingsBtn');
         const settingsSave = document.getElementById('settingsSave');
         const settingsCancel = document.getElementById('settingsCancel');
         const paperBtn = document.getElementById('chatbotPaperBtn');
         const paperSelectorClose = document.getElementById('paperSelectorClose');
         const paperSearchInput = document.getElementById('paperSearchInput');
         const newChatBtn = document.getElementById('newChatBtn');
+        const clearPaperBtn = document.getElementById('chatbotClearPaper');
         
-        toggle.addEventListener('click', () => this.toggleChat());
-        close.addEventListener('click', () => this.closeChat());
-        send.addEventListener('click', () => this.sendMessage());
+        if (toggle) toggle.addEventListener('click', () => this.toggleChat());
+        if (close) close.addEventListener('click', () => this.closeChat());
+        if (send) send.addEventListener('click', () => this.sendMessage());
         
-        // 新建对话按钮
-        newChatBtn.addEventListener('click', () => this.createNewConversation());
+        // 
+        if (newChatBtn) newChatBtn.addEventListener('click', () => this.createNewConversation());
+        if (settingsBtn) settingsBtn.addEventListener('click', () => this.showSettings());
+        if (clearPaperBtn) clearPaperBtn.addEventListener('click', () => this.clearCurrentPaperContext());
         
-        input.addEventListener('keydown', (e) => {
-            if (e.key === 'Enter' && !e.shiftKey) {
-                e.preventDefault();
-                this.sendMessage();
-            }
-        });
+        if (input) {
+            input.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' && !e.shiftKey) {
+                    e.preventDefault();
+                    this.sendMessage();
+                }
+            });
+
+            input.addEventListener('input', () => {
+                this.autoResizeTextarea(input);
+            });
+        }
 
         // ESC key to close chatbot
         document.addEventListener('keydown', (e) => {
@@ -241,20 +324,29 @@ class GeminiChatbot {
             }
         });
         
-        input.addEventListener('input', () => {
-            this.autoResizeTextarea(input);
-        });
+        if (settingsSave) settingsSave.addEventListener('click', () => this.saveSettings());
+        if (settingsCancel) settingsCancel.addEventListener('click', () => this.hideSettings());
         
-        settingsSave.addEventListener('click', () => this.saveSettings());
-        settingsCancel.addEventListener('click', () => this.hideSettings());
+        // 
+        if (paperBtn) paperBtn.addEventListener('click', () => this.showPaperSelector());
+        if (paperSelectorClose) paperSelectorClose.addEventListener('click', () => this.hidePaperSelector());
         
-        // 论文选择按钮
-        paperBtn.addEventListener('click', () => this.showPaperSelector());
-        paperSelectorClose.addEventListener('click', () => this.hidePaperSelector());
-        
-        // 论文搜索
-        paperSearchInput.addEventListener('input', (e) => {
-            this.filterPapers(e.target.value);
+        // 
+        if (paperSearchInput) {
+            paperSearchInput.addEventListener('input', (e) => {
+                this.filterPapers(e.target.value);
+            });
+        }
+
+        document.querySelectorAll('.chatbot-suggestion').forEach((button) => {
+            button.addEventListener('click', () => {
+                const prompt = button.dataset.prompt || '';
+                const chatInput = document.getElementById('chatbotInput');
+                if (!chatInput) return;
+                chatInput.value = prompt;
+                this.autoResizeTextarea(chatInput);
+                chatInput.focus();
+            });
         });
     }
 
@@ -262,7 +354,7 @@ class GeminiChatbot {
         const selector = document.getElementById('chatbotPaperSelector');
         selector.style.display = 'flex';
         
-        // 加载论文列表（使用索引）
+        // （）
         if (this.papersIndex && Object.keys(this.papersIndex).length > 0) {
             this.renderPaperList();
         } else {
@@ -280,7 +372,7 @@ class GeminiChatbot {
         const paperList = document.getElementById('paperList');
         const papers = Object.values(this.papersIndex || {});
         
-        // 过滤论文
+        // 
         const filtered = filterText
             ? papers.filter(p => p.title.toLowerCase().includes(filterText.toLowerCase()))
             : papers;
@@ -290,7 +382,7 @@ class GeminiChatbot {
             return;
         }
         
-        // 渲染论文列表
+        // 
         paperList.innerHTML = filtered.map(paper => `
             <div class="paper-item-selector" data-filename="${paper.filename}">
                 <div class="paper-item-title">${paper.title}</div>
@@ -298,7 +390,7 @@ class GeminiChatbot {
             </div>
         `).join('');
         
-        // 添加点击事件
+        // 
         paperList.querySelectorAll('.paper-item-selector').forEach(item => {
             item.addEventListener('click', async () => {
                 const filename = item.dataset.filename;
@@ -313,28 +405,29 @@ class GeminiChatbot {
 
     async selectPaperByFilename(filename) {
         try {
-            // 显示加载中
+            // 
             this.hidePaperSelector();
             const messagesContainer = document.getElementById('chatbotMessages');
             messagesContainer.innerHTML = '';
-            this.addMessage('System', '📥 Loading paper content, please wait...', 'system');
+            this.addMessage('System', 'Loading paper content, please wait...', 'system');
             
-            // 加载完整论文文本
+            // 
             const paper = await this.loadFullPaperText(filename);
             
             if (!paper) {
                 throw new Error('Failed to load paper data');
             }
             
-            // 设置当前论文
+            // 
             this.currentPaper = paper;
+            this.updatePaperContextUI();
             
-            // 清空对话历史
+            // 
             this.conversationHistory = [];
             messagesContainer.innerHTML = '';
             
-            // 显示成功消息
-            this.addMessage('System', `📚 Paper loaded: "${paper.title}"\n\nYou can now ask me anything about this paper!\n\n💡 Example questions:\n- What are the main contributions?\n- What research methods were used?\n- What are the experimental results?\n- What are the limitations?\n- What future work is suggested?`, 'system');
+            // 
+            this.addMessage('System', `Paper loaded: "${paper.title}"\n\nYou can now ask anything about this paper.\n\nExample questions:\n- What are the main contributions?\n- What research methods were used?\n- What are the experimental results?\n- What are the limitations?\n- What future work is suggested?`, 'system');
             
         } catch (error) {
             this.addMessage('System', `❌ Loading failed: ${error.message}\nPlease check your network connection and try again.`, 'error');
@@ -344,6 +437,47 @@ class GeminiChatbot {
     autoResizeTextarea(textarea) {
         textarea.style.height = 'auto';
         textarea.style.height = Math.min(textarea.scrollHeight, 120) + 'px';
+    }
+
+    updateApiStatusUI() {
+        const status = document.getElementById('chatbotApiStatus');
+        const description = document.getElementById('chatbotSettingsDescription');
+        if (status) {
+            const hasKey = Boolean(this.apiKey);
+            status.textContent = this.hasEmbeddedKey
+                ? 'Embedded API Ready'
+                : (hasKey ? 'API Configured' : 'API Needed');
+            status.classList.toggle('ready', hasKey);
+            status.classList.toggle('missing', !hasKey);
+        }
+
+        if (description) {
+            description.textContent = this.hasEmbeddedKey
+                ? 'An embedded API configuration is active for this build. You can still inspect or replace it here for testing.'
+                : 'Enter your Google Gemini API key to start chatting.';
+        }
+    }
+
+    updatePaperContextUI() {
+        const container = document.getElementById('chatbotPaperContext');
+        const title = document.getElementById('chatbotCurrentPaperTitle');
+        if (!container || !title) {
+            return;
+        }
+
+        if (this.currentPaper && this.currentPaper.title) {
+            container.hidden = false;
+            title.textContent = this.currentPaper.title;
+        } else {
+            container.hidden = true;
+            title.textContent = 'No paper selected';
+        }
+    }
+
+    clearCurrentPaperContext() {
+        this.currentPaper = null;
+        this.updatePaperContextUI();
+        this.addMessage('System', 'Paper context cleared. I will answer using the archive-wide knowledge base.', 'system');
     }
 
     toggleChat() {
@@ -357,12 +491,12 @@ class GeminiChatbot {
     openChat() {
         const container = document.getElementById('chatbotContainer');
         const toggle = document.getElementById('chatbotToggle');
-        const badge = document.getElementById('chatbotBadge');
         
         container.classList.add('active');
         toggle.classList.add('active');
-        badge.style.display = 'none';
         this.isOpen = true;
+        this.updateApiStatusUI();
+        this.updatePaperContextUI();
         
         // Focus input
         setTimeout(() => {
@@ -384,6 +518,7 @@ class GeminiChatbot {
         toggle.classList.remove('active');
         this.isOpen = false;
         this.hideSettings();
+        this.hidePaperSelector();
     }
 
     showSettings() {
@@ -432,74 +567,64 @@ class GeminiChatbot {
         // Add user message
         this.addMessage('You', message, 'user');
         
-        // 🎯 智能分析系统 - 检测查询类型并处理
         let relevantPapers = [];
-        let specialAnalysis = null;
+        let directResponse = null;
         
         if (this.websiteData && this.websiteData.papers) {
-            // 1️⃣ 检测统计分析查询
             const analysis = this.analyzeDatabase(message);
             if (analysis) {
-                const analysisText = this.formatAnalysisResult(analysis, message);
-                this.addMessage('System', analysisText, 'system');
-                // 统计查询不需要加载论文全文
-                specialAnalysis = 'statistics';
+                directResponse = this.formatAnalysisResult(analysis, message);
             }
             
-            // 2️⃣ 检测术语解释查询
-            if (/what is|define|explain|meaning of/i.test(message)) {
+            if (!directResponse && /what is|define|explain|meaning of/i.test(message)) {
                 const knowledge = this.getDomainKnowledge();
                 const lowerMsg = message.toLowerCase();
                 
-                // 查找匹配的术语
                 for (const [term, definition] of Object.entries(knowledge.terms)) {
                     if (lowerMsg.includes(term)) {
-                        const termInfo = `📖 **${term.toUpperCase()}**: ${definition}\n\nRelated papers in database using this technology: ${this.websiteData.papers.filter(p => {
+                        const relatedCount = this.websiteData.papers.filter(p => {
                             const text = JSON.stringify(p).toLowerCase();
                             return text.includes(term);
-                        }).length} papers`;
-                        this.addMessage('System', termInfo, 'system');
+                        }).length;
+                        directResponse = `📖 **${term.toUpperCase()}**: ${definition}\n\nRelated papers in the archive using this term: **${relatedCount}**`;
                         break;
                     }
                 }
             }
             
-            // 3️⃣ 常规知识库检索
-            if (!specialAnalysis) {
+            if (!directResponse) {
                 relevantPapers = this.searchPapers(message);
                 
                 if (relevantPapers.length > 0) {
-                    // 检测对比查询
-                    const isCompare = /compare|versus|vs|difference/i.test(message);
-                    
-                    if (isCompare && relevantPapers.length >= 2) {
-                        // 对比分析
-                        const comparison = this.comparePapers(relevantPapers.slice(0, 3), message);
-                        if (comparison) {
-                            const compText = this.formatComparisonResult(comparison);
-                            this.addMessage('System', compText, 'system');
-                        }
-                    }
-                    
-                    // 显示检索信息
-                    const paperTitles = relevantPapers.slice(0, 3).map(p => `"${p.title}"`).join(', ');
-                    const moreText = relevantPapers.length > 3 ? ` and ${relevantPapers.length - 3} more` : '';
-                    this.addMessage('System', `🔍 Knowledge base search: Found ${relevantPapers.length} relevant papers: ${paperTitles}${moreText}`, 'system');
-                    
-                    // 加载前5篇论文全文
-                    relevantPapers = relevantPapers.slice(0, 5);
+                    relevantPapers = relevantPapers.slice(0, this.config.retrieval.maxRelevantPapers);
                     await this.loadPaperTexts(relevantPapers);
                     
-                    // 4️⃣ 检测推荐请求
                     if (/recommend|suggest|similar|related|also|like this/i.test(message) && relevantPapers.length > 0) {
                         const recommendations = this.recommendPapers(relevantPapers[0], 5);
-                        if (recommendations.length > 0) {
-                            const recText = this.formatRecommendations(recommendations, relevantPapers[0]);
-                            this.addMessage('System', recText, 'system');
-                        }
+                        const seenTitles = new Set(relevantPapers.map((paper) => paper.title));
+                        recommendations.forEach((paper) => {
+                            if (!seenTitles.has(paper.title)) {
+                                relevantPapers.push(paper);
+                                seenTitles.add(paper.title);
+                            }
+                        });
+                        relevantPapers = relevantPapers.slice(0, this.config.retrieval.maxRelevantPapers);
                     }
                 }
             }
+        }
+
+        if (directResponse) {
+            this.conversationHistory.push({
+                role: 'user',
+                text: message
+            });
+            this.conversationHistory.push({
+                role: 'model',
+                text: directResponse
+            });
+            this.addMessage('AI', directResponse, 'bot');
+            return;
         }
         
         // Show loading
@@ -525,63 +650,49 @@ class GeminiChatbot {
     }
 
     async callGeminiAPI(message, relevantPapers = []) {
-        // 构建对话内容
-        const contents = [];
-        
-        // 第一次对话：添加系统上下文
+        const messages = [];
+
         if (this.conversationHistory.length === 0) {
-            const context = this.buildContext();
-            contents.push({
-                role: 'user',
-                parts: [{ text: context }]
-            });
-            contents.push({
-                role: 'model',
-                parts: [{ text: 'I understand. I\'m ready to help you explore the gesture interaction research papers database. What would you like to know?' }]
+            messages.push({
+                role: 'system',
+                content: this.buildContext()
             });
         }
-        
-        // 📚 动态知识库注入：如果有相关论文，注入完整内容（智能选择）
+
         if (relevantPapers.length > 0) {
             const knowledgeContext = this.buildKnowledgeContext(relevantPapers, message);
             if (knowledgeContext) {
-                contents.push({
-                    role: 'user',
-                    parts: [{ text: knowledgeContext }]
-                });
-                contents.push({
-                    role: 'model',
-                    parts: [{ text: 'I have analyzed the relevant papers with focus on the specific information needed for your question. Please proceed with your query.' }]
+                messages.push({
+                    role: 'system',
+                    content: knowledgeContext
                 });
             }
         }
-        
-        // 添加历史对话（最多保留最近5轮对话）
-        const recentHistory = this.conversationHistory.slice(-10); // 最近10条消息 = 5轮对话
+
+        const recentHistory = this.conversationHistory.slice(-this.config.retrieval.maxHistoryMessages);
         recentHistory.forEach(item => {
-            contents.push({
-                role: item.role,
-                parts: [{ text: item.text }]
+            messages.push({
+                role: item.role === 'model' ? 'assistant' : item.role,
+                content: item.text
             });
         });
-        
-        // 添加当前用户消息
-        contents.push({
+
+        messages.push({
             role: 'user',
-            parts: [{ text: message }]
+            content: message
         });
-        
-        const response = await fetch(`${this.apiEndpoint}?key=${this.apiKey}`, {
+
+        const response = await fetch(this.apiEndpoint, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
+                'Authorization': `Bearer ${this.apiKey}`
             },
             body: JSON.stringify({
-                contents: contents,
-                generationConfig: {
-                    temperature: 0.7,
-                    maxOutputTokens: 2048,
-                }
+                model: this.model,
+                messages,
+                temperature: 0.7,
+                max_tokens: 2048
             })
         });
         
@@ -591,9 +702,8 @@ class GeminiChatbot {
         }
         
         const data = await response.json();
-        const aiResponse = data.candidates[0]?.content?.parts[0]?.text || 'No response generated';
-        
-        // 保存到历史记录
+        const aiResponse = data.choices?.[0]?.message?.content || 'No response generated';
+
         this.conversationHistory.push({
             role: 'user',
             text: message
@@ -607,35 +717,35 @@ class GeminiChatbot {
     }
 
     /**
-     * 🔬 高级知识库：加载并预处理论文全文
+     * 🔬 ：
      */
     async loadPaperTexts(papers) {
         if (!this.papersTexts) {
             try {
                 const response = await fetch('papers-texts.json');
                 this.papersTexts = await response.json();
-                console.log('📚 Papers full texts loaded:', Object.keys(this.papersTexts).length, 'papers');
+                console.log('Paper full texts loaded:', Object.keys(this.papersTexts).length, 'papers');
             } catch (error) {
                 console.error('Error loading papers texts:', error);
                 return;
             }
         }
         
-        // 为每篇论文附加全文并进行智能预处理
+        // 
         papers.forEach(paper => {
             const filename = paper.pdfFile || paper.filename;
             if (filename && this.papersTexts[filename]) {
                 paper.fullText = this.papersTexts[filename].text;
                 paper.fullTextLength = this.papersTexts[filename].length || paper.fullText.length;
                 
-                // 🔬 智能预处理：提取结构化信息
+                // 🔬 ：
                 paper.extractedData = this.extractPaperStructure(paper.fullText, paper);
             }
         });
     }
 
     /**
-     * 🔬 论文结构化提取 - 提取关键信息
+     * 🔬  - 
      */
     extractPaperStructure(fullText, paper) {
         if (!fullText) return null;
@@ -650,35 +760,35 @@ class GeminiChatbot {
             limitations: []
         };
 
-        // 1. 提取摘要（前1000字符通常包含摘要）
+        // 1. （1000）
         extracted.abstract = fullText.substring(0, 1000);
 
-        // 2. 查找方法部分
+        // 2. 
         const methodSections = this.findSections(fullText, [
             'method', 'approach', 'technique', 'implementation', 'system design', 'algorithm'
         ]);
         extracted.methods = methodSections.slice(0, 3000).join(' ');
 
-        // 3. 查找结果/评估部分
+        // 3. /
         const resultSections = this.findSections(fullText, [
             'result', 'evaluation', 'experiment', 'user study', 'performance', 'accuracy'
         ]);
         extracted.results = resultSections.slice(0, 3000).join(' ');
 
-        // 4. 提取数值指标
+        // 4. 
         extracted.metrics = this.extractMetrics(fullText);
 
-        // 5. 提取贡献点
+        // 5. 
         extracted.contributions = this.extractContributions(fullText);
 
-        // 6. 提取局限性
+        // 6. 
         extracted.limitations = this.extractLimitations(fullText);
 
         return extracted;
     }
 
     /**
-     * 查找特定章节
+     * 
      */
     findSections(text, keywords) {
         const sections = [];
@@ -687,10 +797,10 @@ class GeminiChatbot {
         for (let i = 0; i < lines.length; i++) {
             const line = lines[i].toLowerCase();
             
-            // 检测章节标题
+            // 
             for (const keyword of keywords) {
                 if (line.includes(keyword) && line.length < 100) {
-                    // 找到章节，提取后续内容
+                    // ，
                     const sectionText = lines.slice(i, Math.min(i + 50, lines.length)).join(' ');
                     sections.push(sectionText);
                     break;
@@ -702,7 +812,7 @@ class GeminiChatbot {
     }
 
     /**
-     * 🔬 提取数值指标（准确率、延迟、用户数等）
+     * 🔬 （）
      */
     extractMetrics(text) {
         const metrics = {
@@ -716,24 +826,24 @@ class GeminiChatbot {
             gestures: []
         };
 
-        // 准确率 (accuracy, recognition rate)
+        //  (accuracy, recognition rate)
         const accuracyRegex = /(\d+\.?\d*)\s*%?\s*(accuracy|recognition rate|correct|success rate)/gi;
         let match;
         while ((match = accuracyRegex.exec(text)) !== null) {
             const value = parseFloat(match[1]);
-            if (value > 50 && value <= 100) { // 合理的准确率范围
+            if (value > 50 && value <= 100) { // 
                 metrics.accuracy.push(value);
             }
         }
 
-        // 延迟 (latency, delay, response time)
+        //  (latency, delay, response time)
         const latencyRegex = /(\d+\.?\d*)\s*(ms|millisecond|second)/gi;
         while ((match = latencyRegex.exec(text)) !== null) {
             const value = parseFloat(match[1]);
             const unit = match[2].toLowerCase();
-            // 转换为ms
+            // ms
             const latencyMs = unit.includes('second') && !unit.includes('milli') ? value * 1000 : value;
-            if (latencyMs < 10000) { // 合理的延迟范围
+            if (latencyMs < 10000) { // 
                 metrics.latency.push(latencyMs);
             }
         }
@@ -744,16 +854,16 @@ class GeminiChatbot {
             metrics.fps.push(parseFloat(match[1]));
         }
 
-        // 用户数 (participants, users, subjects)
+        //  (participants, users, subjects)
         const userRegex = /(\d+)\s*(participant|user|subject|people)/gi;
         while ((match = userRegex.exec(text)) !== null) {
             const value = parseInt(match[1]);
-            if (value > 0 && value < 1000) { // 合理的用户数
+            if (value > 0 && value < 1000) { // 
                 metrics.users.push(value);
             }
         }
 
-        // 手势数量
+        // 
         const gestureRegex = /(\d+)\s*(gesture|motion|action|class|command)/gi;
         while ((match = gestureRegex.exec(text)) !== null) {
             const value = parseInt(match[1]);
@@ -762,7 +872,7 @@ class GeminiChatbot {
             }
         }
 
-        // 计算平均值
+        // 
         for (const key in metrics) {
             if (metrics[key].length > 0) {
                 const avg = metrics[key].reduce((a, b) => a + b, 0) / metrics[key].length;
@@ -776,7 +886,7 @@ class GeminiChatbot {
     }
 
     /**
-     * 提取贡献点
+     * 
      */
     extractContributions(text) {
         const contributions = [];
@@ -796,11 +906,11 @@ class GeminiChatbot {
             }
         }
 
-        return contributions.slice(0, 5); // 最多5个
+        return contributions.slice(0, 5); // 5
     }
 
     /**
-     * 提取局限性
+     * 
      */
     extractLimitations(text) {
         const limitations = [];
@@ -820,11 +930,11 @@ class GeminiChatbot {
             }
         }
 
-        return limitations.slice(0, 5); // 最多5个
+        return limitations.slice(0, 5); // 5
     }
 
     /**
-     * 📊 方案1：智能统计分析系统
+     * 📊 1：
      */
     analyzeDatabase(query) {
         if (!this.websiteData || !this.websiteData.papers) {
@@ -834,7 +944,7 @@ class GeminiChatbot {
         const papers = this.websiteData.papers;
         const lowerQuery = query.toLowerCase();
         
-        // 检测查询意图
+        // 
         const isStatQuery = /how many|count|number of|statistics|trend|popular|most used|distribution|compare.*papers/i.test(query);
         const isTrendQuery = /trend|evolution|history|over time|year|timeline/i.test(query);
         const isHardwareQuery = /hardware|device|sensor|equipment/i.test(query);
@@ -842,7 +952,7 @@ class GeminiChatbot {
         const isYearQuery = /\b20\d{2}\b/.test(query);
         
         if (!isStatQuery && !isTrendQuery && !isHardwareQuery && !isAppQuery && !isYearQuery) {
-            return null; // 不是统计类查询
+            return null; // 
         }
 
         const analysis = {
@@ -856,45 +966,45 @@ class GeminiChatbot {
             conferences: {}
         };
 
-        // 统计各维度数据
+        // 
         papers.forEach(paper => {
-            // 年份统计
+            // 
             const year = paper.year || 'Unknown';
             analysis.yearRange[year] = (analysis.yearRange[year] || 0) + 1;
 
-            // 类别统计
+            // 
             const category = paper.category || 'Unknown';
             analysis.categories[category] = (analysis.categories[category] || 0) + 1;
 
-            // 硬件统计
+            // 
             if (paper.hardwareDevices) {
                 paper.hardwareDevices.forEach(hw => {
                     analysis.hardware[hw] = (analysis.hardware[hw] || 0) + 1;
                 });
             }
 
-            // 应用场景统计
+            // 
             if (paper.applicationScenarios) {
                 paper.applicationScenarios.forEach(app => {
                     analysis.applications[app] = (analysis.applications[app] || 0) + 1;
                 });
             }
 
-            // 手势类型统计
+            // 
             if (paper.gestureTypes) {
                 paper.gestureTypes.forEach(gest => {
                     analysis.gestures[gest] = (analysis.gestures[gest] || 0) + 1;
                 });
             }
 
-            // 会议统计
+            // 
             if (paper.conferenceName) {
-                const conf = paper.conferenceName.split(':')[0].trim(); // 提取会议简称
+                const conf = paper.conferenceName.split(':')[0].trim(); // 
                 analysis.conferences[conf] = (analysis.conferences[conf] || 0) + 1;
             }
         });
 
-        // 排序
+        // 
         analysis.topHardware = Object.entries(analysis.hardware)
             .sort((a, b) => b[1] - a[1])
             .slice(0, 10);
@@ -919,7 +1029,7 @@ class GeminiChatbot {
     }
 
     /**
-     * 格式化统计分析结果为可读文本
+     * 
      */
     formatAnalysisResult(analysis, query) {
         if (!analysis) return null;
@@ -927,7 +1037,7 @@ class GeminiChatbot {
         let result = '📊 **Database Statistical Analysis**\n\n';
         result += `**Overview:** ${analysis.total} gesture interaction research papers (${analysis.yearTrend[0]?.[0] || '2002'}-${analysis.yearTrend[analysis.yearTrend.length-1]?.[0] || '2025'})\n\n`;
 
-        // 年份趋势
+        // 
         if (/trend|timeline|evolution|history|over time/i.test(query)) {
             result += '## 📈 Research Trend by Year\n';
             const recentYears = analysis.yearTrend.slice(-10);
@@ -938,7 +1048,7 @@ class GeminiChatbot {
             result += '\n';
         }
 
-        // 硬件统计
+        // 
         if (/hardware|device|sensor/i.test(query) || analysis.topHardware.length > 0) {
             result += '## 🔧 Most Used Hardware/Sensors\n';
             analysis.topHardware.slice(0, 8).forEach(([hw, count], idx) => {
@@ -947,7 +1057,7 @@ class GeminiChatbot {
             result += '\n';
         }
 
-        // 应用场景统计
+        // 
         if (/application|scenario|use case/i.test(query) || analysis.topApplications.length > 0) {
             result += '## 🎯 Application Scenarios\n';
             analysis.topApplications.slice(0, 8).forEach(([app, count], idx) => {
@@ -956,7 +1066,7 @@ class GeminiChatbot {
             result += '\n';
         }
 
-        // 研究类别
+        // 
         if (Object.keys(analysis.categories).length > 0) {
             result += '## 📚 Research Categories\n';
             Object.entries(analysis.categories)
@@ -968,7 +1078,7 @@ class GeminiChatbot {
             result += '\n';
         }
 
-        // 顶会分布
+        // 
         if (analysis.topConferences.length > 0) {
             result += '## 🏆 Top Conferences/Journals\n';
             analysis.topConferences.slice(0, 5).forEach(([conf, count], idx) => {
@@ -983,12 +1093,12 @@ class GeminiChatbot {
     }
 
     /**
-     * 🔬 智能知识库上下文构建 - 根据问题类型动态选择内容
+     * 🔬  - 
      */
     buildKnowledgeContext(papers, query = '') {
         if (!papers || papers.length === 0) return '';
         
-        // 检测问题类型
+        // 
         const queryLower = query.toLowerCase();
         const isMethodQuery = /method|approach|technique|algorithm|how.*work|implement/i.test(query);
         const isResultQuery = /accuracy|precision|result|performance|evaluation|metric|achieve/i.test(query);
@@ -1010,27 +1120,27 @@ class GeminiChatbot {
                 context += `**Applications:** ${paper.applicationScenarios.join(', ')}\n`;
             }
             
-            // 🔬 根据提取的结构化数据智能注入内容
+            // 🔬 
             if (paper.extractedData) {
                 const data = paper.extractedData;
                 
-                // 总是包含摘要（概览）
+                // （）
                 if (data.abstract) {
                     context += `\n**ABSTRACT:**\n${data.abstract.substring(0, 800)}...\n`;
                 }
                 
-                // 如果是方法查询，重点提供方法部分
+                // ，
                 if (isMethodQuery && data.methods) {
                     context += `\n**METHODS:**\n${data.methods.substring(0, 2000)}...\n`;
                 }
                 
-                // 如果是结果查询，重点提供结果和指标
+                // ，
                 if (isResultQuery) {
                     if (data.results) {
                         context += `\n**RESULTS:**\n${data.results.substring(0, 2000)}...\n`;
                     }
                     
-                    // 添加提取的数值指标
+                    // 
                     if (data.metrics && Object.keys(data.metrics).length > 0) {
                         context += `\n**KEY METRICS:**\n`;
                         if (data.metrics.accuracy_avg) {
@@ -1048,7 +1158,7 @@ class GeminiChatbot {
                     }
                 }
                 
-                // 如果是对比查询，提供全面信息
+                // ，
                 if (isCompareQuery) {
                     if (data.methods) {
                         context += `\n**METHODS:**\n${data.methods.substring(0, 1500)}...\n`;
@@ -1056,13 +1166,13 @@ class GeminiChatbot {
                     if (data.results) {
                         context += `\n**RESULTS:**\n${data.results.substring(0, 1500)}...\n`;
                     }
-                    // 指标
+                    // 
                     if (data.metrics.accuracy_avg) {
                         context += `\n**Performance:** Accuracy: ${data.metrics.accuracy_avg}%\n`;
                     }
                 }
                 
-                // 如果是概览查询或通用查询，提供平衡的内容
+                // ，
                 if (isOverviewQuery || (!isMethodQuery && !isResultQuery && !isCompareQuery)) {
                     if (data.contributions && data.contributions.length > 0) {
                         context += `\n**KEY CONTRIBUTIONS:**\n`;
@@ -1079,7 +1189,7 @@ class GeminiChatbot {
                     }
                 }
             } else if (paper.fullText) {
-                // 如果没有提取的数据，回退到原始方法
+                // ，
                 const maxLength = 8000;
                 const text = paper.fullText.length > maxLength 
                     ? paper.fullText.substring(0, maxLength) + '...(truncated)'
@@ -1090,7 +1200,7 @@ class GeminiChatbot {
             context += '\n' + '='.repeat(80) + '\n\n';
         });
         
-        // 根据问题类型提供不同的指令
+        // 
         context += '\n**INSTRUCTIONS:**\n';
         context += '- Answer based on the papers above with specific citations\n';
         context += '- Always mention paper title, author, and year when discussing results\n';
@@ -1113,58 +1223,112 @@ class GeminiChatbot {
         return context;
     }
 
+    normalizeQueryText(text = '') {
+        return text
+            .toLowerCase()
+            .replace(/[^\p{L}\p{N}\s-]+/gu, ' ')
+            .replace(/\s+/g, ' ')
+            .trim();
+    }
+
+    expandQueryKeywords(query) {
+        const normalized = this.normalizeQueryText(query);
+        const synonymMap = {
+            microgesture: ['micro gesture', 'subtle gesture'],
+            gesture: ['gestures', 'interaction gesture'],
+            ring: ['smart ring', 'finger worn'],
+            smartwatch: ['smart watch', 'watch'],
+            earbuds: ['ear worn', 'ear based interaction'],
+            glasses: ['smart glasses', 'ar glasses'],
+            emg: ['electromyography', 'muscle signal'],
+            imu: ['inertial measurement unit', 'accelerometer', 'gyroscope'],
+            radar: ['rf sensing', 'millimeter wave', 'mmwave'],
+            acoustic: ['audio', 'sound based'],
+            haptic: ['vibrotactile', 'tactile'],
+            'text input': ['typing', 'keyboard', 'text entry'],
+            accessibility: ['visual impairment', 'assistive'],
+            ar: ['augmented reality'],
+            vr: ['virtual reality'],
+            recommend: ['similar', 'related'],
+            compare: ['comparison', 'difference']
+        };
+
+        const stopWords = ['the', 'a', 'an', 'and', 'or', 'but', 'in', 'on', 'at', 'to', 'for', 'of', 'with', 'by', 'is', 'are', 'was', 'were', 'what', 'how', 'which', 'about', 'can', 'you', 'i', 'tell', 'me', 'show', 'please', 'find', 'search'];
+        const tokens = normalized.split(/\s+/).filter((word) => word.length > 1 && !stopWords.includes(word));
+        const expanded = new Set(tokens);
+
+        Object.entries(synonymMap).forEach(([term, alternatives]) => {
+            if (normalized.includes(term) || tokens.includes(term)) {
+                alternatives.forEach((alt) => expanded.add(alt));
+            }
+        });
+
+        tokens.forEach((token) => {
+            Object.entries(synonymMap).forEach(([term, alternatives]) => {
+                if (alternatives.includes(token)) {
+                    expanded.add(term);
+                }
+            });
+        });
+
+        return Array.from(expanded).slice(0, 16);
+    }
+
     /**
-     * 📊 方案3：增强RAG检索系统 - 智能论文检索
+     * 📊 3：RAG - 
      */
     searchPapers(query) {
         if (!this.websiteData || !this.websiteData.papers) {
             return [];
         }
         
-        const lowerQuery = query.toLowerCase();
+        const lowerQuery = this.normalizeQueryText(query);
+        const keywords = this.expandQueryKeywords(query);
         
-        // 提取关键词（移除停用词）
-        const stopWords = ['the', 'a', 'an', 'and', 'or', 'but', 'in', 'on', 'at', 'to', 'for', 'of', 'with', 'by', 'is', 'are', 'was', 'were', 'what', 'how', 'which', 'about', 'can', 'you', 'i', 'tell', 'me', 'show', 'please', 'find', 'search'];
-        const keywords = lowerQuery
-            .split(/\s+/)
-            .filter(word => word.length > 2 && !stopWords.includes(word))
-            .slice(0, 10);
-        
-        // 检测查询意图
+        // 
         const isCompareQuery = /compare|versus|vs|difference|better|which/i.test(query);
         const isMethodQuery = /method|approach|technique|algorithm|how.*work/i.test(query);
         const isResultQuery = /accuracy|precision|result|performance|evaluation/i.test(query);
         
-        // 计算每篇论文的相关性分数
+        // 
         const scoredPapers = this.websiteData.papers.map(paper => {
             let score = 0;
-            const title = (paper.title || '').toLowerCase();
-            const author = (paper.authors || paper.firstAuthor || '').toLowerCase();
-            const conf = (paper.conferenceName || '').toLowerCase();
+            const title = this.normalizeQueryText(paper.title || '');
+            const author = this.normalizeQueryText(paper.authors || paper.firstAuthor || '');
+            const conf = this.normalizeQueryText(paper.conferenceName || '');
+            const category = this.normalizeQueryText(paper.category || '');
             const allTags = [
                 ...(paper.hardwareDevices || []),
                 ...(paper.applicationScenarios || []),
                 ...(paper.gestureTypes || []),
-                ...(paper.recognitionClassification || [])
-            ].map(t => t.toLowerCase()).join(' ');
+                ...(paper.recognitionClassification || []),
+                ...(paper.sensingTechnology || []),
+                ...(paper.interactionModalities || []),
+                ...(paper.feedbackOutput || []),
+                ...(paper.userExperienceDesign || [])
+            ].map(t => this.normalizeQueryText(t)).join(' ');
+            const searchableText = `${title} ${author} ${conf} ${category} ${allTags}`;
             
-            // 完全匹配 - 最高分
+            //  - 
             if (title.includes(lowerQuery)) score += 100;
+            if (searchableText.includes(lowerQuery)) score += 30;
             
-            // 标题关键词匹配（加权）
+            // （）
             keywords.forEach(kw => {
-                if (title.includes(kw)) score += 15;
+                if (title.includes(kw)) score += 18;
                 if (author.includes(kw)) score += 8;
-                if (allTags.includes(kw)) score += 5;
-                if (conf.includes(kw)) score += 3;
+                if (allTags.includes(kw)) score += 9;
+                if (category.includes(kw)) score += 7;
+                if (conf.includes(kw)) score += 4;
+                if (searchableText.includes(kw)) score += 2;
             });
             
-            // 年份匹配
+            // 
             if (paper.year && lowerQuery.includes(paper.year.toString())) {
                 score += 10;
             }
             
-            // 根据查询意图调整分数
+            // 
             if (isMethodQuery && (title.includes('method') || title.includes('approach'))) {
                 score += 10;
             }
@@ -1172,13 +1336,13 @@ class GeminiChatbot {
                 score += 10;
             }
             
-            // 顶会论文加分（CHI, UIST等）
+            // （CHI, UIST）
             const topConferences = ['CHI', 'UIST', 'MobileHCI', 'SIGGRAPH'];
             if (topConferences.some(tc => conf.includes(tc.toLowerCase()))) {
                 score += 5;
             }
             
-            // 近期论文轻微加分
+            // 
             if (paper.year && paper.year >= 2020) {
                 score += 2;
             }
@@ -1186,23 +1350,25 @@ class GeminiChatbot {
             return { paper, score };
         });
         
-        // 过滤并排序
+        // 
         const results = scoredPapers
             .filter(item => item.score > 0)
             .sort((a, b) => b.score - a.score)
             .map(item => item.paper);
         
-        // 如果是对比查询，返回更多结果以便对比
-        const limit = isCompareQuery ? 10 : 5;
+        // ，
+        const limit = isCompareQuery
+            ? Math.max(this.config.retrieval.maxRelevantPapers, 8)
+            : this.config.retrieval.maxRelevantPapers;
         return results.slice(0, limit);
     }
 
     /**
-     * 方案4：专业领域知识库
+     * 4：
      */
     getDomainKnowledge() {
         return {
-            // 常见术语解释
+            // 
             terms: {
                 'imu': 'Inertial Measurement Unit - sensors that measure motion via accelerometer and gyroscope',
                 'emg': 'Electromyography - measures electrical activity of muscles',
@@ -1230,7 +1396,7 @@ class GeminiChatbot {
                 'user study': 'Research involving human participants',
                 'micro-gesture': 'Small, subtle hand or finger movements',
                 'on-body': 'Interaction on body surface (skin)',
-                'mid-air': 'Gestures performed in空中 without touching surface',
+                'mid-air': 'Gestures performed in the air without touching a surface',
                 'smartwatch': 'Wrist-worn computer with sensors',
                 'smart ring': 'Finger-worn wearable device',
                 'ar': 'Augmented Reality - overlay digital on physical world',
@@ -1238,7 +1404,7 @@ class GeminiChatbot {
                 'gesture elicitation': 'Study method to discover user-preferred gestures'
             },
             
-            // 研究方法
+            // 
             methods: {
                 'vision-based': 'Uses cameras to track hand/finger movements',
                 'sensor-based': 'Uses wearable sensors (IMU, EMG, etc.)',
@@ -1247,7 +1413,7 @@ class GeminiChatbot {
                 'hybrid': 'Combines multiple sensing modalities'
             },
             
-            // 顶级会议
+            // 
             conferences: {
                 'CHI': 'ACM Conference on Human Factors in Computing Systems (top HCI conference)',
                 'UIST': 'ACM Symposium on User Interface Software and Technology',
@@ -1262,7 +1428,7 @@ class GeminiChatbot {
     }
 
     /**
-     * 方案5：智能对比分析引擎
+     * 5：
      */
     comparePapers(papers, query) {
         if (!papers || papers.length < 2) {
@@ -1284,7 +1450,7 @@ class GeminiChatbot {
             differences: []
         };
 
-        // 找出共同点
+        // 
         if (papers.length >= 2) {
             const hw1 = new Set(papers[0].hardwareDevices || []);
             const hw2 = new Set(papers[1].hardwareDevices || []);
@@ -1295,7 +1461,7 @@ class GeminiChatbot {
             comparison.commonApplications = [...app1].filter(a => app2.has(a));
         }
 
-        // 分析差异
+        // 
         const yearDiff = Math.abs((papers[0].year || 2020) - (papers[1].year || 2020));
         if (yearDiff > 5) {
             comparison.differences.push(`Significant time gap: ${yearDiff} years between papers`);
@@ -1305,7 +1471,7 @@ class GeminiChatbot {
     }
 
     /**
-     * 格式化对比结果
+     * 
      */
     formatComparisonResult(comparison) {
         if (!comparison) return null;
@@ -1339,7 +1505,7 @@ class GeminiChatbot {
     }
 
     /**
-     * 方案6：智能推荐系统
+     * 6：
      */
     recommendPapers(basePaper, count = 5) {
         if (!basePaper || !this.websiteData) {
@@ -1348,34 +1514,34 @@ class GeminiChatbot {
 
         const papers = this.websiteData.papers.filter(p => p.id !== basePaper.id);
         
-        // 计算相似度
+        // 
         const scoredPapers = papers.map(paper => {
             let similarity = 0;
             
-            // 硬件相似度
+            // 
             const baseHW = new Set(basePaper.hardwareDevices || []);
             const paperHW = new Set(paper.hardwareDevices || []);
             const hwOverlap = [...baseHW].filter(h => paperHW.has(h)).length;
             similarity += hwOverlap * 10;
             
-            // 应用场景相似度
+            // 
             const baseApp = new Set(basePaper.applicationScenarios || []);
             const paperApp = new Set(paper.applicationScenarios || []);
             const appOverlap = [...baseApp].filter(a => paperApp.has(a)).length;
             similarity += appOverlap * 8;
             
-            // 年份接近度（±3年内）
+            // （±3）
             const yearDiff = Math.abs((paper.year || 2020) - (basePaper.year || 2020));
             if (yearDiff <= 3) {
                 similarity += (3 - yearDiff) * 2;
             }
             
-            // 同一类别
+            // 
             if (paper.category === basePaper.category) {
                 similarity += 5;
             }
             
-            // 同一作者
+            // 
             if (paper.firstAuthor === basePaper.firstAuthor) {
                 similarity += 15;
             }
@@ -1391,7 +1557,7 @@ class GeminiChatbot {
     }
 
     /**
-     * 格式化推荐结果
+     * 
      */
     formatRecommendations(papers, basePaper) {
         if (!papers || papers.length === 0) return null;
@@ -1403,7 +1569,7 @@ class GeminiChatbot {
             result += `   - Author: ${paper.firstAuthor || paper.authors || 'Unknown'}\n`;
             result += `   - Year: ${paper.year || 'Unknown'}\n`;
             
-            // 说明推荐原因
+            // 
             const reasons = [];
             if (paper.hardwareDevices && basePaper.hardwareDevices) {
                 const common = paper.hardwareDevices.filter(h => 
@@ -1438,7 +1604,7 @@ class GeminiChatbot {
         const papers = this.websiteData.papers;
         const totalPapers = papers.length;
         
-        // 统计年份
+        // 
         const yearCounts = {};
         papers.forEach(p => {
             const year = p.year || 'Unknown';
@@ -1447,7 +1613,7 @@ class GeminiChatbot {
         const yearsData = Object.entries(yearCounts)
             .sort((a, b) => b[0].localeCompare(a[0]));
         
-        // 统计硬件设备
+        // 
         const deviceCounts = {};
         papers.forEach(p => {
             if (p.hardwareDevices) {
@@ -1460,7 +1626,7 @@ class GeminiChatbot {
             .sort((a, b) => b[1] - a[1])
             .slice(0, 15);
         
-        // 统计应用场景
+        // 
         const appCounts = {};
         papers.forEach(p => {
             if (p.applicationScenarios) {
@@ -1473,7 +1639,7 @@ class GeminiChatbot {
             .sort((a, b) => b[1] - a[1])
             .slice(0, 15);
         
-        // 统计手势类型
+        // 
         const gestureCounts = {};
         papers.forEach(p => {
             if (p.gestureTypes) {
@@ -1486,7 +1652,7 @@ class GeminiChatbot {
             .sort((a, b) => b[1] - a[1])
             .slice(0, 15);
         
-        // 为每个标签类别生成精简的论文索引
+        // 
         const generatePaperIndex = (filterFn, limit = 30) => {
             return papers.filter(filterFn).slice(0, limit).map(p => 
                 `[${p.id}] "${p.title}" (${p.year})`
@@ -1552,7 +1718,7 @@ To access these papers:
     }
 
     generateCompactWebsiteData() {
-        // 生成紧凑版的网站数据（用于有论文时）
+        // （）
         if (!this.websiteData || !this.websiteData.papers) {
             return '';
         }
@@ -1560,7 +1726,7 @@ To access these papers:
         const papers = this.websiteData.papers;
         const totalPapers = papers.length;
         
-        // 只提供统计摘要
+        // 
         const yearCounts = {};
         papers.forEach(p => {
             const year = p.year || 'Unknown';
@@ -1568,78 +1734,47 @@ To access these papers:
         });
         
         return `
-## 📊 网站数据库概览
-**总计**: ${totalPapers}篇论文 (2005-2023)
-**搜索功能**: 可以帮助用户搜索和推荐相关论文
-**查看方式**: 告诉用户论文标题，建议在网站上搜索查看详情和链接
+## Archive Overview
+**Total papers**: ${totalPapers} papers (2005-2023)
+**Search support**: The assistant can search and recommend papers from the archive
+**Browsing**: Users can search paper titles on the site and open paper cards for details
 `;
     }
 
     buildContext() {
-        let context = `You are an AI Research Assistant with access to a comprehensive knowledge base of gesture interaction research papers.
+        const totalPapers = this.websiteData?.papers?.length || 0;
+        let context = `You are a research assistant for a website about gesture and microgesture interaction papers.
 
-**YOUR CAPABILITIES:**
-- You have access to 165+ research papers on gesture interaction (2005-2023)
-- When users ask questions, relevant papers will be automatically loaded and provided to you
-- You can discuss paper content, methodologies, findings, and comparisons
-- You can recommend papers based on user interests
+Core rules:
+- Respond in the same language as the user unless the user asks otherwise.
+- Be concise, accurate, and structured.
+- Always ground claims in the retrieved papers when paper evidence is available.
+- Cite paper title, year, and author when making a specific claim.
+- If retrieved evidence is insufficient, say so clearly instead of guessing.
+- When relevant, recommend papers and explain why they are relevant.
 
-**HOW TO RESPOND:**
-- Always cite papers by title and author when discussing specific research
-- Provide detailed answers based on the actual paper content
-- If asked about papers not in your current context, indicate that and offer to search
-- Format responses clearly with proper citations
+Archive facts:
+- The website contains ${totalPapers}+ papers.
+- Users can click paper cards on the website to open full details and DOI links.
+`;
 
-**DATABASE OVERVIEW:**`;
-        
-        if (this.websiteData) {
-            context += '\n' + this.generateCompactWebsiteData();
-        }
-        
-        // 如果有当前选中的论文，提供其详细内容
         if (this.currentPaper && this.currentPaper.text) {
             const paperText = this.currentPaper.text;
-            const maxChars = 25000;
+            const maxChars = 18000;
             
             const truncatedText = paperText.length > maxChars 
-                ? paperText.substring(0, maxChars) + '\n\n[论文内容过长，已截断...]'
+                ? paperText.substring(0, maxChars) + '\n\n[Paper content truncated for context length.]'
                 : paperText;
             
-            context += `\n\n## 📄 当前讨论的论文
+            context += `\nCurrent focused paper:
+- Title: ${this.currentPaper.title}
 
-**标题**: ${this.currentPaper.title}
+Use this paper as the primary source when the user asks about "this paper".
 
-**论文内容**:
-${truncatedText}
-
-**回答要求**:
-- 优先基于论文内容回答
-- 引用具体段落
-- 如果论文中没有相关信息，明确告知
-- 可以结合网站数据对比分析（如：这篇论文与其他研究的关系）
-- 使用清晰的结构（标题、列表）
-- 保持简洁但信息丰富`;
+Paper content:
+${truncatedText}`;
         } else {
-            // 没有选择论文时，提供完整的论文列表
-            if (this.websiteData) {
-                context += '\n\n' + this.generateWebsiteDataSummary();
-            }
-            
-            context += `\n\n**当前状态**: 没有选择具体论文。
-
-**你的任务**:
-1. 回答关于网站的统计问题
-2. 根据用户需求从上面的论文列表中搜索和推荐论文
-3. 提供论文的ID、标题、年份、相关标签
-4. 告诉用户可以在网站上点击查看详情和访问链接
-5. 如果用户要讨论具体论文，建议使用📄按钮选择
-
-**回答示例**:
-- 用户问: "给我一篇EMG的论文"
-- 回答: "我找到了几篇EMG相关的论文：
-  - 论文ID 2: 'Demonstrating the feasibility of using forearm electromyography for muscle-computer interfaces' (2008)
-  - 论文ID X: '...'
-  您可以在网站上搜索这些标题，或点击论文卡片查看详情和访问链接。"`;
+            context += `\nNo single paper is currently selected. Use the retrieved archive papers as evidence.`;
         }
         
         return context;
@@ -1788,7 +1923,7 @@ ${truncatedText}
         }
     }
 
-    // ===== 对话管理方法 =====
+    // =====  =====
     
     loadConversations() {
         const saved = localStorage.getItem('chatbot_conversations');
@@ -1797,7 +1932,7 @@ ${truncatedText}
         }
         this.renderConversationsList();
         
-        // 如果有对话，加载最后一个
+        // ，
         if (this.conversations.length > 0) {
             this.loadConversation(this.conversations[0].id);
         }
@@ -1831,16 +1966,16 @@ ${truncatedText}
         this.conversationHistory = [];
         this.currentPaper = conv.paper;
         
-        // 清空消息区域
+        // 
         const messagesContainer = document.getElementById('chatbotMessages');
         messagesContainer.innerHTML = '';
         
-        // 加载历史消息
+        // 
         conv.messages.forEach(msg => {
-            this.addMessage(msg.sender, msg.text, msg.type, false); // false = 不保存
+            this.addMessage(msg.sender, msg.text, msg.type, false); // false = 
         });
         
-        // 重建conversationHistory（用于API调用）
+        // conversationHistory（API）
         conv.messages.forEach(msg => {
             if (msg.type === 'user') {
                 this.conversationHistory.push({ role: 'user', text: msg.text });
@@ -1860,7 +1995,7 @@ ${truncatedText}
         this.conversations = this.conversations.filter(c => c.id !== convId);
         this.saveConversations();
         
-        // 如果删除的是当前对话，创建新对话
+        // ，
         if (this.currentConversationId === convId) {
             if (this.conversations.length > 0) {
                 this.loadConversation(this.conversations[0].id);
@@ -1876,7 +2011,7 @@ ${truncatedText}
         const conv = this.conversations.find(c => c.id === convId);
         if (!conv || conv.messages.length === 0) return;
         
-        // 使用第一条用户消息作为标题
+        // 
         const firstUserMsg = conv.messages.find(m => m.type === 'user');
         if (firstUserMsg) {
             conv.title = firstUserMsg.text.slice(0, 20) + (firstUserMsg.text.length > 20 ? '...' : '');
@@ -1901,7 +2036,7 @@ ${truncatedText}
         conv.paper = this.currentPaper;
         conv.updatedAt = new Date().toISOString();
         
-        // 更新标题
+        // 
         if (conv.messages.length === 1) {
             this.updateConversationTitle(conv.id);
         }
@@ -1935,7 +2070,7 @@ ${truncatedText}
             `;
         }).join('');
         
-        // 绑定点击事件
+        // 
         list.querySelectorAll('.conversation-item').forEach(item => {
             item.addEventListener('click', () => {
                 const id = item.dataset.id;
@@ -1965,7 +2100,7 @@ ${truncatedText}
         if (hours < 24) return `${hours}h ago`;
         if (days < 7) return `${days}d ago`;
         
-        return date.toLocaleDateString('zh-CN', { month: '2-digit', day: '2-digit' });
+        return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
     }
 }
 
