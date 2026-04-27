@@ -1,5 +1,5 @@
 // Service Worker for PWA support
-const CACHE_NAME = 'gesture-research-v1';
+const CACHE_NAME = 'gesture-research-v3';
 const urlsToCache = [
   './',
   './index.html',

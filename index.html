@@ -2548,6 +2548,36 @@
             border-bottom-color: #667eea;
         }
 
+        .message-text .chatbot-paper-link {
+            appearance: none;
+            display: inline;
+            margin: 0;
+            padding: 0;
+            border: 0;
+            border-bottom: 1px solid rgba(37, 99, 235, 0.32);
+            border-radius: 0;
+            background: transparent;
+            color: #1d4ed8;
+            font: inherit;
+            font-weight: inherit;
+            line-height: inherit;
+            text-align: left;
+            vertical-align: baseline;
+            cursor: pointer;
+            transition: background 0.18s ease, border-color 0.18s ease, color 0.18s ease;
+        }
+
+        .message-text .chatbot-paper-link:hover {
+            background: rgba(37, 99, 235, 0.08);
+            border-bottom-color: rgba(37, 99, 235, 0.58);
+            color: #1e40af;
+        }
+
+        .message-text .chatbot-paper-link:focus-visible {
+            outline: 3px solid rgba(37, 99, 235, 0.18);
+            outline-offset: 2px;
+        }
+
         .chatbot-message.user .message-text a {
             color: white;
             border-bottom-color: rgba(255, 255, 255, 0.5);
@@ -3018,6 +3048,18 @@
             color: #fecaca;
         }
 
+        body.theme-dark .message-text .chatbot-paper-link {
+            background: transparent;
+            border-bottom-color: rgba(147, 197, 253, 0.36);
+            color: #93c5fd;
+        }
+
+        body.theme-dark .message-text .chatbot-paper-link:hover {
+            background: rgba(96, 165, 250, 0.12);
+            border-bottom-color: rgba(147, 197, 253, 0.62);
+            color: #bfdbfe;
+        }
+
         body.theme-dark .api-key-input {
             background: #171717;
             border-color: #303030;
@@ -3256,10 +3298,6 @@
                     </div>
                 </div>
                 
-                <!-- Statistics -->
-                <div class="stats" aria-live="polite">
-                    Showing <span id="currentCount">0</span> of <span id="totalCount">0</span> papers
-                </div>
             </header>
             
             <!-- Main Gallery -->
@@ -3370,9 +3408,9 @@
     <!-- Scripts -->
     <script src="papers-data-new.js?v=20260421102653"></script>
     <script src="js/modal.js?v=20260421102653"></script>
-    <script src="js/app.js?v=20260421102653"></script>
+    <script src="js/app.js?v=2026042702"></script>
     <script src="js/chatbot-config.js?v=20260421102653"></script>
-    <script src="js/chatbot.js?v=20260421102653"></script>
+    <script src="js/chatbot.js?v=2026042701"></script>
     
     <!-- Theme Switcher Script -->
     <script>
