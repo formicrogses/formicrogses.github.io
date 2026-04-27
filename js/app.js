@@ -1,6 +1,8 @@
 // Main application logic
 class GestureResearchGallery {
     constructor() {
+        this.serviceWorkerVersion = '202604271700';
+        this.isServiceWorkerRefreshing = false;
         this.allPapers = [];
         this.filteredPapers = [];
         this.currentIndex = 0;
@@ -52,7 +54,17 @@ class GestureResearchGallery {
 
     async registerServiceWorker() {
         try {
-            await navigator.serviceWorker.register('sw.js');
+            navigator.serviceWorker.addEventListener('controllerchange', () => {
+                if (this.isServiceWorkerRefreshing) {
+                    return;
+                }
+
+                this.isServiceWorkerRefreshing = true;
+                window.location.reload();
+            });
+
+            const registration = await navigator.serviceWorker.register(`sw.js?v=${this.serviceWorkerVersion}`);
+            await registration.update();
             console.log('Service Worker registered successfully');
         } catch (error) {
             console.log('Service Worker registration failed:', error);
