@@ -485,10 +485,15 @@ class GestureResearchGallery {
 
     updateStatistics() {
         const totalSelected = Number(this.getSelectedFilterCount()) || 0;
-        document.getElementById('selectedCount').textContent = totalSelected;
-        document.getElementById('filteredCount').textContent = this.filteredPapers.length;
-        document.getElementById('currentCount').textContent = Math.min(this.currentIndex, this.filteredPapers.length);
-        document.getElementById('totalCount').textContent = this.filteredPapers.length;
+        const selectedCount = document.getElementById('selectedCount');
+        const filteredCount = document.getElementById('filteredCount');
+        const currentCount = document.getElementById('currentCount');
+        const totalCount = document.getElementById('totalCount');
+
+        if (selectedCount) selectedCount.textContent = totalSelected;
+        if (filteredCount) filteredCount.textContent = this.filteredPapers.length;
+        if (currentCount) currentCount.textContent = Math.min(this.currentIndex, this.filteredPapers.length);
+        if (totalCount) totalCount.textContent = this.filteredPapers.length;
         this.renderActiveFilters();
     }
 
