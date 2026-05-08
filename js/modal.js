@@ -58,6 +58,26 @@ class PaperModal {
             journalContainer.style.display = 'none';
         }
 
+        const urlContainer = document.getElementById('modalUrlContainer');
+        const urlValue = document.getElementById('modalUrl');
+        if (this.paper.url && this.paper.url.trim()) {
+            urlContainer.style.display = 'block';
+            if (urlValue) {
+                urlValue.innerHTML = '';
+                const urlLink = document.createElement('a');
+                urlLink.href = this.paper.url;
+                urlLink.target = '_blank';
+                urlLink.rel = 'noopener';
+                urlLink.textContent = this.paper.url;
+                urlValue.appendChild(urlLink);
+            }
+        } else {
+            urlContainer.style.display = 'none';
+            if (urlValue) {
+                urlValue.textContent = '';
+            }
+        }
+
         this.resetRelatedPapers();
 
         // Show all tag groups
@@ -69,6 +89,7 @@ class PaperModal {
         this.showTags('application', this.paper.applicationScenarios, 'applicationScenarios', 'tag-application');
         this.showTags('feedback', this.paper.feedbackOutput, 'feedbackOutput', 'tag-feedback');
         this.showTags('ux', this.paper.userExperienceDesign, 'userExperienceDesign', 'tag-ux');
+        this.showTags('tags', this.paper.tags, 'tags', 'tag');
 
         this.modal.classList.add('show');
         document.body.style.overflow = 'hidden';
@@ -317,6 +338,10 @@ class PaperModal {
     }
 
     getAllPapers() {
+        if (typeof window !== 'undefined' && window.app && Array.isArray(window.app.allPapers)) {
+            return window.app.allPapers.filter(paper => paper.image);
+        }
+
         if (typeof PAPERS_DATA !== 'undefined' && Array.isArray(PAPERS_DATA.papers)) {
             return PAPERS_DATA.papers.filter(paper => paper.image);
         }
@@ -325,7 +350,7 @@ class PaperModal {
     }
 
     getPaperIdentity(paper) {
-        return [paper.title, paper.year, paper.image].join('::');
+        return [paper.url || paper.doi || '', paper.title, paper.year, paper.image].join('::');
     }
 
     openRelatedPaper(paper) {
@@ -410,7 +435,8 @@ class PaperModal {
             gestureTypes: 'Gesture Types',
             applicationScenarios: 'Application Scenarios',
             feedbackOutput: 'Feedback & Output',
-            userExperienceDesign: 'User Experience & Design'
+            userExperienceDesign: 'User Experience & Design',
+            tags: 'Tags'
         };
 
         return labels[categoryKey] || categoryKey;

@@ -1,12 +1,17 @@
 // Service Worker for PWA support
-const CACHE_NAME = 'gesture-research-v4';
+const CACHE_NAME = 'gesture-research-v5';
 const PRECACHE_URLS = [
   './',
   './index.html',
   './manifest.json',
   './css/styles.css',
-  './js/modal.js',
-  './papers-data-new.js?v=20260421102653'
+  './js/modal.js?v=202605071230',
+  './js/app.js?v=202605071230',
+  './js/upload.js?v=202605071230',
+  './js/chatbot-config.js?v=20260421102653',
+  './js/chatbot.js?v=202605071230',
+  './papers-data-new.js?v=20260421102653',
+  './data/user-submissions.json'
 ];
 
 self.addEventListener('install', (event) => {
