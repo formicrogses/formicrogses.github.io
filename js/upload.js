@@ -8,6 +8,8 @@ class ArticleUploader {
         this.tokenStorageKey = 'microgesture_upload_github_token';
         this.previousBodyOverflow = '';
         this.lastFocusedElement = null;
+        this.availableTags = [];
+        this.selectedTags = [];
         this.focusableSelector = [
             'a[href]',
             'button:not([disabled])',
@@ -35,6 +37,8 @@ class ArticleUploader {
             imageName: document.getElementById('uploadImageName'),
             imageUrl: document.getElementById('uploadImageUrlInput'),
             tags: document.getElementById('uploadTagsInput'),
+            addTagButton: document.getElementById('uploadAddTag'),
+            selectedTags: document.getElementById('uploadSelectedTags'),
             suggestions: document.getElementById('uploadTagSuggestions'),
             token: document.getElementById('uploadTokenInput'),
             rememberToken: document.getElementById('uploadRememberToken')
@@ -60,6 +64,13 @@ class ArticleUploader {
         this.elements.form.addEventListener('submit', (event) => this.handleSubmit(event));
         this.elements.imageChoose?.addEventListener('click', () => this.elements.imageFile?.click());
         this.elements.imageFile?.addEventListener('change', () => this.updateSelectedImageName());
+        this.elements.addTagButton?.addEventListener('click', () => this.addTagsFromInput());
+        this.elements.tags?.addEventListener('keydown', (event) => {
+            if (event.key === 'Enter' || event.key === ',' || event.key === ';') {
+                event.preventDefault();
+                this.addTagsFromInput();
+            }
+        });
         this.elements.modal.addEventListener('click', (event) => {
             if (event.target === this.elements.modal) {
                 this.close();
@@ -67,6 +78,7 @@ class ArticleUploader {
         });
         document.addEventListener('keydown', this.handleDocumentKeydown);
 
+        this.renderSelectedTags();
         this.populateTagSuggestionsWhenReady();
     }
 
@@ -94,14 +106,8 @@ class ArticleUploader {
             });
         });
 
-        if (this.elements.suggestions) {
-            this.elements.suggestions.innerHTML = '';
-            Array.from(allTags).sort((a, b) => a.localeCompare(b)).forEach((tag) => {
-                const option = document.createElement('option');
-                option.value = tag;
-                this.elements.suggestions.appendChild(option);
-            });
-        }
+        this.availableTags = Array.from(allTags).sort((a, b) => a.localeCompare(b));
+        this.renderTagSuggestions();
     }
 
     open() {
@@ -221,7 +227,7 @@ class ArticleUploader {
         const year = this.elements.year.value.trim() || String(new Date().getFullYear());
         const title = this.elements.title.value.trim();
         const url = this.elements.url.value.trim();
-        const tags = this.parseTags(this.elements.tags.value);
+        const tags = this.getSelectedTags();
 
         return {
             id: `upload-${Date.now()}`,
@@ -327,6 +333,142 @@ class ArticleUploader {
             .map((tag) => tag.trim().replace(/^#/, ''))
             .filter(Boolean)
             .filter((tag, index, list) => list.indexOf(tag) === index);
+    }
+
+    addTagsFromInput() {
+        const tags = this.parseTags(this.elements.tags.value);
+
+        if (tags.length === 0) {
+            return;
+        }
+
+        tags.forEach((tag) => this.addTag(tag));
+        this.elements.tags.value = '';
+        this.renderSelectedTags();
+        this.updateSuggestionSelectionStates();
+    }
+
+    addTag(tag) {
+        const cleanTag = tag.trim().replace(/^#/, '');
+
+        if (!cleanTag) {
+            return;
+        }
+
+        const hasTag = this.selectedTags.some((selectedTag) => selectedTag.toLowerCase() === cleanTag.toLowerCase());
+        if (!hasTag) {
+            this.selectedTags.push(cleanTag);
+        }
+    }
+
+    removeTag(tag) {
+        this.selectedTags = this.selectedTags.filter((selectedTag) => selectedTag.toLowerCase() !== tag.toLowerCase());
+        this.renderSelectedTags();
+        this.updateSuggestionSelectionStates();
+    }
+
+    toggleSuggestedTag(tag) {
+        const isSelected = this.selectedTags.some((selectedTag) => selectedTag.toLowerCase() === tag.toLowerCase());
+
+        if (isSelected) {
+            this.removeTag(tag);
+            return;
+        }
+
+        this.addTag(tag);
+        this.renderSelectedTags();
+        this.updateSuggestionSelectionStates();
+    }
+
+    getSelectedTags() {
+        const combinedTags = [...this.selectedTags, ...this.parseTags(this.elements.tags.value)];
+        const uniqueTags = [];
+
+        combinedTags.forEach((tag) => {
+            if (!uniqueTags.some((selectedTag) => selectedTag.toLowerCase() === tag.toLowerCase())) {
+                uniqueTags.push(tag);
+            }
+        });
+
+        return uniqueTags;
+    }
+
+    renderSelectedTags() {
+        if (!this.elements.selectedTags) {
+            return;
+        }
+
+        this.elements.selectedTags.innerHTML = '';
+
+        if (this.selectedTags.length === 0) {
+            const emptyState = document.createElement('span');
+            emptyState.className = 'upload-selected-empty';
+            emptyState.textContent = 'No tags selected yet.';
+            this.elements.selectedTags.appendChild(emptyState);
+            return;
+        }
+
+        this.selectedTags.forEach((tag) => {
+            const tagButton = document.createElement('button');
+            tagButton.type = 'button';
+            tagButton.className = 'upload-selected-tag';
+            tagButton.setAttribute('aria-label', `Remove tag ${tag}`);
+            tagButton.addEventListener('click', () => this.removeTag(tag));
+
+            const tagLabel = document.createElement('span');
+            tagLabel.textContent = this.formatTagLabel(tag);
+
+            const removeIcon = document.createElement('span');
+            removeIcon.className = 'upload-tag-remove';
+            removeIcon.setAttribute('aria-hidden', 'true');
+            removeIcon.textContent = 'x';
+
+            tagButton.appendChild(tagLabel);
+            tagButton.appendChild(removeIcon);
+            this.elements.selectedTags.appendChild(tagButton);
+        });
+    }
+
+    renderTagSuggestions() {
+        if (!this.elements.suggestions) {
+            return;
+        }
+
+        this.elements.suggestions.innerHTML = '';
+
+        this.availableTags.forEach((tag) => {
+            const tagButton = document.createElement('button');
+            tagButton.type = 'button';
+            tagButton.className = 'upload-suggestion-tag';
+            tagButton.dataset.tag = tag;
+            tagButton.setAttribute('aria-pressed', 'false');
+            tagButton.textContent = this.formatTagLabel(tag);
+            tagButton.addEventListener('click', () => this.toggleSuggestedTag(tag));
+            this.elements.suggestions.appendChild(tagButton);
+        });
+
+        this.updateSuggestionSelectionStates();
+    }
+
+    updateSuggestionSelectionStates() {
+        if (!this.elements.suggestions) {
+            return;
+        }
+
+        this.elements.suggestions.querySelectorAll('.upload-suggestion-tag').forEach((button) => {
+            const tag = button.dataset.tag || '';
+            const isSelected = this.selectedTags.some((selectedTag) => selectedTag.toLowerCase() === tag.toLowerCase());
+            button.setAttribute('aria-pressed', String(isSelected));
+        });
+    }
+
+    formatTagLabel(tag) {
+        return tag
+            .replace(/^#/, '')
+            .replace(/([a-z0-9])([A-Z])/g, '$1 $2')
+            .replace(/[_/]+/g, ' ')
+            .replace(/\s+/g, ' ')
+            .trim();
     }
 
     async uploadImageFile(file, token) {
@@ -517,6 +659,9 @@ class ArticleUploader {
         this.elements.imageFile.value = '';
         this.elements.imageUrl.value = '';
         this.elements.tags.value = '';
+        this.selectedTags = [];
+        this.renderSelectedTags();
+        this.updateSuggestionSelectionStates();
         this.updateSelectedImageName();
         this.clearFieldValidity();
     }
