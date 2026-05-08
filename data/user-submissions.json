@@ -1,3 +1,30 @@
 {
-  "papers": []
+  "papers": [
+    {
+      "id": "upload-1778256691497",
+      "title": "test",
+      "year": "2029",
+      "category": "hardware",
+      "hardwareDevices": [],
+      "sensingTechnology": [],
+      "recognitionClassification": [],
+      "interactionModalities": [],
+      "gestureTypes": [],
+      "applicationScenarios": [],
+      "feedbackOutput": [],
+      "userExperienceDesign": [],
+      "tags": [
+        "SmartWatch",
+        "TouchOptimized",
+        "Training"
+      ],
+      "image": "uploads/images/1778256687435-20260507074555-218-2329.png",
+      "url": "https://.est.com",
+      "doi": "",
+      "authors": "",
+      "journal": "",
+      "uploadedAt": "2026-05-08T16:11:31.497Z",
+      "source": "upload"
+    }
+  ]
 }
