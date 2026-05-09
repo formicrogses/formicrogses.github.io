@@ -10,6 +10,18 @@ class ArticleUploader {
         this.lastFocusedElement = null;
         this.availableTags = [];
         this.selectedTags = [];
+        this.tagGroupConfigs = [
+            { key: 'hardwareDevices', label: 'Hardware Devices' },
+            { key: 'sensingTechnology', label: 'Sensing Technology' },
+            { key: 'recognitionClassification', label: 'Recognition & Classification' },
+            { key: 'interactionModalities', label: 'Interaction Modalities' },
+            { key: 'gestureTypes', label: 'Gesture Types' },
+            { key: 'applicationScenarios', label: 'Application Scenarios' },
+            { key: 'feedbackOutput', label: 'Feedback & Output' },
+            { key: 'userExperienceDesign', label: 'User Experience & Design' }
+        ];
+        this.availableTagGroups = this.createEmptyTagGroups();
+        this.selectedTagGroups = this.createEmptyTagGroups();
         this.focusableSelector = [
             'a[href]',
             'button:not([disabled])',
@@ -30,12 +42,16 @@ class ArticleUploader {
             status: document.getElementById('uploadStatus'),
             title: document.getElementById('uploadTitleInput'),
             url: document.getElementById('uploadUrlInput'),
+            doi: document.getElementById('uploadDoiInput'),
+            authors: document.getElementById('uploadAuthorsInput'),
+            journal: document.getElementById('uploadJournalInput'),
             year: document.getElementById('uploadYearInput'),
             category: document.getElementById('uploadCategoryInput'),
             imageFile: document.getElementById('uploadImageInput'),
             imageChoose: document.getElementById('uploadImageChoose'),
             imageName: document.getElementById('uploadImageName'),
             imageUrl: document.getElementById('uploadImageUrlInput'),
+            detailGroups: document.getElementById('uploadDetailTagGroups'),
             tags: document.getElementById('uploadTagsInput'),
             addTagButton: document.getElementById('uploadAddTag'),
             selectedTags: document.getElementById('uploadSelectedTags'),
@@ -65,6 +81,8 @@ class ArticleUploader {
         this.elements.imageChoose?.addEventListener('click', () => this.elements.imageFile?.click());
         this.elements.imageFile?.addEventListener('change', () => this.updateSelectedImageName());
         this.elements.addTagButton?.addEventListener('click', () => this.addTagsFromInput());
+        this.elements.detailGroups?.addEventListener('click', (event) => this.handleDetailGroupClick(event));
+        this.elements.detailGroups?.addEventListener('keydown', (event) => this.handleDetailGroupKeydown(event));
         this.elements.tags?.addEventListener('keydown', (event) => {
             if (event.key === 'Enter' || event.key === ',' || event.key === ';') {
                 event.preventDefault();
@@ -79,6 +97,7 @@ class ArticleUploader {
         document.addEventListener('keydown', this.handleDocumentKeydown);
 
         this.renderSelectedTags();
+        this.renderDetailTagGroups();
         this.populateTagSuggestionsWhenReady();
     }
 
@@ -88,25 +107,24 @@ class ArticleUploader {
         }
 
         const allTags = new Set();
-        const tagFields = [
-            'hardwareDevices',
-            'sensingTechnology',
-            'recognitionClassification',
-            'interactionModalities',
-            'gestureTypes',
-            'applicationScenarios',
-            'feedbackOutput',
-            'userExperienceDesign',
-            'tags'
-        ];
+        const groupedTags = this.createEmptyTagGroups();
+        const tagFields = [...this.tagGroupConfigs.map((config) => config.key), 'tags'];
 
         (window.app?.allPapers || []).forEach((paper) => {
             tagFields.forEach((field) => {
-                (paper[field] || []).forEach((tag) => allTags.add(tag));
+                (paper[field] || []).forEach((tag) => {
+                    allTags.add(tag);
+
+                    if (groupedTags[field]) {
+                        groupedTags[field].push(tag);
+                    }
+                });
             });
         });
 
         this.availableTags = Array.from(allTags).sort((a, b) => a.localeCompare(b));
+        this.availableTagGroups = this.dedupeTagGroups(groupedTags);
+        this.renderDetailTagGroups();
         this.renderTagSuggestions();
     }
 
@@ -234,20 +252,20 @@ class ArticleUploader {
             title,
             year,
             category: this.elements.category.value,
-            hardwareDevices: [],
-            sensingTechnology: [],
-            recognitionClassification: [],
-            interactionModalities: [],
-            gestureTypes: [],
-            applicationScenarios: [],
-            feedbackOutput: [],
-            userExperienceDesign: [],
+            hardwareDevices: this.getSelectedDetailTags('hardwareDevices'),
+            sensingTechnology: this.getSelectedDetailTags('sensingTechnology'),
+            recognitionClassification: this.getSelectedDetailTags('recognitionClassification'),
+            interactionModalities: this.getSelectedDetailTags('interactionModalities'),
+            gestureTypes: this.getSelectedDetailTags('gestureTypes'),
+            applicationScenarios: this.getSelectedDetailTags('applicationScenarios'),
+            feedbackOutput: this.getSelectedDetailTags('feedbackOutput'),
+            userExperienceDesign: this.getSelectedDetailTags('userExperienceDesign'),
             tags,
             image: imagePath,
             url,
-            doi: '',
-            authors: '',
-            journal: '',
+            doi: this.elements.doi.value.trim(),
+            authors: this.elements.authors.value.trim(),
+            journal: this.elements.journal.value.trim(),
             uploadedAt: new Date().toISOString(),
             source: 'upload'
         };
@@ -256,6 +274,7 @@ class ArticleUploader {
     validateForm({ token, imageFile, imageUrl }) {
         const title = this.elements.title.value.trim();
         const url = this.elements.url.value.trim();
+        const doi = this.elements.doi.value.trim();
         const year = this.elements.year.value.trim();
         const category = this.elements.category.value.trim();
 
@@ -284,6 +303,13 @@ class ArticleUploader {
             return {
                 element: this.elements.year,
                 message: 'Enter a year between 1900 and 2100.'
+            };
+        }
+
+        if (doi && !this.isValidUrl(doi)) {
+            return {
+                element: this.elements.doi,
+                message: 'Enter a valid DOI URL, including https://.'
             };
         }
 
@@ -316,6 +342,39 @@ class ArticleUploader {
         }
 
         return null;
+    }
+
+    createEmptyTagGroups() {
+        return this.tagGroupConfigs.reduce((groups, config) => {
+            groups[config.key] = [];
+            return groups;
+        }, {});
+    }
+
+    dedupeTagGroups(tagGroups) {
+        return this.tagGroupConfigs.reduce((groups, config) => {
+            groups[config.key] = this.dedupeTags(tagGroups[config.key] || [])
+                .sort((a, b) => a.localeCompare(b));
+            return groups;
+        }, {});
+    }
+
+    dedupeTags(tags) {
+        const uniqueTags = [];
+
+        tags.forEach((tag) => {
+            const cleanTag = String(tag || '').trim().replace(/^#/, '');
+
+            if (!cleanTag) {
+                return;
+            }
+
+            if (!uniqueTags.some((selectedTag) => selectedTag.toLowerCase() === cleanTag.toLowerCase())) {
+                uniqueTags.push(cleanTag);
+            }
+        });
+
+        return uniqueTags;
     }
 
     isValidUrl(value) {
@@ -459,6 +518,244 @@ class ArticleUploader {
             const tag = button.dataset.tag || '';
             const isSelected = this.selectedTags.some((selectedTag) => selectedTag.toLowerCase() === tag.toLowerCase());
             button.setAttribute('aria-pressed', String(isSelected));
+        });
+    }
+
+    handleDetailGroupClick(event) {
+        const suggestionButton = event.target.closest('[data-upload-detail-suggestion]');
+        const selectedButton = event.target.closest('[data-upload-detail-selected]');
+        const addButton = event.target.closest('[data-upload-detail-add]');
+
+        if (suggestionButton) {
+            this.toggleSuggestedDetailTag(
+                suggestionButton.dataset.uploadDetailSuggestionGroup,
+                suggestionButton.dataset.uploadDetailSuggestion
+            );
+            return;
+        }
+
+        if (selectedButton) {
+            this.removeDetailTag(
+                selectedButton.dataset.uploadDetailSelectedGroup,
+                selectedButton.dataset.uploadDetailSelected
+            );
+            return;
+        }
+
+        if (addButton) {
+            this.addDetailTagsFromInput(addButton.dataset.uploadDetailAdd);
+        }
+    }
+
+    handleDetailGroupKeydown(event) {
+        const input = event.target.closest('[data-upload-detail-input]');
+
+        if (!input || (event.key !== 'Enter' && event.key !== ',' && event.key !== ';')) {
+            return;
+        }
+
+        event.preventDefault();
+        this.addDetailTagsFromInput(input.dataset.uploadDetailInput);
+    }
+
+    addDetailTagsFromInput(groupKey) {
+        const input = this.getDetailInput(groupKey);
+        if (!input) {
+            return;
+        }
+
+        const tags = this.parseTags(input.value);
+        if (tags.length === 0) {
+            return;
+        }
+
+        tags.forEach((tag) => this.addDetailTag(groupKey, tag));
+        input.value = '';
+        this.renderDetailTagGroups();
+    }
+
+    addDetailTag(groupKey, tag) {
+        if (!this.selectedTagGroups[groupKey]) {
+            return;
+        }
+
+        const cleanTag = String(tag || '').trim().replace(/^#/, '');
+        if (!cleanTag) {
+            return;
+        }
+
+        const hasTag = this.selectedTagGroups[groupKey].some((selectedTag) => selectedTag.toLowerCase() === cleanTag.toLowerCase());
+        if (!hasTag) {
+            this.selectedTagGroups[groupKey].push(cleanTag);
+        }
+    }
+
+    removeDetailTag(groupKey, tag) {
+        if (!this.selectedTagGroups[groupKey]) {
+            return;
+        }
+
+        this.selectedTagGroups[groupKey] = this.selectedTagGroups[groupKey]
+            .filter((selectedTag) => selectedTag.toLowerCase() !== String(tag || '').toLowerCase());
+        this.renderDetailTagGroups();
+    }
+
+    toggleSuggestedDetailTag(groupKey, tag) {
+        if (!this.selectedTagGroups[groupKey]) {
+            return;
+        }
+
+        const isSelected = this.selectedTagGroups[groupKey]
+            .some((selectedTag) => selectedTag.toLowerCase() === String(tag || '').toLowerCase());
+
+        if (isSelected) {
+            this.removeDetailTag(groupKey, tag);
+            return;
+        }
+
+        this.addDetailTag(groupKey, tag);
+        this.renderDetailTagGroups();
+    }
+
+    getSelectedDetailTags(groupKey) {
+        const input = this.getDetailInput(groupKey);
+        return this.dedupeTags([
+            ...(this.selectedTagGroups[groupKey] || []),
+            ...this.parseTags(input?.value || '')
+        ]);
+    }
+
+    getDetailInput(groupKey) {
+        return this.elements.detailGroups?.querySelector(`[data-upload-detail-input="${groupKey}"]`) || null;
+    }
+
+    renderDetailTagGroups() {
+        if (!this.elements.detailGroups) {
+            return;
+        }
+
+        const draftValues = this.getDetailInputValues();
+        this.elements.detailGroups.innerHTML = '';
+
+        this.tagGroupConfigs.forEach((config) => {
+            const group = document.createElement('section');
+            group.className = 'upload-detail-tag-group';
+            group.dataset.uploadDetailGroup = config.key;
+
+            const header = document.createElement('div');
+            header.className = 'upload-detail-tag-header';
+
+            const title = document.createElement('h3');
+            title.textContent = config.label;
+            header.appendChild(title);
+
+            const helper = document.createElement('p');
+            helper.textContent = 'Choose existing tags or add custom tags for this section.';
+            header.appendChild(helper);
+            group.appendChild(header);
+
+            const controls = document.createElement('div');
+            controls.className = 'upload-tag-controls';
+
+            const input = document.createElement('input');
+            input.type = 'text';
+            input.className = 'upload-detail-tag-input';
+            input.placeholder = `Add custom ${config.label.toLowerCase()} tag`;
+            input.value = draftValues[config.key] || '';
+            input.dataset.uploadDetailInput = config.key;
+            input.setAttribute('aria-label', `Add custom ${config.label} tag`);
+            controls.appendChild(input);
+
+            const addButton = document.createElement('button');
+            addButton.type = 'button';
+            addButton.className = 'upload-tag-add';
+            addButton.dataset.uploadDetailAdd = config.key;
+            addButton.textContent = 'Add';
+            controls.appendChild(addButton);
+            group.appendChild(controls);
+
+            const selectedContainer = document.createElement('div');
+            selectedContainer.className = 'upload-selected-tags';
+            selectedContainer.setAttribute('aria-live', 'polite');
+            this.renderDetailSelectedTags(selectedContainer, config);
+            group.appendChild(selectedContainer);
+
+            const suggestionsContainer = document.createElement('div');
+            suggestionsContainer.className = 'upload-tag-suggestions';
+            suggestionsContainer.setAttribute('role', 'group');
+            suggestionsContainer.setAttribute('aria-label', `${config.label} suggestions`);
+            this.renderDetailSuggestedTags(suggestionsContainer, config);
+            group.appendChild(suggestionsContainer);
+
+            this.elements.detailGroups.appendChild(group);
+        });
+    }
+
+    getDetailInputValues() {
+        const values = this.createEmptyTagGroups();
+
+        this.elements.detailGroups?.querySelectorAll('[data-upload-detail-input]').forEach((input) => {
+            values[input.dataset.uploadDetailInput] = input.value || '';
+        });
+
+        return values;
+    }
+
+    renderDetailSelectedTags(container, config) {
+        const selectedTags = this.selectedTagGroups[config.key] || [];
+
+        if (selectedTags.length === 0) {
+            const emptyState = document.createElement('span');
+            emptyState.className = 'upload-selected-empty';
+            emptyState.textContent = 'No tags selected.';
+            container.appendChild(emptyState);
+            return;
+        }
+
+        selectedTags.forEach((tag) => {
+            const tagButton = document.createElement('button');
+            tagButton.type = 'button';
+            tagButton.className = 'upload-selected-tag';
+            tagButton.dataset.uploadDetailSelectedGroup = config.key;
+            tagButton.dataset.uploadDetailSelected = tag;
+            tagButton.setAttribute('aria-label', `Remove ${config.label} tag ${tag}`);
+
+            const tagLabel = document.createElement('span');
+            tagLabel.textContent = this.formatTagLabel(tag);
+
+            const removeIcon = document.createElement('span');
+            removeIcon.className = 'upload-tag-remove';
+            removeIcon.setAttribute('aria-hidden', 'true');
+            removeIcon.textContent = 'x';
+
+            tagButton.appendChild(tagLabel);
+            tagButton.appendChild(removeIcon);
+            container.appendChild(tagButton);
+        });
+    }
+
+    renderDetailSuggestedTags(container, config) {
+        const availableTags = this.availableTagGroups[config.key] || [];
+
+        if (availableTags.length === 0) {
+            const emptyState = document.createElement('span');
+            emptyState.className = 'upload-selected-empty';
+            emptyState.textContent = 'No suggestions yet. Add custom tags above.';
+            container.appendChild(emptyState);
+            return;
+        }
+
+        availableTags.forEach((tag) => {
+            const tagButton = document.createElement('button');
+            tagButton.type = 'button';
+            tagButton.className = 'upload-suggestion-tag';
+            tagButton.dataset.uploadDetailSuggestionGroup = config.key;
+            tagButton.dataset.uploadDetailSuggestion = tag;
+            tagButton.setAttribute('aria-pressed', String(
+                (this.selectedTagGroups[config.key] || []).some((selectedTag) => selectedTag.toLowerCase() === tag.toLowerCase())
+            ));
+            tagButton.textContent = this.formatTagLabel(tag);
+            container.appendChild(tagButton);
         });
     }
 
@@ -718,11 +1015,16 @@ class ArticleUploader {
     resetArticleFields() {
         this.elements.title.value = '';
         this.elements.url.value = '';
+        this.elements.doi.value = '';
+        this.elements.authors.value = '';
+        this.elements.journal.value = '';
         this.elements.imageFile.value = '';
         this.elements.imageUrl.value = '';
         this.elements.tags.value = '';
         this.selectedTags = [];
+        this.selectedTagGroups = this.createEmptyTagGroups();
         this.renderSelectedTags();
+        this.renderDetailTagGroups();
         this.updateSuggestionSelectionStates();
         this.updateSelectedImageName();
         this.clearFieldValidity();
@@ -757,11 +1059,13 @@ class ArticleUploader {
         [
             this.elements.title,
             this.elements.url,
+            this.elements.doi,
             this.elements.year,
             this.elements.category,
             this.elements.imageChoose,
             this.elements.imageUrl,
-            this.elements.token
+            this.elements.token,
+            ...(this.elements.detailGroups ? Array.from(this.elements.detailGroups.querySelectorAll('[data-upload-detail-input]')) : [])
         ].forEach((element) => {
             if (element) {
                 element.removeAttribute('aria-invalid');

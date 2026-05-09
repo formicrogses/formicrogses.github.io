@@ -177,7 +177,8 @@
         }
 
         body.theme-dark .upload-field input,
-        body.theme-dark .upload-field select {
+        body.theme-dark .upload-field select,
+        body.theme-dark .upload-detail-tag-input {
             background: #1a1a1a;
             border-color: #3a3a3a;
             color: #e0e0e0;
@@ -204,6 +205,19 @@
         body.theme-dark .upload-tag-suggestions {
             background: #1f2937;
             border-color: #3a3a3a;
+        }
+
+        body.theme-dark .upload-detail-tag-group {
+            background: #1f2937;
+            border-color: #3a3a3a;
+        }
+
+        body.theme-dark .upload-detail-tag-header h3 {
+            color: #e0e0e0;
+        }
+
+        body.theme-dark .upload-detail-tag-header p {
+            color: #a8b3c4;
         }
 
         body.theme-dark .upload-modal-lede,
@@ -686,7 +700,8 @@
         .upload-suggestion-tag:focus-visible,
         .upload-selected-tag:focus-visible,
         .upload-field input:focus-visible,
-        .upload-field select:focus-visible {
+        .upload-field select:focus-visible,
+        .upload-detail-tag-input:focus-visible {
             outline: 3px solid rgba(37, 99, 235, 0.28);
             outline-offset: 2px;
         }
@@ -1475,7 +1490,7 @@
         }
 
         .upload-modal-content {
-            max-width: 860px;
+            max-width: 1040px;
             margin: 0 auto;
             background: #fff;
             border-radius: 8px;
@@ -1553,7 +1568,8 @@
         }
 
         .upload-field input,
-        .upload-field select {
+        .upload-field select,
+        .upload-detail-tag-input {
             width: 100%;
             border: 1px solid #dbe3ee;
             border-radius: 8px;
@@ -1607,6 +1623,39 @@
             color: #64748b;
             font-size: 12px;
             font-weight: 400;
+        }
+
+        .upload-detail-tags {
+            display: grid;
+            gap: 14px;
+        }
+
+        .upload-detail-tag-group {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 14px;
+            display: grid;
+            gap: 11px;
+            padding: 14px;
+        }
+
+        .upload-detail-tag-header {
+            display: grid;
+            gap: 3px;
+        }
+
+        .upload-detail-tag-header h3 {
+            color: #111827;
+            font-size: 15px;
+            line-height: 1.35;
+            margin: 0;
+        }
+
+        .upload-detail-tag-header p {
+            color: #64748b;
+            font-size: 12px;
+            line-height: 1.45;
+            margin: 0;
         }
 
         .upload-tag-controls {
@@ -2359,6 +2408,10 @@
 
             .upload-tag-controls {
                 grid-template-columns: 1fr;
+            }
+
+            .upload-detail-tag-group {
+                padding: 12px;
             }
 
             .upload-actions {
@@ -4028,6 +4081,18 @@
                             <input type="url" id="uploadUrlInput" aria-describedby="uploadStatus" aria-required="true">
                         </label>
                         <label class="upload-field">
+                            <span>DOI URL</span>
+                            <input type="url" id="uploadDoiInput" placeholder="https://doi.org/..." aria-describedby="uploadStatus">
+                        </label>
+                        <label class="upload-field">
+                            <span>Authors</span>
+                            <input type="text" id="uploadAuthorsInput" placeholder="Author names, separated by commas">
+                        </label>
+                        <label class="upload-field upload-field-wide">
+                            <span>Journal/Conference</span>
+                            <input type="text" id="uploadJournalInput" placeholder="Example: CHI 2025: CHI Conference on Human Factors in Computing Systems">
+                        </label>
+                        <label class="upload-field">
                             <span>Year</span>
                             <input type="number" id="uploadYearInput" min="1900" max="2100">
                         </label>
@@ -4054,14 +4119,19 @@
                             <input type="url" id="uploadImageUrlInput" placeholder="Optional if you already have a hosted image" aria-describedby="uploadStatus">
                         </label>
                         <div class="upload-field upload-field-wide">
-                            <span>Tags</span>
+                            <span>Detailed Tag Sections</span>
+                            <div class="upload-detail-tags" id="uploadDetailTagGroups"></div>
+                            <span class="upload-helper">These sections appear in the article detail modal, matching the built-in cards.</span>
+                        </div>
+                        <div class="upload-field upload-field-wide">
+                            <span>Additional Tags</span>
                             <div class="upload-tag-controls">
                                 <input type="text" id="uploadTagsInput" placeholder="Type a custom tag, then press Enter" aria-describedby="uploadTagsHelp uploadStatus">
                                 <button type="button" class="upload-tag-add" id="uploadAddTag">Add Tag</button>
                             </div>
                             <div class="upload-selected-tags" id="uploadSelectedTags" aria-live="polite"></div>
                             <div class="upload-tag-suggestions" id="uploadTagSuggestions" role="group" aria-label="Suggested tags"></div>
-                            <span class="upload-helper" id="uploadTagsHelp">Choose multiple suggested tags, or add your own custom tags.</span>
+                            <span class="upload-helper" id="uploadTagsHelp">Optional broader tags shown in the generic Tags section.</span>
                         </div>
                         <label class="upload-field upload-field-wide">
                             <span>GitHub Access Token</span>
@@ -4085,9 +4155,9 @@
     
     <!-- Scripts -->
     <script src="papers-data-new.js?v=20260421102653"></script>
-    <script src="js/modal.js?v=202605091200"></script>
-    <script src="js/app.js?v=202605091200"></script>
-    <script src="js/upload.js?v=202605091200"></script>
+    <script src="js/modal.js?v=202605091530"></script>
+    <script src="js/app.js?v=202605091530"></script>
+    <script src="js/upload.js?v=202605091530"></script>
     <script src="js/chatbot-config.js?v=20260421102653"></script>
     <script src="js/chatbot.js?v=202605071230"></script>
     
