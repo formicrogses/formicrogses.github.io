@@ -1,7 +1,7 @@
 // Main application logic
 class GestureResearchGallery {
     constructor() {
-        this.serviceWorkerVersion = '202605071230';
+        this.serviceWorkerVersion = '202605091200';
         this.isServiceWorkerRefreshing = false;
         this.allPapers = [];
         this.filteredPapers = [];
@@ -204,6 +204,30 @@ class GestureResearchGallery {
 
         this.allPapers = [normalized, ...this.allPapers]
             .sort((a, b) => parseInt(b.year) - parseInt(a.year));
+
+        this.initializeFilters();
+        this.applyFilters();
+        this.updateFilterCounts();
+        this.updateStatistics();
+    }
+
+    removeUploadedPaper(paper) {
+        if (!paper) {
+            return;
+        }
+
+        const targetId = paper?.id ? String(paper.id) : '';
+        const targetKey = this.getPaperIdentity(paper);
+        const matchesTarget = (entry) => {
+            if (targetId && String(entry.id || '') === targetId) {
+                return true;
+            }
+
+            return this.getPaperIdentity(entry) === targetKey;
+        };
+
+        this.allPapers = this.allPapers.filter(entry => !matchesTarget(entry));
+        this.filteredPapers = this.filteredPapers.filter(entry => !matchesTarget(entry));
 
         this.initializeFilters();
         this.applyFilters();

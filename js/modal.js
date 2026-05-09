@@ -9,6 +9,12 @@ class PaperModal {
         this.relatedTag = document.getElementById('relatedPapersTag');
         this.relatedBody = document.getElementById('relatedPapersBody');
         this.relatedCloseBtn = document.getElementById('relatedPapersClose');
+        this.deleteButton = document.getElementById('modalDelete');
+        this.deletePanel = document.getElementById('modalDeletePanel');
+        this.deleteToken = document.getElementById('modalDeleteToken');
+        this.deleteCancel = document.getElementById('modalDeleteCancel');
+        this.deleteConfirm = document.getElementById('modalDeleteConfirm');
+        this.deleteStatus = document.getElementById('modalDeleteStatus');
         this.activeRelatedTagButton = null;
         this.escHandler = null;
         this.relatedHideTimer = null;
@@ -90,6 +96,7 @@ class PaperModal {
         this.showTags('feedback', this.paper.feedbackOutput, 'feedbackOutput', 'tag-feedback');
         this.showTags('ux', this.paper.userExperienceDesign, 'userExperienceDesign', 'tag-ux');
         this.showTags('tags', this.paper.tags, 'tags', 'tag');
+        this.setupDeleteControls();
 
         this.modal.classList.add('show');
         document.body.style.overflow = 'hidden';
@@ -105,6 +112,7 @@ class PaperModal {
         this.modal.classList.remove('show');
         document.body.style.overflow = 'auto';
         this.resetRelatedPapers();
+        this.resetDeleteControls();
 
         if (this.escHandler) {
             document.removeEventListener('keydown', this.escHandler);
@@ -152,6 +160,141 @@ class PaperModal {
         };
 
         document.addEventListener('keydown', this.escHandler);
+    }
+
+    setupDeleteControls() {
+        const canDelete = this.isUploadedPaper(this.paper) &&
+            Boolean(window.articleUploader && typeof window.articleUploader.deletePaperRecord === 'function');
+
+        this.resetDeleteControls();
+
+        if (this.deleteButton) {
+            this.deleteButton.hidden = !canDelete;
+            this.deleteButton.disabled = false;
+            this.deleteButton.textContent = 'Delete Upload';
+            this.deleteButton.onclick = canDelete ? () => this.openDeletePanel() : null;
+        }
+
+        if (this.deleteCancel) {
+            this.deleteCancel.onclick = () => this.closeDeletePanel();
+        }
+
+        if (this.deleteConfirm) {
+            this.deleteConfirm.onclick = () => this.confirmDelete();
+        }
+    }
+
+    isUploadedPaper(paper) {
+        return Boolean(paper && (paper.source === 'upload' || String(paper.id || '').startsWith('upload-')));
+    }
+
+    openDeletePanel() {
+        if (!this.deletePanel) {
+            return;
+        }
+
+        this.deletePanel.hidden = false;
+        this.clearDeleteStatus();
+
+        const savedToken = window.articleUploader?.getStoredToken?.() || '';
+        if (this.deleteToken && !this.deleteToken.value) {
+            this.deleteToken.value = savedToken;
+        }
+
+        this.deletePanel.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+        setTimeout(() => {
+            const focusTarget = this.deleteToken?.value ? this.deleteConfirm : this.deleteToken;
+            focusTarget?.focus();
+        }, 0);
+    }
+
+    closeDeletePanel() {
+        if (this.deletePanel) {
+            this.deletePanel.hidden = true;
+        }
+
+        this.clearDeleteStatus();
+
+        if (this.deleteToken) {
+            this.deleteToken.removeAttribute('aria-invalid');
+        }
+
+        this.deleteButton?.focus();
+    }
+
+    resetDeleteControls() {
+        if (this.deletePanel) {
+            this.deletePanel.hidden = true;
+        }
+
+        if (this.deleteToken) {
+            this.deleteToken.value = '';
+            this.deleteToken.removeAttribute('aria-invalid');
+        }
+
+        this.clearDeleteStatus();
+        this.setDeleteBusy(false);
+    }
+
+    async confirmDelete() {
+        const uploader = window.articleUploader;
+
+        if (!uploader || typeof uploader.deletePaperRecord !== 'function') {
+            this.setDeleteStatus('Upload tools are not ready. Reload the page and try again.', 'error');
+            return;
+        }
+
+        const token = this.deleteToken?.value.trim() || uploader.getStoredToken?.() || '';
+        if (!token) {
+            this.setDeleteStatus('Enter a GitHub Access Token to delete this article.', 'error');
+            this.deleteToken?.setAttribute('aria-invalid', 'true');
+            this.deleteToken?.focus();
+            return;
+        }
+
+        this.deleteToken?.removeAttribute('aria-invalid');
+        this.setDeleteBusy(true);
+        this.setDeleteStatus('Deleting article...');
+
+        try {
+            const deletedPaper = await uploader.deletePaperRecord(this.paper, token);
+            window.app?.removeUploadedPaper(deletedPaper || this.paper);
+            this.setDeleteStatus('Deleted. GitHub Pages may take 1-2 minutes to publish the change.', 'success');
+            setTimeout(() => this.hide(), 900);
+        } catch (error) {
+            this.setDeleteStatus(error.message || 'Delete failed.', 'error');
+        } finally {
+            this.setDeleteBusy(false);
+        }
+    }
+
+    setDeleteBusy(isBusy) {
+        if (this.deleteButton) {
+            this.deleteButton.disabled = isBusy;
+        }
+
+        if (this.deleteCancel) {
+            this.deleteCancel.disabled = isBusy;
+        }
+
+        if (this.deleteConfirm) {
+            this.deleteConfirm.disabled = isBusy;
+            this.deleteConfirm.textContent = isBusy ? 'Deleting...' : 'Delete Article';
+        }
+    }
+
+    setDeleteStatus(message, type = '') {
+        if (!this.deleteStatus) {
+            return;
+        }
+
+        this.deleteStatus.textContent = message;
+        this.deleteStatus.classList.toggle('is-success', type === 'success');
+        this.deleteStatus.classList.toggle('is-error', type === 'error');
+    }
+
+    clearDeleteStatus() {
+        this.setDeleteStatus('');
     }
 
     showTags(type, tags, categoryKey, tagClass = 'tag') {

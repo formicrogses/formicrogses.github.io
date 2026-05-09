@@ -517,6 +517,68 @@ class ArticleUploader {
         return paper;
     }
 
+    async deletePaperRecord(paper, token) {
+        if (!this.isUploadedPaper(paper)) {
+            throw new Error('Only uploaded articles can be deleted here.');
+        }
+
+        const existingFile = await this.getGitHubFile(this.dataPath, token);
+        if (!existingFile) {
+            throw new Error('Uploaded records file was not found.');
+        }
+
+        const data = existingFile.json || { papers: [] };
+        const papers = Array.isArray(data.papers) ? data.papers : [];
+        const paperIndex = papers.findIndex((entry) => this.isSamePaperRecord(entry, paper));
+
+        if (paperIndex === -1) {
+            throw new Error('This uploaded article was not found in the saved records.');
+        }
+
+        const [deletedPaper] = papers.splice(paperIndex, 1);
+        const nextData = {
+            papers
+        };
+
+        await this.putGitHubFile({
+            token,
+            path: this.dataPath,
+            content: this.textToBase64(JSON.stringify(nextData, null, 2) + '\n'),
+            message: `Delete article: ${deletedPaper.title || paper.title}`,
+            sha: existingFile.sha
+        });
+
+        return deletedPaper;
+    }
+
+    isUploadedPaper(paper) {
+        return Boolean(paper && (paper.source === 'upload' || String(paper.id || '').startsWith('upload-')));
+    }
+
+    isSamePaperRecord(entry, paper) {
+        const entryId = String(entry?.id || '');
+        const paperId = String(paper?.id || '');
+
+        if (entryId && paperId && entryId === paperId) {
+            return true;
+        }
+
+        return this.getPaperRecordKey(entry) === this.getPaperRecordKey(paper);
+    }
+
+    getPaperRecordKey(paper) {
+        return [
+            paper?.url || paper?.doi || '',
+            paper?.title || '',
+            paper?.year || '',
+            paper?.image || ''
+        ].map((value) => String(value).trim()).join('::');
+    }
+
+    getStoredToken() {
+        return localStorage.getItem(this.tokenStorageKey) || '';
+    }
+
     async getGitHubFile(path, token) {
         const response = await fetch(this.githubContentsUrl(path, true), {
             headers: this.githubHeaders(token)

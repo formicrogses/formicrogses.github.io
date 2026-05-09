@@ -362,6 +362,40 @@
         body.theme-dark .modal-done-btn:hover {
             background: #1976D2;
         }
+
+        body.theme-dark .modal-delete-panel {
+            background: rgba(127, 29, 29, 0.14);
+            border-color: rgba(248, 113, 113, 0.32);
+        }
+
+        body.theme-dark .modal-delete-panel h3,
+        body.theme-dark .modal-delete-field span {
+            color: #fca5a5;
+        }
+
+        body.theme-dark .modal-delete-panel p,
+        body.theme-dark .modal-delete-status {
+            color: #fecaca;
+        }
+
+        body.theme-dark .modal-delete-field input {
+            background: #1a1a1a;
+            border-color: rgba(248, 113, 113, 0.42);
+            color: #e0e0e0;
+        }
+
+        body.theme-dark .modal-delete-btn,
+        body.theme-dark .modal-delete-cancel {
+            background: #1f1f1f;
+            border-color: rgba(248, 113, 113, 0.42);
+            color: #fca5a5;
+        }
+
+        body.theme-dark .modal-delete-btn:hover,
+        body.theme-dark .modal-delete-cancel:hover {
+            background: rgba(127, 29, 29, 0.28);
+            border-color: #f87171;
+        }
         
         /* Fix paper item hover for dark theme */
         body.theme-dark .paper-item {
@@ -1033,6 +1067,10 @@
         .related-sheet-close:focus-visible,
         .modal-close:focus-visible,
         .modal-done-btn:focus-visible,
+        .modal-delete-btn:focus-visible,
+        .modal-delete-confirm:focus-visible,
+        .modal-delete-cancel:focus-visible,
+        .modal-delete-field input:focus-visible,
         .load-btn:focus-visible,
         .btn-secondary:focus-visible {
             outline: 3px solid rgba(37, 99, 235, 0.18);
@@ -1270,8 +1308,14 @@
             padding: 20px 30px;
             border-top: 1px solid #e0e0e0;
             display: flex;
-            justify-content: flex-end;
+            align-items: center;
+            gap: 12px;
+            justify-content: space-between;
             background: #f8f8f8;
+        }
+
+        .modal-footer .modal-done-btn {
+            margin-left: auto;
         }
         
         .modal-done-btn {
@@ -1295,6 +1339,125 @@
         
         .modal-done-btn:active {
             transform: translateY(0);
+        }
+
+        .modal-delete-panel {
+            background: #fff5f5;
+            border: 1px solid #fecaca;
+            border-radius: 12px;
+            margin-top: 22px;
+            padding: 18px;
+        }
+
+        .modal-delete-panel[hidden] {
+            display: none;
+        }
+
+        .modal-delete-panel h3 {
+            color: #991b1b;
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        .modal-delete-panel p {
+            color: #7f1d1d;
+            font-size: 14px;
+            margin-bottom: 14px;
+        }
+
+        .modal-delete-field {
+            display: flex;
+            flex-direction: column;
+            gap: 7px;
+            margin-bottom: 14px;
+        }
+
+        .modal-delete-field span {
+            color: #7f1d1d;
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        .modal-delete-field input {
+            border: 1px solid #fca5a5;
+            border-radius: 8px;
+            color: #111827;
+            font-size: 15px;
+            padding: 11px 12px;
+            width: 100%;
+        }
+
+        .modal-delete-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: flex-end;
+        }
+
+        .modal-delete-btn,
+        .modal-delete-confirm,
+        .modal-delete-cancel {
+            appearance: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 700;
+            padding: 10px 16px;
+            transition: all 0.2s ease;
+        }
+
+        .modal-delete-btn {
+            background: transparent;
+            border: 1px solid #fca5a5;
+            color: #b91c1c;
+        }
+
+        .modal-delete-btn:hover {
+            background: #fee2e2;
+            border-color: #ef4444;
+        }
+
+        .modal-delete-confirm {
+            background: #dc2626;
+            border: 1px solid #dc2626;
+            color: #fff;
+        }
+
+        .modal-delete-confirm:hover {
+            background: #b91c1c;
+            border-color: #b91c1c;
+        }
+
+        .modal-delete-cancel {
+            background: #fff;
+            border: 1px solid #fca5a5;
+            color: #7f1d1d;
+        }
+
+        .modal-delete-cancel:hover {
+            background: #fee2e2;
+        }
+
+        .modal-delete-btn:disabled,
+        .modal-delete-confirm:disabled,
+        .modal-delete-cancel:disabled {
+            cursor: default;
+            opacity: 0.55;
+        }
+
+        .modal-delete-status {
+            color: #7f1d1d;
+            font-size: 14px;
+            margin-top: 12px;
+            min-height: 20px;
+        }
+
+        .modal-delete-status.is-success {
+            color: #047857;
+        }
+
+        .modal-delete-status.is-error {
+            color: #b91c1c;
         }
 
         .upload-modal {
@@ -2135,11 +2298,28 @@
             
             .modal-footer {
                 padding: 15px 20px;
+                flex-direction: column-reverse;
+                align-items: stretch;
             }
             
             .modal-done-btn {
                 padding: 10px 24px;
                 font-size: 14px;
+            }
+
+            .modal-footer .modal-done-btn,
+            .modal-delete-btn {
+                margin-left: 0;
+                width: 100%;
+            }
+
+            .modal-delete-actions {
+                flex-direction: column-reverse;
+            }
+
+            .modal-delete-confirm,
+            .modal-delete-cancel {
+                width: 100%;
             }
 
             .modal-title {
@@ -3792,10 +3972,25 @@
                     <div class="tag-list" id="tagsTags"></div>
                 </div>
 
+                <div class="modal-delete-panel" id="modalDeletePanel" hidden>
+                    <h3>Delete uploaded article?</h3>
+                    <p>This removes the article from uploaded records in GitHub. Built-in archive papers are not affected.</p>
+                    <label class="modal-delete-field">
+                        <span>GitHub Access Token</span>
+                        <input type="password" id="modalDeleteToken" autocomplete="off" aria-describedby="modalDeleteStatus">
+                    </label>
+                    <div class="modal-delete-actions">
+                        <button type="button" class="modal-delete-cancel" id="modalDeleteCancel">Cancel</button>
+                        <button type="button" class="modal-delete-confirm" id="modalDeleteConfirm">Delete Article</button>
+                    </div>
+                    <div class="modal-delete-status" id="modalDeleteStatus" role="status" aria-live="polite"></div>
+                </div>
+
             </div>
             <!-- Done Button at Bottom -->
             <div class="modal-footer">
-                <button class="modal-done-btn" id="modalDone">Done</button>
+                <button type="button" class="modal-delete-btn" id="modalDelete" hidden>Delete Upload</button>
+                <button type="button" class="modal-done-btn" id="modalDone">Done</button>
             </div>
         </div>
         <div class="related-papers-panel" id="relatedPapersPanel" hidden aria-hidden="true">
@@ -3890,9 +4085,9 @@
     
     <!-- Scripts -->
     <script src="papers-data-new.js?v=20260421102653"></script>
-    <script src="js/modal.js?v=202605071230"></script>
-    <script src="js/app.js?v=202605071230"></script>
-    <script src="js/upload.js?v=202605071230"></script>
+    <script src="js/modal.js?v=202605091200"></script>
+    <script src="js/app.js?v=202605091200"></script>
+    <script src="js/upload.js?v=202605091200"></script>
     <script src="js/chatbot-config.js?v=20260421102653"></script>
     <script src="js/chatbot.js?v=202605071230"></script>
     
