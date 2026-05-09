@@ -346,7 +346,7 @@ class PaperModal {
 
         const relatedPapers = this.getRelatedPapers(categoryKey, tag);
         this.relatedTitle.textContent = `Other Papers Tagged "${this.formatTag(tag)}"`;
-        this.relatedDescription.textContent = `${relatedPapers.length} related paper${relatedPapers.length === 1 ? '' : 's'} in ${this.formatSectionLabel(categoryKey)}. Click a row to open that paper.`;
+        this.relatedDescription.textContent = `${relatedPapers.length} related paper${relatedPapers.length === 1 ? '' : 's'} across matching tag sections. Click a row to open that paper.`;
         if (this.relatedTag) {
             this.relatedTag.textContent = this.formatTag(tag);
         }
@@ -465,10 +465,15 @@ class PaperModal {
     }
 
     getRelatedPapers(categoryKey, tag) {
+        const targetTagKeys = this.getTagMatchKeys(tag);
+
         return this.getAllPapers()
             .filter(candidate => {
-                const candidateTags = candidate[categoryKey] || [];
-                return candidateTags.includes(tag) && this.getPaperIdentity(candidate) !== this.getPaperIdentity(this.paper);
+                return this.getPaperIdentity(candidate) !== this.getPaperIdentity(this.paper) &&
+                    this.getPaperTagsForMatching(candidate).some(candidateTag => {
+                        const candidateTagKeys = this.getTagMatchKeys(candidateTag);
+                        return candidateTagKeys.some(candidateTagKey => targetTagKeys.includes(candidateTagKey));
+                    });
             })
             .sort((a, b) => {
                 const yearDiff = parseInt(b.year, 10) - parseInt(a.year, 10);
@@ -478,6 +483,36 @@ class PaperModal {
 
                 return a.title.localeCompare(b.title);
             });
+    }
+
+    getPaperTagsForMatching(paper) {
+        return [
+            ...(paper.hardwareDevices || []),
+            ...(paper.sensingTechnology || []),
+            ...(paper.recognitionClassification || []),
+            ...(paper.interactionModalities || []),
+            ...(paper.gestureTypes || []),
+            ...(paper.applicationScenarios || []),
+            ...(paper.feedbackOutput || []),
+            ...(paper.userExperienceDesign || []),
+            ...(paper.tags || [])
+        ];
+    }
+
+    getTagMatchKeys(tag) {
+        return [
+            this.normalizeTagForMatching(tag),
+            this.normalizeTagForMatching(this.formatTag(tag))
+        ].filter((value, index, list) => value && list.indexOf(value) === index);
+    }
+
+    normalizeTagForMatching(tag) {
+        return String(tag || '')
+            .replace(/^#/, '')
+            .replace(/([a-z0-9])([A-Z])/g, '$1 $2')
+            .replace(/[_/]+/g, ' ')
+            .replace(/[^a-zA-Z0-9]+/g, '')
+            .toLowerCase();
     }
 
     getAllPapers() {
