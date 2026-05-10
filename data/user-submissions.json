@@ -1,43 +1,6 @@
 {
   "papers": [
     {
-      "id": "upload-1778340781472",
-      "title": "www",
-      "year": "2026",
-      "category": "hardware",
-      "hardwareDevices": [],
-      "sensingTechnology": [],
-      "recognitionClassification": [],
-      "interactionModalities": [],
-      "gestureTypes": [],
-      "applicationScenarios": [],
-      "feedbackOutput": [],
-      "userExperienceDesign": [],
-      "tags": [
-        "IMU",
-        "IndustryApplication",
-        "MultiTouch",
-        "MotionAnalysis",
-        "IoTControl",
-        "MotionSensor",
-        "MR",
-        "Magnetometer",
-        "MediaControl",
-        "LowLatency",
-        "Thumb-Index",
-        "UserAdaptation",
-        "VisualFeedback",
-        "StaticGestureRecognition"
-      ],
-      "image": "uploads/images/1778340777234-20260507074555-218-2329.png",
-      "url": "https://.ww",
-      "doi": "",
-      "authors": "",
-      "journal": "",
-      "uploadedAt": "2026-05-09T15:33:01.472Z",
-      "source": "upload"
-    },
-    {
       "id": "upload-1778256691497",
       "title": "test",
       "year": "2029",
