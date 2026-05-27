@@ -88,12 +88,10 @@ class PaperModal {
 
         // Show all tag groups
         this.showTags('hardware', this.paper.hardwareDevices, 'hardwareDevices', 'tag-hardware');
-        this.showTags('sensing', this.paper.sensingTechnology, 'sensingTechnology', 'tag-sensing');
-        this.showTags('recognition', this.paper.recognitionClassification, 'recognitionClassification', 'tag');
-        this.showTags('interaction', this.paper.interactionModalities, 'interactionModalities', 'tag-interaction');
+        this.showTags('sensing', this.mergeTags(this.paper.sensingTechnology, this.paper.recognitionClassification), 'sensingTechnology', 'tag-sensing');
+        this.showTags('interaction', this.mergeTags(this.paper.interactionModalities, this.paper.feedbackOutput), 'interactionModalities', 'tag-interaction');
         this.showTags('gesture', this.paper.gestureTypes, 'gestureTypes', 'tag-gesture');
         this.showTags('application', this.paper.applicationScenarios, 'applicationScenarios', 'tag-application');
-        this.showTags('feedback', this.paper.feedbackOutput, 'feedbackOutput', 'tag-feedback');
         this.showTags('ux', this.paper.userExperienceDesign, 'userExperienceDesign', 'tag-ux');
         this.showTags('tags', this.paper.tags, 'tags', 'tag');
         this.setupDeleteControls();
@@ -295,6 +293,18 @@ class PaperModal {
 
     clearDeleteStatus() {
         this.setDeleteStatus('');
+    }
+
+    mergeTags(...tagLists) {
+        const mergedTags = [];
+
+        tagLists.flat().forEach(tag => {
+            if (tag && !mergedTags.includes(tag)) {
+                mergedTags.push(tag);
+            }
+        });
+
+        return mergedTags;
     }
 
     showTags(type, tags, categoryKey, tagClass = 'tag') {
@@ -606,14 +616,14 @@ class PaperModal {
 
     formatSectionLabel(categoryKey) {
         const labels = {
-            hardwareDevices: 'Hardware Devices',
+            hardwareDevices: 'Hardware Platform',
             sensingTechnology: 'Sensing Technology',
-            recognitionClassification: 'Recognition & Classification',
-            interactionModalities: 'Interaction Modalities',
-            gestureTypes: 'Gesture Types',
-            applicationScenarios: 'Application Scenarios',
-            feedbackOutput: 'Feedback & Output',
-            userExperienceDesign: 'User Experience & Design',
+            recognitionClassification: 'Sensing Technology',
+            interactionModalities: 'Interaction & Feedback Modality',
+            gestureTypes: 'Gesture Vocabulary',
+            applicationScenarios: 'Application Context',
+            feedbackOutput: 'Interaction & Feedback Modality',
+            userExperienceDesign: 'User Experience Factors',
             tags: 'Tags'
         };
 

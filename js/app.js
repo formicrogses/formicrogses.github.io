@@ -1,7 +1,7 @@
 // Main application logic
 class GestureResearchGallery {
     constructor() {
-        this.serviceWorkerVersion = '202605100007';
+        this.serviceWorkerVersion = '202605272314';
         this.isServiceWorkerRefreshing = false;
         this.allPapers = [];
         this.filteredPapers = [];
@@ -27,16 +27,51 @@ class GestureResearchGallery {
             mainCategory: [],
             hardwareDevices: [],
             sensingTechnology: [],
-            recognitionClassification: [],
             interactionModalities: [],
             gestureTypes: [],
             applicationScenarios: [],
-            feedbackOutput: [],
             userExperienceDesign: [],
             tags: [],
             yearStart: this.defaultYearRange.start,
             yearEnd: this.defaultYearRange.end
         };
+    }
+
+    getFilterCategoryKeys() {
+        return [
+            'hardwareDevices',
+            'sensingTechnology',
+            'interactionModalities',
+            'gestureTypes',
+            'applicationScenarios',
+            'userExperienceDesign',
+            'tags'
+        ];
+    }
+
+    getFilterSourceFields(categoryKey) {
+        const sourceFields = {
+            sensingTechnology: ['sensingTechnology', 'recognitionClassification'],
+            interactionModalities: ['interactionModalities', 'feedbackOutput']
+        };
+
+        return sourceFields[categoryKey] || [categoryKey];
+    }
+
+    getPaperTagsForFilter(paper, categoryKey) {
+        const tags = [];
+
+        this.getFilterSourceFields(categoryKey).forEach(field => {
+            if (Array.isArray(paper?.[field])) {
+                paper[field].forEach(tag => {
+                    if (tag && !tags.includes(tag)) {
+                        tags.push(tag);
+                    }
+                });
+            }
+        });
+
+        return tags;
     }
 
     async init() {
@@ -242,11 +277,9 @@ class GestureResearchGallery {
             mainCategory: new Set(),
             hardwareDevices: new Set(),
             sensingTechnology: new Set(),
-            recognitionClassification: new Set(),
             interactionModalities: new Set(),
             gestureTypes: new Set(),
             applicationScenarios: new Set(),
-            feedbackOutput: new Set(),
             userExperienceDesign: new Set(),
             tags: new Set()
         };
@@ -259,13 +292,11 @@ class GestureResearchGallery {
                 tagCounts[`category_${paper.category}`] = (tagCounts[`category_${paper.category}`] || 0) + 1;
             }
 
-            Object.keys(tagCollections).forEach(key => {
-                if (key !== 'mainCategory' && paper[key]) {
-                    paper[key].forEach(tag => {
-                        tagCollections[key].add(tag);
-                        tagCounts[`${key}_${tag}`] = (tagCounts[`${key}_${tag}`] || 0) + 1;
-                    });
-                }
+            this.getFilterCategoryKeys().forEach(key => {
+                this.getPaperTagsForFilter(paper, key).forEach(tag => {
+                    tagCollections[key].add(tag);
+                    tagCounts[`${key}_${tag}`] = (tagCounts[`${key}_${tag}`] || 0) + 1;
+                });
             });
         });
 
@@ -273,11 +304,9 @@ class GestureResearchGallery {
         this.generateFilterOptions('mainCategoryOptions', Array.from(tagCollections.mainCategory), 'category', tagCounts);
         this.generateFilterOptions('hardwareOptions', Array.from(tagCollections.hardwareDevices), 'hardwareDevices', tagCounts);
         this.generateFilterOptions('sensingOptions', Array.from(tagCollections.sensingTechnology), 'sensingTechnology', tagCounts);
-        this.generateFilterOptions('recognitionOptions', Array.from(tagCollections.recognitionClassification), 'recognitionClassification', tagCounts);
         this.generateFilterOptions('interactionOptions', Array.from(tagCollections.interactionModalities), 'interactionModalities', tagCounts);
         this.generateFilterOptions('gestureOptions', Array.from(tagCollections.gestureTypes), 'gestureTypes', tagCounts);
         this.generateFilterOptions('applicationOptions', Array.from(tagCollections.applicationScenarios), 'applicationScenarios', tagCounts);
-        this.generateFilterOptions('feedbackOptions', Array.from(tagCollections.feedbackOutput), 'feedbackOutput', tagCounts);
         this.generateFilterOptions('uxOptions', Array.from(tagCollections.userExperienceDesign), 'userExperienceDesign', tagCounts);
         this.generateFilterOptions('tagsOptions', Array.from(tagCollections.tags), 'tags', tagCounts);
     }
@@ -381,7 +410,7 @@ class GestureResearchGallery {
                     if (key === 'mainCategory' || key === 'yearStart' || key === 'yearEnd') continue;
                     if (!Array.isArray(selectedTags) || selectedTags.length === 0) continue;
                     
-                    const paperTags = paper[key] || [];
+                    const paperTags = this.getPaperTagsForFilter(paper, key);
                     const hasMatch = selectedTags.some(tag => paperTags.includes(tag));
                     
                     if (!hasMatch) return false;
@@ -641,25 +670,10 @@ class GestureResearchGallery {
                 tagCounts[`category_${paper.category}`] = (tagCounts[`category_${paper.category}`] || 0) + 1;
             }
             
-            // Count other tags
-            const tagCategories = {
-                hardwareDevices: 'hardwareDevices',
-                sensingTechnology: 'sensingTechnology',
-                recognitionClassification: 'recognitionClassification',
-                interactionModalities: 'interactionModalities',
-                gestureTypes: 'gestureTypes',
-                applicationScenarios: 'applicationScenarios',
-                feedbackOutput: 'feedbackOutput',
-                userExperienceDesign: 'userExperienceDesign',
-                tags: 'tags'
-            };
-            
-            Object.entries(tagCategories).forEach(([key, categoryKey]) => {
-                if (paper[key]) {
-                    paper[key].forEach(tag => {
-                        tagCounts[`${categoryKey}_${tag}`] = (tagCounts[`${categoryKey}_${tag}`] || 0) + 1;
-                    });
-                }
+            this.getFilterCategoryKeys().forEach(categoryKey => {
+                this.getPaperTagsForFilter(paper, categoryKey).forEach(tag => {
+                    tagCounts[`${categoryKey}_${tag}`] = (tagCounts[`${categoryKey}_${tag}`] || 0) + 1;
+                });
             });
         });
         
@@ -872,14 +886,12 @@ class GestureResearchGallery {
     getActiveFilterLabel(key, value) {
         const prefixes = {
             mainCategory: 'Category',
-            hardwareDevices: 'Device',
+            hardwareDevices: 'Hardware Platform',
             sensingTechnology: 'Sensing',
-            recognitionClassification: 'Recognition',
-            interactionModalities: 'Interaction',
-            gestureTypes: 'Gesture',
-            applicationScenarios: 'Scenario',
-            feedbackOutput: 'Feedback',
-            userExperienceDesign: 'UX',
+            interactionModalities: 'Interaction & Feedback',
+            gestureTypes: 'Gesture Vocabulary',
+            applicationScenarios: 'Application Context',
+            userExperienceDesign: 'User Experience',
             tags: 'Tag'
         };
 

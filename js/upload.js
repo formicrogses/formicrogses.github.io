@@ -16,14 +16,12 @@ class ArticleUploader {
         this.availableTags = [];
         this.selectedTags = [];
         this.tagGroupConfigs = [
-            { key: 'hardwareDevices', label: 'Hardware Devices' },
+            { key: 'hardwareDevices', label: 'Hardware Platform' },
             { key: 'sensingTechnology', label: 'Sensing Technology' },
-            { key: 'recognitionClassification', label: 'Recognition & Classification' },
-            { key: 'interactionModalities', label: 'Interaction Modalities' },
-            { key: 'gestureTypes', label: 'Gesture Types' },
-            { key: 'applicationScenarios', label: 'Application Scenarios' },
-            { key: 'feedbackOutput', label: 'Feedback & Output' },
-            { key: 'userExperienceDesign', label: 'User Experience & Design' }
+            { key: 'interactionModalities', label: 'Interaction & Feedback Modality' },
+            { key: 'gestureTypes', label: 'Gesture Vocabulary' },
+            { key: 'applicationScenarios', label: 'Application Context' },
+            { key: 'userExperienceDesign', label: 'User Experience Factors' }
         ];
         this.availableTagGroups = this.createEmptyTagGroups();
         this.selectedTagGroups = this.createEmptyTagGroups();
@@ -121,7 +119,7 @@ class ArticleUploader {
 
         (window.app?.allPapers || []).forEach((paper) => {
             tagFields.forEach((field) => {
-                (paper[field] || []).forEach((tag) => {
+                this.getTagsForUploadGroup(paper, field).forEach((tag) => {
                     allTags.add(tag);
 
                     if (groupedTags[field]) {
@@ -260,11 +258,11 @@ class ArticleUploader {
             category: this.elements.category.value,
             hardwareDevices: this.getSelectedDetailTags('hardwareDevices'),
             sensingTechnology: this.getSelectedDetailTags('sensingTechnology'),
-            recognitionClassification: this.getSelectedDetailTags('recognitionClassification'),
+            recognitionClassification: [],
             interactionModalities: this.getSelectedDetailTags('interactionModalities'),
             gestureTypes: this.getSelectedDetailTags('gestureTypes'),
             applicationScenarios: this.getSelectedDetailTags('applicationScenarios'),
-            feedbackOutput: this.getSelectedDetailTags('feedbackOutput'),
+            feedbackOutput: [],
             userExperienceDesign: this.getSelectedDetailTags('userExperienceDesign'),
             tags,
             image: imagePath,
@@ -363,6 +361,25 @@ class ArticleUploader {
                 .sort((a, b) => a.localeCompare(b));
             return groups;
         }, {});
+    }
+
+    getUploadGroupSourceFields(groupKey) {
+        const sourceFields = {
+            sensingTechnology: ['sensingTechnology', 'recognitionClassification'],
+            interactionModalities: ['interactionModalities', 'feedbackOutput']
+        };
+
+        return sourceFields[groupKey] || [groupKey];
+    }
+
+    getTagsForUploadGroup(paper, groupKey) {
+        if (groupKey === 'tags') {
+            return Array.isArray(paper?.tags) ? paper.tags : [];
+        }
+
+        return this.getUploadGroupSourceFields(groupKey).flatMap((field) => {
+            return Array.isArray(paper?.[field]) ? paper[field] : [];
+        });
     }
 
     dedupeTags(tags) {
