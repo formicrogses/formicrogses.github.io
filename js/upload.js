@@ -8,6 +8,11 @@ class ArticleUploader {
         this.tokenStorageKey = 'microgesture_upload_github_token';
         this.previousBodyOverflow = '';
         this.lastFocusedElement = null;
+        this.metadataLookupTimer = null;
+        this.metadataLookupId = 0;
+        this.metadataAbortController = null;
+        this.lastMetadataLookupKey = '';
+        this.isUploading = false;
         this.availableTags = [];
         this.selectedTags = [];
         this.tagGroupConfigs = [
@@ -78,6 +83,10 @@ class ArticleUploader {
         this.elements.form.addEventListener('submit', (event) => this.handleSubmit(event));
         this.elements.imageChoose?.addEventListener('click', () => this.elements.imageFile?.click());
         this.elements.imageFile?.addEventListener('change', () => this.updateSelectedImageName());
+        this.elements.url?.addEventListener('input', () => this.scheduleMetadataLookup());
+        this.elements.url?.addEventListener('blur', () => this.scheduleMetadataLookup(0));
+        this.elements.doi?.addEventListener('input', () => this.scheduleMetadataLookup());
+        this.elements.doi?.addEventListener('blur', () => this.scheduleMetadataLookup(0));
         this.elements.addTagButton?.addEventListener('click', () => this.addTagsFromInput());
         this.elements.detailGroups?.addEventListener('click', (event) => this.handleDetailGroupClick(event));
         this.elements.detailGroups?.addEventListener('keydown', (event) => this.handleDetailGroupKeydown(event));
@@ -137,10 +146,6 @@ class ArticleUploader {
         document.body.style.overflow = 'hidden';
         this.clearStatus();
 
-        if (!this.elements.year.value) {
-            this.elements.year.value = String(new Date().getFullYear());
-        }
-
         setTimeout(() => this.elements.title?.focus(), 0);
     }
 
@@ -194,6 +199,7 @@ class ArticleUploader {
 
     async handleSubmit(event) {
         event.preventDefault();
+        this.cancelMetadataLookup();
         this.clearStatus();
         this.clearFieldValidity();
 
@@ -261,7 +267,7 @@ class ArticleUploader {
             tags,
             image: imagePath,
             url,
-            doi: this.elements.doi.value.trim(),
+            doi: this.normalizeDoiValue(this.elements.doi.value.trim()),
             authors: this.elements.authors.value.trim(),
             journal: this.elements.journal.value.trim(),
             uploadedAt: new Date().toISOString(),
@@ -304,10 +310,10 @@ class ArticleUploader {
             };
         }
 
-        if (doi && !this.isValidUrl(doi)) {
+        if (doi && !this.isValidDoiValue(doi)) {
             return {
                 element: this.elements.doi,
-                message: 'Enter a valid DOI URL, including https://.'
+                message: 'Enter a valid DOI, for example 10.xxxx/xxxx or https://doi.org/10.xxxx/xxxx.'
             };
         }
 
@@ -401,6 +407,295 @@ class ArticleUploader {
         } catch (error) {
             return false;
         }
+    }
+
+    isValidDoiValue(value) {
+        return Boolean(this.extractDoi(value));
+    }
+
+    scheduleMetadataLookup(delay = 700) {
+        window.clearTimeout(this.metadataLookupTimer);
+
+        if (this.isUploading) {
+            return;
+        }
+
+        this.metadataLookupTimer = window.setTimeout(() => {
+            this.lookupMetadataFromInputs();
+        }, delay);
+    }
+
+    cancelMetadataLookup() {
+        window.clearTimeout(this.metadataLookupTimer);
+        this.metadataLookupTimer = null;
+        this.metadataLookupId += 1;
+
+        if (this.metadataAbortController) {
+            this.metadataAbortController.abort();
+            this.metadataAbortController = null;
+        }
+    }
+
+    getMetadataLookupInput() {
+        const articleUrl = this.elements.url.value.trim();
+        const doiValue = this.elements.doi.value.trim();
+        const doi = this.extractDoi(doiValue) || this.extractDoi(articleUrl);
+
+        if (doi) {
+            return {
+                type: 'doi',
+                value: doi,
+                key: `doi:${doi.toLowerCase()}`
+            };
+        }
+
+        if (this.isValidUrl(articleUrl)) {
+            return {
+                type: 'url',
+                value: articleUrl,
+                key: `url:${articleUrl}`
+            };
+        }
+
+        return null;
+    }
+
+    async lookupMetadataFromInputs() {
+        const lookup = this.getMetadataLookupInput();
+
+        if (!lookup || lookup.key === this.lastMetadataLookupKey || this.isUploading) {
+            return;
+        }
+
+        this.lastMetadataLookupKey = lookup.key;
+        const lookupId = this.metadataLookupId + 1;
+        this.metadataLookupId = lookupId;
+
+        if (this.metadataAbortController) {
+            this.metadataAbortController.abort();
+        }
+
+        this.metadataAbortController = new AbortController();
+        this.setStatus('Looking up metadata from DOI/URL...');
+
+        try {
+            const metadata = await this.fetchArticleMetadata(lookup, this.metadataAbortController.signal);
+
+            if (lookupId !== this.metadataLookupId || this.isUploading) {
+                return;
+            }
+
+            if (!metadata) {
+                this.setStatus('No matching metadata found. You can fill the fields manually.', 'error');
+                return;
+            }
+
+            const filledFields = this.applyMetadata(metadata);
+
+            if (filledFields.length > 0) {
+                this.setStatus(`Metadata found. Filled ${filledFields.join(', ')}.`, 'success');
+            } else {
+                this.setStatus('Metadata found, but existing field values were kept.', 'success');
+            }
+        } catch (error) {
+            if (error.name === 'AbortError' || lookupId !== this.metadataLookupId || this.isUploading) {
+                return;
+            }
+
+            this.setStatus('Metadata lookup failed. You can fill the fields manually.', 'error');
+        } finally {
+            if (lookupId === this.metadataLookupId) {
+                this.metadataAbortController = null;
+            }
+        }
+    }
+
+    async fetchArticleMetadata(lookup, signal) {
+        const crossrefMetadata = await this.fetchCrossrefMetadata(lookup, signal).catch(() => null);
+        if (crossrefMetadata) {
+            return crossrefMetadata;
+        }
+
+        return this.fetchOpenAlexMetadata(lookup, signal).catch(() => null);
+    }
+
+    async fetchCrossrefMetadata(lookup, signal) {
+        const endpoint = lookup.type === 'doi'
+            ? `https://api.crossref.org/works/${encodeURIComponent(lookup.value)}`
+            : `https://api.crossref.org/works?query.bibliographic=${encodeURIComponent(lookup.value)}&rows=1`;
+        const response = await fetch(endpoint, {
+            headers: { Accept: 'application/json' },
+            signal
+        });
+
+        if (!response.ok) {
+            return null;
+        }
+
+        const payload = await response.json();
+        const item = lookup.type === 'doi'
+            ? payload?.message
+            : payload?.message?.items?.[0];
+
+        return this.normalizeCrossrefMetadata(item);
+    }
+
+    async fetchOpenAlexMetadata(lookup, signal) {
+        const endpoint = lookup.type === 'doi'
+            ? `https://api.openalex.org/works?filter=doi:${encodeURIComponent(this.normalizeDoiValue(lookup.value))}&per-page=1`
+            : `https://api.openalex.org/works?search=${encodeURIComponent(lookup.value)}&per-page=1`;
+        const response = await fetch(endpoint, {
+            headers: { Accept: 'application/json' },
+            signal
+        });
+
+        if (!response.ok) {
+            return null;
+        }
+
+        const payload = await response.json();
+        const item = payload?.results?.[0];
+
+        return this.normalizeOpenAlexMetadata(item);
+    }
+
+    normalizeCrossrefMetadata(item) {
+        if (!item || typeof item !== 'object') {
+            return null;
+        }
+
+        const metadata = {
+            title: this.firstTextValue(item.title) || this.firstTextValue(item.subtitle),
+            authors: this.formatCrossrefAuthors(item.author),
+            journal: this.firstTextValue(item['container-title']) ||
+                this.firstTextValue(item['short-container-title']) ||
+                item.event?.name ||
+                item.publisher ||
+                '',
+            year: this.extractCrossrefYear(item.issued || item.published || item['published-print'] || item['published-online']),
+            doi: item.DOI ? this.normalizeDoiValue(item.DOI) : ''
+        };
+
+        return this.hasUsefulMetadata(metadata) ? metadata : null;
+    }
+
+    normalizeOpenAlexMetadata(item) {
+        if (!item || typeof item !== 'object') {
+            return null;
+        }
+
+        const sourceName = item.primary_location?.source?.display_name ||
+            item.host_venue?.display_name ||
+            (Array.isArray(item.locations)
+                ? item.locations.find((location) => location?.source?.display_name)?.source?.display_name
+                : '') ||
+            '';
+        const metadata = {
+            title: item.display_name || item.title || '',
+            authors: Array.isArray(item.authorships)
+                ? item.authorships
+                    .map((authorship) => authorship?.author?.display_name)
+                    .filter(Boolean)
+                    .join(', ')
+                : '',
+            journal: sourceName,
+            year: item.publication_year ? String(item.publication_year) : '',
+            doi: item.doi ? this.normalizeDoiValue(item.doi) : ''
+        };
+
+        return this.hasUsefulMetadata(metadata) ? metadata : null;
+    }
+
+    applyMetadata(metadata) {
+        const fieldConfigs = [
+            { key: 'title', label: 'title', element: this.elements.title },
+            { key: 'authors', label: 'authors', element: this.elements.authors },
+            { key: 'journal', label: 'journal/conference', element: this.elements.journal },
+            { key: 'year', label: 'year', element: this.elements.year },
+            { key: 'doi', label: 'DOI', element: this.elements.doi }
+        ];
+        const filledFields = [];
+
+        fieldConfigs.forEach((config) => {
+            const value = String(metadata[config.key] || '').trim();
+
+            if (!value || config.element.value.trim()) {
+                return;
+            }
+
+            config.element.value = value;
+            filledFields.push(config.label);
+        });
+
+        return filledFields;
+    }
+
+    hasUsefulMetadata(metadata) {
+        return ['title', 'authors', 'journal', 'year', 'doi']
+            .some((key) => Boolean(String(metadata[key] || '').trim()));
+    }
+
+    firstTextValue(value) {
+        if (Array.isArray(value)) {
+            return String(value[0] || '').trim();
+        }
+
+        return String(value || '').trim();
+    }
+
+    formatCrossrefAuthors(authors) {
+        if (!Array.isArray(authors)) {
+            return '';
+        }
+
+        return authors
+            .map((author) => {
+                const parts = [author.given, author.family]
+                    .filter(Boolean)
+                    .join(' ')
+                    .trim();
+
+                return parts || author.name || '';
+            })
+            .filter(Boolean)
+            .join(', ');
+    }
+
+    extractCrossrefYear(dateValue) {
+        const year = dateValue?.['date-parts']?.[0]?.[0];
+        return year ? String(year) : '';
+    }
+
+    extractDoi(value) {
+        if (!value) {
+            return '';
+        }
+
+        let cleanValue = String(value).trim();
+
+        try {
+            cleanValue = decodeURIComponent(cleanValue);
+        } catch (error) {
+            // Keep the original value when it is not valid percent-encoded text.
+        }
+
+        cleanValue = cleanValue
+            .replace(/^doi:\s*/i, '')
+            .replace(/^https?:\/\/(?:dx\.)?doi\.org\//i, '');
+
+        const match = cleanValue.match(/\b10\.\d{4,9}\/[-._;()/:A-Z0-9]+/i);
+
+        return match ? match[0].replace(/[.,;)\]]+$/g, '') : '';
+    }
+
+    normalizeDoiValue(value) {
+        const doi = this.extractDoi(value);
+
+        if (!doi) {
+            return String(value || '').trim();
+        }
+
+        return `https://doi.org/${doi}`;
     }
 
     parseTags(value) {
@@ -1030,6 +1325,8 @@ class ArticleUploader {
     }
 
     resetArticleFields() {
+        this.cancelMetadataLookup();
+        this.lastMetadataLookupKey = '';
         this.elements.title.value = '';
         this.elements.url.value = '';
         this.elements.doi.value = '';
@@ -1048,6 +1345,12 @@ class ArticleUploader {
     }
 
     setBusy(isBusy) {
+        this.isUploading = isBusy;
+
+        if (isBusy) {
+            this.cancelMetadataLookup();
+        }
+
         this.elements.submitButton.disabled = isBusy;
         this.elements.submitButton.textContent = isBusy ? 'Uploading...' : 'Upload';
         this.elements.form.setAttribute('aria-busy', String(isBusy));
