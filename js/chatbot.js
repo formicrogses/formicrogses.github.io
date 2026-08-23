@@ -1,12 +1,12 @@
-// Chatbot using Google Gemini API
-class GeminiChatbot {
+class GrokChatbot {
     constructor() {
         this.config = {
             provider: 'openai',
-            model: '[L]gemini-3-flash-preview',
-            modelLabel: 'Gemini 3 Flash Preview',
-            apiEndpoint: 'https://new.lemonapi.site/v1/chat/completions',
+            model: 'grok-4.5',
+            modelLabel: 'Grok 4.5',
+            apiEndpoint: 'https://api.duckcoding.ai/v1/chat/completions',
             apiKey: '',
+            maxResponseTokens: 3072,
             embeddedMode: false,
             retrieval: {
                 maxRelevantPapers: 6,
@@ -28,6 +28,11 @@ class GeminiChatbot {
         this.papersIndex = null;   // （）
         this.papersTexts = null;   // （）
         this.websiteData = null;   // （PAPERS_DATA）
+        this.paperLookup = {
+            byId: new Map(),
+            byNormalizedTitle: new Map(),
+            titlesByLength: []
+        };
         
         // 
         this.conversations = [];   // 
@@ -41,9 +46,9 @@ class GeminiChatbot {
         this.createChatInterface();
         this.setupEventListeners();
         this.loadApiKey();
-        this.loadConversations();
         this.loadPapersTexts();
         this.loadWebsiteData();
+        this.loadConversations();
         this.updateApiStatusUI();
         this.updatePaperContextUI();
     }
@@ -63,9 +68,9 @@ class GeminiChatbot {
             }
         };
 
-        this.provider = this.config.provider || 'gemini';
+        this.provider = this.config.provider || 'openai';
         this.model = this.config.model || this.model;
-        this.modelLabel = this.config.modelLabel || 'Gemini 3 Flash Preview';
+        this.modelLabel = this.config.modelLabel || 'Grok 4.5';
         this.apiEndpoint = this.config.apiEndpoint || this.apiEndpoint;
 
         if (this.config.apiKey && this.config.apiKey.trim() && !this.config.apiKey.includes('PASTE_')) {
@@ -91,10 +96,70 @@ class GeminiChatbot {
         // （PAPERS_DATA）
         if (typeof PAPERS_DATA !== 'undefined') {
             this.websiteData = PAPERS_DATA;
+            this.buildPaperLookup();
             console.log(`Loaded website data: ${PAPERS_DATA.papers.length} papers`);
         } else {
             console.warn('PAPERS_DATA is not available');
         }
+    }
+
+    buildPaperLookup() {
+        const papers = this.getArchivePapers();
+        const byId = new Map();
+        const byNormalizedTitle = new Map();
+
+        papers.forEach((paper) => {
+            if (!paper || !paper.title) {
+                return;
+            }
+
+            if (paper.id !== undefined && paper.id !== null) {
+                byId.set(String(paper.id), paper);
+            }
+
+            const normalizedTitle = this.normalizePaperTitle(paper.title);
+            if (normalizedTitle && !byNormalizedTitle.has(normalizedTitle)) {
+                byNormalizedTitle.set(normalizedTitle, paper);
+            }
+        });
+
+        this.paperLookup = {
+            byId,
+            byNormalizedTitle,
+            titlesByLength: Array.from(byNormalizedTitle.entries())
+                .map(([normalizedTitle, paper]) => ({
+                    normalizedTitle,
+                    title: paper.title,
+                    lowerTitle: paper.title.toLowerCase(),
+                    paper
+                }))
+                .filter((item) => item.title.length >= 12)
+                .sort((a, b) => b.title.length - a.title.length)
+        };
+    }
+
+    getArchivePapers() {
+        if (this.websiteData && Array.isArray(this.websiteData.papers)) {
+            return this.websiteData.papers;
+        }
+
+        if (typeof PAPERS_DATA !== 'undefined' && Array.isArray(PAPERS_DATA.papers)) {
+            return PAPERS_DATA.papers;
+        }
+
+        return [];
+    }
+
+    normalizePaperTitle(title = '') {
+        return String(title)
+            .toLowerCase()
+            .normalize('NFKD')
+            .replace(/[\u0300-\u036f]/g, '')
+            .replace(/[\u2018\u2019]/g, "'")
+            .replace(/[\u201c\u201d]/g, '"')
+            .replace(/[^a-z0-9]+/g, ' ')
+            .replace(/\s+/g, ' ')
+            .trim();
     }
 
     async loadFullPaperText(filename) {
@@ -138,9 +203,10 @@ class GeminiChatbot {
 
     loadApiKey() {
         if (this.hasEmbeddedKey) {
+            localStorage.removeItem('gemini_api_key');
             return;
         }
-        const savedKey = localStorage.getItem('gemini_api_key');
+        const savedKey = localStorage.getItem('grok_api_key');
         if (savedKey) {
             this.apiKey = savedKey;
         }
@@ -148,7 +214,7 @@ class GeminiChatbot {
 
     saveApiKey(key) {
         this.apiKey = key;
-        localStorage.setItem('gemini_api_key', key);
+        localStorage.setItem('grok_api_key', key);
         this.updateApiStatusUI();
     }
 
@@ -205,8 +271,9 @@ class GeminiChatbot {
                     
                     <div class="chatbot-messages" id="chatbotMessages">
                         <div class="chatbot-welcome">
+                            <span class="welcome-eyebrow">Microgesture archive · research workspace</span>
                             <div class="welcome-icon">◌</div>
-                            <h4>Ask about the paper archive</h4>
+                            <h4>Research with context.</h4>
                             <p>Search papers, compare methods, summarize a selected paper, or ask for trends across the archive.</p>
                             <div class="chatbot-suggestions">
                                 <button type="button" class="chatbot-suggestion" data-prompt="Find papers about smart ring interaction.">Smart ring papers</button>
@@ -255,8 +322,8 @@ class GeminiChatbot {
                 <div class="chatbot-settings" id="chatbotSettings" style="display: none;">
                     <div class="settings-content">
                         <h4>API Configuration</h4>
-                        <p class="settings-description" id="chatbotSettingsDescription">${this.hasEmbeddedKey ? 'An embedded API configuration is active for this build. You can still inspect or replace it here for testing.' : 'Enter your Google Gemini API key to start chatting.'}</p>
-                        <a href="https://makersuite.google.com/app/apikey" target="_blank" class="api-link">Get API Key →</a>
+                        <p class="settings-description" id="chatbotSettingsDescription">${this.hasEmbeddedKey ? 'An embedded Grok API configuration is active for this build. You can still inspect or replace it here for testing.' : 'Enter your Grok API key to start chatting.'}</p>
+                        <a href="https://api.duckcoding.ai" target="_blank" rel="noopener" class="api-link">Open DuckCoding API →</a>
                         <input 
                             type="password" 
                             class="api-key-input" 
@@ -454,7 +521,7 @@ class GeminiChatbot {
         if (description) {
             description.textContent = this.hasEmbeddedKey
                 ? 'An embedded API configuration is active for this build. You can still inspect or replace it here for testing.'
-                : 'Enter your Google Gemini API key to start chatting.';
+                : 'Enter your Grok API key to start chatting.';
         }
     }
 
@@ -631,7 +698,7 @@ class GeminiChatbot {
         this.showLoading();
         
         try {
-            const response = await this.callGeminiAPI(message, relevantPapers);
+            const response = await this.callChatAPI(message, relevantPapers);
             this.hideLoading();
             this.addMessage('AI', response, 'bot');
         } catch (error) {
@@ -642,14 +709,14 @@ class GeminiChatbot {
                 errorMessage = 'Invalid API key. Please check your settings.';
                 setTimeout(() => this.showSettings(), 1000);
             } else if (error.message.includes('quota')) {
-                errorMessage = 'API quota exceeded. Please check your Google Cloud Console.';
+                errorMessage = 'API quota exceeded. Please check your DuckCoding account.';
             }
             
             this.addMessage('System', errorMessage, 'error');
         }
     }
 
-    async callGeminiAPI(message, relevantPapers = []) {
+    async callChatAPI(message, relevantPapers = []) {
         const messages = [];
 
         if (this.conversationHistory.length === 0) {
@@ -692,7 +759,7 @@ class GeminiChatbot {
                 model: this.model,
                 messages,
                 temperature: 0.7,
-                max_tokens: 2048
+                max_tokens: this.config.maxResponseTokens || 3072
             })
         });
         
@@ -1203,6 +1270,7 @@ class GeminiChatbot {
         // 
         context += '\n**INSTRUCTIONS:**\n';
         context += '- Answer based on the papers above with specific citations\n';
+        context += '- When citing or recommending archive papers, use the exact paper title naturally in the sentence or list item\n';
         context += '- Always mention paper title, author, and year when discussing results\n';
         context += '- Provide quantitative data (accuracy %, latency ms, etc.) when available\n';
         
@@ -1686,12 +1754,12 @@ class GeminiChatbot {
 \`\`\`
 I found several papers about [topic]:
 
-1. **Paper #ID**: "[Full Title]" (Year)
+1. **[Full Title]** (Year)
    - Hardware: [devices]
    - Applications: [scenarios]
    - 🔗 View on website: Click the paper card or search by title
 
-2. **Paper #ID**: "[Title]" (Year)
+2. **[Title]** (Year)
    ...
 
 To access these papers:
@@ -1714,7 +1782,7 @@ To access these papers:
 ✅ "DataGlove research" → Papers using DataGlove hardware
 ✅ "Recommend papers about X" → Smart recommendations based on tags
 
-**IMPORTANT**: You have access to ALL ${totalPapers} papers. When user asks, search by their criteria (keywords, year, tags) and provide specific paper IDs and titles. Tell users they can click papers on the website to see full details and DOI links.`;
+**IMPORTANT**: You have access to ALL ${totalPapers} papers. When user asks, search by their criteria (keywords, year, tags) and provide exact paper titles. Tell users they can click paper titles in the chat or paper cards on the website to see full details and DOI links.`;
     }
 
     generateCompactWebsiteData() {
@@ -1747,7 +1815,7 @@ To access these papers:
 
 Core rules:
 - Respond in the same language as the user unless the user asks otherwise.
-- Be concise, accurate, and structured.
+- Be accurate and structured; give enough detail for useful research reading.
 - Always ground claims in the retrieved papers when paper evidence is available.
 - Cite paper title, year, and author when making a specific claim.
 - If retrieved evidence is insufficient, say so clearly instead of guessing.
@@ -1756,6 +1824,7 @@ Core rules:
 Archive facts:
 - The website contains ${totalPapers}+ papers.
 - Users can click paper cards on the website to open full details and DOI links.
+- When mentioning archive papers, use the exact title so the website can make it clickable automatically.
 `;
 
         if (this.currentPaper && this.currentPaper.text) {
@@ -1808,7 +1877,9 @@ ${truncatedText}`;
         
         // Format text with basic markdown support
         if (type === 'bot') {
-            textDiv.innerHTML = this.formatMarkdown(text);
+            const displayText = this.cleanVisiblePaperReferences(text);
+            textDiv.innerHTML = this.formatMarkdown(displayText);
+            this.linkPaperReferences(textDiv);
         } else {
             textDiv.textContent = text;
         }
@@ -1828,6 +1899,256 @@ ${truncatedText}`;
         if (saveToConversation && (type === 'user' || type === 'bot')) {
             this.saveMessageToConversation(sender, text, type);
         }
+    }
+
+    cleanVisiblePaperReferences(text) {
+        if (!text || !this.paperLookup || this.paperLookup.byId.size === 0) {
+            return text;
+        }
+
+        const resolveTitle = (id, fallback = '') => {
+            const paper = this.paperLookup.byId.get(String(id));
+            return paper ? paper.title : fallback;
+        };
+        const escapeRegExp = (value) => value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+
+        let cleanedText = String(text);
+
+        this.getArchivePapers().forEach((paper) => {
+            if (!paper || !paper.id || !paper.title) {
+                return;
+            }
+
+            const idPattern = String(paper.id).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+            const titlePattern = escapeRegExp(paper.title);
+            cleanedText = cleanedText
+                .replace(new RegExp(`\\*\\*Paper\\s*#\\s*${idPattern}\\*\\*\\s*:\\s*["“]?${titlePattern}["”]?`, 'gi'), `**${paper.title}**`)
+                .replace(new RegExp(`\\bPaper\\s*#\\s*${idPattern}\\s*:\\s*["“]?${titlePattern}["”]?`, 'gi'), paper.title);
+        });
+
+        return cleanedText
+            .replace(/\*\*Paper\s*#\s*(\d{1,4})\*\*\s*:\s*["“]([^"”\n]+)["”]/gi, (match, id, fallbackTitle) => {
+                const title = resolveTitle(id, fallbackTitle);
+                return title ? `**${title}**` : match;
+            })
+            .replace(/\bPaper\s*#\s*(\d{1,4})\s*:\s*["“]([^"”\n]+)["”]/gi, (match, id, fallbackTitle) => {
+                const title = resolveTitle(id, fallbackTitle);
+                return title || match;
+            })
+            .replace(/\*\*Paper\s*#\s*(\d{1,4})\*\*/gi, (match, id) => {
+                const title = resolveTitle(id);
+                return title ? `**${title}**` : match;
+            })
+            .replace(/\bPaper\s*#\s*(\d{1,4})\b/gi, (match, id) => {
+                const title = resolveTitle(id);
+                return title || match;
+            });
+    }
+
+    linkPaperReferences(container) {
+        if (!container || !this.paperLookup || this.paperLookup.byId.size === 0) {
+            return;
+        }
+
+        this.linkPaperIds(container);
+        this.linkPaperTitles(container);
+    }
+
+    linkPaperIds(container) {
+        const idPattern = /\bPaper\s*#\s*(\d{1,4})\b/gi;
+
+        this.replaceTextMatches(container, idPattern, (match) => {
+            const id = match[1];
+            const paper = this.paperLookup.byId.get(String(id));
+            if (!paper) {
+                return null;
+            }
+
+            return this.createPaperReferenceButton(paper, paper.title);
+        });
+    }
+
+    linkPaperTitles(container) {
+        const titles = this.paperLookup.titlesByLength || [];
+        if (titles.length === 0) {
+            return;
+        }
+
+        this.replaceTextNodes(container, (text) => {
+            const matches = this.findPaperTitleMatches(text, titles);
+            if (matches.length === 0) {
+                return null;
+            }
+
+            const fragment = document.createDocumentFragment();
+            let cursor = 0;
+
+            matches.forEach((match) => {
+                if (match.start > cursor) {
+                    fragment.appendChild(document.createTextNode(text.slice(cursor, match.start)));
+                }
+
+                fragment.appendChild(this.createPaperReferenceButton(
+                    match.paper,
+                    text.slice(match.start, match.end),
+                    'title'
+                ));
+                cursor = match.end;
+            });
+
+            if (cursor < text.length) {
+                fragment.appendChild(document.createTextNode(text.slice(cursor)));
+            }
+
+            return fragment;
+        });
+    }
+
+    findPaperTitleMatches(text, titles) {
+        const lowerText = text.toLowerCase();
+        const rawMatches = [];
+
+        titles.forEach(({ lowerTitle, paper }) => {
+            let start = lowerText.indexOf(lowerTitle);
+
+            while (start !== -1) {
+                const end = start + lowerTitle.length;
+
+                if (this.isPaperTitleBoundary(text, start, end)) {
+                    rawMatches.push({
+                        start,
+                        end,
+                        paper,
+                        length: lowerTitle.length
+                    });
+                }
+
+                start = lowerText.indexOf(lowerTitle, start + 1);
+            }
+        });
+
+        rawMatches.sort((a, b) => {
+            if (a.start !== b.start) return a.start - b.start;
+            return b.length - a.length;
+        });
+
+        const selected = [];
+        let occupiedUntil = -1;
+
+        rawMatches.forEach((match) => {
+            if (match.start >= occupiedUntil) {
+                selected.push(match);
+                occupiedUntil = match.end;
+            }
+        });
+
+        return selected;
+    }
+
+    isPaperTitleBoundary(text, start, end) {
+        const before = text[start - 1] || '';
+        const after = text[end] || '';
+        const isWord = (character) => /[A-Za-z0-9]/.test(character);
+
+        return !isWord(before) && !isWord(after);
+    }
+
+    replaceTextMatches(container, pattern, createReplacement) {
+        this.replaceTextNodes(container, (text) => {
+            pattern.lastIndex = 0;
+            let match;
+            let cursor = 0;
+            let hasReplacement = false;
+            const fragment = document.createDocumentFragment();
+
+            while ((match = pattern.exec(text)) !== null) {
+                const replacement = createReplacement(match);
+                if (!replacement) {
+                    continue;
+                }
+
+                hasReplacement = true;
+                if (match.index > cursor) {
+                    fragment.appendChild(document.createTextNode(text.slice(cursor, match.index)));
+                }
+                fragment.appendChild(replacement);
+                cursor = match.index + match[0].length;
+            }
+
+            if (!hasReplacement) {
+                return null;
+            }
+
+            if (cursor < text.length) {
+                fragment.appendChild(document.createTextNode(text.slice(cursor)));
+            }
+
+            return fragment;
+        });
+    }
+
+    replaceTextNodes(container, createFragment) {
+        const walker = document.createTreeWalker(
+            container,
+            NodeFilter.SHOW_TEXT,
+            {
+                acceptNode: (node) => {
+                    if (!node.nodeValue || !node.nodeValue.trim()) {
+                        return NodeFilter.FILTER_REJECT;
+                    }
+
+                    const parent = node.parentElement;
+                    if (!parent || parent.closest('a, button, code, pre, script, style')) {
+                        return NodeFilter.FILTER_REJECT;
+                    }
+
+                    return NodeFilter.FILTER_ACCEPT;
+                }
+            }
+        );
+
+        const nodes = [];
+        let node;
+        while ((node = walker.nextNode())) {
+            nodes.push(node);
+        }
+
+        nodes.forEach((textNode) => {
+            const fragment = createFragment(textNode.nodeValue);
+            if (fragment) {
+                textNode.replaceWith(fragment);
+            }
+        });
+    }
+
+    createPaperReferenceButton(paper, label, variant = 'id') {
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.className = `chatbot-paper-link chatbot-paper-link-${variant}`;
+        button.textContent = label;
+        button.dataset.paperId = paper.id || '';
+        button.setAttribute('aria-label', `Open paper details for ${paper.title}`);
+        button.addEventListener('click', (event) => {
+            event.preventDefault();
+            event.stopPropagation();
+            this.openPaperFromChat(paper);
+        });
+
+        return button;
+    }
+
+    openPaperFromChat(paper) {
+        if (!paper) {
+            return;
+        }
+
+        if (typeof PaperModal === 'undefined') {
+            console.warn('PaperModal is not available');
+            return;
+        }
+
+        const modal = new PaperModal(paper);
+        modal.show();
     }
 
     formatMarkdown(text) {
@@ -1856,12 +2177,10 @@ ${truncatedText}`;
         html = html.replace(/^## (.+)$/gm, '<h2>$1</h2>');
         html = html.replace(/^# (.+)$/gm, '<h1>$1</h1>');
         
-        // Lists (unordered)
-        html = html.replace(/^\* (.+)$/gm, '<li>$1</li>');
-        html = html.replace(/^- (.+)$/gm, '<li>$1</li>');
-        
-        // Lists (ordered)
-        html = html.replace(/^\d+\. (.+)$/gm, '<li>$1</li>');
+        // Lists
+        html = html.replace(/^\s*\* (.+)$/gm, '<li>$1</li>');
+        html = html.replace(/^\s*- (.+)$/gm, '<li>$1</li>');
+        html = html.replace(/^\s*\d+\. (.+)$/gm, '<li>$1</li>');
         
         // Wrap list items in ul/ol tags
         html = html.replace(/(<li>.*<\/li>\n?)+/g, match => {
@@ -1886,6 +2205,8 @@ ${truncatedText}`;
             }
             return para;
         }).join('\n');
+
+        html = html.replace(/<p>\s*<\/p>/g, '');
         
         return html;
     }
@@ -2106,5 +2427,5 @@ ${truncatedText}`;
 
 // Initialize chatbot when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
-    window.chatbot = new GeminiChatbot();
+    window.chatbot = new GrokChatbot();
 });

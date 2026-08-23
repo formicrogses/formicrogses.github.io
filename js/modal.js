@@ -9,6 +9,12 @@ class PaperModal {
         this.relatedTag = document.getElementById('relatedPapersTag');
         this.relatedBody = document.getElementById('relatedPapersBody');
         this.relatedCloseBtn = document.getElementById('relatedPapersClose');
+        this.deleteButton = document.getElementById('modalDelete');
+        this.deletePanel = document.getElementById('modalDeletePanel');
+        this.deleteToken = document.getElementById('modalDeleteToken');
+        this.deleteCancel = document.getElementById('modalDeleteCancel');
+        this.deleteConfirm = document.getElementById('modalDeleteConfirm');
+        this.deleteStatus = document.getElementById('modalDeleteStatus');
         this.activeRelatedTagButton = null;
         this.escHandler = null;
         this.relatedHideTimer = null;
@@ -58,17 +64,37 @@ class PaperModal {
             journalContainer.style.display = 'none';
         }
 
+        const urlContainer = document.getElementById('modalUrlContainer');
+        const urlValue = document.getElementById('modalUrl');
+        if (this.paper.url && this.paper.url.trim()) {
+            urlContainer.style.display = 'block';
+            if (urlValue) {
+                urlValue.innerHTML = '';
+                const urlLink = document.createElement('a');
+                urlLink.href = this.paper.url;
+                urlLink.target = '_blank';
+                urlLink.rel = 'noopener';
+                urlLink.textContent = this.paper.url;
+                urlValue.appendChild(urlLink);
+            }
+        } else {
+            urlContainer.style.display = 'none';
+            if (urlValue) {
+                urlValue.textContent = '';
+            }
+        }
+
         this.resetRelatedPapers();
 
         // Show all tag groups
         this.showTags('hardware', this.paper.hardwareDevices, 'hardwareDevices', 'tag-hardware');
-        this.showTags('sensing', this.paper.sensingTechnology, 'sensingTechnology', 'tag-sensing');
-        this.showTags('recognition', this.paper.recognitionClassification, 'recognitionClassification', 'tag');
-        this.showTags('interaction', this.paper.interactionModalities, 'interactionModalities', 'tag-interaction');
+        this.showTags('sensing', this.mergeTags(this.paper.sensingTechnology, this.paper.recognitionClassification), 'sensingTechnology', 'tag-sensing');
+        this.showTags('interaction', this.mergeTags(this.paper.interactionModalities, this.paper.feedbackOutput), 'interactionModalities', 'tag-interaction');
         this.showTags('gesture', this.paper.gestureTypes, 'gestureTypes', 'tag-gesture');
         this.showTags('application', this.paper.applicationScenarios, 'applicationScenarios', 'tag-application');
-        this.showTags('feedback', this.paper.feedbackOutput, 'feedbackOutput', 'tag-feedback');
         this.showTags('ux', this.paper.userExperienceDesign, 'userExperienceDesign', 'tag-ux');
+        this.showTags('tags', this.paper.tags, 'tags', 'tag');
+        this.setupDeleteControls();
 
         this.modal.classList.add('show');
         document.body.style.overflow = 'hidden';
@@ -84,6 +110,7 @@ class PaperModal {
         this.modal.classList.remove('show');
         document.body.style.overflow = 'auto';
         this.resetRelatedPapers();
+        this.resetDeleteControls();
 
         if (this.escHandler) {
             document.removeEventListener('keydown', this.escHandler);
@@ -131,6 +158,153 @@ class PaperModal {
         };
 
         document.addEventListener('keydown', this.escHandler);
+    }
+
+    setupDeleteControls() {
+        const canDelete = this.isUploadedPaper(this.paper) &&
+            Boolean(window.articleUploader && typeof window.articleUploader.deletePaperRecord === 'function');
+
+        this.resetDeleteControls();
+
+        if (this.deleteButton) {
+            this.deleteButton.hidden = !canDelete;
+            this.deleteButton.disabled = false;
+            this.deleteButton.textContent = 'Delete Upload';
+            this.deleteButton.onclick = canDelete ? () => this.openDeletePanel() : null;
+        }
+
+        if (this.deleteCancel) {
+            this.deleteCancel.onclick = () => this.closeDeletePanel();
+        }
+
+        if (this.deleteConfirm) {
+            this.deleteConfirm.onclick = () => this.confirmDelete();
+        }
+    }
+
+    isUploadedPaper(paper) {
+        return Boolean(paper && (paper.source === 'upload' || String(paper.id || '').startsWith('upload-')));
+    }
+
+    openDeletePanel() {
+        if (!this.deletePanel) {
+            return;
+        }
+
+        this.deletePanel.hidden = false;
+        this.clearDeleteStatus();
+
+        const savedToken = window.articleUploader?.getStoredToken?.() || '';
+        if (this.deleteToken && !this.deleteToken.value) {
+            this.deleteToken.value = savedToken;
+        }
+
+        this.deletePanel.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+        setTimeout(() => {
+            const focusTarget = this.deleteToken?.value ? this.deleteConfirm : this.deleteToken;
+            focusTarget?.focus();
+        }, 0);
+    }
+
+    closeDeletePanel() {
+        if (this.deletePanel) {
+            this.deletePanel.hidden = true;
+        }
+
+        this.clearDeleteStatus();
+
+        if (this.deleteToken) {
+            this.deleteToken.removeAttribute('aria-invalid');
+        }
+
+        this.deleteButton?.focus();
+    }
+
+    resetDeleteControls() {
+        if (this.deletePanel) {
+            this.deletePanel.hidden = true;
+        }
+
+        if (this.deleteToken) {
+            this.deleteToken.value = '';
+            this.deleteToken.removeAttribute('aria-invalid');
+        }
+
+        this.clearDeleteStatus();
+        this.setDeleteBusy(false);
+    }
+
+    async confirmDelete() {
+        const uploader = window.articleUploader;
+
+        if (!uploader || typeof uploader.deletePaperRecord !== 'function') {
+            this.setDeleteStatus('Upload tools are not ready. Reload the page and try again.', 'error');
+            return;
+        }
+
+        const token = this.deleteToken?.value.trim() || uploader.getStoredToken?.() || '';
+        if (!token) {
+            this.setDeleteStatus('Enter a GitHub Access Token to delete this article.', 'error');
+            this.deleteToken?.setAttribute('aria-invalid', 'true');
+            this.deleteToken?.focus();
+            return;
+        }
+
+        this.deleteToken?.removeAttribute('aria-invalid');
+        this.setDeleteBusy(true);
+        this.setDeleteStatus('Deleting article...');
+
+        try {
+            const deletedPaper = await uploader.deletePaperRecord(this.paper, token);
+            window.app?.removeUploadedPaper(deletedPaper || this.paper);
+            this.setDeleteStatus('Deleted. GitHub Pages may take 1-2 minutes to publish the change.', 'success');
+            setTimeout(() => this.hide(), 900);
+        } catch (error) {
+            this.setDeleteStatus(error.message || 'Delete failed.', 'error');
+        } finally {
+            this.setDeleteBusy(false);
+        }
+    }
+
+    setDeleteBusy(isBusy) {
+        if (this.deleteButton) {
+            this.deleteButton.disabled = isBusy;
+        }
+
+        if (this.deleteCancel) {
+            this.deleteCancel.disabled = isBusy;
+        }
+
+        if (this.deleteConfirm) {
+            this.deleteConfirm.disabled = isBusy;
+            this.deleteConfirm.textContent = isBusy ? 'Deleting...' : 'Delete Article';
+        }
+    }
+
+    setDeleteStatus(message, type = '') {
+        if (!this.deleteStatus) {
+            return;
+        }
+
+        this.deleteStatus.textContent = message;
+        this.deleteStatus.classList.toggle('is-success', type === 'success');
+        this.deleteStatus.classList.toggle('is-error', type === 'error');
+    }
+
+    clearDeleteStatus() {
+        this.setDeleteStatus('');
+    }
+
+    mergeTags(...tagLists) {
+        const mergedTags = [];
+
+        tagLists.flat().forEach(tag => {
+            if (tag && !mergedTags.includes(tag)) {
+                mergedTags.push(tag);
+            }
+        });
+
+        return mergedTags;
     }
 
     showTags(type, tags, categoryKey, tagClass = 'tag') {
@@ -182,7 +356,7 @@ class PaperModal {
 
         const relatedPapers = this.getRelatedPapers(categoryKey, tag);
         this.relatedTitle.textContent = `Other Papers Tagged "${this.formatTag(tag)}"`;
-        this.relatedDescription.textContent = `${relatedPapers.length} related paper${relatedPapers.length === 1 ? '' : 's'} in ${this.formatSectionLabel(categoryKey)}. Click a row to open that paper.`;
+        this.relatedDescription.textContent = `${relatedPapers.length} related paper${relatedPapers.length === 1 ? '' : 's'} across matching tag sections. Click a row to open that paper.`;
         if (this.relatedTag) {
             this.relatedTag.textContent = this.formatTag(tag);
         }
@@ -301,10 +475,15 @@ class PaperModal {
     }
 
     getRelatedPapers(categoryKey, tag) {
+        const targetTagKeys = this.getTagMatchKeys(tag);
+
         return this.getAllPapers()
             .filter(candidate => {
-                const candidateTags = candidate[categoryKey] || [];
-                return candidateTags.includes(tag) && this.getPaperIdentity(candidate) !== this.getPaperIdentity(this.paper);
+                return this.getPaperIdentity(candidate) !== this.getPaperIdentity(this.paper) &&
+                    this.getPaperTagsForMatching(candidate).some(candidateTag => {
+                        const candidateTagKeys = this.getTagMatchKeys(candidateTag);
+                        return candidateTagKeys.some(candidateTagKey => targetTagKeys.includes(candidateTagKey));
+                    });
             })
             .sort((a, b) => {
                 const yearDiff = parseInt(b.year, 10) - parseInt(a.year, 10);
@@ -316,7 +495,41 @@ class PaperModal {
             });
     }
 
+    getPaperTagsForMatching(paper) {
+        return [
+            ...(paper.hardwareDevices || []),
+            ...(paper.sensingTechnology || []),
+            ...(paper.recognitionClassification || []),
+            ...(paper.interactionModalities || []),
+            ...(paper.gestureTypes || []),
+            ...(paper.applicationScenarios || []),
+            ...(paper.feedbackOutput || []),
+            ...(paper.userExperienceDesign || []),
+            ...(paper.tags || [])
+        ];
+    }
+
+    getTagMatchKeys(tag) {
+        return [
+            this.normalizeTagForMatching(tag),
+            this.normalizeTagForMatching(this.formatTag(tag))
+        ].filter((value, index, list) => value && list.indexOf(value) === index);
+    }
+
+    normalizeTagForMatching(tag) {
+        return String(tag || '')
+            .replace(/^#/, '')
+            .replace(/([a-z0-9])([A-Z])/g, '$1 $2')
+            .replace(/[_/]+/g, ' ')
+            .replace(/[^a-zA-Z0-9]+/g, '')
+            .toLowerCase();
+    }
+
     getAllPapers() {
+        if (typeof window !== 'undefined' && window.app && Array.isArray(window.app.allPapers)) {
+            return window.app.allPapers.filter(paper => paper.image);
+        }
+
         if (typeof PAPERS_DATA !== 'undefined' && Array.isArray(PAPERS_DATA.papers)) {
             return PAPERS_DATA.papers.filter(paper => paper.image);
         }
@@ -325,7 +538,7 @@ class PaperModal {
     }
 
     getPaperIdentity(paper) {
-        return [paper.title, paper.year, paper.image].join('::');
+        return [paper.url || paper.doi || '', paper.title, paper.year, paper.image].join('::');
     }
 
     openRelatedPaper(paper) {
@@ -403,14 +616,15 @@ class PaperModal {
 
     formatSectionLabel(categoryKey) {
         const labels = {
-            hardwareDevices: 'Hardware Devices',
+            hardwareDevices: 'Hardware Platform',
             sensingTechnology: 'Sensing Technology',
-            recognitionClassification: 'Recognition & Classification',
-            interactionModalities: 'Interaction Modalities',
-            gestureTypes: 'Gesture Types',
-            applicationScenarios: 'Application Scenarios',
-            feedbackOutput: 'Feedback & Output',
-            userExperienceDesign: 'User Experience & Design'
+            recognitionClassification: 'Sensing Technology',
+            interactionModalities: 'Interaction & Feedback Modality',
+            gestureTypes: 'Gesture Vocabulary',
+            applicationScenarios: 'Application Context',
+            feedbackOutput: 'Interaction & Feedback Modality',
+            userExperienceDesign: 'User Experience Factors',
+            tags: 'Tags'
         };
 
         return labels[categoryKey] || categoryKey;

@@ -1,9 +1,9 @@
 window.CHATBOT_CONFIG = {
     provider: 'openai',
-    model: '[L]gemini-3-flash-preview',
-    modelLabel: 'Gemini 3 Flash Preview',
-    apiEndpoint: 'https://new.lemonapi.site/v1/chat/completions',
-    apiKey: 'sk-gYlp8Rj6la8mVuEDNKWoKFxlMOsrCkmuuMHq5hNCOonE49d4',
+    model: 'grok-4.5',
+    modelLabel: 'Grok 4.5',
+    apiEndpoint: 'https://api.duckcoding.ai/v1/chat/completions',
+    apiKey: 'sk-gCD9LPFkUHodN26iRvV6OEwACZ419O7Hs6AhiuLU7XOCSVa6',
     embeddedMode: true,
     retrieval: {
         maxRelevantPapers: 6,

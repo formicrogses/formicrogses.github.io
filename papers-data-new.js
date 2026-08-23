@@ -1,38 +1,82 @@
-// Auto-generated papers data file V3 with DOI information
-// Generated from Papers folder images and DOI.xlsx
-// Generation time: 2025-10-23T21:55:42.677995
+// Auto-generated from Tags最终_173_metadata_completed_with_links.xlsx
+// Asset sources: 新所有论文PDF_173 and 新展示图
+// Do not edit this generated file by hand.
 
 const PAPERS_DATA = {
   "papers": [
     {
       "id": 1,
-      "title": "Towards keyboard independent touch typing in VR",
-      "year": "2005",
+      "title": "FingerSense augmenting expressiveness to physical pushing button by fingertip identification",
+      "year": "2004",
+      "category": "hardware",
+      "hardwareDevices": [
+        "Keyboard",
+        "OtherDevices"
+      ],
+      "sensingTechnology": [
+        "ComputerVision",
+        "GestureRecognition",
+        "StaticGesture",
+        "FingerIdentification"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "DeviceContact",
+        "DirectTouch",
+        "RealTime"
+      ],
+      "gestureTypes": [
+        "SingleHand",
+        "Tap"
+      ],
+      "applicationScenarios": [
+        "TextInput"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "HighAccuracy",
+        "SmallScreen",
+        "TouchOptimized"
+      ],
+      "tags": [],
+      "image": "Papers/HARDWARE/Hardware预览图/2004-FingerSense augmenting expressiveness to physical pushing button by fingertip identification.png",
+      "pdfFile": "2004-FingerSense augmenting expressiveness to physical pushing button by fingertip identification.pdf",
+      "pdfPath": "Papers/HARDWARE/2004-FingerSense augmenting expressiveness to physical pushing button by fingertip identification.pdf",
+      "doi": "https://doi.org/10.1145/985921.986040",
+      "authors": "Jingtao Wang; John Canny",
+      "journal": "CHI '04 Extended Abstracts on Human Factors in Computing Systems",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 2,
+      "title": "Towards keyboard independent touch typing in VR (KITTY)",
+      "year": "2004",
       "category": "hardware",
       "hardwareDevices": [
         "DataGloves",
         "Keyboard",
         "VRHeadset",
-        "WearableSensor",
-        "Wearables"
+        "Wearables",
+        "WearableSensor"
       ],
       "sensingTechnology": [
-        "CapacitiveSensor",
-        "PressureSensor"
-      ],
-      "recognitionClassification": [
+        "Capacitive",
         "GestureRecognition",
-        "StaticGestureRecognition"
+        "Pressure",
+        "StaticGesture"
       ],
+      "recognitionClassification": [],
       "interactionModalities": [
-        "InAirGesture",
-        "TangibleInteraction"
+        "InAir",
+        "RealTime",
+        "Tangible"
       ],
       "gestureTypes": [
         "Pinch",
         "SingleHand",
         "Tap",
-        "Thumb-Index"
+        "ThumbIndex"
       ],
       "applicationScenarios": [
         "AR",
@@ -40,21 +84,24 @@ const PAPERS_DATA = {
         "TextInput",
         "VR"
       ],
-      "feedbackOutput": [
-        "RealTimeFeedback"
-      ],
+      "feedbackOutput": [],
       "userExperienceDesign": [
         "HandsFree",
         "OneHandUse",
         "TouchOptimized"
       ],
-      "image": "Papers/HARDWARE/Hardware预览图/2005 - Towards keyboard independent touch typing in VR.png",
+      "tags": [],
+      "image": "Papers/HARDWARE/Hardware预览图/2004-Towards keyboard independent touch typing in VR (KITTY).png",
+      "pdfFile": "2004-Towards keyboard independent touch typing in VR (KITTY).pdf",
+      "pdfPath": "Papers/HARDWARE/2004-Towards keyboard independent touch typing in VR (KITTY).pdf",
       "doi": "https://doi.org/10.1145/1101616.1101635",
-      "authors": "Kuester Falko, Chen Michelle, Phair Mark E., Mehring Carsten",
-      "journal": "VRST05: The ACM Symposium on Virtual Reality Software and Technology 2005"
+      "authors": "Falko Kuester; Michelle Chen; Mark E. Phair; Carsten Mehring",
+      "journal": "Proceedings of the ACM symposium on Virtual reality software and technology",
+      "url": "",
+      "source": "metadata_completed_workbook"
     },
     {
-      "id": 2,
+      "id": 3,
       "title": "Demonstrating the feasibility of using forearm electromyography for muscle-computer interfaces",
       "year": "2008",
       "category": "hardware",
@@ -62,18 +109,19 @@ const PAPERS_DATA = {
         "WearableSensor"
       ],
       "sensingTechnology": [
-        "Bio-Sensor",
-        "EMG"
-      ],
-      "recognitionClassification": [
-        "DynamicGestureRecognition",
+        "Bio",
+        "DynamicGesture",
+        "EMG",
         "FingerTracking",
         "GestureRecognition",
-        "StaticGestureRecognition"
+        "StaticGesture"
       ],
+      "recognitionClassification": [],
       "interactionModalities": [
-        "BodyContactGesture",
-        "NonContactBased"
+        "BodyContact",
+        "NonContact",
+        "RealTime",
+        "Visual"
       ],
       "gestureTypes": [
         "Hold",
@@ -82,123 +130,311 @@ const PAPERS_DATA = {
         "Tap"
       ],
       "applicationScenarios": [
-        "AccessibilitySupport",
-        "InVehicleInteraction",
+        "Accessibility",
+        "InVehicle",
         "TextInput"
       ],
-      "feedbackOutput": [
-        "RealTimeFeedback",
-        "VisualFeedback"
-      ],
+      "feedbackOutput": [],
       "userExperienceDesign": [
         "DiscreetInput",
         "HandsFree",
         "HighAccuracy",
         "SocialAcceptability"
       ],
-      "image": "Papers/HARDWARE/Hardware预览图/2008 - Demonstrating the feasibility of using forearm electromyography for muscle-computer interfaces.png",
+      "tags": [],
+      "image": "Papers/HARDWARE/Hardware预览图/2008-Demonstrating the feasibility of using forearm electromyography for muscle-computer interfaces.png",
+      "pdfFile": "2008-Demonstrating the feasibility of using forearm electromyography for muscle-computer interfaces.pdf",
+      "pdfPath": "Papers/HARDWARE/2008-Demonstrating the feasibility of using forearm electromyography for muscle-computer interfaces.pdf",
       "doi": "https://doi.org/10.1145/1357054.1357138",
-      "authors": "Saponas T. Scott, Tan Desney S., Morris Dan, Balakrishnan Ravin",
-      "journal": "CHI '08: CHI Conference on Human Factors in Computing Systems"
+      "authors": "T Scott Saponas; Desney S. Tan; Dan Morris; Ravin Balakrishnan",
+      "journal": "Proceedings of the SIGCHI Conference on Human Factors in Computing Systems",
+      "url": "",
+      "source": "metadata_completed_workbook"
     },
     {
-      "id": 3,
-      "title": "Hand gesture recognition and virtual game control based on 3D accelerometer and EMG sensors",
+      "id": 4,
+      "title": "Abracadabrawireless, high-precision, and unpowered finger input for very small mobile devices",
       "year": "2009",
       "category": "hardware",
       "hardwareDevices": [
+        "SmartRing",
+        "SmartWatch",
+        "Wearables"
+      ],
+      "sensingTechnology": [
+        "DynamicGesture",
+        "FingerTracking",
+        "GestureRecognition",
+        "Magnetometer",
+        "Motion",
+        "StaticGesture"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "InAir",
+        "NonContact",
+        "RealTime",
+        "Tangible",
+        "Visual"
+      ],
+      "gestureTypes": [
+        "Directional",
+        "Flex",
+        "Hold",
+        "SingleHand",
+        "Tap"
+      ],
+      "applicationScenarios": [
+        "MediaControl",
+        "Navigation",
+        "ObjectManipulation"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "HandsFree",
+        "HighAccuracy",
+        "PortableDesign",
+        "SmallScreen"
+      ],
+      "tags": [],
+      "image": "Papers/HARDWARE/Hardware预览图/2009-Abracadabrawireless, high-precision, and unpowered finger input for very small mobile devices.png",
+      "pdfFile": "2009-Abracadabrawireless, high-precision, and unpowered finger input for very small mobile devices.pdf",
+      "pdfPath": "Papers/HARDWARE/2009-Abracadabrawireless, high-precision, and unpowered finger input for very small mobile devices.pdf",
+      "doi": "https://doi.org/10.1145/1622176.1622199",
+      "authors": "Chris Harrison; Scott E. Hudson",
+      "journal": "Proceedings of the 22nd annual ACM symposium on User interface software and technology",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 5,
+      "title": "Interaction Technique for a Pen-Based Interface Using Finger Motions",
+      "year": "2009",
+      "category": "hardware",
+      "hardwareDevices": [
+        "OtherDevices"
+      ],
+      "sensingTechnology": [
+        "GestureRecognition",
+        "Pressure",
+        "StaticGesture"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "ContactBased",
+        "DeviceContact",
+        "PenInput"
+      ],
+      "gestureTypes": [
+        "Grasp/Grip",
+        "SingleHand",
+        "Tap"
+      ],
+      "applicationScenarios": [
+        "DigitalArt",
+        "OtherScenarios"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "HighAccuracy",
+        "TouchOptimized",
+        "UserAdaptation"
+      ],
+      "tags": [],
+      "image": "Papers/HARDWARE/Hardware预览图/2009-Interaction Technique for a Pen-Based Interface Using Finger Motions.png",
+      "pdfFile": "2009-Interaction Technique for a Pen-Based Interface Using Finger Motions.pdf",
+      "pdfPath": "Papers/HARDWARE/2009-Interaction Technique for a Pen-Based Interface Using Finger Motions.pdf",
+      "doi": "https://doi.org/10.1007/978-3-642-02577-8_55",
+      "authors": "Yu Suzuki; Kazuo Misue; Jiro Tanaka",
+      "journal": "Lecture Notes in Computer Science",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 6,
+      "title": "A taxonomy of microinteractions Defining microgestures based on ergonomic and scenario-dependent requirements",
+      "year": "2011",
+      "category": "GestureDesign",
+      "hardwareDevices": [
+        "Wearables",
         "WearableSensor"
       ],
       "sensingTechnology": [
         "Accelerometer",
-        "Bio-Sensor",
+        "Depth",
         "EMG",
-        "MotionSensor"
-      ],
-      "recognitionClassification": [
-        "ContinuousRecognition",
-        "DynamicGestureRecognition",
         "FingerTracking",
         "GestureRecognition",
-        "HandTracking"
+        "Pressure"
       ],
+      "recognitionClassification": [],
       "interactionModalities": [
-        "MultiModalInteraction",
-        "NonContactBased"
+        "ContactBased",
+        "Haptic",
+        "MultiModal"
       ],
       "gestureTypes": [
-        "DirectionalGesture",
-        "SingleHand"
+        "Grasp/Grip",
+        "Pinch",
+        "SingleHand",
+        "Tap"
       ],
       "applicationScenarios": [
-        "Gaming",
-        "ObjectManipulation"
+        "InVehicle",
+        "MediaControl",
+        "Navigation"
       ],
-      "feedbackOutput": [
-        "RealTimeFeedback",
-        "VisualFeedback"
-      ],
+      "feedbackOutput": [],
       "userExperienceDesign": [
-        "HighAccuracy",
-        "LowLatency",
-        "PortableDesign"
+        "Elicitation",
+        "Encumbered",
+        "EyesFree",
+        "OneHandUse"
       ],
-      "image": "Papers/HARDWARE/Hardware预览图/2009 - Hand gesture recognition and virtual game control based on 3D accelerometer and EMG sensors.png",
-      "doi": "https://doi.org/10.1145/1502650.1502708",
-      "authors": "Zhang Xu, Chen Xiang, Wang Wen-hui, Yang Ji-hai, Lantz Vuokko, Wang Kong-qiao",
-      "journal": "IUI09: 14th International Conference on Intelligent User Interfaces"
+      "tags": [],
+      "image": "Papers/GestureDesign/GestureDesign预览图/2011-A Taxonomy of Microinteractions Defining Microgestures based on Ergonomic and Scenario-dependent Requirements.png",
+      "pdfFile": "2011-A Taxonomy of Microinteractions Defining Microgestures based on Ergonomic and Scenario-dependent Requirements.pdf",
+      "pdfPath": "Papers/GestureDesign/2011-A Taxonomy of Microinteractions Defining Microgestures based on Ergonomic and Scenario-dependent Requirements.pdf",
+      "doi": "https://doi.org/10.1007/978-3-642-23774-4_45",
+      "authors": "Katrin Wolf; Anja Naumann; Michael Rohs; Jörg Müller",
+      "journal": "Lecture Notes in Computer Science",
+      "url": "",
+      "source": "metadata_completed_workbook"
     },
     {
-      "id": 4,
-      "title": "A prototype of gesture-based interface",
+      "id": 7,
+      "title": "Geremin2D microgestures for drivers based on electric field sensing",
       "year": "2011",
       "category": "hardware",
       "hardwareDevices": [
-        "SmartPhone",
-        "WearableSensor",
-        "Wearables"
+        "DrivingSimulator",
+        "OtherDevices"
       ],
       "sensingTechnology": [
-        "Accelerometer",
-        "Bio-Sensor",
-        "EMG"
-      ],
-      "recognitionClassification": [
-        "DynamicGestureRecognition",
+        "DynamicGesture",
         "GestureRecognition",
-        "HandTracking",
-        "StaticGestureRecognition"
+        "TrajectoryAnalysis",
+        "ElectricField"
       ],
+      "recognitionClassification": [],
       "interactionModalities": [
-        "MultiModalInteraction",
-        "NonContactBased"
+        "InAir",
+        "NonContact",
+        "RealTime"
       ],
       "gestureTypes": [
-        "DirectionalGesture",
-        "Flex",
+        "Directional",
+        "SingleHand",
+        "Swipe"
+      ],
+      "applicationScenarios": [
+        "InVehicle"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "Encumbered",
+        "HighAccuracy",
+        "LowLatency"
+      ],
+      "tags": [],
+      "image": "Papers/HARDWARE/Hardware预览图/2011-Geremin2D microgestures for drivers based on electric field sensing.png",
+      "pdfFile": "2011-Geremin2D microgestures for drivers based on electric field sensing.pdf",
+      "pdfPath": "Papers/HARDWARE/2011-Geremin2D microgestures for drivers based on electric field sensing.pdf",
+      "doi": "https://doi.org/10.1145/1943403.1943457",
+      "authors": "Christoph Endres; Tim Schwartz; Christian A. Müller",
+      "journal": "Proceedings of the 16th international conference on Intelligent user interfaces",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 8,
+      "title": "Microinteractions for supporting grasp tasks through usage of spare attentional and motor resources",
+      "year": "2011",
+      "category": "GestureDesign",
+      "hardwareDevices": [
+        "OtherDevices",
+        "Smartphone"
+      ],
+      "sensingTechnology": [
+        "GestureRecognition"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "DeviceContact",
+        "Tangible"
+      ],
+      "gestureTypes": [
+        "Grasp/Grip",
+        "Hold",
         "SingleHand"
       ],
       "applicationScenarios": [
-        "InVehicleInteraction",
-        "MediaControl"
+        "OtherScenarios"
       ],
-      "feedbackOutput": [
-        "RealTimeFeedback",
-        "VisualFeedback"
-      ],
+      "feedbackOutput": [],
       "userExperienceDesign": [
         "DiscreetInput",
-        "HighAccuracy",
-        "PortableDesign",
-        "SocialAcceptability"
+        "Encumbered",
+        "UserAdaptation"
       ],
-      "image": "Papers/HARDWARE/Hardware预览图/2011 - A prototype of gesture-based interface.png",
-      "doi": "https://doi.org/10.1145/2037373.2037380",
-      "authors": "Lu Zhiyuan, Chen Xiang, Zhao Zhangyan, Wang Kongqiao",
-      "journal": "MobileHCI '11: 13th International Conference on Human Computer Interaction with Mobile Devices and Services"
+      "tags": [],
+      "image": "Papers/GestureDesign/GestureDesign预览图/2011-Microinteractions for supporting grasp tasks through usage of spare attentional and motor resources.png",
+      "pdfFile": "2011-Microinteractions for supporting grasp tasks through usage of spare attentional and motor resources.pdf",
+      "pdfPath": "Papers/GestureDesign/2011-Microinteractions for supporting grasp tasks through usage of spare attentional and motor resources.pdf",
+      "doi": "https://doi.org/10.1145/2074712.2074757",
+      "authors": "Katrin Wolf",
+      "journal": "Proceedings of the 29th Annual European Conference on Cognitive Ergonomics",
+      "url": "",
+      "source": "metadata_completed_workbook"
     },
     {
-      "id": 5,
+      "id": 9,
+      "title": "A study of on-device gestures",
+      "year": "2012",
+      "category": "GestureDesign",
+      "hardwareDevices": [
+        "Smartphone"
+      ],
+      "sensingTechnology": [
+        "GestureRecognition",
+        "MotionAnalysis",
+        "Pressure"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "BackOfDevice",
+        "ContactBased",
+        "DeviceContact",
+        "Proprioceptive"
+      ],
+      "gestureTypes": [
+        "Grasp/Grip",
+        "SingleHand",
+        "Swipe"
+      ],
+      "applicationScenarios": [
+        "MediaControl",
+        "Navigation",
+        "OtherScenarios"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "Encumbered",
+        "OcclusionAvoid",
+        "OneHandUse"
+      ],
+      "tags": [],
+      "image": "Papers/GestureDesign/GestureDesign预览图/2012-A study of on-device gestures.png",
+      "pdfFile": "2012-A study of on-device gestures.pdf",
+      "pdfPath": "Papers/GestureDesign/2012-A study of on-device gestures.pdf",
+      "doi": "https://doi.org/10.1145/2371664.2371669",
+      "authors": "Katrin Wolf; Marilyn McGee-Lennon; Stephen Brewster",
+      "journal": "Proceedings of the 14th international conference on Human-computer interaction with mobile devices and services companion",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 10,
       "title": "Design space for finger gestures with hand-held tablets",
       "year": "2012",
       "category": "GestureDesign",
@@ -209,23 +445,25 @@ const PAPERS_DATA = {
       ],
       "sensingTechnology": [
         "Accelerometer",
-        "CapacitiveSensor",
-        "Gyroscope",
-        "MotionSensor"
-      ],
-      "recognitionClassification": [
-        "DynamicGestureRecognition",
+        "Capacitive",
+        "DynamicGesture",
         "FingerTracking",
         "GestureRecognition",
-        "StaticGestureRecognition"
+        "Gyroscope",
+        "Motion",
+        "StaticGesture"
       ],
+      "recognitionClassification": [],
       "interactionModalities": [
         "ContactBased",
-        "DirectTouch"
+        "DirectTouch",
+        "Haptic",
+        "MultiModal",
+        "Proprioceptive"
       ],
       "gestureTypes": [
         "DualHand",
-        "Grasp",
+        "Grasp/Grip",
         "MultiTouch",
         "SingleHand",
         "Swipe",
@@ -236,3170 +474,84 @@ const PAPERS_DATA = {
         "Navigation",
         "ObjectManipulation"
       ],
-      "feedbackOutput": [
-        "HapticFeedback",
-        "MultimodalFeedback",
-        "ProprioceptiveFeedback"
-      ],
+      "feedbackOutput": [],
       "userExperienceDesign": [
-        "FatFingerProblem",
-        "OcclusionAvoidance",
+        "FatFinger",
+        "OcclusionAvoid",
         "SocialAcceptability",
         "TouchOptimized",
         "UserAdaptation"
       ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2012 - Design space for finger gestures with hand-held tablets.png",
+      "tags": [],
+      "image": "Papers/GestureDesign/GestureDesign预览图/2012-Design space for finger gestures with hand-held tablets.png",
+      "pdfFile": "2012-Design space for finger gestures with hand-held tablets.pdf",
+      "pdfPath": "Papers/GestureDesign/2012-Design space for finger gestures with hand-held tablets.pdf",
       "doi": "https://doi.org/10.1145/2388676.2388748",
-      "authors": "Wolf Katrin",
-      "journal": "ICMI '12: INTERNATIONAL CONFERENCE ON MULTIMODAL INTERACTION"
-    },
-    {
-      "id": 6,
-      "title": "Augmenting the input space of portable displays using add-on hall-sensor grid",
-      "year": "2013",
-      "category": "hardware",
-      "hardwareDevices": [
-        "SmartPhone",
-        "Tablet",
-        "WearableSensor",
-        "Wearables"
-      ],
-      "sensingTechnology": [
-        "Accelerometer",
-        "Magnetometer",
-        "OtherTechnology"
-      ],
-      "recognitionClassification": [
-        "DynamicGestureRecognition",
-        "FingerTracking",
-        "GestureRecognition",
-        "StaticGestureRecognition"
-      ],
-      "interactionModalities": [
-        "BackofDevices",
-        "DirectTouch",
-        "NonContactBased",
-        "TangibleInteraction"
-      ],
-      "gestureTypes": [
-        "Pinch",
-        "Swipe",
-        "Tap",
-        "Thumb-Index"
-      ],
-      "applicationScenarios": [
-        "Gaming",
-        "MediaControl",
-        "Navigation",
-        "TextInput"
-      ],
-      "feedbackOutput": [
-        "HapticFeedback",
-        "VisualFeedback"
-      ],
-      "userExperienceDesign": [
-        "DiscreetInput",
-        "OcclusionAvoidance",
-        "PortableDesign",
-        "SocialAcceptability"
-      ],
-      "image": "Papers/HARDWARE/Hardware预览图/2013 - Augmenting the input space of portable displays using add-on hall-sensor grid.png",
-      "doi": "https://doi.org/10.1145/2508468.2508470",
-      "authors": "Liang Rong-Hao",
-      "journal": "the adjunct publication of the 26th annual ACM symposium"
-    },
-    {
-      "id": 7,
-      "title": "EarPut augmenting ear-worn devices for ear-based interaction",
-      "year": "2014",
-      "category": "hardware",
-      "hardwareDevices": [
-        "OtherDevices",
-        "SmartPhone",
-        "WearableSensor",
-        "Wearables"
-      ],
-      "sensingTechnology": [
-        "CapacitiveSensor"
-      ],
-      "recognitionClassification": [
-        "DynamicGestureRecognition",
-        "GestureRecognition",
-        "StaticGestureRecognition"
-      ],
-      "interactionModalities": [
-        "BodyContactGesture",
-        "DirectTouch",
-        "EarBasedInteraction",
-        "InAirGesture"
-      ],
-      "gestureTypes": [
-        "MultiTouch",
-        "SingleHand",
-        "Swipe",
-        "Tap"
-      ],
-      "applicationScenarios": [
-        "Gaming",
-        "MediaControl",
-        "SmartHome"
-      ],
-      "feedbackOutput": [
-        "AudioFeedback",
-        "HapticFeedback",
-        "ProprioceptiveFeedback"
-      ],
-      "userExperienceDesign": [
-        "DiscreetInput",
-        "EyesFree",
-        "OneHandUse",
-        "PortableDesign",
-        "SocialAcceptability"
-      ],
-      "image": "Papers/HARDWARE/Hardware预览图/2014 - EarPut augmenting ear-worn devices for ear-based interaction.png",
-      "doi": "https://doi.org/10.1145/2686612.2686655",
-      "authors": "Lissermann Roman, Huber Jochen, Hadjakos Aristotelis, Nanayakkara Suranga, Mühlhäuser Max",
-      "journal": "OzCHI '14: the Future of Design"
-    },
-    {
-      "id": 8,
-      "title": "Advancing muscle-computer interfaces with high-density electromyography",
-      "year": "2015",
-      "category": "hardware",
-      "hardwareDevices": [
-        "WearableSensor"
-      ],
-      "sensingTechnology": [
-        "Bio-Sensor",
-        "EMG"
-      ],
-      "recognitionClassification": [
-        "DynamicGestureRecognition",
-        "FingerTracking",
-        "GestureRecognition",
-        "StaticGestureRecognition"
-      ],
-      "interactionModalities": [
-        "NonContactBased"
-      ],
-      "gestureTypes": [
-        "Flex",
-        "Pinch",
-        "SingleHand",
-        "Tap"
-      ],
-      "applicationScenarios": [
-        "IoTControl",
-        "MediaControl",
-        "SmartHome"
-      ],
-      "feedbackOutput": [
-        "RealTimeFeedback",
-        "VisualFeedback"
-      ],
-      "userExperienceDesign": [
-        "DiscreetInput",
-        "HandsFree",
-        "HighAccuracy",
-        "UserAdaptation"
-      ],
-      "image": "Papers/HARDWARE/Hardware预览图/2015 - Advancing muscle-computer interfaces with high-density electromyography.png",
-      "doi": "https://doi.org/10.1145/2702123.2702501",
-      "authors": "Amma Christoph, Krings Thomas, Böer Jonas, Schultz Tanja",
-      "journal": "CHI '15: CHI Conference on Human Factors in Computing Systems"
-    },
-    {
-      "id": 9,
-      "title": "eRing multiple finger gesture recognition with one ring using an electric field",
-      "year": "2015",
-      "category": "hardware",
-      "hardwareDevices": [
-        "SmartRing",
-        "WearableSensor",
-        "Wearables"
-      ],
-      "sensingTechnology": [
-        "CapacitiveSensor",
-        "OtherTechnology"
-      ],
-      "recognitionClassification": [
-        "ContinuousRecognition",
-        "FingerTracking",
-        "GestureRecognition",
-        "StaticGestureRecognition"
-      ],
-      "interactionModalities": [
-        "ContactBased",
-        "MultiModalInteraction",
-        "NonContactBased"
-      ],
-      "gestureTypes": [
-        "Pinch",
-        "SingleHand",
-        "Swipe",
-        "Tap",
-        "Thumb-Index"
-      ],
-      "applicationScenarios": [
-        "IoTControl",
-        "OtherScenarios",
-        "SmartHome"
-      ],
-      "feedbackOutput": [
-        "RealTimeFeedback",
-        "VisualFeedback"
-      ],
-      "userExperienceDesign": [
-        "HandsFree",
-        "OcclusionAvoidance",
-        "OneHandUse",
-        "PortableDesign",
-        "SocialAcceptability"
-      ],
-      "image": "Papers/HARDWARE/Hardware预览图/2015 - eRing multiple finger gesture recognition with one ring using an electric field.png",
-      "doi": "https://doi.org/10.1145/2790044.2790047",
-      "authors": "Wilhelm Mathias, Krakowczyk Daniel, Trollmann Frank, Albayrak Sahin",
-      "journal": "iWOAR '15: 2nd international Workshop on Sensor-based Activity Recognition and Interaction"
-    },
-    {
-      "id": 10,
-      "title": "Finger-writing with smartwatch a case for finger and hand gesture recognition using smartwatch",
-      "year": "2015",
-      "category": "software",
-      "hardwareDevices": [
-        "SmartWatch",
-        "Wearables"
-      ],
-      "sensingTechnology": [
-        "Accelerometer",
-        "Gyroscope",
-        "IMU",
-        "MotionSensor"
-      ],
-      "recognitionClassification": [
-        "DynamicGestureRecognition",
-        "FingerTracking",
-        "GestureRecognition",
-        "HandTracking",
-        "MotionAnalysis",
-        "StaticGestureRecognition",
-        "TrajectoryAnalysis"
-      ],
-      "interactionModalities": [
-        "ContactBased",
-        "InAirGesture",
-        "NonContactBased"
-      ],
-      "gestureTypes": [
-        "DirectionalGesture",
-        "Pinch",
-        "SingleHand",
-        "Swipe",
-        "Tap",
-        "Thumb-Index"
-      ],
-      "applicationScenarios": [
-        "IoTControl",
-        "MediaControl",
-        "SmartHome",
-        "TextInput"
-      ],
-      "feedbackOutput": [
-        "RealTimeFeedback",
-        "VisualFeedback"
-      ],
-      "userExperienceDesign": [
-        "DiscreetInput",
-        "HandsFree",
-        "HighAccuracy",
-        "OneHandUse",
-        "PortableDesign",
-        "SocialAcceptability"
-      ],
-      "image": "Papers/SOFTWARE/Software预览图/2015 - Finger-writing with smartwatch a case for finger and hand gesture recognition using smartwatch.png",
-      "doi": "https://doi.org/10.1145/2699343.2699350",
-      "authors": "Xu Chao, Pathak Parth H., Mohapatra Prasant",
-      "journal": "HotMobile '15: The 16th International Workshop on Mobile Computing Systems and Applications"
+      "authors": "Katrin Wolf",
+      "journal": "Proceedings of the 14th ACM international conference on Multimodal interaction",
+      "url": "",
+      "source": "metadata_completed_workbook"
     },
     {
       "id": 11,
-      "title": "Gunslinger subtle arms-down mid-air interaction",
-      "year": "2015",
-      "category": "GestureDesign",
+      "title": "Digitsfreehand 3D interactions anywhere using a wrist-worn gloveless sensor",
+      "year": "2012",
+      "category": "hardware",
       "hardwareDevices": [
-        "TouchScreen",
+        "SmartWatch",
+        "Wearables",
         "WearableSensor",
-        "Wearables"
+        "Wristband"
       ],
       "sensingTechnology": [
+        "3DPoseEstimation",
         "ComputerVision",
-        "DepthSensing",
-        "OpticalTracking"
-      ],
-      "recognitionClassification": [
+        "ContinuousGesture",
         "FingerTracking",
-        "GestureRecognition",
         "HandTracking",
-        "StaticGestureRecognition"
+        "IMU",
+        "Optical"
       ],
+      "recognitionClassification": [],
       "interactionModalities": [
-        "InAirGesture",
-        "MultiModalInteraction",
-        "NonContactBased"
+        "InAir",
+        "NonContact",
+        "RealTime",
+        "Visual"
       ],
       "gestureTypes": [
-        "DirectionalGesture",
-        "DualHand",
-        "Hold",
+        "Flex",
+        "Grasp/Grip",
         "Pinch",
-        "SingleHand",
-        "Tap",
-        "Thumb-Index"
+        "SingleHand"
       ],
       "applicationScenarios": [
-        "MediaControl",
-        "Navigation",
-        "ObjectManipulation"
+        "AR",
+        "Gaming",
+        "MR",
+        "ObjectManipulation",
+        "VR"
       ],
-      "feedbackOutput": [
-        "AudioFeedback",
-        "RealTimeFeedback",
-        "VisualFeedback"
-      ],
+      "feedbackOutput": [],
       "userExperienceDesign": [
-        "DiscreetInput",
+        "EyesFree",
         "HandsFree",
+        "HighAccuracy",
         "LowLatency",
-        "MidasTouchProblem",
-        "OcclusionAvoidance",
-        "OneHandUse",
-        "TouchOptimized"
+        "PortableDesign"
       ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2015 - Gunslinger subtle arms-down mid-air interaction.png",
-      "doi": "https://doi.org/10.1145/2807442.2807489",
-      "authors": "Liu Mingyu, Nancel Mathieu, Vogel Daniel",
-      "journal": "UIST '15: The 28th Annual ACM Symposium on User Interface Software and Technology"
+      "tags": [],
+      "image": "Papers/HARDWARE/Hardware预览图/2012-Digitsfreehand 3D interactions anywhere using a wrist-worn gloveless sensor.png",
+      "pdfFile": "2012-Digitsfreehand 3D interactions anywhere using a wrist-worn gloveless sensor.pdf",
+      "pdfPath": "Papers/HARDWARE/2012-Digitsfreehand 3D interactions anywhere using a wrist-worn gloveless sensor.pdf",
+      "doi": "https://doi.org/10.1145/2380116.2380139",
+      "authors": "David Kim; Otmar Hilliges; Shahram Izadi; Alex D. Butler; Jiawen Chen; Iason Oikonomidis; Patrick Olivier",
+      "journal": "Proceedings of the 25th annual ACM symposium on User interface software and technology",
+      "url": "",
+      "source": "metadata_completed_workbook"
     },
     {
       "id": 12,
-      "title": "Microgesture detection for remote interaction with mobile devices",
-      "year": "2016",
-      "category": "hardware",
-      "hardwareDevices": [
-        "SmartRing",
-        "SmartPhone",
-        "WearableSensor",
-        "Wearables"
-      ],
-      "sensingTechnology": [
-        "Accelerometer",
-        "Gyroscope",
-        "IMU",
-        "MotionSensor"
-      ],
-      "recognitionClassification": [
-        "ContinuousRecognition",
-        "DynamicGestureRecognition",
-        "FingerTracking",
-        "GestureRecognition"
-      ],
-      "interactionModalities": [
-        "DeviceContactGesture",
-        "NonContactBased"
-      ],
-      "gestureTypes": [
-        "DirectionalGesture",
-        "SingleHand",
-        "Swipe",
-        "Tap",
-        "Thumb-Index"
-      ],
-      "applicationScenarios": [
-        "InVehicleInteraction",
-        "IoTControl",
-        "MediaControl",
-        "Navigation"
-      ],
-      "feedbackOutput": [
-        "RealTimeFeedback",
-        "VisualFeedback"
-      ],
-      "userExperienceDesign": [
-        "DiscreetInput",
-        "EncumberedInteraction",
-        "EyesFree",
-        "HandsFree",
-        "MidasTouchProblem",
-        "OneHandUse",
-        "PortableDesign",
-        "SocialAcceptability"
-      ],
-      "image": "Papers/HARDWARE/Hardware预览图/2016 - Microgesture detection for remote interaction with mobile devices.png",
-      "doi": "https://doi.org/10.1145/2957265.2961865",
-      "authors": "Wolf Katrin, Mayer Sven, Meyer Stephan",
-      "journal": "MobileHCI '16: 18th International Conference on Human-Computer Interaction with Mobile Devices and Services"
-    },
-    {
-      "id": 13,
-      "title": "Designing a willing-to-use-in-public hand gestural interaction technique for smart glasses",
-      "year": "2016",
-      "category": "GestureDesign",
-      "hardwareDevices": [
-        "DataGloves",
-        "HapticDevice",
-        "SmartGlasses",
-        "WearableSensor",
-        "Wearables"
-      ],
-      "sensingTechnology": [
-        "IMU",
-        "MotionSensor",
-        "PressureSensor"
-      ],
-      "recognitionClassification": [
-        "DynamicGestureRecognition",
-        "FingerTracking",
-        "GestureRecognition",
-        "HandTracking",
-        "StaticGestureRecognition"
-      ],
-      "interactionModalities": [
-        "InAirGesture",
-        "MultiModalInteraction",
-        "NonContactBased",
-        "TangibleInteraction"
-      ],
-      "gestureTypes": [
-        "DirectionalGesture",
-        "Flex",
-        "Pinch",
-        "SingleHand",
-        "Swipe",
-        "Tap",
-        "Thumb-Index"
-      ],
-      "applicationScenarios": [
-        "AR",
-        "Navigation",
-        "ObjectManipulation",
-        "TextInput"
-      ],
-      "feedbackOutput": [
-        "HapticFeedback",
-        "MultimodalFeedback",
-        "RealTimeFeedback",
-        "VisualFeedback"
-      ],
-      "userExperienceDesign": [
-        "DiscreetInput",
-        "HandsFree",
-        "OcclusionAvoidance",
-        "PortableDesign",
-        "SocialAcceptability",
-        "TouchOptimized"
-      ],
-      "image": "Papers/HARDWARE/Hardware预览图/2016 - Designing a willing-to-use-in-public hand gestural interaction technique for smart glasses.png",
-      "doi": "https://doi.org/10.1145/2858036.2858436",
-      "authors": "Hsieh Yi-Ta, Jylhä Antti, Orso Valeria, Gamberini Luciano, Jacucci Giulio",
-      "journal": "CHI'16: CHI Conference on Human Factors in Computing Systems"
-    },
-    {
-      "id": 15,
-      "title": "DeformWear deformation input on tiny wearable devices",
-      "year": "2017",
-      "category": "hardware",
-      "hardwareDevices": [
-        "ARGlasses",
-        "HapticDevice",
-        "SmartGlasses",
-        "SmartRing",
-        "SmartWatch",
-        "VRHeadset",
-        "WearableSensor",
-        "Wearables"
-      ],
-      "sensingTechnology": [
-        "OpticalTracking",
-        "OtherTechnology",
-        "PressureSensor"
-      ],
-      "recognitionClassification": [
-        "ContinuousRecognition",
-        "DynamicGestureRecognition",
-        "GestureRecognition"
-      ],
-      "interactionModalities": [
-        "ContactBased",
-        "DeviceContactGesture",
-        "MultiModalInteraction",
-        "TangibleInteraction"
-      ],
-      "gestureTypes": [
-        "DirectionalGesture",
-        "DualHand",
-        "Hold",
-        "Pinch",
-        "SingleHand",
-        "Thumb-Index"
-      ],
-      "applicationScenarios": [
-        "AR",
-        "Gaming",
-        "MediaControl",
-        "Navigation",
-        "ObjectManipulation",
-        "SmartHome",
-        "VR"
-      ],
-      "feedbackOutput": [
-        "HapticFeedback",
-        "ProprioceptiveFeedback",
-        "RealTimeFeedback",
-        "VisualFeedback"
-      ],
-      "userExperienceDesign": [
-        "DiscreetInput",
-        "EyesFree",
-        "HighAccuracy",
-        "OneHandUse",
-        "PortableDesign",
-        "SmallScreen",
-        "SocialAcceptability"
-      ],
-      "image": "Papers/HARDWARE/Hardware预览图/2017 - DeformWear deformation input on tiny wearable devices.png",
-      "doi": "https://doi.org/10.1145/3090093",
-      "authors": "Weigel Martin, Steimle Jürgen",
-      "journal": "Proc ACM Interact Mob Wearable Ubiquitous Technol"
-    },
-    {
-      "id": 17,
-      "title": "GestAKey touch interaction on individual keycaps",
-      "year": "2018",
-      "category": "hardware",
-      "hardwareDevices": [
-        "Keyboard",
-        "TouchScreen"
-      ],
-      "sensingTechnology": [
-        "CapacitiveSensor"
-      ],
-      "recognitionClassification": [
-        "DynamicGestureRecognition",
-        "GestureRecognition",
-        "StaticGestureRecognition"
-      ],
-      "interactionModalities": [
-        "ContactBased",
-        "DirectTouch"
-      ],
-      "gestureTypes": [
-        "DirectionalGesture",
-        "MultiTouch",
-        "SingleHand",
-        "Tap"
-      ],
-      "applicationScenarios": [
-        "TextInput"
-      ],
-      "feedbackOutput": [
-        "HapticFeedback"
-      ],
-      "userExperienceDesign": [
-        "LowLatency",
-        "QWERTYLayout",
-        "TouchOptimized",
-        "UserAdaptation"
-      ],
-      "image": "Papers/HARDWARE/Hardware预览图/2018 - GestAKey touch interaction on individual keycaps.png",
-      "doi": "https://doi.org/10.1145/3173574.3174170",
-      "authors": "Shi Yilei, Zhang Haimo, Rajapakse Hasitha, Perera Nuwan Tharaka, Vega Gálvez Tomás, Nanayakkara Suranga",
-      "journal": "CHI '18: CHI Conference on Human Factors in Computing Systems"
-    },
-    {
-      "id": 18,
-      "title": "Gestures for smart rings empirical results, insights, and design implications",
-      "year": "2018",
-      "category": "GestureDesign",
-      "hardwareDevices": [
-        "SmartRing",
-        "Wearables"
-      ],
-      "sensingTechnology": [
-        "IMU",
-        "MotionSensor"
-      ],
-      "recognitionClassification": [
-        "DynamicGestureRecognition",
-        "GestureRecognition",
-        "StaticGestureRecognition"
-      ],
-      "interactionModalities": [
-        "ContactBased",
-        "DirectTouch",
-        "InAirGesture",
-        "NonContactBased"
-      ],
-      "gestureTypes": [
-        "DirectionalGesture",
-        "DualHand",
-        "SingleHand",
-        "Swipe",
-        "Tap"
-      ],
-      "applicationScenarios": [
-        "IoTControl",
-        "SmartHome"
-      ],
-      "feedbackOutput": [
-        "HapticFeedback"
-      ],
-      "userExperienceDesign": [
-        "DiscreetInput",
-        "OneHandUse",
-        "PortableDesign",
-        "SocialAcceptability",
-        "UserAdaptation"
-      ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2018 - Gestures for smart rings empirical results, insights, and design implications.png",
-      "doi": "https://doi.org/10.1145/3196709.3196741",
-      "authors": "Gheran Bogdan-Florin, Vanderdonckt Jean, Vatavu Radu-Daniel",
-      "journal": "DIS '18: Designing Interactive Systems Conference 2018"
-    },
-    {
-      "id": 19,
-      "title": "Thumb-in-motion evaluating thumb-to-ring microgestures for athletic activity",
-      "year": "2018",
-      "category": "hardware",
-      "hardwareDevices": [
-        "SmartRing",
-        "SmartWatch",
-        "Wearables"
-      ],
-      "sensingTechnology": [
-        "CapacitiveSensor"
-      ],
-      "recognitionClassification": [
-        "DynamicGestureRecognition",
-        "GestureRecognition",
-        "StaticGestureRecognition"
-      ],
-      "interactionModalities": [
-        "ContactBased",
-        "DirectTouch"
-      ],
-      "gestureTypes": [
-        "DirectionalGesture",
-        "SingleHand",
-        "Swipe",
-        "Tap",
-        "Thumb-Index"
-      ],
-      "applicationScenarios": [
-        "Healthcare",
-        "MediaControl",
-        "Navigation"
-      ],
-      "feedbackOutput": [
-        "AudioFeedback",
-        "HapticFeedback",
-        "VisualFeedback"
-      ],
-      "userExperienceDesign": [
-        "DiscreetInput",
-        "EncumberedInteraction",
-        "LowLatency",
-        "OneHandUse",
-        "PortableDesign"
-      ],
-      "image": "Papers/HARDWARE/Hardware预览图/2018 - Thumb-in-motion evaluating thumb-to-ring microgestures for athletic activity.png",
-      "doi": "https://doi.org/10.1145/3267782.3267796",
-      "authors": "Boldu Roger, Dancu Alexandru, Matthies Denys J. C., Cascón Pablo Gallego, Ransir Shanaka, Nanayakkara Suranga",
-      "journal": "SUI '18: Symposium on Spatial User Interaction"
-    },
-    {
-      "id": 20,
-      "title": "Touch+finger extending touch-based user interface capabilities with idle finger gestures in the air",
-      "year": "2018",
-      "category": "software",
-      "hardwareDevices": [
-        "SmartRing",
-        "Tablet",
-        "TouchScreen",
-        "WearableSensor"
-      ],
-      "sensingTechnology": [
-        "Accelerometer",
-        "Gyroscope",
-        "IMU",
-        "Magnetometer"
-      ],
-      "recognitionClassification": [
-        "DynamicGestureRecognition",
-        "FingerTracking",
-        "GestureRecognition",
-        "StaticGestureRecognition"
-      ],
-      "interactionModalities": [
-        "ContactBased",
-        "DirectTouch",
-        "InAirGesture",
-        "MultiModalInteraction",
-        "NonContactBased"
-      ],
-      "gestureTypes": [
-        "DirectionalGesture",
-        "Hold",
-        "MultiTouch",
-        "Pinch",
-        "SingleHand",
-        "Swipe",
-        "Tap"
-      ],
-      "applicationScenarios": [
-        "DigitalArt",
-        "Gaming",
-        "MediaControl",
-        "ObjectManipulation"
-      ],
-      "feedbackOutput": [
-        "RealTimeFeedback",
-        "VisualFeedback"
-      ],
-      "userExperienceDesign": [
-        "HighAccuracy",
-        "SmallScreen",
-        "TouchOptimized"
-      ],
-      "image": "Papers/SOFTWARE/Software预览图/2018 - Touch+finger extending touch-based user interface capabilities with idle finger gestures in the air.png",
-      "doi": "https://doi.org/10.1145/3242587.3242651",
-      "authors": "Lim Hyunchul, Chung Jungmin, Oh Changhoon, Park SoHyun, Lee Joonhwan, Suh Bongwon",
-      "journal": "UIST '18: The 31st Annual ACM Symposium on User Interface Software and Technology"
-    },
-    {
-      "id": 21,
-      "title": "FingerInput Capturing Expressive Single-Hand Thumb-to-Finger Microgestures",
-      "year": "2018",
-      "category": "software",
-      "hardwareDevices": [
-        "WearableSensor",
-        "Wearables"
-      ],
-      "sensingTechnology": [
-        "CapacitiveSensor",
-        "ComputerVision",
-        "DepthSensing"
-      ],
-      "recognitionClassification": [
-        "ContinuousRecognition",
-        "DynamicGestureRecognition",
-        "FingerTracking",
-        "GestureRecognition",
-        "HandTracking",
-        "StaticGestureRecognition"
-      ],
-      "interactionModalities": [
-        "BodyContactGesture",
-        "ContactBased",
-        "MultiModalInteraction"
-      ],
-      "gestureTypes": [
-        "DirectionalGesture",
-        "Flex",
-        "SingleHand",
-        "Swipe",
-        "Tap",
-        "Thumb-Index"
-      ],
-      "applicationScenarios": [
-        "DigitalArt",
-        "MediaControl"
-      ],
-      "feedbackOutput": [
-        "AudioFeedback",
-        "RealTimeFeedback",
-        "VisualFeedback"
-      ],
-      "userExperienceDesign": [
-        "DiscreetInput",
-        "EyesFree",
-        "HighAccuracy",
-        "OneHandUse"
-      ],
-      "image": "Papers/SOFTWARE/Software预览图/2018-FingerInput Capturing Expressive Single-Hand Thumb-to-Finger Microgestures.png",
-      "doi": "https://doi.org/10.1145/3279778.3279799",
-      "authors": "Soliman Mohamed, Mueller Franziska, Hegemann Lena, Roo Joan Sol, Theobalt Christian, Steimle Jürgen",
-      "journal": "ISS '18: 2018 ACM International Conference on Interactive Surfaces and Spaces"
-    },
-    {
-      "id": 22,
-      "title": "AudioTouch minimally invasive sensing of micro-gestures via active bio-acoustic sensing",
-      "year": "2019",
-      "category": "hardware",
-      "hardwareDevices": [
-        "WearableSensor",
-        "Wearables"
-      ],
-      "sensingTechnology": [
-        "Bio-Sensor",
-        "PressureSensor",
-        "UltrasonicSensor"
-      ],
-      "recognitionClassification": [
-        "DynamicGestureRecognition",
-        "GestureRecognition",
-        "StaticGestureRecognition"
-      ],
-      "interactionModalities": [
-        "BodyContactGesture",
-        "ContactBased"
-      ],
-      "gestureTypes": [
-        "Hold",
-        "Pinch",
-        "SingleHand",
-        "Tap",
-        "Thumb-Index"
-      ],
-      "applicationScenarios": [
-        "MediaControl",
-        "SmartHome",
-        "TextInput"
-      ],
-      "feedbackOutput": [
-        "RealTimeFeedback"
-      ],
-      "userExperienceDesign": [
-        "DiscreetInput",
-        "EyesFree",
-        "HighAccuracy",
-        "OneHandUse",
-        "PortableDesign"
-      ],
-      "image": "Papers/HARDWARE/Hardware预览图/2019 - AudioTouch minimally invasive sensing of micro-gestures via active bio-acoustic sensing.png",
-      "doi": "https://doi.org/10.1145/3338286.3340147",
-      "authors": "Kubo Yuki, Koguchi Yuto, Shizuki Buntarou, Takahashi Shin, Hilliges Otmar",
-      "journal": "MobileHCI '19: 21st International Conference on Human-Computer Interaction with Mobile Devices and Services"
-    },
-    {
-      "id": 23,
-      "title": "TipText eyes-free text entry on a fingertip keyboard",
-      "year": "2019",
-      "category": "software",
-      "hardwareDevices": [
-        "WearableSensor",
-        "Wearables"
-      ],
-      "sensingTechnology": [
-        "CapacitiveSensor",
-        "ComputerVision",
-        "OpticalTracking"
-      ],
-      "recognitionClassification": [
-        "FingerTracking",
-        "GestureRecognition",
-        "StaticGestureRecognition"
-      ],
-      "interactionModalities": [
-        "BodyContactGesture",
-        "ContactBased",
-        "DirectTouch"
-      ],
-      "gestureTypes": [
-        "SingleHand",
-        "Tap",
-        "Thumb-Index"
-      ],
-      "applicationScenarios": [
-        "AR",
-        "TextInput",
-        "VR"
-      ],
-      "feedbackOutput": [
-        "HapticFeedback",
-        "RealTimeFeedback",
-        "VisualFeedback"
-      ],
-      "userExperienceDesign": [
-        "DiscreetInput",
-        "EyesFree",
-        "HighAccuracy",
-        "OneHandUse",
-        "PortableDesign",
-        "QWERTYLayout",
-        "SmallScreen",
-        "SocialAcceptability"
-      ],
-      "image": "Papers/SOFTWARE/Software预览图/2019 - TipText eyes-free text entry on a fingertip keyboard.png",
-      "doi": "https://doi.org/10.1145/3332165.3347865",
-      "authors": "Xu Zheer, Wong Pui Chung, Gong Jun, Wu Te-Yen, Nittala Aditya Shekhar, Bi Xiaojun, Steimle Jürgen, Fu Hongbo, Zhu Kening, Yang Xing-Dong",
-      "journal": "UIST '19: The 32nd Annual ACM Symposium on User Interface Software and Technology"
-    },
-    {
-      "id": 24,
-      "title": "E-textile microinteractions augmenting twist with flick, slide and grasp gestures for soft electronics",
-      "year": "2020",
-      "category": "hardware",
-      "hardwareDevices": [
-        "Etextile",
-        "OtherDevices",
-        "WearableSensor",
-        "Wearables"
-      ],
-      "sensingTechnology": [
-        "CapacitiveSensor",
-        "OtherTechnology",
-        "PressureSensor"
-      ],
-      "recognitionClassification": [
-        "ContinuousRecognition",
-        "DynamicGestureRecognition",
-        "GestureRecognition",
-        "StaticGestureRecognition"
-      ],
-      "interactionModalities": [
-        "ContactBased",
-        "MultiModalInteraction",
-        "TangibleInteraction"
-      ],
-      "gestureTypes": [
-        "DirectionalGesture",
-        "Grasp",
-        "Pinch",
-        "SingleHand",
-        "Swipe",
-        "Tap"
-      ],
-      "applicationScenarios": [
-        "Gaming",
-        "MediaControl",
-        "OtherScenarios",
-        "SmartHome"
-      ],
-      "feedbackOutput": [
-        "RealTimeFeedback",
-        "VisualFeedback"
-      ],
-      "userExperienceDesign": [
-        "DiscreetInput",
-        "EyesFree",
-        "HighAccuracy",
-        "LowLatency",
-        "OneHandUse",
-        "PortableDesign",
-        "UserAdaptation"
-      ],
-      "image": "Papers/HARDWARE/Hardware预览图/2020 - E-textile microinteractions augmenting twist with flick, slide and grasp gestures for soft electronics.png",
-      "doi": "https://doi.org/10.1145/3313831.3376236",
-      "authors": "Olwal Alex, Starner Thad, Mainini Gowa",
-      "journal": "CHI '20: CHI Conference on Human Factors in Computing Systems"
-    },
-    {
-      "id": 25,
-      "title": "Exploring user defined gestures for ear-based interactions",
-      "year": "2020",
-      "category": "GestureDesign",
-      "hardwareDevices": [
-        "OtherDevices",
-        "SmartGlasses",
-        "Wearables"
-      ],
-      "sensingTechnology": [
-        "MotionSensor",
-        "OtherTechnology",
-        "PressureSensor"
-      ],
-      "recognitionClassification": [
-        "DynamicGestureRecognition",
-        "FingerTracking",
-        "GestureRecognition",
-        "HandTracking",
-        "StaticGestureRecognition"
-      ],
-      "interactionModalities": [
-        "BodyContactGesture",
-        "ContactBased",
-        "EarBasedInteraction",
-        "InAirGesture",
-        "NonContactBased"
-      ],
-      "gestureTypes": [
-        "DirectionalGesture",
-        "Pinch",
-        "SingleHand",
-        "Swipe",
-        "Tap"
-      ],
-      "applicationScenarios": [
-        "AccessibilitySupport",
-        "MediaControl",
-        "Navigation",
-        "OtherScenarios",
-        "SmartHome"
-      ],
-      "feedbackOutput": [
-        "AudioFeedback",
-        "HapticFeedback",
-        "RealTimeFeedback"
-      ],
-      "userExperienceDesign": [
-        "DiscreetInput",
-        "EyesFree",
-        "OneHandUse",
-        "SocialAcceptability",
-        "UserAdaptation"
-      ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2020 - Exploring user defined gestures for ear-based interactions.png",
-      "doi": "https://doi.org/10.1145/3427314",
-      "authors": "Chen Yu-Chun, Liao Chia-Ying, Hsu Shuo-wen, Huang Da-Yuan, Chen Bing-Yu",
-      "journal": "Proc ACM Hum Comput Interact"
-    },
-    {
-      "id": 26,
-      "title": "Fabriccio touchless gestural input on interactive fabrics",
-      "year": "2020",
-      "category": "hardware",
-      "hardwareDevices": [
-        "Etextile",
-        "OtherDevices",
-        "WearableSensor",
-        "Wearables"
-      ],
-      "sensingTechnology": [
-        "MotionSensor",
-        "RFSensing",
-        "RadarSensing"
-      ],
-      "recognitionClassification": [
-        "ContinuousRecognition",
-        "DynamicGestureRecognition",
-        "FingerTracking",
-        "GestureRecognition",
-        "MotionAnalysis"
-      ],
-      "interactionModalities": [
-        "BodyContactGesture",
-        "InAirGesture",
-        "NonContactBased"
-      ],
-      "gestureTypes": [
-        "SingleHand",
-        "Swipe",
-        "Tap",
-        "Thumb-Index"
-      ],
-      "applicationScenarios": [
-        "IoTControl",
-        "MediaControl",
-        "OtherScenarios",
-        "SmartHome"
-      ],
-      "feedbackOutput": [
-        "AudioFeedback",
-        "RealTimeFeedback"
-      ],
-      "userExperienceDesign": [
-        "DiscreetInput",
-        "EyesFree",
-        "HandsFree",
-        "HighAccuracy",
-        "LowLatency",
-        "PortableDesign"
-      ],
-      "image": "Papers/HARDWARE/Hardware预览图/2020 - Fabriccio touchless gestural input on interactive fabrics.png",
-      "doi": "https://doi.org/10.1145/3313831.3376681",
-      "authors": "Wu Te-Yen, Qi Shutong, Chen Junchi, Shang MuJie, Gong Jun, Seyed Teddy, Yang Xing-Dong",
-      "journal": "CHI '20: CHI Conference on Human Factors in Computing Systems"
-    },
-    {
-      "id": 27,
-      "title": "Finger gesture tracking for interactive applications a pilot study with sign languages",
-      "year": "2020",
-      "category": "software",
-      "hardwareDevices": [
-        "SmartRing",
-        "SmartWatch",
-        "WearableSensor",
-        "Wearables"
-      ],
-      "sensingTechnology": [
-        "Accelerometer",
-        "Gyroscope",
-        "IMU",
-        "Magnetometer",
-        "MotionSensor"
-      ],
-      "recognitionClassification": [
-        "ContinuousRecognition",
-        "DynamicGestureRecognition",
-        "FingerTracking",
-        "GestureRecognition",
-        "HandTracking",
-        "MotionAnalysis",
-        "TrajectoryAnalysis"
-      ],
-      "interactionModalities": [
-        "InAirGesture",
-        "NonContactBased"
-      ],
-      "gestureTypes": [
-        "DirectionalGesture",
-        "DualHand",
-        "SignLanguageRelated",
-        "SingleHand"
-      ],
-      "applicationScenarios": [
-        "AccessibilitySupport",
-        "Education",
-        "Healthcare",
-        "Training"
-      ],
-      "feedbackOutput": [
-        "AudioFeedback",
-        "MultimodalFeedback",
-        "RealTimeFeedback",
-        "VisualFeedback"
-      ],
-      "userExperienceDesign": [
-        "CommunicationAid",
-        "EncumberedInteraction",
-        "LowLatency",
-        "PortableDesign",
-        "UserAdaptation"
-      ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2020 - Finger gesture tracking for interactive applications a pilot study with sign languages.png",
-      "doi": "https://doi.org/10.1145/3414117",
-      "authors": "Liu Yilin, Jiang Fengyang, Gowda Mahanth",
-      "journal": "Proc ACM Interact Mob Wearable Ubiquitous Technol"
-    },
-    {
-      "id": 28,
-      "title": "How subtle can it get A trimodal study of ring-sized interfaces for one-handed drone control",
-      "year": "2020",
-      "category": "GestureDesign",
-      "hardwareDevices": [
-        "OtherDevices",
-        "SmartRing",
-        "SmartPhone",
-        "Wearables"
-      ],
-      "sensingTechnology": [
-        "CapacitiveSensor",
-        "IMU",
-        "MotionSensor",
-        "PressureSensor"
-      ],
-      "recognitionClassification": [
-        "ContinuousRecognition",
-        "DynamicGestureRecognition",
-        "GestureRecognition"
-      ],
-      "interactionModalities": [
-        "ContactBased",
-        "MultiModalInteraction",
-        "TangibleInteraction"
-      ],
-      "gestureTypes": [
-        "DirectionalGesture",
-        "Flex",
-        "Hold",
-        "SingleHand",
-        "Thumb-Index"
-      ],
-      "applicationScenarios": [
-        "OtherScenarios"
-      ],
-      "feedbackOutput": [
-        "HapticFeedback",
-        "RealTimeFeedback",
-        "VisualFeedback"
-      ],
-      "userExperienceDesign": [
-        "DiscreetInput",
-        "HighAccuracy",
-        "LowLatency",
-        "OneHandUse",
-        "SocialAcceptability"
-      ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2020 - How subtle can it get A trimodal study of ring-sized interfaces for one-handed drone control.png",
-      "doi": "https://doi.org/10.1145/3397319",
-      "authors": "Yau Yui-Pan, Lee Lik Hang, Li Zheng, Braud Tristan, Ho Yi-Hsuan, Hui Pan",
-      "journal": "Proc ACM Interact Mob Wearable Ubiquitous Technol"
-    },
-    {
-      "id": 29,
-      "title": "Nailz sensing hand input with touch sensitive nails",
-      "year": "2020",
-      "category": "hardware",
-      "hardwareDevices": [
-        "SmartGlasses",
-        "WearableSensor",
-        "Wearables"
-      ],
-      "sensingTechnology": [
-        "CapacitiveSensor",
-        "IMU"
-      ],
-      "recognitionClassification": [
-        "FingerTracking",
-        "GestureRecognition"
-      ],
-      "interactionModalities": [
-        "BodyContactGesture",
-        "ContactBased"
-      ],
-      "gestureTypes": [
-        "MultiTouch",
-        "SingleHand",
-        "Swipe",
-        "Tap",
-        "Thumb-Index"
-      ],
-      "applicationScenarios": [
-        "AR",
-        "MediaControl",
-        "Navigation"
-      ],
-      "feedbackOutput": [
-        "RealTimeFeedback",
-        "VisualFeedback"
-      ],
-      "userExperienceDesign": [
-        "DiscreetInput",
-        "EyesFree",
-        "HandsFree",
-        "HighAccuracy",
-        "OneHandUse",
-        "SocialAcceptability"
-      ],
-      "image": "Papers/HARDWARE/Hardware预览图/2020 - Nailz sensing hand input with touch sensitive nails.png",
-      "doi": "https://doi.org/10.1145/3313831.3376778",
-      "authors": "Lee DoYoung, Lee SooHwan, Oakley Ian",
-      "journal": "CHI '20: CHI Conference on Human Factors in Computing Systems"
-    },
-    {
-      "id": 30,
-      "title": "ThermalRing gesture and tag inputs enabled by a thermal imaging smart ring",
-      "year": "2020",
-      "category": "hardware",
-      "hardwareDevices": [
-        "SmartRing",
-        "WearableSensor",
-        "Wearables"
-      ],
-      "sensingTechnology": [
-        "ComputerVision",
-        "OtherTechnology"
-      ],
-      "recognitionClassification": [
-        "DynamicGestureRecognition",
-        "FingerTracking",
-        "GestureRecognition",
-        "HandTracking",
-        "StaticGestureRecognition"
-      ],
-      "interactionModalities": [
-        "ContactBased",
-        "InAirGesture",
-        "TangibleInteraction"
-      ],
-      "gestureTypes": [
-        "DirectionalGesture",
-        "DualHand",
-        "Swipe",
-        "Tap"
-      ],
-      "applicationScenarios": [
-        "IoTControl",
-        "MediaControl",
-        "Navigation",
-        "SmartHome"
-      ],
-      "feedbackOutput": [
-        "RealTimeFeedback",
-        "VisualFeedback"
-      ],
-      "userExperienceDesign": [
-        "EyesFree",
-        "HighAccuracy",
-        "PortableDesign",
-        "SocialAcceptability"
-      ],
-      "image": "Papers/HARDWARE/Hardware预览图/2020 - ThermalRing gesture and tag inputs enabled by a thermal imaging smart ring.png",
-      "doi": "https://doi.org/10.1145/3313831.3376323",
-      "authors": "Zhang Tengxiang, Zeng Xin, Zhang Yinshuai, Sun Ke, Wang Yuntao, Chen Yiqiang",
-      "journal": "CHI '20: CHI Conference on Human Factors in Computing Systems"
-    },
-    {
-      "id": 32,
-      "title": "ElectroRing subtle pinch and touch detection with a ring",
-      "year": "2021",
-      "category": "hardware",
-      "hardwareDevices": [
-        "SmartRing",
-        "WearableSensor",
-        "Wearables"
-      ],
-      "sensingTechnology": [
-        "Accelerometer",
-        "Gyroscope",
-        "IMU",
-        "OtherTechnology"
-      ],
-      "recognitionClassification": [
-        "DynamicGestureRecognition",
-        "GestureRecognition",
-        "StaticGestureRecognition"
-      ],
-      "interactionModalities": [
-        "BodyContactGesture",
-        "ContactBased"
-      ],
-      "gestureTypes": [
-        "Pinch",
-        "Swipe",
-        "Tap",
-        "Thumb-Index"
-      ],
-      "applicationScenarios": [
-        "DigitalArt",
-        "MR",
-        "MediaControl",
-        "ObjectManipulation",
-        "VR"
-      ],
-      "feedbackOutput": [
-        "ProprioceptiveFeedback",
-        "RealTimeFeedback",
-        "VisualFeedback"
-      ],
-      "userExperienceDesign": [
-        "DiscreetInput",
-        "HighAccuracy",
-        "LowLatency",
-        "OneHandUse",
-        "PortableDesign"
-      ],
-      "image": "Papers/HARDWARE/Hardware预览图/2021 - ElectroRing subtle pinch and touch detection with a ring.png",
-      "doi": "https://doi.org/10.1145/3411764.3445094",
-      "authors": "Kienzle Wolf, Whitmire Eric, Rittaler Chris, Benko Hrvoje",
-      "journal": "CHI '21: CHI Conference on Human Factors in Computing Systems"
-    },
-    {
-      "id": 33,
-      "title": "SoloFinger robust microgestures while grasping everyday objects",
-      "year": "2021",
-      "category": "GestureDesign",
-      "hardwareDevices": [
-        "DataGloves",
-        "OtherDevices"
-      ],
-      "sensingTechnology": [
-        "MotionSensor",
-        "OpticalTracking"
-      ],
-      "recognitionClassification": [
-        "DynamicGestureRecognition",
-        "FingerTracking",
-        "GestureRecognition",
-        "StaticGestureRecognition"
-      ],
-      "interactionModalities": [
-        "DeviceContactGesture",
-        "DirectTouch"
-      ],
-      "gestureTypes": [
-        "Flex",
-        "Grasp",
-        "SingleHand",
-        "Swipe",
-        "Tap"
-      ],
-      "applicationScenarios": [
-        "ObjectManipulation",
-        "OtherScenarios"
-      ],
-      "feedbackOutput": [
-        "RealTimeFeedback",
-        "VisualFeedback"
-      ],
-      "userExperienceDesign": [
-        "EncumberedInteraction",
-        "HighAccuracy"
-      ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2021 - SoloFinger robust microgestures while grasping everyday objects.png",
-      "doi": "https://doi.org/10.1145/3411764.3445197",
-      "authors": "Sharma Adwait, Hedderich Michael A., Bhardwaj Divyanshu, Fruchard Bruno, McIntosh Jess, Nittala Aditya Shekhar, Klakow Dietrich, Ashbrook Daniel, Steimle Jürgen",
-      "journal": "CHI '21: CHI Conference on Human Factors in Computing Systems"
-    },
-    {
-      "id": 34,
-      "title": "ThumbTrak recognizing micro-finger poses using a ring with proximity sensing",
-      "year": "2021",
-      "category": "hardware",
-      "hardwareDevices": [
-        "SmartRing",
-        "WearableSensor",
-        "Wearables"
-      ],
-      "sensingTechnology": [
-        "OtherTechnology"
-      ],
-      "recognitionClassification": [
-        "3DPoseEstimation",
-        "GestureRecognition",
-        "StaticGestureRecognition"
-      ],
-      "interactionModalities": [
-        "DeviceContactGesture",
-        "DirectTouch"
-      ],
-      "gestureTypes": [
-        "SingleHand",
-        "Tap",
-        "Thumb-Index"
-      ],
-      "applicationScenarios": [
-        "AR",
-        "Gaming",
-        "MediaControl",
-        "Navigation",
-        "TextInput",
-        "VR"
-      ],
-      "feedbackOutput": [
-        "HapticFeedback",
-        "RealTimeFeedback",
-        "VisualFeedback"
-      ],
-      "userExperienceDesign": [
-        "DiscreetInput",
-        "EyesFree",
-        "HighAccuracy",
-        "OneHandUse",
-        "PortableDesign",
-        "SocialAcceptability"
-      ],
-      "image": "Papers/HARDWARE/Hardware预览图/2021 - ThumbTrak recognizing micro-finger poses using a ring with proximity sensing.png",
-      "authors": "Sun Wei, Li Franklin Mingzhe, Huang Congshu, Lei Zhenyu, Steeper Benjamin, Tao Songyun, Tian Feng, Zhang Cheng",
-      "journal": "Proceedings of the 23rd International Conference on Mobile Human-Computer Interaction"
-    },
-    {
-      "id": 36,
-      "title": "DualRing Enabling Subtle and Expressive Hand Interaction with Dual IMU Rings",
-      "year": "2021",
-      "category": "hardware",
-      "hardwareDevices": [
-        "SmartRing",
-        "WearableSensor",
-        "Wearables"
-      ],
-      "sensingTechnology": [
-        "Accelerometer",
-        "Gyroscope",
-        "IMU",
-        "Magnetometer",
-        "RFSensing"
-      ],
-      "recognitionClassification": [
-        "ContinuousRecognition",
-        "DynamicGestureRecognition",
-        "FingerTracking",
-        "GestureRecognition",
-        "HandTracking",
-        "MotionAnalysis",
-        "StaticGestureRecognition"
-      ],
-      "interactionModalities": [
-        "BodyContactGesture",
-        "ContactBased",
-        "DirectTouch",
-        "MultiModalInteraction",
-        "NonContactBased"
-      ],
-      "gestureTypes": [
-        "DirectionalGesture",
-        "Grasp",
-        "Pinch",
-        "SingleHand",
-        "Swipe",
-        "Tap",
-        "Thumb-Index"
-      ],
-      "applicationScenarios": [
-        "AR",
-        "IoTControl",
-        "MediaControl",
-        "ObjectManipulation",
-        "SmartHome",
-        "TextInput",
-        "VR"
-      ],
-      "feedbackOutput": [
-        "RealTimeFeedback",
-        "VisualFeedback"
-      ],
-      "userExperienceDesign": [
-        "DiscreetInput",
-        "HighAccuracy",
-        "OneHandUse",
-        "PortableDesign",
-        "SocialAcceptability"
-      ],
-      "image": "Papers/HARDWARE/Hardware预览图/2021-DualRing Enabling Subtle and Expressive Hand Interaction with Dual IMU Rings.png",
-      "doi": "https://doi.org/10.1145/3478114",
-      "authors": "Liang Chen, Yu Chun, Qin Yue, Wang Yuntao, Shi Yuanchun",
-      "journal": "Proc ACM Interact Mob Wearable Ubiquitous Technol"
-    },
-    {
-      "id": 37,
-      "title": "MicroPress detecting pressure and hover distance in thumb-to-finger interactions",
-      "year": "2022",
-      "category": "hardware",
-      "hardwareDevices": [
-        "WearableSensor",
-        "Wearables"
-      ],
-      "sensingTechnology": [
-        "Accelerometer",
-        "DepthSensing",
-        "Gyroscope",
-        "IMU",
-        "Magnetometer",
-        "PressureSensor"
-      ],
-      "recognitionClassification": [
-        "ContinuousRecognition",
-        "FingerTracking",
-        "GestureRecognition",
-        "MotionAnalysis"
-      ],
-      "interactionModalities": [
-        "BodyContactGesture",
-        "ContactBased",
-        "DirectTouch",
-        "NonContactBased"
-      ],
-      "gestureTypes": [
-        "Hold",
-        "Pinch",
-        "SingleHand",
-        "Thumb-Index"
-      ],
-      "applicationScenarios": [
-        "AR",
-        "Gaming",
-        "MediaControl",
-        "Navigation",
-        "VR"
-      ],
-      "feedbackOutput": [
-        "ProprioceptiveFeedback",
-        "RealTimeFeedback",
-        "VisualFeedback"
-      ],
-      "userExperienceDesign": [
-        "DiscreetInput",
-        "EyesFree",
-        "HighAccuracy",
-        "OneHandUse",
-        "PortableDesign",
-        "SocialAcceptability"
-      ],
-      "image": "Papers/HARDWARE/Hardware预览图/2022 - MicroPress detecting pressure and hover distance in thumb-to-finger interactions.png",
-      "doi": "https://doi.org/10.1145/3565970.3567698",
-      "authors": "Dobinson Rhett, Teyssier Marc, Steimle Jürgen, Fruchard Bruno",
-      "journal": "SUI '22: Symposium on Spatial User Interaction"
-    },
-    {
-      "id": 39,
-      "title": "DRG-Keyboard Enabling Subtle Gesture Typing on the Fingertip with Dual IMU Rings",
-      "year": "2023",
-      "category": "hardware",
-      "hardwareDevices": [
-        "SmartRing",
-        "WearableSensor",
-        "Wearables"
-      ],
-      "sensingTechnology": [
-        "Accelerometer",
-        "Gyroscope",
-        "IMU",
-        "Magnetometer"
-      ],
-      "recognitionClassification": [
-        "DynamicGestureRecognition",
-        "GestureRecognition",
-        "TrajectoryAnalysis"
-      ],
-      "interactionModalities": [
-        "BodyContactGesture",
-        "ContactBased"
-      ],
-      "gestureTypes": [
-        "SingleHand",
-        "Swipe",
-        "Tap",
-        "Thumb-Index"
-      ],
-      "applicationScenarios": [
-        "AR",
-        "SmartHome",
-        "TextInput"
-      ],
-      "feedbackOutput": [
-        "HapticFeedback",
-        "VisualFeedback"
-      ],
-      "userExperienceDesign": [
-        "DiscreetInput",
-        "EyesFree",
-        "PortableDesign",
-        "QWERTYLayout",
-        "SmallScreen"
-      ],
-      "image": "Papers/HARDWARE/Hardware预览图/2023-DRG-Keyboard Enabling Subtle Gesture Typing on the Fingertip with Dual IMU Rings.png",
-      "doi": "https://doi.org/10.1145/3569463",
-      "authors": "Liang Chen, Hsia Chi, Yu Chun, Yan Yukang, Wang Yuntao, Shi Yuanchun",
-      "journal": "Proc ACM Interact Mob Wearable Ubiquitous Technol"
-    },
-    {
-      "id": 40,
-      "title": "EFRing Enabling Thumb-to-Index-Finger Microgesture Interaction through Electric Field Sensing Using Single Smart Ring",
-      "year": "2023",
-      "category": "hardware",
-      "hardwareDevices": [
-        "SmartRing",
-        "WearableSensor",
-        "Wearables"
-      ],
-      "sensingTechnology": [
-        "CapacitiveSensor",
-        "OtherTechnology"
-      ],
-      "recognitionClassification": [
-        "ContinuousRecognition",
-        "DynamicGestureRecognition",
-        "GestureRecognition",
-        "StaticGestureRecognition"
-      ],
-      "interactionModalities": [
-        "BodyContactGesture",
-        "ContactBased",
-        "NonContactBased"
-      ],
-      "gestureTypes": [
-        "DirectionalGesture",
-        "SingleHand",
-        "Swipe",
-        "Tap",
-        "Thumb-Index"
-      ],
-      "applicationScenarios": [
-        "DigitalArt",
-        "IoTControl",
-        "MediaControl",
-        "SmartHome",
-        "VR"
-      ],
-      "feedbackOutput": [
-        "RealTimeFeedback",
-        "VisualFeedback"
-      ],
-      "userExperienceDesign": [
-        "DiscreetInput",
-        "HighAccuracy",
-        "OneHandUse",
-        "PortableDesign",
-        "SocialAcceptability"
-      ],
-      "image": "Papers/HARDWARE/Hardware预览图/2023-EFRing Enabling Thumb-to-Index-Finger Microgesture Interaction through Electric Field Sensing Using Single Smart Ring.png",
-      "doi": "https://doi.org/10.1145/3569478",
-      "authors": "Chen Taizhou, Li Tianpei, Yang Xingyu, Zhu Kening",
-      "journal": "Proc ACM Interact Mob Wearable Ubiquitous Technol"
-    },
-    {
-      "id": 41,
-      "title": "SparseIMU Computational Design of Sparse IMU Layouts for Sensing Fine-grained Finger Microgestures",
-      "year": "2023",
-      "category": "hardware",
-      "hardwareDevices": [
-        "DataGloves",
-        "SmartRing",
-        "WearableSensor"
-      ],
-      "sensingTechnology": [
-        "Accelerometer",
-        "Gyroscope",
-        "IMU",
-        "Magnetometer",
-        "MotionSensor"
-      ],
-      "recognitionClassification": [
-        "ContinuousRecognition",
-        "DynamicGestureRecognition",
-        "FingerTracking",
-        "GestureRecognition",
-        "StaticGestureRecognition"
-      ],
-      "interactionModalities": [
-        "ContactBased",
-        "NonContactBased",
-        "TangibleInteraction"
-      ],
-      "gestureTypes": [
-        "DirectionalGesture",
-        "Flex",
-        "Grasp",
-        "SingleHand",
-        "Tap"
-      ],
-      "applicationScenarios": [
-        "Gaming",
-        "InVehicleInteraction",
-        "IoTControl",
-        "SmartHome",
-        "VR"
-      ],
-      "feedbackOutput": [
-        "RealTimeFeedback",
-        "VisualFeedback"
-      ],
-      "userExperienceDesign": [
-        "DiscreetInput",
-        "EncumberedInteraction",
-        "HandsFree",
-        "HighAccuracy",
-        "LowLatency",
-        "OneHandUse",
-        "PortableDesign"
-      ],
-      "image": "Papers/HARDWARE/Hardware预览图/2023-SparseIMU Computational Design of Sparse IMU Layouts for Sensing Fine-grained Finger Microgestures.png",
-      "doi": "https://doi.org/10.1145/3569894",
-      "authors": "Sharma Adwait, Salchow-Hömmen Christina, Mollyn Vimal Suresh, Nittala Aditya Shekhar, Hedderich Michael A., Koelle Marion, Seel Thomas, Steimle Jürgen",
-      "journal": "ACM Trans Comput-Hum Interact"
-    },
-    {
-      "id": 42,
-      "title": "VibAware Context-Aware Tap and Swipe Gestures Using Bio-Acoustic Sensing",
-      "year": "2023",
-      "category": "hardware",
-      "hardwareDevices": [
-        "SmartRing",
-        "SmartWatch",
-        "WearableSensor"
-      ],
-      "sensingTechnology": [
-        "Accelerometer",
-        "Bio-Sensor",
-        "OtherTechnology"
-      ],
-      "recognitionClassification": [
-        "ContinuousRecognition",
-        "DynamicGestureRecognition",
-        "GestureRecognition"
-      ],
-      "interactionModalities": [
-        "ContactBased",
-        "MultiModalInteraction",
-        "NonContactBased",
-        "TangibleInteraction"
-      ],
-      "gestureTypes": [
-        "Grasp",
-        "SingleHand",
-        "Swipe",
-        "Tap",
-        "Thumb-Index"
-      ],
-      "applicationScenarios": [
-        "AR",
-        "IoTControl",
-        "MediaControl",
-        "SmartHome",
-        "VR"
-      ],
-      "feedbackOutput": [
-        "RealTimeFeedback",
-        "VisualFeedback"
-      ],
-      "userExperienceDesign": [
-        "DiscreetInput",
-        "EncumberedInteraction",
-        "EyesFree",
-        "HighAccuracy",
-        "LowLatency",
-        "OneHandUse",
-        "PortableDesign",
-        "SocialAcceptability"
-      ],
-      "image": "Papers/HARDWARE/Hardware预览图/2023-VibAware Context-Aware Tap and Swipe Gestures Using Bio-Acoustic Sensing.png",
-      "doi": "https://doi.org/10.1145/3607822.3614544",
-      "authors": "Kim Jina, Kim Minyung, Lee Woo Suk, Yoon Sang Ho",
-      "journal": "SUI '23: ACM Symposium on Spatial User Interaction"
-    },
-    {
-      "id": 43,
-      "title": "MAF exploring mobile acoustic field for hand-to-face gesture interactions",
-      "year": "2024",
-      "category": "hardware",
-      "hardwareDevices": [
-        "OtherDevices",
-        "WearableSensor"
-      ],
-      "sensingTechnology": [
-        "OtherTechnology",
-        "UltrasonicSensor"
-      ],
-      "recognitionClassification": [
-        "DynamicGestureRecognition",
-        "GestureRecognition",
-        "StaticGestureRecognition"
-      ],
-      "interactionModalities": [
-        "BodyContactGesture",
-        "ContactBased",
-        "HandToFaceGesture",
-        "NonContactBased"
-      ],
-      "gestureTypes": [
-        "DirectionalGesture",
-        "Hold",
-        "SingleHand",
-        "Swipe",
-        "Tap"
-      ],
-      "applicationScenarios": [
-        "AR",
-        "Gaming",
-        "Healthcare",
-        "MediaControl",
-        "SmartHome",
-        "VR"
-      ],
-      "feedbackOutput": [
-        "RealTimeFeedback"
-      ],
-      "userExperienceDesign": [
-        "DiscreetInput",
-        "EyesFree",
-        "HandsFree",
-        "HighAccuracy",
-        "PortableDesign",
-        "SocialAcceptability"
-      ],
-      "image": "Papers/HARDWARE/Hardware预览图/2024 - MAF exploring mobile acoustic field for hand-to-face gesture interactions.png",
-      "doi": "https://doi.org/10.1145/3613904.3642437",
-      "authors": "Yang Yongjie, Chen Tao, Huang Yujing, Guo Xiuzhen, Shangguan Longfei",
-      "journal": "CHI '24: CHI Conference on Human Factors in Computing Systems"
-    },
-    {
-      "id": 44,
-      "title": "RadarHand a wrist-worn radar for on-skin touch-based proprioceptive gestures",
-      "year": "2024",
-      "category": "hardware",
-      "hardwareDevices": [
-        "SmartWatch",
-        "WearableSensor",
-        "Wearables"
-      ],
-      "sensingTechnology": [
-        "RFSensing",
-        "RadarSensing"
-      ],
-      "recognitionClassification": [
-        "ContinuousRecognition",
-        "DynamicGestureRecognition",
-        "GestureRecognition",
-        "StaticGestureRecognition"
-      ],
-      "interactionModalities": [
-        "BackofDevices",
-        "BodyContactGesture",
-        "ContactBased"
-      ],
-      "gestureTypes": [
-        "DirectionalGesture",
-        "SingleHand",
-        "Swipe",
-        "Tap"
-      ],
-      "applicationScenarios": [
-        "AccessibilitySupport",
-        "Gaming",
-        "InVehicleInteraction",
-        "MediaControl",
-        "Navigation",
-        "SmartHome"
-      ],
-      "feedbackOutput": [
-        "ProprioceptiveFeedback",
-        "RealTimeFeedback"
-      ],
-      "userExperienceDesign": [
-        "EyesFree",
-        "HighAccuracy",
-        "OneHandUse",
-        "PortableDesign",
-        "SmallScreen",
-        "SocialAcceptability"
-      ],
-      "image": "Papers/HARDWARE/Hardware预览图/2024 - RadarHand a wrist-worn radar for on-skin touch-based proprioceptive gestures.png",
-      "doi": "https://doi.org/10.1145/3617365",
-      "authors": "Hajika Ryo, Gunasekaran Tamil Selvan, Haigh Chloe Dolma Si Ying, Pai Yun Suen, Hayashi Eiji, Lien Jaime, Lottridge Danielle, Billinghurst Mark",
-      "journal": "ACM Trans Comput-Hum Interact"
-    },
-    {
-      "id": 45,
-      "title": "Ring-a-pose a ring for continuous hand pose tracking",
-      "year": "2024",
-      "category": "hardware",
-      "hardwareDevices": [
-        "SmartRing",
-        "WearableSensor",
-        "Wearables"
-      ],
-      "sensingTechnology": [
-        "OtherTechnology",
-        "UltrasonicSensor"
-      ],
-      "recognitionClassification": [
-        "3DPoseEstimation",
-        "ContinuousRecognition",
-        "DynamicGestureRecognition",
-        "FingerTracking",
-        "GestureRecognition",
-        "HandTracking"
-      ],
-      "interactionModalities": [
-        "NonContactBased"
-      ],
-      "gestureTypes": [
-        "DirectionalGesture",
-        "Pinch",
-        "SingleHand",
-        "Swipe",
-        "Tap"
-      ],
-      "applicationScenarios": [
-        "AR",
-        "AccessibilitySupport",
-        "Gaming",
-        "MediaControl",
-        "SmartHome"
-      ],
-      "feedbackOutput": [
-        "RealTimeFeedback",
-        "VisualFeedback"
-      ],
-      "userExperienceDesign": [
-        "DiscreetInput",
-        "HandsFree",
-        "HighAccuracy",
-        "LowLatency",
-        "OneHandUse",
-        "PortableDesign",
-        "SocialAcceptability"
-      ],
-      "image": "Papers/HARDWARE/Hardware预览图/2024 - Ring-a-pose a ring for continuous hand pose tracking.png",
-      "doi": "https://doi.org/10.1145/3699741",
-      "authors": "Yu Tianhong Catherine, Hu Guilin, Zhang Ruidong, Lim Hyunchul, Mahmud Saif, Lee Chi-Jung, Li Ke, Agarwal Devansh, Nie Shuyang, Oh Jinseok",
-      "journal": "Proc ACM Interact Mob Wearable Ubiquitous Technol"
-    },
-    {
-      "id": 46,
-      "title": "Studying the simultaneous visual representation of microgestures",
-      "year": "2024",
-      "category": "software",
-      "hardwareDevices": [
-        "SmartWatch",
-        "SmartPhone",
-        "Wearables"
-      ],
-      "sensingTechnology": [
-        "ComputerVision"
-      ],
-      "recognitionClassification": [
-        "DynamicGestureRecognition",
-        "FingerTracking",
-        "GestureRecognition",
-        "HandTracking",
-        "StaticGestureRecognition"
-      ],
-      "interactionModalities": [
-        "BodyContactGesture",
-        "ContactBased"
-      ],
-      "gestureTypes": [
-        "Hold",
-        "SingleHand",
-        "Swipe",
-        "Tap",
-        "Thumb-Index"
-      ],
-      "applicationScenarios": [
-        "MediaControl",
-        "SmartHome"
-      ],
-      "feedbackOutput": [
-        "VisualFeedback"
-      ],
-      "userExperienceDesign": [
-        "DiscreetInput",
-        "EyesFree",
-        "HandsFree",
-        "OneHandUse",
-        "SmallScreen",
-        "SocialAcceptability"
-      ],
-      "image": "Papers/SOFTWARE/Software预览图/2024 - Studying the simultaneous visual representation of microgestures.png",
-      "doi": "https://doi.org/10.1145/3676523",
-      "authors": "Lambert Vincent, Goguey Alix, Malacria Sylvain, Nigay Laurence",
-      "journal": "Proc ACM Hum Comput Interact"
-    },
-    {
-      "id": 47,
-      "title": "HCMG Human-Capacitance based Micro Gesture for VR AR",
-      "year": "2024",
-      "category": "hardware",
-      "hardwareDevices": [
-        "ARGlasses",
-        "VRHeadset",
-        "WearableSensor",
-        "Wearables"
-      ],
-      "sensingTechnology": [
-        "Bio-Sensor",
-        "CapacitiveSensor"
-      ],
-      "recognitionClassification": [
-        "DynamicGestureRecognition",
-        "FingerTracking",
-        "GestureRecognition",
-        "HandTracking",
-        "StaticGestureRecognition"
-      ],
-      "interactionModalities": [
-        "ContactBased",
-        "DeviceContactGesture"
-      ],
-      "gestureTypes": [
-        "Grasp",
-        "Pinch",
-        "SingleHand",
-        "Tap"
-      ],
-      "applicationScenarios": [
-        "AR",
-        "AccessibilitySupport",
-        "Education",
-        "Gaming",
-        "Training",
-        "VR"
-      ],
-      "feedbackOutput": [
-        "RealTimeFeedback"
-      ],
-      "userExperienceDesign": [
-        "DiscreetInput",
-        "HighAccuracy",
-        "OneHandUse",
-        "PortableDesign"
-      ],
-      "image": "Papers/HARDWARE/Hardware预览图/2024-HCMG Human-Capacitance based Micro Gesture for VR AR.png",
-      "doi": "https://doi.org/10.1145/3675094.3678386",
-      "authors": "Lu Yu, Ding Dian, Wang Ran, Xue Guangtao",
-      "journal": "UbiComp '24: The 2024 ACM International Joint Conference on Pervasive and Ubiquitous Computing"
-    },
-    {
-      "id": 48,
-      "title": "BudsID mobile-ready and expressive finger identification input for earbuds",
-      "year": "2025",
-      "category": "hardware",
-      "hardwareDevices": [
-        "SmartRing",
-        "WearableSensor",
-        "Wearables"
-      ],
-      "sensingTechnology": [
-        "CapacitiveSensor",
-        "IMU",
-        "Magnetometer"
-      ],
-      "recognitionClassification": [
-        "DynamicGestureRecognition",
-        "FingerTracking",
-        "GestureRecognition",
-        "StaticGestureRecognition"
-      ],
-      "interactionModalities": [
-        "ContactBased",
-        "DeviceContactGesture",
-        "DirectTouch",
-        "EarBasedInteraction"
-      ],
-      "gestureTypes": [
-        "MultiTouch",
-        "SingleHand",
-        "Tap"
-      ],
-      "applicationScenarios": [
-        "InVehicleInteraction",
-        "MediaControl",
-        "SmartHome"
-      ],
-      "feedbackOutput": [
-        "AudioFeedback",
-        "RealTimeFeedback"
-      ],
-      "userExperienceDesign": [
-        "DiscreetInput",
-        "EyesFree",
-        "HighAccuracy",
-        "PortableDesign",
-        "SocialAcceptability"
-      ],
-      "image": "Papers/HARDWARE/Hardware预览图/2025 - BudsID mobile-ready and expressive finger identification input for earbuds.png",
-      "doi": "https://doi.org/10.1145/3706598.3714133",
-      "authors": "Kim Jiwan, Han Mingyu, Oakley Ian",
-      "journal": "CHI 2025: CHI Conference on Human Factors in Computing Systems"
-    },
-    {
-      "id": 49,
-      "title": "Gesture and audio-haptic guidance techniques to direct conversations with intelligent voice interfaces",
-      "year": "2025",
-      "category": "software",
-      "hardwareDevices": [
-        "HapticDevice",
-        "SmartGlasses",
-        "SmartRing",
-        "Wearables"
-      ],
-      "sensingTechnology": [
-        "CapacitiveSensor",
-        "IMU",
-        "OpticalTracking"
-      ],
-      "recognitionClassification": [
-        "DynamicGestureRecognition",
-        "GestureRecognition",
-        "StaticGestureRecognition"
-      ],
-      "interactionModalities": [
-        "ContactBased",
-        "MultiModalInteraction",
-        "VoiceGestureCombined"
-      ],
-      "gestureTypes": [
-        "Hold",
-        "SingleHand",
-        "Tap"
-      ],
-      "applicationScenarios": [
-        "AR",
-        "MediaControl"
-      ],
-      "feedbackOutput": [
-        "AudioFeedback",
-        "HapticFeedback",
-        "MultimodalFeedback"
-      ],
-      "userExperienceDesign": [
-        "HandsFree",
-        "LowLatency",
-        "SocialAcceptability",
-        "UserAdaptation"
-      ],
-      "image": "Papers/SOFTWARE/Software预览图/2025 - Gesture and audio-haptic guidance techniques to direct conversations with intelligent voice interfaces.png",
-      "doi": "https://doi.org/10.1145/3706598.3714310",
-      "authors": "Rajaram Shwetha, Surale Hemant Bhaskar, McConkey Codie, Rognon Carine, Mehta Hrim, Glueck Michael, Collins Christopher",
-      "journal": "CHI 2025: CHI Conference on Human Factors in Computing Systems"
-    },
-    {
-      "id": 50,
-      "title": "LeakyFeeder In-air gesture control through leaky acoustic waves",
-      "year": "2025",
-      "category": "software",
-      "hardwareDevices": [
-        "OtherDevices",
-        "Wearables"
-      ],
-      "sensingTechnology": [
-        "OtherTechnology",
-        "UltrasonicSensor"
-      ],
-      "recognitionClassification": [
-        "3DPoseEstimation",
-        "ContinuousRecognition",
-        "DynamicGestureRecognition",
-        "FingerTracking",
-        "GestureRecognition",
-        "HandTracking"
-      ],
-      "interactionModalities": [
-        "EarBasedInteraction",
-        "InAirGesture",
-        "NonContactBased"
-      ],
-      "gestureTypes": [
-        "Hold",
-        "Pinch",
-        "SingleHand",
-        "Tap"
-      ],
-      "applicationScenarios": [
-        "AR",
-        "MediaControl",
-        "OtherScenarios",
-        "SmartHome",
-        "VR"
-      ],
-      "feedbackOutput": [
-        "AudioFeedback",
-        "RealTimeFeedback"
-      ],
-      "userExperienceDesign": [
-        "HandsFree",
-        "HighAccuracy",
-        "LowLatency",
-        "PortableDesign"
-      ],
-      "image": "Papers/SOFTWARE/Software预览图/2025 - LeakyFeeder In-air gesture control through leaky acoustic waves.png",
-      "doi": "https://doi.org/10.1145/3715014.3722054",
-      "authors": "Yang Yongjie, Chen Tao, An Zhenlin, Cao Shirui, Fan Xiaoran, Shangguan Longfei",
-      "journal": "SenSys '25: 23rd ACM Conference on Embedded Networked Sensor Systems"
-    },
-    {
-      "id": 51,
-      "title": "DCSNN An Efficient and High-speed sEMG-based Transient-state Micro-gesture Recognition Method on Wearable Devices",
-      "year": "2025",
-      "category": "hardware",
-      "hardwareDevices": [
-        "OtherDevices",
-        "SmartWatch",
-        "WearableSensor",
-        "Wearables"
-      ],
-      "sensingTechnology": [
-        "Bio-Sensor",
-        "EMG",
-        "IMU"
-      ],
-      "recognitionClassification": [
-        "ContinuousRecognition",
-        "DynamicGestureRecognition",
-        "GestureRecognition",
-        "StaticGestureRecognition"
-      ],
-      "interactionModalities": [
-        "BodyContactGesture",
-        "InAirGesture",
-        "MultiModalInteraction",
-        "NonContactBased"
-      ],
-      "gestureTypes": [
-        "DirectionalGesture",
-        "Pinch",
-        "Swipe",
-        "Tap",
-        "Thumb-Index"
-      ],
-      "applicationScenarios": [
-        "AR",
-        "Gaming",
-        "IoTControl",
-        "MediaControl",
-        "Navigation",
-        "VR"
-      ],
-      "feedbackOutput": [
-        "RealTimeFeedback",
-        "VisualFeedback"
-      ],
-      "userExperienceDesign": [
-        "HandsFree",
-        "HighAccuracy",
-        "LowLatency",
-        "PortableDesign",
-        "UserAdaptation"
-      ],
-      "image": "Papers/HARDWARE/Hardware预览图/2025-DCSNN An Efficient and High-speed sEMG-based Transient-state Micro-gesture Recognition Method on Wearable Devices.png",
-      "doi": "https://doi.org/10.1145/3729494",
-      "authors": "Han Youfang, Zhao Wei, Gao Ge, Chen Xiangjin, Yin Jiliang, Wang Lin, Meng Xin, Yu Yang, Zhang Tengxiang",
-      "journal": "Proc ACM Interact Mob Wearable Ubiquitous Technol"
-    },
-    {
-      "id": 52,
-      "title": "VibRing A Wearable Vibroacoustic Sensor for Single-Handed Gesture Recognition",
-      "year": "2025",
-      "category": "hardware",
-      "hardwareDevices": [
-        "OtherDevices",
-        "SmartRing",
-        "WearableSensor",
-        "Wearables"
-      ],
-      "sensingTechnology": [
-        "OtherTechnology"
-      ],
-      "recognitionClassification": [
-        "ContinuousRecognition",
-        "DynamicGestureRecognition",
-        "GestureRecognition",
-        "StaticGestureRecognition"
-      ],
-      "interactionModalities": [
-        "BodyContactGesture",
-        "NonContactBased"
-      ],
-      "gestureTypes": [
-        "SingleHand",
-        "Tap",
-        "Thumb-Index"
-      ],
-      "applicationScenarios": [
-        "AR",
-        "Gaming",
-        "IoTControl",
-        "MediaControl",
-        "TextInput"
-      ],
-      "feedbackOutput": [
-        "RealTimeFeedback",
-        "VisualFeedback"
-      ],
-      "userExperienceDesign": [
-        "DiscreetInput",
-        "HighAccuracy",
-        "LowLatency",
-        "PortableDesign",
-        "SocialAcceptability",
-        "UserAdaptation"
-      ],
-      "image": "Papers/HARDWARE/Hardware预览图/2025-VibRing A Wearable Vibroacoustic Sensor for Single-Handed Gesture Recognition.png",
-      "doi": "https://doi.org/10.1145/3733052",
-      "authors": "Li Bu, Huang Xincheng, Xiao Robert",
-      "journal": "Proc ACM Hum Comput Interact"
-    },
-    {
-      "id": 53,
-      "title": "Exploring mixed-scale gesture interaction",
-      "year": "2017",
-      "category": "GestureDesign",
-      "hardwareDevices": [
-        "ARGlasses",
-        "WearableSensor"
-      ],
-      "sensingTechnology": [
-        "ComputerVision",
-        "OpticalTracking",
-        "RadarSensing"
-      ],
-      "recognitionClassification": [
-        "ContinuousRecognition",
-        "DynamicGestureRecognition",
-        "FingerTracking",
-        "GestureRecognition",
-        "HandTracking",
-        "StaticGestureRecognition"
-      ],
-      "interactionModalities": [
-        "InAirGesture",
-        "MultiModalInteraction",
-        "NonContactBased"
-      ],
-      "gestureTypes": [
-        "DirectionalGesture",
-        "DualHand",
-        "Grasp",
-        "SingleHand"
-      ],
-      "applicationScenarios": [
-        "AR",
-        "MediaControl",
-        "ObjectManipulation"
-      ],
-      "feedbackOutput": [
-        "RealTimeFeedback",
-        "VisualFeedback"
-      ],
-      "userExperienceDesign": [
-        "HighAccuracy",
-        "SocialAcceptability"
-      ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2017 - Exploring mixed-scale gesture interaction.png",
-      "doi": "https://doi.org/10.1145/3145690.3145740",
-      "authors": "Ens Barrett, Quigley Aaron, Yeo Hui-Shyong, Irani Pourang, Piumsomboon Thammathip, Billinghurst Mark",
-      "journal": "SA '17: SIGGRAPH Asia 2017"
-    },
-    {
-      "id": 54,
-      "title": "Depth aware finger tapping on virtual displays",
-      "year": "2018",
-      "category": "software",
-      "hardwareDevices": [
-        "ARGlasses",
-        "SmartPhone",
-        "VRHeadset"
-      ],
-      "sensingTechnology": [
-        "ComputerVision",
-        "DepthSensing",
-        "UltrasonicSensor"
-      ],
-      "recognitionClassification": [
-        "DynamicGestureRecognition",
-        "FingerTracking",
-        "GestureRecognition",
-        "HandTracking",
-        "MotionAnalysis"
-      ],
-      "interactionModalities": [
-        "InAirGesture",
-        "MultiModalInteraction",
-        "NonContactBased"
-      ],
-      "gestureTypes": [
-        "DirectionalGesture",
-        "SingleHand",
-        "Tap"
-      ],
-      "applicationScenarios": [
-        "AR",
-        "MediaControl",
-        "TextInput",
-        "VR"
-      ],
-      "feedbackOutput": [
-        "AudioFeedback",
-        "MultimodalFeedback",
-        "RealTimeFeedback",
-        "VisualFeedback"
-      ],
-      "userExperienceDesign": [
-        "HandsFree",
-        "HighAccuracy",
-        "LowLatency"
-      ],
-      "image": "Papers/SOFTWARE/Software预览图/2018 - Depth aware finger tapping on virtual displays.png",
-      "doi": "https://doi.org/10.1145/3210240.3210315",
-      "authors": "Sun Ke, Wang Wei, Liu Alex X., Dai Haipeng",
-      "journal": "MobiSys '18: The 16th Annual International Conference on Mobile Systems, Applications, and Services"
-    },
-    {
-      "id": 55,
-      "title": "Experimental analysis of barehand mid-air mode-switching techniques in virtual reality",
-      "year": "2019",
-      "category": "GestureDesign",
-      "hardwareDevices": [
-        "VRHeadset",
-        "WearableSensor"
-      ],
-      "sensingTechnology": [
-        "OpticalTracking",
-        "PressureSensor"
-      ],
-      "recognitionClassification": [
-        "GestureRecognition",
-        "HandTracking",
-        "StaticGestureRecognition"
-      ],
-      "interactionModalities": [
-        "BodyContactGesture",
-        "InAirGesture",
-        "NonContactBased"
-      ],
-      "gestureTypes": [
-        "DirectionalGesture",
-        "DualHand",
-        "Grasp",
-        "Pinch",
-        "SingleHand"
-      ],
-      "applicationScenarios": [
-        "ObjectManipulation",
-        "VR"
-      ],
-      "feedbackOutput": [
-        "AudioFeedback",
-        "RealTimeFeedback",
-        "VisualFeedback"
-      ],
-      "userExperienceDesign": [
-        "HandsFree",
-        "HighAccuracy",
-        "LowLatency",
-        "UserAdaptation"
-      ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2019 - Experimental analysis of barehand mid-air mode-switching techniques in virtual reality.png",
-      "doi": "https://doi.org/10.1145/3290605.3300426",
-      "authors": "Surale Hemant Bhaskar, Matulic Fabrice, Vogel Daniel",
-      "journal": "CHI '19: CHI Conference on Human Factors in Computing Systems"
-    },
-    {
-      "id": 56,
-      "title": "Characterizing in-air eyes-free typing movements in VR",
-      "year": "2020",
-      "category": "GestureDesign",
-      "hardwareDevices": [
-        "OtherDevices",
-        "VRHeadset"
-      ],
-      "sensingTechnology": [
-        "MotionSensor",
-        "OpticalTracking"
-      ],
-      "recognitionClassification": [
-        "3DPoseEstimation",
-        "ContinuousRecognition",
-        "DynamicGestureRecognition",
-        "FingerTracking",
-        "GestureRecognition",
-        "HandTracking",
-        "MotionAnalysis",
-        "TrajectoryAnalysis"
-      ],
-      "interactionModalities": [
-        "InAirGesture",
-        "NonContactBased"
-      ],
-      "gestureTypes": [
-        "DualHand",
-        "Flex",
-        "Tap"
-      ],
-      "applicationScenarios": [
-        "TextInput",
-        "VR"
-      ],
-      "feedbackOutput": [
-        "AudioFeedback",
-        "VisualFeedback"
-      ],
-      "userExperienceDesign": [
-        "EyesFree",
-        "HandsFree",
-        "HighAccuracy",
-        "QWERTYLayout"
-      ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2020 - Characterizing in-air eyes-free typing movements in VR.png",
-      "doi": "https://doi.org/10.1145/3385956.3418963",
-      "authors": "Gil Hyunjae, Shin Yonghwan, Son Hyungki, Hwang Inwook, Oakley Ian, Kim Jin Ryong",
-      "journal": "VRST '20: 26th ACM Symposium on Virtual Reality Software and Technology"
-    },
-    {
-      "id": 57,
-      "title": "User gesture elicitation of common smartphone tasks for hand proximate user interfaces",
-      "year": "2020",
-      "category": "GestureDesign",
-      "hardwareDevices": [
-        "ARGlasses",
-        "SmartGlasses",
-        "SmartPhone"
-      ],
-      "sensingTechnology": [
-        "ComputerVision"
-      ],
-      "recognitionClassification": [
-        "DynamicGestureRecognition",
-        "GestureRecognition",
-        "HandTracking",
-        "StaticGestureRecognition"
-      ],
-      "interactionModalities": [
-        "BodyContactGesture",
-        "DirectTouch",
-        "InAirGesture"
-      ],
-      "gestureTypes": [
-        "Flex",
-        "Pinch",
-        "SingleHand",
-        "Swipe",
-        "Tap",
-        "Thumb-Index"
-      ],
-      "applicationScenarios": [
-        "AR",
-        "MR",
-        "MediaControl",
-        "Navigation"
-      ],
-      "feedbackOutput": [
-        "VisualFeedback"
-      ],
-      "userExperienceDesign": [
-        "OneHandUse",
-        "SocialAcceptability",
-        "UserAdaptation"
-      ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2020-User gesture elicitation of common smartphone tasks for hand proximate user interfaces.png",
-      "doi": "https://doi.org/10.1145/3396339.3396363",
-      "authors": "Faleel Shariff A. M., Gammon Michael, Sakamoto Yumiko, Menon Carlo, Irani Pourang",
-      "journal": "AH '20: 11th Augmented Human International Conference"
-    },
-    {
-      "id": 58,
-      "title": "AtaTouch robust finger pinch detection for a VR controller using RF return loss",
-      "year": "2021",
-      "category": "hardware",
-      "hardwareDevices": [
-        "VRHeadset",
-        "WearableSensor",
-        "Wearables"
-      ],
-      "sensingTechnology": [
-        "CapacitiveSensor",
-        "RFSensing"
-      ],
-      "recognitionClassification": [
-        "FingerTracking",
-        "GestureRecognition",
-        "StaticGestureRecognition"
-      ],
-      "interactionModalities": [
-        "ContactBased",
-        "DeviceContactGesture"
-      ],
-      "gestureTypes": [
-        "Grasp",
-        "Pinch",
-        "SingleHand",
-        "Thumb-Index"
-      ],
-      "applicationScenarios": [
-        "Gaming",
-        "ObjectManipulation",
-        "VR"
-      ],
-      "feedbackOutput": [
-        "RealTimeFeedback",
-        "VisualFeedback"
-      ],
-      "userExperienceDesign": [
-        "HighAccuracy",
-        "LowLatency",
-        "OcclusionAvoidance",
-        "OneHandUse"
-      ],
-      "image": "Papers/HARDWARE/Hardware预览图/2021 - AtaTouch robust finger pinch detection for a VR controller using RF return loss.png",
-      "doi": "https://doi.org/10.1145/3411764.3445442",
-      "authors": "Kim Daehwa, Park Keunwoo, Lee Geehyuk",
-      "journal": "CHI '21: CHI Conference on Human Factors in Computing Systems"
-    },
-    {
-      "id": 60,
-      "title": "GraV grasp volume data for the design of one-handed XR interfaces",
-      "year": "2024",
-      "category": "software",
-      "hardwareDevices": [
-        "ARGlasses",
-        "VRHeadset"
-      ],
-      "sensingTechnology": [
-        "ComputerVision"
-      ],
-      "recognitionClassification": [
-        "3DPoseEstimation",
-        "FingerTracking",
-        "GestureRecognition",
-        "HandTracking"
-      ],
-      "interactionModalities": [
-        "ContactBased",
-        "DirectTouch",
-        "TangibleInteraction"
-      ],
-      "gestureTypes": [
-        "Grasp",
-        "SingleHand",
-        "Thumb-Index"
-      ],
-      "applicationScenarios": [
-        "AR",
-        "ObjectManipulation",
-        "VR"
-      ],
-      "feedbackOutput": [
-        "HapticFeedback",
-        "VisualFeedback"
-      ],
-      "userExperienceDesign": [
-        "HandsFree",
-        "OneHandUse",
-        "UserAdaptation"
-      ],
-      "image": "Papers/SOFTWARE/Software预览图/2024 - GraV grasp volume data for the design of one-handed XR interfaces.png",
-      "doi": "https://doi.org/10.1145/3643834.3661567",
-      "authors": "Aponte Alejandro, Caetano Arthur, Luo Yunhao, Sra Misha",
-      "journal": "DIS '24: Designing Interactive Systems Conference"
-    },
-    {
-      "id": 61,
-      "title": "HapticPilot authoring in-situ hand posture-adaptive vibrotactile feedback for virtual reality",
-      "year": "2024",
-      "category": "software",
-      "hardwareDevices": [
-        "DataGloves",
-        "HapticDevice",
-        "VRHeadset"
-      ],
-      "sensingTechnology": [
-        "MotionSensor",
-        "OpticalTracking"
-      ],
-      "recognitionClassification": [
-        "HandTracking",
-        "StaticGestureRecognition"
-      ],
-      "interactionModalities": [
-        "InAirGesture",
-        "MultiModalInteraction"
-      ],
-      "gestureTypes": [
-        "DirectionalGesture",
-        "SingleHand"
-      ],
-      "applicationScenarios": [
-        "DigitalArt",
-        "Gaming",
-        "VR"
-      ],
-      "feedbackOutput": [
-        "HapticFeedback",
-        "RealTimeFeedback"
-      ],
-      "userExperienceDesign": [
-        "HandsFree",
-        "LowLatency",
-        "UserAdaptation"
-      ],
-      "image": "Papers/SOFTWARE/Software预览图/2024 - HapticPilot authoring in-situ hand posture-adaptive vibrotactile feedback for virtual reality.png",
-      "doi": "https://doi.org/10.1145/3631453",
-      "authors": "Sung Youjin, Kim Rachel, Song Kun Woo, Shao Yitian, Yoon Sang Ho",
-      "journal": "Proc ACM Interact Mob Wearable Ubiquitous Technol"
-    },
-    {
-      "id": 62,
-      "title": "TriPad touch input in AR on ordinary surfaces with hand tracking only",
-      "year": "2024",
-      "category": "software",
-      "hardwareDevices": [
-        "ARGlasses",
-        "VRHeadset"
-      ],
-      "sensingTechnology": [
-        "ComputerVision",
-        "DepthSensing",
-        "OpticalTracking"
-      ],
-      "recognitionClassification": [
-        "DynamicGestureRecognition",
-        "FingerTracking",
-        "HandTracking",
-        "StaticGestureRecognition"
-      ],
-      "interactionModalities": [
-        "ContactBased",
-        "DirectTouch",
-        "InAirGesture",
-        "MultiModalInteraction"
-      ],
-      "gestureTypes": [
-        "DirectionalGesture",
-        "MultiTouch",
-        "SingleHand",
-        "Tap"
-      ],
-      "applicationScenarios": [
-        "AR",
-        "Navigation",
-        "ObjectManipulation"
-      ],
-      "feedbackOutput": [
-        "AudioFeedback",
-        "RealTimeFeedback",
-        "VisualFeedback"
-      ],
-      "userExperienceDesign": [
-        "EyesFree",
-        "HandsFree",
-        "LowLatency",
-        "SocialAcceptability",
-        "TouchOptimized"
-      ],
-      "image": "Papers/SOFTWARE/Software预览图/2024 - TriPad touch input in AR on ordinary surfaces with hand tracking only.png",
-      "doi": "https://doi.org/10.1145/3613904.3642323",
-      "authors": "Dupré Camille, Appert Caroline, Rey Stéphanie, Saidi Houssem, Pietriga Emmanuel",
-      "journal": "CHI '24: CHI Conference on Human Factors in Computing Systems"
-    },
-    {
-      "id": 63,
-      "title": "GraspUI Seamlessly Integrating Object-Centric Gestures within the Seven Phases of Grasping",
-      "year": "2024",
-      "category": "software",
-      "hardwareDevices": [
-        "ARGlasses",
-        "SmartGlasses",
-        "Wearables"
-      ],
-      "sensingTechnology": [
-        "ComputerVision",
-        "MotionSensor",
-        "OpticalTracking"
-      ],
-      "recognitionClassification": [
-        "DynamicGestureRecognition",
-        "FingerTracking",
-        "GestureRecognition",
-        "HandTracking",
-        "StaticGestureRecognition"
-      ],
-      "interactionModalities": [
-        "ContactBased",
-        "InAirGesture",
-        "MultiModalInteraction",
-        "TangibleInteraction"
-      ],
-      "gestureTypes": [
-        "Grasp",
-        "Hold",
-        "SingleHand",
-        "Swipe",
-        "Tap"
-      ],
-      "applicationScenarios": [
-        "AR",
-        "MediaControl",
-        "ObjectManipulation",
-        "SmartHome"
-      ],
-      "feedbackOutput": [
-        "RealTimeFeedback",
-        "VisualFeedback"
-      ],
-      "userExperienceDesign": [
-        "HandsFree",
-        "SocialAcceptability",
-        "UserAdaptation"
-      ],
-      "image": "Papers/SOFTWARE/Software预览图/2024-GraspUI Seamlessly Integrating Object-Centric Gestures within the Seven Phases of Grasping.png",
-      "doi": "https://doi.org/10.1145/3643834.3661551",
-      "authors": "Sharma Adwait, Ivanov Alexander, Lai Frances, Grossman Tovi, Santosa Stephanie",
-      "journal": "DIS '24: Designing Interactive Systems Conference"
-    },
-    {
-      "id": 64,
-      "title": "Stick-To-XR Understanding Stick-Based User Interface Design for Extended Reality",
-      "year": "2024",
-      "category": "hardware",
-      "hardwareDevices": [
-        "HapticDevice",
-        "OtherDevices",
-        "VRHeadset"
-      ],
-      "sensingTechnology": [
-        "MotionSensor",
-        "OpticalTracking",
-        "PressureSensor"
-      ],
-      "recognitionClassification": [
-        "GestureRecognition",
-        "HandTracking",
-        "StaticGestureRecognition"
-      ],
-      "interactionModalities": [
-        "ContactBased",
-        "MultiModalInteraction",
-        "TangibleInteraction"
-      ],
-      "gestureTypes": [
-        "DualHand",
-        "Grasp",
-        "Hold",
-        "SingleHand"
-      ],
-      "applicationScenarios": [
-        "AR",
-        "Education",
-        "Gaming",
-        "VR"
-      ],
-      "feedbackOutput": [
-        "HapticFeedback",
-        "MultimodalFeedback",
-        "VisualFeedback"
-      ],
-      "userExperienceDesign": [
-        "OneHandUse",
-        "PortableDesign",
-        "UserAdaptation"
-      ],
-      "image": "Papers/HARDWARE/Hardware预览图/2024-Stick-To-XR Understanding Stick-Based User Interface Design for Extended Reality.png",
-      "doi": "https://doi.org/10.1145/3643834.3661627",
-      "authors": "Zhang Yaying, Shi Rongkai, Liang Hai-Ning",
-      "journal": "DIS '24: Designing Interactive Systems Conference"
-    },
-    {
-      "id": 65,
-      "title": "STMG A Machine Learning Microgesture Recognition System for Supporting Thumb-Based VR AR Input",
-      "year": "2024",
-      "category": "software",
-      "hardwareDevices": [
-        "ARGlasses",
-        "VRHeadset"
-      ],
-      "sensingTechnology": [
-        "ComputerVision",
-        "MotionSensor",
-        "OpticalTracking"
-      ],
-      "recognitionClassification": [
-        "ContinuousRecognition",
-        "DynamicGestureRecognition",
-        "FingerTracking",
-        "GestureRecognition",
-        "HandTracking"
-      ],
-      "interactionModalities": [
-        "BodyContactGesture",
-        "ContactBased",
-        "MultiModalInteraction"
-      ],
-      "gestureTypes": [
-        "DirectionalGesture",
-        "Pinch",
-        "SingleHand",
-        "Swipe",
-        "Tap",
-        "Thumb-Index"
-      ],
-      "applicationScenarios": [
-        "AR",
-        "MediaControl",
-        "Navigation",
-        "ObjectManipulation",
-        "VR"
-      ],
-      "feedbackOutput": [
-        "RealTimeFeedback",
-        "VisualFeedback"
-      ],
-      "userExperienceDesign": [
-        "EyesFree",
-        "HandsFree",
-        "HighAccuracy",
-        "LowLatency",
-        "OneHandUse",
-        "UserAdaptation"
-      ],
-      "image": "Papers/SOFTWARE/Software预览图/2024-STMG A Machine Learning Microgesture Recognition System for Supporting Thumb-Based VR AR Input.png",
-      "doi": "https://doi.org/10.1145/3613904.3642702",
-      "authors": "Kin Kenrick, Wan Chengde, Koh Ken, Marin Andrei, Camgöz Necati Cihan, Zhang Yubo, Cai Yujun, Kovalev Fedor, Ben-Zacharia Moshe, Hoople Shannon, Nunes-Ueno Marcos, Sanchez-Rodriguez Mariel, Bhargava Ayush, Wang Robert, Sauser Eric, Ma Shugao",
-      "journal": "CHI '24: CHI Conference on Human Factors in Computing Systems"
-    },
-    {
-      "id": 66,
-      "title": "Understanding Gesture and Microgesture Inputs for Augmented Reality Maps",
-      "year": "2024",
-      "category": "GestureDesign",
-      "hardwareDevices": [
-        "ARGlasses",
-        "SmartGlasses",
-        "WearableSensor",
-        "Wearables"
-      ],
-      "sensingTechnology": [
-        "Accelerometer",
-        "CapacitiveSensor",
-        "ComputerVision",
-        "IMU",
-        "OpticalTracking"
-      ],
-      "recognitionClassification": [
-        "FingerTracking",
-        "GestureRecognition",
-        "HandTracking"
-      ],
-      "interactionModalities": [
-        "BodyContactGesture",
-        "ContactBased",
-        "MultiModalInteraction"
-      ],
-      "gestureTypes": [
-        "DirectionalGesture",
-        "SingleHand",
-        "Swipe",
-        "Tap"
-      ],
-      "applicationScenarios": [
-        "AR",
-        "Navigation"
-      ],
-      "feedbackOutput": [
-        "HapticFeedback",
-        "ProprioceptiveFeedback"
-      ],
-      "userExperienceDesign": [
-        "DiscreetInput",
-        "EyesFree",
-        "OneHandUse",
-        "SocialAcceptability"
-      ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2024-Understanding Gesture and Microgesture Inputs for Augmented Reality Maps.png",
-      "doi": "https://doi.org/10.1145/3643834.3661630",
-      "authors": "Danyluk Kurtis, Klueber Simon, Nittala Aditya Shekhar, Willett Wesley",
-      "journal": "DIS '24: Designing Interactive Systems Conference"
-    },
-    {
-      "id": 67,
-      "title": "T2IRay Design of Thumb-to-Index based Indirect Pointing for Continuous and Robust AR VR Input",
-      "year": "2025",
-      "category": "GestureDesign",
-      "hardwareDevices": [
-        "ARGlasses",
-        "VRHeadset"
-      ],
-      "sensingTechnology": [
-        "ComputerVision",
-        "OpticalTracking"
-      ],
-      "recognitionClassification": [
-        "ContinuousRecognition",
-        "FingerTracking",
-        "GestureRecognition",
-        "HandTracking"
-      ],
-      "interactionModalities": [
-        "BodyContactGesture",
-        "ContactBased",
-        "MultiModalInteraction"
-      ],
-      "gestureTypes": [
-        "DirectionalGesture",
-        "SingleHand",
-        "Tap",
-        "Thumb-Index"
-      ],
-      "applicationScenarios": [
-        "AR",
-        "ObjectManipulation",
-        "VR"
-      ],
-      "feedbackOutput": [
-        "ProprioceptiveFeedback",
-        "VisualFeedback"
-      ],
-      "userExperienceDesign": [
-        "DiscreetInput",
-        "EyesFree",
-        "HighAccuracy",
-        "OneHandUse",
-        "SocialAcceptability"
-      ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2025-T2IRay Design of Thumb-to-Index based Indirect Pointing for Continuous and Robust AR VR Input.png",
-      "doi": "https://doi.org/10.1145/3706598.3713442",
-      "authors": "Kim Jina, Zhang Yang, Yoon Sang Ho",
-      "journal": "CHI 2025: CHI Conference on Human Factors in Computing Systems"
-    },
-    {
-      "id": 68,
-      "title": "Key-press gestures recognition and interaction based on SEMG signals",
-      "year": "2010",
-      "category": "GestureDesign",
-      "hardwareDevices": [
-        "SmartPhone",
-        "WearableSensor",
-        "Wearables"
-      ],
-      "sensingTechnology": [
-        "Bio-Sensor",
-        "EMG"
-      ],
-      "recognitionClassification": [
-        "ContinuousRecognition",
-        "DynamicGestureRecognition",
-        "FingerTracking",
-        "GestureRecognition",
-        "StaticGestureRecognition"
-      ],
-      "interactionModalities": [
-        "BodyContactGesture",
-        "ContactBased",
-        "MultiModalInteraction"
-      ],
-      "gestureTypes": [
-        "Flex",
-        "Hold",
-        "SingleHand"
-      ],
-      "applicationScenarios": [
-        "MediaControl",
-        "TextInput"
-      ],
-      "feedbackOutput": [
-        "RealTimeFeedback",
-        "VisualFeedback"
-      ],
-      "userExperienceDesign": [
-        "DiscreetInput",
-        "EncumberedInteraction",
-        "EyesFree",
-        "HandsFree",
-        "HighAccuracy",
-        "OneHandUse",
-        "PortableDesign",
-        "SocialAcceptability"
-      ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2010 - Key-press gestures recognition and interaction based on SEMG signals.png",
-      "doi": "https://doi.org/10.1145/1891903.1891950",
-      "authors": "Cheng Juan, Chen Xiang, Lu Zhiyuan, Wang Kongqiao, Shen Minfen",
-      "journal": "ICMI-MLMI '10: International Conference on Multimodal Interfaces / Workshop on Machine Learning for Multimodal Interfaces"
-    },
-    {
-      "id": 69,
-      "title": "A study of on-device gestures",
-      "year": "2012",
-      "category": "GestureDesign",
-      "hardwareDevices": [
-        "SmartPhone"
-      ],
-      "sensingTechnology": [
-        "PressureSensor"
-      ],
-      "recognitionClassification": [
-        "GestureRecognition",
-        "MotionAnalysis"
-      ],
-      "interactionModalities": [
-        "BackofDevices",
-        "ContactBased",
-        "DeviceContactGesture"
-      ],
-      "gestureTypes": [
-        "Grasp",
-        "SingleHand",
-        "Swipe"
-      ],
-      "applicationScenarios": [
-        "MediaControl",
-        "Navigation",
-        "OtherScenarios"
-      ],
-      "feedbackOutput": [
-        "ProprioceptiveFeedback"
-      ],
-      "userExperienceDesign": [
-        "EncumberedInteraction",
-        "OcclusionAvoidance",
-        "OneHandUse"
-      ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2012 - A study of on-device gestures.png",
-      "doi": "https://doi.org/10.1145/2371664.2371669",
-      "authors": "Wolf Katrin, McGee-Lennon Marilyn, Brewster Stephen",
-      "journal": "MobileHCI '12: 14th International Conference on Human Computer Interaction with Mobile Devices and Services"
-    },
-    {
-      "id": 70,
       "title": "PinchPad performance of touch-based gestures while grasping devices",
       "year": "2012",
       "category": "GestureDesign",
@@ -3407,21 +559,22 @@ const PAPERS_DATA = {
         "Tablet"
       ],
       "sensingTechnology": [
-        "CapacitiveSensor"
-      ],
-      "recognitionClassification": [
+        "Capacitive",
         "FingerTracking",
         "GestureRecognition",
         "MotionAnalysis"
       ],
+      "recognitionClassification": [],
       "interactionModalities": [
-        "BackofDevices",
+        "BackOfDevice",
         "ContactBased",
-        "DeviceContactGesture",
-        "DirectTouch"
+        "DeviceContact",
+        "DirectTouch",
+        "Haptic",
+        "Proprioceptive"
       ],
       "gestureTypes": [
-        "Grasp",
+        "Grasp/Grip",
         "Pinch",
         "Swipe",
         "Tap"
@@ -3429,3070 +582,654 @@ const PAPERS_DATA = {
       "applicationScenarios": [
         "MediaControl"
       ],
-      "feedbackOutput": [
-        "HapticFeedback",
-        "ProprioceptiveFeedback"
-      ],
+      "feedbackOutput": [],
       "userExperienceDesign": [
         "EyesFree",
-        "OcclusionAvoidance",
+        "OcclusionAvoid",
         "OneHandUse"
       ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2012 - PinchPad performance of touch-based gestures while grasping devices.png",
+      "tags": [],
+      "image": "Papers/GestureDesign/GestureDesign预览图/2012-PinchPad performance of touch-based gestures while grasping devices.png",
+      "pdfFile": "2012-PinchPad performance of touch-based gestures while grasping devices.pdf",
+      "pdfPath": "Papers/GestureDesign/2012-PinchPad performance of touch-based gestures while grasping devices.pdf",
       "doi": "https://doi.org/10.1145/2148131.2148155",
-      "authors": "Wolf Katrin, Müller-Tomfelde Christian, Cheng Kelvin, Wechsung Ina",
-      "journal": "TEI'12: Sixth International Conference on Tangible, Embedded, and Embodied Interaction"
+      "authors": "Katrin Wolf; Christian Müller-Tomfelde; Kelvin Cheng; Ina Wechsung",
+      "journal": "Proceedings of the Sixth International Conference on Tangible, Embedded and Embodied Interaction",
+      "url": "",
+      "source": "metadata_completed_workbook"
     },
     {
-      "id": 71,
-      "title": "The fat thumb using the thumb's contact size for single-handed mobile interaction",
-      "year": "2012",
-      "category": "GestureDesign",
-      "hardwareDevices": [
-        "SmartPhone"
-      ],
-      "sensingTechnology": [
-        "CapacitiveSensor",
-        "PressureSensor"
-      ],
-      "recognitionClassification": [
-        "FingerTracking",
-        "GestureRecognition"
-      ],
-      "interactionModalities": [
-        "ContactBased",
-        "DirectTouch"
-      ],
-      "gestureTypes": [
-        "SingleHand",
-        "Thumb-Index"
-      ],
-      "applicationScenarios": [
-        "MediaControl",
-        "Navigation"
-      ],
-      "feedbackOutput": [
-        "HapticFeedback",
-        "VisualFeedback"
-      ],
-      "userExperienceDesign": [
-        "FatFingerProblem",
-        "OneHandUse",
-        "SmallScreen",
-        "TouchOptimized"
-      ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2012 - The fat thumb using the thumb's contact size for single-handed mobile interaction.png",
-      "doi": "https://doi.org/10.1145/2371574.2371582",
-      "authors": "Boring Sebastian, Ledo David, Chen Xiang'Anthony', Marquardt Nicolai, Tang Anthony, Greenberg Saul",
-      "journal": "Proceedings of the 14th international conference on Human-computer interaction with mobile devices and services"
-    },
-    {
-      "id": 72,
-      "title": "Exploring pinch and spread gestures on mobile devices",
+      "id": 13,
+      "title": "FingerPad private and subtle interaction using fingertips",
       "year": "2013",
-      "category": "GestureDesign",
-      "hardwareDevices": [
-        "SmartPhone",
-        "Tablet"
-      ],
-      "sensingTechnology": [
-        "CapacitiveSensor"
-      ],
-      "recognitionClassification": [
-        "GestureRecognition",
-        "MotionAnalysis"
-      ],
-      "interactionModalities": [
-        "DirectTouch",
-        "MultiModalInteraction"
-      ],
-      "gestureTypes": [
-        "DualHand",
-        "MultiTouch",
-        "Pinch",
-        "Thumb-Index"
-      ],
-      "applicationScenarios": [
-        "MediaControl"
-      ],
-      "feedbackOutput": [
-        "VisualFeedback"
-      ],
-      "userExperienceDesign": [
-        "HighAccuracy",
-        "SmallScreen",
-        "TouchOptimized"
-      ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2013 - Exploring pinch and spread gestures on mobile devices.png",
-      "doi": "https://doi.org/10.1145/2493190.2493221",
-      "authors": "Tran Jessica J., Trewin Shari, Swart Calvin, John Bonnie E., Thomas John C.",
-      "journal": "MobileHCI '13: 15th International Conference on Human-Computer Interaction with Mobile Devices and Services"
-    },
-    {
-      "id": 74,
-      "title": "Leap gestures for TV insights from an elicitation study",
-      "year": "2014",
-      "category": "GestureDesign",
-      "hardwareDevices": [
-        "OtherDevices"
-      ],
-      "sensingTechnology": [
-        "MotionSensor",
-        "OpticalTracking"
-      ],
-      "recognitionClassification": [
-        "3DPoseEstimation",
-        "DynamicGestureRecognition",
-        "FingerTracking",
-        "GestureRecognition",
-        "HandTracking",
-        "StaticGestureRecognition"
-      ],
-      "interactionModalities": [
-        "InAirGesture",
-        "NonContactBased"
-      ],
-      "gestureTypes": [
-        "Flex",
-        "Hold",
-        "SingleHand"
-      ],
-      "applicationScenarios": [
-        "MediaControl"
-      ],
-      "feedbackOutput": [
-        "VisualFeedback"
-      ],
-      "userExperienceDesign": [
-        "ElicitationStudy",
-        "HandsFree",
-        "SocialAcceptability",
-        "UserAdaptation"
-      ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2014 - Leap gestures for TV insights from an elicitation study.png",
-      "doi": "https://doi.org/10.1145/2602299.2602316",
-      "authors": "Vatavu Radu-Daniel, Zaiti Ionut-Alexandru",
-      "journal": "TVX '14: ACM International Conference on Interactive Experiences for TV and Online Video"
-    },
-    {
-      "id": 75,
-      "title": "Tactile feedback for above-device gesture interfaces adding touch to touchless interactions",
-      "year": "2014",
-      "category": "software",
-      "hardwareDevices": [
-        "HapticDevice",
-        "SmartRing",
-        "SmartWatch",
-        "SmartPhone",
-        "Wearables"
-      ],
-      "sensingTechnology": [
-        "OpticalTracking",
-        "UltrasonicSensor"
-      ],
-      "recognitionClassification": [
-        "FingerTracking",
-        "GestureRecognition",
-        "HandTracking"
-      ],
-      "interactionModalities": [
-        "InAirGesture",
-        "MultiModalInteraction",
-        "NonContactBased"
-      ],
-      "gestureTypes": [
-        "SingleHand"
-      ],
-      "applicationScenarios": [
-        "MediaControl"
-      ],
-      "feedbackOutput": [
-        "HapticFeedback",
-        "MultimodalFeedback",
-        "VisualFeedback"
-      ],
-      "userExperienceDesign": [
-        "HandsFree",
-        "SmallScreen",
-        "TouchOptimized"
-      ],
-      "image": "Papers/SOFTWARE/Software预览图/2014 - Tactile feedback for above-device gesture interfaces adding touch to touchless interactions.png",
-      "doi": "https://doi.org/10.1145/2663204.2663280",
-      "authors": "Freeman Euan, Brewster Stephen, Lantz Vuokko",
-      "journal": "Proceedings of the 16th international conference on multimodal interaction"
-    },
-    {
-      "id": 76,
-      "title": "Interaction proxemics combining physical spaces for seamless gesture interaction",
-      "year": "2015",
-      "category": "GestureDesign",
-      "hardwareDevices": [
-        "OtherDevices",
-        "TouchScreen"
-      ],
-      "sensingTechnology": [
-        "DepthSensing",
-        "MotionSensor",
-        "OpticalTracking"
-      ],
-      "recognitionClassification": [
-        "FingerTracking",
-        "GestureRecognition",
-        "HandTracking"
-      ],
-      "interactionModalities": [
-        "DirectTouch",
-        "InAirGesture",
-        "MultiModalInteraction"
-      ],
-      "gestureTypes": [
-        "DirectionalGesture",
-        "DualHand",
-        "Pinch",
-        "SingleHand",
-        "Swipe",
-        "Tap"
-      ],
-      "applicationScenarios": [
-        "Navigation",
-        "ObjectManipulation",
-        "TextInput"
-      ],
-      "feedbackOutput": [
-        "AudioFeedback",
-        "VisualFeedback"
-      ],
-      "userExperienceDesign": [
-        "UserAdaptation"
-      ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2015 - Interaction proxemics combining physical spaces for seamless gesture interaction.png",
-      "doi": "https://doi.org/10.1145/2757710.2757722",
-      "authors": "Dingler Tilman, Funk Markus, Alt Florian",
-      "journal": "PerDis '15: The International Symposium on Pervasive Displays"
-    },
-    {
-      "id": 77,
-      "title": "Exploring non-touchscreen gestures for smartwatches",
-      "year": "2016",
-      "category": "GestureDesign",
-      "hardwareDevices": [
-        "SmartWatch",
-        "Wearables"
-      ],
-      "sensingTechnology": [
-        "MotionSensor",
-        "OpticalTracking"
-      ],
-      "recognitionClassification": [
-        "FingerTracking",
-        "GestureRecognition",
-        "HandTracking"
-      ],
-      "interactionModalities": [
-        "DeviceContactGesture",
-        "InAirGesture",
-        "MultiModalInteraction"
-      ],
-      "gestureTypes": [
-        "DirectionalGesture",
-        "Pinch",
-        "SingleHand",
-        "Swipe",
-        "Tap"
-      ],
-      "applicationScenarios": [
-        "MediaControl",
-        "Navigation"
-      ],
-      "feedbackOutput": [
-        "HapticFeedback",
-        "VisualFeedback"
-      ],
-      "userExperienceDesign": [
-        "DiscreetInput",
-        "ElicitationStudy",
-        "FatFingerProblem",
-        "OcclusionAvoidance",
-        "SmallScreen",
-        "SocialAcceptability"
-      ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2016 - Exploring non-touchscreen gestures for smartwatches.png",
-      "doi": "https://doi.org/10.1145/2858036.2858385",
-      "authors": "Arefin Shimon Shaikh Shawon, Lutton Courtney, Xu Zichun, Morrison-Smith Sarah, Boucher Christina, Ruiz Jaime",
-      "journal": "CHI'16: CHI Conference on Human Factors in Computing Systems"
-    },
-    {
-      "id": 78,
-      "title": " Finger-aware shortcuts",
-      "year": "2016",
-      "category": "software",
-      "hardwareDevices": [
-        "Keyboard"
-      ],
-      "sensingTechnology": [
-        "ComputerVision"
-      ],
-      "recognitionClassification": [
-        "FingerTracking",
-        "GestureRecognition",
-        "HandTracking",
-        "StaticGestureRecognition"
-      ],
-      "interactionModalities": [
-        "DeviceContactGesture"
-      ],
-      "gestureTypes": [
-        "DualHand",
-        "Hold",
-        "SingleHand"
-      ],
-      "applicationScenarios": [
-        "TextInput"
-      ],
-      "feedbackOutput": [
-        "VisualFeedback"
-      ],
-      "userExperienceDesign": [
-        "HighAccuracy",
-        "QWERTYLayout",
-        "UserAdaptation"
-      ],
-      "image": "Papers/SOFTWARE/Software预览图/2016 - Finger-aware shortcuts.png",
-      "doi": "https://doi.org/10.1145/2858036.2858355",
-      "authors": "Zheng Jingjie, Vogel Daniel",
-      "journal": "CHI'16: CHI Conference on Human Factors in Computing Systems"
-    },
-    {
-      "id": 79,
-      "title": "Interacting with soli exploring fine-grained dynamic gesture recognition in the radio-frequency spectrum",
-      "year": "2016",
       "category": "hardware",
-      "hardwareDevices": [
-        "OtherDevices",
-        "WearableSensor",
-        "Wearables"
-      ],
-      "sensingTechnology": [
-        "RFSensing",
-        "RadarSensing"
-      ],
-      "recognitionClassification": [
-        "ContinuousRecognition",
-        "DynamicGestureRecognition",
-        "GestureRecognition",
-        "MotionAnalysis"
-      ],
-      "interactionModalities": [
-        "InAirGesture",
-        "NonContactBased"
-      ],
-      "gestureTypes": [
-        "DirectionalGesture",
-        "Pinch",
-        "SingleHand",
-        "Swipe",
-        "Tap"
-      ],
-      "applicationScenarios": [
-        "MediaControl",
-        "ObjectManipulation",
-        "SmartHome"
-      ],
-      "feedbackOutput": [
-        "VisualFeedback"
-      ],
-      "userExperienceDesign": [
-        "DiscreetInput",
-        "EyesFree",
-        "HandsFree",
-        "HighAccuracy",
-        "LowLatency",
-        "OcclusionAvoidance",
-        "PortableDesign"
-      ],
-      "image": "Papers/HARDWARE/Hardware预览图/2016 - Interacting with soli exploring fine-grained dynamic gesture recognition in the radio-frequency spectrum.png",
-      "doi": "https://doi.org/10.1145/2984511.2984565",
-      "authors": "Wang Saiwen, Song Jie, Lien Jaime, Poupyrev Ivan, Hilliges Otmar",
-      "journal": "UIST '16: The 29th Annual ACM Symposium on User Interface Software and Technology"
-    },
-    {
-      "id": 80,
-      "title": "Investigating how the hand interacts with different mobile phones",
-      "year": "2016",
-      "category": "GestureDesign",
-      "hardwareDevices": [
-        "Keyboard",
-        "SmartPhone",
-        "TouchScreen"
-      ],
-      "sensingTechnology": [
-        "ComputerVision"
-      ],
-      "recognitionClassification": [
-        "MotionAnalysis"
-      ],
-      "interactionModalities": [
-        "ContactBased",
-        "DeviceContactGesture",
-        "DirectTouch"
-      ],
-      "gestureTypes": [
-        "DualHand",
-        "Grasp",
-        "Hold",
-        "SingleHand"
-      ],
-      "applicationScenarios": [
-        "MediaControl",
-        "TextInput"
-      ],
-      "feedbackOutput": [
-        "VisualFeedback"
-      ],
-      "userExperienceDesign": [
-        "ElicitationStudy",
-        "OneHandUse",
-        "TouchOptimized"
-      ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2016 - Investigating how the hand interacts with different mobile phones.png",
-      "doi": "https://doi.org/10.1145/2957265.2961840",
-      "authors": "Eardley Rachel, Gill Steve, Roudaut Anne, Thompson Stephen, Hare Joanna",
-      "journal": "MobileHCI '16: 18th International Conference on Human-Computer Interaction with Mobile Devices and Services"
-    },
-    {
-      "id": 81,
-      "title": "WiFinger talk to your smart devices with finger-grained gesture",
-      "year": "2016",
-      "category": "software",
-      "hardwareDevices": [
-        "OtherDevices",
-        "SmartPhone"
-      ],
-      "sensingTechnology": [
-        "RFSensing"
-      ],
-      "recognitionClassification": [
-        "DynamicGestureRecognition",
-        "FingerTracking",
-        "GestureRecognition",
-        "MotionAnalysis"
-      ],
-      "interactionModalities": [
-        "InAirGesture",
-        "NonContactBased"
-      ],
-      "gestureTypes": [
-        "SignLanguageRelated",
-        "SingleHand"
-      ],
-      "applicationScenarios": [
-        "SmartHome",
-        "TextInput"
-      ],
-      "feedbackOutput": [
-        "VisualFeedback"
-      ],
-      "userExperienceDesign": [
-        "DiscreetInput",
-        "HandsFree",
-        "HighAccuracy"
-      ],
-      "image": "Papers/SOFTWARE/Software预览图/2016 - WiFinger talk to your smart devices with finger-grained gesture.png",
-      "doi": "https://doi.org/10.1145/2971648.2971738",
-      "authors": "Li Hong, Yang Wei, Wang Jianxin, Xu Yang, Huang Liusheng",
-      "journal": "UbiComp '16: The 2016 ACM International Joint Conference on Pervasive and Ubiquitous Computing"
-    },
-    {
-      "id": 82,
-      "title": "Understanding grip shifts how form factors impact hand movements on mobile phones",
-      "year": "2017",
-      "category": "GestureDesign",
-      "hardwareDevices": [
-        "SmartPhone",
-        "TouchScreen"
-      ],
-      "sensingTechnology": [
-        "Accelerometer",
-        "Gyroscope",
-        "MotionSensor"
-      ],
-      "recognitionClassification": [
-        "GestureRecognition",
-        "MotionAnalysis"
-      ],
-      "interactionModalities": [
-        "ContactBased",
-        "DirectTouch"
-      ],
-      "gestureTypes": [
-        "DualHand",
-        "Hold",
-        "SingleHand",
-        "Tap",
-        "Thumb-Index"
-      ],
-      "applicationScenarios": [
-        "Navigation",
-        "TextInput"
-      ],
-      "feedbackOutput": [
-        "VisualFeedback"
-      ],
-      "userExperienceDesign": [
-        "OneHandUse",
-        "PortableDesign",
-        "SmallScreen",
-        "TouchOptimized"
-      ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2017 - Understanding grip shifts how form factors impact hand movements on mobile phones.png",
-      "doi": "https://doi.org/10.1145/3025453.3025835",
-      "authors": "Eardley Rachel, Roudaut Anne, Gill Steve, Thompson Stephen J.",
-      "journal": "CHI '17: CHI Conference on Human Factors in Computing Systems"
-    },
-    {
-      "id": 83,
-      "title": "Characterizing finger pitch and roll orientation during atomic touch actions",
-      "year": "2018",
-      "category": "GestureDesign",
-      "hardwareDevices": [
-        "Tablet",
-        "TouchScreen"
-      ],
-      "sensingTechnology": [
-        "Accelerometer",
-        "Gyroscope",
-        "IMU",
-        "Magnetometer"
-      ],
-      "recognitionClassification": [
-        "FingerTracking",
-        "GestureRecognition",
-        "MotionAnalysis"
-      ],
-      "interactionModalities": [
-        "ContactBased",
-        "DirectTouch"
-      ],
-      "gestureTypes": [
-        "DualHand",
-        "Hold",
-        "MultiTouch",
-        "Pinch",
-        "SingleHand",
-        "Swipe",
-        "Tap",
-        "Thumb-Index"
-      ],
-      "applicationScenarios": [
-        "ObjectManipulation"
-      ],
-      "feedbackOutput": [
-        "VisualFeedback"
-      ],
-      "userExperienceDesign": [
-        "ElicitationStudy",
-        "TouchOptimized"
-      ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2018 - Characterizing finger pitch and roll orientation during atomic touch actions.png",
-      "doi": "https://doi.org/10.1145/3173574.3174163",
-      "authors": "Goguey Alix, Casiez Géry, Vogel Daniel, Gutwin Carl",
-      "journal": "CHI '18: CHI Conference on Human Factors in Computing Systems"
-    },
-    {
-      "id": 84,
-      "title": "Fingers' range and comfortable area for one-handed smartphone interaction beyond the touchscreen",
-      "year": "2018",
-      "category": "GestureDesign",
-      "hardwareDevices": [
-        "SmartPhone",
-        "TouchScreen"
-      ],
-      "sensingTechnology": [
-        "OpticalTracking"
-      ],
-      "recognitionClassification": [
-        "FingerTracking",
-        "GestureRecognition",
-        "MotionAnalysis"
-      ],
-      "interactionModalities": [
-        "BackofDevices",
-        "ContactBased",
-        "DirectTouch"
-      ],
-      "gestureTypes": [
-        "SingleHand",
-        "Swipe",
-        "Tap",
-        "Thumb-Index"
-      ],
-      "applicationScenarios": [
-        "MediaControl",
-        "Navigation"
-      ],
-      "feedbackOutput": [
-        "VisualFeedback"
-      ],
-      "userExperienceDesign": [
-        "ElicitationStudy",
-        "FatFingerProblem",
-        "OcclusionAvoidance",
-        "OneHandUse",
-        "PortableDesign",
-        "TouchOptimized"
-      ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2018 - Fingers' range and comfortable area for one-handed smartphone interaction beyond the touchscreen.png",
-      "doi": "https://doi.org/10.1145/3173574.3173605",
-      "authors": "Le Huy Viet, Mayer Sven, Bader Patrick, Henze Niels",
-      "journal": "CHI '18: CHI Conference on Human Factors in Computing Systems"
-    },
-    {
-      "id": 85,
-      "title": "InfiniTouch finger-aware interaction on fully touch sensitive smartphones",
-      "year": "2018",
-      "category": "hardware",
-      "hardwareDevices": [
-        "SmartPhone",
-        "TouchScreen",
-        "WearableSensor"
-      ],
-      "sensingTechnology": [
-        "CapacitiveSensor",
-        "MotionSensor",
-        "OpticalTracking"
-      ],
-      "recognitionClassification": [
-        "3DPoseEstimation",
-        "DynamicGestureRecognition",
-        "FingerTracking",
-        "GestureRecognition",
-        "StaticGestureRecognition"
-      ],
-      "interactionModalities": [
-        "BackofDevices",
-        "ContactBased",
-        "DirectTouch",
-        "MultiModalInteraction"
-      ],
-      "gestureTypes": [
-        "Flex",
-        "Pinch",
-        "SingleHand",
-        "Swipe",
-        "Thumb-Index"
-      ],
-      "applicationScenarios": [
-        "AccessibilitySupport",
-        "MediaControl",
-        "ObjectManipulation",
-        "TextInput"
-      ],
-      "feedbackOutput": [
-        "RealTimeFeedback",
-        "VisualFeedback"
-      ],
-      "userExperienceDesign": [
-        "ElicitationStudy",
-        "FatFingerProblem",
-        "HighAccuracy",
-        "LowLatency",
-        "OneHandUse"
-      ],
-      "image": "Papers/HARDWARE/Hardware预览图/2018 - InfiniTouch finger-aware interaction on fully touch sensitive smartphones.png",
-      "doi": "https://doi.org/10.1145/3242587.3242605",
-      "authors": "Le Huy Viet, Mayer Sven, Henze Niels",
-      "journal": "UIST '18: The 31st Annual ACM Symposium on User Interface Software and Technology"
-    },
-    {
-      "id": 86,
-      "title": "Pen + mid-air gestures eliciting contextual gestures",
-      "year": "2018",
-      "category": "GestureDesign",
-      "hardwareDevices": [
-        "Tablet",
-        "TouchScreen"
-      ],
-      "sensingTechnology": [
-        "ComputerVision",
-        "MotionSensor",
-        "OpticalTracking"
-      ],
-      "recognitionClassification": [
-        "DynamicGestureRecognition",
-        "GestureRecognition",
-        "HandTracking"
-      ],
-      "interactionModalities": [
-        "InAirGesture",
-        "MultiModalInteraction",
-        "NonContactBased",
-        "PenInput"
-      ],
-      "gestureTypes": [
-        "DirectionalGesture",
-        "DualHand",
-        "Grasp",
-        "Pinch",
-        "Swipe"
-      ],
-      "applicationScenarios": [
-        "DigitalArt",
-        "Education",
-        "MediaControl",
-        "ObjectManipulation"
-      ],
-      "feedbackOutput": [
-        "RealTimeFeedback",
-        "VisualFeedback"
-      ],
-      "userExperienceDesign": [
-        "ElicitationStudy",
-        "EncumberedInteraction",
-        "UserAdaptation"
-      ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2018 - Pen + mid-air gestures eliciting contextual gestures.png",
-      "doi": "https://doi.org/10.1145/3242969.3242979",
-      "authors": "Aslan Ilhan, Schmidt Tabea, Woehrle Jens, Vogel Lukas, André Elisabeth",
-      "journal": "ICMI '18: International Conference on Multimodal Interaction"
-    },
-    {
-      "id": 87,
-      "title": "Unimanual Pen Touch Input Using Variations of Precision Grip Postures",
-      "year": "2018",
-      "category": "GestureDesign",
-      "hardwareDevices": [
-        "Tablet",
-        "TouchScreen"
-      ],
-      "sensingTechnology": [
-        "CapacitiveSensor"
-      ],
-      "recognitionClassification": [
-        "GestureRecognition",
-        "HandTracking",
-        "StaticGestureRecognition"
-      ],
-      "interactionModalities": [
-        "ContactBased",
-        "MultiModalInteraction",
-        "PenInput"
-      ],
-      "gestureTypes": [
-        "Grasp",
-        "MultiTouch",
-        "SingleHand"
-      ],
-      "applicationScenarios": [
-        "DigitalArt",
-        "Education",
-        "ObjectManipulation",
-        "TextInput"
-      ],
-      "feedbackOutput": [
-        "RealTimeFeedback",
-        "VisualFeedback"
-      ],
-      "userExperienceDesign": [
-        "ElicitationStudy",
-        "HighAccuracy",
-        "OneHandUse",
-        "UserAdaptation"
-      ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2018-Unimanual Pen Touch Input Using Variations of Precision Grip Postures.png",
-      "doi": "https://doi.org/10.1145/3242587.3242652",
-      "authors": "Cami Drini, Matulic Fabrice, Calland Richard G., Vogel Brian, Vogel Daniel",
-      "journal": "UIST '18: The 31st Annual ACM Symposium on User Interface Software and Technology"
-    },
-    {
-      "id": 88,
-      "title": "Gaze-assisted typing for smart glasses",
-      "year": "2019",
-      "category": "GestureDesign",
       "hardwareDevices": [
         "SmartGlasses",
-        "VRHeadset",
-        "Wearables"
-      ],
-      "sensingTechnology": [
-        "CapacitiveSensor",
-        "OpticalTracking"
-      ],
-      "recognitionClassification": [
-        "DynamicGestureRecognition",
-        "GestureRecognition",
-        "StaticGestureRecognition"
-      ],
-      "interactionModalities": [
-        "ContactBased",
-        "DeviceContactGesture",
-        "GazeBased",
-        "MultiModalInteraction"
-      ],
-      "gestureTypes": [
-        "DirectionalGesture",
-        "SingleHand",
-        "Swipe",
-        "Tap"
-      ],
-      "applicationScenarios": [
-        "AccessibilitySupport",
-        "TextInput"
-      ],
-      "feedbackOutput": [
-        "AudioFeedback",
-        "RealTimeFeedback",
-        "VisualFeedback"
-      ],
-      "userExperienceDesign": [
-        "ElicitationStudy",
-        "EyesFree",
-        "LowLatency",
-        "MidasTouchProblem",
-        "OneHandUse",
-        "UserAdaptation"
-      ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2019 - Gaze-assisted typing for smart glasses.png",
-      "doi": "https://doi.org/10.1145/3332165.3347883",
-      "authors": "Ahn Sunggeun, Lee Geehyuk",
-      "journal": "UIST '19: The 32nd Annual ACM Symposium on User Interface Software and Technology"
-    },
-    {
-      "id": 89,
-      "title": "Investigating unintended inputs for one-handed touch interaction beyond the touchscreen",
-      "year": "2019",
-      "category": "GestureDesign",
-      "hardwareDevices": [
-        "SmartPhone",
-        "Wearables"
-      ],
-      "sensingTechnology": [
-        "CapacitiveSensor",
-        "MotionSensor",
-        "OpticalTracking"
-      ],
-      "recognitionClassification": [
-        "FingerTracking",
-        "MotionAnalysis",
-        "StaticGestureRecognition"
-      ],
-      "interactionModalities": [
-        "BackofDevices",
-        "ContactBased",
-        "DeviceContactGesture"
-      ],
-      "gestureTypes": [
-        "Grasp",
-        "SingleHand"
-      ],
-      "applicationScenarios": [
-        "OtherScenarios"
-      ],
-      "feedbackOutput": [
-        "RealTimeFeedback",
-        "VisualFeedback"
-      ],
-      "userExperienceDesign": [
-        "ElicitationStudy",
-        "EncumberedInteraction",
-        "FatFingerProblem",
-        "OcclusionAvoidance",
-        "OneHandUse",
-        "SocialAcceptability",
-        "UserAdaptation"
-      ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2019 - Investigating unintended inputs for one-handed touch interaction beyond the touchscreen.png",
-      "doi": "https://doi.org/10.1145/3338286.3340145",
-      "authors": "Le Huy Viet, Mayer Sven, Steuerlein Benedict, Henze Niels",
-      "journal": "MobileHCI '19: 21st International Conference on Human-Computer Interaction with Mobile Devices and Services"
-    },
-    {
-      "id": 90,
-      "title": "Expanding Side Touch Input on Mobile Phones",
-      "year": "2020",
-      "category": "GestureDesign",
-      "hardwareDevices": [
-        "SmartPhone",
-        "TouchScreen"
-      ],
-      "sensingTechnology": [
-        "CapacitiveSensor",
-        "MotionSensor",
-        "OpticalTracking"
-      ],
-      "recognitionClassification": [
-        "DynamicGestureRecognition",
-        "FingerTracking",
-        "GestureRecognition"
-      ],
-      "interactionModalities": [
-        "BackofDevices",
-        "ContactBased",
-        "DirectTouch"
-      ],
-      "gestureTypes": [
-        "DirectionalGesture",
-        "SingleHand",
-        "Swipe",
-        "Tap",
-        "Thumb-Index"
-      ],
-      "applicationScenarios": [
-        "AccessibilitySupport",
-        "MediaControl",
-        "Navigation",
-        "TextInput"
-      ],
-      "feedbackOutput": [
-        "HapticFeedback",
-        "VisualFeedback"
-      ],
-      "userExperienceDesign": [
-        "ElicitationStudy",
-        "FatFingerProblem",
-        "HighAccuracy",
-        "OcclusionAvoidance",
-        "OneHandUse",
-        "PortableDesign"
-      ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2020 - Expanding side touch input on mobile phones finger reachability and two-dimensional taps and flicks using the index and.png",
-      "doi": "https://doi.org/10.1145/3427334",
-      "authors": "Yeh Yen-Ting, Roy Quentin, Irudayaraj Antony Albert Raj, Vogel Daniel",
-      "journal": "Proc ACM Hum Comput Interact"
-    },
-    {
-      "id": 91,
-      "title": "MagTouch robust finger identification for a smartwatch using a magnet ring and a built-in magnetometer",
-      "year": "2020",
-      "category": "GestureDesign",
-      "hardwareDevices": [
-        "SmartRing",
-        "SmartWatch",
-        "Wearables"
-      ],
-      "sensingTechnology": [
-        "IMU",
-        "Magnetometer",
-        "MotionSensor"
-      ],
-      "recognitionClassification": [
-        "FingerTracking",
-        "GestureRecognition",
-        "StaticGestureRecognition"
-      ],
-      "interactionModalities": [
-        "ContactBased",
-        "DirectTouch",
-        "TangibleInteraction"
-      ],
-      "gestureTypes": [
-        "SingleHand",
-        "Tap"
-      ],
-      "applicationScenarios": [
-        "MediaControl",
-        "TextInput"
-      ],
-      "feedbackOutput": [
-        "RealTimeFeedback",
-        "VisualFeedback"
-      ],
-      "userExperienceDesign": [
-        "HighAccuracy",
-        "LowLatency",
-        "OneHandUse",
-        "PortableDesign",
-        "SocialAcceptability"
-      ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2020 - MagTouch robust finger identification for a smartwatch using a magnet ring and a built-in magnetometer.png",
-      "doi": "https://doi.org/10.1145/3313831.3376234",
-      "authors": "Park Keunwoo, Kim Daehwa, Heo Seongkook, Lee Geehyuk",
-      "journal": "CHI '20: CHI Conference on Human Factors in Computing Systems"
-    },
-    {
-      "id": 92,
-      "title": "PenSight enhanced interaction with a pen-top camera",
-      "year": "2020",
-      "category": "GestureDesign",
-      "hardwareDevices": [
-        "OtherDevices",
-        "Tablet"
-      ],
-      "sensingTechnology": [
-        "ComputerVision",
-        "DepthSensing",
-        "OpticalTracking"
-      ],
-      "recognitionClassification": [
-        "3DPoseEstimation",
-        "FingerTracking",
-        "GestureRecognition",
-        "HandTracking",
-        "StaticGestureRecognition"
-      ],
-      "interactionModalities": [
-        "ContactBased",
-        "MultiModalInteraction",
-        "NonContactBased",
-        "PenInput",
-        "TangibleInteraction"
-      ],
-      "gestureTypes": [
-        "DualHand",
-        "Grasp"
-      ],
-      "applicationScenarios": [
-        "DigitalArt",
-        "Education",
-        "Navigation",
-        "ObjectManipulation",
-        "TextInput"
-      ],
-      "feedbackOutput": [
-        "RealTimeFeedback",
-        "VisualFeedback"
-      ],
-      "userExperienceDesign": [
-        "ElicitationStudy",
-        "EncumberedInteraction",
-        "HighAccuracy",
-        "LowLatency",
-        "OcclusionAvoidance",
-        "PortableDesign"
-      ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2020 - PenSight enhanced interaction with a pen-top camera.png",
-      "doi": "https://doi.org/10.1145/3313831.3376147",
-      "authors": "Matulic Fabrice, Arakawa Riku, Vogel Brian, Vogel Daniel",
-      "journal": "CHI '20: CHI Conference on Human Factors in Computing Systems"
-    },
-    {
-      "id": 93,
-      "title": "Shortcut gestures for mobile text editing on fully touch sensitive smartphones",
-      "year": "2020",
-      "category": "GestureDesign",
-      "hardwareDevices": [
-        "SmartPhone",
-        "TouchScreen",
-        "Wearables"
-      ],
-      "sensingTechnology": [
-        "CapacitiveSensor"
-      ],
-      "recognitionClassification": [
-        "ContinuousRecognition",
-        "DynamicGestureRecognition",
-        "GestureRecognition"
-      ],
-      "interactionModalities": [
-        "BackofDevices",
-        "ContactBased",
-        "DeviceContactGesture",
-        "MultiModalInteraction"
-      ],
-      "gestureTypes": [
-        "DirectionalGesture",
-        "Hold",
-        "MultiTouch",
-        "SingleHand",
-        "Swipe",
-        "Tap"
-      ],
-      "applicationScenarios": [
-        "AccessibilitySupport",
-        "OtherScenarios",
-        "TextInput"
-      ],
-      "feedbackOutput": [
-        "RealTimeFeedback",
-        "VisualFeedback"
-      ],
-      "userExperienceDesign": [
-        "FatFingerProblem",
-        "HighAccuracy",
-        "OcclusionAvoidance",
-        "OneHandUse",
-        "UserAdaptation"
-      ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2020 - Shortcut gestures for mobile text editing on fully touch sensitive smartphones.png",
-      "doi": "https://doi.org/10.1145/3396233",
-      "authors": "Le Huy Viet, Mayer Sven, Weiß Maximilian, Vogelsang Jonas, Weingärtner Henrike, Henze Niels",
-      "journal": "ACM Trans Comput-Hum Interact"
-    },
-    {
-      "id": 94,
-      "title": "Eliciting tangible and gestural user interactions with and on a cooking pan",
-      "year": "2020",
-      "category": "GestureDesign",
-      "hardwareDevices": [
-        "OtherDevices"
-      ],
-      "sensingTechnology": [
-        "ComputerVision",
-        "OtherTechnology"
-      ],
-      "recognitionClassification": [
-        "DynamicGestureRecognition",
-        "GestureRecognition",
-        "StaticGestureRecognition"
-      ],
-      "interactionModalities": [
-        "ContactBased",
-        "DeviceContactGesture",
-        "TangibleInteraction"
-      ],
-      "gestureTypes": [
-        "Grasp",
-        "SingleHand",
-        "Swipe",
-        "Tap"
-      ],
-      "applicationScenarios": [
-        "OtherScenarios",
-        "SmartHome"
-      ],
-      "feedbackOutput": [
-        "MultimodalFeedback",
-        "VisualFeedback"
-      ],
-      "userExperienceDesign": [
-        "ElicitationStudy",
-        "EncumberedInteraction"
-      ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2020 - Eliciting tangible and gestural user interactions with and on a cooking pan.png",
-      "doi": "https://doi.org/10.1145/3404983.3405516",
-      "authors": "Beruscha Frank, Mueller Katharina, Sohnke Thorsten",
-      "journal": "MuC'20: Mensch und Computer 2020"
-    },
-    {
-      "id": 95,
-      "title": "3D hand pose estimation on conventional capacitive touchscreens",
-      "year": "2021",
-      "category": "GestureDesign",
-      "hardwareDevices": [
-        "Tablet",
-        "TouchScreen"
-      ],
-      "sensingTechnology": [
-        "CapacitiveSensor"
-      ],
-      "recognitionClassification": [
-        "3DPoseEstimation",
-        "ContinuousRecognition",
-        "DynamicGestureRecognition",
-        "FingerTracking",
-        "GestureRecognition",
-        "HandTracking"
-      ],
-      "interactionModalities": [
-        "ContactBased",
-        "DeviceContactGesture",
-        "MultiModalInteraction"
-      ],
-      "gestureTypes": [
-        "DualHand",
-        "Grasp",
-        "MultiTouch",
-        "SingleHand"
-      ],
-      "applicationScenarios": [
-        "AR",
-        "DigitalArt",
-        "Gaming",
-        "ObjectManipulation",
-        "Training",
-        "VR"
-      ],
-      "feedbackOutput": [
-        "RealTimeFeedback",
-        "VisualFeedback"
-      ],
-      "userExperienceDesign": [
-        "ElicitationStudy",
-        "FatFingerProblem",
-        "HighAccuracy",
-        "LowLatency",
-        "OcclusionAvoidance",
-        "UserAdaptation"
-      ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2021 - 3D hand pose estimation on conventional capacitive touchscreens.png",
-      "doi": "https://doi.org/10.1145/3447526.3472045",
-      "authors": "Choi Frederick, Mayer Sven, Harrison Chris",
-      "journal": "MobileHCI '21: 23rd International Conference on Mobile Human-Computer Interaction"
-    },
-    {
-      "id": 96,
-      "title": "TouchPose hand pose prediction, depth estimation, and touch classification from capacitive images",
-      "year": "2021",
-      "category": "software",
-      "hardwareDevices": [
-        "SmartPhone",
-        "Tablet",
-        "TouchScreen",
+        "Wearables",
         "WearableSensor"
-      ],
-      "sensingTechnology": [
-        "CapacitiveSensor",
-        "ComputerVision",
-        "DepthSensing",
-        "OpticalTracking"
-      ],
-      "recognitionClassification": [
-        "3DPoseEstimation",
-        "DynamicGestureRecognition",
-        "FingerTracking",
-        "GestureRecognition",
-        "HandTracking",
-        "StaticGestureRecognition"
-      ],
-      "interactionModalities": [
-        "ContactBased",
-        "DirectTouch",
-        "MultiModalInteraction",
-        "TangibleInteraction"
-      ],
-      "gestureTypes": [
-        "Grasp",
-        "MultiTouch",
-        "SingleHand"
-      ],
-      "applicationScenarios": [
-        "AR",
-        "DigitalArt",
-        "ObjectManipulation",
-        "TextInput",
-        "VR"
-      ],
-      "feedbackOutput": [
-        "RealTimeFeedback",
-        "VisualFeedback"
-      ],
-      "userExperienceDesign": [
-        "HighAccuracy",
-        "LowLatency",
-        "OcclusionAvoidance",
-        "TouchOptimized",
-        "UserAdaptation"
-      ],
-      "image": "Papers/SOFTWARE/Software预览图/2021 - TouchPose hand pose prediction, depth estimation, and touch classification from capacitive images.png",
-      "doi": "https://doi.org/10.1145/3472749.3474801",
-      "authors": "Ahuja Karan, Streli Paul, Holz Christian",
-      "journal": "UIST '21: The 34th Annual ACM Symposium on User Interface Software and Technology"
-    },
-    {
-      "id": 97,
-      "title": "Watching your phone's back gesture recognition by sensing acoustical structure-borne propagation",
-      "year": "2021",
-      "category": "software",
-      "hardwareDevices": [
-        "OtherDevices",
-        "SmartPhone",
-        "WearableSensor"
-      ],
-      "sensingTechnology": [
-        "MotionSensor",
-        "OtherTechnology",
-        "UltrasonicSensor"
-      ],
-      "recognitionClassification": [
-        "ContinuousRecognition",
-        "DynamicGestureRecognition",
-        "GestureRecognition"
-      ],
-      "interactionModalities": [
-        "BackofDevices",
-        "DeviceContactGesture",
-        "NonContactBased"
-      ],
-      "gestureTypes": [
-        "DirectionalGesture",
-        "SingleHand",
-        "Swipe",
-        "Tap"
-      ],
-      "applicationScenarios": [
-        "AccessibilitySupport",
-        "IoTControl",
-        "OtherScenarios"
-      ],
-      "feedbackOutput": [
-        "AudioFeedback",
-        "MultimodalFeedback"
-      ],
-      "userExperienceDesign": [
-        "DiscreetInput",
-        "HighAccuracy",
-        "LowLatency",
-        "OcclusionAvoidance",
-        "PortableDesign",
-        "UserAdaptation"
-      ],
-      "image": "Papers/SOFTWARE/Software预览图/2021 - Watching your phone's back gesture recognition by sensing acoustical structure-borne propagation.png",
-      "doi": "https://doi.org/10.1145/3463522",
-      "authors": "Wang Lei, Zhang Xiang, Jiang Yuanshuang, Zhang Yong, Xu Chenren, Gao Ruiyang, Zhang Daqing",
-      "journal": "Proc ACM Interact Mob Wearable Ubiquitous Technol"
-    },
-    {
-      "id": 98,
-      "title": "A User-based Mid-air Hand Gesture Set for Spreadsheets",
-      "year": "2021",
-      "category": "GestureDesign",
-      "hardwareDevices": [
-        "OtherDevices",
-        "VRHeadset"
-      ],
-      "sensingTechnology": [
-        "ComputerVision",
-        "MotionSensor",
-        "OpticalTracking"
-      ],
-      "recognitionClassification": [
-        "DynamicGestureRecognition",
-        "GestureRecognition"
-      ],
-      "interactionModalities": [
-        "InAirGesture",
-        "NonContactBased"
-      ],
-      "gestureTypes": [
-        "Pinch",
-        "SingleHand",
-        "Swipe"
-      ],
-      "applicationScenarios": [
-        "OtherScenarios"
-      ],
-      "feedbackOutput": [
-        "RealTimeFeedback",
-        "VisualFeedback"
-      ],
-      "userExperienceDesign": [
-        "ElicitationStudy"
-      ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2021-A User-based Mid-air Hand Gesture Set for Spreadsheets.png",
-      "doi": "https://doi.org/10.1145/3429360.3468193",
-      "authors": "Takayama Yuta, Ichikawa Yuu, Shizuki Buntarou, Kawaguchi Ikkaku, Takahashi Shin",
-      "journal": "CHI '21: CHI Conference on Human Factors in Computing Systems"
-    },
-    {
-      "id": 99,
-      "title": "Leveraging the properties of mmWave signals for 3D finger motion tracking for interactive IoT applications",
-      "year": "2022",
-      "category": "software",
-      "hardwareDevices": [
-        "OtherDevices",
-        "SmartPhone",
-        "WearableSensor"
-      ],
-      "sensingTechnology": [
-        "MotionSensor",
-        "RFSensing",
-        "RadarSensing"
-      ],
-      "recognitionClassification": [
-        "3DPoseEstimation",
-        "ContinuousRecognition",
-        "FingerTracking",
-        "HandTracking"
-      ],
-      "interactionModalities": [
-        "InAirGesture",
-        "NonContactBased"
-      ],
-      "gestureTypes": [
-        "Flex",
-        "SignLanguageRelated",
-        "SingleHand"
-      ],
-      "applicationScenarios": [
-        "AR",
-        "AccessibilitySupport",
-        "Healthcare",
-        "IoTControl",
-        "SmartHome",
-        "VR"
-      ],
-      "feedbackOutput": [
-        "RealTimeFeedback"
-      ],
-      "userExperienceDesign": [
-        "EyesFree",
-        "HandsFree",
-        "HighAccuracy",
-        "LowLatency",
-        "UserAdaptation"
-      ],
-      "image": "Papers/SOFTWARE/Software预览图/2022 - Leveraging the properties of mmWave signals for 3D finger motion tracking for interactive IoT applications.png",
-      "doi": "https://doi.org/10.1145/3570613",
-      "authors": "Liu Yilin, Zhang Shijia, Gowda Mahanth, Nelakuditi Srihari",
-      "journal": "Proc ACM Meas Anal Comput Syst"
-    },
-    {
-      "id": 100,
-      "title": "IndexPen Two Finger Text Input with Millimeter Wave Radar",
-      "year": "2022",
-      "category": "software",
-      "hardwareDevices": [
-        "OtherDevices",
-        "SmartPhone",
-        "WearableSensor"
-      ],
-      "sensingTechnology": [
-        "MotionSensor",
-        "RFSensing",
-        "RadarSensing"
-      ],
-      "recognitionClassification": [
-        "ContinuousRecognition",
-        "DynamicGestureRecognition",
-        "FingerTracking",
-        "GestureRecognition"
-      ],
-      "interactionModalities": [
-        "InAirGesture",
-        "NonContactBased"
-      ],
-      "gestureTypes": [
-        "SingleHand",
-        "Tap",
-        "Thumb-Index"
-      ],
-      "applicationScenarios": [
-        "AR",
-        "AccessibilitySupport",
-        "IoTControl",
-        "SmartHome",
-        "TextInput",
-        "VR"
-      ],
-      "feedbackOutput": [
-        "RealTimeFeedback",
-        "VisualFeedback"
-      ],
-      "userExperienceDesign": [
-        "EyesFree",
-        "HandsFree",
-        "HighAccuracy",
-        "LowLatency",
-        "SocialAcceptability",
-        "UserAdaptation"
-      ],
-      "image": "Papers/SOFTWARE/Software预览图/2022-IndexPen Two Finger Text Input with Millimeter Wave Radar.png",
-      "doi": "https://doi.org/10.1145/3534619",
-      "authors": "Yu Du, Yongquan Hu, Ke He, Yongkang Xing, Yubing Wang, Zhaojie Huang, Chun Yu, Yukang Yan, Yuanchun Shi",
-      "journal": "IMWUT Proc. ACM Interact. Mob. Wearable Ubiquitous Technol."
-    },
-    {
-      "id": 101,
-      "title": "SoloFinger Robust Microgestures while Grasping Everyday Objects",
-      "year": "2021",
-      "category": "GestureDesign",
-      "hardwareDevices": [
-        "DataGloves",
-        "WearableSensor"
-      ],
-      "sensingTechnology": [
-        "MotionSensor",
-        "OpticalTracking"
-      ],
-      "recognitionClassification": [
-        "DynamicGestureRecognition",
-        "FingerTracking",
-        "GestureRecognition",
-        "MotionAnalysis"
-      ],
-      "interactionModalities": [
-        "ContactBased",
-        "DeviceContactGesture"
-      ],
-      "gestureTypes": [
-        "DirectionalGesture",
-        "Flex",
-        "SingleHand",
-        "Swipe",
-        "Tap"
-      ],
-      "applicationScenarios": [
-        "ObjectManipulation",
-        "OtherScenarios"
-      ],
-      "feedbackOutput": [
-        "RealTimeFeedback"
-      ],
-      "userExperienceDesign": [
-        "ElicitationStudy",
-        "HighAccuracy",
-        "LowLatency",
-        "OneHandUse"
-      ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2021 - SoloFinger robust microgestures while grasping everyday objects.png",
-      "doi": "https://doi.org/10.1145/3411764.3445197",
-      "authors": "Sharma Adwait, Hedderich Michael A., Bhardwaj Divyanshu, Fruchard Bruno, McIntosh Jess, Nittala Aditya Shekhar, Klakow Dietrich, Ashbrook Daniel, Steimle Jürgen",
-      "journal": "CHI '21: CHI Conference on Human Factors in Computing Systems"
-    },
-    {
-      "id": 102,
-      "title": "ARO Exploring the Design of Smart-Ring Interactions for Encumbered Hands",
-      "year": "2021",
-      "category": "hardware",
-      "hardwareDevices": [
-        "SmartRing",
-        "WearableSensor",
-        "Wearables"
       ],
       "sensingTechnology": [
         "Accelerometer",
-        "CapacitiveSensor",
-        "Gyroscope",
-        "IMU"
-      ],
-      "recognitionClassification": [
-        "DynamicGestureRecognition",
-        "FingerTracking",
-        "GestureRecognition"
-      ],
-      "interactionModalities": [
-        "ContactBased",
-        "DeviceContactGesture",
-        "InAirGesture"
-      ],
-      "gestureTypes": [
-        "DirectionalGesture",
-        "Grasp",
-        "SingleHand",
-        "Swipe",
-        "Tap",
-        "Thumb-Index"
-      ],
-      "applicationScenarios": [
-        "MediaControl",
-        "Navigation",
-        "ObjectManipulation"
-      ],
-      "feedbackOutput": [
-        "RealTimeFeedback",
-        "VisualFeedback"
-      ],
-      "userExperienceDesign": [
-        "DiscreetInput",
-        "ElicitationStudy",
-        "EncumberedInteraction",
-        "HandsFree",
-        "PortableDesign",
-        "SocialAcceptability"
-      ],
-      "image": "Papers/HARDWARE/Hardware预览图/2021-ARO Exploring the Design of Smart-Ring Interactions for Encumbered Hands.png",
-      "doi": "https://doi.org/10.1145/3447526.3472037",
-      "authors": "Bardot Sandra, Rawat Surya, Nguyen Duy Thai, Rempel Sawyer, Zheng Huizhe, Rey Bradley, Li Jun, Fan Kevin, Huang Da-Yuan, Li Wei, Irani Pourang",
-      "journal": "MobileHCI '21: 23rd International Conference on Mobile Human-Computer Interaction"
-    },
-    {
-      "id": 103,
-      "title": "Enabling voice-accompanying hand-to-face gesture recognition with cross-device sensing",
-      "year": "2023",
-      "category": "GestureDesign",
-      "hardwareDevices": [
-        "SmartRing",
-        "SmartWatch",
-        "WearableSensor",
-        "Wearables"
-      ],
-      "sensingTechnology": [
-        "Accelerometer",
-        "Gyroscope",
-        "IMU",
-        "UltrasonicSensor"
-      ],
-      "recognitionClassification": [
-        "GestureRecognition",
-        "StaticGestureRecognition"
-      ],
-      "interactionModalities": [
-        "BodyContactGesture",
-        "EarBasedInteraction",
-        "MultiModalInteraction",
-        "VoiceGestureCombined"
-      ],
-      "gestureTypes": [
-        "SingleHand"
-      ],
-      "applicationScenarios": [
-        "AR",
-        "IoTControl",
-        "SmartHome"
-      ],
-      "feedbackOutput": [
-        "AudioFeedback",
-        "RealTimeFeedback"
-      ],
-      "userExperienceDesign": [
-        "ElicitationStudy",
-        "HandsFree",
-        "LowLatency",
-        "SocialAcceptability"
-      ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2023 - Enabling voice-accompanying hand-to-face gesture recognition with cross-device sensing.png",
-      "doi": "https://doi.org/10.1145/3544548.3581008",
-      "authors": "Li Zisu, Liang Chen, Wang Yuntao, Qin Yue, Yu Chun, Yan Yukang, Fan Mingming, Shi Yuanchun",
-      "journal": "Proceedings of the 2023 CHI Conference on Human Factors in Computing Systems"
-    },
-    {
-      "id": 104,
-      "title": "iFAD Gestures Understanding Users’ Gesture Input Performance with Index-Finger Augmentation Devices",
-      "year": "2023",
-      "category": "software",
-      "hardwareDevices": [
-        "SmartRing",
-        "WearableSensor",
-        "Wearables"
-      ],
-      "sensingTechnology": [
-        "Accelerometer",
-        "IMU",
-        "MotionSensor"
-      ],
-      "recognitionClassification": [
-        "DynamicGestureRecognition",
+        "ContinuousGesture",
         "FingerTracking",
         "GestureRecognition",
-        "StaticGestureRecognition"
-      ],
-      "interactionModalities": [
-        "BodyContactGesture",
-        "ContactBased",
-        "DeviceContactGesture",
-        "InAirGesture",
-        "NonContactBased"
-      ],
-      "gestureTypes": [
-        "DirectionalGesture",
-        "Pinch",
-        "SingleHand",
-        "Swipe",
-        "Tap",
-        "Thumb-Index"
-      ],
-      "applicationScenarios": [
-        "MediaControl",
-        "SmartHome",
-        "TextInput"
-      ],
-      "feedbackOutput": [
-        "VisualFeedback"
-      ],
-      "userExperienceDesign": [
-        "DiscreetInput",
-        "EyesFree",
-        "HandsFree",
-        "OneHandUse",
-        "PortableDesign",
-        "SocialAcceptability",
-        "UserAdaptation"
-      ],
-      "image": "Papers/SOFTWARE/Software预览图/2023-iFAD Gestures Understanding Users’ Gesture Input Performance with Index-Finger Augmentation Devices.png",
-      "doi": "https://doi.org/10.1145/3544548.3580928",
-      "authors": "Vatavu Radu-Daniel",
-      "journal": "CHI '23: CHI Conference on Human Factors in Computing Systems"
-    },
-    {
-      "id": 105,
-      "title": "Persistent assistant seamless everyday AI interactions via intent grounding and multimodal feedback",
-      "year": "2025",
-      "category": "software",
-      "hardwareDevices": [
-        "ARGlasses",
-        "HapticDevice",
-        "SmartGlasses",
-        "Wearables"
-      ],
-      "sensingTechnology": [
-        "ComputerVision",
-        "OpticalTracking"
-      ],
-      "recognitionClassification": [
-        "GestureRecognition",
-        "HandTracking"
-      ],
-      "interactionModalities": [
-        "GazeBased",
-        "InAirGesture",
-        "MultiModalInteraction",
-        "NonContactBased",
-        "VoiceGestureCombined"
-      ],
-      "gestureTypes": [
-        "Pinch",
-        "SingleHand"
-      ],
-      "applicationScenarios": [
-        "AR",
-        "Navigation",
-        "SmartHome"
-      ],
-      "feedbackOutput": [
-        "AudioFeedback",
-        "HapticFeedback",
-        "MultimodalFeedback",
-        "RealTimeFeedback"
-      ],
-      "userExperienceDesign": [
-        "DiscreetInput",
-        "EyesFree",
-        "OneHandUse",
-        "SocialAcceptability",
-        "UserAdaptation"
-      ],
-      "image": "Papers/SOFTWARE/Software预览图/2025 - Persistent assistant seamless everyday AI interactions via intent grounding and multimodal feedback.png",
-      "doi": "https://doi.org/10.1145/3706598.3714317",
-      "authors": "Cho Hyunsung, Fashimpaur Jacqui, Sendhilnathan Naveen, Browder Jonathan, Lindlbauer David, Jonker Tanya R., Todi Kashyap",
-      "journal": "CHI 2025: CHI Conference on Human Factors in Computing Systems"
-    },
-    {
-      "id": 106,
-      "title": "Grasp Interaction with Tablets",
-      "year": "2011",
-      "category": "software",
-      "hardwareDevices": [
-        "Tablet",
-        "TouchScreen"
-      ],
-      "sensingTechnology": [
-        "Accelerometer",
-        "CapacitiveSensor",
-        "Gyroscope",
-        "IMU",
         "Magnetometer"
       ],
-      "recognitionClassification": [
-        "DynamicGestureRecognition",
-        "FingerTracking",
-        "GestureRecognition",
-        "HandTracking",
-        "StaticGestureRecognition"
-      ],
+      "recognitionClassification": [],
       "interactionModalities": [
-        "BackofDevices",
         "ContactBased",
-        "DirectTouch",
-        "MultiModalInteraction"
+        "DeviceContact",
+        "Haptic",
+        "Visual"
       ],
       "gestureTypes": [
-        "DualHand",
-        "Grasp",
         "Pinch",
         "SingleHand",
         "Swipe",
-        "Tap"
+        "Tap",
+        "ThumbIndex"
       ],
       "applicationScenarios": [
+        "AR",
         "MediaControl",
-        "ObjectManipulation"
+        "SmartHome",
+        "TextInput"
       ],
-      "feedbackOutput": [
-        "HapticFeedback",
-        "VisualFeedback"
-      ],
+      "feedbackOutput": [],
       "userExperienceDesign": [
-        "FatFingerProblem",
-        "MidasTouchProblem",
-        "OcclusionAvoidance",
+        "DiscreetInput",
+        "EyesFree",
+        "HighAccuracy",
         "OneHandUse",
-        "SmallScreen",
-        "TouchOptimized"
+        "SocialAcceptability"
       ],
-      "image": "Papers/SOFTWARE/Software预览图/2011-Grasp Interaction with Tablets.png",
-      "authors": "Wolf Katrin",
-      "journal": "Springer International Publishing"
+      "tags": [],
+      "image": "Papers/HARDWARE/Hardware预览图/2013-FingerPad private and subtle interaction using fingertips.png",
+      "pdfFile": "2013-FingerPad private and subtle interaction using fingertips.pdf",
+      "pdfPath": "Papers/HARDWARE/2013-FingerPad private and subtle interaction using fingertips.pdf",
+      "doi": "https://doi.org/10.1145/2501988.2502016",
+      "authors": "Liwei Chan; Rong-Hao Liang; Ming-Chang Tsai; Kai-Yin Cheng; Chao-Huai Su; Mike Y. Chen; Wen-Huang Cheng; Bing-Yu Chen",
+      "journal": "Proceedings of the 26th annual ACM symposium on User interface software and technology",
+      "url": "",
+      "source": "metadata_completed_workbook"
     },
     {
-      "id": 107,
+      "id": 14,
       "title": "Opportunistic synergy a classifier fusion engine for micro-gesture recognition",
       "year": "2013",
       "category": "software",
       "hardwareDevices": [
         "DrivingSimulator",
-        "WearableSensor",
-        "Wearables"
-      ],
-      "sensingTechnology": [
-        "Bio-Sensor",
-        "EMG",
-        "PressureSensor"
-      ],
-      "recognitionClassification": [
-        "ContinuousRecognition",
-        "GestureRecognition",
-        "StaticGestureRecognition"
-      ],
-      "interactionModalities": [
-        "ContactBased",
-        "DeviceContactGesture",
-        "MultiModalInteraction",
-        "TangibleInteraction"
-      ],
-      "gestureTypes": [
-        "Grasp",
-        "Hold",
-        "SingleHand",
-        "Tap"
-      ],
-      "applicationScenarios": [
-        "InVehicleInteraction"
-      ],
-      "feedbackOutput": [
-        "RealTimeFeedback"
-      ],
-      "userExperienceDesign": [
-        "DiscreetInput",
-        "EyesFree",
-        "HandsFree",
-        "HighAccuracy",
-        "LowLatency",
-        "OneHandUse",
-        "SocialAcceptability",
-        "UserAdaptation"
-      ],
-      "image": "Papers/SOFTWARE/Software预览图/2013 - Opportunistic synergy a classifier fusion engine for micro-gesture recognition.png",
-      "doi": "https://doi.org/10.1145/2516540.2516563",
-      "authors": "Angelini Leonardo, Carrino Francesco, Carrino Stefano, Caon Maurizio, Lalanne Denis, Khaled Omar Abou, Mugellini Elena",
-      "journal": "AutomotiveUI '13: Automotive User Interfaces and Interactive Vehicular Applications"
-    },
-    {
-      "id": 109,
-      "title": "The performance and preference of different fingers and chords for pointing, dragging, and object transformation",
-      "year": "2016",
-      "category": "GestureDesign",
-      "hardwareDevices": [
-        "Tablet",
-        "TouchScreen"
-      ],
-      "sensingTechnology": [
-        "CapacitiveSensor"
-      ],
-      "recognitionClassification": [
-        "DynamicGestureRecognition",
-        "FingerTracking",
-        "GestureRecognition",
-        "HandTracking",
-        "StaticGestureRecognition"
-      ],
-      "interactionModalities": [
-        "ContactBased",
-        "DirectTouch",
-        "MultiModalInteraction"
-      ],
-      "gestureTypes": [
-        "DirectionalGesture",
-        "DualHand",
-        "Hold",
-        "MultiTouch",
-        "Pinch",
-        "SingleHand",
-        "Tap",
-        "Thumb-Index"
-      ],
-      "applicationScenarios": [
-        "ObjectManipulation"
-      ],
-      "feedbackOutput": [
-        "RealTimeFeedback",
-        "VisualFeedback"
-      ],
-      "userExperienceDesign": [
-        "HighAccuracy",
-        "LowLatency",
-        "TouchOptimized",
-        "UserAdaptation"
-      ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2016 - The performance and preference of different fingers and chords for pointing, dragging, and object transformation.png",
-      "doi": "https://doi.org/10.1145/2858036.2858194",
-      "authors": "Goguey Alix, Nancel Mathieu, Casiez Géry, Vogel Daniel",
-      "journal": "CHI'16: CHI Conference on Human Factors in Computing Systems"
-    },
-    {
-      "id": 110,
-      "title": "BikeGesture user elicitation and performance of micro hand gesture as input for cycling",
-      "year": "2017",
-      "category": "hardware",
-      "hardwareDevices": [
-        "DataGloves",
-        "WearableSensor",
-        "Wearables"
-      ],
-      "sensingTechnology": [
-        "Accelerometer",
-        "Bio-Sensor",
-        "IMU",
-        "PressureSensor"
-      ],
-      "recognitionClassification": [
-        "FingerTracking",
-        "GestureRecognition",
-        "StaticGestureRecognition"
-      ],
-      "interactionModalities": [
-        "ContactBased",
-        "MultiModalInteraction"
-      ],
-      "gestureTypes": [
-        "Flex",
-        "Grasp",
-        "Pinch",
-        "SingleHand",
-        "Tap"
-      ],
-      "applicationScenarios": [
-        "AthleticActivity",
-        "OtherScenarios"
-      ],
-      "feedbackOutput": [
-        "RealTimeFeedback"
-      ],
-      "userExperienceDesign": [
-        "EyesFree",
-        "HandsFree",
-        "HighAccuracy",
-        "LowLatency",
-        "SocialAcceptability"
-      ],
-      "image": "Papers/HARDWARE/Hardware预览图/2017 - BikeGesture user elicitation and performance of micro hand gesture as input for cycling.png",
-      "doi": "https://doi.org/10.1145/3027063.3053075",
-      "authors": "Tan Yanke, Yoon Sang Ho, Ramani Karthik",
-      "journal": "CHI '17: CHI Conference on Human Factors in Computing Systems"
-    },
-    {
-      "id": 112,
-      "title": "M[eye]cro eye-gaze+microgestures for multitasking and interruptions",
-      "year": "2021",
-      "category": "GestureDesign",
-      "hardwareDevices": [
-        "OtherDevices",
+        "Wearables",
         "WearableSensor"
       ],
       "sensingTechnology": [
-        "ComputerVision",
-        "OpticalTracking",
-        "PressureSensor"
-      ],
-      "recognitionClassification": [
+        "Bio",
+        "ContinuousGesture",
+        "EMG",
         "GestureRecognition",
-        "StaticGestureRecognition"
+        "Pressure",
+        "StaticGesture"
       ],
+      "recognitionClassification": [],
       "interactionModalities": [
         "ContactBased",
-        "DeviceContactGesture",
-        "GazeBased",
-        "MultiModalInteraction"
+        "DeviceContact",
+        "MultiModal",
+        "RealTime",
+        "Tangible"
       ],
       "gestureTypes": [
-        "Pinch",
+        "Grasp/Grip",
+        "Hold",
         "SingleHand",
-        "Tap",
-        "Thumb-Index"
+        "Tap"
       ],
       "applicationScenarios": [
-        "InVehicleInteraction",
-        "ObjectManipulation",
-        "OtherScenarios"
+        "InVehicle"
       ],
-      "feedbackOutput": [
-        "MultimodalFeedback",
-        "VisualFeedback"
-      ],
+      "feedbackOutput": [],
       "userExperienceDesign": [
         "DiscreetInput",
         "EyesFree",
+        "HandsFree",
         "HighAccuracy",
         "LowLatency",
-        "MidasTouchProblem",
-        "OneHandUse"
+        "OneHandUse",
+        "SocialAcceptability",
+        "UserAdaptation"
       ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2021 - M[eye]cro eye-gaze+microgestures for multitasking and interruptions.png",
-      "doi": "https://doi.org/10.1145/3461732",
-      "authors": "Wambecke Jérémy, Goguey Alix, Nigay Laurence, Dargent Lauren, Hauret Daniel, Lafon Stéphanie, De Visme Jean-Samuel Louis",
-      "journal": "Proc ACM Hum Comput Interact"
+      "tags": [],
+      "image": "Papers/SOFTWARE/Software预览图/2013-Opportunistic synergy a classifier fusion engine for micro-gesture recognition.png",
+      "pdfFile": "2013-Opportunistic synergy a classifier fusion engine for micro-gesture recognition.pdf",
+      "pdfPath": "Papers/SOFTWARE/2013-Opportunistic synergy a classifier fusion engine for micro-gesture recognition.pdf",
+      "doi": "https://doi.org/10.1145/2516540.2516563",
+      "authors": "Leonardo Angelini; Francesco Carrino; Stefano Carrino; Maurizio Caon; Denis Lalanne; Omar Abou Khaled; Elena Mugellini",
+      "journal": "Proceedings of the 5th International Conference on Automotive User Interfaces and Interactive Vehicular Applications",
+      "url": "",
+      "source": "metadata_completed_workbook"
     },
     {
-      "id": 115,
-      "title": "AnyButton unpowered, modeless and highly available mobile input using unmodified clothing buttons",
+      "id": 15,
+      "title": "A Usability User Study Concerning Free-Hand Microgesture and Wrist-Worn Sensors",
+      "year": "2014",
+      "category": "software",
+      "hardwareDevices": [
+        "Wearables",
+        "WearableSensor",
+        "Wristband"
+      ],
+      "sensingTechnology": [
+        "ComputerVision",
+        "Depth",
+        "FingerTracking",
+        "GestureRecognition",
+        "OtherTechnology",
+        "StaticGesture"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "NonContact",
+        "RealTime",
+        "Visual"
+      ],
+      "gestureTypes": [
+        "DualHand",
+        "Flex",
+        "Pinch",
+        "SingleHand"
+      ],
+      "applicationScenarios": [
+        "Industry",
+        "MediaControl",
+        "Navigation",
+        "TextInput"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "DiscreetInput",
+        "HighAccuracy",
+        "OneHandUse",
+        "SocialAcceptability",
+        "UserAdaptation"
+      ],
+      "tags": [],
+      "image": "Papers/SOFTWARE/Software预览图/2014-A Usability User Study Concerning Free-Hand Microgesture and Wrist-Worn Sensors.png",
+      "pdfFile": "2014-A Usability User Study Concerning Free-Hand Microgesture and Wrist-Worn Sensors.pdf",
+      "pdfPath": "Papers/SOFTWARE/2014-A Usability User Study Concerning Free-Hand Microgesture and Wrist-Worn Sensors.pdf",
+      "doi": "https://doi.org/10.1109/BSN.2014.32",
+      "authors": "David Way; Joseph Paradiso",
+      "journal": "2014 11th International Conference on Wearable and Implantable Body Sensor Networks",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 16,
+      "title": "BackPatone-handed off-screen patting gestures",
       "year": "2014",
       "category": "hardware",
       "hardwareDevices": [
-        "WearableSensor",
-        "Wearables"
+        "Smartphone"
+      ],
+      "sensingTechnology": [
+        "DynamicGesture",
+        "GestureRecognition",
+        "Gyroscope",
+        "Motion"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "BackOfDevice",
+        "ContactBased",
+        "DeviceContact",
+        "RealTime"
+      ],
+      "gestureTypes": [
+        "SingleHand",
+        "Tap"
+      ],
+      "applicationScenarios": [
+        "OtherScenarios"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "HighAccuracy",
+        "OneHandUse",
+        "SocialAcceptability",
+        "TouchOptimized"
+      ],
+      "tags": [],
+      "image": "Papers/HARDWARE/Hardware预览图/2014-BackPatone-handed off-screen patting gestures.png",
+      "pdfFile": "2014-BackPatone-handed off-screen patting gestures.pdf",
+      "pdfPath": "Papers/HARDWARE/2014-BackPatone-handed off-screen patting gestures.pdf",
+      "doi": "https://doi.org/10.1145/2628363.2628396",
+      "authors": "Karsten Seipp; Kate Devlin",
+      "journal": "Proceedings of the 16th international conference on Human-computer interaction with mobile devices &amp; services",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 17,
+      "title": "DigiTap an eyes-free VRAR symbolic input device",
+      "year": "2014",
+      "category": "hardware",
+      "hardwareDevices": [
+        "ARGlasses",
+        "VRHeadset",
+        "Wearables",
+        "WearableSensor"
       ],
       "sensingTechnology": [
         "Accelerometer",
-        "Gyroscope",
-        "IMU",
-        "MotionSensor"
-      ],
-      "recognitionClassification": [
-        "3DPoseEstimation",
+        "ComputerVision",
+        "FingerTracking",
         "GestureRecognition",
-        "HandTracking",
-        "MotionAnalysis"
+        "Optical",
+        "StaticGesture"
       ],
+      "recognitionClassification": [],
       "interactionModalities": [
+        "BodyContact",
         "ContactBased",
-        "DeviceContactGesture",
-        "TangibleInteraction"
+        "Haptic",
+        "Visual"
       ],
       "gestureTypes": [
-        "DirectionalGesture",
-        "Pinch",
         "SingleHand",
         "Tap",
-        "Thumb-Index"
+        "ThumbIndex"
       ],
       "applicationScenarios": [
+        "AR",
         "MediaControl",
-        "OtherScenarios"
+        "TextInput",
+        "VR"
       ],
-      "feedbackOutput": [
-        "HapticFeedback"
-      ],
+      "feedbackOutput": [],
       "userExperienceDesign": [
         "DiscreetInput",
-        "HandsFree",
+        "EyesFree",
+        "OneHandUse",
         "PortableDesign",
         "SocialAcceptability"
       ],
-      "image": "Papers/HARDWARE/Hardware预览图/2014 - AnyButton unpowered, modeless and highly available mobile input using unmodified clothing buttons.png",
-      "doi": "https://doi.org/10.1145/2582051.2582075",
-      "authors": "Chan Liwei, Weng Chien-Ting, Liang Rong-Hao, Chen Bing-Yu",
-      "journal": "AH '14: 5th Augmented Human International Conference"
+      "tags": [],
+      "image": "Papers/HARDWARE/Hardware预览图/2014-DigiTap an eyes-free VRAR symbolic input device.png",
+      "pdfFile": "2014-DigiTap an eyes-free VRAR symbolic input device.pdf",
+      "pdfPath": "Papers/HARDWARE/2014-DigiTap an eyes-free VRAR symbolic input device.pdf",
+      "doi": "https://doi.org/10.1145/2671015.2671029",
+      "authors": "Manuel Prätorius; Dimitar Valkov; Ulrich Burgbacher; Klaus Hinrichs",
+      "journal": "Proceedings of the 20th ACM Symposium on Virtual Reality Software and Technology",
+      "url": "",
+      "source": "metadata_completed_workbook"
     },
     {
-      "id": 116,
-      "title": "Towards the establishment of a framework for intuitive multi-touch interaction design",
-      "year": "2012",
+      "id": 18,
+      "title": "Ergonomic characteristics of gestures for front- and back-of-tablets interaction with grasping hands",
+      "year": "2014",
       "category": "GestureDesign",
       "hardwareDevices": [
-        "SmartPhone",
         "Tablet",
         "TouchScreen"
       ],
       "sensingTechnology": [
-        "CapacitiveSensor"
-      ],
-      "recognitionClassification": [
         "GestureRecognition",
-        "HandTracking",
-        "MotionAnalysis"
+        "MotionAnalysis",
+        "TrajectoryAnalysis"
       ],
+      "recognitionClassification": [],
       "interactionModalities": [
+        "BackOfDevice",
         "ContactBased",
-        "DirectTouch",
-        "MultiModalInteraction"
-      ],
-      "gestureTypes": [
-        "DirectionalGesture",
-        "DualHand",
-        "MultiTouch",
-        "Pinch",
-        "SingleHand",
-        "Swipe",
-        "Tap"
-      ],
-      "applicationScenarios": [
-        "Navigation",
-        "ObjectManipulation",
-        "OtherScenarios"
-      ],
-      "feedbackOutput": [
-        "AudioFeedback",
-        "HapticFeedback",
-        "MultimodalFeedback",
-        "VisualFeedback"
-      ],
-      "userExperienceDesign": [
-        "FatFingerProblem",
-        "HighAccuracy",
-        "OcclusionAvoidance",
-        "TouchOptimized",
-        "UserAdaptation"
-      ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2012 - Towards the establishment of a framework for intuitive multi-touch interaction design.png",
-      "doi": "https://doi.org/10.1145/2254556.2254571",
-      "authors": "Ingram Amy, Wang Xiaoyu, Ribarsky William",
-      "journal": "AVI'12: International Working Conference on Advanced Visual Interfaces"
-    },
-    {
-      "id": 117,
-      "title": "Grasping microgestures eliciting single-hand microgestures for handheld objects",
-      "year": "2019",
-      "category": "GestureDesign",
-      "hardwareDevices": [
-        "OtherDevices",
-        "SmartPhone"
-      ],
-      "sensingTechnology": [
-        "ComputerVision",
-        "Magnetometer",
-        "OtherTechnology"
-      ],
-      "recognitionClassification": [
-        "DynamicGestureRecognition",
-        "FingerTracking",
-        "GestureRecognition",
-        "StaticGestureRecognition"
-      ],
-      "interactionModalities": [
-        "BodyContactGesture",
-        "ContactBased",
-        "DeviceContactGesture",
+        "DeviceContact",
         "DirectTouch"
       ],
       "gestureTypes": [
-        "DirectionalGesture",
-        "Grasp",
-        "Pinch",
         "SingleHand",
         "Swipe",
         "Tap"
       ],
       "applicationScenarios": [
-        "IoTControl",
-        "ObjectManipulation",
-        "OtherScenarios",
-        "SmartHome"
-      ],
-      "feedbackOutput": [
-        "RealTimeFeedback"
-      ],
-      "userExperienceDesign": [
-        "DiscreetInput",
-        "ElicitationStudy",
-        "EncumberedInteraction",
-        "OneHandUse"
-      ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2019 - Grasping microgestures eliciting single-hand microgestures for handheld objects.png",
-      "doi": "https://doi.org/10.1145/3290605.3300632",
-      "authors": "Sharma Adwait, Roo Joan Sol, Steimle Jürgen",
-      "journal": "CHI '19: CHI Conference on Human Factors in Computing Systems"
-    },
-    {
-      "id": 118,
-      "title": "Rhythmic micro-gestures discreet interaction on-the-go",
-      "year": "2017",
-      "category": "GestureDesign",
-      "hardwareDevices": [
-        "OtherDevices"
-      ],
-      "sensingTechnology": [
-        "MotionSensor",
-        "OpticalTracking"
-      ],
-      "recognitionClassification": [
-        "DynamicGestureRecognition",
-        "GestureRecognition",
-        "HandTracking"
-      ],
-      "interactionModalities": [
-        "InAirGesture",
-        "MultiModalInteraction",
-        "NonContactBased"
-      ],
-      "gestureTypes": [
-        "DirectionalGesture",
-        "Flex",
-        "SingleHand",
-        "Tap"
-      ],
-      "applicationScenarios": [
-        "MediaControl",
-        "Navigation",
         "OtherScenarios"
       ],
-      "feedbackOutput": [
-        "AudioFeedback",
-        "MultimodalFeedback",
-        "RealTimeFeedback",
-        "VisualFeedback"
-      ],
+      "feedbackOutput": [],
       "userExperienceDesign": [
-        "DiscreetInput",
-        "EyesFree",
-        "MidasTouchProblem",
+        "Encumbered",
         "OneHandUse",
-        "PortableDesign",
-        "SocialAcceptability"
+        "TouchOptimized"
       ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2017 - Rhythmic micro-gestures discreet interaction on-the-go.png",
-      "doi": "https://doi.org/10.1145/3136755.3136815",
-      "authors": "Freeman Euan, Griffiths Gareth, Brewster Stephen A.",
-      "journal": "ICMI '17: International Conference on Multimodal Interaction"
+      "tags": [],
+      "image": "Papers/GestureDesign/GestureDesign预览图/2014-Ergonomic characteristics of gestures for front- and back-of-tablets interaction with grasping hands.png",
+      "pdfFile": "2014-Ergonomic characteristics of gestures for front- and back-of-tablets interaction with grasping hands.pdf",
+      "pdfPath": "Papers/GestureDesign/2014-Ergonomic characteristics of gestures for front- and back-of-tablets interaction with grasping hands.pdf",
+      "doi": "https://doi.org/10.1145/2628363.2634214",
+      "authors": "Katrin Wolf; Robert Schleicher; Michael Rohs",
+      "journal": "Proceedings of the 16th international conference on Human-computer interaction with mobile devices &amp; services",
+      "url": "",
+      "source": "metadata_completed_workbook"
     },
     {
-      "id": 119,
-      "title": "Studying the visual representation of microgestures",
-      "year": "2023",
-      "category": "GestureDesign",
-      "hardwareDevices": [
-        "ARGlasses",
-        "OtherDevices"
-      ],
-      "sensingTechnology": [
-        "Magnetometer",
-        "OtherTechnology"
-      ],
-      "recognitionClassification": [],
-      "interactionModalities": [
-        "BodyContactGesture",
-        "ContactBased"
-      ],
-      "gestureTypes": [
-        "Flex",
-        "Hold",
-        "SingleHand",
-        "Swipe",
-        "Tap",
-        "Thumb-Index"
-      ],
-      "applicationScenarios": [
-        "AR",
-        "Education"
-      ],
-      "feedbackOutput": [
-        "VisualFeedback"
-      ],
-      "userExperienceDesign": [
-        "DiscreetInput",
-        "ElicitationStudy",
-        "OneHandUse"
-      ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2023 - Studying the visual representation of microgestures.png",
-      "doi": "https://doi.org/10.1145/3604272",
-      "authors": "Lambert Vincent, Chaffangeon Caillet Adrien, Goguey Alix, Malacria Sylvain, Nigay Laurence",
-      "journal": "Proc ACM Hum Comput Interact"
-    },
-    {
-      "id": 120,
-      "title": "µGlyph a microgesture notation",
-      "year": "2023",
-      "category": "GestureDesign",
-      "hardwareDevices": [
-        "OtherDevices"
-      ],
-      "sensingTechnology": [
-        "OtherTechnology"
-      ],
-      "recognitionClassification": [],
-      "interactionModalities": [
-        "BodyContactGesture",
-        "ContactBased",
-        "NonContactBased"
-      ],
-      "gestureTypes": [
-        "Flex",
-        "Hold",
-        "SingleHand",
-        "Swipe",
-        "Tap",
-        "Thumb-Index"
-      ],
-      "applicationScenarios": [
-        "Education"
-      ],
-      "feedbackOutput": [
-        "VisualFeedback"
-      ],
-      "userExperienceDesign": [
-        "DiscreetInput",
-        "OneHandUse"
-      ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2023 - µGlyph a microgesture notation.png",
-      "doi": "https://doi.org/10.1145/3544548.3580693",
-      "authors": "Chaffangeon Caillet Adrien, Goguey Alix, Nigay Laurence",
-      "journal": "CHI '23: CHI Conference on Human Factors in Computing Systems"
-    },
-    {
-      "id": 121,
-      "title": "User elicitation on single-hand microgestures",
-      "year": "2016",
-      "category": "GestureDesign",
-      "hardwareDevices": [
-        "OtherDevices",
-        "Wearables"
-      ],
-      "sensingTechnology": [
-        "ComputerVision"
-      ],
-      "recognitionClassification": [
-        "FingerTracking",
-        "GestureRecognition",
-        "HandTracking"
-      ],
-      "interactionModalities": [
-        "BodyContactGesture",
-        "ContactBased"
-      ],
-      "gestureTypes": [
-        "Pinch",
-        "SingleHand",
-        "Swipe",
-        "Tap"
-      ],
-      "applicationScenarios": [
-        "MediaControl",
-        "ObjectManipulation",
-        "TextInput"
-      ],
-      "feedbackOutput": [
-        "VisualFeedback"
-      ],
-      "userExperienceDesign": [
-        "ElicitationStudy",
-        "EyesFree",
-        "OneHandUse",
-        "SocialAcceptability"
-      ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2016 - User elicitation on single-hand microgestures.png",
-      "doi": "https://doi.org/10.1145/2858036.2858589",
-      "authors": "Chan Edwin, Seyed Teddy, Stuerzlinger Wolfgang, Yang Xing-Dong, Maurer Frank",
-      "journal": "CHI'16: CHI Conference on Human Factors in Computing Systems"
-    },
-    {
-      "id": 122,
-      "title": "Would you do that understanding social acceptance of gestural interfaces",
-      "year": "2010",
-      "category": "GestureDesign",
-      "hardwareDevices": [
-        "OtherDevices",
-        "SmartPhone"
-      ],
-      "sensingTechnology": [
-        "Accelerometer",
-        "IMU",
-        "MotionSensor"
-      ],
-      "recognitionClassification": [
-        "GestureRecognition",
-        "MotionAnalysis"
-      ],
-      "interactionModalities": [
-        "ContactBased",
-        "DeviceContactGesture",
-        "InAirGesture",
-        "NonContactBased"
-      ],
-      "gestureTypes": [
-        "DirectionalGesture",
-        "SingleHand",
-        "Tap"
-      ],
-      "applicationScenarios": [
-        "MediaControl",
-        "OtherScenarios",
-        "SmartHome"
-      ],
-      "feedbackOutput": [
-        "AudioFeedback",
-        "VisualFeedback"
-      ],
-      "userExperienceDesign": [
-        "DiscreetInput",
-        "SocialAcceptability",
-        "UserAdaptation"
-      ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2010 - Would you do that understanding social acceptance of gestural interfaces.png",
-      "doi": "https://doi.org/10.1145/1851600.1851647",
-      "authors": "Montero Calkin S., Alexander Jason, Marshall Mark T., Subramanian Sriram",
-      "journal": "MobileHCI '10: 12th International Conference on Human Computer Interaction with Mobile Devices and Services"
-    },
-    {
-      "id": 123,
-      "title": "Hands as a controller user preferences for hand specific on-skin gestures",
-      "year": "2017",
-      "category": "GestureDesign",
-      "hardwareDevices": [
-        "OtherDevices"
-      ],
-      "sensingTechnology": [
-        "CapacitiveSensor",
-        "ComputerVision",
-        "IMU",
-        "RadarSensing",
-        "UltrasonicSensor"
-      ],
-      "recognitionClassification": [
-        "DynamicGestureRecognition",
-        "FingerTracking",
-        "GestureRecognition",
-        "HandTracking",
-        "StaticGestureRecognition"
-      ],
-      "interactionModalities": [
-        "BodyContactGesture",
-        "ContactBased"
-      ],
-      "gestureTypes": [
-        "DualHand",
-        "Pinch",
-        "Swipe",
-        "Tap"
-      ],
-      "applicationScenarios": [
-        "InVehicleInteraction",
-        "IoTControl",
-        "MediaControl",
-        "SmartHome"
-      ],
-      "feedbackOutput": [
-        "VisualFeedback"
-      ],
-      "userExperienceDesign": [
-        "ElicitationStudy",
-        "SocialAcceptability"
-      ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2017 - Hands as a controller user preferences for hand specific on-skin gestures.png",
-      "doi": "https://doi.org/10.1145/3064663.3064766",
-      "authors": "Bostan Idil, Buruk Oğuz Turan, Canat Mert, Tezcan Mustafa Ozan, Yurdakul Celalettin, Göksun Tilbe, Özcan Oğuzhan",
-      "journal": "DIS '17: Designing Interactive Systems Conference 2017"
-    },
-    {
-      "id": 124,
-      "title": "Designing More Private and Socially Acceptable Hand-to-Face Gestures for Heads-Up Computing",
-      "year": "2024",
+      "id": 19,
+      "title": "Exploring the use of hand-to-face input for interacting with head-worn displays",
+      "year": "2014",
       "category": "GestureDesign",
       "hardwareDevices": [
         "ARGlasses",
         "SmartGlasses",
-        "WearableSensor"
-      ],
-      "sensingTechnology": [
-        "IMU",
-        "MotionSensor"
-      ],
-      "recognitionClassification": [
-        "DynamicGestureRecognition",
-        "FingerTracking",
-        "GestureRecognition",
-        "StaticGestureRecognition"
-      ],
-      "interactionModalities": [
-        "BodyContactGesture",
-        "ContactBased"
-      ],
-      "gestureTypes": [
-        "SingleHand",
-        "Swipe",
-        "Tap"
-      ],
-      "applicationScenarios": [
-        "OtherScenarios",
-        "VR"
-      ],
-      "feedbackOutput": [
-        "HapticFeedback",
-        "ProprioceptiveFeedback"
-      ],
-      "userExperienceDesign": [
-        "DiscreetInput",
-        "SocialAcceptability"
-      ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2024-Designing More Private and Socially Acceptable Hand-to-Face Gestures for Heads-Up Computing.png",
-      "doi": "https://doi.org/10.1145/3675094.3678994",
-      "authors": "Gao Xing, Sun Minghui, Zhao Kaixing",
-      "journal": "UbiComp '24: The 2024 ACM International Joint Conference on Pervasive and Ubiquitous Computing"
-    },
-    {
-      "id": 125,
-      "title": "Blind people and mobile touch-based text-entry acknowledging the need for different flavors",
-      "year": "2011",
-      "category": "software",
-      "hardwareDevices": [
-        "SmartPhone",
-        "TouchScreen"
-      ],
-      "sensingTechnology": [
-        "PressureSensor"
-      ],
-      "recognitionClassification": [
-        "GestureRecognition"
-      ],
-      "interactionModalities": [
-        "ContactBased",
-        "DirectTouch",
-        "MultiModalInteraction"
-      ],
-      "gestureTypes": [
-        "DirectionalGesture",
-        "MultiTouch",
-        "Swipe",
-        "Tap"
-      ],
-      "applicationScenarios": [
-        "AccessibilitySupport",
-        "TextInput"
-      ],
-      "feedbackOutput": [
-        "AudioFeedback",
-        "MultimodalFeedback"
-      ],
-      "userExperienceDesign": [
-        "FatFingerProblem",
-        "QWERTYLayout",
-        "TouchOptimized",
-        "UserAdaptation"
-      ],
-      "image": "Papers/SOFTWARE/Software预览图/2011 - Blind people and mobile touch-based text-entry acknowledging the need for different flavors.png",
-      "authors": "Oliveira João, Guerreiro Tiago, Nicolau Hugo, Jorge Joaquim, Gonçalves Daniel",
-      "journal": "The proceedings of the 13th international ACM SIGACCESS conference on Computers and accessibility"
-    },
-    {
-      "id": 126,
-      "title": "Interaction gestures for a wearable device defined by visually impaired children",
-      "year": "2016",
-      "category": "GestureDesign",
-      "hardwareDevices": [
-        "WearableSensor",
         "Wearables"
       ],
       "sensingTechnology": [
-        "CapacitiveSensor",
-        "IMU",
-        "MotionSensor"
-      ],
-      "recognitionClassification": [
-        "GestureRecognition",
-        "MotionAnalysis"
-      ],
-      "interactionModalities": [
-        "ContactBased",
-        "DeviceContactGesture",
-        "MultiModalInteraction"
-      ],
-      "gestureTypes": [
-        "Hold",
-        "Swipe",
-        "Tap"
-      ],
-      "applicationScenarios": [
-        "AccessibilitySupport",
-        "Healthcare",
-        "Training"
-      ],
-      "feedbackOutput": [
-        "AudioFeedback",
-        "MultimodalFeedback",
-        "RealTimeFeedback"
-      ],
-      "userExperienceDesign": [
-        "ElicitationStudy",
-        "EyesFree",
-        "OneHandUse",
-        "PortableDesign",
-        "UserAdaptation"
-      ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2016 - Interaction gestures for a wearable device defined by visually impaired children.png",
-      "doi": "https://doi.org/10.1145/2971485.2996752",
-      "authors": "Magnusson Charlotte, Caltenco Héctor, Finocchietti Sara, Gori Monica, Cocchi Elena, Porquis Lope Ben, Baud-Bovy Gabriel",
-      "journal": "NordiCHI '16: 9th Nordic Conference on Human-Computer Interaction"
-    },
-    {
-      "id": 127,
-      "title": "Investigating microinteractions for people with visual impairments and the potential role of on-body interaction",
-      "year": "2017",
-      "category": "GestureDesign",
-      "hardwareDevices": [
-        "SmartWatch",
-        "SmartPhone",
-        "WearableSensor",
-        "Wearables"
-      ],
-      "sensingTechnology": [
-        "ComputerVision",
-        "IMU",
-        "MotionSensor",
-        "OtherTechnology"
-      ],
-      "recognitionClassification": [
-        "GestureRecognition",
-        "MotionAnalysis"
-      ],
-      "interactionModalities": [
-        "BodyContactGesture",
-        "ContactBased",
-        "MultiModalInteraction"
-      ],
-      "gestureTypes": [
-        "SingleHand",
-        "Swipe",
-        "Tap"
-      ],
-      "applicationScenarios": [
-        "AccessibilitySupport",
-        "MediaControl",
-        "Navigation",
-        "OtherScenarios"
-      ],
-      "feedbackOutput": [
-        "AudioFeedback",
-        "RealTimeFeedback"
-      ],
-      "userExperienceDesign": [
-        "EyesFree",
-        "OneHandUse",
-        "PortableDesign",
-        "SocialAcceptability",
-        "UserAdaptation"
-      ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2017 - Investigating microinteractions for people with visual impairments and the potential role of on-body interaction.png",
-      "doi": "https://doi.org/10.1145/3132525.3132536",
-      "authors": "Oh Uran, Stearns Lee, Pradhan Alisha, Froehlich Jon E., Findlater Leah",
-      "journal": "ASSETS '17: The 19th International ACM SIGACCESS Conference on Computers and Accessibility"
-    },
-    {
-      "id": 128,
-      "title": "Static fingerspelling recognition based on boundary tracing algorithm and chain code",
-      "year": "2018",
-      "category": "software",
-      "hardwareDevices": [
-        "OtherDevices"
-      ],
-      "sensingTechnology": [
-        "ComputerVision"
-      ],
-      "recognitionClassification": [
-        "FingerTracking",
-        "GestureRecognition",
-        "HandTracking",
-        "StaticGestureRecognition"
-      ],
-      "interactionModalities": [
-        "NonContactBased"
-      ],
-      "gestureTypes": [
-        "SignLanguageRelated",
-        "SingleHand"
-      ],
-      "applicationScenarios": [
-        "AccessibilitySupport"
-      ],
-      "feedbackOutput": [
-        "VisualFeedback"
-      ],
-      "userExperienceDesign": [
-        "HighAccuracy",
-        "UserAdaptation"
-      ],
-      "image": "Papers/SOFTWARE/Software预览图/2018 - Static fingerspelling recognition based on boundary tracing algorithm and chain code.png",
-      "doi": "https://doi.org/10.1145/3206185.3206195",
-      "authors": "Dawod Ahmad Yahya, Nordin Md Jan, Abdullah Junaidi",
-      "journal": "ISMSI '18: 2018 2nd International Conference on Intelligent Systems, Metaheuristics & Swarm Intelligence"
-    },
-    {
-      "id": 129,
-      "title": "Keep the phone in your pocket enabling smartphone operation with an IMU ring for visually impaired people",
-      "year": "2020",
-      "category": "hardware",
-      "hardwareDevices": [
-        "SmartRing",
-        "SmartPhone",
-        "WearableSensor"
-      ],
-      "sensingTechnology": [
-        "Accelerometer",
-        "Gyroscope",
-        "IMU"
-      ],
-      "recognitionClassification": [
-        "FingerTracking",
-        "GestureRecognition",
-        "MotionAnalysis"
-      ],
-      "interactionModalities": [
-        "ContactBased",
-        "TangibleInteraction"
-      ],
-      "gestureTypes": [
-        "SingleHand",
-        "Swipe",
-        "Tap"
-      ],
-      "applicationScenarios": [
-        "AccessibilitySupport"
-      ],
-      "feedbackOutput": [
-        "AudioFeedback"
-      ],
-      "userExperienceDesign": [
-        "DiscreetInput",
-        "HighAccuracy",
-        "PortableDesign",
-        "SocialAcceptability"
-      ],
-      "image": "Papers/HARDWARE/Hardware预览图/2020 - Keep the phone in your pocket enabling smartphone operation with an IMU ring for visually impaired people.png",
-      "doi": "https://doi.org/10.1145/3397308",
-      "authors": "Liu Guanhong, Gu Yizheng, Yin Yiwen, Yu Chun, Wang Yuntao, Mi Haipeng, Shi Yuanchun",
-      "journal": "Proc ACM Interact Mob Wearable Ubiquitous Technol"
-    },
-    {
-      "id": 130,
-      "title": "Performance evaluation of pattern recognition networks using electromyography signal and time-domain features for the classification of hand gestures",
-      "year": "2020",
-      "category": "software",
-      "hardwareDevices": [
-        "WearableSensor"
-      ],
-      "sensingTechnology": [
-        "Bio-Sensor",
-        "EMG"
-      ],
-      "recognitionClassification": [
-        "DynamicGestureRecognition",
-        "FingerTracking",
-        "GestureRecognition",
-        "StaticGestureRecognition"
-      ],
-      "interactionModalities": [
-        "ContactBased"
-      ],
-      "gestureTypes": [
-        "Flex",
-        "Grasp",
-        "SingleHand",
-        "Thumb-Index"
-      ],
-      "applicationScenarios": [
-        "AccessibilitySupport",
-        "Healthcare"
-      ],
-      "feedbackOutput": [
-        "RealTimeFeedback"
-      ],
-      "userExperienceDesign": [
-        "CommunicationAid",
-        "HighAccuracy"
-      ],
-      "image": "Papers/SOFTWARE/Software预览图/2020 - Performance evaluation of pattern recognition networks using electromyography signal and time-domain features for the cl.png",
-      "doi": "https://doi.org/10.1177/0954411920912119",
-      "authors": "Vasanthi S. Mary, Jayasree T.",
-      "journal": "Proc Inst Mech Eng H: J Eng Med"
-    },
-    {
-      "id": 131,
-      "title": "Keep in touch combining touch interaction with thumb-to-finger µGestures for people with visual impairment",
-      "year": "2022",
-      "category": "software",
-      "hardwareDevices": [
-        "Tablet",
-        "TouchScreen",
-        "WearableSensor",
-        "Wearables"
-      ],
-      "sensingTechnology": [
-        "CapacitiveSensor",
-        "OtherTechnology"
-      ],
-      "recognitionClassification": [
-        "GestureRecognition",
-        "StaticGestureRecognition"
-      ],
-      "interactionModalities": [
-        "ContactBased",
-        "DirectTouch",
-        "MultiModalInteraction"
-      ],
-      "gestureTypes": [
-        "SingleHand",
-        "Swipe",
-        "Tap",
-        "Thumb-Index"
-      ],
-      "applicationScenarios": [
-        "AccessibilitySupport",
-        "Education",
-        "Navigation"
-      ],
-      "feedbackOutput": [
-        "AudioFeedback",
-        "MultimodalFeedback",
-        "RealTimeFeedback"
-      ],
-      "userExperienceDesign": [
-        "CommunicationAid",
-        "DiscreetInput",
-        "EyesFree",
-        "HighAccuracy",
-        "OneHandUse",
-        "TouchOptimized"
-      ],
-      "image": "Papers/SOFTWARE/Software预览图/2022 - Keep in touch combining touch interaction with thumb-to-finger µGestures for people with visual impairment.png",
-      "doi": "https://doi.org/10.1145/3536221.3556589",
-      "authors": "Faisandaz Gauthier Robert Jean, Goguey Alix, Jouffrais Christophe, Nigay Laurence",
-      "journal": "ICMI '22: International Conference on Multimodal Interaction"
-    },
-    {
-      "id": 132,
-      "title": "µGeT multimodal eyes-free text selection technique combining touch interaction and microgestures",
-      "year": "2023",
-      "category": "software",
-      "hardwareDevices": [
-        "Tablet",
-        "TouchScreen",
-        "Wearables"
-      ],
-      "sensingTechnology": [
-        "CapacitiveSensor",
-        "ComputerVision"
-      ],
-      "recognitionClassification": [
-        "GestureRecognition",
-        "StaticGestureRecognition"
-      ],
-      "interactionModalities": [
-        "BodyContactGesture",
-        "ContactBased",
-        "DirectTouch",
-        "MultiModalInteraction"
-      ],
-      "gestureTypes": [
-        "Hold",
-        "SingleHand",
-        "Swipe",
-        "Tap",
-        "Thumb-Index"
-      ],
-      "applicationScenarios": [
-        "AccessibilitySupport",
-        "TextInput"
-      ],
-      "feedbackOutput": [
-        "AudioFeedback",
-        "RealTimeFeedback"
-      ],
-      "userExperienceDesign": [
-        "DiscreetInput",
-        "EyesFree",
-        "OneHandUse",
-        "TouchOptimized"
-      ],
-      "image": "Papers/SOFTWARE/Software预览图/2023 - µGeT multimodal eyes-free text selection technique combining touch interaction and microgestures.png",
-      "doi": "https://doi.org/10.1145/3577190.3614131",
-      "authors": "Faisandaz Gauthier Robert Jean, Goguey Alix, Jouffrais Christophe, Nigay Laurence",
-      "journal": "ICMI '23: International Conference on Multimodal Interaction"
-    },
-    {
-      "id": 133,
-      "title": "Designing upper-body gesture interaction with and for people with spinal muscular atrophy in VR",
-      "year": "2024",
-      "category": "GestureDesign",
-      "hardwareDevices": [
-        "VRHeadset",
-        "Wearables"
-      ],
-      "sensingTechnology": [
-        "CapacitiveSensor",
-        "ComputerVision"
-      ],
-      "recognitionClassification": [
-        "GestureRecognition",
-        "StaticGestureRecognition"
-      ],
-      "interactionModalities": [
-        "BodyContactGesture",
-        "GazeBased",
-        "InAirGesture",
-        "MultiModalInteraction"
-      ],
-      "gestureTypes": [
-        "DirectionalGesture",
-        "Pinch",
-        "SingleHand",
-        "Thumb-Index"
-      ],
-      "applicationScenarios": [
-        "AccessibilitySupport",
-        "VR"
-      ],
-      "feedbackOutput": [
-        "AudioFeedback",
-        "RealTimeFeedback"
-      ],
-      "userExperienceDesign": [
-        "EyesFree",
-        "HandsFree",
-        "OneHandUse",
-        "UserAdaptation"
-      ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2024 - Designing upper-body gesture interaction with and for people with spinal muscular atrophy in VR.png",
-      "doi": "https://doi.org/10.1145/3613904.364288",
-      "authors": "Tian Jingze, Wang Yingna, Yu Keye, Xu Liyi, Xie Junan, Li Franklin Mingzhe, Niu Yafeng, Fan Mingming",
-      "journal": "Proceedings of the 2024 CHI Conference on Human Factors in Computing Systems"
-    },
-    {
-      "id": 134,
-      "title": "Finger gesture tracking for interactive applications a pilot study with sign languages",
-      "year": "2020",
-      "category": "GestureDesign",
-      "hardwareDevices": [
-        "SmartRing",
-        "SmartWatch",
-        "WearableSensor"
-      ],
-      "sensingTechnology": [
-        "IMU",
-        "MotionSensor"
-      ],
-      "recognitionClassification": [
-        "ContinuousRecognition",
-        "DynamicGestureRecognition",
-        "FingerTracking",
         "GestureRecognition",
         "HandTracking"
       ],
+      "recognitionClassification": [],
       "interactionModalities": [
-        "InAirGesture",
-        "NonContactBased"
+        "BodyContact",
+        "ContactBased",
+        "HandToFace"
       ],
       "gestureTypes": [
-        "DirectionalGesture",
-        "DualHand",
-        "SignLanguageRelated",
-        "SingleHand"
+        "SingleHand",
+        "Swipe",
+        "Tap"
       ],
       "applicationScenarios": [
-        "AccessibilitySupport",
-        "Education"
+        "AR",
+        "OtherScenarios"
       ],
-      "feedbackOutput": [
-        "AudioFeedback",
-        "RealTimeFeedback",
-        "VisualFeedback"
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "EyesFree",
+        "HandsFree",
+        "PortableDesign",
+        "SocialAcceptability"
       ],
+      "tags": [],
+      "image": "Papers/GestureDesign/GestureDesign预览图/2014-Exploring the use of hand-to-face input for interacting with head-worn displays.png",
+      "pdfFile": "2014-Exploring the use of hand-to-face input for interacting with head-worn displays.pdf",
+      "pdfPath": "Papers/GestureDesign/2014-Exploring the use of hand-to-face input for interacting with head-worn displays.pdf",
+      "doi": "https://doi.org/10.1145/2556288.2556984",
+      "authors": "Marcos Serrano; Barrett M. Ens; Pourang P. Irani",
+      "journal": "Proceedings of the SIGCHI Conference on Human Factors in Computing Systems",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 20,
+      "title": "Multi-finger chords for hand-held tabletsrecognizable and memorable",
+      "year": "2014",
+      "category": "GestureDesign",
+      "hardwareDevices": [
+        "Tablet",
+        "TouchScreen"
+      ],
+      "sensingTechnology": [
+        "Capacitive",
+        "GestureRecognition",
+        "StaticGesture"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "ContactBased",
+        "DeviceContact",
+        "DirectTouch"
+      ],
+      "gestureTypes": [
+        "MultiTouch",
+        "SingleHand",
+        "Tap"
+      ],
+      "applicationScenarios": [
+        "OtherScenarios"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "HighAccuracy",
+        "SmallScreen",
+        "TouchOptimized",
+        "UserAdaptation"
+      ],
+      "tags": [],
+      "image": "Papers/GestureDesign/GestureDesign预览图/2014-Multi-finger chords for hand-held tabletsrecognizable and memorable.png",
+      "pdfFile": "2014-Multi-finger chords for hand-held tabletsrecognizable and memorable.pdf",
+      "pdfPath": "Papers/GestureDesign/2014-Multi-finger chords for hand-held tabletsrecognizable and memorable.pdf",
+      "doi": "https://doi.org/10.1145/2556288.2556958",
+      "authors": "Julie Wagner; Eric Lecolinet; Ted Selker",
+      "journal": "Proceedings of the SIGCHI Conference on Human Factors in Computing Systems",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 21,
+      "title": "Type-hover-swipe in 96 bytesa motion sensing mechanical keyboard",
+      "year": "2014",
+      "category": "hardware",
+      "hardwareDevices": [
+        "Keyboard"
+      ],
+      "sensingTechnology": [
+        "DynamicGesture",
+        "GestureRecognition",
+        "Motion",
+        "Optical",
+        "TrajectoryAnalysis"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "ContactBased",
+        "DirectTouch",
+        "InAir",
+        "NonContact",
+        "RealTime"
+      ],
+      "gestureTypes": [
+        "Directional",
+        "SingleHand",
+        "Swipe",
+        "Tap",
+        "Hover"
+      ],
+      "applicationScenarios": [
+        "Gaming",
+        "TextInput"
+      ],
+      "feedbackOutput": [],
       "userExperienceDesign": [
         "HighAccuracy",
         "LowLatency",
-        "PortableDesign",
-        "SocialAcceptability",
-        "UserAdaptation"
+        "TouchOptimized"
       ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2020 - Finger gesture tracking for interactive applications a pilot study with sign languages.png",
-      "doi": "https://doi.org/10.1145/3414117",
-      "authors": "Liu Yilin, Jiang Fengyang, Gowda Mahanth",
-      "journal": "Proc ACM Interact Mob Wearable Ubiquitous Technol"
+      "tags": [],
+      "image": "Papers/HARDWARE/Hardware预览图/2014-Type-hover-swipe in 96 bytesa motion sensing mechanical keyboard.png",
+      "pdfFile": "2014-Type-hover-swipe in 96 bytesa motion sensing mechanical keyboard.pdf",
+      "pdfPath": "Papers/HARDWARE/2014-Type-hover-swipe in 96 bytesa motion sensing mechanical keyboard.pdf",
+      "doi": "https://doi.org/10.1145/2556288.2557030",
+      "authors": "Stuart Taylor; Cem Keskin; Otmar Hilliges; Shahram Izadi; John Helmes",
+      "journal": "Proceedings of the SIGCHI Conference on Human Factors in Computing Systems",
+      "url": "",
+      "source": "metadata_completed_workbook"
     },
     {
-      "id": 135,
-      "title": "A non-linear model of shape  and motion for tracking finger spelt American sign language",
-      "year": "2002",
-      "category": "GestureDesign",
+      "id": 22,
+      "title": "Vulture a mid-air word-gesture keyboard",
+      "year": "2014",
+      "category": "software",
       "hardwareDevices": [
+        "Keyboard",
         "OtherDevices"
       ],
       "sensingTechnology": [
         "ComputerVision",
-        "OpticalTracking"
-      ],
-      "recognitionClassification": [
+        "ContinuousGesture",
         "GestureRecognition",
         "HandTracking",
-        "MotionAnalysis",
-        "StaticGestureRecognition"
+        "Optical"
       ],
+      "recognitionClassification": [],
       "interactionModalities": [
-        "InAirGesture",
-        "NonContactBased"
+        "InAir",
+        "NonContact",
+        "Visual"
       ],
       "gestureTypes": [
-        "SignLanguageRelated",
+        "Directional",
+        "Pinch",
         "SingleHand"
       ],
       "applicationScenarios": [
-        "AccessibilitySupport",
-        "Education"
+        "AR",
+        "Healthcare",
+        "TextInput"
       ],
-      "feedbackOutput": [
-        "VisualFeedback"
-      ],
+      "feedbackOutput": [],
       "userExperienceDesign": [
         "HandsFree",
-        "HighAccuracy",
-        "SocialAcceptability"
+        "QWERTYLayout",
+        "UserAdaptation"
       ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2002-A non-linear model of shape  and motion for tracking finger spelt American sign language.png",
-      "doi": "https://doi.org/10.1016/S0262-8856(02)00049-5",
-      "authors": "Bowden Richard, Sarhadi Mansoor",
-      "journal": "Image Vision Comput"
+      "tags": [],
+      "image": "Papers/SOFTWARE/Software预览图/2014-Vulture a mid-air word-gesture keyboard.png",
+      "pdfFile": "2014-Vulture a mid-air word-gesture keyboard.pdf",
+      "pdfPath": "Papers/SOFTWARE/2014-Vulture a mid-air word-gesture keyboard.pdf",
+      "doi": "https://doi.org/10.1145/2556288.2556964",
+      "authors": "Anders Markussen; Mikkel Rønne Jakobsen; Kasper Hornbæk",
+      "journal": "Proceedings of the SIGCHI Conference on Human Factors in Computing Systems",
+      "url": "",
+      "source": "metadata_completed_workbook"
     },
     {
-      "id": 140,
-      "title": "WristFlex- low-power gesture input with wrist-worn pressure sensors",
+      "id": 23,
+      "title": "WristFlex low-power gesture input with wrist-worn pressure sensors",
       "year": "2014",
       "category": "hardware",
       "hardwareDevices": [
         "SmartWatch",
+        "Wearables",
         "WearableSensor",
-        "Wearables"
+        "Wristband"
       ],
       "sensingTechnology": [
         "Accelerometer",
-        "PressureSensor"
-      ],
-      "recognitionClassification": [
         "GestureRecognition",
-        "StaticGestureRecognition"
+        "Pressure",
+        "StaticGesture"
       ],
+      "recognitionClassification": [],
       "interactionModalities": [
-        "BodyContactGesture",
-        "ContactBased"
+        "BodyContact",
+        "ContactBased",
+        "RealTime",
+        "Visual"
       ],
       "gestureTypes": [
         "Pinch",
         "SingleHand",
-        "Thumb-Index"
+        "ThumbIndex"
       ],
       "applicationScenarios": [
-        "AthleticActivity",
-        "IoTControl",
+        "Athletic",
+        "IoT",
         "SmartHome"
       ],
-      "feedbackOutput": [
-        "RealTimeFeedback",
-        "VisualFeedback"
-      ],
+      "feedbackOutput": [],
       "userExperienceDesign": [
         "DiscreetInput",
         "HighAccuracy",
         "OneHandUse",
         "PortableDesign",
-        "SocialAcceptability"
+        "SocialAcceptability",
+        "AlwaysAvailable"
       ],
-      "image": "Papers/HARDWARE/Hardware预览图/2014 - WristFlex- low-power gesture input with wrist-worn pressure sensors.png",
+      "tags": [],
+      "image": "Papers/HARDWARE/Hardware预览图/2014-WristFlex low-power gesture input with wrist-worn pressure sensors.png",
+      "pdfFile": "2014-WristFlex low-power gesture input with wrist-worn pressure sensors.pdf",
+      "pdfPath": "Papers/HARDWARE/2014-WristFlex low-power gesture input with wrist-worn pressure sensors.pdf",
       "doi": "https://doi.org/10.1145/2642918.2647396",
-      "authors": "Dementyev Artem, Paradiso Joseph A.",
-      "journal": "UIST '14: The 27th Annual ACM Symposium on User Interface Software and Technology"
+      "authors": "Artem Dementyev; Joseph A. Paradiso",
+      "journal": "Proceedings of the 27th annual ACM symposium on User interface software and technology",
+      "url": "",
+      "source": "metadata_completed_workbook"
     },
     {
-      "id": 141,
-      "title": "CyclopsRing- Enabling Whole-Hand and  Context-Aware Interactions Through a Fisheye Ring",
+      "id": 24,
+      "title": "Advancing Muscle-Computer Interfaces with High-Density Electromyography",
+      "year": "2015",
+      "category": "hardware",
+      "hardwareDevices": [
+        "WearableSensor"
+      ],
+      "sensingTechnology": [
+        "Bio",
+        "DynamicGesture",
+        "EMG",
+        "FingerTracking",
+        "GestureRecognition",
+        "StaticGesture"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "NonContact",
+        "RealTime",
+        "Visual"
+      ],
+      "gestureTypes": [
+        "Flex",
+        "Pinch",
+        "SingleHand",
+        "Tap"
+      ],
+      "applicationScenarios": [
+        "IoT",
+        "MediaControl",
+        "SmartHome"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "DiscreetInput",
+        "HandsFree",
+        "HighAccuracy",
+        "UserAdaptation"
+      ],
+      "tags": [],
+      "image": "Papers/HARDWARE/Hardware预览图/2015-Advancing Muscle-Computer Interfaces with High-Density Electromyography.png",
+      "pdfFile": "2015-Advancing Muscle-Computer Interfaces with High-Density Electromyography.pdf",
+      "pdfPath": "Papers/HARDWARE/2015-Advancing Muscle-Computer Interfaces with High-Density Electromyography.pdf",
+      "doi": "https://doi.org/10.1145/2702123.2702501",
+      "authors": "Christoph Amma; Thomas Krings; Jonas Böer; Tanja Schultz",
+      "journal": "Proceedings of the 33rd Annual ACM Conference on Human Factors in Computing Systems",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 25,
+      "title": "CyclopsRing Enabling Whole-Hand and Context-Aware Interactions Through a Fisheye Ring",
       "year": "2015",
       "category": "hardware",
       "hardwareDevices": [
         "OtherDevices",
         "SmartRing",
-        "WearableSensor",
-        "Wearables"
+        "Wearables",
+        "WearableSensor"
       ],
       "sensingTechnology": [
         "ComputerVision",
-        "OpticalTracking"
-      ],
-      "recognitionClassification": [
-        "DynamicGestureRecognition",
+        "DynamicGesture",
         "GestureRecognition",
         "HandTracking",
-        "StaticGestureRecognition"
+        "Optical",
+        "StaticGesture"
       ],
+      "recognitionClassification": [],
       "interactionModalities": [
-        "BodyContactGesture",
+        "BodyContact",
         "ContactBased",
-        "InAirGesture",
-        "NonContactBased"
+        "Haptic",
+        "InAir",
+        "NonContact",
+        "Visual"
       ],
       "gestureTypes": [
-        "DirectionalGesture",
+        "Directional",
         "Pinch",
         "SingleHand",
         "Swipe"
@@ -6500,14 +1237,11 @@ const PAPERS_DATA = {
       "applicationScenarios": [
         "AR",
         "Gaming",
-        "IoTControl",
+        "IoT",
         "SmartHome",
         "VR"
       ],
-      "feedbackOutput": [
-        "HapticFeedback",
-        "VisualFeedback"
-      ],
+      "feedbackOutput": [],
       "userExperienceDesign": [
         "DiscreetInput",
         "HandsFree",
@@ -6515,1078 +1249,346 @@ const PAPERS_DATA = {
         "PortableDesign",
         "QWERTYLayout"
       ],
-      "image": "Papers/HARDWARE/Hardware预览图/2015 - CyclopsRing- Enabling Whole-Hand and  Context-Aware Interactions Through a Fisheye Ring.png",
+      "tags": [],
+      "image": "Papers/HARDWARE/Hardware预览图/2015-CyclopsRing Enabling Whole-Hand and Context-Aware Interactions Through a Fisheye Ring.png",
+      "pdfFile": "2015-CyclopsRing Enabling Whole-Hand and Context-Aware Interactions Through a Fisheye Ring.pdf",
+      "pdfPath": "Papers/HARDWARE/2015-CyclopsRing Enabling Whole-Hand and Context-Aware Interactions Through a Fisheye Ring.pdf",
       "doi": "https://doi.org/10.1145/2807442.2807450",
-      "authors": "Chan Liwei, Chen Yi-Ling, Hsieh Chi-Hao, Liang Rong-Hao, Chen Bing-Yu",
-      "journal": "UIST '15: The 28th Annual ACM Symposium on User Interface Software and Technology"
+      "authors": "Liwei Chan; Yi-Ling Chen; Chi-Hao Hsieh; Rong-Hao Liang; Bing-Yu Chen",
+      "journal": "Proceedings of the 28th Annual ACM Symposium on User Interface Software &amp; Technology",
+      "url": "",
+      "source": "metadata_completed_workbook"
     },
     {
-      "id": 142,
-      "title": "Combining Ring Input with Hand  Tracking for Precise, Natural Interaction with Spatial Analytic Interfaces",
-      "year": "2016",
-      "category": "software",
-      "hardwareDevices": [
-        "ARGlasses",
-        "SmartRing",
-        "WearableSensor",
-        "Wearables"
-      ],
-      "sensingTechnology": [
-        "CapacitiveSensor",
-        "ComputerVision",
-        "DepthSensing",
-        "IMU",
-        "OpticalTracking"
-      ],
-      "recognitionClassification": [
-        "3DPoseEstimation",
-        "ContinuousRecognition",
-        "GestureRecognition",
-        "HandTracking"
-      ],
-      "interactionModalities": [
-        "ContactBased",
-        "DirectTouch",
-        "InAirGesture",
-        "MultiModalInteraction",
-        "NonContactBased"
-      ],
-      "gestureTypes": [
-        "DirectionalGesture",
-        "Grasp",
-        "Pinch",
-        "SingleHand",
-        "Swipe",
-        "Tap"
-      ],
-      "applicationScenarios": [
-        "AR",
-        "Navigation",
-        "ObjectManipulation"
-      ],
-      "feedbackOutput": [
-        "HapticFeedback",
-        "RealTimeFeedback",
-        "VisualFeedback"
-      ],
-      "userExperienceDesign": [
-        "HandsFree",
-        "HighAccuracy",
-        "LowLatency",
-        "PortableDesign"
-      ],
-      "image": "Papers/SOFTWARE/Software预览图/2016 - Combining Ring Input with Hand  Tracking for Precise, Natural Interaction with Spatial Analytic Interfaces..png",
-      "doi": "https://doi.org/10.1145/2983310.2985757",
-      "authors": "Ens Barrett, Byagowi Ahmad, Han Teng, Hincapié-Ramos Juan David, Irani Pourang",
-      "journal": "SUI '16: Symposium on Spatial User Interaction"
-    },
-    {
-      "id": 143,
-      "title": "DigitSpace Designing Thumb-to-Fingers Touch Interfaces for One-Handed and Eyes-Free Interactions",
-      "year": "2016",
-      "category": "GestureDesign",
-      "hardwareDevices": [
-        "SmartWatch",
-        "WearableSensor",
-        "Wearables"
-      ],
-      "sensingTechnology": [
-        "OpticalTracking",
-        "OtherTechnology"
-      ],
-      "recognitionClassification": [
-        "DynamicGestureRecognition",
-        "GestureRecognition",
-        "StaticGestureRecognition"
-      ],
-      "interactionModalities": [
-        "BodyContactGesture",
-        "ContactBased",
-        "DirectTouch"
-      ],
-      "gestureTypes": [
-        "SingleHand",
-        "Swipe",
-        "Tap",
-        "Thumb-Index"
-      ],
-      "applicationScenarios": [
-        "MediaControl",
-        "TextInput"
-      ],
-      "feedbackOutput": [
-        "HapticFeedback",
-        "VisualFeedback"
-      ],
-      "userExperienceDesign": [
-        "ElicitationStudy",
-        "EyesFree",
-        "HighAccuracy",
-        "OneHandUse",
-        "PortableDesign",
-        "UserAdaptation"
-      ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2016 - DigitSpace Designing Thumb-to-Fingers Touch Interfaces for One-Handed and Eyes-Free Interactions.png",
-      "doi": "https://doi.org/10.1145/2858036.2858483",
-      "authors": "Huang Da-Yuan, Chan Liwei, Yang Shuo, Wang Fan, Liang Rong-Hao, Yang De-Nian, Hung Yi-Ping, Chen Bing-Yu",
-      "journal": "CHI'16: CHI Conference on Human Factors in Computing Systems"
-    },
-    {
-      "id": 144,
-      "title": "ThumbRing- private interactions using one-handed thumb motion input on  finger segments",
-      "year": "2016",
-      "category": "hardware",
-      "hardwareDevices": [
-        "ARGlasses",
-        "SmartGlasses",
-        "SmartRing",
-        "Wearables"
-      ],
-      "sensingTechnology": [
-        "Accelerometer",
-        "Gyroscope",
-        "IMU",
-        "Magnetometer",
-        "MotionSensor"
-      ],
-      "recognitionClassification": [
-        "3DPoseEstimation",
-        "GestureRecognition",
-        "MotionAnalysis",
-        "StaticGestureRecognition"
-      ],
-      "interactionModalities": [
-        "BodyContactGesture",
-        "ContactBased",
-        "DirectTouch"
-      ],
-      "gestureTypes": [
-        "SingleHand",
-        "Swipe",
-        "Tap",
-        "Thumb-Index"
-      ],
-      "applicationScenarios": [
-        "AR",
-        "MediaControl",
-        "Navigation"
-      ],
-      "feedbackOutput": [
-        "HapticFeedback",
-        "VisualFeedback"
-      ],
-      "userExperienceDesign": [
-        "DiscreetInput",
-        "HighAccuracy",
-        "OneHandUse",
-        "PortableDesign",
-        "SocialAcceptability"
-      ],
-      "image": "Papers/HARDWARE/Hardware预览图/2016 - ThumbRing- private interactions using one-handed thumb motion input on  finger segments.png",
-      "doi": "https://doi.org/10.1145/2957265.2961859",
-      "authors": "Tsai Hsin-Ruey, Wu Cheng-Yuan, Huang Lee-Ting, Hung Yi-Ping",
-      "journal": "MobileHCI '16: 18th International Conference on Human-Computer Interaction with Mobile Devices and Services"
-    },
-    {
-      "id": 145,
-      "title": "Interacting with Soli- Exploring Fine-Grained Dynamic  Gesture Recognition in the Radio-Frequency Spectrum",
-      "year": "2016",
-      "category": "software",
-      "hardwareDevices": [
-        "OtherDevices",
-        "Wearables"
-      ],
-      "sensingTechnology": [
-        "RFSensing",
-        "RadarSensing"
-      ],
-      "recognitionClassification": [
-        "ContinuousRecognition",
-        "DynamicGestureRecognition",
-        "GestureRecognition",
-        "MotionAnalysis"
-      ],
-      "interactionModalities": [
-        "InAirGesture",
-        "NonContactBased"
-      ],
-      "gestureTypes": [
-        "DirectionalGesture",
-        "Pinch",
-        "SingleHand",
-        "Swipe",
-        "Tap"
-      ],
-      "applicationScenarios": [
-        "IoTControl",
-        "MediaControl",
-        "Navigation"
-      ],
-      "feedbackOutput": [
-        "RealTimeFeedback",
-        "VisualFeedback"
-      ],
-      "userExperienceDesign": [
-        "HandsFree",
-        "HighAccuracy",
-        "LowLatency",
-        "OcclusionAvoidance"
-      ],
-      "image": "Papers/SOFTWARE/Software预览图/2016-Interacting with Soli- Exploring Fine-Grained Dynamic  Gesture Recognition in the Radio-Frequency Spectrum.png",
-      "doi": "https://doi.org/10.1145/2984511.2984565",
-      "authors": "Wang Saiwen, Song Jie, Lien Jaime, Poupyrev Ivan, Hilliges Otmar",
-      "journal": "UIST '16: The 29th Annual ACM Symposium on User Interface Software and Technology"
-    },
-    {
-      "id": 146,
-      "title": "Soli- Ubiquitous Gesture Sensing with Millimeter Wave Radar",
-      "year": "2016",
-      "category": "hardware",
-      "hardwareDevices": [
-        "OtherDevices",
-        "SmartWatch",
-        "VRHeadset",
-        "Wearables"
-      ],
-      "sensingTechnology": [
-        "MotionSensor",
-        "RFSensing",
-        "RadarSensing"
-      ],
-      "recognitionClassification": [
-        "3DPoseEstimation",
-        "ContinuousRecognition",
-        "DynamicGestureRecognition",
-        "FingerTracking",
-        "GestureRecognition"
-      ],
-      "interactionModalities": [
-        "InAirGesture",
-        "NonContactBased",
-        "TangibleInteraction"
-      ],
-      "gestureTypes": [
-        "Pinch",
-        "SingleHand",
-        "Swipe",
-        "Tap",
-        "Thumb-Index"
-      ],
-      "applicationScenarios": [
-        "Gaming",
-        "IoTControl",
-        "MediaControl",
-        "Navigation",
-        "SmartHome",
-        "VR"
-      ],
-      "feedbackOutput": [
-        "HapticFeedback",
-        "RealTimeFeedback",
-        "VisualFeedback"
-      ],
-      "userExperienceDesign": [
-        "HandsFree",
-        "HighAccuracy",
-        "LowLatency",
-        "OcclusionAvoidance",
-        "PortableDesign",
-        "SocialAcceptability"
-      ],
-      "image": "Papers/HARDWARE/Hardware预览图/2016-Soli- Ubiquitous Gesture Sensing with Millimeter Wave Radar..png",
-      "doi": "https://doi.org/10.1145/2897824.2925953",
-      "authors": "Lien Jaime, Gillian Nicholas, Karagozler M. Emre, Amihood Patrick, Schwesig Carsten, Olson Erik, Raja Hakim, Poupyrev Ivan",
-      "journal": "ACM Trans Graphics"
-    },
-    {
-      "id": 147,
-      "title": "TouchRing- Subtle and  Always-Available Input Using a Multi-Touch Ring",
-      "year": "2016",
-      "category": "hardware",
-      "hardwareDevices": [
-        "SmartGlasses",
-        "SmartRing",
-        "TouchScreen",
-        "Wearables"
-      ],
-      "sensingTechnology": [
-        "CapacitiveSensor",
-        "OtherTechnology"
-      ],
-      "recognitionClassification": [
-        "DynamicGestureRecognition",
-        "GestureRecognition"
-      ],
-      "interactionModalities": [
-        "ContactBased",
-        "DirectTouch",
-        "MultiModalInteraction"
-      ],
-      "gestureTypes": [
-        "MultiTouch",
-        "SingleHand",
-        "Swipe",
-        "Tap",
-        "Thumb-Index"
-      ],
-      "applicationScenarios": [
-        "MediaControl",
-        "Navigation"
-      ],
-      "feedbackOutput": [
-        "HapticFeedback",
-        "VisualFeedback"
-      ],
-      "userExperienceDesign": [
-        "DiscreetInput",
-        "OneHandUse",
-        "PortableDesign",
-        "SocialAcceptability",
-        "TouchOptimized"
-      ],
-      "image": "Papers/HARDWARE/Hardware预览图/2016-TouchRing- Subtle and  Always-Available Input Using a Multi-Touch Ring.png",
-      "doi": "https://doi.org/10.1145/2957265.2961860",
-      "authors": "Tsai Hsin-Ruey, Hsiu Min-Chieh, Hsiao Jui-Chun, Huang Lee-Ting, Chen Mike, Hung Yi-Ping",
-      "journal": "MobileHCI '16: 18th International Conference on Human-Computer Interaction with Mobile Devices and Services"
-    },
-    {
-      "id": 148,
-      "title": "DigiTouch- Reconfigurable Thumb-to-Finger Input and Text Entry on Head-mounted Displays",
-      "year": "2017",
-      "category": "hardware",
-      "hardwareDevices": [
-        "ARGlasses",
-        "DataGloves",
-        "VRHeadset",
-        "WearableSensor",
-        "Wearables"
-      ],
-      "sensingTechnology": [
-        "CapacitiveSensor",
-        "PressureSensor"
-      ],
-      "recognitionClassification": [
-        "FingerTracking",
-        "GestureRecognition"
-      ],
-      "interactionModalities": [
-        "ContactBased",
-        "DeviceContactGesture"
-      ],
-      "gestureTypes": [
-        "Hold",
-        "SingleHand",
-        "Swipe",
-        "Tap",
-        "Thumb-Index"
-      ],
-      "applicationScenarios": [
-        "AR",
-        "TextInput",
-        "VR"
-      ],
-      "feedbackOutput": [
-        "HapticFeedback",
-        "ProprioceptiveFeedback",
-        "RealTimeFeedback"
-      ],
-      "userExperienceDesign": [
-        "DiscreetInput",
-        "EyesFree",
-        "HighAccuracy",
-        "OcclusionAvoidance",
-        "PortableDesign",
-        "QWERTYLayout",
-        "SocialAcceptability",
-        "UserAdaptation"
-      ],
-      "image": "Papers/HARDWARE/Hardware预览图/2017 - DigiTouch- Reconfigurable Thumb-to-Finger Input and Text Entry on Head-mounted Displays.png",
-      "doi": "https://doi.org/10.1145/3130978",
-      "authors": "Whitmire Eric, Jain Mohit, Jain Divye, Nelson Greg, Karkar Ravi, Patel Shwetak, Goel Mayank",
-      "journal": "Proc ACM Interact Mob Wearable Ubiquitous Technol"
-    },
-    {
-      "id": 149,
-      "title": "FingerSound- Recognizing unistroke thumb gestures using a ring",
-      "year": "2017",
-      "category": "hardware",
-      "hardwareDevices": [
-        "SmartRing",
-        "SmartWatch",
-        "WearableSensor",
-        "Wearables"
-      ],
-      "sensingTechnology": [
-        "Gyroscope",
-        "MotionSensor",
-        "OtherTechnology"
-      ],
-      "recognitionClassification": [
-        "DynamicGestureRecognition",
-        "GestureRecognition",
-        "MotionAnalysis"
-      ],
-      "interactionModalities": [
-        "ContactBased",
-        "DeviceContactGesture",
-        "MultiModalInteraction"
-      ],
-      "gestureTypes": [
-        "DirectionalGesture",
-        "SingleHand",
-        "Swipe",
-        "Thumb-Index"
-      ],
-      "applicationScenarios": [
-        "AR",
-        "MediaControl",
-        "SmartHome",
-        "TextInput",
-        "VR"
-      ],
-      "feedbackOutput": [
-        "AudioFeedback",
-        "HapticFeedback",
-        "RealTimeFeedback"
-      ],
-      "userExperienceDesign": [
-        "DiscreetInput",
-        "EyesFree",
-        "HighAccuracy",
-        "MidasTouchProblem",
-        "PortableDesign",
-        "SocialAcceptability"
-      ],
-      "image": "Papers/HARDWARE/Hardware预览图/2017 - FingerSound- Recognizing unistroke thumb gestures using a ring..png",
-      "doi": "https://doi.org/10.1145/3130985",
-      "authors": "Zhang Cheng, Waghmare Anandghan, Kundra Pranav, Pu Yiming, Gilliland Scott, Ploetz Thomas, Starner Thad E., Inan Omer T., Abowd Gregory D.",
-      "journal": "Proc ACM Interact Mob Wearable Ubiquitous Technol"
-    },
-    {
-      "id": 152,
-      "title": "Fingert9- Leveraging  thumb-to-finger interaction for same-side-hand text entry on smartwatches",
-      "year": "2018",
-      "category": "GestureDesign",
-      "hardwareDevices": [
-        "SmartWatch",
-        "TouchScreen",
-        "WearableSensor",
-        "Wearables"
-      ],
-      "sensingTechnology": [
-        "CapacitiveSensor",
-        "PressureSensor"
-      ],
-      "recognitionClassification": [
-        "FingerTracking",
-        "GestureRecognition",
-        "StaticGestureRecognition"
-      ],
-      "interactionModalities": [
-        "BodyContactGesture",
-        "ContactBased",
-        "DirectTouch"
-      ],
-      "gestureTypes": [
-        "Hold",
-        "SingleHand",
-        "Tap",
-        "Thumb-Index"
-      ],
-      "applicationScenarios": [
-        "TextInput"
-      ],
-      "feedbackOutput": [
-        "HapticFeedback",
-        "RealTimeFeedback",
-        "VisualFeedback"
-      ],
-      "userExperienceDesign": [
-        "ElicitationStudy",
-        "EyesFree",
-        "OcclusionAvoidance",
-        "OneHandUse",
-        "SmallScreen",
-        "UserAdaptation"
-      ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2018 - Fingert9- Leveraging  thumb-to-finger interaction for same-side-hand text entry on smartwatches.png",
-      "doi": "https://doi.org/10.1145/3173574.3173752",
-      "authors": "Wong Pui Chung, Zhu Kening, Fu Hongbo",
-      "journal": "CHI '18: CHI Conference on Human Factors in Computing Systems"
-    },
-    {
-      "id": 153,
-      "title": "ThumbText- Text Entry for Wearable Devices Using a Miniature Ring",
-      "year": "2018",
-      "category": "hardware",
-      "hardwareDevices": [
-        "SmartGlasses",
-        "SmartRing",
-        "SmartWatch",
-        "TouchScreen",
-        "Wearables"
-      ],
-      "sensingTechnology": [
-        "CapacitiveSensor",
-        "OtherTechnology"
-      ],
-      "recognitionClassification": [
-        "DynamicGestureRecognition",
-        "GestureRecognition",
-        "StaticGestureRecognition"
-      ],
-      "interactionModalities": [
-        "ContactBased",
-        "DirectTouch",
-        "TangibleInteraction"
-      ],
-      "gestureTypes": [
-        "Hold",
-        "SingleHand",
-        "Swipe",
-        "Tap",
-        "Thumb-Index"
-      ],
-      "applicationScenarios": [
-        "TextInput"
-      ],
-      "feedbackOutput": [
-        "AudioFeedback",
-        "RealTimeFeedback",
-        "VisualFeedback"
-      ],
-      "userExperienceDesign": [
-        "OcclusionAvoidance",
-        "OneHandUse",
-        "PortableDesign",
-        "SmallScreen",
-        "UserAdaptation"
-      ],
-      "image": "Papers/HARDWARE/Hardware预览图/2018 - ThumbText- Text Entry for Wearable Devices Using a Miniature Ring.png",
-      "authors": "Kim Junhyeok, Delamare William, Irani Pourang",
-      "journal": "Graphics Interface"
-    },
-    {
-      "id": 154,
-      "title": "Tip-tap- battery-free discrete 2D fingertip input",
-      "year": "2019",
-      "category": "hardware",
-      "hardwareDevices": [
-        "DataGloves",
-        "WearableSensor",
-        "Wearables"
-      ],
-      "sensingTechnology": [
-        "CapacitiveSensor",
-        "RFSensing"
-      ],
-      "recognitionClassification": [
-        "FingerTracking",
-        "StaticGestureRecognition"
-      ],
-      "interactionModalities": [
-        "BodyContactGesture",
-        "ContactBased"
-      ],
-      "gestureTypes": [
-        "SingleHand",
-        "Tap",
-        "Thumb-Index"
-      ],
-      "applicationScenarios": [
-        "Healthcare",
-        "IndustryApplication",
-        "MediaControl"
-      ],
-      "feedbackOutput": [
-        "HapticFeedback"
-      ],
-      "userExperienceDesign": [
-        "DiscreetInput",
-        "EyesFree",
-        "HandsFree",
-        "OneHandUse",
-        "PortableDesign",
-        "SocialAcceptability"
-      ],
-      "image": "Papers/HARDWARE/Hardware预览图/2019- Tip-tap- battery-free discrete 2D fingertip input..png",
-      "doi": "https://doi.org/10.1145/3332165.3347907",
-      "authors": "Katsuragawa Keiko, Wang Ju, Shan Ziyang, Ouyang Ningshan, Abari Omid, Vogel Daniel",
-      "journal": "UIST '19: The 32nd Annual ACM Symposium on User Interface Software and Technology"
-    },
-    {
-      "id": 155,
-      "title": "The missing interface- Micro-gestures on augmented objects",
-      "year": "2019",
-      "category": "GestureDesign",
-      "hardwareDevices": [
-        "ARGlasses",
-        "WearableSensor",
-        "Wearables"
-      ],
-      "sensingTechnology": [
-        "RFSensing",
-        "RadarSensing"
-      ],
-      "recognitionClassification": [
-        "DynamicGestureRecognition",
-        "FingerTracking",
-        "GestureRecognition",
-        "StaticGestureRecognition"
-      ],
-      "interactionModalities": [
-        "ContactBased",
-        "DeviceContactGesture",
-        "InAirGesture",
-        "NonContactBased"
-      ],
-      "gestureTypes": [
-        "SingleHand",
-        "Swipe"
-      ],
-      "applicationScenarios": [
-        "AR",
-        "IndustryApplication",
-        "Training"
-      ],
-      "feedbackOutput": [
-        "VisualFeedback"
-      ],
-      "userExperienceDesign": [
-        "DiscreetInput",
-        "OcclusionAvoidance",
-        "OneHandUse",
-        "PortableDesign"
-      ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2019-The missing interface- Micro-gestures on augmented objects.png",
-      "doi": "https://doi.org/10.1145/3290607.3312986",
-      "authors": "Čopič Pucihar Klen, Sandor Christian, Kljun Matjaž, Huerst Wolfgang, Plopski Alexander, Taketomi Takafumi, Kato Hirokazu, Leiva Luis A.",
-      "journal": "CHI '19: CHI Conference on Human Factors in Computing Systems"
-    },
-    {
-      "id": 156,
-      "title": "QwertyRing- Text Entry on Physical Surfaces  Using a Ring",
-      "year": "2020",
-      "category": "hardware",
-      "hardwareDevices": [
-        "ARGlasses",
-        "SmartRing",
-        "VRHeadset",
-        "WearableSensor",
-        "Wearables"
-      ],
-      "sensingTechnology": [
-        "Accelerometer",
-        "Gyroscope",
-        "IMU",
-        "MotionSensor"
-      ],
-      "recognitionClassification": [
-        "DynamicGestureRecognition",
-        "FingerTracking",
-        "GestureRecognition",
-        "MotionAnalysis"
-      ],
-      "interactionModalities": [
-        "ContactBased",
-        "DeviceContactGesture"
-      ],
-      "gestureTypes": [
-        "Hold",
-        "SingleHand",
-        "Swipe",
-        "Tap"
-      ],
-      "applicationScenarios": [
-        "AR",
-        "SmartHome",
-        "TextInput",
-        "VR"
-      ],
-      "feedbackOutput": [
-        "RealTimeFeedback",
-        "VisualFeedback"
-      ],
-      "userExperienceDesign": [
-        "EyesFree",
-        "OneHandUse",
-        "PortableDesign",
-        "QWERTYLayout",
-        "TouchOptimized",
-        "UserAdaptation"
-      ],
-      "image": "Papers/HARDWARE/Hardware预览图/2020 - . QwertyRing- Text Entry on Physical Surfaces  Using a Ring..png",
-      "doi": "https://doi.org/10.1145/3432204",
-      "authors": "Gu Yizheng, Yu Chun, Li Zhipeng, Li Zhaoheng, Wei Xiaoying, Shi Yuanchun",
-      "journal": "Proc ACM Interact Mob Wearable Ubiquitous Technol"
-    },
-    {
-      "id": 157,
-      "title": "BiTipText- Bimanual Eyes-Free Text Entry on a Fingertip Keyboard ",
-      "year": "2020",
-      "category": "hardware",
-      "hardwareDevices": [
-        "SmartGlasses",
-        "SmartWatch",
-        "TouchScreen",
-        "WearableSensor",
-        "Wearables"
-      ],
-      "sensingTechnology": [
-        "CapacitiveSensor",
-        "MotionSensor",
-        "OpticalTracking"
-      ],
-      "recognitionClassification": [
-        "FingerTracking",
-        "GestureRecognition",
-        "MotionAnalysis",
-        "StaticGestureRecognition"
-      ],
-      "interactionModalities": [
-        "ContactBased",
-        "DirectTouch"
-      ],
-      "gestureTypes": [
-        "DualHand",
-        "Swipe",
-        "Tap",
-        "Thumb-Index"
-      ],
-      "applicationScenarios": [
-        "AR",
-        "TextInput",
-        "VR"
-      ],
-      "feedbackOutput": [
-        "RealTimeFeedback",
-        "VisualFeedback"
-      ],
-      "userExperienceDesign": [
-        "DiscreetInput",
-        "EyesFree",
-        "PortableDesign",
-        "QWERTYLayout",
-        "TouchOptimized",
-        "UserAdaptation"
-      ],
-      "image": "Papers/HARDWARE/Hardware预览图/2020-BiTipText- Bimanual Eyes-Free Text Entry on a Fingertip Keyboard.png",
-      "doi": "https://doi.org/10.1145/3313831.3376306",
-      "authors": "Xu Zheer, Chen Weihao, Zhao Dongyang, Luo Jiehui, Wu Te-Yen, Gong Jun, Yin Sicheng, Zhai Jialun, Yang Xing-Dong",
-      "journal": "CHI '20: CHI Conference on Human Factors in Computing Systems"
-    },
-    {
-      "id": 158,
-      "title": "EarBuddy- Enabling On-Face Interaction via Wireless Earbuds",
-      "year": "2020",
-      "category": "software",
-      "hardwareDevices": [
-        "SmartPhone",
-        "WearableSensor",
-        "Wearables"
-      ],
-      "sensingTechnology": [
-        "Bio-Sensor",
-        "OtherTechnology"
-      ],
-      "recognitionClassification": [
-        "DynamicGestureRecognition",
-        "GestureRecognition",
-        "StaticGestureRecognition"
-      ],
-      "interactionModalities": [
-        "BodyContactGesture",
-        "ContactBased",
-        "EarBasedInteraction"
-      ],
-      "gestureTypes": [
-        "SingleHand",
-        "Swipe",
-        "Tap"
-      ],
-      "applicationScenarios": [
-        "AccessibilitySupport",
-        "MediaControl",
-        "SmartHome"
-      ],
-      "feedbackOutput": [
-        "AudioFeedback",
-        "VisualFeedback"
-      ],
-      "userExperienceDesign": [
-        "DiscreetInput",
-        "EyesFree",
-        "OneHandUse",
-        "PortableDesign",
-        "SocialAcceptability"
-      ],
-      "image": "Papers/SOFTWARE/Software预览图/2020-EarBuddy- Enabling On-Face Interaction via Wireless Earbuds.png",
-      "doi": "https://doi.org/10.1145/3313831.3376836",
-      "authors": "Xu Xuhai, Shi Haitian, Yi Xin, Liu WenJia, Yan Yukang, Shi Yuanchun, Mariakakis Alex, Mankoff Jennifer, Dey Anind K.",
-      "journal": "CHI '20: CHI Conference on Human Factors in Computing Systems"
-    },
-    {
-      "id": 159,
-      "title": "Ready, Steady, Touch! Sensing  Physical Contact with a Finger-Mounted IMU",
-      "year": "2020",
-      "category": "hardware",
-      "hardwareDevices": [
-        "SmartWatch",
-        "WearableSensor",
-        "Wearables"
-      ],
-      "sensingTechnology": [
-        "Accelerometer",
-        "Gyroscope",
-        "IMU",
-        "Magnetometer"
-      ],
-      "recognitionClassification": [
-        "ContinuousRecognition",
-        "DynamicGestureRecognition",
-        "FingerTracking"
-      ],
-      "interactionModalities": [
-        "BackofDevices",
-        "ContactBased",
-        "DeviceContactGesture",
-        "TangibleInteraction"
-      ],
-      "gestureTypes": [
-        "DirectionalGesture",
-        "SingleHand",
-        "Swipe",
-        "Tap",
-        "Thumb-Index"
-      ],
-      "applicationScenarios": [
-        "AR",
-        "MediaControl",
-        "Navigation",
-        "SmartHome",
-        "TextInput",
-        "VR"
-      ],
-      "feedbackOutput": [
-        "HapticFeedback",
-        "RealTimeFeedback"
-      ],
-      "userExperienceDesign": [
-        "HandsFree",
-        "HighAccuracy",
-        "LowLatency",
-        "PortableDesign",
-        "SocialAcceptability",
-        "TouchOptimized"
-      ],
-      "image": "Papers/HARDWARE/Hardware预览图/2020-Ready, Steady, Touch! Sensing  Physical Contact with a Finger-Mounted IMU.png",
-      "doi": "https://doi.org/10.1145/3397309",
-      "authors": "Shi Yilei, Zhang Haimo, Zhao Kaixing, Cao Jiashuo, Sun Mengmeng, Nanayakkara Suranga",
-      "journal": "Proc ACM Interact Mob Wearable Ubiquitous Technol"
-    },
-    {
-      "id": 162,
-      "title": "Design of 3D Microgestures for Commands in Virtual Reality or Augmented Reality",
-      "year": "2023",
-      "category": "GestureDesign",
-      "hardwareDevices": [
-        "ARGlasses",
-        "TouchScreen",
-        "VRHeadset"
-      ],
-      "sensingTechnology": [
-        "ComputerVision",
-        "MotionSensor"
-      ],
-      "recognitionClassification": [
-        "3DPoseEstimation",
-        "FingerTracking",
-        "GestureRecognition",
-        "HandTracking"
-      ],
-      "interactionModalities": [
-        "InAirGesture",
-        "MultiModalInteraction",
-        "NonContactBased"
-      ],
-      "gestureTypes": [
-        "DirectionalGesture",
-        "Grasp",
-        "Pinch",
-        "SingleHand",
-        "Swipe",
-        "Tap"
-      ],
-      "applicationScenarios": [
-        "AR",
-        "Gaming",
-        "MediaControl",
-        "Navigation",
-        "ObjectManipulation",
-        "VR"
-      ],
-      "feedbackOutput": [
-        "HapticFeedback",
-        "VisualFeedback"
-      ],
-      "userExperienceDesign": [
-        "HandsFree",
-        "HighAccuracy",
-        "LowLatency",
-        "SocialAcceptability",
-        "UserAdaptation"
-      ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2023- Design of 3D Microgestures for Commands in Virtual Reality or Augmented Reality.png",
-      "doi": "https://doi.org/10.3390/app11146375",
-      "authors": "Li Guangchuan, Rempel David, Liu Yue, Song Weitao, Adamson Carisa Harris",
-      "journal": "Appl Sci"
-    },
-    {
-      "id": 164,
-      "title": "Abracadabra Wireless, High-Precision, and Unpowered Finger Input for Very Small Mobile Devices",
-      "year": "2009",
-      "category": "hardware",
-      "hardwareDevices": [
-        "SmartRing",
-        "SmartWatch",
-        "Wearables"
-      ],
-      "sensingTechnology": [
-        "Magnetometer",
-        "MotionSensor"
-      ],
-      "recognitionClassification": [
-        "DynamicGestureRecognition",
-        "FingerTracking",
-        "GestureRecognition",
-        "StaticGestureRecognition"
-      ],
-      "interactionModalities": [
-        "InAirGesture",
-        "NonContactBased",
-        "TangibleInteraction"
-      ],
-      "gestureTypes": [
-        "DirectionalGesture",
-        "Flex",
-        "Hold",
-        "SingleHand",
-        "Tap"
-      ],
-      "applicationScenarios": [
-        "MediaControl",
-        "Navigation",
-        "ObjectManipulation"
-      ],
-      "feedbackOutput": [
-        "RealTimeFeedback",
-        "VisualFeedback"
-      ],
-      "userExperienceDesign": [
-        "HandsFree",
-        "HighAccuracy",
-        "PortableDesign",
-        "SmallScreen"
-      ],
-      "image": "Papers/HARDWARE/Hardware预览图/2009-Abracadabra Wireless, High-Precision, and Unpowered Finger Input for Very Small Mobile Devices.png",
-      "doi": "https://doi.org/10.1145/1622176.1622199",
-      "authors": "Harrison Chris, Hudson Scott E.",
-      "journal": "UIST '09: The 22nd Annual ACM Symposium on User Interface Software and Technology"
-    },
-    {
-      "id": 165,
-      "title": "Digits Freehand 3D Interactions Anywhere Using a Wrist-Worn Gloveless Sensor",
-      "year": "2012",
-      "category": "hardware",
-      "hardwareDevices": [
-        "SmartWatch",
-        "WearableSensor",
-        "Wearables"
-      ],
-      "sensingTechnology": [
-        "ComputerVision",
-        "IMU",
-        "OpticalTracking"
-      ],
-      "recognitionClassification": [
-        "3DPoseEstimation",
-        "ContinuousRecognition",
-        "FingerTracking",
-        "HandTracking"
-      ],
-      "interactionModalities": [
-        "InAirGesture",
-        "NonContactBased"
-      ],
-      "gestureTypes": [
-        "Flex",
-        "Grasp",
-        "Pinch",
-        "SingleHand"
-      ],
-      "applicationScenarios": [
-        "AR",
-        "Gaming",
-        "MR",
-        "ObjectManipulation",
-        "VR"
-      ],
-      "feedbackOutput": [
-        "RealTimeFeedback",
-        "VisualFeedback"
-      ],
-      "userExperienceDesign": [
-        "EyesFree",
-        "HandsFree",
-        "HighAccuracy",
-        "LowLatency",
-        "PortableDesign"
-      ],
-      "image": "Papers/HARDWARE/Hardware预览图/2012-Digits Freehand 3D Interactions Anywhere Using a Wrist-Worn Gloveless Sensor.png",
-      "doi": "https://doi.org/10.1145/2380116.2380139",
-      "authors": "Kim David, Hilliges Otmar, Izadi Shahram, Butler Alex D., Chen Jiawen, Oikonomidis Iason, Olivier Patrick",
-      "journal": "UIST '12: The 25th Annual ACM Symposium on User Interface Software and Technology"
-    },
-    {
-      "id": 166,
-      "title": "TIMMi Finger-worn Textile Input Device with Multimodal Sensing in Mobile Interaction",
+      "id": 26,
+      "title": "eRingmultiple finger gesture recognition with one ring using an electric field",
       "year": "2015",
       "category": "hardware",
       "hardwareDevices": [
-        "Etextile",
         "SmartRing",
-        "WearableSensor",
+        "Wearables",
+        "WearableSensor"
+      ],
+      "sensingTechnology": [
+        "Capacitive",
+        "ContinuousGesture",
+        "FingerTracking",
+        "GestureRecognition",
+        "StaticGesture",
+        "ElectricField"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "ContactBased",
+        "MultiModal",
+        "NonContact",
+        "RealTime",
+        "Visual"
+      ],
+      "gestureTypes": [
+        "Pinch",
+        "SingleHand",
+        "Swipe",
+        "Tap",
+        "ThumbIndex"
+      ],
+      "applicationScenarios": [
+        "IoT",
+        "OtherScenarios",
+        "SmartHome"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "HandsFree",
+        "OcclusionAvoid",
+        "OneHandUse",
+        "PortableDesign",
+        "SocialAcceptability"
+      ],
+      "tags": [],
+      "image": "Papers/HARDWARE/Hardware预览图/2015-eRingmultiple finger gesture recognition with one ring using an electric field.png",
+      "pdfFile": "2015-eRingmultiple finger gesture recognition with one ring using an electric field.pdf",
+      "pdfPath": "Papers/HARDWARE/2015-eRingmultiple finger gesture recognition with one ring using an electric field.pdf",
+      "doi": "https://doi.org/10.1145/2790044.2790047",
+      "authors": "Mathias Wilhelm; Daniel Krakowczyk; Frank Trollmann; Sahin Albayrak",
+      "journal": "Proceedings of the 2nd international Workshop on Sensor-based Activity Recognition and Interaction",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 27,
+      "title": "Finger-writing with SmartwatchA Case for Finger and Hand Gesture Recognition using Smartwatch",
+      "year": "2015",
+      "category": "software",
+      "hardwareDevices": [
+        "SmartWatch",
         "Wearables"
       ],
       "sensingTechnology": [
-        "OtherTechnology",
-        "PressureSensor"
-      ],
-      "recognitionClassification": [
-        "ContinuousRecognition",
+        "Accelerometer",
+        "DynamicGesture",
         "FingerTracking",
-        "GestureRecognition"
+        "GestureRecognition",
+        "Gyroscope",
+        "HandTracking",
+        "IMU",
+        "Motion",
+        "MotionAnalysis",
+        "StaticGesture",
+        "TrajectoryAnalysis"
       ],
+      "recognitionClassification": [],
       "interactionModalities": [
         "ContactBased",
-        "DeviceContactGesture",
-        "MultiModalInteraction"
+        "InAir",
+        "NonContact",
+        "RealTime",
+        "Visual"
+      ],
+      "gestureTypes": [
+        "Directional",
+        "Pinch",
+        "SingleHand",
+        "Swipe",
+        "Tap",
+        "ThumbIndex"
+      ],
+      "applicationScenarios": [
+        "IoT",
+        "MediaControl",
+        "SmartHome",
+        "TextInput"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "DiscreetInput",
+        "HandsFree",
+        "HighAccuracy",
+        "OneHandUse",
+        "PortableDesign",
+        "SocialAcceptability"
+      ],
+      "tags": [],
+      "image": "Papers/SOFTWARE/Software预览图/2015-Finger-writing with SmartwatchA Case for Finger and Hand Gesture Recognition using Smartwatch.png",
+      "pdfFile": "2015-Finger-writing with SmartwatchA Case for Finger and Hand Gesture Recognition using Smartwatch.pdf",
+      "pdfPath": "Papers/SOFTWARE/2015-Finger-writing with SmartwatchA Case for Finger and Hand Gesture Recognition using Smartwatch.pdf",
+      "doi": "https://doi.org/10.1145/2699343.2699350",
+      "authors": "Chao Xu; Parth H. Pathak; Prasant Mohapatra",
+      "journal": "Proceedings of the 16th International Workshop on Mobile Computing Systems and Applications",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 28,
+      "title": "Gunslinger Subtle arms-down mid-air interaction",
+      "year": "2015",
+      "category": "GestureDesign",
+      "hardwareDevices": [
+        "TouchScreen",
+        "Wearables",
+        "WearableSensor"
+      ],
+      "sensingTechnology": [
+        "ComputerVision",
+        "Depth",
+        "FingerTracking",
+        "GestureRecognition",
+        "HandTracking",
+        "Optical",
+        "StaticGesture"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "Audio",
+        "InAir",
+        "MultiModal",
+        "NonContact",
+        "RealTime",
+        "Visual"
+      ],
+      "gestureTypes": [
+        "Directional",
+        "DualHand",
+        "Hold",
+        "Pinch",
+        "SingleHand",
+        "Tap",
+        "ThumbIndex"
+      ],
+      "applicationScenarios": [
+        "MediaControl",
+        "Navigation",
+        "ObjectManipulation"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "DiscreetInput",
+        "HandsFree",
+        "LowLatency",
+        "MidasTouch",
+        "OcclusionAvoid",
+        "OneHandUse",
+        "TouchOptimized"
+      ],
+      "tags": [],
+      "image": "Papers/GestureDesign/GestureDesign预览图/2015-Gunslinger Subtle arms-down mid-air interaction.png",
+      "pdfFile": "2015-Gunslinger Subtle arms-down mid-air interaction.pdf",
+      "pdfPath": "Papers/GestureDesign/2015-Gunslinger Subtle arms-down mid-air interaction.pdf",
+      "doi": "https://doi.org/10.1145/2807442.2807489",
+      "authors": "Mingyu Liu; Mathieu Nancel; Daniel Vogel",
+      "journal": "Proceedings of the 28th Annual ACM Symposium on User Interface Software &amp; Technology",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 29,
+      "title": "Iskinflexible, stretchable and visually customizable on-body touch sensors for mobile computing",
+      "year": "2015",
+      "category": "hardware",
+      "hardwareDevices": [
+        "SmartGlasses",
+        "SmartRing",
+        "SmartWatch",
+        "Wearables",
+        "WearableSensor"
+      ],
+      "sensingTechnology": [
+        "Capacitive",
+        "FingerTracking",
+        "GestureRecognition",
+        "OtherTechnology",
+        "Pressure",
+        "StaticGesture"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "BodyContact",
+        "ContactBased",
+        "DirectTouch",
+        "Haptic",
+        "RealTime",
+        "Visual"
+      ],
+      "gestureTypes": [
+        "MultiTouch",
+        "Pinch",
+        "SingleHand",
+        "Swipe",
+        "Tap"
+      ],
+      "applicationScenarios": [
+        "MediaControl",
+        "Navigation",
+        "TextInput"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "DiscreetInput",
+        "EyesFree",
+        "HighAccuracy",
+        "OneHandUse",
+        "PortableDesign",
+        "SocialAcceptability"
+      ],
+      "tags": [],
+      "image": "Papers/HARDWARE/Hardware预览图/2015-Iskinflexible, stretchable and visually customizable on-body touch sensors for mobile computing.png",
+      "pdfFile": "2015-Iskinflexible, stretchable and visually customizable on-body touch sensors for mobile computing.pdf",
+      "pdfPath": "Papers/HARDWARE/2015-Iskinflexible, stretchable and visually customizable on-body touch sensors for mobile computing.pdf",
+      "doi": "https://doi.org/10.1145/2702123.2702391",
+      "authors": "Martin Weigel; Tong Lu; Gilles Bailly; Antti Oulasvirta; Carmel Majidi; Jürgen Steimle",
+      "journal": "Proceedings of the 33rd Annual ACM Conference on Human Factors in Computing Systems",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 30,
+      "title": "PalmTypeUsing palms as keyboards for smart glasses",
+      "year": "2015",
+      "category": "GestureDesign",
+      "hardwareDevices": [
+        "SmartGlasses",
+        "WearableSensor"
+      ],
+      "sensingTechnology": [
+        "FingerTracking",
+        "GestureRecognition",
+        "Optical",
+        "OtherTechnology",
+        "StaticGesture"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "BodyContact",
+        "ContactBased",
+        "RealTime",
+        "Visual"
+      ],
+      "gestureTypes": [
+        "SingleHand",
+        "Tap",
+        "ThumbIndex"
+      ],
+      "applicationScenarios": [
+        "AR",
+        "TextInput"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "Elicitation",
+        "EyesFree",
+        "HandsFree",
+        "OneHandUse",
+        "QWERTYLayout",
+        "SocialAcceptability"
+      ],
+      "tags": [],
+      "image": "Papers/GestureDesign/GestureDesign预览图/2015-PalmTypeUsing palms as keyboards for smart glasses.png",
+      "pdfFile": "2015-PalmTypeUsing palms as keyboards for smart glasses.pdf",
+      "pdfPath": "Papers/GestureDesign/2015-PalmTypeUsing palms as keyboards for smart glasses.pdf",
+      "doi": "https://doi.org/10.1145/2785830.2785886",
+      "authors": "Cheng-Yao Wang; Wei-Chen Chu; Po-Tsung Chiu; Min-Chieh Hsiu; Yih-Harn Chiang; Mike Y. Chen",
+      "journal": "Proceedings of the 17th International Conference on Human-Computer Interaction with Mobile Devices and Services",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 31,
+      "title": "TIMMiFinger-worn textile input device with multimodal sensing in mobile interaction",
+      "year": "2015",
+      "category": "hardware",
+      "hardwareDevices": [
+        "E-textile",
+        "SmartRing",
+        "Wearables",
+        "WearableSensor"
+      ],
+      "sensingTechnology": [
+        "ContinuousGesture",
+        "FingerTracking",
+        "GestureRecognition",
+        "OtherTechnology",
+        "Pressure"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "ContactBased",
+        "DeviceContact",
+        "Haptic",
+        "MultiModal",
+        "RealTime"
       ],
       "gestureTypes": [
         "Flex",
         "SingleHand",
         "Swipe",
         "Tap",
-        "Thumb-Index"
+        "ThumbIndex"
       ],
       "applicationScenarios": [
         "MediaControl",
         "OtherScenarios"
       ],
-      "feedbackOutput": [
-        "HapticFeedback",
-        "RealTimeFeedback"
-      ],
+      "feedbackOutput": [],
       "userExperienceDesign": [
         "DiscreetInput",
         "EyesFree",
@@ -7594,14 +1596,19 @@ const PAPERS_DATA = {
         "PortableDesign",
         "SocialAcceptability"
       ],
-      "image": "Papers/HARDWARE/Hardware预览图/2015-TIMMi Finger-worn Textile Input Device with Multimodal Sensing in Mobile Interaction.png",
+      "tags": [],
+      "image": "Papers/HARDWARE/Hardware预览图/2015-TIMMiFinger-worn textile input device with multimodal sensing in mobile interaction.png",
+      "pdfFile": "2015-TIMMiFinger-worn textile input device with multimodal sensing in mobile interaction.pdf",
+      "pdfPath": "Papers/HARDWARE/2015-TIMMiFinger-worn textile input device with multimodal sensing in mobile interaction.pdf",
       "doi": "https://doi.org/10.1145/2677199.2680560",
-      "authors": "Yoon Sang Ho, Huo Ke, Nguyen Vinh P., Ramani Karthik",
-      "journal": "TEI '15: Ninth International Conference on Tangible, Embedded, and Embodied Interaction"
+      "authors": "Sang Ho Yoon; Ke Huo; Vinh P. Nguyen; Karthik Ramani",
+      "journal": "Proceedings of the Ninth International Conference on Tangible, Embedded, and Embodied Interaction",
+      "url": "",
+      "source": "metadata_completed_workbook"
     },
     {
-      "id": 167,
-      "title": "User-Defined Game Input for Smart Glasses in Public Space",
+      "id": 32,
+      "title": "User-defined game input for smart glasses in public space",
       "year": "2015",
       "category": "GestureDesign",
       "hardwareDevices": [
@@ -7609,23 +1616,24 @@ const PAPERS_DATA = {
       ],
       "sensingTechnology": [
         "ComputerVision",
-        "MotionSensor",
-        "OpticalTracking"
-      ],
-      "recognitionClassification": [
         "FingerTracking",
         "GestureRecognition",
-        "HandTracking"
+        "HandTracking",
+        "Motion",
+        "Optical"
       ],
+      "recognitionClassification": [],
       "interactionModalities": [
-        "BodyContactGesture",
+        "Audio",
+        "BodyContact",
         "ContactBased",
-        "InAirGesture",
-        "MultiModalInteraction",
-        "NonContactBased"
+        "InAir",
+        "MultiModal",
+        "NonContact",
+        "Visual"
       ],
       "gestureTypes": [
-        "DirectionalGesture",
+        "Directional",
         "SingleHand",
         "Swipe",
         "Tap"
@@ -7634,51 +1642,259 @@ const PAPERS_DATA = {
         "AR",
         "Gaming"
       ],
-      "feedbackOutput": [
-        "AudioFeedback",
-        "VisualFeedback"
-      ],
+      "feedbackOutput": [],
       "userExperienceDesign": [
         "DiscreetInput",
-        "ElicitationStudy",
+        "Elicitation",
         "EyesFree",
         "HandsFree",
         "SocialAcceptability"
       ],
+      "tags": [],
       "image": "Papers/GestureDesign/GestureDesign预览图/2015-User-Defined Game Input for Smart Glasses in Public Space.png",
+      "pdfFile": "2015-User-Defined Game Input for Smart Glasses in Public Space.pdf",
+      "pdfPath": "Papers/GestureDesign/2015-User-Defined Game Input for Smart Glasses in Public Space.pdf",
       "doi": "https://doi.org/10.1145/2702123.2702214",
-      "authors": "Tung Ying-Chao, Hsu Chun-Yen, Wang Han-Yu, Chyou Silvia, Lin Jhe-Wei, Wu Pei-Jung, Valstar Andries, Chen Mike Y.",
-      "journal": "CHI '15: CHI Conference on Human Factors in Computing Systems"
+      "authors": "Ying-Chao Tung; Chun-Yen Hsu; Han-Yu Wang; Silvia Chyou; Jhe-Wei Lin; Pei-Jung Wu; Andries Valstar; Mike Y. Chen",
+      "journal": "Proceedings of the 33rd Annual ACM Conference on Human Factors in Computing Systems",
+      "url": "",
+      "source": "metadata_completed_workbook"
     },
     {
-      "id": 168,
-      "title": "zSense Enabling Shallow Depth Gesture Recognition for Greater Input Expressivity on Smart Wearables",
-      "year": "2015",
-      "category": "hardware",
+      "id": 33,
+      "title": "DigitspacDesigning thumb-to-fingers touch interfaces for one-handed and eyes-free interactions",
+      "year": "2016",
+      "category": "GestureDesign",
       "hardwareDevices": [
-        "SmartGlasses",
-        "SmartRing",
         "SmartWatch",
-        "WearableSensor",
+        "Wearables",
+        "WearableSensor"
+      ],
+      "sensingTechnology": [
+        "DynamicGesture",
+        "GestureRecognition",
+        "Optical",
+        "OtherTechnology",
+        "StaticGesture"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "BodyContact",
+        "ContactBased",
+        "DirectTouch",
+        "Haptic",
+        "Visual"
+      ],
+      "gestureTypes": [
+        "SingleHand",
+        "Swipe",
+        "Tap",
+        "ThumbIndex"
+      ],
+      "applicationScenarios": [
+        "MediaControl",
+        "TextInput"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "Elicitation",
+        "EyesFree",
+        "HighAccuracy",
+        "OneHandUse",
+        "PortableDesign",
+        "UserAdaptation"
+      ],
+      "tags": [],
+      "image": "Papers/GestureDesign/GestureDesign预览图/2016-DigitspacDesigning thumb-to-fingers touch interfaces for one-handed and eyes-free interactions.png",
+      "pdfFile": "2016-DigitspacDesigning thumb-to-fingers touch interfaces for one-handed and eyes-free interactions.pdf",
+      "pdfPath": "Papers/GestureDesign/2016-DigitspacDesigning thumb-to-fingers touch interfaces for one-handed and eyes-free interactions.pdf",
+      "doi": "https://doi.org/10.1145/2858036.2858483",
+      "authors": "Da-Yuan Huang; Liwei Chan; Shuo Yang; Fan Wang; Rong-Hao Liang; De-Nian Yang; Yi-Ping Hung; Bing-Yu Chen",
+      "journal": "Proceedings of the 2016 CHI Conference on Human Factors in Computing Systems",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 34,
+      "title": "Exploring Non-touchscreen Gestures for Smartwatches",
+      "year": "2016",
+      "category": "GestureDesign",
+      "hardwareDevices": [
+        "SmartWatch",
         "Wearables"
       ],
       "sensingTechnology": [
-        "DepthSensing",
-        "OtherTechnology"
-      ],
-      "recognitionClassification": [
-        "ContinuousRecognition",
-        "DynamicGestureRecognition",
         "FingerTracking",
         "GestureRecognition",
-        "StaticGestureRecognition"
+        "HandTracking",
+        "Motion",
+        "Optical"
       ],
+      "recognitionClassification": [],
       "interactionModalities": [
-        "InAirGesture",
-        "NonContactBased"
+        "DeviceContact",
+        "Haptic",
+        "InAir",
+        "MultiModal",
+        "Visual"
       ],
       "gestureTypes": [
-        "DirectionalGesture",
+        "Directional",
+        "Pinch",
+        "SingleHand",
+        "Swipe",
+        "Tap",
+        "Rotation"
+      ],
+      "applicationScenarios": [
+        "MediaControl",
+        "Navigation"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "DiscreetInput",
+        "Elicitation",
+        "FatFinger",
+        "OcclusionAvoid",
+        "SmallScreen",
+        "SocialAcceptability"
+      ],
+      "tags": [],
+      "image": "Papers/GestureDesign/GestureDesign预览图/2016-Exploring Non-touchscreen Gestures for Smartwatches.png",
+      "pdfFile": "2016-Exploring Non-touchscreen Gestures for Smartwatches.pdf",
+      "pdfPath": "Papers/GestureDesign/2016-Exploring Non-touchscreen Gestures for Smartwatches.pdf",
+      "doi": "https://doi.org/10.1145/2858036.2858385",
+      "authors": "Shaikh Shawon Arefin Shimon; Courtney Lutton; Zichun Xu; Sarah Morrison-Smith; Christina Boucher; Jaime Ruiz",
+      "journal": "Proceedings of the 2016 CHI Conference on Human Factors in Computing Systems",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 35,
+      "title": "Fine-grained gesture recognition using WiFi",
+      "year": "2016",
+      "category": "software",
+      "hardwareDevices": [
+        "OtherDevices"
+      ],
+      "sensingTechnology": [
+        "DynamicGesture",
+        "GestureRecognition",
+        "Motion",
+        "RFSensing"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "InAir",
+        "NonContact",
+        "RealTime"
+      ],
+      "gestureTypes": [
+        "Directional",
+        "SingleHand",
+        "Swipe"
+      ],
+      "applicationScenarios": [
+        "Gaming",
+        "SmartHome"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "HandsFree",
+        "HighAccuracy",
+        "LowLatency"
+      ],
+      "tags": [],
+      "image": "Papers/SOFTWARE/Software预览图/2016-Fine-grained gesture recognition using WiFi.png",
+      "pdfFile": "2016-Fine-grained gesture recognition using WiFi.pdf",
+      "pdfPath": "Papers/SOFTWARE/2016-Fine-grained gesture recognition using WiFi.pdf",
+      "doi": "https://doi.org/10.1109/infcomw.2016.7562082",
+      "authors": "Sheng Tan; Jie Yang",
+      "journal": "2016 IEEE Conference on Computer Communications Workshops (INFOCOM WKSHPS)",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 36,
+      "title": "HandLoga deformable tangible device for continuous input through finger flexion",
+      "year": "2016",
+      "category": "hardware",
+      "hardwareDevices": [
+        "HapticDevice",
+        "OtherDevices"
+      ],
+      "sensingTechnology": [
+        "ContinuousGesture",
+        "DynamicGesture",
+        "FingerTracking",
+        "GestureRecognition",
+        "OtherTechnology",
+        "Pressure"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "ContactBased",
+        "DeviceContact",
+        "Haptic",
+        "Proprioceptive",
+        "RealTime",
+        "Tangible",
+        "Visual"
+      ],
+      "gestureTypes": [
+        "Flex",
+        "SingleHand",
+        "ThumbIndex"
+      ],
+      "applicationScenarios": [
+        "Gaming",
+        "Healthcare",
+        "MediaControl",
+        "SmartHome"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "HighAccuracy",
+        "OneHandUse",
+        "PortableDesign",
+        "UserAdaptation"
+      ],
+      "tags": [],
+      "image": "Papers/HARDWARE/Hardware预览图/2016-HandLoga deformable tangible device for continuous input through finger flexion.png",
+      "pdfFile": "2016-HandLoga deformable tangible device for continuous input through finger flexion.pdf",
+      "pdfPath": "Papers/HARDWARE/2016-HandLoga deformable tangible device for continuous input through finger flexion.pdf",
+      "doi": "https://doi.org/10.1145/3010915.3010933",
+      "authors": "Tristan Beven; Thuong Hoang; Marcus Carter; Bernd Ploderer",
+      "journal": "Proceedings of the 28th Australian Conference on Computer-Human Interaction - OzCHI '16",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 37,
+      "title": "Interacting with soliExploring fine-grained dynamic gesture recognition in the radio-frequency spectrum",
+      "year": "2016",
+      "category": "hardware",
+      "hardwareDevices": [
+        "OtherDevices",
+        "Wearables",
+        "WearableSensor"
+      ],
+      "sensingTechnology": [
+        "ContinuousGesture",
+        "DynamicGesture",
+        "GestureRecognition",
+        "MotionAnalysis",
+        "Radar",
+        "RFSensing"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "InAir",
+        "NonContact",
+        "Visual"
+      ],
+      "gestureTypes": [
+        "Directional",
         "Pinch",
         "SingleHand",
         "Swipe",
@@ -7686,7992 +1902,7000 @@ const PAPERS_DATA = {
       ],
       "applicationScenarios": [
         "MediaControl",
-        "Navigation"
+        "ObjectManipulation",
+        "SmartHome"
       ],
-      "feedbackOutput": [
-        "RealTimeFeedback"
-      ],
+      "feedbackOutput": [],
       "userExperienceDesign": [
         "DiscreetInput",
         "EyesFree",
         "HandsFree",
         "HighAccuracy",
         "LowLatency",
-        "OneHandUse",
-        "PortableDesign",
-        "SmallScreen"
+        "OcclusionAvoid",
+        "PortableDesign"
       ],
-      "image": "Papers/HARDWARE/Hardware预览图/2015-zSense Enabling Shallow Depth Gesture Recognition for Greater Input Expressivity on Smart Wearables.png",
-      "doi": "https://doi.org/10.1145/2702123.2702371",
-      "authors": "Withana Anusha, Peiris Roshan, Samarasekara Nipuna, Nanayakkara Suranga",
-      "journal": "CHI '15: CHI Conference on Human Factors in Computing Systems"
+      "tags": [],
+      "image": "Papers/HARDWARE/Hardware预览图/2016-Interacting with soliExploring fine-grained dynamic gesture recognition in the radio-frequency spectrum.png",
+      "pdfFile": "2016-Interacting with soliExploring fine-grained dynamic gesture recognition in the radio-frequency spectrum.pdf",
+      "pdfPath": "Papers/HARDWARE/2016-Interacting with soliExploring fine-grained dynamic gesture recognition in the radio-frequency spectrum.pdf",
+      "doi": "https://doi.org/10.1145/2984511.2984565",
+      "authors": "Saiwen Wang; Jie Song; Jaime Lien; Ivan Poupyrev; Otmar Hilliges",
+      "journal": "Proceedings of the 29th Annual Symposium on User Interface Software and Technology",
+      "url": "",
+      "source": "metadata_completed_workbook"
     },
     {
-      "id": 171,
-      "title": "A Usability User Study Concerning Free-Hand Microgesture and Wrist-Worn Sensors",
-      "year": "2014",
+      "id": 38,
+      "title": "Microgesture detection for remote interaction with mobile devices",
+      "year": "2016",
+      "category": "hardware",
+      "hardwareDevices": [
+        "Smartphone",
+        "SmartRing",
+        "Wearables",
+        "WearableSensor"
+      ],
+      "sensingTechnology": [
+        "Accelerometer",
+        "ContinuousGesture",
+        "DynamicGesture",
+        "FingerTracking",
+        "GestureRecognition",
+        "Gyroscope",
+        "IMU",
+        "Motion"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "DeviceContact",
+        "NonContact",
+        "RealTime",
+        "Visual"
+      ],
+      "gestureTypes": [
+        "Directional",
+        "SingleHand",
+        "Swipe",
+        "Tap",
+        "ThumbIndex"
+      ],
+      "applicationScenarios": [
+        "InVehicle",
+        "IoT",
+        "MediaControl",
+        "Navigation"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "DiscreetInput",
+        "Encumbered",
+        "EyesFree",
+        "HandsFree",
+        "MidasTouch",
+        "OneHandUse",
+        "PortableDesign",
+        "SocialAcceptability"
+      ],
+      "tags": [],
+      "image": "Papers/HARDWARE/Hardware预览图/2016-Microgesture detection for remote interaction with mobile devices.png",
+      "pdfFile": "2016-Microgesture detection for remote interaction with mobile devices.pdf",
+      "pdfPath": "Papers/HARDWARE/2016-Microgesture detection for remote interaction with mobile devices.pdf",
+      "doi": "https://doi.org/10.1145/2957265.2961865",
+      "authors": "Katrin Wolf; Sven Mayer; Stephan Meyer",
+      "journal": "Proceedings of the 18th International Conference on Human-Computer Interaction with Mobile Devices and Services Adjunct",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 39,
+      "title": "Mudra User-friendly Fine-grained Gesture Recognition using WiFi Signals",
+      "year": "2016",
       "category": "software",
       "hardwareDevices": [
-        "WearableSensor",
+        "OtherDevices"
+      ],
+      "sensingTechnology": [
+        "DynamicGesture",
+        "GestureRecognition",
+        "Motion",
+        "RFSensing"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "InAir",
+        "NonContact",
+        "RealTime"
+      ],
+      "gestureTypes": [
+        "Directional",
+        "SingleHand",
+        "Swipe"
+      ],
+      "applicationScenarios": [
+        "Accessibility",
+        "Healthcare",
+        "OtherScenarios"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "HandsFree",
+        "HighAccuracy",
+        "UserAdaptation"
+      ],
+      "tags": [],
+      "image": "Papers/SOFTWARE/Software预览图/2016-Mudra User-friendly Fine-grained Gesture Recognition using WiFi Signals.png",
+      "pdfFile": "2016-Mudra User-friendly Fine-grained Gesture Recognition using WiFi Signals.pdf",
+      "pdfPath": "Papers/SOFTWARE/2016-Mudra User-friendly Fine-grained Gesture Recognition using WiFi Signals.pdf",
+      "doi": "https://doi.org/10.1145/2999572.2999582",
+      "authors": "Ouyang Zhang; Kannan Srinivasan",
+      "journal": "Proceedings of the 12th International on Conference on emerging Networking EXperiments and Technologies",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 40,
+      "title": "RingteractionCoordinated Thumb-index Interaction Using a Ring",
+      "year": "2016",
+      "category": "GestureDesign",
+      "hardwareDevices": [
+        "Smartphone",
+        "SmartRing",
         "Wearables"
       ],
       "sensingTechnology": [
-        "ComputerVision",
-        "DepthSensing",
-        "OtherTechnology"
+        "GestureRecognition"
       ],
-      "recognitionClassification": [
-        "FingerTracking",
-        "GestureRecognition",
-        "StaticGestureRecognition"
-      ],
+      "recognitionClassification": [],
       "interactionModalities": [
-        "NonContactBased"
+        "ContactBased",
+        "DeviceContact"
       ],
       "gestureTypes": [
-        "DualHand",
-        "Flex",
-        "Pinch",
-        "SingleHand"
+        "SingleHand",
+        "ThumbIndex"
       ],
       "applicationScenarios": [
-        "IndustryApplication",
+        "OtherScenarios"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "DiscreetInput",
+        "OneHandUse",
+        "SocialAcceptability"
+      ],
+      "tags": [],
+      "image": "Papers/GestureDesign/GestureDesign预览图/2016-RingteractionCoordinated Thumb-index Interaction Using a Ring.png",
+      "pdfFile": "2016-RingteractionCoordinated Thumb-index Interaction Using a Ring.pdf",
+      "pdfPath": "Papers/GestureDesign/2016-RingteractionCoordinated Thumb-index Interaction Using a Ring.pdf",
+      "doi": "https://doi.org/10.1145/2851581.2892371",
+      "authors": "Sarthak Ghosh; Hyeong Cheol Kim; Yang Cao; Arne Wessels; Simon T. Perrault; Shengdong Zhao",
+      "journal": "Proceedings of the 2016 CHI Conference Extended Abstracts on Human Factors in Computing Systems",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 41,
+      "title": "SkinTrackUsing the Body as an Electrical Waveguide for Continuous Finger Tracking on the Skin",
+      "year": "2016",
+      "category": "hardware",
+      "hardwareDevices": [
+        "SmartRing",
+        "Wearables"
+      ],
+      "sensingTechnology": [
+        "ContinuousGesture",
+        "FingerTracking",
+        "RFSensing"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "BodyContact",
+        "ContactBased",
+        "DirectTouch",
+        "RealTime"
+      ],
+      "gestureTypes": [
+        "SingleHand",
+        "Swipe",
+        "Tap"
+      ],
+      "applicationScenarios": [
+        "OtherScenarios"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "EyesFree",
+        "HighAccuracy",
+        "OcclusionAvoid",
+        "PortableDesign"
+      ],
+      "tags": [],
+      "image": "Papers/HARDWARE/Hardware预览图/2016-SkinTrackUsing the Body as an Electrical Waveguide for Continuous Finger Tracking on the Skin.png",
+      "pdfFile": "2016-SkinTrackUsing the Body as an Electrical Waveguide for Continuous Finger Tracking on the Skin.pdf",
+      "pdfPath": "Papers/HARDWARE/2016-SkinTrackUsing the Body as an Electrical Waveguide for Continuous Finger Tracking on the Skin.pdf",
+      "doi": "https://doi.org/10.1145/2858036.2858082",
+      "authors": "Yang Zhang; Junhan Zhou; Gierad Laput; Chris Harrison",
+      "journal": "Proceedings of the 2016 CHI Conference on Human Factors in Computing Systems",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 42,
+      "title": "SoliUbiquitous gesture sensing with millimeter wave radar",
+      "year": "2016",
+      "category": "hardware",
+      "hardwareDevices": [
+        "OtherDevices",
+        "SmartWatch",
+        "VRHeadset",
+        "Wearables"
+      ],
+      "sensingTechnology": [
+        "3DPoseEstimation",
+        "ContinuousGesture",
+        "DynamicGesture",
+        "FingerTracking",
+        "GestureRecognition",
+        "Motion",
+        "Radar",
+        "RFSensing"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "Haptic",
+        "InAir",
+        "NonContact",
+        "RealTime",
+        "Tangible",
+        "Visual"
+      ],
+      "gestureTypes": [
+        "Pinch",
+        "SingleHand",
+        "Swipe",
+        "Tap",
+        "ThumbIndex"
+      ],
+      "applicationScenarios": [
+        "Gaming",
+        "IoT",
         "MediaControl",
         "Navigation",
-        "TextInput"
+        "SmartHome",
+        "VR"
       ],
-      "feedbackOutput": [
-        "RealTimeFeedback",
-        "VisualFeedback"
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "HandsFree",
+        "HighAccuracy",
+        "LowLatency",
+        "OcclusionAvoid",
+        "PortableDesign",
+        "SocialAcceptability"
       ],
+      "tags": [],
+      "image": "Papers/HARDWARE/Hardware预览图/2016-SoliUbiquitous gesture sensing with millimeter wave radar.png",
+      "pdfFile": "2016-SoliUbiquitous gesture sensing with millimeter wave radar.pdf",
+      "pdfPath": "Papers/HARDWARE/2016-SoliUbiquitous gesture sensing with millimeter wave radar.pdf",
+      "doi": "https://doi.org/10.1145/2897824.2925953",
+      "authors": "Jaime Lien; Nicholas Gillian; M. Emre Karagozler; Patrick Amihood; Carsten Schwesig; Erik Olson; Hakim Raja; Ivan Poupyrev",
+      "journal": "ACM Transactions on Graphics",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 43,
+      "title": "The Performance and Preference of Different Fingers and Chords for Pointing, Dragging, and Object Transformation",
+      "year": "2016",
+      "category": "GestureDesign",
+      "hardwareDevices": [
+        "Tablet",
+        "TouchScreen"
+      ],
+      "sensingTechnology": [
+        "Capacitive",
+        "DynamicGesture",
+        "FingerTracking",
+        "GestureRecognition",
+        "HandTracking",
+        "StaticGesture"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "ContactBased",
+        "DirectTouch",
+        "MultiModal",
+        "RealTime",
+        "Visual"
+      ],
+      "gestureTypes": [
+        "Directional",
+        "DualHand",
+        "Hold",
+        "MultiTouch",
+        "Pinch",
+        "SingleHand",
+        "Tap",
+        "ThumbIndex"
+      ],
+      "applicationScenarios": [
+        "ObjectManipulation"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "HighAccuracy",
+        "LowLatency",
+        "TouchOptimized",
+        "UserAdaptation"
+      ],
+      "tags": [],
+      "image": "Papers/GestureDesign/GestureDesign预览图/2016-The Performance and Preference of Different Fingers and Chords for Pointing, Dragging, and Object Transformation.png",
+      "pdfFile": "2016-The Performance and Preference of Different Fingers and Chords for Pointing, Dragging, and Object Transformation.pdf",
+      "pdfPath": "Papers/GestureDesign/2016-The Performance and Preference of Different Fingers and Chords for Pointing, Dragging, and Object Transformation.pdf",
+      "doi": "https://doi.org/10.1145/2858036.2858194",
+      "authors": "Alix Goguey; Mathieu Nancel; Géry Casiez; Daniel Vogel",
+      "journal": "Proceedings of the 2016 CHI Conference on Human Factors in Computing Systems",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 44,
+      "title": "ThumbRingprivate interactions using one-handed thumb motion input on finger segments",
+      "year": "2016",
+      "category": "hardware",
+      "hardwareDevices": [
+        "ARGlasses",
+        "SmartGlasses",
+        "SmartRing",
+        "Wearables"
+      ],
+      "sensingTechnology": [
+        "3DPoseEstimation",
+        "Accelerometer",
+        "GestureRecognition",
+        "Gyroscope",
+        "IMU",
+        "Magnetometer",
+        "Motion",
+        "MotionAnalysis",
+        "StaticGesture"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "BodyContact",
+        "ContactBased",
+        "DirectTouch",
+        "Haptic",
+        "Visual"
+      ],
+      "gestureTypes": [
+        "SingleHand",
+        "Swipe",
+        "Tap",
+        "ThumbIndex"
+      ],
+      "applicationScenarios": [
+        "AR",
+        "MediaControl",
+        "Navigation"
+      ],
+      "feedbackOutput": [],
       "userExperienceDesign": [
         "DiscreetInput",
         "HighAccuracy",
         "OneHandUse",
-        "SocialAcceptability",
-        "UserAdaptation"
+        "PortableDesign",
+        "SocialAcceptability"
       ],
-      "image": "Papers/SOFTWARE/Software预览图/2014-A Usability User Study Concerning Free-Hand Microgesture and Wrist-Worn Sensors.png",
-      "doi": "https://doi.org/10.1109/BSN.2014.32",
-      "authors": "Way David, Paradiso Joseph",
-      "journal": "2014 11th International Conference on Wearable and Implantable Body Sensor Networks (BSN)"
+      "tags": [],
+      "image": "Papers/HARDWARE/Hardware预览图/2016-ThumbRingprivate interactions using one-handed thumb motion input on finger segments.png",
+      "pdfFile": "2016-ThumbRingprivate interactions using one-handed thumb motion input on finger segments.pdf",
+      "pdfPath": "Papers/HARDWARE/2016-ThumbRingprivate interactions using one-handed thumb motion input on finger segments.pdf",
+      "doi": "https://doi.org/10.1145/2957265.2961859",
+      "authors": "Hsin-Ruey Tsai; Cheng-Yuan Wu; Lee-Ting Huang; Yi-Ping Hung",
+      "journal": "Proceedings of the 18th International Conference on Human-Computer Interaction with Mobile Devices and Services Adjunct",
+      "url": "",
+      "source": "metadata_completed_workbook"
     },
     {
-      "id": 172,
-      "title": "A Taxonomy of Microinteractions Defining Microgestures based on Ergonomic and Scenario-dependent Requirements",
-      "year": "2011",
-      "category": "GestureDesign",
+      "id": 45,
+      "title": "TouchRing subtle and always-available input using a multi-touch ring",
+      "year": "2016",
+      "category": "hardware",
       "hardwareDevices": [
-        "WearableSensor",
+        "SmartGlasses",
+        "SmartRing",
+        "TouchScreen",
         "Wearables"
       ],
       "sensingTechnology": [
-        "Accelerometer",
-        "DepthSensing",
-        "EMG",
-        "PressureSensor"
+        "Capacitive",
+        "DynamicGesture",
+        "GestureRecognition",
+        "OtherTechnology"
       ],
-      "recognitionClassification": [
-        "FingerTracking",
-        "GestureRecognition"
-      ],
+      "recognitionClassification": [],
       "interactionModalities": [
         "ContactBased",
-        "MultiModalInteraction"
+        "DirectTouch",
+        "Haptic",
+        "MultiModal",
+        "Visual"
       ],
       "gestureTypes": [
-        "Grasp",
+        "MultiTouch",
+        "SingleHand",
+        "Swipe",
+        "Tap",
+        "ThumbIndex"
+      ],
+      "applicationScenarios": [
+        "MediaControl",
+        "Navigation"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "DiscreetInput",
+        "OneHandUse",
+        "PortableDesign",
+        "SocialAcceptability",
+        "TouchOptimized",
+        "AlwaysAvailable"
+      ],
+      "tags": [],
+      "image": "Papers/HARDWARE/Hardware预览图/2016-TouchRing subtle and always-available input using a multi-touch ring.png",
+      "pdfFile": "2016-TouchRing subtle and always-available input using a multi-touch ring.pdf",
+      "pdfPath": "Papers/HARDWARE/2016-TouchRing subtle and always-available input using a multi-touch ring.pdf",
+      "doi": "https://doi.org/10.1145/2957265.2961860",
+      "authors": "Hsin-Ruey Tsai; Min-Chieh Hsiu; Jui-Chun Hsiao; Lee-Ting Huang; Mike Chen; Yi-Ping Hung",
+      "journal": "Proceedings of the 18th International Conference on Human-Computer Interaction with Mobile Devices and Services Adjunct",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 46,
+      "title": "User Elicitation on Single-hand Microgestures",
+      "year": "2016",
+      "category": "GestureDesign",
+      "hardwareDevices": [
+        "OtherDevices",
+        "Wearables"
+      ],
+      "sensingTechnology": [
+        "ComputerVision",
+        "FingerTracking",
+        "GestureRecognition",
+        "HandTracking"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "BodyContact",
+        "ContactBased",
+        "Visual"
+      ],
+      "gestureTypes": [
+        "Pinch",
+        "SingleHand",
+        "Swipe",
+        "Tap"
+      ],
+      "applicationScenarios": [
+        "MediaControl",
+        "ObjectManipulation",
+        "TextInput"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "Elicitation",
+        "EyesFree",
+        "OneHandUse",
+        "SocialAcceptability"
+      ],
+      "tags": [],
+      "image": "Papers/GestureDesign/GestureDesign预览图/2016-User Elicitation on Single-hand Microgestures.png",
+      "pdfFile": "2016-User Elicitation on Single-hand Microgestures.pdf",
+      "pdfPath": "Papers/GestureDesign/2016-User Elicitation on Single-hand Microgestures.pdf",
+      "doi": "https://doi.org/10.1145/2858036.2858589",
+      "authors": "Edwin Chan; Teddy Seyed; Wolfgang Stuerzlinger; Xing-Dong Yang; Frank Maurer",
+      "journal": "Proceedings of the 2016 CHI Conference on Human Factors in Computing Systems",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 47,
+      "title": "WiFinger leveraging commodity WiFi for fine-grained finger gesture recognition",
+      "year": "2016",
+      "category": "software",
+      "hardwareDevices": [
+        "OtherDevices"
+      ],
+      "sensingTechnology": [
+        "DynamicGesture",
+        "GestureRecognition",
+        "Motion",
+        "RFSensing"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "InAir",
+        "NonContact",
+        "RealTime"
+      ],
+      "gestureTypes": [
+        "Directional",
+        "SingleHand",
+        "Swipe"
+      ],
+      "applicationScenarios": [
+        "Gaming",
+        "SmartHome",
+        "VR"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "HandsFree",
+        "HighAccuracy",
+        "LowLatency"
+      ],
+      "tags": [],
+      "image": "Papers/SOFTWARE/Software预览图/2016-WiFinger leveraging commodity WiFi for fine-grained finger gesture recognition.png",
+      "pdfFile": "2016-WiFinger leveraging commodity WiFi for fine-grained finger gesture recognition.pdf",
+      "pdfPath": "Papers/SOFTWARE/2016-WiFinger leveraging commodity WiFi for fine-grained finger gesture recognition.pdf",
+      "doi": "https://doi.org/10.1145/2942358.2942393",
+      "authors": "Sheng Tan; Jie Yang",
+      "journal": "Proceedings of the 17th ACM International Symposium on Mobile Ad Hoc Networking and Computing",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 48,
+      "title": "WiFinger Talk to your smart devices with finger-grained gesture",
+      "year": "2016",
+      "category": "software",
+      "hardwareDevices": [
+        "OtherDevices",
+        "Smartphone"
+      ],
+      "sensingTechnology": [
+        "DynamicGesture",
+        "FingerTracking",
+        "GestureRecognition",
+        "MotionAnalysis",
+        "RFSensing"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "InAir",
+        "NonContact",
+        "Visual"
+      ],
+      "gestureTypes": [
+        "SignLanguage",
+        "SingleHand"
+      ],
+      "applicationScenarios": [
+        "SmartHome",
+        "TextInput"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "DiscreetInput",
+        "HandsFree",
+        "HighAccuracy"
+      ],
+      "tags": [],
+      "image": "Papers/SOFTWARE/Software预览图/2016-WiFinger Talk to your smart devices with finger-grained gesture.png",
+      "pdfFile": "2016-WiFinger Talk to your smart devices with finger-grained gesture.pdf",
+      "pdfPath": "Papers/SOFTWARE/2016-WiFinger Talk to your smart devices with finger-grained gesture.pdf",
+      "doi": "https://doi.org/10.1145/2971648.2971738",
+      "authors": "Hong Li; Wei Yang; Jianxin Wang; Yang Xu; Liusheng Huang",
+      "journal": "Proceedings of the 2016 ACM International Joint Conference on Pervasive and Ubiquitous Computing",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 49,
+      "title": "A new subtle hand gestures recognition algorithm based on EMG and FSR",
+      "year": "2017",
+      "category": "software",
+      "hardwareDevices": [
+        "Wearables",
+        "WearableSensor"
+      ],
+      "sensingTechnology": [
+        "EMG",
+        "GestureRecognition",
+        "Pressure",
+        "StaticGesture"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "NonContact",
+        "RealTime"
+      ],
+      "gestureTypes": [
+        "Flex",
+        "SingleHand"
+      ],
+      "applicationScenarios": [
+        "OtherScenarios"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "DiscreetInput",
+        "HighAccuracy",
+        "PortableDesign"
+      ],
+      "tags": [],
+      "image": "Papers/SOFTWARE/Software预览图/2017-A new subtle hand gestures recognition algorithm based on EMG and FSR.png",
+      "pdfFile": "2017-A new subtle hand gestures recognition algorithm based on EMG and FSR.pdf",
+      "pdfPath": "Papers/SOFTWARE/2017-A new subtle hand gestures recognition algorithm based on EMG and FSR.pdf",
+      "doi": "https://doi.org/10.1109/cscwd.2017.8066682",
+      "authors": "Bo Wan; Rongrong Wu; Kaihuo Zhang; Lanxin Liu",
+      "journal": "2017 IEEE 21st International Conference on Computer Supported Cooperative Work in Design (CSCWD)",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 50,
+      "title": "BikeGestureuser elicitation and performance of micro hand gesture as input for cycling",
+      "year": "2017",
+      "category": "hardware",
+      "hardwareDevices": [
+        "DataGloves",
+        "Wearables",
+        "WearableSensor"
+      ],
+      "sensingTechnology": [
+        "Accelerometer",
+        "Bio",
+        "FingerTracking",
+        "GestureRecognition",
+        "IMU",
+        "Pressure",
+        "StaticGesture"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "ContactBased",
+        "MultiModal",
+        "RealTime"
+      ],
+      "gestureTypes": [
+        "Flex",
+        "Grasp/Grip",
         "Pinch",
         "SingleHand",
         "Tap"
       ],
       "applicationScenarios": [
-        "InVehicleInteraction",
+        "Athletic",
+        "OtherScenarios"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "EyesFree",
+        "HandsFree",
+        "HighAccuracy",
+        "LowLatency",
+        "SocialAcceptability"
+      ],
+      "tags": [],
+      "image": "Papers/HARDWARE/Hardware预览图/2017-BikeGestureuser elicitation and performance of micro hand gesture as input for cycling.png",
+      "pdfFile": "2017-BikeGestureuser elicitation and performance of micro hand gesture as input for cycling.pdf",
+      "pdfPath": "Papers/HARDWARE/2017-BikeGestureuser elicitation and performance of micro hand gesture as input for cycling.pdf",
+      "doi": "https://doi.org/10.1145/3027063.3053075",
+      "authors": "Yanke Tan; Sang Ho Yoon; Karthik Ramani",
+      "journal": "Proceedings of the 2017 CHI Conference Extended Abstracts on Human Factors in Computing Systems",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 51,
+      "title": "DigitouchReconfigurable thumb-to-finger input and text entry on head-mounted displays",
+      "year": "2017",
+      "category": "hardware",
+      "hardwareDevices": [
+        "ARGlasses",
+        "DataGloves",
+        "VRHeadset",
+        "Wearables",
+        "WearableSensor"
+      ],
+      "sensingTechnology": [
+        "Capacitive",
+        "FingerTracking",
+        "GestureRecognition",
+        "Pressure"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "ContactBased",
+        "DeviceContact",
+        "Haptic",
+        "Proprioceptive",
+        "RealTime"
+      ],
+      "gestureTypes": [
+        "Hold",
+        "SingleHand",
+        "Swipe",
+        "Tap",
+        "ThumbIndex"
+      ],
+      "applicationScenarios": [
+        "AR",
+        "TextInput",
+        "VR"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "DiscreetInput",
+        "EyesFree",
+        "HighAccuracy",
+        "OcclusionAvoid",
+        "PortableDesign",
+        "QWERTYLayout",
+        "SocialAcceptability",
+        "UserAdaptation"
+      ],
+      "tags": [],
+      "image": "Papers/HARDWARE/Hardware预览图/2017-DigitouchReconfigurable thumb-to-finger input and text entry on head-mounted displays.png",
+      "pdfFile": "2017-DigitouchReconfigurable thumb-to-finger input and text entry on head-mounted displays.pdf",
+      "pdfPath": "Papers/HARDWARE/2017-DigitouchReconfigurable thumb-to-finger input and text entry on head-mounted displays.pdf",
+      "doi": "https://doi.org/10.1145/3130978",
+      "authors": "Eric Whitmire; Mohit Jain; Divye Jain; Greg Nelson; Ravi Karkar; Shwetak Patel; Mayank Goel",
+      "journal": "Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 52,
+      "title": "Evaluation of Microgesture Recognition Using a Smartwatch",
+      "year": "2017",
+      "category": "software",
+      "hardwareDevices": [
+        "SmartWatch",
+        "Wearables"
+      ],
+      "sensingTechnology": [
+        "Accelerometer",
+        "DynamicGesture",
+        "GestureRecognition",
+        "Gyroscope",
+        "IMU",
+        "Motion"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "InAir",
+        "NonContact",
+        "RealTime"
+      ],
+      "gestureTypes": [
+        "Directional",
+        "SingleHand"
+      ],
+      "applicationScenarios": [
+        "OtherScenarios"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "HighAccuracy",
+        "PortableDesign",
+        "UserAdaptation"
+      ],
+      "tags": [],
+      "image": "Papers/SOFTWARE/Software预览图/2017-Evaluation of Microgesture Recognition Using a Smartwatch.png",
+      "pdfFile": "2017-Evaluation of Microgesture Recognition Using a Smartwatch.pdf",
+      "pdfPath": "Papers/SOFTWARE/2017-Evaluation of Microgesture Recognition Using a Smartwatch.pdf",
+      "doi": "https://doi.org/10.1109/ICMLA.2017.00-24",
+      "authors": "Sonu Agarwal; Sanjay Ghosh; Gaurav Gupta",
+      "journal": "2017 16th IEEE International Conference on Machine Learning and Applications (ICMLA)",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 53,
+      "title": "FingerSoundRecognizing unistroke thumb gestures using a ring",
+      "year": "2017",
+      "category": "hardware",
+      "hardwareDevices": [
+        "SmartRing",
+        "SmartWatch",
+        "Wearables",
+        "WearableSensor"
+      ],
+      "sensingTechnology": [
+        "DynamicGesture",
+        "GestureRecognition",
+        "Gyroscope",
+        "Motion",
+        "MotionAnalysis",
+        "AcousticSensing"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "Audio",
+        "ContactBased",
+        "DeviceContact",
+        "Haptic",
+        "MultiModal",
+        "RealTime"
+      ],
+      "gestureTypes": [
+        "Directional",
+        "SingleHand",
+        "Swipe",
+        "ThumbIndex"
+      ],
+      "applicationScenarios": [
+        "AR",
+        "MediaControl",
+        "SmartHome",
+        "TextInput",
+        "VR"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "DiscreetInput",
+        "EyesFree",
+        "HighAccuracy",
+        "MidasTouch",
+        "PortableDesign",
+        "SocialAcceptability"
+      ],
+      "tags": [],
+      "image": "Papers/HARDWARE/Hardware预览图/2017-FingerSoundRecognizing unistroke thumb gestures using a ring.png",
+      "pdfFile": "2017-FingerSoundRecognizing unistroke thumb gestures using a ring.pdf",
+      "pdfPath": "Papers/HARDWARE/2017-FingerSoundRecognizing unistroke thumb gestures using a ring.pdf",
+      "doi": "https://doi.org/10.1145/3130985",
+      "authors": "Cheng Zhang; Anandghan Waghmare; Pranav Kundra; Yiming Pu; Scott Gilliland; Thomas Ploetz; Thad E. Starner; Omer T. Inan; Gregory D. Abowd",
+      "journal": "Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 54,
+      "title": "Gaze+ pinch interaction in virtual reality",
+      "year": "2017",
+      "category": "GestureDesign",
+      "hardwareDevices": [
+        "VRHeadset",
+        "Wearables"
+      ],
+      "sensingTechnology": [
+        "ComputerVision",
+        "GestureRecognition",
+        "HandTracking"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "GazeBased",
+        "InAir",
+        "MultiModal",
+        "NonContact",
+        "Visual"
+      ],
+      "gestureTypes": [
+        "Pinch",
+        "SingleHand"
+      ],
+      "applicationScenarios": [
+        "ObjectManipulation",
+        "VR"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "HandsFree",
+        "HighAccuracy",
+        "MidasTouch"
+      ],
+      "tags": [],
+      "image": "Papers/GestureDesign/GestureDesign预览图/2017-Gaze+ pinch interaction in virtual reality.png",
+      "pdfFile": "2017-Gaze+ pinch interaction in virtual reality.pdf",
+      "pdfPath": "Papers/GestureDesign/2017-Gaze+ pinch interaction in virtual reality.pdf",
+      "doi": "https://doi.org/10.1145/3131277.3132180",
+      "authors": "Ken Pfeuffer; Benedikt Mayer; Diako Mardanbegi; Hans Gellersen",
+      "journal": "Proceedings of the 5th Symposium on Spatial User Interaction",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 55,
+      "title": "Investigating microinteractions for people with visual impairments and the potential role of on-body interaction",
+      "year": "2017",
+      "category": "GestureDesign",
+      "hardwareDevices": [
+        "Smartphone",
+        "SmartWatch",
+        "Wearables",
+        "WearableSensor"
+      ],
+      "sensingTechnology": [
+        "ComputerVision",
+        "GestureRecognition",
+        "IMU",
+        "Motion",
+        "MotionAnalysis",
+        "OtherTechnology"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "Audio",
+        "BodyContact",
+        "ContactBased",
+        "MultiModal",
+        "RealTime"
+      ],
+      "gestureTypes": [
+        "SingleHand",
+        "Swipe",
+        "Tap"
+      ],
+      "applicationScenarios": [
+        "Accessibility",
+        "MediaControl",
+        "Navigation",
+        "OtherScenarios"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "EyesFree",
+        "OneHandUse",
+        "PortableDesign",
+        "SocialAcceptability",
+        "UserAdaptation"
+      ],
+      "tags": [],
+      "image": "Papers/GestureDesign/GestureDesign预览图/2017-Investigating microinteractions for people with visual impairments and the potential role of on-body interaction.png",
+      "pdfFile": "2017-Investigating microinteractions for people with visual impairments and the potential role of on-body interaction.pdf",
+      "pdfPath": "Papers/GestureDesign/2017-Investigating microinteractions for people with visual impairments and the potential role of on-body interaction.pdf",
+      "doi": "https://doi.org/10.1145/3132525.3132536",
+      "authors": "Uran Oh; Lee Stearns; Alisha Pradhan; Jon E. Froehlich; Leah Findlater",
+      "journal": "Proceedings of the 19th International ACM SIGACCESS Conference on Computers and Accessibility",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 56,
+      "title": "Optical MEMS index finger microgesture input sensor for mobile and wearable devices",
+      "year": "2017",
+      "category": "hardware",
+      "hardwareDevices": [
+        "Smartphone",
+        "SmartWatch",
+        "Wearables"
+      ],
+      "sensingTechnology": [
+        "ContinuousGesture",
+        "FingerTracking",
+        "GestureRecognition",
+        "Motion",
+        "Optical"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "InAir",
+        "NonContact",
+        "RealTime"
+      ],
+      "gestureTypes": [
+        "Directional",
+        "SingleHand",
+        "Swipe"
+      ],
+      "applicationScenarios": [
+        "TextInput"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "HighAccuracy",
+        "LowLatency",
+        "PortableDesign"
+      ],
+      "tags": [],
+      "image": "Papers/HARDWARE/Hardware预览图/2017-Optical MEMS index finger microgesture input sensor for mobile and wearable devices.png",
+      "pdfFile": "2017-Optical MEMS index finger microgesture input sensor for mobile and wearable devices.pdf",
+      "pdfPath": "Papers/HARDWARE/2017-Optical MEMS index finger microgesture input sensor for mobile and wearable devices.pdf",
+      "doi": "https://doi.org/10.1109/transducers.2017.7994035",
+      "authors": "Neil Sarkar; Brendan O'Hanlon; Geoffrey Lee; Duncan Strathearn; Mahdi Olfat; Arash Rohani; Raafat R. Mansour",
+      "journal": "2017 19th International Conference on Solid-State Sensors, Actuators and Microsystems (TRANSDUCERS)",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 57,
+      "title": "Pyro Thumb-tip gesture recognition using pyroelectric infrared sensing",
+      "year": "2017",
+      "category": "hardware",
+      "hardwareDevices": [
+        "OtherDevices",
+        "SmartGlasses",
+        "SmartWatch",
+        "Wearables",
+        "WearableSensor"
+      ],
+      "sensingTechnology": [
+        "Bio",
+        "DynamicGesture",
+        "FingerTracking",
+        "GestureRecognition",
+        "MotionAnalysis",
+        "ThermalSensing"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "DeviceContact",
+        "NonContact",
+        "RealTime",
+        "Visual"
+      ],
+      "gestureTypes": [
+        "Directional",
+        "SingleHand",
+        "ThumbIndex"
+      ],
+      "applicationScenarios": [
+        "MediaControl",
+        "OtherScenarios"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "DiscreetInput",
+        "EyesFree",
+        "HighAccuracy",
+        "OneHandUse",
+        "PortableDesign",
+        "SocialAcceptability"
+      ],
+      "tags": [],
+      "image": "Papers/HARDWARE/Hardware预览图/2017-Pyro Thumb-tip gesture recognition using pyroelectric infrared sensing.png",
+      "pdfFile": "2017-Pyro Thumb-tip gesture recognition using pyroelectric infrared sensing.pdf",
+      "pdfPath": "Papers/HARDWARE/2017-Pyro Thumb-tip gesture recognition using pyroelectric infrared sensing.pdf",
+      "doi": "https://doi.org/10.1145/3126594.3126615",
+      "authors": "Jun Gong; Yang Zhang; Xia Zhou; Xing-Dong Yang",
+      "journal": "Proceedings of the 30th Annual ACM Symposium on User Interface Software and Technology",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 58,
+      "title": "Rhythmic micro-gestures discreet interaction on-the-go",
+      "year": "2017",
+      "category": "GestureDesign",
+      "hardwareDevices": [
+        "OtherDevices"
+      ],
+      "sensingTechnology": [
+        "DynamicGesture",
+        "GestureRecognition",
+        "HandTracking",
+        "Motion",
+        "Optical"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "Audio",
+        "InAir",
+        "MultiModal",
+        "NonContact",
+        "RealTime",
+        "Visual"
+      ],
+      "gestureTypes": [
+        "Directional",
+        "Flex",
+        "SingleHand",
+        "Tap"
+      ],
+      "applicationScenarios": [
+        "MediaControl",
+        "Navigation",
+        "OtherScenarios"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "DiscreetInput",
+        "EyesFree",
+        "MidasTouch",
+        "OneHandUse",
+        "PortableDesign",
+        "SocialAcceptability"
+      ],
+      "tags": [],
+      "image": "Papers/GestureDesign/GestureDesign预览图/2017-Rhythmic micro-gestures discreet interaction on-the-go.png",
+      "pdfFile": "2017-Rhythmic micro-gestures discreet interaction on-the-go.pdf",
+      "pdfPath": "Papers/GestureDesign/2017-Rhythmic micro-gestures discreet interaction on-the-go.pdf",
+      "doi": "https://doi.org/10.1145/3136755.3136815",
+      "authors": "Euan Freeman; Gareth Griffiths; Stephen A. Brewster",
+      "journal": "Proceedings of the 19th ACM International Conference on Multimodal Interaction",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 59,
+      "title": "SegTouchEnhancing Touch Input While Providing Touch Gestures on Screens Using Thumb-To-Index-Finger Gestures",
+      "year": "2017",
+      "category": "GestureDesign",
+      "hardwareDevices": [
+        "Smartphone",
+        "Tablet",
+        "TouchScreen"
+      ],
+      "sensingTechnology": [
+        "ComputerVision",
+        "FingerTracking",
+        "GestureRecognition",
+        "MotionAnalysis",
+        "Optical"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "ContactBased",
+        "DirectTouch",
+        "Haptic",
+        "MultiModal",
+        "Proprioceptive",
+        "Visual"
+      ],
+      "gestureTypes": [
+        "SingleHand",
+        "Swipe",
+        "Tap",
+        "ThumbIndex"
+      ],
+      "applicationScenarios": [
+        "Gaming",
+        "Navigation",
+        "TextInput"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "EyesFree",
+        "OcclusionAvoid",
+        "OneHandUse",
+        "SmallScreen",
+        "TouchOptimized"
+      ],
+      "tags": [],
+      "image": "Papers/GestureDesign/GestureDesign预览图/2017-SegTouchEnhancing Touch Input While Providing Touch Gestures on Screens Using Thumb-To-Index-Finger Gestures.png",
+      "pdfFile": "2017-SegTouchEnhancing Touch Input While Providing Touch Gestures on Screens Using Thumb-To-Index-Finger Gestures.pdf",
+      "pdfPath": "Papers/GestureDesign/2017-SegTouchEnhancing Touch Input While Providing Touch Gestures on Screens Using Thumb-To-Index-Finger Gestures.pdf",
+      "doi": "https://doi.org/10.1145/3027063.3053109",
+      "authors": "Hsin-Ruey Tsai; Te-Yen Wu; Da-Yuan Huang; Min-Chieh Hsiu; Jui-Chun Hsiao; Yi-Ping Hung; Mike Y. Chen; Bing-Yu Chen",
+      "journal": "Proceedings of the 2017 CHI Conference Extended Abstracts on Human Factors in Computing Systems",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 60,
+      "title": "SkinMarksEnabling Interactions on Body Landmarks Using Conformal Skin Electronics",
+      "year": "2017",
+      "category": "hardware",
+      "hardwareDevices": [
+        "E-textile",
+        "Wearables",
+        "WearableSensor"
+      ],
+      "sensingTechnology": [
+        "Capacitive",
+        "DynamicGesture",
+        "GestureRecognition",
+        "MotionAnalysis",
+        "OtherTechnology",
+        "Pressure",
+        "StaticGesture"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "BodyContact",
+        "ContactBased",
+        "DirectTouch",
+        "Haptic",
+        "MultiModal",
+        "Proprioceptive",
+        "Visual"
+      ],
+      "gestureTypes": [
+        "Directional",
+        "Hold",
+        "SingleHand",
+        "Swipe",
+        "Tap"
+      ],
+      "applicationScenarios": [
+        "AR",
+        "Gaming",
+        "Healthcare"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "DiscreetInput",
+        "EyesFree",
+        "HighAccuracy",
+        "OneHandUse",
+        "PortableDesign",
+        "SocialAcceptability"
+      ],
+      "tags": [],
+      "image": "Papers/HARDWARE/Hardware预览图/2017-SkinMarksEnabling Interactions on Body Landmarks Using Conformal Skin Electronics.png",
+      "pdfFile": "2017-SkinMarksEnabling Interactions on Body Landmarks Using Conformal Skin Electronics.pdf",
+      "pdfPath": "Papers/HARDWARE/2017-SkinMarksEnabling Interactions on Body Landmarks Using Conformal Skin Electronics.pdf",
+      "doi": "https://doi.org/10.1145/3025453.3025704",
+      "authors": "Martin Weigel; Aditya Shekhar Nittala; Alex Olwal; Jürgen Steimle",
+      "journal": "Proceedings of the 2017 CHI Conference on Human Factors in Computing Systems",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 61,
+      "title": "TriTapIdentifying Finger Touches on Smartwatches",
+      "year": "2017",
+      "category": "hardware",
+      "hardwareDevices": [
+        "SmartWatch",
+        "TouchScreen"
+      ],
+      "sensingTechnology": [
+        "Accelerometer",
+        "GestureRecognition",
+        "StaticGesture",
+        "FingerIdentification"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "ContactBased",
+        "DeviceContact",
+        "DirectTouch"
+      ],
+      "gestureTypes": [
+        "SingleHand",
+        "Tap"
+      ],
+      "applicationScenarios": [
+        "TextInput"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "HighAccuracy",
+        "SmallScreen",
+        "TouchOptimized"
+      ],
+      "tags": [],
+      "image": "Papers/HARDWARE/Hardware预览图/2017-TriTapIdentifying Finger Touches on Smartwatches.png",
+      "pdfFile": "2017-TriTapIdentifying Finger Touches on Smartwatches.pdf",
+      "pdfPath": "Papers/HARDWARE/2017-TriTapIdentifying Finger Touches on Smartwatches.pdf",
+      "doi": "https://doi.org/10.1145/3025453.3025561",
+      "authors": "Hyunjae Gil; DoYoung Lee; Seunggyu Im; Ian Oakley",
+      "journal": "Proceedings of the 2017 CHI Conference on Human Factors in Computing Systems",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 62,
+      "title": "Characterizing finger pitch and roll orientation during atomic touch actions",
+      "year": "2018",
+      "category": "software",
+      "hardwareDevices": [
+        "Wearables",
+        "WearableSensor"
+      ],
+      "sensingTechnology": [
+        "EMG",
+        "GestureRecognition",
+        "StaticGesture"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "NonContact",
+        "RealTime"
+      ],
+      "gestureTypes": [
+        "Flex",
+        "SingleHand"
+      ],
+      "applicationScenarios": [
+        "Accessibility",
+        "Healthcare"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "HighAccuracy",
+        "PortableDesign"
+      ],
+      "tags": [],
+      "image": "Papers/SOFTWARE/Software预览图/2018 - Characterizing finger pitch and roll orientation during atomic touch actions.png",
+      "pdfFile": "2018 - Characterizing finger pitch and roll orientation during atomic touch actions.pdf",
+      "pdfPath": "Papers/SOFTWARE/2018 - Characterizing finger pitch and roll orientation during atomic touch actions.pdf",
+      "doi": "https://doi.org/10.1145/3173574.3174163",
+      "authors": "Alix Goguey; Géry Casiez; Daniel Vogel; Carl Gutwin",
+      "journal": "Proceedings of the 2018 CHI Conference on Human Factors in Computing Systems",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 63,
+      "title": "FingerInputCapturing Expressive Single-Hand Thumb-to-Finger Microgestures",
+      "year": "2018",
+      "category": "software",
+      "hardwareDevices": [
+        "Wearables",
+        "WearableSensor"
+      ],
+      "sensingTechnology": [
+        "Capacitive",
+        "ComputerVision",
+        "ContinuousGesture",
+        "Depth",
+        "DynamicGesture",
+        "FingerTracking",
+        "GestureRecognition",
+        "HandTracking",
+        "StaticGesture"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "Audio",
+        "BodyContact",
+        "ContactBased",
+        "MultiModal",
+        "RealTime",
+        "Visual"
+      ],
+      "gestureTypes": [
+        "Directional",
+        "Flex",
+        "SingleHand",
+        "Swipe",
+        "Tap",
+        "ThumbIndex"
+      ],
+      "applicationScenarios": [
+        "DigitalArt",
+        "MediaControl"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "DiscreetInput",
+        "EyesFree",
+        "HighAccuracy",
+        "OneHandUse"
+      ],
+      "tags": [],
+      "image": "Papers/SOFTWARE/Software预览图/2018-FingerInputCapturing Expressive Single-Hand Thumb-to-Finger Microgestures.png",
+      "pdfFile": "2018-FingerInputCapturing Expressive Single-Hand Thumb-to-Finger Microgestures.pdf",
+      "pdfPath": "Papers/SOFTWARE/2018-FingerInputCapturing Expressive Single-Hand Thumb-to-Finger Microgestures.pdf",
+      "doi": "https://doi.org/10.1145/3279778.3279799",
+      "authors": "Mohamed Soliman; Franziska Mueller; Lena Hegemann; Joan Sol Roo; Christian Theobalt; Jürgen Steimle",
+      "journal": "Proceedings of the 2018 ACM International Conference on Interactive Surfaces and Spaces",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 64,
+      "title": "Fingert9Leveraging thumb-to-finger interaction for same-side-hand text entry on smartwatches",
+      "year": "2018",
+      "category": "GestureDesign",
+      "hardwareDevices": [
+        "SmartWatch",
+        "TouchScreen",
+        "Wearables",
+        "WearableSensor"
+      ],
+      "sensingTechnology": [
+        "Capacitive",
+        "FingerTracking",
+        "GestureRecognition",
+        "Pressure",
+        "StaticGesture"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "BodyContact",
+        "ContactBased",
+        "DirectTouch",
+        "Haptic",
+        "RealTime",
+        "Visual"
+      ],
+      "gestureTypes": [
+        "Hold",
+        "SingleHand",
+        "Tap",
+        "ThumbIndex"
+      ],
+      "applicationScenarios": [
+        "TextInput"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "Elicitation",
+        "EyesFree",
+        "OcclusionAvoid",
+        "OneHandUse",
+        "SmallScreen",
+        "UserAdaptation"
+      ],
+      "tags": [],
+      "image": "Papers/GestureDesign/GestureDesign预览图/2018-Fingert9Leveraging thumb-to-finger interaction for same-side-hand text entry on smartwatches.png",
+      "pdfFile": "2018-Fingert9Leveraging thumb-to-finger interaction for same-side-hand text entry on smartwatches.pdf",
+      "pdfPath": "Papers/GestureDesign/2018-Fingert9Leveraging thumb-to-finger interaction for same-side-hand text entry on smartwatches.pdf",
+      "doi": "https://doi.org/10.1145/3173574.3173752",
+      "authors": "Pui Chung Wong; Kening Zhu; Hongbo Fu",
+      "journal": "Proceedings of the 2018 CHI Conference on Human Factors in Computing Systems",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 65,
+      "title": "GestakeyTouch interaction on individual keycaps",
+      "year": "2018",
+      "category": "hardware",
+      "hardwareDevices": [
+        "Keyboard",
+        "TouchScreen"
+      ],
+      "sensingTechnology": [
+        "Capacitive",
+        "DynamicGesture",
+        "GestureRecognition",
+        "StaticGesture"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "ContactBased",
+        "DirectTouch",
+        "Haptic"
+      ],
+      "gestureTypes": [
+        "Directional",
+        "MultiTouch",
+        "SingleHand",
+        "Tap"
+      ],
+      "applicationScenarios": [
+        "TextInput"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "LowLatency",
+        "QWERTYLayout",
+        "TouchOptimized",
+        "UserAdaptation"
+      ],
+      "tags": [],
+      "image": "Papers/HARDWARE/Hardware预览图/2018-GestakeyTouch interaction on individual keycaps.png",
+      "pdfFile": "2018-GestakeyTouch interaction on individual keycaps.pdf",
+      "pdfPath": "Papers/HARDWARE/2018-GestakeyTouch interaction on individual keycaps.pdf",
+      "doi": "https://doi.org/10.1145/3173574.3174170",
+      "authors": "Yilei Shi; Haimo Zhang; Hasitha Rajapakse; Nuwan Tharaka Perera; Tomás Vega Gálvez; Suranga Nanayakkara",
+      "journal": "Proceedings of the 2018 CHI Conference on Human Factors in Computing Systems",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 66,
+      "title": "Holoscopic 3D Micro-Gesture Database for Wearable Device Interaction",
+      "year": "2018",
+      "category": "software",
+      "hardwareDevices": [
+        "Wearables"
+      ],
+      "sensingTechnology": [
+        "3DPoseEstimation",
+        "ComputerVision",
+        "DynamicGesture",
+        "GestureRecognition",
+        "Optical"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "InAir",
+        "NonContact",
+        "Visual"
+      ],
+      "gestureTypes": [
+        "Directional",
+        "SingleHand"
+      ],
+      "applicationScenarios": [
+        "AR",
+        "IoT",
+        "VR"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "HandsFree",
+        "HighAccuracy"
+      ],
+      "tags": [],
+      "image": "Papers/SOFTWARE/Software预览图/2018-Holoscopic 3D Micro-Gesture Database for Wearable Device Interaction.png",
+      "pdfFile": "2018-Holoscopic 3D Micro-Gesture Database for Wearable Device Interaction.pdf",
+      "pdfPath": "Papers/SOFTWARE/2018-Holoscopic 3D Micro-Gesture Database for Wearable Device Interaction.pdf",
+      "doi": "https://doi.org/10.1109/FG.2018.00129",
+      "authors": "Yi Liu; Hongying Meng; Mohammad Rafiq Swash; Yona Falinie A. Gaus; Rui Qin",
+      "journal": "2018 13th IEEE International Conference on Automatic Face &amp; Gesture Recognition (FG 2018)",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 67,
+      "title": "Hybrid Neural Networks Based Approach for Holoscopic Micro-Gesture Recognition in Images and Videos",
+      "year": "2018",
+      "category": "software",
+      "hardwareDevices": [
+        "OtherDevices"
+      ],
+      "sensingTechnology": [
+        "3DPoseEstimation",
+        "ComputerVision",
+        "DynamicGesture",
+        "GestureRecognition",
+        "Optical"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "InAir",
+        "NonContact",
+        "Visual"
+      ],
+      "gestureTypes": [
+        "Directional",
+        "SingleHand"
+      ],
+      "applicationScenarios": [
+        "AR",
+        "VR"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "HandsFree",
+        "HighAccuracy"
+      ],
+      "tags": [],
+      "image": "Papers/SOFTWARE/Software预览图/2018-Hybrid Neural Networks Based Approach for Holoscopic Micro-Gesture Recognition in Images and Videos.png",
+      "pdfFile": "2018-Hybrid Neural Networks Based Approach for Holoscopic Micro-Gesture Recognition in Images and Videos.pdf",
+      "pdfPath": "Papers/SOFTWARE/2018-Hybrid Neural Networks Based Approach for Holoscopic Micro-Gesture Recognition in Images and Videos.pdf",
+      "doi": "https://doi.org/10.1109/FG.2018.00130",
+      "authors": "Garima Sharma; Shreyank Jyoti; Abhinav Dhall",
+      "journal": "2018 13th IEEE International Conference on Automatic Face &amp; Gesture Recognition (FG 2018)",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 68,
+      "title": "InfiniTouch Finger-Aware Interaction on Fully Touch Sensitive Smartphones",
+      "year": "2018",
+      "category": "hardware",
+      "hardwareDevices": [
+        "Smartphone",
+        "TouchScreen",
+        "WearableSensor"
+      ],
+      "sensingTechnology": [
+        "3DPoseEstimation",
+        "Capacitive",
+        "DynamicGesture",
+        "FingerTracking",
+        "GestureRecognition",
+        "Motion",
+        "Optical",
+        "StaticGesture",
+        "FingerIdentification"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "BackOfDevice",
+        "ContactBased",
+        "DirectTouch",
+        "MultiModal",
+        "RealTime",
+        "Visual"
+      ],
+      "gestureTypes": [
+        "Flex",
+        "Pinch",
+        "SingleHand",
+        "Swipe",
+        "ThumbIndex"
+      ],
+      "applicationScenarios": [
+        "Accessibility",
+        "MediaControl",
+        "ObjectManipulation",
+        "TextInput"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "Elicitation",
+        "FatFinger",
+        "HighAccuracy",
+        "LowLatency",
+        "OneHandUse"
+      ],
+      "tags": [],
+      "image": "Papers/HARDWARE/Hardware预览图/2018-InfiniTouch Finger-Aware Interaction on Fully Touch Sensitive Smartphones.png",
+      "pdfFile": "2018-InfiniTouch Finger-Aware Interaction on Fully Touch Sensitive Smartphones.pdf",
+      "pdfPath": "Papers/HARDWARE/2018-InfiniTouch Finger-Aware Interaction on Fully Touch Sensitive Smartphones.pdf",
+      "doi": "https://doi.org/10.1145/3242587.3242605",
+      "authors": "Huy Viet Le; Sven Mayer; Niels Henze",
+      "journal": "Proceedings of the 31st Annual ACM Symposium on User Interface Software and Technology",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 69,
+      "title": "Pen+ mid-air gestures Eliciting contextual gestures",
+      "year": "2018",
+      "category": "GestureDesign",
+      "hardwareDevices": [
+        "Tablet",
+        "TouchScreen"
+      ],
+      "sensingTechnology": [
+        "ComputerVision",
+        "DynamicGesture",
+        "GestureRecognition",
+        "HandTracking",
+        "Motion",
+        "Optical"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "InAir",
+        "MultiModal",
+        "NonContact",
+        "PenInput",
+        "RealTime",
+        "Visual"
+      ],
+      "gestureTypes": [
+        "Directional",
+        "DualHand",
+        "Grasp/Grip",
+        "Pinch",
+        "Swipe"
+      ],
+      "applicationScenarios": [
+        "DigitalArt",
+        "Education",
+        "MediaControl",
+        "ObjectManipulation"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "Elicitation",
+        "Encumbered",
+        "UserAdaptation"
+      ],
+      "tags": [],
+      "image": "Papers/GestureDesign/GestureDesign预览图/2018-Pen+ mid-air gestures Eliciting contextual gestures.png",
+      "pdfFile": "2018-Pen+ mid-air gestures Eliciting contextual gestures.pdf",
+      "pdfPath": "Papers/GestureDesign/2018-Pen+ mid-air gestures Eliciting contextual gestures.pdf",
+      "doi": "https://doi.org/10.1145/3242969.3242979",
+      "authors": "Ilhan Aslan; Tabea Schmidt; Jens Woehrle; Lukas Vogel; Elisabeth André",
+      "journal": "Proceedings of the 20th ACM International Conference on Multimodal Interaction",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 70,
+      "title": "Thumb-In-Motion Evaluating Thumb-to-Ring Microgestures for Athletic Activity",
+      "year": "2018",
+      "category": "hardware",
+      "hardwareDevices": [
+        "SmartRing",
+        "SmartWatch",
+        "Wearables"
+      ],
+      "sensingTechnology": [
+        "Capacitive",
+        "DynamicGesture",
+        "GestureRecognition",
+        "StaticGesture"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "Audio",
+        "ContactBased",
+        "DirectTouch",
+        "Haptic",
+        "Visual"
+      ],
+      "gestureTypes": [
+        "Directional",
+        "SingleHand",
+        "Swipe",
+        "Tap",
+        "ThumbIndex"
+      ],
+      "applicationScenarios": [
+        "Healthcare",
         "MediaControl",
         "Navigation"
       ],
-      "feedbackOutput": [
-        "HapticFeedback",
-        "MultimodalFeedback"
-      ],
+      "feedbackOutput": [],
       "userExperienceDesign": [
-        "ElicitationStudy",
-        "EncumberedInteraction",
+        "DiscreetInput",
+        "Encumbered",
+        "LowLatency",
+        "OneHandUse",
+        "PortableDesign"
+      ],
+      "tags": [],
+      "image": "Papers/HARDWARE/Hardware预览图/2018-Thumb-In-Motion Evaluating Thumb-to-Ring Microgestures for Athletic Activity.png",
+      "pdfFile": "2018-Thumb-In-Motion Evaluating Thumb-to-Ring Microgestures for Athletic Activity.pdf",
+      "pdfPath": "Papers/HARDWARE/2018-Thumb-In-Motion Evaluating Thumb-to-Ring Microgestures for Athletic Activity.pdf",
+      "doi": "https://doi.org/10.1145/3267782.3267796",
+      "authors": "Roger Boldu; Alexandru Dancu; Denys J.C. Matthies; Pablo Gallego Cascón; Shanaka Ransir; Suranga Nanayakkara",
+      "journal": "Proceedings of the Symposium on Spatial User Interaction",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 71,
+      "title": "Touch+Finger Extending Touch-based User Interface Capabilities with Idle Finger Gestures in the Air",
+      "year": "2018",
+      "category": "software",
+      "hardwareDevices": [
+        "SmartRing",
+        "Tablet",
+        "TouchScreen",
+        "WearableSensor"
+      ],
+      "sensingTechnology": [
+        "Accelerometer",
+        "DynamicGesture",
+        "FingerTracking",
+        "GestureRecognition",
+        "Gyroscope",
+        "IMU",
+        "Magnetometer",
+        "StaticGesture"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "ContactBased",
+        "DirectTouch",
+        "InAir",
+        "MultiModal",
+        "NonContact",
+        "RealTime",
+        "Visual"
+      ],
+      "gestureTypes": [
+        "Directional",
+        "Hold",
+        "MultiTouch",
+        "Pinch",
+        "SingleHand",
+        "Swipe",
+        "Tap",
+        "Hover"
+      ],
+      "applicationScenarios": [
+        "DigitalArt",
+        "Gaming",
+        "MediaControl",
+        "ObjectManipulation"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "HighAccuracy",
+        "SmallScreen",
+        "TouchOptimized"
+      ],
+      "tags": [],
+      "image": "Papers/SOFTWARE/Software预览图/2018-Touch+Finger Extending Touch-based User Interface Capabilities with Idle Finger Gestures in the Air.png",
+      "pdfFile": "2018-Touch+Finger Extending Touch-based User Interface Capabilities with Idle Finger Gestures in the Air.pdf",
+      "pdfPath": "Papers/SOFTWARE/2018-Touch+Finger Extending Touch-based User Interface Capabilities with Idle Finger Gestures in the Air.pdf",
+      "doi": "https://doi.org/10.1145/3242587.3242651",
+      "authors": "Hyunchul Lim; Jungmin Chung; Changhoon Oh; SoHyun Park; Joonhwan Lee; Bongwon Suh",
+      "journal": "Proceedings of the 31st Annual ACM Symposium on User Interface Software and Technology",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 72,
+      "title": "UltraGestureFine-Grained Gesture Sensing and Recognition",
+      "year": "2018",
+      "category": "hardware",
+      "hardwareDevices": [
+        "OtherDevices",
+        "Wearables"
+      ],
+      "sensingTechnology": [
+        "DynamicGesture",
+        "FingerTracking",
+        "GestureRecognition",
+        "Ultrasonic"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "InAir",
+        "NonContact",
+        "RealTime"
+      ],
+      "gestureTypes": [
+        "Directional",
+        "SingleHand",
+        "Swipe"
+      ],
+      "applicationScenarios": [
+        "AR",
+        "VR"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "HighAccuracy",
+        "LowLatency",
+        "PortableDesign"
+      ],
+      "tags": [],
+      "image": "Papers/HARDWARE/Hardware预览图/2018-UltraGestureFine-Grained Gesture Sensing and Recognition.png",
+      "pdfFile": "2018-UltraGestureFine-Grained Gesture Sensing and Recognition.pdf",
+      "pdfPath": "Papers/HARDWARE/2018-UltraGestureFine-Grained Gesture Sensing and Recognition.pdf",
+      "doi": "https://doi.org/10.1109/sahcn.2018.8397099",
+      "authors": "Kang Ling; Haipeng Dai; Yuntang Liu; Alex X. Liu",
+      "journal": "2018 15th Annual IEEE International Conference on Sensing, Communication, and Networking (SECON)",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 73,
+      "title": "AudioTouch Minimally Invasive Sensing of Micro-Gestures via Active Bio-Acoustic Sensing",
+      "year": "2019",
+      "category": "hardware",
+      "hardwareDevices": [
+        "Wearables",
+        "WearableSensor"
+      ],
+      "sensingTechnology": [
+        "Bio",
+        "DynamicGesture",
+        "GestureRecognition",
+        "Pressure",
+        "StaticGesture",
+        "Ultrasonic",
+        "AcousticSensing"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "BodyContact",
+        "ContactBased",
+        "RealTime"
+      ],
+      "gestureTypes": [
+        "Hold",
+        "Pinch",
+        "SingleHand",
+        "Tap",
+        "ThumbIndex"
+      ],
+      "applicationScenarios": [
+        "MediaControl",
+        "SmartHome",
+        "TextInput"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "DiscreetInput",
         "EyesFree",
+        "HighAccuracy",
+        "OneHandUse",
+        "PortableDesign"
+      ],
+      "tags": [],
+      "image": "Papers/HARDWARE/Hardware预览图/2019-AudioTouch Minimally Invasive Sensing of Micro-Gestures via Active Bio-Acoustic Sensing.png",
+      "pdfFile": "2019-AudioTouch Minimally Invasive Sensing of Micro-Gestures via Active Bio-Acoustic Sensing.pdf",
+      "pdfPath": "Papers/HARDWARE/2019-AudioTouch Minimally Invasive Sensing of Micro-Gestures via Active Bio-Acoustic Sensing.pdf",
+      "doi": "https://doi.org/10.1145/3338286.3340147",
+      "authors": "Yuki Kubo; Yuto Koguchi; Buntarou Shizuki; Shin Takahashi; Otmar Hilliges",
+      "journal": "Proceedings of the 21st International Conference on Human-Computer Interaction with Mobile Devices and Services",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 74,
+      "title": "Eliciting Contact-Based and Contactless Gestures With Radar-Based Sensors",
+      "year": "2019",
+      "category": "GestureDesign",
+      "hardwareDevices": [
+        "SmartRing",
+        "SmartWatch",
+        "Wearables"
+      ],
+      "sensingTechnology": [
+        "GestureRecognition",
+        "Radar"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "BodyContact",
+        "ContactBased",
+        "InAir",
+        "NonContact"
+      ],
+      "gestureTypes": [
+        "Pinch",
+        "SingleHand",
+        "Swipe",
+        "Tap"
+      ],
+      "applicationScenarios": [
+        "IoT",
+        "SmartHome"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "Elicitation",
+        "PortableDesign",
+        "SocialAcceptability"
+      ],
+      "tags": [],
+      "image": "Papers/GestureDesign/GestureDesign预览图/2019-Eliciting Contact-Based and Contactless Gestures With Radar-Based Sensors.png",
+      "pdfFile": "2019-Eliciting Contact-Based and Contactless Gestures With Radar-Based Sensors.pdf",
+      "pdfPath": "Papers/GestureDesign/2019-Eliciting Contact-Based and Contactless Gestures With Radar-Based Sensors.pdf",
+      "doi": "https://doi.org/10.1109/ACCESS.2019.2951349",
+      "authors": "Nathan Magrofuoco; Jorge-Luis Perez-Medina; Paolo Roselli; Jean Vanderdonckt; Santiago Villarreal",
+      "journal": "IEEE Access",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 75,
+      "title": "Factors that Impact the Acceptability of On-Body Interaction by Users with Visual Impairments",
+      "year": "2019",
+      "category": "GestureDesign",
+      "hardwareDevices": [
+        "Smartphone",
+        "Wearables"
+      ],
+      "sensingTechnology": [
+        "GestureRecognition"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "BodyContact",
+        "ContactBased"
+      ],
+      "gestureTypes": [
+        "SingleHand",
+        "Swipe",
+        "Tap"
+      ],
+      "applicationScenarios": [
+        "Accessibility"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "DiscreetInput",
+        "EyesFree",
+        "SocialAcceptability"
+      ],
+      "tags": [],
+      "image": "Papers/GestureDesign/GestureDesign预览图/2019-Factors that Impact the Acceptability of On-Body Interaction by Users with Visual Impairments.png",
+      "pdfFile": "2019-Factors that Impact the Acceptability of On-Body Interaction by Users with Visual Impairments.pdf",
+      "pdfPath": "Papers/GestureDesign/2019-Factors that Impact the Acceptability of On-Body Interaction by Users with Visual Impairments.pdf",
+      "doi": "https://doi.org/10.1007/978-3-030-29381-9",
+      "authors": "Costa, David; Duarte, Carlos",
+      "journal": "Lecture Notes in Computer Science",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 76,
+      "title": "Grasping MicrogesturesEliciting Single-hand Microgestures for Handheld Objects",
+      "year": "2019",
+      "category": "GestureDesign",
+      "hardwareDevices": [
+        "OtherDevices",
+        "Smartphone"
+      ],
+      "sensingTechnology": [
+        "ComputerVision",
+        "DynamicGesture",
+        "FingerTracking",
+        "GestureRecognition",
+        "Magnetometer",
+        "OtherTechnology",
+        "StaticGesture"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "BodyContact",
+        "ContactBased",
+        "DeviceContact",
+        "DirectTouch",
+        "RealTime"
+      ],
+      "gestureTypes": [
+        "Directional",
+        "Grasp/Grip",
+        "Pinch",
+        "SingleHand",
+        "Swipe",
+        "Tap"
+      ],
+      "applicationScenarios": [
+        "IoT",
+        "ObjectManipulation",
+        "OtherScenarios",
+        "SmartHome"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "DiscreetInput",
+        "Elicitation",
+        "Encumbered",
         "OneHandUse"
       ],
-      "image": "Papers/GestureDesign/GestureDesign预览图/2011-A Taxonomy of Microinteractions Defining Microgestures based on Ergonomic and Scenario-dependent Requirements.png",
-      "authors": "Wolf Katrin, Naumann Anja, Rohs Michael, Müller Jörg",
-      "journal": "Springer Berlin Heidelberg"
+      "tags": [],
+      "image": "Papers/GestureDesign/GestureDesign预览图/2019-Grasping MicrogesturesEliciting Single-hand Microgestures for Handheld Objects.png",
+      "pdfFile": "2019-Grasping MicrogesturesEliciting Single-hand Microgestures for Handheld Objects.pdf",
+      "pdfPath": "Papers/GestureDesign/2019-Grasping MicrogesturesEliciting Single-hand Microgestures for Handheld Objects.pdf",
+      "doi": "https://doi.org/10.1145/3290605.3300632",
+      "authors": "Adwait Sharma; Joan Sol Roo; Jürgen Steimle",
+      "journal": "Proceedings of the 2019 CHI Conference on Human Factors in Computing Systems",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 77,
+      "title": "HandSense capacitive coupling-based dynamic, micro finger gesture recognition",
+      "year": "2019",
+      "category": "hardware",
+      "hardwareDevices": [
+        "Wearables",
+        "WearableSensor"
+      ],
+      "sensingTechnology": [
+        "Capacitive",
+        "DynamicGesture",
+        "FingerTracking",
+        "GestureRecognition"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "ContactBased",
+        "DeviceContact",
+        "RealTime"
+      ],
+      "gestureTypes": [
+        "SingleHand",
+        "Swipe",
+        "Tap"
+      ],
+      "applicationScenarios": [
+        "VR"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "HighAccuracy",
+        "LowLatency",
+        "OneHandUse",
+        "AlwaysAvailable"
+      ],
+      "tags": [],
+      "image": "Papers/HARDWARE/Hardware预览图/2019-HandSense capacitive coupling-based dynamic, micro finger gesture recognition.png",
+      "pdfFile": "2019-HandSense capacitive coupling-based dynamic, micro finger gesture recognition.pdf",
+      "pdfPath": "Papers/HARDWARE/2019-HandSense capacitive coupling-based dynamic, micro finger gesture recognition.pdf",
+      "doi": "https://doi.org/10.1145/3356250.3360040",
+      "authors": "Viet Nguyen; Siddharth Rupavatharam; Luyang Liu; Richard Howard; Marco Gruteser",
+      "journal": "Proceedings of the 17th Conference on Embedded Networked Sensor Systems",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 78,
+      "title": "The intuitive grasp interface design and evaluation of microgestures on the steering wheel for driving scenario",
+      "year": "2019",
+      "category": "GestureDesign",
+      "hardwareDevices": [
+        "DrivingSimulator",
+        "OtherDevices"
+      ],
+      "sensingTechnology": [
+        "ComputerVision",
+        "DynamicGesture",
+        "FingerTracking",
+        "GestureRecognition",
+        "OtherTechnology",
+        "StaticGesture"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "Audio",
+        "ContactBased",
+        "DeviceContact",
+        "MultiModal",
+        "Visual"
+      ],
+      "gestureTypes": [
+        "Grasp/Grip",
+        "Pinch",
+        "SingleHand",
+        "Swipe",
+        "Tap"
+      ],
+      "applicationScenarios": [
+        "InVehicle",
+        "MediaControl",
+        "Navigation"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "DiscreetInput",
+        "Encumbered",
+        "EyesFree",
+        "HandsFree",
+        "HighAccuracy",
+        "LowLatency",
+        "OneHandUse",
+        "SocialAcceptability"
+      ],
+      "tags": [],
+      "image": "Papers/GestureDesign/GestureDesign预览图/2019-The intuitive grasp interface design and evaluation of microgestures on the steering wheel for driving scenario.png",
+      "pdfFile": "2019-The intuitive grasp interface design and evaluation of microgestures on the steering wheel for driving scenario.pdf",
+      "pdfPath": "Papers/GestureDesign/2019-The intuitive grasp interface design and evaluation of microgestures on the steering wheel for driving scenario.pdf",
+      "doi": "https://doi.org/10.1007/s10209-019-00647-0",
+      "authors": "Yiqi Xiao; Renke He",
+      "journal": "Universal Access in the Information Society",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 79,
+      "title": "The Missing InterfaceMicro-Gestures on Augmented Objects",
+      "year": "2019",
+      "category": "GestureDesign",
+      "hardwareDevices": [
+        "ARGlasses",
+        "Wearables",
+        "WearableSensor"
+      ],
+      "sensingTechnology": [
+        "DynamicGesture",
+        "FingerTracking",
+        "GestureRecognition",
+        "Radar",
+        "RFSensing",
+        "StaticGesture"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "ContactBased",
+        "DeviceContact",
+        "InAir",
+        "NonContact",
+        "Visual"
+      ],
+      "gestureTypes": [
+        "SingleHand",
+        "Swipe"
+      ],
+      "applicationScenarios": [
+        "AR",
+        "Industry",
+        "Training"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "DiscreetInput",
+        "OcclusionAvoid",
+        "OneHandUse",
+        "PortableDesign"
+      ],
+      "tags": [],
+      "image": "Papers/GestureDesign/GestureDesign预览图/2019-The Missing InterfaceMicro-Gestures on Augmented Objects.png",
+      "pdfFile": "2019-The Missing InterfaceMicro-Gestures on Augmented Objects.pdf",
+      "pdfPath": "Papers/GestureDesign/2019-The Missing InterfaceMicro-Gestures on Augmented Objects.pdf",
+      "doi": "https://doi.org/10.1145/3290607.3312986",
+      "authors": "Klen Čopič Pucihar; Christian Sandor; Matjaž Kljun; Wolfgang Huerst; Alexander Plopski; Takafumi Taketomi; Hirokazu Kato; Luis A. Leiva",
+      "journal": "Extended Abstracts of the 2019 CHI Conference on Human Factors in Computing Systems",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 80,
+      "title": "Tip-Tap Battery-free Discrete 2D Fingertip Input",
+      "year": "2019",
+      "category": "hardware",
+      "hardwareDevices": [
+        "DataGloves",
+        "Wearables",
+        "WearableSensor"
+      ],
+      "sensingTechnology": [
+        "Capacitive",
+        "FingerTracking",
+        "RFSensing",
+        "StaticGesture"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "BodyContact",
+        "ContactBased",
+        "Haptic"
+      ],
+      "gestureTypes": [
+        "SingleHand",
+        "Tap",
+        "ThumbIndex"
+      ],
+      "applicationScenarios": [
+        "Healthcare",
+        "Industry",
+        "MediaControl"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "DiscreetInput",
+        "EyesFree",
+        "HandsFree",
+        "OneHandUse",
+        "PortableDesign",
+        "SocialAcceptability"
+      ],
+      "tags": [],
+      "image": "Papers/HARDWARE/Hardware预览图/2019-Tip-Tap Battery-free Discrete 2D Fingertip Input.png",
+      "pdfFile": "2019-Tip-Tap Battery-free Discrete 2D Fingertip Input.pdf",
+      "pdfPath": "Papers/HARDWARE/2019-Tip-Tap Battery-free Discrete 2D Fingertip Input.pdf",
+      "doi": "https://doi.org/10.1145/3332165.3347907",
+      "authors": "Keiko Katsuragawa; Ju Wang; Ziyang Shan; Ningshan Ouyang; Omid Abari; Daniel Vogel",
+      "journal": "Proceedings of the 32nd Annual ACM Symposium on User Interface Software and Technology",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 81,
+      "title": "TipText Eyes-Free Text Entry on a Fingertip Keyboard",
+      "year": "2019",
+      "category": "software",
+      "hardwareDevices": [
+        "Wearables",
+        "WearableSensor"
+      ],
+      "sensingTechnology": [
+        "Capacitive",
+        "ComputerVision",
+        "FingerTracking",
+        "GestureRecognition",
+        "Optical",
+        "StaticGesture"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "BodyContact",
+        "ContactBased",
+        "DirectTouch",
+        "Haptic",
+        "RealTime",
+        "Visual"
+      ],
+      "gestureTypes": [
+        "SingleHand",
+        "Tap",
+        "ThumbIndex"
+      ],
+      "applicationScenarios": [
+        "AR",
+        "TextInput",
+        "VR"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "DiscreetInput",
+        "EyesFree",
+        "HighAccuracy",
+        "OneHandUse",
+        "PortableDesign",
+        "QWERTYLayout",
+        "SmallScreen",
+        "SocialAcceptability"
+      ],
+      "tags": [],
+      "image": "Papers/SOFTWARE/Software预览图/2019-TipText Eyes-Free Text Entry on a Fingertip Keyboard.png",
+      "pdfFile": "2019-TipText Eyes-Free Text Entry on a Fingertip Keyboard.pdf",
+      "pdfPath": "Papers/SOFTWARE/2019-TipText Eyes-Free Text Entry on a Fingertip Keyboard.pdf",
+      "doi": "https://doi.org/10.1145/3332165.3347865",
+      "authors": "Zheer Xu; Pui Chung Wong; Jun Gong; Te-Yen Wu; Aditya Shekhar Nittala; Xiaojun Bi; Jürgen Steimle; Hongbo Fu; Kening Zhu; Xing-Dong Yang",
+      "journal": "Proceedings of the 32nd Annual ACM Symposium on User Interface Software and Technology",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 82,
+      "title": "Toward Device-Free Micro-Gesture Tracking via Accurate Acoustic Doppler-Shift Detection",
+      "year": "2019",
+      "category": "software",
+      "hardwareDevices": [
+        "OtherDevices"
+      ],
+      "sensingTechnology": [
+        "DynamicGesture",
+        "FingerTracking",
+        "GestureRecognition",
+        "AcousticSensing"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "InAir",
+        "NonContact",
+        "RealTime"
+      ],
+      "gestureTypes": [
+        "Directional",
+        "SingleHand"
+      ],
+      "applicationScenarios": [
+        "OtherScenarios"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "HandsFree",
+        "HighAccuracy",
+        "LowLatency"
+      ],
+      "tags": [],
+      "image": "Papers/SOFTWARE/Software预览图/2019-Toward Device-Free Micro-Gesture Tracking via Accurate Acoustic Doppler-Shift Detection.png",
+      "pdfFile": "2019-Toward Device-Free Micro-Gesture Tracking via Accurate Acoustic Doppler-Shift Detection.pdf",
+      "pdfPath": "Papers/SOFTWARE/2019-Toward Device-Free Micro-Gesture Tracking via Accurate Acoustic Doppler-Shift Detection.pdf",
+      "doi": "https://doi.org/10.1109/access.2018.2886279",
+      "authors": "Wenyuan Liu; Weihang Shen; Binbin Li; Lin Wang",
+      "journal": "IEEE Access",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 83,
+      "title": "Back-Hand-Pose 3D Hand Pose Estimation for a Wrist-worn Camera via Dorsum Deformation Network",
+      "year": "2020",
+      "category": "software",
+      "hardwareDevices": [
+        "Wearables",
+        "WearableSensor",
+        "Wristband"
+      ],
+      "sensingTechnology": [
+        "3DPoseEstimation",
+        "ComputerVision",
+        "ContinuousGesture",
+        "HandTracking"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "InAir",
+        "NonContact",
+        "RealTime",
+        "Visual"
+      ],
+      "gestureTypes": [
+        "Flex",
+        "SingleHand"
+      ],
+      "applicationScenarios": [
+        "OtherScenarios"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "HighAccuracy",
+        "PortableDesign"
+      ],
+      "tags": [],
+      "image": "Papers/SOFTWARE/Software预览图/2020-Back-Hand-Pose 3D Hand Pose Estimation for a Wrist-worn Camera via Dorsum Deformation Network.png",
+      "pdfFile": "2020-Back-Hand-Pose 3D Hand Pose Estimation for a Wrist-worn Camera via Dorsum Deformation Network.pdf",
+      "pdfPath": "Papers/SOFTWARE/2020-Back-Hand-Pose 3D Hand Pose Estimation for a Wrist-worn Camera via Dorsum Deformation Network.pdf",
+      "doi": "https://doi.org/10.1145/3379337.3415897",
+      "authors": "Erwin Wu; Ye Yuan; Hui-Shyong Yeo; Aaron Quigley; Hideki Koike; Kris M. Kitani",
+      "journal": "Proceedings of the 33rd Annual ACM Symposium on User Interface Software and Technology",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 84,
+      "title": "BiTipText Bimanual Eyes-Free Text Entry on a Fingertip Keyboard",
+      "year": "2020",
+      "category": "hardware",
+      "hardwareDevices": [
+        "SmartGlasses",
+        "SmartWatch",
+        "TouchScreen",
+        "Wearables",
+        "WearableSensor"
+      ],
+      "sensingTechnology": [
+        "Capacitive",
+        "FingerTracking",
+        "GestureRecognition",
+        "Motion",
+        "MotionAnalysis",
+        "Optical",
+        "StaticGesture"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "ContactBased",
+        "DirectTouch",
+        "RealTime",
+        "Visual"
+      ],
+      "gestureTypes": [
+        "DualHand",
+        "Swipe",
+        "Tap",
+        "ThumbIndex"
+      ],
+      "applicationScenarios": [
+        "AR",
+        "TextInput",
+        "VR"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "DiscreetInput",
+        "EyesFree",
+        "PortableDesign",
+        "QWERTYLayout",
+        "TouchOptimized",
+        "UserAdaptation"
+      ],
+      "tags": [],
+      "image": "Papers/HARDWARE/Hardware预览图/2020-BiTipText Bimanual Eyes-Free Text Entry on a Fingertip Keyboard.png",
+      "pdfFile": "2020-BiTipText Bimanual Eyes-Free Text Entry on a Fingertip Keyboard.pdf",
+      "pdfPath": "Papers/HARDWARE/2020-BiTipText Bimanual Eyes-Free Text Entry on a Fingertip Keyboard.pdf",
+      "doi": "https://doi.org/10.1145/3313831.3376306",
+      "authors": "Zheer Xu; Weihao Chen; Dongyang Zhao; Jiehui Luo; Te-Yen Wu; Jun Gong; Sicheng Yin; Jialun Zhai; Xing-Dong Yang",
+      "journal": "Proceedings of the 2020 CHI Conference on Human Factors in Computing Systems",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 85,
+      "title": "E-Textile MicrointeractionsAugmenting Twist with Flick, Slide and Grasp Gestures for Soft Electronics",
+      "year": "2020",
+      "category": "hardware",
+      "hardwareDevices": [
+        "E-textile",
+        "OtherDevices",
+        "Wearables",
+        "WearableSensor"
+      ],
+      "sensingTechnology": [
+        "Capacitive",
+        "ContinuousGesture",
+        "DynamicGesture",
+        "GestureRecognition",
+        "OtherTechnology",
+        "Pressure",
+        "StaticGesture"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "ContactBased",
+        "MultiModal",
+        "RealTime",
+        "Tangible",
+        "Visual"
+      ],
+      "gestureTypes": [
+        "Directional",
+        "Grasp/Grip",
+        "Pinch",
+        "SingleHand",
+        "Swipe",
+        "Tap"
+      ],
+      "applicationScenarios": [
+        "Gaming",
+        "MediaControl",
+        "OtherScenarios",
+        "SmartHome"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "DiscreetInput",
+        "EyesFree",
+        "HighAccuracy",
+        "LowLatency",
+        "OneHandUse",
+        "PortableDesign",
+        "UserAdaptation"
+      ],
+      "tags": [],
+      "image": "Papers/HARDWARE/Hardware预览图/2020-E-Textile MicrointeractionsAugmenting Twist with Flick, Slide and Grasp Gestures for Soft Electronics.png",
+      "pdfFile": "2020-E-Textile MicrointeractionsAugmenting Twist with Flick, Slide and Grasp Gestures for Soft Electronics.pdf",
+      "pdfPath": "Papers/HARDWARE/2020-E-Textile MicrointeractionsAugmenting Twist with Flick, Slide and Grasp Gestures for Soft Electronics.pdf",
+      "doi": "https://doi.org/10.1145/3313831.3376236",
+      "authors": "Alex Olwal; Thad Starner; Gowa Mainini",
+      "journal": "Proceedings of the 2020 CHI Conference on Human Factors in Computing Systems",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 86,
+      "title": "EarbuddyEnabling on-face interaction via wireless earbuds",
+      "year": "2020",
+      "category": "software",
+      "hardwareDevices": [
+        "Smartphone",
+        "Wearables",
+        "WearableSensor",
+        "Earbuds"
+      ],
+      "sensingTechnology": [
+        "Bio",
+        "DynamicGesture",
+        "GestureRecognition",
+        "StaticGesture",
+        "AcousticSensing"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "Audio",
+        "BodyContact",
+        "ContactBased",
+        "EarBased",
+        "Visual"
+      ],
+      "gestureTypes": [
+        "SingleHand",
+        "Swipe",
+        "Tap"
+      ],
+      "applicationScenarios": [
+        "Accessibility",
+        "MediaControl",
+        "SmartHome"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "DiscreetInput",
+        "EyesFree",
+        "OneHandUse",
+        "PortableDesign",
+        "SocialAcceptability"
+      ],
+      "tags": [],
+      "image": "Papers/SOFTWARE/Software预览图/2020-EarbuddyEnabling on-face interaction via wireless earbuds.png",
+      "pdfFile": "2020-EarbuddyEnabling on-face interaction via wireless earbuds.pdf",
+      "pdfPath": "Papers/SOFTWARE/2020-EarbuddyEnabling on-face interaction via wireless earbuds.pdf",
+      "doi": "https://doi.org/10.1145/3313831.3376836",
+      "authors": "Xuhai Xu; Haitian Shi; Xin Yi; WenJia Liu; Yukang Yan; Yuanchun Shi; Alex Mariakakis; Jennifer Mankoff; Anind K. Dey",
+      "journal": "Proceedings of the 2020 CHI Conference on Human Factors in Computing Systems",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 87,
+      "title": "Fabriccio Touchless gestural input on interactive fabrics",
+      "year": "2020",
+      "category": "hardware",
+      "hardwareDevices": [
+        "E-textile",
+        "OtherDevices",
+        "Wearables",
+        "WearableSensor"
+      ],
+      "sensingTechnology": [
+        "ContinuousGesture",
+        "DynamicGesture",
+        "FingerTracking",
+        "GestureRecognition",
+        "Motion",
+        "MotionAnalysis",
+        "Radar",
+        "RFSensing"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "Audio",
+        "BodyContact",
+        "InAir",
+        "NonContact",
+        "RealTime"
+      ],
+      "gestureTypes": [
+        "SingleHand",
+        "Swipe",
+        "Tap",
+        "ThumbIndex"
+      ],
+      "applicationScenarios": [
+        "IoT",
+        "MediaControl",
+        "OtherScenarios",
+        "SmartHome"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "DiscreetInput",
+        "EyesFree",
+        "HandsFree",
+        "HighAccuracy",
+        "LowLatency",
+        "PortableDesign"
+      ],
+      "tags": [],
+      "image": "Papers/HARDWARE/Hardware预览图/2020-Fabriccio Touchless gestural input on interactive fabrics.png",
+      "pdfFile": "2020-Fabriccio Touchless gestural input on interactive fabrics.pdf",
+      "pdfPath": "Papers/HARDWARE/2020-Fabriccio Touchless gestural input on interactive fabrics.pdf",
+      "doi": "https://doi.org/10.1145/3313831.3376681",
+      "authors": "Te-Yen Wu; Shutong Qi; Junchi Chen; MuJie Shang; Jun Gong; Teddy Seyed; Xing-Dong Yang",
+      "journal": "Proceedings of the 2020 CHI Conference on Human Factors in Computing Systems",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 88,
+      "title": "Finger gesture tracking for interactive applications A pilot study with sign languages",
+      "year": "2020",
+      "category": "software",
+      "hardwareDevices": [
+        "SmartRing",
+        "SmartWatch",
+        "Wearables",
+        "WearableSensor"
+      ],
+      "sensingTechnology": [
+        "Accelerometer",
+        "ContinuousGesture",
+        "DynamicGesture",
+        "FingerTracking",
+        "GestureRecognition",
+        "Gyroscope",
+        "HandTracking",
+        "IMU",
+        "Magnetometer",
+        "Motion",
+        "MotionAnalysis",
+        "TrajectoryAnalysis"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "Audio",
+        "InAir",
+        "MultiModal",
+        "NonContact",
+        "RealTime",
+        "Visual"
+      ],
+      "gestureTypes": [
+        "Directional",
+        "DualHand",
+        "SignLanguage",
+        "SingleHand"
+      ],
+      "applicationScenarios": [
+        "Accessibility",
+        "Education",
+        "Healthcare",
+        "Training"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "CommunicationAid",
+        "Encumbered",
+        "LowLatency",
+        "PortableDesign",
+        "UserAdaptation"
+      ],
+      "tags": [],
+      "image": "Papers/SOFTWARE/Software预览图/2020-Finger gesture tracking for interactive applications A pilot study with sign languages.png",
+      "pdfFile": "2020-Finger gesture tracking for interactive applications A pilot study with sign languages.pdf",
+      "pdfPath": "Papers/SOFTWARE/2020-Finger gesture tracking for interactive applications A pilot study with sign languages.pdf",
+      "doi": "https://doi.org/10.1145/3414117",
+      "authors": "Yilin Liu; Fengyang Jiang; Mahanth Gowda",
+      "journal": "Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 89,
+      "title": "How Subtle Can It GetA Trimodal Study of Ring-sized Interfaces for One-Handed Drone Control",
+      "year": "2020",
+      "category": "GestureDesign",
+      "hardwareDevices": [
+        "OtherDevices",
+        "Smartphone",
+        "SmartRing",
+        "Wearables"
+      ],
+      "sensingTechnology": [
+        "Capacitive",
+        "ContinuousGesture",
+        "DynamicGesture",
+        "GestureRecognition",
+        "IMU",
+        "Motion",
+        "Pressure"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "ContactBased",
+        "Haptic",
+        "MultiModal",
+        "RealTime",
+        "Tangible",
+        "Visual"
+      ],
+      "gestureTypes": [
+        "Directional",
+        "Flex",
+        "Hold",
+        "SingleHand",
+        "ThumbIndex"
+      ],
+      "applicationScenarios": [
+        "OtherScenarios"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "DiscreetInput",
+        "HighAccuracy",
+        "LowLatency",
+        "OneHandUse",
+        "SocialAcceptability"
+      ],
+      "tags": [],
+      "image": "Papers/GestureDesign/GestureDesign预览图/2020-How Subtle Can It GetA Trimodal Study of Ring-sized Interfaces for One-Handed Drone Control.png",
+      "pdfFile": "2020-How Subtle Can It GetA Trimodal Study of Ring-sized Interfaces for One-Handed Drone Control.pdf",
+      "pdfPath": "Papers/GestureDesign/2020-How Subtle Can It GetA Trimodal Study of Ring-sized Interfaces for One-Handed Drone Control.pdf",
+      "doi": "https://doi.org/10.1145/3397319",
+      "authors": "Yui-Pan Yau; Lik Hang Lee; Zheng Li; Tristan Braud; Yi-Hsuan Ho; Pan Hui",
+      "journal": "Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 90,
+      "title": "Micro Gesture Recognition with Terahertz Radar Based on Diagonal Profile of Range-Doppler Map",
+      "year": "2020",
+      "category": "software",
+      "hardwareDevices": [
+        "OtherDevices"
+      ],
+      "sensingTechnology": [
+        "DynamicGesture",
+        "GestureRecognition",
+        "Radar",
+        "RFSensing"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "InAir",
+        "NonContact",
+        "RealTime"
+      ],
+      "gestureTypes": [
+        "Directional",
+        "SingleHand",
+        "Swipe"
+      ],
+      "applicationScenarios": [
+        "Gaming",
+        "Industry",
+        "InVehicle",
+        "SmartHome"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "HighAccuracy",
+        "LowLatency"
+      ],
+      "tags": [],
+      "image": "Papers/SOFTWARE/Software预览图/2020-Micro Gesture Recognition with Terahertz Radar Based on Diagonal Profile of Range-Doppler Map.png",
+      "pdfFile": "2020-Micro Gesture Recognition with Terahertz Radar Based on Diagonal Profile of Range-Doppler Map.pdf",
+      "pdfPath": "Papers/SOFTWARE/2020-Micro Gesture Recognition with Terahertz Radar Based on Diagonal Profile of Range-Doppler Map.pdf",
+      "doi": "https://doi.org/10.1109/IGARSS39084.2020.9324421",
+      "authors": "Xing Wang; Rui Min; Zongyong Cui; Zongjie Cao",
+      "journal": "IGARSS 2020 - 2020 IEEE International Geoscience and Remote Sensing Symposium",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 91,
+      "title": "Nailz Sensing Hand Input with Touch Sensitive Nails",
+      "year": "2020",
+      "category": "hardware",
+      "hardwareDevices": [
+        "SmartGlasses",
+        "Wearables",
+        "WearableSensor",
+        "FingerNail"
+      ],
+      "sensingTechnology": [
+        "Capacitive",
+        "FingerTracking",
+        "GestureRecognition",
+        "IMU"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "BodyContact",
+        "ContactBased",
+        "RealTime",
+        "Visual"
+      ],
+      "gestureTypes": [
+        "MultiTouch",
+        "SingleHand",
+        "Swipe",
+        "Tap",
+        "ThumbIndex"
+      ],
+      "applicationScenarios": [
+        "AR",
+        "MediaControl",
+        "Navigation"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "DiscreetInput",
+        "EyesFree",
+        "HandsFree",
+        "HighAccuracy",
+        "OneHandUse",
+        "SocialAcceptability"
+      ],
+      "tags": [],
+      "image": "Papers/HARDWARE/Hardware预览图/2020-Nailz Sensing Hand Input with Touch Sensitive Nails.png",
+      "pdfFile": "2020-Nailz Sensing Hand Input with Touch Sensitive Nails.pdf",
+      "pdfPath": "Papers/HARDWARE/2020-Nailz Sensing Hand Input with Touch Sensitive Nails.pdf",
+      "doi": "https://doi.org/10.1145/3313831.3376778",
+      "authors": "DoYoung Lee; SooHwan Lee; Ian Oakley",
+      "journal": "Proceedings of the 2020 CHI Conference on Human Factors in Computing Systems",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 92,
+      "title": "QwertyringText entry on physical surfaces using a ring",
+      "year": "2020",
+      "category": "hardware",
+      "hardwareDevices": [
+        "ARGlasses",
+        "SmartRing",
+        "VRHeadset",
+        "Wearables",
+        "WearableSensor"
+      ],
+      "sensingTechnology": [
+        "Accelerometer",
+        "DynamicGesture",
+        "FingerTracking",
+        "GestureRecognition",
+        "Gyroscope",
+        "IMU",
+        "Motion",
+        "MotionAnalysis"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "ContactBased",
+        "DeviceContact",
+        "RealTime",
+        "Visual"
+      ],
+      "gestureTypes": [
+        "Hold",
+        "SingleHand",
+        "Swipe",
+        "Tap"
+      ],
+      "applicationScenarios": [
+        "AR",
+        "SmartHome",
+        "TextInput",
+        "VR"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "EyesFree",
+        "OneHandUse",
+        "PortableDesign",
+        "QWERTYLayout",
+        "TouchOptimized",
+        "UserAdaptation"
+      ],
+      "tags": [],
+      "image": "Papers/HARDWARE/Hardware预览图/2020-QwertyringText entry on physical surfaces using a ring.png",
+      "pdfFile": "2020-QwertyringText entry on physical surfaces using a ring.pdf",
+      "pdfPath": "Papers/HARDWARE/2020-QwertyringText entry on physical surfaces using a ring.pdf",
+      "doi": "https://doi.org/10.1145/3432204",
+      "authors": "Yizheng Gu; Chun Yu; Zhipeng Li; Zhaoheng Li; Xiaoying Wei; Yuanchun Shi",
+      "journal": "Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 93,
+      "title": "Ready, Steady, Touch Sensing Physical Contact with a Finger-Mounted IMU",
+      "year": "2020",
+      "category": "hardware",
+      "hardwareDevices": [
+        "SmartWatch",
+        "Wearables",
+        "WearableSensor"
+      ],
+      "sensingTechnology": [
+        "Accelerometer",
+        "ContinuousGesture",
+        "DynamicGesture",
+        "FingerTracking",
+        "Gyroscope",
+        "IMU",
+        "Magnetometer"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "BackOfDevice",
+        "ContactBased",
+        "DeviceContact",
+        "Haptic",
+        "RealTime",
+        "Tangible"
+      ],
+      "gestureTypes": [
+        "Directional",
+        "SingleHand",
+        "Swipe",
+        "Tap",
+        "ThumbIndex"
+      ],
+      "applicationScenarios": [
+        "AR",
+        "MediaControl",
+        "Navigation",
+        "SmartHome",
+        "TextInput",
+        "VR"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "HandsFree",
+        "HighAccuracy",
+        "LowLatency",
+        "PortableDesign",
+        "SocialAcceptability",
+        "TouchOptimized"
+      ],
+      "tags": [],
+      "image": "Papers/HARDWARE/Hardware预览图/2020-Ready, Steady, Touch Sensing Physical Contact with a Finger-Mounted IMU.png",
+      "pdfFile": "2020-Ready, Steady, Touch Sensing Physical Contact with a Finger-Mounted IMU.pdf",
+      "pdfPath": "Papers/HARDWARE/2020-Ready, Steady, Touch Sensing Physical Contact with a Finger-Mounted IMU.pdf",
+      "doi": "https://doi.org/10.1145/3397309",
+      "authors": "Yilei Shi; Haimo Zhang; Kaixing Zhao; Jiashuo Cao; Mengmeng Sun; Suranga Nanayakkara",
+      "journal": "Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 94,
+      "title": "TelemetRing A Batteryless and Wireless Ring-shaped Keyboard using Passive Inductive Telemetry",
+      "year": "2020",
+      "category": "hardware",
+      "hardwareDevices": [
+        "SmartRing",
+        "Wearables"
+      ],
+      "sensingTechnology": [
+        "Accelerometer",
+        "GestureRecognition",
+        "Motion",
+        "StaticGesture"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "ContactBased",
+        "DeviceContact",
+        "RealTime",
+        "Tangible"
+      ],
+      "gestureTypes": [
+        "MultiTouch",
+        "SingleHand",
+        "Tap"
+      ],
+      "applicationScenarios": [
+        "TextInput"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "HighAccuracy",
+        "OneHandUse",
+        "PortableDesign"
+      ],
+      "tags": [],
+      "image": "Papers/HARDWARE/Hardware预览图/2020-TelemetRing A Batteryless and Wireless Ring-shaped Keyboard using Passive Inductive Telemetry.png",
+      "pdfFile": "2020-TelemetRing A Batteryless and Wireless Ring-shaped Keyboard using Passive Inductive Telemetry.pdf",
+      "pdfPath": "Papers/HARDWARE/2020-TelemetRing A Batteryless and Wireless Ring-shaped Keyboard using Passive Inductive Telemetry.pdf",
+      "doi": "https://doi.org/10.1145/3379337.3415873",
+      "authors": "Ryo Takahashi; Masaaki Fukumoto; Changyo Han; Takuya Sasatani; Yoshiaki Narusue; Yoshihiro Kawahara",
+      "journal": "Proceedings of the 33rd Annual ACM Symposium on User Interface Software and Technology",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 95,
+      "title": "ThermalRingGesture and Tag Inputs Enabled by a Thermal Imaging Smart Ring",
+      "year": "2020",
+      "category": "hardware",
+      "hardwareDevices": [
+        "SmartRing",
+        "Wearables",
+        "WearableSensor"
+      ],
+      "sensingTechnology": [
+        "ComputerVision",
+        "DynamicGesture",
+        "FingerTracking",
+        "GestureRecognition",
+        "HandTracking",
+        "StaticGesture",
+        "ThermalSensing"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "ContactBased",
+        "InAir",
+        "RealTime",
+        "Tangible",
+        "Visual"
+      ],
+      "gestureTypes": [
+        "Directional",
+        "DualHand",
+        "Swipe",
+        "Tap"
+      ],
+      "applicationScenarios": [
+        "IoT",
+        "MediaControl",
+        "Navigation",
+        "SmartHome"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "EyesFree",
+        "HighAccuracy",
+        "PortableDesign",
+        "SocialAcceptability"
+      ],
+      "tags": [],
+      "image": "Papers/HARDWARE/Hardware预览图/2020-ThermalRingGesture and Tag Inputs Enabled by a Thermal Imaging Smart Ring.png",
+      "pdfFile": "2020-ThermalRingGesture and Tag Inputs Enabled by a Thermal Imaging Smart Ring.pdf",
+      "pdfPath": "Papers/HARDWARE/2020-ThermalRingGesture and Tag Inputs Enabled by a Thermal Imaging Smart Ring.pdf",
+      "doi": "https://doi.org/10.1145/3313831.3376323",
+      "authors": "Tengxiang Zhang; Xin Zeng; Yinshuai Zhang; Ke Sun; Yuntao Wang; Yiqiang Chen",
+      "journal": "Proceedings of the 2020 CHI Conference on Human Factors in Computing Systems",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 96,
+      "title": "ThuMouse A Micro-gesture Cursor Input through mmWave Radar-based Interaction",
+      "year": "2020",
+      "category": "software",
+      "hardwareDevices": [
+        "OtherDevices"
+      ],
+      "sensingTechnology": [
+        "ContinuousGesture",
+        "FingerTracking",
+        "Radar",
+        "RFSensing"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "InAir",
+        "NonContact",
+        "RealTime"
+      ],
+      "gestureTypes": [
+        "Directional",
+        "SingleHand"
+      ],
+      "applicationScenarios": [
+        "OtherScenarios"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "HandsFree",
+        "HighAccuracy",
+        "LowLatency"
+      ],
+      "tags": [],
+      "image": "Papers/SOFTWARE/Software预览图/2020-ThuMouse A Micro-gesture Cursor Input through mmWave Radar-based Interaction.png",
+      "pdfFile": "2020-ThuMouse A Micro-gesture Cursor Input through mmWave Radar-based Interaction.pdf",
+      "pdfPath": "Papers/SOFTWARE/2020-ThuMouse A Micro-gesture Cursor Input through mmWave Radar-based Interaction.pdf",
+      "doi": "https://doi.org/10.1109/icce46568.2020.9043082",
+      "authors": "Ziheng Li; Zhenyuan Lei; An Yan; Erin Solovey; Kaveh Pahlavan",
+      "journal": "2020 IEEE International Conference on Consumer Electronics (ICCE)",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 97,
+      "title": "A New Dataset and Recognition for Egocentric Microgesture Designed by Ergonomists",
+      "year": "2021",
+      "category": "GestureDesign",
+      "hardwareDevices": [
+        "ARGlasses",
+        "VRHeadset"
+      ],
+      "sensingTechnology": [
+        "ComputerVision",
+        "DynamicGesture",
+        "GestureRecognition",
+        "HandTracking"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "InAir",
+        "NonContact",
+        "Visual"
+      ],
+      "gestureTypes": [
+        "Directional",
+        "SingleHand"
+      ],
+      "applicationScenarios": [
+        "AR",
+        "Education",
+        "Healthcare",
+        "Industry",
+        "VR"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "HighAccuracy",
+        "UserAdaptation"
+      ],
+      "tags": [],
+      "image": "Papers/GestureDesign/GestureDesign预览图/2021-A New Dataset and Recognition for Egocentric Microgesture Designed by Ergonomists.png",
+      "pdfFile": "2021-A New Dataset and Recognition for Egocentric Microgesture Designed by Ergonomists.pdf",
+      "pdfPath": "Papers/GestureDesign/2021-A New Dataset and Recognition for Egocentric Microgesture Designed by Ergonomists.pdf",
+      "doi": "https://doi.org/10.1007/978-3-030-87358-5",
+      "authors": "Li, Guangchuan; Liu, Yue; Song, Weitao; Wang, Cong; Wang, Yongtian",
+      "journal": "Lecture Notes in Computer Science",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 98,
+      "title": "A user-based mid-air hand gesture set for spreadsheets",
+      "year": "2021",
+      "category": "GestureDesign",
+      "hardwareDevices": [
+        "OtherDevices",
+        "VRHeadset"
+      ],
+      "sensingTechnology": [
+        "ComputerVision",
+        "DynamicGesture",
+        "GestureRecognition",
+        "Motion",
+        "Optical"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "InAir",
+        "NonContact",
+        "RealTime",
+        "Visual"
+      ],
+      "gestureTypes": [
+        "Pinch",
+        "SingleHand",
+        "Swipe"
+      ],
+      "applicationScenarios": [
+        "OtherScenarios"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "Elicitation"
+      ],
+      "tags": [],
+      "image": "Papers/GestureDesign/GestureDesign预览图/2021-A User-based Mid-air Hand Gesture Set for Spreadsheets.png",
+      "pdfFile": "2021-A User-based Mid-air Hand Gesture Set for Spreadsheets.pdf",
+      "pdfPath": "Papers/GestureDesign/2021-A User-based Mid-air Hand Gesture Set for Spreadsheets.pdf",
+      "doi": "https://doi.org/10.1145/3429360.3468193",
+      "authors": "Yuta Takayama; Yuu Ichikawa; Buntarou Shizuki; Ikkaku Kawaguchi; Shin Takahashi",
+      "journal": "Asian CHI Symposium 2021",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 99,
+      "title": "AROExploring the Design of Smart-Ring Interactions for Encumbered Hands",
+      "year": "2021",
+      "category": "hardware",
+      "hardwareDevices": [
+        "SmartRing",
+        "Wearables",
+        "WearableSensor"
+      ],
+      "sensingTechnology": [
+        "Accelerometer",
+        "Capacitive",
+        "DynamicGesture",
+        "FingerTracking",
+        "GestureRecognition",
+        "Gyroscope",
+        "IMU"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "ContactBased",
+        "DeviceContact",
+        "InAir",
+        "RealTime",
+        "Visual"
+      ],
+      "gestureTypes": [
+        "Directional",
+        "Grasp/Grip",
+        "SingleHand",
+        "Swipe",
+        "Tap",
+        "ThumbIndex"
+      ],
+      "applicationScenarios": [
+        "MediaControl",
+        "Navigation",
+        "ObjectManipulation"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "DiscreetInput",
+        "Elicitation",
+        "Encumbered",
+        "HandsFree",
+        "PortableDesign",
+        "SocialAcceptability"
+      ],
+      "tags": [],
+      "image": "Papers/HARDWARE/Hardware预览图/2021-AROExploring the Design of Smart-Ring Interactions for Encumbered Hands.png",
+      "pdfFile": "2021-AROExploring the Design of Smart-Ring Interactions for Encumbered Hands.pdf",
+      "pdfPath": "Papers/HARDWARE/2021-AROExploring the Design of Smart-Ring Interactions for Encumbered Hands.pdf",
+      "doi": "https://doi.org/10.1145/3447526.3472037",
+      "authors": "Sandra Bardot; Surya Rawat; Duy Thai Nguyen; Sawyer Rempel; Huizhe Zheng; Bradley Rey; Jun Li; Kevin Fan; Da-Yuan Huang; Wei Li; Pourang Irani",
+      "journal": "Proceedings of the 23rd International Conference on Mobile Human-Computer Interaction",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 100,
+      "title": "AtaTouch Robust Finger Pinch Detection for a VR Controller Using RF Return Loss",
+      "year": "2021",
+      "category": "hardware",
+      "hardwareDevices": [
+        "VRHeadset",
+        "Wearables",
+        "WearableSensor"
+      ],
+      "sensingTechnology": [
+        "Capacitive",
+        "FingerTracking",
+        "GestureRecognition",
+        "RFSensing",
+        "StaticGesture"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "ContactBased",
+        "DeviceContact",
+        "RealTime",
+        "Visual"
+      ],
+      "gestureTypes": [
+        "Grasp/Grip",
+        "Pinch",
+        "SingleHand",
+        "ThumbIndex"
+      ],
+      "applicationScenarios": [
+        "Gaming",
+        "ObjectManipulation",
+        "VR"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "HighAccuracy",
+        "LowLatency",
+        "OcclusionAvoid",
+        "OneHandUse"
+      ],
+      "tags": [],
+      "image": "Papers/HARDWARE/Hardware预览图/2021-AtaTouch Robust Finger Pinch Detection for a VR Controller Using RF Return Loss.png",
+      "pdfFile": "2021-AtaTouch Robust Finger Pinch Detection for a VR Controller Using RF Return Loss.pdf",
+      "pdfPath": "Papers/HARDWARE/2021-AtaTouch Robust Finger Pinch Detection for a VR Controller Using RF Return Loss.pdf",
+      "doi": "https://doi.org/10.1145/3411764.3445442",
+      "authors": "Daehwa Kim; Keunwoo Park; Geehyuk Lee",
+      "journal": "Proceedings of the 2021 CHI Conference on Human Factors in Computing Systems",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 101,
+      "title": "Design of 3D microgestures for commands in virtual reality or augmented reality",
+      "year": "2021",
+      "category": "GestureDesign",
+      "hardwareDevices": [
+        "ARGlasses",
+        "TouchScreen",
+        "VRHeadset"
+      ],
+      "sensingTechnology": [
+        "3DPoseEstimation",
+        "ComputerVision",
+        "FingerTracking",
+        "GestureRecognition",
+        "HandTracking",
+        "Motion"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "Haptic",
+        "InAir",
+        "MultiModal",
+        "NonContact",
+        "Visual"
+      ],
+      "gestureTypes": [
+        "Directional",
+        "Grasp/Grip",
+        "Pinch",
+        "SingleHand",
+        "Swipe",
+        "Tap"
+      ],
+      "applicationScenarios": [
+        "AR",
+        "Gaming",
+        "MediaControl",
+        "Navigation",
+        "ObjectManipulation",
+        "VR"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "HandsFree",
+        "HighAccuracy",
+        "LowLatency",
+        "SocialAcceptability",
+        "UserAdaptation"
+      ],
+      "tags": [],
+      "image": "Papers/GestureDesign/GestureDesign预览图/2021-Design of 3D microgestures for commands in virtual reality or augmented reality.png",
+      "pdfFile": "2021-Design of 3D microgestures for commands in virtual reality or augmented reality.pdf",
+      "pdfPath": "Papers/GestureDesign/2021-Design of 3D microgestures for commands in virtual reality or augmented reality.pdf",
+      "doi": "https://doi.org/10.3390/app11146375",
+      "authors": "Guangchuan Li; David Rempel; Yue Liu; Weitao Song; Carisa Harris Adamson",
+      "journal": "Applied Sciences",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 102,
+      "title": "DualRing Enabling Subtle and Expressive Hand Interaction with Dual IMU Rings",
+      "year": "2021",
+      "category": "hardware",
+      "hardwareDevices": [
+        "SmartRing",
+        "Wearables",
+        "WearableSensor"
+      ],
+      "sensingTechnology": [
+        "Accelerometer",
+        "ContinuousGesture",
+        "DynamicGesture",
+        "FingerTracking",
+        "GestureRecognition",
+        "Gyroscope",
+        "HandTracking",
+        "IMU",
+        "Magnetometer",
+        "MotionAnalysis",
+        "RFSensing",
+        "StaticGesture"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "BodyContact",
+        "ContactBased",
+        "DirectTouch",
+        "MultiModal",
+        "NonContact",
+        "RealTime",
+        "Visual"
+      ],
+      "gestureTypes": [
+        "Directional",
+        "Grasp/Grip",
+        "Pinch",
+        "SingleHand",
+        "Swipe",
+        "Tap",
+        "ThumbIndex"
+      ],
+      "applicationScenarios": [
+        "AR",
+        "IoT",
+        "MediaControl",
+        "ObjectManipulation",
+        "SmartHome",
+        "TextInput",
+        "VR"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "DiscreetInput",
+        "HighAccuracy",
+        "OneHandUse",
+        "PortableDesign",
+        "SocialAcceptability"
+      ],
+      "tags": [],
+      "image": "Papers/HARDWARE/Hardware预览图/2021-DualRing Enabling Subtle and Expressive Hand Interaction with Dual IMU Rings.png",
+      "pdfFile": "2021-DualRing Enabling Subtle and Expressive Hand Interaction with Dual IMU Rings.pdf",
+      "pdfPath": "Papers/HARDWARE/2021-DualRing Enabling Subtle and Expressive Hand Interaction with Dual IMU Rings.pdf",
+      "doi": "https://doi.org/10.1145/3478114",
+      "authors": "Chen Liang; Chun Yu; Yue Qin; Yuntao Wang; Yuanchun Shi",
+      "journal": "Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 103,
+      "title": "ElectroringSubtle pinch and touch detection with a ring",
+      "year": "2021",
+      "category": "hardware",
+      "hardwareDevices": [
+        "SmartRing",
+        "Wearables",
+        "WearableSensor"
+      ],
+      "sensingTechnology": [
+        "Accelerometer",
+        "DynamicGesture",
+        "GestureRecognition",
+        "Gyroscope",
+        "IMU",
+        "OtherTechnology",
+        "StaticGesture"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "BodyContact",
+        "ContactBased",
+        "Proprioceptive",
+        "RealTime",
+        "Visual"
+      ],
+      "gestureTypes": [
+        "Pinch",
+        "Swipe",
+        "Tap",
+        "ThumbIndex"
+      ],
+      "applicationScenarios": [
+        "DigitalArt",
+        "MediaControl",
+        "MR",
+        "ObjectManipulation",
+        "VR"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "DiscreetInput",
+        "HighAccuracy",
+        "LowLatency",
+        "OneHandUse",
+        "PortableDesign"
+      ],
+      "tags": [],
+      "image": "Papers/HARDWARE/Hardware预览图/2021-ElectroringSubtle pinch and touch detection with a ring.png",
+      "pdfFile": "2021-ElectroringSubtle pinch and touch detection with a ring.pdf",
+      "pdfPath": "Papers/HARDWARE/2021-ElectroringSubtle pinch and touch detection with a ring.pdf",
+      "doi": "https://doi.org/10.1145/3411764.3445094",
+      "authors": "Wolf Kienzle; Eric Whitmire; Chris Rittaler; Hrvoje Benko",
+      "journal": "Proceedings of the 2021 CHI Conference on Human Factors in Computing Systems",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 104,
+      "title": "GestuRING A Web-based Tool for Designing Gesture Input with Rings, Ring-Like, and Ring-Ready Devices",
+      "year": "2021",
+      "category": "GestureDesign",
+      "hardwareDevices": [
+        "SmartRing",
+        "Wearables"
+      ],
+      "sensingTechnology": [
+        "GestureRecognition",
+        "OtherTechnology"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "BodyContact",
+        "ContactBased",
+        "InAir",
+        "NonContact"
+      ],
+      "gestureTypes": [
+        "Pinch",
+        "SingleHand",
+        "Swipe",
+        "Tap",
+        "ThumbIndex",
+        "Rotation"
+      ],
+      "applicationScenarios": [
+        "OtherScenarios"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "Elicitation",
+        "UserAdaptation"
+      ],
+      "tags": [],
+      "image": "Papers/GestureDesign/GestureDesign预览图/2021-GestuRING A Web-based Tool for Designing Gesture Input with Rings, Ring-Like, and Ring-Ready Devices.png",
+      "pdfFile": "2021-GestuRING A Web-based Tool for Designing Gesture Input with Rings, Ring-Like, and Ring-Ready Devices.pdf",
+      "pdfPath": "Papers/GestureDesign/2021-GestuRING A Web-based Tool for Designing Gesture Input with Rings, Ring-Like, and Ring-Ready Devices.pdf",
+      "doi": "https://doi.org/10.1145/3472749.3474780",
+      "authors": "Radu-Daniel Vatavu; Laura-Bianca Bilius",
+      "journal": "The 34th Annual ACM Symposium on User Interface Software and Technology",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 105,
+      "title": "Holoscopic 3D Microgesture Recognition by Deep Neural Network Model Based on Viewpoint Images and Decision Fusion",
+      "year": "2021",
+      "category": "software",
+      "hardwareDevices": [
+        "Wearables"
+      ],
+      "sensingTechnology": [
+        "3DPoseEstimation",
+        "ComputerVision",
+        "DynamicGesture",
+        "GestureRecognition",
+        "Optical"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "InAir",
+        "NonContact",
+        "Visual"
+      ],
+      "gestureTypes": [
+        "Directional",
+        "SingleHand"
+      ],
+      "applicationScenarios": [
+        "AR",
+        "VR"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "HandsFree",
+        "HighAccuracy"
+      ],
+      "tags": [],
+      "image": "Papers/SOFTWARE/Software预览图/2021-Holoscopic 3D Microgesture Recognition by Deep Neural Network Model Based on Viewpoint Images and Decision Fusion.png",
+      "pdfFile": "2021-Holoscopic 3D Microgesture Recognition by Deep Neural Network Model Based on Viewpoint Images and Decision Fusion.pdf",
+      "pdfPath": "Papers/SOFTWARE/2021-Holoscopic 3D Microgesture Recognition by Deep Neural Network Model Based on Viewpoint Images and Decision Fusion.pdf",
+      "doi": "https://doi.org/10.1109/THMS.2020.3047914",
+      "authors": "Yi Liu; Min Peng; Mohammad Rafiq Swash; Tong Chen; Rui Qin; Hongying Meng",
+      "journal": "IEEE Transactions on Human-Machine Systems",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 106,
+      "title": "Identifying Contact Fingers on Touch Sensitive Surfaces by Ring-Based Vibratory Communication",
+      "year": "2021",
+      "category": "hardware",
+      "hardwareDevices": [
+        "SmartRing",
+        "TouchScreen",
+        "Wearables"
+      ],
+      "sensingTechnology": [
+        "GestureRecognition",
+        "OtherTechnology",
+        "StaticGesture",
+        "FingerIdentification"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "ContactBased",
+        "DeviceContact",
+        "DirectTouch",
+        "Haptic",
+        "RealTime"
+      ],
+      "gestureTypes": [
+        "MultiTouch",
+        "SingleHand",
+        "Tap"
+      ],
+      "applicationScenarios": [
+        "SmartHome"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "HighAccuracy",
+        "SmallScreen",
+        "TouchOptimized"
+      ],
+      "tags": [],
+      "image": "Papers/HARDWARE/Hardware预览图/2021-Identifying Contact Fingers on Touch Sensitive Surfaces by Ring-Based Vibratory Communication.png",
+      "pdfFile": "2021-Identifying Contact Fingers on Touch Sensitive Surfaces by Ring-Based Vibratory Communication.pdf",
+      "pdfPath": "Papers/HARDWARE/2021-Identifying Contact Fingers on Touch Sensitive Surfaces by Ring-Based Vibratory Communication.pdf",
+      "doi": "https://doi.org/10.1145/3472749.3474745",
+      "authors": "Seungjae Oh; Chaeyong Park; Yo-Seb Jeon; Seungmoon Choi",
+      "journal": "The 34th Annual ACM Symposium on User Interface Software and Technology",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 107,
+      "title": "M[eye]croEye-gaze+Microgestures for Multitasking and Interruptions",
+      "year": "2021",
+      "category": "GestureDesign",
+      "hardwareDevices": [
+        "OtherDevices",
+        "WearableSensor"
+      ],
+      "sensingTechnology": [
+        "ComputerVision",
+        "GestureRecognition",
+        "Optical",
+        "Pressure",
+        "StaticGesture"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "ContactBased",
+        "DeviceContact",
+        "GazeBased",
+        "MultiModal",
+        "Visual"
+      ],
+      "gestureTypes": [
+        "Pinch",
+        "SingleHand",
+        "Tap",
+        "ThumbIndex"
+      ],
+      "applicationScenarios": [
+        "InVehicle",
+        "ObjectManipulation",
+        "OtherScenarios"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "DiscreetInput",
+        "EyesFree",
+        "HighAccuracy",
+        "LowLatency",
+        "MidasTouch",
+        "OneHandUse"
+      ],
+      "tags": [],
+      "image": "Papers/GestureDesign/GestureDesign预览图/2021-M[eye]croEye-gaze+Microgestures for Multitasking and Interruptions.png",
+      "pdfFile": "2021-M[eye]croEye-gaze+Microgestures for Multitasking and Interruptions.pdf",
+      "pdfPath": "Papers/GestureDesign/2021-M[eye]croEye-gaze+Microgestures for Multitasking and Interruptions.pdf",
+      "doi": "https://doi.org/10.1145/3461732",
+      "authors": "Jérémy Wambecke; Alix Goguey; Laurence Nigay; Lauren Dargent; Daniel Hauret; Stéphanie Lafon; Jean-Samuel Louis de Visme",
+      "journal": "Proceedings of the ACM on Human-Computer Interaction",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 108,
+      "title": "SoloFinger Robust Microgestures while Grasping Everyday Objects",
+      "year": "2021",
+      "category": "GestureDesign",
+      "hardwareDevices": [
+        "DataGloves",
+        "OtherDevices"
+      ],
+      "sensingTechnology": [
+        "DynamicGesture",
+        "FingerTracking",
+        "GestureRecognition",
+        "Motion",
+        "Optical",
+        "StaticGesture"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "DeviceContact",
+        "DirectTouch",
+        "RealTime",
+        "Visual"
+      ],
+      "gestureTypes": [
+        "Flex",
+        "Grasp/Grip",
+        "SingleHand",
+        "Swipe",
+        "Tap"
+      ],
+      "applicationScenarios": [
+        "ObjectManipulation",
+        "OtherScenarios"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "Encumbered",
+        "HighAccuracy"
+      ],
+      "tags": [],
+      "image": "Papers/GestureDesign/GestureDesign预览图/2021-SoloFinger Robust Microgestures while Grasping Everyday Objects.png",
+      "pdfFile": "2021-SoloFinger Robust Microgestures while Grasping Everyday Objects.pdf",
+      "pdfPath": "Papers/GestureDesign/2021-SoloFinger Robust Microgestures while Grasping Everyday Objects.pdf",
+      "doi": "https://doi.org/10.1145/3411764.3445197",
+      "authors": "Adwait Sharma; Michael A. Hedderich; Divyanshu Bhardwaj; Bruno Fruchard; Jess McIntosh; Aditya Shekhar Nittala; Dietrich Klakow; Daniel Ashbrook; Jürgen Steimle",
+      "journal": "Proceedings of the 2021 CHI Conference on Human Factors in Computing Systems",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 109,
+      "title": "Thumbtrak Recognizing micro-finger poses using a ring with proximity sensing",
+      "year": "2021",
+      "category": "hardware",
+      "hardwareDevices": [
+        "SmartRing",
+        "Wearables",
+        "WearableSensor"
+      ],
+      "sensingTechnology": [
+        "3DPoseEstimation",
+        "GestureRecognition",
+        "OtherTechnology",
+        "StaticGesture"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "DeviceContact",
+        "DirectTouch",
+        "Haptic",
+        "RealTime",
+        "Visual"
+      ],
+      "gestureTypes": [
+        "SingleHand",
+        "Tap",
+        "ThumbIndex"
+      ],
+      "applicationScenarios": [
+        "AR",
+        "Gaming",
+        "MediaControl",
+        "Navigation",
+        "TextInput",
+        "VR"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "DiscreetInput",
+        "EyesFree",
+        "HighAccuracy",
+        "OneHandUse",
+        "PortableDesign",
+        "SocialAcceptability"
+      ],
+      "tags": [],
+      "image": "Papers/HARDWARE/Hardware预览图/2021-Thumbtrak Recognizing micro-finger poses using a ring with proximity sensing.png",
+      "pdfFile": "2021-Thumbtrak Recognizing micro-finger poses using a ring with proximity sensing.pdf",
+      "pdfPath": "Papers/HARDWARE/2021-Thumbtrak Recognizing micro-finger poses using a ring with proximity sensing.pdf",
+      "doi": "https://doi.org/10.1145/3447526.3472060",
+      "authors": "Wei Sun; Franklin Mingzhe Li; Congshu Huang; Zhenyu Lei; Benjamin Steeper; Songyun Tao; Feng Tian; Cheng Zhang",
+      "journal": "Proceedings of the 23rd International Conference on Mobile Human-Computer Interaction",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 110,
+      "title": "DRG-Keyboard Enabling Subtle Gesture Typing on the Fingertip with Dual IMU Rings",
+      "year": "2022",
+      "category": "hardware",
+      "hardwareDevices": [
+        "SmartRing",
+        "Wearables",
+        "WearableSensor"
+      ],
+      "sensingTechnology": [
+        "Accelerometer",
+        "DynamicGesture",
+        "GestureRecognition",
+        "Gyroscope",
+        "IMU",
+        "Magnetometer",
+        "TrajectoryAnalysis"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "BodyContact",
+        "ContactBased",
+        "Haptic",
+        "Visual"
+      ],
+      "gestureTypes": [
+        "SingleHand",
+        "Swipe",
+        "Tap",
+        "ThumbIndex"
+      ],
+      "applicationScenarios": [
+        "AR",
+        "SmartHome",
+        "TextInput"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "DiscreetInput",
+        "EyesFree",
+        "PortableDesign",
+        "QWERTYLayout",
+        "SmallScreen"
+      ],
+      "tags": [],
+      "image": "Papers/HARDWARE/Hardware预览图/2022-DRG-Keyboard Enabling Subtle Gesture Typing on the Fingertip with Dual IMU Rings.png",
+      "pdfFile": "2022-DRG-Keyboard Enabling Subtle Gesture Typing on the Fingertip with Dual IMU Rings.pdf",
+      "pdfPath": "Papers/HARDWARE/2022-DRG-Keyboard Enabling Subtle Gesture Typing on the Fingertip with Dual IMU Rings.pdf",
+      "doi": "https://doi.org/10.1145/3569463",
+      "authors": "Chen Liang; Chi Hsia; Chun Yu; Yukang Yan; Yuntao Wang; Yuanchun Shi",
+      "journal": "Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 111,
+      "title": "EFRing Enabling Thumb-to-Index-Finger Microgesture Interaction through Electric Field Sensing Using Single Smart Ring",
+      "year": "2022",
+      "category": "hardware",
+      "hardwareDevices": [
+        "SmartRing",
+        "Wearables",
+        "WearableSensor"
+      ],
+      "sensingTechnology": [
+        "Capacitive",
+        "ContinuousGesture",
+        "DynamicGesture",
+        "GestureRecognition",
+        "StaticGesture",
+        "ElectricField"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "BodyContact",
+        "ContactBased",
+        "NonContact",
+        "RealTime",
+        "Visual"
+      ],
+      "gestureTypes": [
+        "Directional",
+        "SingleHand",
+        "Swipe",
+        "Tap",
+        "ThumbIndex"
+      ],
+      "applicationScenarios": [
+        "DigitalArt",
+        "IoT",
+        "MediaControl",
+        "SmartHome",
+        "VR"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "DiscreetInput",
+        "HighAccuracy",
+        "OneHandUse",
+        "PortableDesign",
+        "SocialAcceptability"
+      ],
+      "tags": [],
+      "image": "Papers/HARDWARE/Hardware预览图/2022-EFRing Enabling Thumb-to-Index-Finger Microgesture Interaction through Electric Field Sensing Using Single Smart Ring.png",
+      "pdfFile": "2022-EFRing Enabling Thumb-to-Index-Finger Microgesture Interaction through Electric Field Sensing Using Single Smart Ring.pdf",
+      "pdfPath": "Papers/HARDWARE/2022-EFRing Enabling Thumb-to-Index-Finger Microgesture Interaction through Electric Field Sensing Using Single Smart Ring.pdf",
+      "doi": "https://doi.org/10.1145/3569478",
+      "authors": "Taizhou Chen; Tianpei Li; Xingyu Yang; Kening Zhu",
+      "journal": "Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 112,
+      "title": "EtherPoseContinuous Hand Pose Tracking with Wrist-Worn Antenna Impedance Characteristic Sensing",
+      "year": "2022",
+      "category": "hardware",
+      "hardwareDevices": [
+        "Wearables",
+        "WearableSensor",
+        "Wristband"
+      ],
+      "sensingTechnology": [
+        "3DPoseEstimation",
+        "ContinuousGesture",
+        "HandTracking",
+        "RFSensing",
+        "ImpedanceSensing"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "InAir",
+        "NonContact",
+        "RealTime",
+        "Visual"
+      ],
+      "gestureTypes": [
+        "Flex",
+        "SingleHand"
+      ],
+      "applicationScenarios": [
+        "AR",
+        "VR"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "HighAccuracy",
+        "OcclusionAvoid",
+        "PortableDesign"
+      ],
+      "tags": [],
+      "image": "Papers/HARDWARE/Hardware预览图/2022-EtherPoseContinuous Hand Pose Tracking with Wrist-Worn Antenna Impedance Characteristic Sensing.png",
+      "pdfFile": "2022-EtherPoseContinuous Hand Pose Tracking with Wrist-Worn Antenna Impedance Characteristic Sensing.pdf",
+      "pdfPath": "Papers/HARDWARE/2022-EtherPoseContinuous Hand Pose Tracking with Wrist-Worn Antenna Impedance Characteristic Sensing.pdf",
+      "doi": "https://doi.org/10.1145/3526113.3545665",
+      "authors": "Daehwa Kim; Chris Harrison",
+      "journal": "Proceedings of the 35th Annual ACM Symposium on User Interface Software and Technology",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 113,
+      "title": "IndexPen Two-Finger Text Input with Millimeter-Wave Radar",
+      "year": "2022",
+      "category": "software",
+      "hardwareDevices": [
+        "OtherDevices",
+        "Smartphone",
+        "WearableSensor"
+      ],
+      "sensingTechnology": [
+        "ContinuousGesture",
+        "DynamicGesture",
+        "FingerTracking",
+        "GestureRecognition",
+        "Motion",
+        "Radar",
+        "RFSensing"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "InAir",
+        "NonContact",
+        "RealTime",
+        "Visual"
+      ],
+      "gestureTypes": [
+        "SingleHand",
+        "Tap",
+        "ThumbIndex"
+      ],
+      "applicationScenarios": [
+        "Accessibility",
+        "AR",
+        "IoT",
+        "SmartHome",
+        "TextInput",
+        "VR"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "EyesFree",
+        "HandsFree",
+        "HighAccuracy",
+        "LowLatency",
+        "SocialAcceptability",
+        "UserAdaptation"
+      ],
+      "tags": [],
+      "image": "Papers/SOFTWARE/Software预览图/2022-IndexPen Two-Finger Text Input with Millimeter-Wave Radar.png",
+      "pdfFile": "2022-IndexPen Two-Finger Text Input with Millimeter-Wave Radar.pdf",
+      "pdfPath": "Papers/SOFTWARE/2022-IndexPen Two-Finger Text Input with Millimeter-Wave Radar.pdf",
+      "doi": "https://doi.org/10.1145/3534601",
+      "authors": "Haowen Wei; Ziheng Li; Alexander D. Galvan; Zhuoran Su; Xiao Zhang; Kaveh Pahlavan; Erin T. Solovey",
+      "journal": "Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 114,
+      "title": "Keep in TouchCombining Touch Interaction with Thumb-to-Finger microGestures for People with Visual Impairment",
+      "year": "2022",
+      "category": "software",
+      "hardwareDevices": [
+        "Tablet",
+        "TouchScreen",
+        "Wearables",
+        "WearableSensor"
+      ],
+      "sensingTechnology": [
+        "Capacitive",
+        "GestureRecognition",
+        "OtherTechnology",
+        "StaticGesture"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "Audio",
+        "ContactBased",
+        "DirectTouch",
+        "MultiModal",
+        "RealTime"
+      ],
+      "gestureTypes": [
+        "SingleHand",
+        "Swipe",
+        "Tap",
+        "ThumbIndex"
+      ],
+      "applicationScenarios": [
+        "Accessibility",
+        "Education",
+        "Navigation"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "CommunicationAid",
+        "DiscreetInput",
+        "EyesFree",
+        "HighAccuracy",
+        "OneHandUse",
+        "TouchOptimized"
+      ],
+      "tags": [],
+      "image": "Papers/SOFTWARE/Software预览图/2022-Keep in TouchCombining Touch Interaction with Thumb-to-Finger microGestures for People with Visual Impairment.png",
+      "pdfFile": "2022-Keep in TouchCombining Touch Interaction with Thumb-to-Finger microGestures for People with Visual Impairment.pdf",
+      "pdfPath": "Papers/SOFTWARE/2022-Keep in TouchCombining Touch Interaction with Thumb-to-Finger microGestures for People with Visual Impairment.pdf",
+      "doi": "https://doi.org/10.1145/3536221.3556589",
+      "authors": "Gauthier Robert Jean Faisandaz; Alix Goguey; Christophe Jouffrais; Laurence Nigay",
+      "journal": "Proceedings of the 2022 International Conference on Multimodal Interaction",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 115,
+      "title": "MicroPressDetecting Pressure and Hover Distance in Thumb-to-Finger Interactions",
+      "year": "2022",
+      "category": "hardware",
+      "hardwareDevices": [
+        "Wearables",
+        "WearableSensor"
+      ],
+      "sensingTechnology": [
+        "Accelerometer",
+        "ContinuousGesture",
+        "Depth",
+        "FingerTracking",
+        "GestureRecognition",
+        "Gyroscope",
+        "IMU",
+        "Magnetometer",
+        "MotionAnalysis",
+        "Pressure"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "BodyContact",
+        "ContactBased",
+        "DirectTouch",
+        "NonContact",
+        "Proprioceptive",
+        "RealTime",
+        "Visual"
+      ],
+      "gestureTypes": [
+        "Hold",
+        "Pinch",
+        "SingleHand",
+        "ThumbIndex",
+        "Hover"
+      ],
+      "applicationScenarios": [
+        "AR",
+        "Gaming",
+        "MediaControl",
+        "Navigation",
+        "VR"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "DiscreetInput",
+        "EyesFree",
+        "HighAccuracy",
+        "OneHandUse",
+        "PortableDesign",
+        "SocialAcceptability"
+      ],
+      "tags": [],
+      "image": "Papers/HARDWARE/Hardware预览图/2022-MicroPressDetecting Pressure and Hover Distance in Thumb-to-Finger Interactions.png",
+      "pdfFile": "2022-MicroPressDetecting Pressure and Hover Distance in Thumb-to-Finger Interactions.pdf",
+      "pdfPath": "Papers/HARDWARE/2022-MicroPressDetecting Pressure and Hover Distance in Thumb-to-Finger Interactions.pdf",
+      "doi": "https://doi.org/10.1145/3565970.3567698",
+      "authors": "Rhett Dobinson; Marc Teyssier; Jürgen Steimle; Bruno Fruchard",
+      "journal": "Proceedings of the 2022 ACM Symposium on Spatial User Interaction",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 116,
+      "title": "MyoSpring3D Printing Mechanomyographic Sensors for Subtle Finger Gesture Recognition",
+      "year": "2022",
+      "category": "hardware",
+      "hardwareDevices": [
+        "Wearables",
+        "WearableSensor"
+      ],
+      "sensingTechnology": [
+        "Bio",
+        "GestureRecognition",
+        "StaticGesture"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "NonContact",
+        "RealTime"
+      ],
+      "gestureTypes": [
+        "Flex",
+        "SingleHand"
+      ],
+      "applicationScenarios": [
+        "OtherScenarios"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "HighAccuracy",
+        "PortableDesign",
+        "UserAdaptation"
+      ],
+      "tags": [],
+      "image": "Papers/HARDWARE/Hardware预览图/2022-MyoSpring3D Printing Mechanomyographic Sensors for Subtle Finger Gesture Recognition.png",
+      "pdfFile": "2022-MyoSpring3D Printing Mechanomyographic Sensors for Subtle Finger Gesture Recognition.pdf",
+      "pdfPath": "Papers/HARDWARE/2022-MyoSpring3D Printing Mechanomyographic Sensors for Subtle Finger Gesture Recognition.pdf",
+      "doi": "https://doi.org/10.1145/3490149.3501321",
+      "authors": "Stephen Shiao-ru Lin; Nisal Menuka Gamage; Kithmini Herath; Anusha Withana",
+      "journal": "Sixteenth International Conference on Tangible, Embedded, and Embodied Interaction",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 117,
+      "title": "Squeezy-FeelyInvestigating Lateral Thumb-Index Pinching as an Input Modality",
+      "year": "2022",
+      "category": "GestureDesign",
+      "hardwareDevices": [
+        "OtherDevices"
+      ],
+      "sensingTechnology": [
+        "ContinuousGesture",
+        "FingerTracking",
+        "GestureRecognition",
+        "HandTracking",
+        "MotionAnalysis",
+        "Optical",
+        "Pressure"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "ContactBased",
+        "DeviceContact",
+        "DirectTouch",
+        "Haptic",
+        "Proprioceptive",
+        "Tangible",
+        "Visual"
+      ],
+      "gestureTypes": [
+        "Hold",
+        "Pinch",
+        "SingleHand",
+        "ThumbIndex"
+      ],
+      "applicationScenarios": [
+        "AR",
+        "MR",
+        "ObjectManipulation",
+        "OtherScenarios"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "HighAccuracy",
+        "OneHandUse",
+        "UserAdaptation"
+      ],
+      "tags": [],
+      "image": "Papers/GestureDesign/GestureDesign预览图/2022-Squeezy-FeelyInvestigating Lateral Thumb-Index Pinching as an Input Modality.png",
+      "pdfFile": "2022-Squeezy-FeelyInvestigating Lateral Thumb-Index Pinching as an Input Modality.pdf",
+      "pdfPath": "Papers/GestureDesign/2022-Squeezy-FeelyInvestigating Lateral Thumb-Index Pinching as an Input Modality.pdf",
+      "doi": "https://doi.org/10.1145/3491102.3501981",
+      "authors": "Martin Schmitz; Sebastian Günther; Dominik Schön; Florian Müller",
+      "journal": "CHI Conference on Human Factors in Computing Systems",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 118,
+      "title": "AO-FingerHands-free Fine-grained Finger Gesture Recognition via Acoustic-Optic Sensor Fusing",
+      "year": "2023",
+      "category": "hardware",
+      "hardwareDevices": [
+        "Wearables",
+        "WearableSensor",
+        "Wristband"
+      ],
+      "sensingTechnology": [
+        "DynamicGesture",
+        "GestureRecognition",
+        "Optical",
+        "AcousticSensing"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "InAir",
+        "NonContact",
+        "RealTime"
+      ],
+      "gestureTypes": [
+        "Directional",
+        "SingleHand",
+        "Swipe"
+      ],
+      "applicationScenarios": [
+        "AR",
+        "MR",
+        "VR"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "HandsFree",
+        "HighAccuracy",
+        "LowLatency"
+      ],
+      "tags": [],
+      "image": "Papers/HARDWARE/Hardware预览图/2023-AO-FingerHands-free Fine-grained Finger Gesture Recognition via Acoustic-Optic Sensor Fusing.png",
+      "pdfFile": "2023-AO-FingerHands-free Fine-grained Finger Gesture Recognition via Acoustic-Optic Sensor Fusing.pdf",
+      "pdfPath": "Papers/HARDWARE/2023-AO-FingerHands-free Fine-grained Finger Gesture Recognition via Acoustic-Optic Sensor Fusing.pdf",
+      "doi": "https://doi.org/10.1145/3544548.3581264",
+      "authors": "Chenhan Xu; Bing Zhou; Gurunandan Krishnan; Shree Nayar",
+      "journal": "Proceedings of the 2023 CHI Conference on Human Factors in Computing Systems",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 119,
+      "title": "DCS-CTN Subtle Gesture Recognition Based on TD-CNN-Transformer via Millimeter-Wave Radar",
+      "year": "2023",
+      "category": "software",
+      "hardwareDevices": [
+        "OtherDevices"
+      ],
+      "sensingTechnology": [
+        "DynamicGesture",
+        "GestureRecognition",
+        "Radar",
+        "RFSensing"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "InAir",
+        "NonContact",
+        "RealTime"
+      ],
+      "gestureTypes": [
+        "Directional",
+        "SingleHand",
+        "Swipe"
+      ],
+      "applicationScenarios": [
+        "OtherScenarios"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "HighAccuracy",
+        "LowLatency"
+      ],
+      "tags": [],
+      "image": "Papers/SOFTWARE/Software预览图/2023-DCS-CTN Subtle Gesture Recognition Based on TD-CNN-Transformer via Millimeter-Wave Radar.png",
+      "pdfFile": "2023-DCS-CTN Subtle Gesture Recognition Based on TD-CNN-Transformer via Millimeter-Wave Radar.pdf",
+      "pdfPath": "Papers/SOFTWARE/2023-DCS-CTN Subtle Gesture Recognition Based on TD-CNN-Transformer via Millimeter-Wave Radar.pdf",
+      "doi": "https://doi.org/10.1109/JIOT.2023.3280227",
+      "authors": "Congming Wang; Xiaohui Zhao; Zan Li",
+      "journal": "IEEE Internet of Things Journal",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 120,
+      "title": "iFAD gestures understanding users’ gesture input performance with index-finger augmentation devices",
+      "year": "2023",
+      "category": "software",
+      "hardwareDevices": [
+        "SmartRing",
+        "Wearables",
+        "WearableSensor"
+      ],
+      "sensingTechnology": [
+        "Accelerometer",
+        "DynamicGesture",
+        "FingerTracking",
+        "GestureRecognition",
+        "IMU",
+        "Motion",
+        "StaticGesture"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "BodyContact",
+        "ContactBased",
+        "DeviceContact",
+        "InAir",
+        "NonContact",
+        "Visual"
+      ],
+      "gestureTypes": [
+        "Directional",
+        "Pinch",
+        "SingleHand",
+        "Swipe",
+        "Tap",
+        "ThumbIndex"
+      ],
+      "applicationScenarios": [
+        "MediaControl",
+        "SmartHome",
+        "TextInput"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "DiscreetInput",
+        "EyesFree",
+        "HandsFree",
+        "OneHandUse",
+        "PortableDesign",
+        "SocialAcceptability",
+        "UserAdaptation"
+      ],
+      "tags": [],
+      "image": "Papers/SOFTWARE/Software预览图/2023-iFAD Gestures Understanding Users’ Gesture Input Performance with Index-Finger Augmentation Devices.png",
+      "pdfFile": "2023-iFAD Gestures Understanding Users’ Gesture Input Performance with Index-Finger Augmentation Devices.pdf",
+      "pdfPath": "Papers/SOFTWARE/2023-iFAD Gestures Understanding Users’ Gesture Input Performance with Index-Finger Augmentation Devices.pdf",
+      "doi": "https://doi.org/10.1145/3544548.3580928",
+      "authors": "Radu-Daniel Vatavu",
+      "journal": "Proceedings of the 2023 CHI Conference on Human Factors in Computing Systems",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 121,
+      "title": "Intentional Microgesture Recognition for&#xa0;Extended Human-Computer Interaction",
+      "year": "2023",
+      "category": "software",
+      "hardwareDevices": [
+        "ARGlasses",
+        "VRHeadset"
+      ],
+      "sensingTechnology": [
+        "ComputerVision",
+        "DynamicGesture",
+        "GestureRecognition"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "InAir",
+        "NonContact",
+        "Visual"
+      ],
+      "gestureTypes": [
+        "Pinch",
+        "SingleHand",
+        "Swipe",
+        "Tap"
+      ],
+      "applicationScenarios": [
+        "AR",
+        "MR",
+        "VR"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "HandsFree",
+        "HighAccuracy"
+      ],
+      "tags": [],
+      "image": "Papers/SOFTWARE/Software预览图/2023-Intentional Microgesture Recognition for%26%23xa0%3BExtended Human-Computer Interaction.png",
+      "pdfFile": "2023-Intentional Microgesture Recognition for&#xa0;Extended Human-Computer Interaction.pdf",
+      "pdfPath": "Papers/SOFTWARE/2023-Intentional Microgesture Recognition for%26%23xa0%3BExtended Human-Computer Interaction.pdf",
+      "doi": "https://doi.org/10.1007/978-3-031-35596-7",
+      "authors": "Kandoi, Chirag; Jung, Changsoo; Mannan, Sheikh; VanderHoeven, Hannah; Meisman, Quincy; Krishnaswamy, Nikhil; Blanchard, Nathaniel",
+      "journal": "Lecture Notes in Computer Science",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 122,
+      "title": "OptiRing Low-Resolution Optical Sensing for Subtle Thumb-to-Index Micro-Interactions",
+      "year": "2023",
+      "category": "hardware",
+      "hardwareDevices": [
+        "SmartRing",
+        "Wearables",
+        "WearableSensor"
+      ],
+      "sensingTechnology": [
+        "ComputerVision",
+        "ContinuousGesture",
+        "DynamicGesture",
+        "FingerTracking",
+        "GestureRecognition",
+        "Optical",
+        "OtherTechnology",
+        "StaticGesture"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "BodyContact",
+        "ContactBased",
+        "Haptic",
+        "RealTime",
+        "Tangible"
+      ],
+      "gestureTypes": [
+        "Pinch",
+        "SingleHand",
+        "Swipe",
+        "Tap",
+        "ThumbIndex"
+      ],
+      "applicationScenarios": [
+        "AR",
+        "MediaControl",
+        "Navigation",
+        "SmartHome",
+        "VR"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "DiscreetInput",
+        "HighAccuracy",
+        "LowLatency",
+        "OneHandUse",
+        "PortableDesign",
+        "SocialAcceptability"
+      ],
+      "tags": [],
+      "image": "Papers/HARDWARE/Hardware预览图/2023-OptiRing Low-Resolution Optical Sensing for Subtle Thumb-to-Index Micro-Interactions.png",
+      "pdfFile": "2023-OptiRing Low-Resolution Optical Sensing for Subtle Thumb-to-Index Micro-Interactions.pdf",
+      "pdfPath": "Papers/HARDWARE/2023-OptiRing Low-Resolution Optical Sensing for Subtle Thumb-to-Index Micro-Interactions.pdf",
+      "doi": "https://doi.org/10.1145/3607822.3614538",
+      "authors": "Anandghan Waghmare; Roger Boldu; Eric Whitmire; Wolf Kienzle",
+      "journal": "Proceedings of the 2023 ACM Symposium on Spatial User Interaction",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 123,
+      "title": "Representing microgestures interaction for wearable computing",
+      "year": "2023",
+      "category": "GestureDesign",
+      "hardwareDevices": [
+        "Wearables"
+      ],
+      "sensingTechnology": [
+        "GestureRecognition"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "InAir",
+        "Visual"
+      ],
+      "gestureTypes": [
+        "Pinch",
+        "SingleHand",
+        "Swipe",
+        "Tap"
+      ],
+      "applicationScenarios": [
+        "OtherScenarios"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "Elicitation",
+        "UserAdaptation"
+      ],
+      "tags": [],
+      "image": "Papers/GestureDesign/GestureDesign预览图/2023-Representing microgestures interaction for wearable computing.png",
+      "pdfFile": "2023-Representing microgestures interaction for wearable computing.pdf",
+      "pdfPath": "Papers/GestureDesign/2023-Representing microgestures interaction for wearable computing.pdf",
+      "doi": "https://doi.org/10.1145/3565066.3609740",
+      "authors": "Vincent Lambert",
+      "journal": "Proceedings of the 25th International Conference on Mobile Human-Computer Interaction",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 124,
+      "title": "SparseIMUComputational Design of Sparse IMU Layouts for Sensing Fine-grained Finger Microgestures",
+      "year": "2023",
+      "category": "hardware",
+      "hardwareDevices": [
+        "DataGloves",
+        "SmartRing",
+        "WearableSensor"
+      ],
+      "sensingTechnology": [
+        "Accelerometer",
+        "ContinuousGesture",
+        "DynamicGesture",
+        "FingerTracking",
+        "GestureRecognition",
+        "Gyroscope",
+        "IMU",
+        "Magnetometer",
+        "Motion",
+        "StaticGesture"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "ContactBased",
+        "NonContact",
+        "RealTime",
+        "Tangible",
+        "Visual"
+      ],
+      "gestureTypes": [
+        "Directional",
+        "Flex",
+        "Grasp/Grip",
+        "SingleHand",
+        "Tap"
+      ],
+      "applicationScenarios": [
+        "Gaming",
+        "InVehicle",
+        "IoT",
+        "SmartHome",
+        "VR"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "DiscreetInput",
+        "Encumbered",
+        "HandsFree",
+        "HighAccuracy",
+        "LowLatency",
+        "OneHandUse",
+        "PortableDesign"
+      ],
+      "tags": [],
+      "image": "Papers/HARDWARE/Hardware预览图/2023-SparseIMUComputational Design of Sparse IMU Layouts for Sensing Fine-grained Finger Microgestures.png",
+      "pdfFile": "2023-SparseIMUComputational Design of Sparse IMU Layouts for Sensing Fine-grained Finger Microgestures.pdf",
+      "pdfPath": "Papers/HARDWARE/2023-SparseIMUComputational Design of Sparse IMU Layouts for Sensing Fine-grained Finger Microgestures.pdf",
+      "doi": "https://doi.org/10.1145/3569894",
+      "authors": "Adwait Sharma; Christina Salchow-Hömmen; Vimal Suresh Mollyn; Aditya Shekhar Nittala; Michael A. Hedderich; Marion Koelle; Thomas Seel; Jürgen Steimle",
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 125,
+      "title": "Studying the Visual Representation of Microgestures",
+      "year": "2023",
+      "category": "GestureDesign",
+      "hardwareDevices": [
+        "ARGlasses",
+        "OtherDevices"
+      ],
+      "sensingTechnology": [
+        "Magnetometer",
+        "OtherRecognition",
+        "OtherTechnology"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "BodyContact",
+        "ContactBased",
+        "Visual"
+      ],
+      "gestureTypes": [
+        "Flex",
+        "Hold",
+        "SingleHand",
+        "Swipe",
+        "Tap",
+        "ThumbIndex"
+      ],
+      "applicationScenarios": [
+        "AR",
+        "Education"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "DiscreetInput",
+        "Elicitation",
+        "OneHandUse"
+      ],
+      "tags": [],
+      "image": "Papers/GestureDesign/GestureDesign预览图/2023-Studying the Visual Representation of Microgestures.png",
+      "pdfFile": "2023-Studying the Visual Representation of Microgestures.pdf",
+      "pdfPath": "Papers/GestureDesign/2023-Studying the Visual Representation of Microgestures.pdf",
+      "doi": "https://doi.org/10.1145/3604272",
+      "authors": "Vincent Lambert; Adrien Chaffangeon Caillet; Alix Goguey; Sylvain Malacria; Laurence Nigay",
+      "journal": "Proceedings of the ACM on Human-Computer Interaction",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 126,
+      "title": "TouchLog Finger Micro Gesture Recognition Using Photo-Reflective Sensors",
+      "year": "2023",
+      "category": "hardware",
+      "hardwareDevices": [
+        "OtherDevices",
+        "Wearables"
+      ],
+      "sensingTechnology": [
+        "ContinuousGesture",
+        "DynamicGesture",
+        "GestureRecognition",
+        "Optical",
+        "Pressure"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "BodyContact",
+        "ContactBased",
+        "DirectTouch",
+        "Haptic",
+        "RealTime"
+      ],
+      "gestureTypes": [
+        "SingleHand",
+        "Swipe",
+        "Tap",
+        "ThumbIndex"
+      ],
+      "applicationScenarios": [
+        "OtherScenarios"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "DiscreetInput",
+        "HighAccuracy",
+        "OneHandUse",
+        "SocialAcceptability"
+      ],
+      "tags": [],
+      "image": "Papers/HARDWARE/Hardware预览图/2023-TouchLog Finger Micro Gesture Recognition Using Photo-Reflective Sensors.png",
+      "pdfFile": "2023-TouchLog Finger Micro Gesture Recognition Using Photo-Reflective Sensors.pdf",
+      "pdfPath": "Papers/HARDWARE/2023-TouchLog Finger Micro Gesture Recognition Using Photo-Reflective Sensors.pdf",
+      "doi": "https://doi.org/10.1145/3594738.3611371",
+      "authors": "Riku Kitamura; Takumi Yamamoto; Yuta Sugiura",
+      "journal": "Proceedings of the 2023 International Symposium on Wearable Computers",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 127,
+      "title": "Transferable Microgestures Across Hand Posture and Location Constraints Leveraging the Middle, Ring, and Pinky Fingers",
+      "year": "2023",
+      "category": "GestureDesign",
+      "hardwareDevices": [
+        "OtherDevices",
+        "Smartphone"
+      ],
+      "sensingTechnology": [
+        "FingerTracking",
+        "GestureRecognition",
+        "MotionAnalysis",
+        "Optical"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "BodyContact",
+        "ContactBased",
+        "RealTime"
+      ],
+      "gestureTypes": [
+        "Flex",
+        "SingleHand",
+        "Swipe",
+        "Tap"
+      ],
+      "applicationScenarios": [
+        "AR",
+        "MediaControl",
+        "Navigation",
+        "ObjectManipulation",
+        "OtherScenarios"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "DiscreetInput",
+        "Elicitation",
+        "Encumbered",
+        "OneHandUse"
+      ],
+      "tags": [],
+      "image": "Papers/GestureDesign/GestureDesign预览图/2023-Transferable Microgestures Across Hand Posture and Location Constraints Leveraging the Middle, Ring, and Pinky Fingers.png",
+      "pdfFile": "2023-Transferable Microgestures Across Hand Posture and Location Constraints Leveraging the Middle, Ring, and Pinky Fingers.pdf",
+      "pdfPath": "Papers/GestureDesign/2023-Transferable Microgestures Across Hand Posture and Location Constraints Leveraging the Middle, Ring, and Pinky Fingers.pdf",
+      "doi": "https://doi.org/10.1145/3586183.3606713",
+      "authors": "Nikhita Joshi; Parastoo Abtahi; Raj Sodhi; Nitzan Bartov; Jackson Rushing; Christopher Collins; Daniel Vogel; Michael Glueck",
+      "journal": "Proceedings of the 36th Annual ACM Symposium on User Interface Software and Technology",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 128,
+      "title": "uGeT Multimodal eyes-free text selection technique combining touch interaction and microgestures",
+      "year": "2023",
+      "category": "software",
+      "hardwareDevices": [
+        "Tablet",
+        "TouchScreen",
+        "Wearables"
+      ],
+      "sensingTechnology": [
+        "Capacitive",
+        "ComputerVision",
+        "GestureRecognition",
+        "StaticGesture"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "Audio",
+        "BodyContact",
+        "ContactBased",
+        "DirectTouch",
+        "MultiModal",
+        "RealTime"
+      ],
+      "gestureTypes": [
+        "Hold",
+        "SingleHand",
+        "Swipe",
+        "Tap",
+        "ThumbIndex"
+      ],
+      "applicationScenarios": [
+        "Accessibility",
+        "TextInput"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "DiscreetInput",
+        "EyesFree",
+        "OneHandUse",
+        "TouchOptimized"
+      ],
+      "tags": [],
+      "image": "Papers/SOFTWARE/Software预览图/2023-uGeT Multimodal eyes-free text selection technique combining touch interaction and microgestures.png",
+      "pdfFile": "2023-uGeT Multimodal eyes-free text selection technique combining touch interaction and microgestures.pdf",
+      "pdfPath": "Papers/SOFTWARE/2023-uGeT Multimodal eyes-free text selection technique combining touch interaction and microgestures.pdf",
+      "doi": "https://doi.org/10.1145/3577190.3614131",
+      "authors": "Gauthier Robert Jean Faisandaz; Alix Goguey; Christophe Jouffrais; Laurence Nigay",
+      "journal": "INTERNATIONAL CONFERENCE ON MULTIMODAL INTERACTION",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 129,
+      "title": "VibAwareContext-Aware Tap and Swipe Gestures Using Bio-Acoustic Sensing",
+      "year": "2023",
+      "category": "hardware",
+      "hardwareDevices": [
+        "SmartRing",
+        "SmartWatch",
+        "WearableSensor"
+      ],
+      "sensingTechnology": [
+        "Accelerometer",
+        "Bio",
+        "ContinuousGesture",
+        "DynamicGesture",
+        "GestureRecognition",
+        "AcousticSensing"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "ContactBased",
+        "MultiModal",
+        "NonContact",
+        "RealTime",
+        "Tangible",
+        "Visual"
+      ],
+      "gestureTypes": [
+        "Grasp/Grip",
+        "SingleHand",
+        "Swipe",
+        "Tap",
+        "ThumbIndex"
+      ],
+      "applicationScenarios": [
+        "AR",
+        "IoT",
+        "MediaControl",
+        "SmartHome",
+        "VR"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "DiscreetInput",
+        "Encumbered",
+        "EyesFree",
+        "HighAccuracy",
+        "LowLatency",
+        "OneHandUse",
+        "PortableDesign",
+        "SocialAcceptability"
+      ],
+      "tags": [],
+      "image": "Papers/HARDWARE/Hardware预览图/2023-VibAwareContext-Aware Tap and Swipe Gestures Using Bio-Acoustic Sensing.png",
+      "pdfFile": "2023-VibAwareContext-Aware Tap and Swipe Gestures Using Bio-Acoustic Sensing.pdf",
+      "pdfPath": "Papers/HARDWARE/2023-VibAwareContext-Aware Tap and Swipe Gestures Using Bio-Acoustic Sensing.pdf",
+      "doi": "https://doi.org/10.1145/3607822.3614544",
+      "authors": "Jina Kim; Minyung Kim; Woo Suk Lee; Sang Ho Yoon",
+      "journal": "Proceedings of the 2023 ACM Symposium on Spatial User Interaction",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 130,
+      "title": "Z-Pose Continuous 3D Hand Pose Tracking Using Single-Point Bio-Impedance Sensing on a Ring",
+      "year": "2023",
+      "category": "hardware",
+      "hardwareDevices": [
+        "SmartRing",
+        "Wearables"
+      ],
+      "sensingTechnology": [
+        "3DPoseEstimation",
+        "Bio",
+        "ContinuousGesture",
+        "HandTracking",
+        "RFSensing",
+        "ImpedanceSensing"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "InAir",
+        "NonContact",
+        "RealTime",
+        "Visual"
+      ],
+      "gestureTypes": [
+        "Flex",
+        "SingleHand"
+      ],
+      "applicationScenarios": [
+        "AR",
+        "ObjectManipulation",
+        "VR"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "HighAccuracy",
+        "OcclusionAvoid",
+        "PortableDesign"
+      ],
+      "tags": [],
+      "image": "Papers/HARDWARE/Hardware预览图/2023-Z-Pose Continuous 3D Hand Pose Tracking Using Single-Point Bio-Impedance Sensing on a Ring.png",
+      "pdfFile": "2023-Z-Pose Continuous 3D Hand Pose Tracking Using Single-Point Bio-Impedance Sensing on a Ring.pdf",
+      "pdfPath": "Papers/HARDWARE/2023-Z-Pose Continuous 3D Hand Pose Tracking Using Single-Point Bio-Impedance Sensing on a Ring.pdf",
+      "doi": "https://doi.org/10.1145/3615592.3616851",
+      "authors": "Anandghan Waghmare; Ishan Chatterjee; Shwetak Patel",
+      "journal": "Proceedings of the 2nd Workshop on Smart Wearable Systems and Applications",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 131,
+      "title": "Z-Ring Single-Point Bio-Impedance Sensing for Gesture, Touch, Object and User Recognition",
+      "year": "2023",
+      "category": "hardware",
+      "hardwareDevices": [
+        "SmartRing",
+        "Wearables"
+      ],
+      "sensingTechnology": [
+        "Bio",
+        "GestureRecognition",
+        "RFSensing",
+        "StaticGesture",
+        "ImpedanceSensing",
+        "ElectricField"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "ContactBased",
+        "DeviceContact",
+        "RealTime"
+      ],
+      "gestureTypes": [
+        "Pinch",
+        "SingleHand",
+        "ThumbIndex"
+      ],
+      "applicationScenarios": [
+        "AR",
+        "ObjectManipulation",
+        "VR"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "HighAccuracy",
+        "PortableDesign"
+      ],
+      "tags": [],
+      "image": "Papers/HARDWARE/Hardware预览图/2023-Z-Ring Single-Point Bio-Impedance Sensing for Gesture, Touch, Object and User Recognition.png",
+      "pdfFile": "2023-Z-Ring Single-Point Bio-Impedance Sensing for Gesture, Touch, Object and User Recognition.pdf",
+      "pdfPath": "Papers/HARDWARE/2023-Z-Ring Single-Point Bio-Impedance Sensing for Gesture, Touch, Object and User Recognition.pdf",
+      "doi": "https://doi.org/10.1145/3544548.3581422",
+      "authors": "Anandghan Waghmare; Youssef Ben Taleb; Ishan Chatterjee; Arjun Narendra; Shwetak Patel",
+      "journal": "Proceedings of the 2023 CHI Conference on Human Factors in Computing Systems",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 132,
+      "title": "µGlyph a Microgesture Notation",
+      "year": "2023",
+      "category": "GestureDesign",
+      "hardwareDevices": [
+        "OtherDevices"
+      ],
+      "sensingTechnology": [
+        "OtherRecognition",
+        "OtherTechnology"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "BodyContact",
+        "ContactBased",
+        "NonContact",
+        "Visual"
+      ],
+      "gestureTypes": [
+        "Flex",
+        "Hold",
+        "SingleHand",
+        "Swipe",
+        "Tap",
+        "ThumbIndex"
+      ],
+      "applicationScenarios": [
+        "Education"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "DiscreetInput",
+        "OneHandUse"
+      ],
+      "tags": [],
+      "image": "Papers/GestureDesign/GestureDesign预览图/2023-µGlyph a Microgesture Notation.png",
+      "pdfFile": "2023-µGlyph a Microgesture Notation.pdf",
+      "pdfPath": "Papers/GestureDesign/2023-µGlyph a Microgesture Notation.pdf",
+      "doi": "https://doi.org/10.1145/3544548.3580693",
+      "authors": "Adrien Chaffangeon Caillet; Alix Goguey; Laurence Nigay",
+      "journal": "Proceedings of the 2023 CHI Conference on Human Factors in Computing Systems",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 133,
+      "title": "A Nail-tip Device for Gesture and Force Input",
+      "year": "2024",
+      "category": "hardware",
+      "hardwareDevices": [
+        "Wearables",
+        "FingerNail"
+      ],
+      "sensingTechnology": [
+        "GestureRecognition",
+        "Pressure"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "ContactBased",
+        "DeviceContact",
+        "DirectTouch",
+        "Haptic"
+      ],
+      "gestureTypes": [
+        "SingleHand",
+        "Tap"
+      ],
+      "applicationScenarios": [
+        "OtherScenarios"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "DiscreetInput",
+        "HighAccuracy",
+        "PortableDesign"
+      ],
+      "tags": [],
+      "image": "Papers/HARDWARE/Hardware预览图/2024-A Nail-tip Device for Gesture and Force Input.png",
+      "pdfFile": "2024-A Nail-tip Device for Gesture and Force Input.pdf",
+      "pdfPath": "Papers/HARDWARE/2024-A Nail-tip Device for Gesture and Force Input.pdf",
+      "doi": "https://doi.org/10.1145/3677386.3688894",
+      "authors": "Tsubasa Otaki; Hiroyuki Manabe",
+      "journal": "ACM Symposium on Spatial User Interaction",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 134,
+      "title": "Design and Analysis of Interaction Method to Adjust Magnification Function Using Microgestures in VR or AR Applications",
+      "year": "2024",
+      "category": "GestureDesign",
+      "hardwareDevices": [
+        "ARGlasses",
+        "VRHeadset"
+      ],
+      "sensingTechnology": [
+        "GestureRecognition"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "InAir",
+        "NonContact",
+        "Visual"
+      ],
+      "gestureTypes": [
+        "Directional",
+        "Pinch",
+        "SingleHand"
+      ],
+      "applicationScenarios": [
+        "AR",
+        "VR"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "HandsFree",
+        "HighAccuracy"
+      ],
+      "tags": [],
+      "image": "Papers/GestureDesign/GestureDesign预览图/2024-Design and Analysis of Interaction Method to Adjust Magnification Function Using Microgestures in VR or AR Applications.png",
+      "pdfFile": "2024-Design and Analysis of Interaction Method to Adjust Magnification Function Using Microgestures in VR or AR Applications.pdf",
+      "pdfPath": "Papers/GestureDesign/2024-Design and Analysis of Interaction Method to Adjust Magnification Function Using Microgestures in VR or AR Applications.pdf",
+      "doi": "https://doi.org/10.1109/VRW62533.2024.00202",
+      "authors": "Hao Sun; Shining Ma; Mingwei Hu; Weitao Song; Yue Liu",
+      "journal": "2024 IEEE Conference on Virtual Reality and 3D User Interfaces Abstracts and Workshops (VRW)",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 135,
+      "title": "Experimental Analysis of Freehand Multi-object Selection Techniques in Virtual Reality Head-Mounted Displays",
+      "year": "2024",
+      "category": "GestureDesign",
+      "hardwareDevices": [
+        "VRHeadset"
+      ],
+      "sensingTechnology": [
+        "ComputerVision",
+        "GestureRecognition",
+        "HandTracking"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "InAir",
+        "NonContact",
+        "Visual"
+      ],
+      "gestureTypes": [
+        "Pinch",
+        "SingleHand"
+      ],
+      "applicationScenarios": [
+        "ObjectManipulation",
+        "VR"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "HighAccuracy",
+        "MidasTouch"
+      ],
+      "tags": [],
+      "image": "Papers/GestureDesign/GestureDesign预览图/2024-Experimental Analysis of Freehand Multi-object Selection Techniques in Virtual Reality Head-Mounted Displays.png",
+      "pdfFile": "2024-Experimental Analysis of Freehand Multi-object Selection Techniques in Virtual Reality Head-Mounted Displays.pdf",
+      "pdfPath": "Papers/GestureDesign/2024-Experimental Analysis of Freehand Multi-object Selection Techniques in Virtual Reality Head-Mounted Displays.pdf",
+      "doi": "https://doi.org/10.1145/3698129",
+      "authors": "Rongkai Shi; Yushi Wei; Xuning Hu; Yu Liu; Yong Yue; Lingyun Yu; Hai-Ning Liang",
+      "journal": "Proceedings of the ACM on Human-Computer Interaction",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 136,
+      "title": "GraVGrasp Volume Data for the Design of One-Handed XR Interfaces",
+      "year": "2024",
+      "category": "software",
+      "hardwareDevices": [
+        "ARGlasses",
+        "VRHeadset"
+      ],
+      "sensingTechnology": [
+        "3DPoseEstimation",
+        "ComputerVision",
+        "FingerTracking",
+        "GestureRecognition",
+        "HandTracking"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "ContactBased",
+        "DirectTouch",
+        "Haptic",
+        "Tangible",
+        "Visual"
+      ],
+      "gestureTypes": [
+        "Grasp/Grip",
+        "SingleHand",
+        "ThumbIndex"
+      ],
+      "applicationScenarios": [
+        "AR",
+        "ObjectManipulation",
+        "VR"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "HandsFree",
+        "OneHandUse",
+        "UserAdaptation"
+      ],
+      "tags": [],
+      "image": "Papers/SOFTWARE/Software预览图/2024-GraVGrasp Volume Data for the Design of One-Handed XR Interfaces.png",
+      "pdfFile": "2024-GraVGrasp Volume Data for the Design of One-Handed XR Interfaces.pdf",
+      "pdfPath": "Papers/SOFTWARE/2024-GraVGrasp Volume Data for the Design of One-Handed XR Interfaces.pdf",
+      "doi": "https://doi.org/10.1145/3643834.3661567",
+      "authors": "Alejandro Aponte; Arthur Caetano; Yunhao Luo; Misha Sra",
+      "journal": "Designing Interactive Systems Conference",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 137,
+      "title": "HCMGHuman-Capacitance based Micro Gesture for VRAR",
+      "year": "2024",
+      "category": "hardware",
+      "hardwareDevices": [
+        "ARGlasses",
+        "VRHeadset",
+        "Wearables",
+        "WearableSensor"
+      ],
+      "sensingTechnology": [
+        "Bio",
+        "Capacitive",
+        "DynamicGesture",
+        "FingerTracking",
+        "GestureRecognition",
+        "HandTracking",
+        "StaticGesture"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "ContactBased",
+        "DeviceContact",
+        "RealTime"
+      ],
+      "gestureTypes": [
+        "Grasp/Grip",
+        "Pinch",
+        "SingleHand",
+        "Tap"
+      ],
+      "applicationScenarios": [
+        "Accessibility",
+        "AR",
+        "Education",
+        "Gaming",
+        "Training",
+        "VR"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "DiscreetInput",
+        "HighAccuracy",
+        "OneHandUse",
+        "PortableDesign"
+      ],
+      "tags": [],
+      "image": "Papers/HARDWARE/Hardware预览图/2024-HCMGHuman-Capacitance based Micro Gesture for VRAR.png",
+      "pdfFile": "2024-HCMGHuman-Capacitance based Micro Gesture for VRAR.pdf",
+      "pdfPath": "Papers/HARDWARE/2024-HCMGHuman-Capacitance based Micro Gesture for VRAR.pdf",
+      "doi": "https://doi.org/10.1145/3675094.3678386",
+      "authors": "Yu Lu; Dian Ding; Ran Wang; Guangtao Xue",
+      "journal": "Companion of the 2024 on ACM International Joint Conference on Pervasive and Ubiquitous Computing",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 138,
+      "title": "MAF Exploring Mobile Acoustic Field for Hand-to-Face Gesture Interactions",
+      "year": "2024",
+      "category": "hardware",
+      "hardwareDevices": [
+        "WearableSensor",
+        "Earbuds"
+      ],
+      "sensingTechnology": [
+        "DynamicGesture",
+        "GestureRecognition",
+        "StaticGesture",
+        "AcousticSensing"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "BodyContact",
+        "ContactBased",
+        "HandToFace",
+        "NonContact",
+        "RealTime"
+      ],
+      "gestureTypes": [
+        "Directional",
+        "Hold",
+        "SingleHand",
+        "Swipe",
+        "Tap"
+      ],
+      "applicationScenarios": [
+        "AR",
+        "Gaming",
+        "Healthcare",
+        "MediaControl",
+        "SmartHome",
+        "VR"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "DiscreetInput",
+        "EyesFree",
+        "HandsFree",
+        "HighAccuracy",
+        "PortableDesign",
+        "SocialAcceptability"
+      ],
+      "tags": [],
+      "image": "Papers/HARDWARE/Hardware预览图/2024-MAF Exploring Mobile Acoustic Field for Hand-to-Face Gesture Interactions.png",
+      "pdfFile": "2024-MAF Exploring Mobile Acoustic Field for Hand-to-Face Gesture Interactions.pdf",
+      "pdfPath": "Papers/HARDWARE/2024-MAF Exploring Mobile Acoustic Field for Hand-to-Face Gesture Interactions.pdf",
+      "doi": "https://doi.org/10.1145/3613904.3642437",
+      "authors": "Yongjie Yang; Tao Chen; Yujing Huang; Xiuzhen Guo; Longfei Shangguan",
+      "journal": "Proceedings of the CHI Conference on Human Factors in Computing Systems",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 139,
+      "title": "picoRingbattery-free rings for subtle thumb-to-index input",
+      "year": "2024",
+      "category": "hardware",
+      "hardwareDevices": [
+        "SmartRing",
+        "Wearables"
+      ],
+      "sensingTechnology": [
+        "GestureRecognition",
+        "OtherTechnology",
+        "StaticGesture"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "ContactBased",
+        "DeviceContact",
+        "RealTime"
+      ],
+      "gestureTypes": [
+        "Pinch",
+        "SingleHand",
+        "ThumbIndex"
+      ],
+      "applicationScenarios": [
+        "AR",
+        "VR"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "DiscreetInput",
+        "LowLatency",
+        "PortableDesign"
+      ],
+      "tags": [],
+      "image": "Papers/HARDWARE/Hardware预览图/2024-picoRingbattery-free rings for subtle thumb-to-index input.png",
+      "pdfFile": "2024-picoRingbattery-free rings for subtle thumb-to-index input.pdf",
+      "pdfPath": "Papers/HARDWARE/2024-picoRingbattery-free rings for subtle thumb-to-index input.pdf",
+      "doi": "https://doi.org/10.1145/3654777.3676365",
+      "authors": "Ryo Takahashi; Eric Whitmire; Roger Boldu; Shiu Ng; Wolf Kienzle; Hrvoje Benko",
+      "journal": "Proceedings of the 37th Annual ACM Symposium on User Interface Software and Technology",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 140,
+      "title": "RadarHandA Wrist-Worn Radar for On-Skin Touch-Based Proprioceptive Gestures",
+      "year": "2024",
+      "category": "hardware",
+      "hardwareDevices": [
+        "SmartWatch",
+        "Wearables",
+        "WearableSensor",
+        "Wristband"
+      ],
+      "sensingTechnology": [
+        "ContinuousGesture",
+        "DynamicGesture",
+        "GestureRecognition",
+        "Radar",
+        "RFSensing",
+        "StaticGesture"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "BackOfDevice",
+        "BodyContact",
+        "ContactBased",
+        "Proprioceptive",
+        "RealTime"
+      ],
+      "gestureTypes": [
+        "Directional",
+        "SingleHand",
+        "Swipe",
+        "Tap"
+      ],
+      "applicationScenarios": [
+        "Accessibility",
+        "Gaming",
+        "InVehicle",
+        "MediaControl",
+        "Navigation",
+        "SmartHome"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "EyesFree",
+        "HighAccuracy",
+        "OneHandUse",
+        "PortableDesign",
+        "SmallScreen",
+        "SocialAcceptability"
+      ],
+      "tags": [],
+      "image": "Papers/HARDWARE/Hardware预览图/2024-RadarHandA Wrist-Worn Radar for On-Skin Touch-Based Proprioceptive Gestures.png",
+      "pdfFile": "2024-RadarHandA Wrist-Worn Radar for On-Skin Touch-Based Proprioceptive Gestures.pdf",
+      "pdfPath": "Papers/HARDWARE/2024-RadarHandA Wrist-Worn Radar for On-Skin Touch-Based Proprioceptive Gestures.pdf",
+      "doi": "https://doi.org/10.1145/3617365",
+      "authors": "Ryo Hajika; Tamil Selvan Gunasekaran; Chloe Dolma Si Ying Haigh; Yun Suen Pai; Eiji Hayashi; Jaime Lien; Danielle Lottridge; Mark Billinghurst",
+      "journal": "ACM Transactions on Computer-Human Interaction",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 141,
+      "title": "STMG A Machine Learning Microgesture Recognition System for Supporting Thumb-Based VRAR Input",
+      "year": "2024",
+      "category": "software",
+      "hardwareDevices": [
+        "ARGlasses",
+        "VRHeadset"
+      ],
+      "sensingTechnology": [
+        "ComputerVision",
+        "ContinuousGesture",
+        "DynamicGesture",
+        "FingerTracking",
+        "GestureRecognition",
+        "HandTracking",
+        "Motion",
+        "Optical"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "BodyContact",
+        "ContactBased",
+        "MultiModal",
+        "RealTime",
+        "Visual"
+      ],
+      "gestureTypes": [
+        "Directional",
+        "Pinch",
+        "SingleHand",
+        "Swipe",
+        "Tap",
+        "ThumbIndex"
+      ],
+      "applicationScenarios": [
+        "AR",
+        "MediaControl",
+        "Navigation",
+        "ObjectManipulation",
+        "VR"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "EyesFree",
+        "HandsFree",
+        "HighAccuracy",
+        "LowLatency",
+        "OneHandUse",
+        "UserAdaptation"
+      ],
+      "tags": [],
+      "image": "Papers/SOFTWARE/Software预览图/2024-STMG A Machine Learning Microgesture Recognition System for Supporting Thumb-Based VRAR Input.png",
+      "pdfFile": "2024-STMG A Machine Learning Microgesture Recognition System for Supporting Thumb-Based VRAR Input.pdf",
+      "pdfPath": "Papers/SOFTWARE/2024-STMG A Machine Learning Microgesture Recognition System for Supporting Thumb-Based VRAR Input.pdf",
+      "doi": "https://doi.org/10.1145/3613904.3642702",
+      "authors": "Kenrick Kin; Chengde Wan; Ken Koh; Andrei Marin; Necati Cihan Camgöz; Yubo Zhang; Yujun Cai; Fedor Kovalev; Moshe Ben-Zacharia; Shannon Hoople; Marcos Nunes-Ueno; Mariel Sanchez-Rodriguez; Ayush Bhargava; Robert Wang; Eric Sauser; Shugao Ma",
+      "journal": "Proceedings of the CHI Conference on Human Factors in Computing Systems",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 142,
+      "title": "Studying the Simultaneous Visual Representation of Microgestures",
+      "year": "2024",
+      "category": "software",
+      "hardwareDevices": [
+        "Smartphone",
+        "SmartWatch",
+        "Wearables"
+      ],
+      "sensingTechnology": [
+        "ComputerVision",
+        "DynamicGesture",
+        "FingerTracking",
+        "GestureRecognition",
+        "HandTracking",
+        "StaticGesture"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "BodyContact",
+        "ContactBased",
+        "Visual"
+      ],
+      "gestureTypes": [
+        "Hold",
+        "SingleHand",
+        "Swipe",
+        "Tap",
+        "ThumbIndex"
+      ],
+      "applicationScenarios": [
+        "MediaControl",
+        "SmartHome"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "DiscreetInput",
+        "EyesFree",
+        "HandsFree",
+        "OneHandUse",
+        "SmallScreen",
+        "SocialAcceptability"
+      ],
+      "tags": [],
+      "image": "Papers/SOFTWARE/Software预览图/2024-Studying the Simultaneous Visual Representation of Microgestures.png",
+      "pdfFile": "2024-Studying the Simultaneous Visual Representation of Microgestures.pdf",
+      "pdfPath": "Papers/SOFTWARE/2024-Studying the Simultaneous Visual Representation of Microgestures.pdf",
+      "doi": "https://doi.org/10.1145/3676523",
+      "authors": "Vincent Lambert; Alix Goguey; Sylvain Malacria; Laurence Nigay",
+      "journal": "Proceedings of the ACM on Human-Computer Interaction",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 143,
+      "title": "SwivelTouch Boosting Touchscreen Input with 3D Finger Rotation Gesture",
+      "year": "2024",
+      "category": "hardware",
+      "hardwareDevices": [
+        "Smartphone",
+        "TouchScreen"
+      ],
+      "sensingTechnology": [
+        "Capacitive",
+        "GestureRecognition",
+        "MotionAnalysis"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "ContactBased",
+        "DeviceContact",
+        "DirectTouch"
+      ],
+      "gestureTypes": [
+        "Directional",
+        "SingleHand",
+        "Swipe",
+        "Rotation"
+      ],
+      "applicationScenarios": [
+        "OtherScenarios"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "FatFinger",
+        "HighAccuracy",
+        "TouchOptimized"
+      ],
+      "tags": [],
+      "image": "Papers/HARDWARE/Hardware预览图/2024-SwivelTouch Boosting Touchscreen Input with 3D Finger Rotation Gesture.png",
+      "pdfFile": "2024-SwivelTouch Boosting Touchscreen Input with 3D Finger Rotation Gesture.pdf",
+      "pdfPath": "Papers/HARDWARE/2024-SwivelTouch Boosting Touchscreen Input with 3D Finger Rotation Gesture.pdf",
+      "doi": "https://doi.org/10.1145/3659584",
+      "authors": "Chentao Li; Jinyang Yu; Ke He; Jianjiang Feng; Jie Zhou",
+      "journal": "Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 144,
+      "title": "Thumb-to-Finger Gesture Recognition Using COTS Smartwatch Accelerometers",
+      "year": "2024",
+      "category": "software",
+      "hardwareDevices": [
+        "SmartWatch",
+        "Wearables"
+      ],
+      "sensingTechnology": [
+        "Accelerometer",
+        "DynamicGesture",
+        "GestureRecognition",
+        "IMU"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "InAir",
+        "NonContact",
+        "RealTime"
+      ],
+      "gestureTypes": [
+        "Pinch",
+        "SingleHand",
+        "ThumbIndex"
+      ],
+      "applicationScenarios": [
+        "OtherScenarios"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "HighAccuracy",
+        "PortableDesign",
+        "UserAdaptation"
+      ],
+      "tags": [],
+      "image": "Papers/SOFTWARE/Software预览图/2024-Thumb-to-Finger Gesture Recognition Using COTS Smartwatch Accelerometers.png",
+      "pdfFile": "2024-Thumb-to-Finger Gesture Recognition Using COTS Smartwatch Accelerometers.pdf",
+      "pdfPath": "Papers/SOFTWARE/2024-Thumb-to-Finger Gesture Recognition Using COTS Smartwatch Accelerometers.pdf",
+      "doi": "https://doi.org/10.1145/3701571.3701600",
+      "authors": "Riku Tsunoda; Myungguen Choi; Buntarou Shizuki",
+      "journal": "Proceedings of the International Conference on Mobile and Ubiquitous Multimedia",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 145,
+      "title": "Understanding Gesture and Microgesture Inputs for Augmented Reality Maps",
+      "year": "2024",
+      "category": "GestureDesign",
+      "hardwareDevices": [
+        "ARGlasses",
+        "SmartGlasses",
+        "Wearables",
+        "WearableSensor"
+      ],
+      "sensingTechnology": [
+        "Accelerometer",
+        "Capacitive",
+        "ComputerVision",
+        "FingerTracking",
+        "GestureRecognition",
+        "HandTracking",
+        "IMU",
+        "Optical"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "BodyContact",
+        "ContactBased",
+        "Haptic",
+        "MultiModal",
+        "Proprioceptive"
+      ],
+      "gestureTypes": [
+        "Directional",
+        "SingleHand",
+        "Swipe",
+        "Tap"
+      ],
+      "applicationScenarios": [
+        "AR",
+        "Navigation"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "DiscreetInput",
+        "EyesFree",
+        "OneHandUse",
+        "SocialAcceptability"
+      ],
+      "tags": [],
+      "image": "Papers/GestureDesign/GestureDesign预览图/2024-Understanding Gesture and Microgesture Inputs for Augmented Reality Maps.png",
+      "pdfFile": "2024-Understanding Gesture and Microgesture Inputs for Augmented Reality Maps.pdf",
+      "pdfPath": "Papers/GestureDesign/2024-Understanding Gesture and Microgesture Inputs for Augmented Reality Maps.pdf",
+      "doi": "https://doi.org/10.1145/3643834.3661630",
+      "authors": "Kurtis Danyluk; Simon Klueber; Aditya Shekhar Nittala; Wesley Willett",
+      "journal": "Designing Interactive Systems Conference",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 146,
+      "title": "Validating Eyes-free Affordance of On-Finger Hand Proximate UIs",
+      "year": "2024",
+      "category": "GestureDesign",
+      "hardwareDevices": [
+        "ARGlasses",
+        "VRHeadset"
+      ],
+      "sensingTechnology": [
+        "ComputerVision",
+        "GestureRecognition",
+        "HandTracking"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "BodyContact",
+        "DirectTouch",
+        "InAir",
+        "Visual"
+      ],
+      "gestureTypes": [
+        "Pinch",
+        "SingleHand",
+        "Tap"
+      ],
+      "applicationScenarios": [
+        "AR",
+        "VR"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "EyesFree",
+        "HighAccuracy",
+        "OcclusionAvoid",
+        "OneHandUse"
+      ],
+      "tags": [],
+      "image": "Papers/GestureDesign/GestureDesign预览图/2024-Validating Eyes-free Affordance of On-Finger Hand Proximate UIs.png",
+      "pdfFile": "2024-Validating Eyes-free Affordance of On-Finger Hand Proximate UIs.pdf",
+      "pdfPath": "Papers/GestureDesign/2024-Validating Eyes-free Affordance of On-Finger Hand Proximate UIs.pdf",
+      "doi": "https://doi.org/10.1109/ISMAR62088.2024.00145",
+      "authors": "Shariff A M Faleel; SoonUk Kwon; David Ahlström; Pourang Irani",
+      "journal": "2024 IEEE International Symposium on Mixed and Augmented Reality (ISMAR)",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 147,
+      "title": "Beyond ControllersExploring On-Body Micro-Gestures for Mixed Reality Adventure Gameplay",
+      "year": "2025",
+      "category": "GestureDesign",
+      "hardwareDevices": [
+        "ARGlasses",
+        "VRHeadset"
+      ],
+      "sensingTechnology": [
+        "ComputerVision",
+        "GestureRecognition"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "BodyContact",
+        "ContactBased",
+        "InAir",
+        "Visual"
+      ],
+      "gestureTypes": [
+        "Pinch",
+        "SingleHand",
+        "Swipe",
+        "Tap"
+      ],
+      "applicationScenarios": [
+        "Gaming",
+        "MR"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "HandsFree",
+        "SocialAcceptability"
+      ],
+      "tags": [],
+      "image": "Papers/GestureDesign/GestureDesign预览图/2025-Beyond ControllersExploring On-Body Micro-Gestures for Mixed Reality Adventure Gameplay.png",
+      "pdfFile": "2025-Beyond ControllersExploring On-Body Micro-Gestures for Mixed Reality Adventure Gameplay.pdf",
+      "pdfPath": "Papers/GestureDesign/2025-Beyond ControllersExploring On-Body Micro-Gestures for Mixed Reality Adventure Gameplay.pdf",
+      "doi": "https://doi.org/10.1145/3756884.3766008",
+      "authors": "Matilda Haneling; Jesper Lundqvist; Andrii Matviienko",
+      "journal": "Proceedings of the 2025 31st ACM Symposium on Virtual Reality Software and Technology",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 148,
+      "title": "BudsID Mobile-Ready and Expressive Finger Identification Input for Earbuds",
+      "year": "2025",
+      "category": "hardware",
+      "hardwareDevices": [
+        "SmartRing",
+        "Wearables",
+        "WearableSensor",
+        "Earbuds"
+      ],
+      "sensingTechnology": [
+        "Capacitive",
+        "DynamicGesture",
+        "FingerTracking",
+        "GestureRecognition",
+        "IMU",
+        "Magnetometer",
+        "StaticGesture",
+        "FingerIdentification"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "Audio",
+        "ContactBased",
+        "DeviceContact",
+        "DirectTouch",
+        "EarBased",
+        "RealTime"
+      ],
+      "gestureTypes": [
+        "MultiTouch",
+        "SingleHand",
+        "Tap"
+      ],
+      "applicationScenarios": [
+        "InVehicle",
+        "MediaControl",
+        "SmartHome"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "DiscreetInput",
+        "EyesFree",
+        "HighAccuracy",
+        "PortableDesign",
+        "SocialAcceptability"
+      ],
+      "tags": [],
+      "image": "Papers/HARDWARE/Hardware预览图/2025-BudsID Mobile-Ready and Expressive Finger Identification Input for Earbuds.png",
+      "pdfFile": "2025-BudsID Mobile-Ready and Expressive Finger Identification Input for Earbuds.pdf",
+      "pdfPath": "Papers/HARDWARE/2025-BudsID Mobile-Ready and Expressive Finger Identification Input for Earbuds.pdf",
+      "doi": "https://doi.org/10.1145/3706598.3714133",
+      "authors": "Jiwan Kim; Mingyu Han; Ian Oakley",
+      "journal": "Proceedings of the 2025 CHI Conference on Human Factors in Computing Systems",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 149,
+      "title": "Cross, Dwell, or PinchDesigning and Evaluating Around-Device Selection Methods for Unmodified Smartwatches",
+      "year": "2025",
+      "category": "GestureDesign",
+      "hardwareDevices": [
+        "SmartWatch"
+      ],
+      "sensingTechnology": [
+        "GestureRecognition"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "InAir",
+        "NonContact",
+        "Visual"
+      ],
+      "gestureTypes": [
+        "Pinch",
+        "SingleHand"
+      ],
+      "applicationScenarios": [
+        "OtherScenarios"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "HighAccuracy",
+        "MidasTouch",
+        "SmallScreen"
+      ],
+      "tags": [],
+      "image": "Papers/GestureDesign/GestureDesign预览图/2025-Cross, Dwell, or PinchDesigning and Evaluating Around-Device Selection Methods for Unmodified Smartwatches.png",
+      "pdfFile": "2025-Cross, Dwell, or PinchDesigning and Evaluating Around-Device Selection Methods for Unmodified Smartwatches.pdf",
+      "pdfPath": "Papers/GestureDesign/2025-Cross, Dwell, or PinchDesigning and Evaluating Around-Device Selection Methods for Unmodified Smartwatches.pdf",
+      "doi": "https://doi.org/10.1145/3706598.3714308",
+      "authors": "Jiwan Kim; Jiwan Son; Ian Oakley",
+      "journal": "Proceedings of the 2025 CHI Conference on Human Factors in Computing Systems",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 150,
+      "title": "DCSNN An Efficient and High-speed sEMG-based Transient-state Micro-gesture Recognition Method on Wearable Devices",
+      "year": "2025",
+      "category": "hardware",
+      "hardwareDevices": [
+        "OtherDevices",
+        "SmartWatch",
+        "Wearables",
+        "WearableSensor"
+      ],
+      "sensingTechnology": [
+        "Bio",
+        "ContinuousGesture",
+        "DynamicGesture",
+        "EMG",
+        "GestureRecognition",
+        "IMU",
+        "StaticGesture"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "BodyContact",
+        "InAir",
+        "MultiModal",
+        "NonContact",
+        "RealTime",
+        "Visual"
+      ],
+      "gestureTypes": [
+        "Directional",
+        "Pinch",
+        "Swipe",
+        "Tap",
+        "ThumbIndex"
+      ],
+      "applicationScenarios": [
+        "AR",
+        "Gaming",
+        "IoT",
+        "MediaControl",
+        "Navigation",
+        "VR"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "HandsFree",
+        "HighAccuracy",
+        "LowLatency",
+        "PortableDesign",
+        "UserAdaptation"
+      ],
+      "tags": [],
+      "image": "Papers/HARDWARE/Hardware预览图/2025-DCSNN An Efficient and High-speed sEMG-based Transient-state Micro-gesture Recognition Method on Wearable Devices.png",
+      "pdfFile": "2025-DCSNN An Efficient and High-speed sEMG-based Transient-state Micro-gesture Recognition Method on Wearable Devices.pdf",
+      "pdfPath": "Papers/HARDWARE/2025-DCSNN An Efficient and High-speed sEMG-based Transient-state Micro-gesture Recognition Method on Wearable Devices.pdf",
+      "doi": "https://doi.org/10.1145/3729494",
+      "authors": "Youfang Han; Wei Zhao; Ge Gao; Xiangjin Chen; Jiliang Yin; Lin Wang; Xin Meng; Yang Yu; Tengxiang Zhang",
+      "journal": "Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 151,
+      "title": "Design of Microgestures for Human-Robot Collaboration Scenarios",
+      "year": "2025",
+      "category": "GestureDesign",
+      "hardwareDevices": [
+        "OtherDevices"
+      ],
+      "sensingTechnology": [
+        "ComputerVision",
+        "GestureRecognition"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "InAir",
+        "NonContact",
+        "Visual"
+      ],
+      "gestureTypes": [
+        "Directional",
+        "Pinch",
+        "SingleHand"
+      ],
+      "applicationScenarios": [
+        "Industry"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "Elicitation",
+        "SocialAcceptability"
+      ],
+      "tags": [],
+      "image": "Papers/GestureDesign/GestureDesign预览图/2025-Design of Microgestures for Human-Robot Collaboration Scenarios.png",
+      "pdfFile": "2025-Design of Microgestures for Human-Robot Collaboration Scenarios.pdf",
+      "pdfPath": "Papers/GestureDesign/2025-Design of Microgestures for Human-Robot Collaboration Scenarios.pdf",
+      "doi": "https://doi.org/10.1109/ICCAR64901.2025.11072937",
+      "authors": "Jiayu Ji; Xiaozhou Zhou; Chunhui Wang; Ting Jiang; Hongqiang Yu",
+      "journal": "2025 11th International Conference on Control, Automation and Robotics (ICCAR)",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 152,
+      "title": "DigitIMU High-Precision Microgesture Detection with Wearable Finger Sensors",
+      "year": "2025",
+      "category": "hardware",
+      "hardwareDevices": [
+        "Wearables",
+        "WearableSensor"
+      ],
+      "sensingTechnology": [
+        "Accelerometer",
+        "DynamicGesture",
+        "GestureRecognition",
+        "Gyroscope",
+        "IMU"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "InAir",
+        "NonContact",
+        "RealTime"
+      ],
+      "gestureTypes": [
+        "Directional",
+        "SingleHand"
+      ],
+      "applicationScenarios": [
+        "OtherScenarios"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "HighAccuracy",
+        "LowLatency",
+        "PortableDesign"
+      ],
+      "tags": [],
+      "image": "Papers/HARDWARE/Hardware预览图/2025-DigitIMU High-Precision Microgesture Detection with Wearable Finger Sensors.png",
+      "pdfFile": "2025-DigitIMU High-Precision Microgesture Detection with Wearable Finger Sensors.pdf",
+      "pdfPath": "Papers/HARDWARE/2025-DigitIMU High-Precision Microgesture Detection with Wearable Finger Sensors.pdf",
+      "doi": "https://doi.org/10.1109/SWC65939.2025.00141",
+      "authors": "Xing Gao; Minghui Sun; Yubo Jin; Jun Qin; Kaixing Zhao",
+      "journal": "2025 IEEE Smart World Congress (SWC)",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 153,
+      "title": "Efficient Finger Model and Accurate Tracking for Hover-and-Touch, Mid-air and Microgesture Interaction",
+      "year": "2025",
+      "category": "software",
+      "hardwareDevices": [
+        "TouchScreen"
+      ],
+      "sensingTechnology": [
+        "ComputerVision",
+        "ContinuousGesture",
+        "FingerTracking",
+        "GestureRecognition"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "DirectTouch",
+        "InAir",
+        "NonContact",
+        "RealTime"
+      ],
+      "gestureTypes": [
+        "SingleHand",
+        "Tap",
+        "Hover"
+      ],
+      "applicationScenarios": [
+        "OtherScenarios"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "HighAccuracy",
+        "MidasTouch",
+        "TouchOptimized"
+      ],
+      "tags": [],
+      "image": "Papers/SOFTWARE/Software预览图/2025-Efficient Finger Model and Accurate Tracking for Hover-and-Touch, Mid-air and Microgesture Interaction.png",
+      "pdfFile": "2025-Efficient Finger Model and Accurate Tracking for Hover-and-Touch, Mid-air and Microgesture Interaction.pdf",
+      "pdfPath": "Papers/SOFTWARE/2025-Efficient Finger Model and Accurate Tracking for Hover-and-Touch, Mid-air and Microgesture Interaction.pdf",
+      "doi": "https://doi.org/10.1145/3746059.3747701",
+      "authors": "Quentin Zoppis; Sergi Pujades; Laurence Nigay; François Bérard",
+      "journal": "Proceedings of the 38th Annual ACM Symposium on User Interface Software and Technology",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 154,
+      "title": "EI-Lite Electrical Impedance Sensing for Micro-gesture Recognition and Pinch Force Estimation",
+      "year": "2025",
+      "category": "hardware",
+      "hardwareDevices": [
+        "Wearables",
+        "WearableSensor",
+        "Wristband"
+      ],
+      "sensingTechnology": [
+        "Bio",
+        "ContinuousGesture",
+        "GestureRecognition",
+        "RFSensing",
+        "ImpedanceSensing"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "ContactBased",
+        "DeviceContact",
+        "RealTime"
+      ],
+      "gestureTypes": [
+        "Pinch",
+        "SingleHand",
+        "ThumbIndex"
+      ],
+      "applicationScenarios": [
+        "OtherScenarios"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "HighAccuracy",
+        "PortableDesign"
+      ],
+      "tags": [],
+      "image": "Papers/HARDWARE/Hardware预览图/2025-EI-Lite Electrical Impedance Sensing for Micro-gesture Recognition and Pinch Force Estimation.png",
+      "pdfFile": "2025-EI-Lite Electrical Impedance Sensing for Micro-gesture Recognition and Pinch Force Estimation.pdf",
+      "pdfPath": "Papers/HARDWARE/2025-EI-Lite Electrical Impedance Sensing for Micro-gesture Recognition and Pinch Force Estimation.pdf",
+      "doi": "https://doi.org/10.1145/3746059.3747671",
+      "authors": "Junyi Zhu; Tianyu Xu; Jiayu Wang; Emily Guan; JaeYoung Moon; Stiven Morvan; D Shin; Andrea Colaço; Stefanie Mueller; Karan Ahuja; Yiyue Luo; Ishan Chatterjee",
+      "journal": "Proceedings of the 38th Annual ACM Symposium on User Interface Software and Technology",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 155,
+      "title": "FineTypeFine-grained Tapping Gesture Recognition for Text Entry",
+      "year": "2025",
+      "category": "hardware",
+      "hardwareDevices": [
+        "ARGlasses",
+        "VRHeadset"
+      ],
+      "sensingTechnology": [
+        "GestureRecognition",
+        "IMU",
+        "Optical",
+        "StaticGesture"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "ContactBased",
+        "DeviceContact",
+        "RealTime"
+      ],
+      "gestureTypes": [
+        "MultiTouch",
+        "SingleHand",
+        "Tap"
+      ],
+      "applicationScenarios": [
+        "AR",
+        "MR",
+        "TextInput"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "HighAccuracy",
+        "OneHandUse",
+        "QWERTYLayout"
+      ],
+      "tags": [],
+      "image": "Papers/HARDWARE/Hardware预览图/2025-FineTypeFine-grained Tapping Gesture Recognition for Text Entry.png",
+      "pdfFile": "2025-FineTypeFine-grained Tapping Gesture Recognition for Text Entry.pdf",
+      "pdfPath": "Papers/HARDWARE/2025-FineTypeFine-grained Tapping Gesture Recognition for Text Entry.pdf",
+      "doi": "https://doi.org/10.1145/3706598.3714278",
+      "authors": "Chentao Li; Ziheng Xi; Jianjiang Feng; Jie Zhou",
+      "journal": "Proceedings of the 2025 CHI Conference on Human Factors in Computing Systems",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 156,
+      "title": "Finger-to-Palm Single-Handed Touch Gestures Using the Palm",
+      "year": "2025",
+      "category": "GestureDesign",
+      "hardwareDevices": [
+        "HapticDevice",
+        "VRHeadset"
+      ],
+      "sensingTechnology": [
+        "GestureRecognition",
+        "Pressure",
+        "StaticGesture"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "BodyContact",
+        "ContactBased",
+        "DirectTouch",
+        "Haptic",
+        "Proprioceptive"
+      ],
+      "gestureTypes": [
+        "SingleHand",
+        "Swipe",
+        "Tap"
+      ],
+      "applicationScenarios": [
+        "AR",
+        "VR"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "EyesFree",
+        "HighAccuracy",
+        "OneHandUse"
+      ],
+      "tags": [],
+      "image": "Papers/GestureDesign/GestureDesign预览图/2025-Finger-to-Palm Single-Handed Touch Gestures Using the Palm.png",
+      "pdfFile": "2025-Finger-to-Palm Single-Handed Touch Gestures Using the Palm.pdf",
+      "pdfPath": "Papers/GestureDesign/2025-Finger-to-Palm Single-Handed Touch Gestures Using the Palm.pdf",
+      "doi": "https://doi.org/10.1145/3706599.3720213",
+      "authors": "Ming-Yun Hsu; Liwei Chan",
+      "journal": "Proceedings of the Extended Abstracts of the CHI Conference on Human Factors in Computing Systems",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 157,
+      "title": "FlowRing Integrated Microgesture and Surface Interaction Ring for Versatile XR Input",
+      "year": "2025",
+      "category": "hardware",
+      "hardwareDevices": [
+        "SmartRing",
+        "Wearables"
+      ],
+      "sensingTechnology": [
+        "ContinuousGesture",
+        "GestureRecognition",
+        "IMU",
+        "Optical"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "BodyContact",
+        "ContactBased",
+        "DeviceContact",
+        "RealTime"
+      ],
+      "gestureTypes": [
+        "SingleHand",
+        "Swipe",
+        "Tap",
+        "ThumbIndex"
+      ],
+      "applicationScenarios": [
+        "AR",
+        "MR",
+        "VR"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "HandsFree",
+        "HighAccuracy",
+        "PortableDesign"
+      ],
+      "tags": [],
+      "image": "Papers/HARDWARE/Hardware预览图/2025-FlowRing Integrated Microgesture and Surface Interaction Ring for Versatile XR Input.png",
+      "pdfFile": "2025-FlowRing Integrated Microgesture and Surface Interaction Ring for Versatile XR Input.pdf",
+      "pdfPath": "Papers/HARDWARE/2025-FlowRing Integrated Microgesture and Surface Interaction Ring for Versatile XR Input.pdf",
+      "doi": "https://doi.org/10.1145/3743706",
+      "authors": "Ishan Chatterjee; Jiexin Ding; Anandghan Waghmare; Joseph Breda; Yuquan Deng; Bo Liu; Yuntao Wang; Shwetak Patel",
+      "journal": "Proceedings of the ACM on Human-Computer Interaction",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 158,
+      "title": "Grab-n-Go On-the-Go Microgesture Recognition with Objects in Hand",
+      "year": "2025",
+      "category": "hardware",
+      "hardwareDevices": [
+        "Wearables",
+        "WearableSensor"
+      ],
+      "sensingTechnology": [
+        "DynamicGesture",
+        "GestureRecognition",
+        "OtherTechnology"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "DeviceContact",
+        "RealTime",
+        "Tangible"
+      ],
+      "gestureTypes": [
+        "Grasp/Grip",
+        "SingleHand",
+        "Swipe",
+        "Tap"
+      ],
+      "applicationScenarios": [
+        "OtherScenarios"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "Encumbered",
+        "HighAccuracy",
+        "UserAdaptation"
+      ],
+      "tags": [],
+      "image": "Papers/HARDWARE/Hardware预览图/2025-Grab-n-Go On-the-Go Microgesture Recognition with Objects in Hand.png",
+      "pdfFile": "2025-Grab-n-Go On-the-Go Microgesture Recognition with Objects in Hand.pdf",
+      "pdfPath": "Papers/HARDWARE/2025-Grab-n-Go On-the-Go Microgesture Recognition with Objects in Hand.pdf",
+      "doi": "https://doi.org/10.1145/3749469",
+      "authors": "Chi-Jung Lee; Jiaxin Li; Tianhong Catherine Yu; Ruidong Zhang; Vipin Gunda; François Guimbretière; Cheng Zhang",
+      "journal": "Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 159,
+      "title": "Microgesture+ GraspA journey from human capabilities to interaction with microgestures",
+      "year": "2025",
+      "category": "GestureDesign",
+      "hardwareDevices": [
+        "OtherDevices"
+      ],
+      "sensingTechnology": [
+        "GestureRecognition"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "DeviceContact",
+        "Tangible"
+      ],
+      "gestureTypes": [
+        "Grasp/Grip",
+        "SingleHand",
+        "Swipe",
+        "Tap"
+      ],
+      "applicationScenarios": [
+        "OtherScenarios"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "Elicitation",
+        "Encumbered",
+        "UserAdaptation"
+      ],
+      "tags": [],
+      "image": "Papers/GestureDesign/GestureDesign预览图/2025-Microgesture+ GraspA journey from human capabilities to interaction with microgestures.png",
+      "pdfFile": "2025-Microgesture+ GraspA journey from human capabilities to interaction with microgestures.pdf",
+      "pdfPath": "Papers/GestureDesign/2025-Microgesture+ GraspA journey from human capabilities to interaction with microgestures.pdf",
+      "doi": "https://doi.org/10.1016/j.ijhcs.2024.103398",
+      "authors": "Adrien Chaffangeon Caillet; Alix Goguey; Laurence Nigay",
+      "journal": "International Journal of Human-Computer Studies",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 160,
+      "title": "SkinRingWear Direction-Independent Gesture Input on Side of Finger",
+      "year": "2025",
+      "category": "hardware",
+      "hardwareDevices": [
+        "SmartRing",
+        "Wearables"
+      ],
+      "sensingTechnology": [
+        "DynamicGesture",
+        "GestureRecognition",
+        "Optical"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "BodyContact",
+        "ContactBased",
+        "DeviceContact",
+        "DirectTouch",
+        "RealTime"
+      ],
+      "gestureTypes": [
+        "Directional",
+        "SingleHand",
+        "Swipe",
+        "ThumbIndex"
+      ],
+      "applicationScenarios": [
+        "OtherScenarios"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "DiscreetInput",
+        "EyesFree",
+        "HighAccuracy",
+        "OneHandUse",
+        "SocialAcceptability"
+      ],
+      "tags": [],
+      "image": "Papers/HARDWARE/Hardware预览图/2025-SkinRingWear Direction-Independent Gesture Input on Side of Finger.png",
+      "pdfFile": "2025-SkinRingWear Direction-Independent Gesture Input on Side of Finger.pdf",
+      "pdfPath": "Papers/HARDWARE/2025-SkinRingWear Direction-Independent Gesture Input on Side of Finger.pdf",
+      "doi": "https://doi.org/10.1109/SII59315.2025.10871054",
+      "authors": "Shogo Hanayama; Riku Kitamura; Takumi Yamamoto; Takashi Amesaka; Liwei Chan; Yuta Sugiura",
+      "journal": "2025 IEEE/SICE International Symposium on System Integration (SII)",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 161,
+      "title": "T2IRayDesign of Thumb-to-Index based Indirect Pointing for Continuous and Robust ARVR Input",
+      "year": "2025",
+      "category": "GestureDesign",
+      "hardwareDevices": [
+        "ARGlasses",
+        "VRHeadset"
+      ],
+      "sensingTechnology": [
+        "ComputerVision",
+        "ContinuousGesture",
+        "FingerTracking",
+        "GestureRecognition",
+        "HandTracking",
+        "Optical"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "BodyContact",
+        "ContactBased",
+        "MultiModal",
+        "Proprioceptive",
+        "Visual"
+      ],
+      "gestureTypes": [
+        "Directional",
+        "SingleHand",
+        "Tap",
+        "ThumbIndex"
+      ],
+      "applicationScenarios": [
+        "AR",
+        "ObjectManipulation",
+        "VR"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "DiscreetInput",
+        "EyesFree",
+        "HighAccuracy",
+        "OneHandUse",
+        "SocialAcceptability"
+      ],
+      "tags": [],
+      "image": "Papers/GestureDesign/GestureDesign预览图/2025-T2IRayDesign of Thumb-to-Index based Indirect Pointing for Continuous and Robust ARVR Input.png",
+      "pdfFile": "2025-T2IRayDesign of Thumb-to-Index based Indirect Pointing for Continuous and Robust ARVR Input.pdf",
+      "pdfPath": "Papers/GestureDesign/2025-T2IRayDesign of Thumb-to-Index based Indirect Pointing for Continuous and Robust ARVR Input.pdf",
+      "doi": "https://doi.org/10.1145/3706598.3713442",
+      "authors": "Jina Kim; Yang Zhang; Sang Ho Yoon",
+      "journal": "Proceedings of the 2025 CHI Conference on Human Factors in Computing Systems",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 162,
+      "title": "TAPOR 3D Hand Pose Reconstruction with Fully Passive Thermal Sensing for Around-Device Interactions",
+      "year": "2025",
+      "category": "hardware",
+      "hardwareDevices": [
+        "OtherDevices"
+      ],
+      "sensingTechnology": [
+        "3DPoseEstimation",
+        "ContinuousGesture",
+        "HandTracking",
+        "ThermalSensing"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "InAir",
+        "NonContact",
+        "RealTime",
+        "Visual"
+      ],
+      "gestureTypes": [
+        "Flex",
+        "SingleHand"
+      ],
+      "applicationScenarios": [
+        "AR",
+        "VR"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "HighAccuracy",
+        "OcclusionAvoid",
+        "PortableDesign"
+      ],
+      "tags": [],
+      "image": "Papers/HARDWARE/Hardware预览图/2025-TAPOR 3D Hand Pose Reconstruction with Fully Passive Thermal Sensing for Around-Device Interactions.png",
+      "pdfFile": "2025-TAPOR 3D Hand Pose Reconstruction with Fully Passive Thermal Sensing for Around-Device Interactions.pdf",
+      "pdfPath": "Papers/HARDWARE/2025-TAPOR 3D Hand Pose Reconstruction with Fully Passive Thermal Sensing for Around-Device Interactions.pdf",
+      "doi": "https://doi.org/10.1145/3729499",
+      "authors": "Xie Zhang; Chengxiao Li; Chenshu Wu",
+      "journal": "Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 163,
+      "title": "TapStrapGestElicitation and Recognition of Ring-based Multi-Finger Gestures",
+      "year": "2025",
+      "category": "GestureDesign",
+      "hardwareDevices": [
+        "SmartRing",
+        "Wearables"
+      ],
+      "sensingTechnology": [
+        "DynamicGesture",
+        "GestureRecognition",
+        "IMU"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "ContactBased",
+        "DeviceContact",
+        "RealTime"
+      ],
+      "gestureTypes": [
+        "MultiTouch",
+        "SingleHand",
+        "Tap",
+        "ThumbIndex"
+      ],
+      "applicationScenarios": [
+        "OtherScenarios"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "Elicitation",
+        "HighAccuracy",
+        "UserAdaptation"
+      ],
+      "tags": [],
+      "image": "Papers/GestureDesign/GestureDesign预览图/2025-TapStrapGestElicitation and Recognition of Ring-based Multi-Finger Gestures.png",
+      "pdfFile": "2025-TapStrapGestElicitation and Recognition of Ring-based Multi-Finger Gestures.pdf",
+      "pdfPath": "Papers/GestureDesign/2025-TapStrapGestElicitation and Recognition of Ring-based Multi-Finger Gestures.pdf",
+      "doi": "https://doi.org/10.1145/3733047",
+      "authors": "Guillem Cornella-Barba; Bruno Dumas; Mehdi Ousmer; Santiago Villarreal-Narvaez; Jean Vanderdonckt; Eudald Sangenis; Adrien Chaffangeon Caillet",
+      "journal": "Proceedings of the ACM on Human-Computer Interaction",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 164,
+      "title": "ThumbSwypeThumb-to-Finger Gesture Based Text-Entry for Head Mounted Displays",
+      "year": "2025",
+      "category": "GestureDesign",
+      "hardwareDevices": [
+        "ARGlasses",
+        "VRHeadset"
+      ],
+      "sensingTechnology": [
+        "ComputerVision",
+        "DynamicGesture",
+        "GestureRecognition",
+        "HandTracking"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "BodyContact",
+        "ContactBased",
+        "DirectTouch",
+        "Visual"
+      ],
+      "gestureTypes": [
+        "SingleHand",
+        "Swipe",
+        "ThumbIndex"
+      ],
+      "applicationScenarios": [
+        "AR",
+        "TextInput",
+        "VR"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "HighAccuracy",
+        "OneHandUse",
+        "QWERTYLayout"
+      ],
+      "tags": [],
+      "image": "Papers/GestureDesign/GestureDesign预览图/2025-ThumbSwypeThumb-to-Finger Gesture Based Text-Entry for Head Mounted Displays.png",
+      "pdfFile": "2025-ThumbSwypeThumb-to-Finger Gesture Based Text-Entry for Head Mounted Displays.pdf",
+      "pdfPath": "Papers/GestureDesign/2025-ThumbSwypeThumb-to-Finger Gesture Based Text-Entry for Head Mounted Displays.pdf",
+      "doi": "https://doi.org/10.1145/3743708",
+      "authors": "Rishav Banerjee; Shariff AM Faleel; Omang Baheti; Khalad Hasan; Pourang Irani",
+      "journal": "Proceedings of the ACM on Human-Computer Interaction",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 165,
+      "title": "VibRingA Wearable Vibroacoustic Sensor for Single-Handed Gesture Recognition",
+      "year": "2025",
+      "category": "hardware",
+      "hardwareDevices": [
+        "SmartRing",
+        "Wearables",
+        "WearableSensor"
+      ],
+      "sensingTechnology": [
+        "ContinuousGesture",
+        "DynamicGesture",
+        "GestureRecognition",
+        "StaticGesture",
+        "AcousticSensing"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "BodyContact",
+        "NonContact",
+        "RealTime",
+        "Visual"
+      ],
+      "gestureTypes": [
+        "SingleHand",
+        "Tap",
+        "ThumbIndex"
+      ],
+      "applicationScenarios": [
+        "AR",
+        "Gaming",
+        "IoT",
+        "MediaControl",
+        "TextInput"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "DiscreetInput",
+        "HighAccuracy",
+        "LowLatency",
+        "PortableDesign",
+        "SocialAcceptability",
+        "UserAdaptation"
+      ],
+      "tags": [],
+      "image": "Papers/HARDWARE/Hardware预览图/2025-VibRingA Wearable Vibroacoustic Sensor for Single-Handed Gesture Recognition.png",
+      "pdfFile": "2025-VibRingA Wearable Vibroacoustic Sensor for Single-Handed Gesture Recognition.pdf",
+      "pdfPath": "Papers/HARDWARE/2025-VibRingA Wearable Vibroacoustic Sensor for Single-Handed Gesture Recognition.pdf",
+      "doi": "https://doi.org/10.1145/3733052",
+      "authors": "Bu Li; Xincheng Huang; Robert Xiao",
+      "journal": "Proceedings of the ACM on Human-Computer Interaction",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 166,
+      "title": "ElectroRing 2.0Precise Micro-Interaction Sensing for High-Bandwidth Wearable Input",
+      "year": "2026",
+      "category": "hardware",
+      "hardwareDevices": [
+        "SmartRing",
+        "Wearables"
+      ],
+      "sensingTechnology": [
+        "Bio",
+        "ContinuousGesture",
+        "DynamicGesture",
+        "GestureRecognition",
+        "IMU",
+        "Optical"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "InAir",
+        "NonContact",
+        "RealTime",
+        "Visual"
+      ],
+      "gestureTypes": [
+        "Directional",
+        "Pinch",
+        "SingleHand",
+        "Tap",
+        "ThumbIndex"
+      ],
+      "applicationScenarios": [
+        "AR",
+        "MR",
+        "VR"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "DiscreetInput",
+        "HighAccuracy",
+        "LowLatency",
+        "PortableDesign"
+      ],
+      "tags": [],
+      "image": "Papers/HARDWARE/Hardware预览图/2026-ElectroRing 2.0Precise Micro-Interaction Sensing for High-Bandwidth Wearable Input.png",
+      "pdfFile": "2026-ElectroRing 2.0Precise Micro-Interaction Sensing for High-Bandwidth Wearable Input.pdf",
+      "pdfPath": "Papers/HARDWARE/2026-ElectroRing 2.0Precise Micro-Interaction Sensing for High-Bandwidth Wearable Input.pdf",
+      "doi": "https://doi.org/10.1145/3772363.3799171",
+      "authors": "Roger Boldu; Andre Levi; Eric Whitmire; Wolf Kienzle; Hrvoje Benko",
+      "journal": "Proceedings of the Extended Abstracts of the 2026 CHI Conference on Human Factors in Computing Systems",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 167,
+      "title": "Evaluating the Usability of Microgestures for Text Editing Tasks in Virtual Reality",
+      "year": "2026",
+      "category": "GestureDesign",
+      "hardwareDevices": [
+        "VRHeadset"
+      ],
+      "sensingTechnology": [
+        "ComputerVision",
+        "DynamicGesture",
+        "GestureRecognition",
+        "HandTracking"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "InAir",
+        "NonContact",
+        "Visual"
+      ],
+      "gestureTypes": [
+        "Pinch",
+        "SingleHand",
+        "Swipe",
+        "Tap"
+      ],
+      "applicationScenarios": [
+        "TextInput",
+        "VR"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "HandsFree",
+        "HighAccuracy",
+        "SocialAcceptability"
+      ],
+      "tags": [],
+      "image": "Papers/GestureDesign/GestureDesign预览图/2026-Evaluating the Usability of Microgestures for Text Editing Tasks in Virtual Reality.png",
+      "pdfFile": "2026-Evaluating the Usability of Microgestures for Text Editing Tasks in Virtual Reality.pdf",
+      "pdfPath": "Papers/GestureDesign/2026-Evaluating the Usability of Microgestures for Text Editing Tasks in Virtual Reality.pdf",
+      "doi": "https://doi.org/10.1109/TVCG.2025.3642050",
+      "authors": "Xiang Li; Wei He; Per Ola Kristensson",
+      "journal": "IEEE Transactions on Visualization and Computer Graphics",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 168,
+      "title": "Investigating Single-Handed Microgesture Scrolling Techniques",
+      "year": "2026",
+      "category": "GestureDesign",
+      "hardwareDevices": [
+        "OtherDevices"
+      ],
+      "sensingTechnology": [
+        "GestureRecognition"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "ContactBased",
+        "InAir"
+      ],
+      "gestureTypes": [
+        "Flex",
+        "Pinch",
+        "SingleHand"
+      ],
+      "applicationScenarios": [
+        "OtherScenarios"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "EyesFree",
+        "OneHandUse",
+        "UserAdaptation"
+      ],
+      "tags": [],
+      "image": "Papers/GestureDesign/GestureDesign预览图/2026-Investigating Single-Handed Microgesture Scrolling Techniques.png",
+      "pdfFile": "2026-Investigating Single-Handed Microgesture Scrolling Techniques.pdf",
+      "pdfPath": "Papers/GestureDesign/2026-Investigating Single-Handed Microgesture Scrolling Techniques.pdf",
+      "doi": "https://doi.org/10.1145/3772318.3791215",
+      "authors": "Suliac Lavenant; Alix Goguey; Sylvain Malacria; Laurence Nigay; Thomas Pietrzak",
+      "journal": "Proceedings of the 2026 CHI Conference on Human Factors in Computing Systems",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 169,
+      "title": "M3-CFR A Domain-Adaptive Bistatic mmWave MIMO CFR Dataset for Microgesture Recognition",
+      "year": "2026",
+      "category": "software",
+      "hardwareDevices": [
+        "OtherDevices"
+      ],
+      "sensingTechnology": [
+        "DynamicGesture",
+        "GestureRecognition",
+        "Radar",
+        "RFSensing"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "InAir",
+        "NonContact"
+      ],
+      "gestureTypes": [
+        "Directional",
+        "SingleHand",
+        "Swipe"
+      ],
+      "applicationScenarios": [
+        "OtherScenarios"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "HighAccuracy",
+        "UserAdaptation"
+      ],
+      "tags": [],
+      "image": "Papers/SOFTWARE/Software预览图/2026-M3-CFR A Domain-Adaptive Bistatic mmWave MIMO CFR Dataset for Microgesture Recognition.png",
+      "pdfFile": "2026-M3-CFR A Domain-Adaptive Bistatic mmWave MIMO CFR Dataset for Microgesture Recognition.pdf",
+      "pdfPath": "Papers/SOFTWARE/2026-M3-CFR A Domain-Adaptive Bistatic mmWave MIMO CFR Dataset for Microgesture Recognition.pdf",
+      "doi": "https://doi.org/10.1109/LSENS.2026.3703644",
+      "authors": "Khandaker Foysal Haque; Francesca Meneghello; Francesco Restuccia",
+      "journal": "IEEE Sensors Letters",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 170,
+      "title": "PortInput Enabling Always-Available Micro-Gesture Input With Pressure Array Sensor",
+      "year": "2026",
+      "category": "hardware",
+      "hardwareDevices": [
+        "Wearables",
+        "WearableSensor"
+      ],
+      "sensingTechnology": [
+        "DynamicGesture",
+        "GestureRecognition",
+        "Pressure"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "BodyContact",
+        "ContactBased",
+        "RealTime"
+      ],
+      "gestureTypes": [
+        "Pinch",
+        "SingleHand",
+        "Swipe",
+        "Tap"
+      ],
+      "applicationScenarios": [
+        "OtherScenarios"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "DiscreetInput",
+        "LowLatency",
+        "PortableDesign",
+        "SocialAcceptability",
+        "AlwaysAvailable"
+      ],
+      "tags": [],
+      "image": "Papers/HARDWARE/Hardware预览图/2026-PortInput Enabling Always-Available Micro-Gesture Input With Pressure Array Sensor.png",
+      "pdfFile": "2026-PortInput Enabling Always-Available Micro-Gesture Input With Pressure Array Sensor.pdf",
+      "pdfPath": "Papers/HARDWARE/2026-PortInput Enabling Always-Available Micro-Gesture Input With Pressure Array Sensor.pdf",
+      "doi": "https://doi.org/10.1109/TVCG.2026.3670615",
+      "authors": "Haiyan Jiang; Henry Been-Lirn Duh; Mingwei Hu; Zixuan Zhao; Mingming Wang; Yue Liu; Yongtian Wang; Weitao Song",
+      "journal": "IEEE Transactions on Visualization and Computer Graphics",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 171,
+      "title": "TraceRing Touchpad-like Pointing with a Single IMU Ring through Personalized Learning",
+      "year": "2026",
+      "category": "software",
+      "hardwareDevices": [
+        "SmartRing",
+        "Wearables"
+      ],
+      "sensingTechnology": [
+        "Accelerometer",
+        "ContinuousGesture",
+        "Gyroscope",
+        "IMU",
+        "TrajectoryAnalysis"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "InAir",
+        "NonContact",
+        "RealTime"
+      ],
+      "gestureTypes": [
+        "Directional",
+        "SingleHand"
+      ],
+      "applicationScenarios": [
+        "OtherScenarios"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "HighAccuracy",
+        "PortableDesign",
+        "UserAdaptation"
+      ],
+      "tags": [],
+      "image": "Papers/SOFTWARE/Software预览图/2026-TraceRing Touchpad-like Pointing with a Single IMU Ring through Personalized Learning.png",
+      "pdfFile": "2026-TraceRing Touchpad-like Pointing with a Single IMU Ring through Personalized Learning.pdf",
+      "pdfPath": "Papers/SOFTWARE/2026-TraceRing Touchpad-like Pointing with a Single IMU Ring through Personalized Learning.pdf",
+      "doi": "https://doi.org/10.1145/3772318.3790463",
+      "authors": "Zhe He; Weinan Shi; Zixuan Wang; Suya Wu; Xiyuan Shen; Chengchi Zhou; Chun Yu; Yuanchun Shi",
+      "journal": "Proceedings of the 2026 CHI Conference on Human Factors in Computing Systems",
+      "url": "",
+      "source": "metadata_completed_workbook"
+    },
+    {
+      "id": 172,
+      "title": "WISPPrintable Graphene-Based Wearables for Force-Based Micro-Gesture Recognition",
+      "year": "2026",
+      "category": "hardware",
+      "hardwareDevices": [
+        "E-textile",
+        "Wearables",
+        "WearableSensor"
+      ],
+      "sensingTechnology": [
+        "Bio",
+        "DynamicGesture",
+        "GestureRecognition",
+        "Pressure"
+      ],
+      "recognitionClassification": [],
+      "interactionModalities": [
+        "NonContact",
+        "RealTime"
+      ],
+      "gestureTypes": [
+        "Pinch",
+        "SingleHand"
+      ],
+      "applicationScenarios": [
+        "AR",
+        "MR",
+        "VR"
+      ],
+      "feedbackOutput": [],
+      "userExperienceDesign": [
+        "DiscreetInput",
+        "HighAccuracy",
+        "PortableDesign",
+        "SocialAcceptability"
+      ],
+      "tags": [],
+      "image": "Papers/HARDWARE/Hardware预览图/2026-WISPPrintable Graphene-Based Wearables for Force-Based Micro-Gesture Recognition.png",
+      "pdfFile": "2026-WISPPrintable Graphene-Based Wearables for Force-Based Micro-Gesture Recognition.pdf",
+      "pdfPath": "Papers/HARDWARE/2026-WISPPrintable Graphene-Based Wearables for Force-Based Micro-Gesture Recognition.pdf",
+      "doi": "https://doi.org/10.1145/3774906.3800486",
+      "authors": "Zhenyu Lei; Xiaomeng Liu; Quan Zhang; VP Nguyen; Jun Yao; Deepak Ganesan",
+      "journal": "Proceedings of the 2026 ACM/IEEE International Conference on Embedded Artificial Intelligence and Sensing Systems",
+      "url": "",
+      "source": "metadata_completed_workbook"
     },
     {
       "id": 173,
-      "title": "DigiTap- an eyes-free VR:AR symbolic input device.",
-      "year": "2014",
-      "category": "hardware",
-      "image": "Papers/HARDWARE/Hardware预览图/2014 - DigiTap- an eyes-free VR:AR symbolic input device..png",
-      "hardwareDevices": [],
-      "sensingTechnology": [],
-      "recognitionClassification": [],
-      "interactionModalities": [],
-      "gestureTypes": [],
-      "applicationScenarios": [],
-      "feedbackOutput": [],
-      "userExperienceDesign": [],
-      "doi": "https://doi.org/10.1145/2671015.2671029",
-      "authors": "Prätorius Manuel, Valkov Dimitar, Burgbacher Ulrich, Hinrichs Klaus",
-      "journal": "VRST '14: The 20th ACM Symposium on Virtual Reality Software and Technology"
-    },
-    {
-      "id": 174,
-      "title": "LightRing- Always-Available 2D Input on Any Surface.",
-      "year": "2014",
-      "category": "hardware",
-      "image": "Papers/HARDWARE/Hardware预览图/2014 - LightRing- Always-Available 2D Input on Any Surface..png",
-      "hardwareDevices": [],
-      "sensingTechnology": [],
-      "recognitionClassification": [],
-      "interactionModalities": [],
-      "gestureTypes": [],
-      "applicationScenarios": [],
-      "feedbackOutput": [],
-      "userExperienceDesign": [],
-      "doi": "https://doi.org/10.1145/2642918.2647376",
-      "authors": "Kienzle Wolf, Hinckley Ken",
-      "journal": "UIST '14: The 27th Annual ACM Symposium on User Interface Software and Technology"
-    },
-    {
-      "id": 175,
-      "title": "OptiRing Low-Resolution Optical Sensing for Subtle Thumb-to-Index Input",
-      "year": "2023",
-      "category": "hardware",
-      "image": "Papers/HARDWARE/Hardware预览图/2023 -  OptiRing Low-Resolution Optical Sensing for Subtle Thumb-to-Index Input.png",
-      "hardwareDevices": [],
-      "sensingTechnology": [],
-      "recognitionClassification": [],
-      "interactionModalities": [],
-      "gestureTypes": [],
-      "applicationScenarios": [],
-      "feedbackOutput": [],
-      "userExperienceDesign": [],
-      "doi": "https://doi.org/10.1145/3607822.3614538",
-      "authors": "Waghmare Anandghan, Boldu Roger, Whitmire Eric, Kienzle Wolf",
-      "journal": "SUI '23: ACM Symposium on Spatial User Interaction"
-    },
-    {
-      "id": 176,
-      "title": "PinchWatch  A Wearable Device for One-Handed Microinteractions",
-      "year": "2010",
-      "category": "hardware",
-      "image": "Papers/HARDWARE/Hardware预览图/2010-PinchWatch  A Wearable Device for One-Handed Microinteractions.png",
-      "hardwareDevices": [],
-      "sensingTechnology": [],
-      "recognitionClassification": [],
-      "interactionModalities": [],
-      "gestureTypes": [],
-      "applicationScenarios": [],
-      "feedbackOutput": [],
-      "userExperienceDesign": [],
-      "authors": "Loclair Christian, Gustafson Sean, Baudisch Patrick",
-      "journal": "Proc MobileHCI"
-    },
-    {
-      "id": 177,
-      "title": "iSkin Flexible, Stretchable and Visually Customizable On-Body Touch Sensors for Mobile Computing",
-      "year": "2015",
-      "category": "hardware",
-      "image": "Papers/HARDWARE/Hardware预览图/2015-iSkin Flexible, Stretchable and Visually Customizable On-Body Touch Sensors for Mobile Computing.png",
-      "hardwareDevices": [],
-      "sensingTechnology": [],
-      "recognitionClassification": [],
-      "interactionModalities": [],
-      "gestureTypes": [],
-      "applicationScenarios": [],
-      "feedbackOutput": [],
-      "userExperienceDesign": [],
-      "doi": "https://doi.org/10.1145/2702123.2702391",
-      "authors": "Weigel Martin, Lu Tong, Bailly Gilles, Oulasvirta Antti, Majidi Carmel, Steimle Jürgen",
-      "journal": "CHI '15: CHI Conference on Human Factors in Computing Systems"
-    },
-    {
-      "id": 178,
-      "title": "Pyro thumb-tip gesture recognition using pyroelectric infrared sensing",
-      "year": "2017",
-      "category": "hardware",
-      "image": "Papers/HARDWARE/Hardware预览图/2017 - Pyro thumb-tip gesture recognition using pyroelectric infrared sensing.png",
-      "hardwareDevices": [],
-      "sensingTechnology": [],
-      "recognitionClassification": [],
-      "interactionModalities": [],
-      "gestureTypes": [],
-      "applicationScenarios": [],
-      "feedbackOutput": [],
-      "userExperienceDesign": [],
-      "doi": "https://doi.org/10.1145/3126594.3126615",
-      "authors": "Gong Jun, Zhang Yang, Zhou Xia, Yang Xing-Dong",
-      "journal": "UIST '17: The 30th Annual ACM Symposium on User Interface Software and Technology"
-    },
-    {
-      "id": 179,
-      "title": "FingerPad-  private and subtle interaction using fingertips",
-      "year": "2013",
-      "category": "hardware",
-      "image": "Papers/HARDWARE/Hardware预览图/2013 - FingerPad-  private and subtle interaction using fingertips.png",
-      "hardwareDevices": [],
-      "sensingTechnology": [],
-      "recognitionClassification": [],
-      "interactionModalities": [],
-      "gestureTypes": [],
-      "applicationScenarios": [],
-      "feedbackOutput": [],
-      "userExperienceDesign": [],
-      "doi": "https://doi.org/10.1145/2501988.2502016",
-      "authors": "Chan Liwei, Liang Rong-Hao, Tsai Ming-Chang, Cheng Kai-Yin, Su Chao-Huai, Chen Mike Y., Cheng Wen-Huang, Chen Bing-Yu",
-      "journal": "UIST'13: The 26th Annual ACM Symposium on User Interface Software and Technology"
-    },
-    {
-      "id": 180,
-      "title": "Skinmarks Enabling interactions on body landmarks using conformal skin electronics",
-      "year": "2017",
-      "category": "hardware",
-      "image": "Papers/HARDWARE/Hardware预览图/2017-Skinmarks Enabling interactions on body landmarks using conformal skin electronics.png",
-      "hardwareDevices": [],
-      "sensingTechnology": [],
-      "recognitionClassification": [],
-      "interactionModalities": [],
-      "gestureTypes": [],
-      "applicationScenarios": [],
-      "feedbackOutput": [],
-      "userExperienceDesign": [],
-      "doi": "https://doi.org/10.1145/3025453.3025704",
-      "authors": "Weigel Martin, Nittala Aditya Shekhar, Olwal Alex, Steimle Jürgen",
-      "journal": "CHI '17: CHI Conference on Human Factors in Computing Systems"
-    },
-    {
-      "id": 181,
-      "title": "Press-n-paste copy-and-paste operations with pressure-sensitive caret navigation for miniaturized surface in mobile aug",
-      "year": "2021",
+      "title": "µPolya First Microgesture Toolkit",
+      "year": "2026",
       "category": "software",
-      "image": "Papers/SOFTWARE/Software预览图/2021 - Press-n-paste copy-and-paste operations with pressure-sensitive caret navigation for miniaturized surface in mobile aug.png",
-      "hardwareDevices": [],
-      "sensingTechnology": [],
+      "hardwareDevices": [
+        "Wearables"
+      ],
+      "sensingTechnology": [
+        "GestureRecognition"
+      ],
       "recognitionClassification": [],
-      "interactionModalities": [],
-      "gestureTypes": [],
-      "applicationScenarios": [],
+      "interactionModalities": [
+        "MultiModal",
+        "Visual"
+      ],
+      "gestureTypes": [
+        "Pinch",
+        "SingleHand",
+        "Swipe",
+        "Tap"
+      ],
+      "applicationScenarios": [
+        "OtherScenarios"
+      ],
       "feedbackOutput": [],
-      "userExperienceDesign": [],
-      "doi": "https://doi.org/10.1145/3457146",
-      "authors": "Lee Lik Hang, Zhu Yiming, Yau Yui-Pan, Hui Pan, Pirttikangas Susanna",
-      "journal": "Proc ACM Hum Comput Interact"
-    },
-    {
-      "id": 182,
-      "title": "Vulture- A Mid-Air Word-Gesture Keyboard",
-      "year": "2014",
-      "category": "software",
-      "image": "Papers/SOFTWARE/Software预览图/2014 - Vulture- A Mid-Air Word-Gesture Keyboard.png",
-      "hardwareDevices": [],
-      "sensingTechnology": [],
-      "recognitionClassification": [],
-      "interactionModalities": [],
-      "gestureTypes": [],
-      "applicationScenarios": [],
-      "feedbackOutput": [],
-      "userExperienceDesign": [],
-      "doi": "https://doi.org/10.1145/2556288.2556964",
-      "authors": "Markussen Anders, Jakobsen Mikkel Rønne, Hornbæk Kasper",
-      "journal": "CHI '14: CHI Conference on Human Factors in Computing Systems"
-    },
-    {
-      "id": 183,
-      "title": "The intuitive grasp interface design and evaluation of micro-gestures on the steering wheel for driving scenario",
-      "year": "2020",
-      "category": "GestureDesign",
-      "image": "Papers/GestureDesign/GestureDesign预览图/2020 - The intuitive grasp interface design and evaluation of micro-gestures on the steering wheel for driving scenario.png",
-      "hardwareDevices": [],
-      "sensingTechnology": [],
-      "recognitionClassification": [],
-      "interactionModalities": [],
-      "gestureTypes": [],
-      "applicationScenarios": [],
-      "feedbackOutput": [],
-      "userExperienceDesign": [],
-      "doi": "https://doi.org/10.1007/s10209-019-00647-0",
-      "authors": "Xiao Yiqi, He Renke",
-      "journal": "Univers Access Inf Soc"
-    },
-    {
-      "id": 184,
-      "title": "Transferable Microgestures Across Hand Posture and Location Constraints- Leveraging the Middle, Ring, and Pinky Fingers",
-      "year": "2023",
-      "category": "GestureDesign",
-      "image": "Papers/GestureDesign/GestureDesign预览图/2023 - Transferable Microgestures Across Hand Posture and Location Constraints- Leveraging the Middle, Ring, and Pinky Fingers.png",
-      "hardwareDevices": [],
-      "sensingTechnology": [],
-      "recognitionClassification": [],
-      "interactionModalities": [],
-      "gestureTypes": [],
-      "applicationScenarios": [],
-      "feedbackOutput": [],
-      "userExperienceDesign": [],
-      "doi": "https://doi.org/10.1145/3586183.3606713",
-      "authors": "Joshi Nikhita, Abtahi Parastoo, Sodhi Raj, Bartov Nitzan, Rushing Jackson, Collins Christopher, Vogel Daniel, Glueck Michael",
-      "journal": "UIST '23: The 36th Annual ACM Symposium on User Interface Software and Technology"
-    },
-    {
-      "id": 185,
-      "title": "Segtouch",
-      "year": "2017",
-      "category": "GestureDesign",
-      "image": "Papers/GestureDesign/GestureDesign预览图/2017-Segtouch.png",
-      "hardwareDevices": [],
-      "sensingTechnology": [],
-      "recognitionClassification": [],
-      "interactionModalities": [],
-      "gestureTypes": [],
-      "applicationScenarios": [],
-      "feedbackOutput": [],
-      "userExperienceDesign": [],
-      "doi": "https://doi.org/10.1145/3027063.3053109",
-      "authors": "Tsai Hsin-Ruey, Wu Te-Yen, Huang Da-Yuan, Hsiu Min-Chieh, Hsiao Jui-Chun, Hung Yi-Ping, Chen Mike Y., Chen Bing-Yu",
-      "journal": "CHI '17: CHI Conference on Human Factors in Computing Systems"
-    },
-    {
-      "id": 186,
-      "title": "Arpège learning multitouch chord gestures vocabularies",
-      "year": "2013",
-      "category": "GestureDesign",
-      "image": "Papers/GestureDesign/GestureDesign预览图/2013 - Arpège learning multitouch chord gestures vocabularies.png",
-      "hardwareDevices": [],
-      "sensingTechnology": [],
-      "recognitionClassification": [],
-      "interactionModalities": [],
-      "gestureTypes": [],
-      "applicationScenarios": [],
-      "feedbackOutput": [],
-      "userExperienceDesign": [],
-      "doi": "https://doi.org/10.1145/2512349.2512795",
-      "authors": "Ghomi Emilien, Huot Stéphane, Bau Olivier, Beaudouin-Lafon Michel, Mackay Wendy E.",
-      "journal": "ITS '13: The ACM International Conference on Interactive Tabletops and Surfaces"
-    },
-    {
-      "id": 187,
-      "title": "PalmType Using Palms as Keyboards for Smart Glasses",
-      "year": "2015",
-      "category": "GestureDesign",
-      "image": "Papers/GestureDesign/GestureDesign预览图/2015-PalmType Using Palms as Keyboards for Smart Glasses.png",
-      "hardwareDevices": [],
-      "sensingTechnology": [],
-      "recognitionClassification": [],
-      "interactionModalities": [],
-      "gestureTypes": [],
-      "applicationScenarios": [],
-      "feedbackOutput": [],
-      "userExperienceDesign": [],
-      "doi": "https://doi.org/10.1145/2785830.2785886",
-      "authors": "Wang Cheng-Yao, Chu Wei-Chen, Chiu Po-Tsung, Hsiu Min-Chieh, Chiang Yih-Harn, Chen Mike Y.",
-      "journal": "MobileHCI '15: 17th International Conference on Human-Computer Interaction with Mobile Devices and Services"
+      "userExperienceDesign": [
+        "Elicitation",
+        "UserAdaptation"
+      ],
+      "tags": [],
+      "image": "Papers/SOFTWARE/Software预览图/2026-µPolya First Microgesture Toolkit.png",
+      "pdfFile": "2026-µPolya First Microgesture Toolkit.pdf",
+      "pdfPath": "Papers/SOFTWARE/2026-µPolya First Microgesture Toolkit.pdf",
+      "doi": "https://doi.org/10.1145/3815367",
+      "authors": "Adrien Chaffangeon Caillet; Aurélien Conil; Vincent Lambert; Charles Bailly; Alix Goguey; Laurence Nigay",
+      "journal": "Proceedings of the ACM on Human-Computer Interaction",
+      "url": "",
+      "source": "metadata_completed_workbook"
     }
   ],
-  "categories": {
-    "hardware": [
-      {
-        "id": 1,
-        "title": "Towards keyboard independent touch typing in VR",
-        "year": "2005",
-        "category": "hardware",
-        "hardwareDevices": [
-          "DataGloves",
-          "Keyboard",
-          "VRHeadset",
-          "WearableSensor",
-          "Wearables"
-        ],
-        "sensingTechnology": [
-          "CapacitiveSensor",
-          "PressureSensor"
-        ],
-        "recognitionClassification": [
-          "GestureRecognition",
-          "StaticGestureRecognition"
-        ],
-        "interactionModalities": [
-          "InAirGesture",
-          "TangibleInteraction"
-        ],
-        "gestureTypes": [
-          "Pinch",
-          "SingleHand",
-          "Tap",
-          "Thumb-Index"
-        ],
-        "applicationScenarios": [
-          "AR",
-          "DigitalArt",
-          "TextInput",
-          "VR"
-        ],
-        "feedbackOutput": [
-          "RealTimeFeedback"
-        ],
-        "userExperienceDesign": [
-          "HandsFree",
-          "OneHandUse",
-          "TouchOptimized"
-        ],
-        "image": "Papers/HARDWARE/Hardware预览图/2005 - Towards keyboard independent touch typing in VR.png"
-      },
-      {
-        "id": 2,
-        "title": "Demonstrating the feasibility of using forearm electromyography for muscle-computer interfaces",
-        "year": "2008",
-        "category": "hardware",
-        "hardwareDevices": [
-          "WearableSensor"
-        ],
-        "sensingTechnology": [
-          "Bio-Sensor",
-          "EMG"
-        ],
-        "recognitionClassification": [
-          "DynamicGestureRecognition",
-          "FingerTracking",
-          "GestureRecognition",
-          "StaticGestureRecognition"
-        ],
-        "interactionModalities": [
-          "BodyContactGesture",
-          "NonContactBased"
-        ],
-        "gestureTypes": [
-          "Hold",
-          "Pinch",
-          "SingleHand",
-          "Tap"
-        ],
-        "applicationScenarios": [
-          "AccessibilitySupport",
-          "InVehicleInteraction",
-          "TextInput"
-        ],
-        "feedbackOutput": [
-          "RealTimeFeedback",
-          "VisualFeedback"
-        ],
-        "userExperienceDesign": [
-          "DiscreetInput",
-          "HandsFree",
-          "HighAccuracy",
-          "SocialAcceptability"
-        ],
-        "image": "Papers/HARDWARE/Hardware预览图/2008 - Demonstrating the feasibility of using forearm electromyography for muscle-computer interfaces.png"
-      },
-      {
-        "id": 3,
-        "title": "Hand gesture recognition and virtual game control based on 3D accelerometer and EMG sensors",
-        "year": "2009",
-        "category": "hardware",
-        "hardwareDevices": [
-          "WearableSensor"
-        ],
-        "sensingTechnology": [
-          "Accelerometer",
-          "Bio-Sensor",
-          "EMG",
-          "MotionSensor"
-        ],
-        "recognitionClassification": [
-          "ContinuousRecognition",
-          "DynamicGestureRecognition",
-          "FingerTracking",
-          "GestureRecognition",
-          "HandTracking"
-        ],
-        "interactionModalities": [
-          "MultiModalInteraction",
-          "NonContactBased"
-        ],
-        "gestureTypes": [
-          "DirectionalGesture",
-          "SingleHand"
-        ],
-        "applicationScenarios": [
-          "Gaming",
-          "ObjectManipulation"
-        ],
-        "feedbackOutput": [
-          "RealTimeFeedback",
-          "VisualFeedback"
-        ],
-        "userExperienceDesign": [
-          "HighAccuracy",
-          "LowLatency",
-          "PortableDesign"
-        ],
-        "image": "Papers/HARDWARE/Hardware预览图/2009 - Hand gesture recognition and virtual game control based on 3D accelerometer and EMG sensors.png"
-      },
-      {
-        "id": 4,
-        "title": "A prototype of gesture-based interface",
-        "year": "2011",
-        "category": "hardware",
-        "hardwareDevices": [
-          "SmartPhone",
-          "WearableSensor",
-          "Wearables"
-        ],
-        "sensingTechnology": [
-          "Accelerometer",
-          "Bio-Sensor",
-          "EMG"
-        ],
-        "recognitionClassification": [
-          "DynamicGestureRecognition",
-          "GestureRecognition",
-          "HandTracking",
-          "StaticGestureRecognition"
-        ],
-        "interactionModalities": [
-          "MultiModalInteraction",
-          "NonContactBased"
-        ],
-        "gestureTypes": [
-          "DirectionalGesture",
-          "Flex",
-          "SingleHand"
-        ],
-        "applicationScenarios": [
-          "InVehicleInteraction",
-          "MediaControl"
-        ],
-        "feedbackOutput": [
-          "RealTimeFeedback",
-          "VisualFeedback"
-        ],
-        "userExperienceDesign": [
-          "DiscreetInput",
-          "HighAccuracy",
-          "PortableDesign",
-          "SocialAcceptability"
-        ],
-        "image": "Papers/HARDWARE/Hardware预览图/2011 - A prototype of gesture-based interface.png"
-      },
-      {
-        "id": 6,
-        "title": "Augmenting the input space of portable displays using add-on hall-sensor grid",
-        "year": "2013",
-        "category": "hardware",
-        "hardwareDevices": [
-          "SmartPhone",
-          "Tablet",
-          "WearableSensor",
-          "Wearables"
-        ],
-        "sensingTechnology": [
-          "Accelerometer",
-          "Magnetometer",
-          "OtherTechnology"
-        ],
-        "recognitionClassification": [
-          "DynamicGestureRecognition",
-          "FingerTracking",
-          "GestureRecognition",
-          "StaticGestureRecognition"
-        ],
-        "interactionModalities": [
-          "BackofDevices",
-          "DirectTouch",
-          "NonContactBased",
-          "TangibleInteraction"
-        ],
-        "gestureTypes": [
-          "Pinch",
-          "Swipe",
-          "Tap",
-          "Thumb-Index"
-        ],
-        "applicationScenarios": [
-          "Gaming",
-          "MediaControl",
-          "Navigation",
-          "TextInput"
-        ],
-        "feedbackOutput": [
-          "HapticFeedback",
-          "VisualFeedback"
-        ],
-        "userExperienceDesign": [
-          "DiscreetInput",
-          "OcclusionAvoidance",
-          "PortableDesign",
-          "SocialAcceptability"
-        ],
-        "image": "Papers/HARDWARE/Hardware预览图/2013 - Augmenting the input space of portable displays using add-on hall-sensor grid.png"
-      },
-      {
-        "id": 7,
-        "title": "EarPut augmenting ear-worn devices for ear-based interaction",
-        "year": "2014",
-        "category": "hardware",
-        "hardwareDevices": [
-          "OtherDevices",
-          "SmartPhone",
-          "WearableSensor",
-          "Wearables"
-        ],
-        "sensingTechnology": [
-          "CapacitiveSensor"
-        ],
-        "recognitionClassification": [
-          "DynamicGestureRecognition",
-          "GestureRecognition",
-          "StaticGestureRecognition"
-        ],
-        "interactionModalities": [
-          "BodyContactGesture",
-          "DirectTouch",
-          "EarBasedInteraction",
-          "InAirGesture"
-        ],
-        "gestureTypes": [
-          "MultiTouch",
-          "SingleHand",
-          "Swipe",
-          "Tap"
-        ],
-        "applicationScenarios": [
-          "Gaming",
-          "MediaControl",
-          "SmartHome"
-        ],
-        "feedbackOutput": [
-          "AudioFeedback",
-          "HapticFeedback",
-          "ProprioceptiveFeedback"
-        ],
-        "userExperienceDesign": [
-          "DiscreetInput",
-          "EyesFree",
-          "OneHandUse",
-          "PortableDesign",
-          "SocialAcceptability"
-        ],
-        "image": "Papers/HARDWARE/Hardware预览图/2014 - EarPut augmenting ear-worn devices for ear-based interaction.png"
-      },
-      {
-        "id": 8,
-        "title": "Advancing muscle-computer interfaces with high-density electromyography",
-        "year": "2015",
-        "category": "hardware",
-        "hardwareDevices": [
-          "WearableSensor"
-        ],
-        "sensingTechnology": [
-          "Bio-Sensor",
-          "EMG"
-        ],
-        "recognitionClassification": [
-          "DynamicGestureRecognition",
-          "FingerTracking",
-          "GestureRecognition",
-          "StaticGestureRecognition"
-        ],
-        "interactionModalities": [
-          "NonContactBased"
-        ],
-        "gestureTypes": [
-          "Flex",
-          "Pinch",
-          "SingleHand",
-          "Tap"
-        ],
-        "applicationScenarios": [
-          "IoTControl",
-          "MediaControl",
-          "SmartHome"
-        ],
-        "feedbackOutput": [
-          "RealTimeFeedback",
-          "VisualFeedback"
-        ],
-        "userExperienceDesign": [
-          "DiscreetInput",
-          "HandsFree",
-          "HighAccuracy",
-          "UserAdaptation"
-        ],
-        "image": "Papers/HARDWARE/Hardware预览图/2015 - Advancing muscle-computer interfaces with high-density electromyography.png"
-      },
-      {
-        "id": 9,
-        "title": "eRing multiple finger gesture recognition with one ring using an electric field",
-        "year": "2015",
-        "category": "hardware",
-        "hardwareDevices": [
-          "SmartRing",
-          "WearableSensor",
-          "Wearables"
-        ],
-        "sensingTechnology": [
-          "CapacitiveSensor",
-          "OtherTechnology"
-        ],
-        "recognitionClassification": [
-          "ContinuousRecognition",
-          "FingerTracking",
-          "GestureRecognition",
-          "StaticGestureRecognition"
-        ],
-        "interactionModalities": [
-          "ContactBased",
-          "MultiModalInteraction",
-          "NonContactBased"
-        ],
-        "gestureTypes": [
-          "Pinch",
-          "SingleHand",
-          "Swipe",
-          "Tap",
-          "Thumb-Index"
-        ],
-        "applicationScenarios": [
-          "IoTControl",
-          "OtherScenarios",
-          "SmartHome"
-        ],
-        "feedbackOutput": [
-          "RealTimeFeedback",
-          "VisualFeedback"
-        ],
-        "userExperienceDesign": [
-          "HandsFree",
-          "OcclusionAvoidance",
-          "OneHandUse",
-          "PortableDesign",
-          "SocialAcceptability"
-        ],
-        "image": "Papers/HARDWARE/Hardware预览图/2015 - eRing multiple finger gesture recognition with one ring using an electric field.png"
-      },
-      {
-        "id": 12,
-        "title": "Microgesture detection for remote interaction with mobile devices",
-        "year": "2016",
-        "category": "hardware",
-        "hardwareDevices": [
-          "SmartRing",
-          "SmartPhone",
-          "WearableSensor",
-          "Wearables"
-        ],
-        "sensingTechnology": [
-          "Accelerometer",
-          "Gyroscope",
-          "IMU",
-          "MotionSensor"
-        ],
-        "recognitionClassification": [
-          "ContinuousRecognition",
-          "DynamicGestureRecognition",
-          "FingerTracking",
-          "GestureRecognition"
-        ],
-        "interactionModalities": [
-          "DeviceContactGesture",
-          "NonContactBased"
-        ],
-        "gestureTypes": [
-          "DirectionalGesture",
-          "SingleHand",
-          "Swipe",
-          "Tap",
-          "Thumb-Index"
-        ],
-        "applicationScenarios": [
-          "InVehicleInteraction",
-          "IoTControl",
-          "MediaControl",
-          "Navigation"
-        ],
-        "feedbackOutput": [
-          "RealTimeFeedback",
-          "VisualFeedback"
-        ],
-        "userExperienceDesign": [
-          "DiscreetInput",
-          "EncumberedInteraction",
-          "EyesFree",
-          "HandsFree",
-          "MidasTouchProblem",
-          "OneHandUse",
-          "PortableDesign",
-          "SocialAcceptability"
-        ],
-        "image": "Papers/HARDWARE/Hardware预览图/2016 - Microgesture detection for remote interaction with mobile devices.png"
-      },
-      {
-        "id": 15,
-        "title": "DeformWear deformation input on tiny wearable devices",
-        "year": "2017",
-        "category": "hardware",
-        "hardwareDevices": [
-          "ARGlasses",
-          "HapticDevice",
-          "SmartGlasses",
-          "SmartRing",
-          "SmartWatch",
-          "VRHeadset",
-          "WearableSensor",
-          "Wearables"
-        ],
-        "sensingTechnology": [
-          "OpticalTracking",
-          "OtherTechnology",
-          "PressureSensor"
-        ],
-        "recognitionClassification": [
-          "ContinuousRecognition",
-          "DynamicGestureRecognition",
-          "GestureRecognition"
-        ],
-        "interactionModalities": [
-          "ContactBased",
-          "DeviceContactGesture",
-          "MultiModalInteraction",
-          "TangibleInteraction"
-        ],
-        "gestureTypes": [
-          "DirectionalGesture",
-          "DualHand",
-          "Hold",
-          "Pinch",
-          "SingleHand",
-          "Thumb-Index"
-        ],
-        "applicationScenarios": [
-          "AR",
-          "Gaming",
-          "MediaControl",
-          "Navigation",
-          "ObjectManipulation",
-          "SmartHome",
-          "VR"
-        ],
-        "feedbackOutput": [
-          "HapticFeedback",
-          "ProprioceptiveFeedback",
-          "RealTimeFeedback",
-          "VisualFeedback"
-        ],
-        "userExperienceDesign": [
-          "DiscreetInput",
-          "EyesFree",
-          "HighAccuracy",
-          "OneHandUse",
-          "PortableDesign",
-          "SmallScreen",
-          "SocialAcceptability"
-        ],
-        "image": "Papers/HARDWARE/Hardware预览图/2017 - DeformWear deformation input on tiny wearable devices.png"
-      },
-      {
-        "id": 17,
-        "title": "GestAKey touch interaction on individual keycaps",
-        "year": "2018",
-        "category": "hardware",
-        "hardwareDevices": [
-          "Keyboard",
-          "TouchScreen"
-        ],
-        "sensingTechnology": [
-          "CapacitiveSensor"
-        ],
-        "recognitionClassification": [
-          "DynamicGestureRecognition",
-          "GestureRecognition",
-          "StaticGestureRecognition"
-        ],
-        "interactionModalities": [
-          "ContactBased",
-          "DirectTouch"
-        ],
-        "gestureTypes": [
-          "DirectionalGesture",
-          "MultiTouch",
-          "SingleHand",
-          "Tap"
-        ],
-        "applicationScenarios": [
-          "TextInput"
-        ],
-        "feedbackOutput": [
-          "HapticFeedback"
-        ],
-        "userExperienceDesign": [
-          "LowLatency",
-          "QWERTYLayout",
-          "TouchOptimized",
-          "UserAdaptation"
-        ],
-        "image": "Papers/HARDWARE/Hardware预览图/2018 - GestAKey touch interaction on individual keycaps.png"
-      },
-      {
-        "id": 19,
-        "title": "Thumb-in-motion evaluating thumb-to-ring microgestures for athletic activity",
-        "year": "2018",
-        "category": "hardware",
-        "hardwareDevices": [
-          "SmartRing",
-          "SmartWatch",
-          "Wearables"
-        ],
-        "sensingTechnology": [
-          "CapacitiveSensor"
-        ],
-        "recognitionClassification": [
-          "DynamicGestureRecognition",
-          "GestureRecognition",
-          "StaticGestureRecognition"
-        ],
-        "interactionModalities": [
-          "ContactBased",
-          "DirectTouch"
-        ],
-        "gestureTypes": [
-          "DirectionalGesture",
-          "SingleHand",
-          "Swipe",
-          "Tap",
-          "Thumb-Index"
-        ],
-        "applicationScenarios": [
-          "Healthcare",
-          "MediaControl",
-          "Navigation"
-        ],
-        "feedbackOutput": [
-          "AudioFeedback",
-          "HapticFeedback",
-          "VisualFeedback"
-        ],
-        "userExperienceDesign": [
-          "DiscreetInput",
-          "EncumberedInteraction",
-          "LowLatency",
-          "OneHandUse",
-          "PortableDesign"
-        ],
-        "image": "Papers/HARDWARE/Hardware预览图/2018 - Thumb-in-motion evaluating thumb-to-ring microgestures for athletic activity.png"
-      },
-      {
-        "id": 22,
-        "title": "AudioTouch minimally invasive sensing of micro-gestures via active bio-acoustic sensing",
-        "year": "2019",
-        "category": "hardware",
-        "hardwareDevices": [
-          "WearableSensor",
-          "Wearables"
-        ],
-        "sensingTechnology": [
-          "Bio-Sensor",
-          "PressureSensor",
-          "UltrasonicSensor"
-        ],
-        "recognitionClassification": [
-          "DynamicGestureRecognition",
-          "GestureRecognition",
-          "StaticGestureRecognition"
-        ],
-        "interactionModalities": [
-          "BodyContactGesture",
-          "ContactBased"
-        ],
-        "gestureTypes": [
-          "Hold",
-          "Pinch",
-          "SingleHand",
-          "Tap",
-          "Thumb-Index"
-        ],
-        "applicationScenarios": [
-          "MediaControl",
-          "SmartHome",
-          "TextInput"
-        ],
-        "feedbackOutput": [
-          "RealTimeFeedback"
-        ],
-        "userExperienceDesign": [
-          "DiscreetInput",
-          "EyesFree",
-          "HighAccuracy",
-          "OneHandUse",
-          "PortableDesign"
-        ],
-        "image": "Papers/HARDWARE/Hardware预览图/2019 - AudioTouch minimally invasive sensing of micro-gestures via active bio-acoustic sensing.png"
-      },
-      {
-        "id": 24,
-        "title": "E-textile microinteractions augmenting twist with flick, slide and grasp gestures for soft electronics",
-        "year": "2020",
-        "category": "hardware",
-        "hardwareDevices": [
-          "Etextile",
-          "OtherDevices",
-          "WearableSensor",
-          "Wearables"
-        ],
-        "sensingTechnology": [
-          "CapacitiveSensor",
-          "OtherTechnology",
-          "PressureSensor"
-        ],
-        "recognitionClassification": [
-          "ContinuousRecognition",
-          "DynamicGestureRecognition",
-          "GestureRecognition",
-          "StaticGestureRecognition"
-        ],
-        "interactionModalities": [
-          "ContactBased",
-          "MultiModalInteraction",
-          "TangibleInteraction"
-        ],
-        "gestureTypes": [
-          "DirectionalGesture",
-          "Grasp",
-          "Pinch",
-          "SingleHand",
-          "Swipe",
-          "Tap"
-        ],
-        "applicationScenarios": [
-          "Gaming",
-          "MediaControl",
-          "OtherScenarios",
-          "SmartHome"
-        ],
-        "feedbackOutput": [
-          "RealTimeFeedback",
-          "VisualFeedback"
-        ],
-        "userExperienceDesign": [
-          "DiscreetInput",
-          "EyesFree",
-          "HighAccuracy",
-          "LowLatency",
-          "OneHandUse",
-          "PortableDesign",
-          "UserAdaptation"
-        ],
-        "image": "Papers/HARDWARE/Hardware预览图/2020 - E-textile microinteractions augmenting twist with flick, slide and grasp gestures for soft electronics.png"
-      },
-      {
-        "id": 26,
-        "title": "Fabriccio touchless gestural input on interactive fabrics",
-        "year": "2020",
-        "category": "hardware",
-        "hardwareDevices": [
-          "Etextile",
-          "OtherDevices",
-          "WearableSensor",
-          "Wearables"
-        ],
-        "sensingTechnology": [
-          "MotionSensor",
-          "RFSensing",
-          "RadarSensing"
-        ],
-        "recognitionClassification": [
-          "ContinuousRecognition",
-          "DynamicGestureRecognition",
-          "FingerTracking",
-          "GestureRecognition",
-          "MotionAnalysis"
-        ],
-        "interactionModalities": [
-          "BodyContactGesture",
-          "InAirGesture",
-          "NonContactBased"
-        ],
-        "gestureTypes": [
-          "SingleHand",
-          "Swipe",
-          "Tap",
-          "Thumb-Index"
-        ],
-        "applicationScenarios": [
-          "IoTControl",
-          "MediaControl",
-          "OtherScenarios",
-          "SmartHome"
-        ],
-        "feedbackOutput": [
-          "AudioFeedback",
-          "RealTimeFeedback"
-        ],
-        "userExperienceDesign": [
-          "DiscreetInput",
-          "EyesFree",
-          "HandsFree",
-          "HighAccuracy",
-          "LowLatency",
-          "PortableDesign"
-        ],
-        "image": "Papers/HARDWARE/Hardware预览图/2020 - Fabriccio touchless gestural input on interactive fabrics.png"
-      },
-      {
-        "id": 29,
-        "title": "Nailz sensing hand input with touch sensitive nails",
-        "year": "2020",
-        "category": "hardware",
-        "hardwareDevices": [
-          "SmartGlasses",
-          "WearableSensor",
-          "Wearables"
-        ],
-        "sensingTechnology": [
-          "CapacitiveSensor",
-          "IMU"
-        ],
-        "recognitionClassification": [
-          "FingerTracking",
-          "GestureRecognition"
-        ],
-        "interactionModalities": [
-          "BodyContactGesture",
-          "ContactBased"
-        ],
-        "gestureTypes": [
-          "MultiTouch",
-          "SingleHand",
-          "Swipe",
-          "Tap",
-          "Thumb-Index"
-        ],
-        "applicationScenarios": [
-          "AR",
-          "MediaControl",
-          "Navigation"
-        ],
-        "feedbackOutput": [
-          "RealTimeFeedback",
-          "VisualFeedback"
-        ],
-        "userExperienceDesign": [
-          "DiscreetInput",
-          "EyesFree",
-          "HandsFree",
-          "HighAccuracy",
-          "OneHandUse",
-          "SocialAcceptability"
-        ],
-        "image": "Papers/HARDWARE/Hardware预览图/2020 - Nailz sensing hand input with touch sensitive nails.png"
-      },
-      {
-        "id": 30,
-        "title": "ThermalRing gesture and tag inputs enabled by a thermal imaging smart ring",
-        "year": "2020",
-        "category": "hardware",
-        "hardwareDevices": [
-          "SmartRing",
-          "WearableSensor",
-          "Wearables"
-        ],
-        "sensingTechnology": [
-          "ComputerVision",
-          "OtherTechnology"
-        ],
-        "recognitionClassification": [
-          "DynamicGestureRecognition",
-          "FingerTracking",
-          "GestureRecognition",
-          "HandTracking",
-          "StaticGestureRecognition"
-        ],
-        "interactionModalities": [
-          "ContactBased",
-          "InAirGesture",
-          "TangibleInteraction"
-        ],
-        "gestureTypes": [
-          "DirectionalGesture",
-          "DualHand",
-          "Swipe",
-          "Tap"
-        ],
-        "applicationScenarios": [
-          "IoTControl",
-          "MediaControl",
-          "Navigation",
-          "SmartHome"
-        ],
-        "feedbackOutput": [
-          "RealTimeFeedback",
-          "VisualFeedback"
-        ],
-        "userExperienceDesign": [
-          "EyesFree",
-          "HighAccuracy",
-          "PortableDesign",
-          "SocialAcceptability"
-        ],
-        "image": "Papers/HARDWARE/Hardware预览图/2020 - ThermalRing gesture and tag inputs enabled by a thermal imaging smart ring.png"
-      },
-      {
-        "id": 32,
-        "title": "ElectroRing subtle pinch and touch detection with a ring",
-        "year": "2021",
-        "category": "hardware",
-        "hardwareDevices": [
-          "SmartRing",
-          "WearableSensor",
-          "Wearables"
-        ],
-        "sensingTechnology": [
-          "Accelerometer",
-          "Gyroscope",
-          "IMU",
-          "OtherTechnology"
-        ],
-        "recognitionClassification": [
-          "DynamicGestureRecognition",
-          "GestureRecognition",
-          "StaticGestureRecognition"
-        ],
-        "interactionModalities": [
-          "BodyContactGesture",
-          "ContactBased"
-        ],
-        "gestureTypes": [
-          "Pinch",
-          "Swipe",
-          "Tap",
-          "Thumb-Index"
-        ],
-        "applicationScenarios": [
-          "DigitalArt",
-          "MR",
-          "MediaControl",
-          "ObjectManipulation",
-          "VR"
-        ],
-        "feedbackOutput": [
-          "ProprioceptiveFeedback",
-          "RealTimeFeedback",
-          "VisualFeedback"
-        ],
-        "userExperienceDesign": [
-          "DiscreetInput",
-          "HighAccuracy",
-          "LowLatency",
-          "OneHandUse",
-          "PortableDesign"
-        ],
-        "image": "Papers/HARDWARE/Hardware预览图/2021 - ElectroRing subtle pinch and touch detection with a ring.png"
-      },
-      {
-        "id": 34,
-        "title": "ThumbTrak recognizing micro-finger poses using a ring with proximity sensing",
-        "year": "2021",
-        "category": "hardware",
-        "hardwareDevices": [
-          "SmartRing",
-          "WearableSensor",
-          "Wearables"
-        ],
-        "sensingTechnology": [
-          "OtherTechnology"
-        ],
-        "recognitionClassification": [
-          "3DPoseEstimation",
-          "GestureRecognition",
-          "StaticGestureRecognition"
-        ],
-        "interactionModalities": [
-          "DeviceContactGesture",
-          "DirectTouch"
-        ],
-        "gestureTypes": [
-          "SingleHand",
-          "Tap",
-          "Thumb-Index"
-        ],
-        "applicationScenarios": [
-          "AR",
-          "Gaming",
-          "MediaControl",
-          "Navigation",
-          "TextInput",
-          "VR"
-        ],
-        "feedbackOutput": [
-          "HapticFeedback",
-          "RealTimeFeedback",
-          "VisualFeedback"
-        ],
-        "userExperienceDesign": [
-          "DiscreetInput",
-          "EyesFree",
-          "HighAccuracy",
-          "OneHandUse",
-          "PortableDesign",
-          "SocialAcceptability"
-        ],
-        "image": "Papers/HARDWARE/Hardware预览图/2021 - ThumbTrak recognizing micro-finger poses using a ring with proximity sensing.png"
-      },
-      {
-        "id": 36,
-        "title": "DualRing Enabling Subtle and Expressive Hand Interaction with Dual IMU Rings",
-        "year": "2021",
-        "category": "hardware",
-        "hardwareDevices": [
-          "SmartRing",
-          "WearableSensor",
-          "Wearables"
-        ],
-        "sensingTechnology": [
-          "Accelerometer",
-          "Gyroscope",
-          "IMU",
-          "Magnetometer",
-          "RFSensing"
-        ],
-        "recognitionClassification": [
-          "ContinuousRecognition",
-          "DynamicGestureRecognition",
-          "FingerTracking",
-          "GestureRecognition",
-          "HandTracking",
-          "MotionAnalysis",
-          "StaticGestureRecognition"
-        ],
-        "interactionModalities": [
-          "BodyContactGesture",
-          "ContactBased",
-          "DirectTouch",
-          "MultiModalInteraction",
-          "NonContactBased"
-        ],
-        "gestureTypes": [
-          "DirectionalGesture",
-          "Grasp",
-          "Pinch",
-          "SingleHand",
-          "Swipe",
-          "Tap",
-          "Thumb-Index"
-        ],
-        "applicationScenarios": [
-          "AR",
-          "IoTControl",
-          "MediaControl",
-          "ObjectManipulation",
-          "SmartHome",
-          "TextInput",
-          "VR"
-        ],
-        "feedbackOutput": [
-          "RealTimeFeedback",
-          "VisualFeedback"
-        ],
-        "userExperienceDesign": [
-          "DiscreetInput",
-          "HighAccuracy",
-          "OneHandUse",
-          "PortableDesign",
-          "SocialAcceptability"
-        ],
-        "image": "Papers/HARDWARE/Hardware预览图/2021-DualRing Enabling Subtle and Expressive Hand Interaction with Dual IMU Rings.png"
-      },
-      {
-        "id": 37,
-        "title": "MicroPress detecting pressure and hover distance in thumb-to-finger interactions",
-        "year": "2022",
-        "category": "hardware",
-        "hardwareDevices": [
-          "WearableSensor",
-          "Wearables"
-        ],
-        "sensingTechnology": [
-          "Accelerometer",
-          "DepthSensing",
-          "Gyroscope",
-          "IMU",
-          "Magnetometer",
-          "PressureSensor"
-        ],
-        "recognitionClassification": [
-          "ContinuousRecognition",
-          "FingerTracking",
-          "GestureRecognition",
-          "MotionAnalysis"
-        ],
-        "interactionModalities": [
-          "BodyContactGesture",
-          "ContactBased",
-          "DirectTouch",
-          "NonContactBased"
-        ],
-        "gestureTypes": [
-          "Hold",
-          "Pinch",
-          "SingleHand",
-          "Thumb-Index"
-        ],
-        "applicationScenarios": [
-          "AR",
-          "Gaming",
-          "MediaControl",
-          "Navigation",
-          "VR"
-        ],
-        "feedbackOutput": [
-          "ProprioceptiveFeedback",
-          "RealTimeFeedback",
-          "VisualFeedback"
-        ],
-        "userExperienceDesign": [
-          "DiscreetInput",
-          "EyesFree",
-          "HighAccuracy",
-          "OneHandUse",
-          "PortableDesign",
-          "SocialAcceptability"
-        ],
-        "image": "Papers/HARDWARE/Hardware预览图/2022 - MicroPress detecting pressure and hover distance in thumb-to-finger interactions.png"
-      },
-      {
-        "id": 39,
-        "title": "DRG-Keyboard Enabling Subtle Gesture Typing on the Fingertip with Dual IMU Rings",
-        "year": "2023",
-        "category": "hardware",
-        "hardwareDevices": [
-          "SmartRing",
-          "WearableSensor",
-          "Wearables"
-        ],
-        "sensingTechnology": [
-          "Accelerometer",
-          "Gyroscope",
-          "IMU",
-          "Magnetometer"
-        ],
-        "recognitionClassification": [
-          "DynamicGestureRecognition",
-          "GestureRecognition",
-          "TrajectoryAnalysis"
-        ],
-        "interactionModalities": [
-          "BodyContactGesture",
-          "ContactBased"
-        ],
-        "gestureTypes": [
-          "SingleHand",
-          "Swipe",
-          "Tap",
-          "Thumb-Index"
-        ],
-        "applicationScenarios": [
-          "AR",
-          "SmartHome",
-          "TextInput"
-        ],
-        "feedbackOutput": [
-          "HapticFeedback",
-          "VisualFeedback"
-        ],
-        "userExperienceDesign": [
-          "DiscreetInput",
-          "EyesFree",
-          "PortableDesign",
-          "QWERTYLayout",
-          "SmallScreen"
-        ],
-        "image": "Papers/HARDWARE/Hardware预览图/2023-DRG-Keyboard Enabling Subtle Gesture Typing on the Fingertip with Dual IMU Rings.png"
-      },
-      {
-        "id": 40,
-        "title": "EFRing Enabling Thumb-to-Index-Finger Microgesture Interaction through Electric Field Sensing Using Single Smart Ring",
-        "year": "2023",
-        "category": "hardware",
-        "hardwareDevices": [
-          "SmartRing",
-          "WearableSensor",
-          "Wearables"
-        ],
-        "sensingTechnology": [
-          "CapacitiveSensor",
-          "OtherTechnology"
-        ],
-        "recognitionClassification": [
-          "ContinuousRecognition",
-          "DynamicGestureRecognition",
-          "GestureRecognition",
-          "StaticGestureRecognition"
-        ],
-        "interactionModalities": [
-          "BodyContactGesture",
-          "ContactBased",
-          "NonContactBased"
-        ],
-        "gestureTypes": [
-          "DirectionalGesture",
-          "SingleHand",
-          "Swipe",
-          "Tap",
-          "Thumb-Index"
-        ],
-        "applicationScenarios": [
-          "DigitalArt",
-          "IoTControl",
-          "MediaControl",
-          "SmartHome",
-          "VR"
-        ],
-        "feedbackOutput": [
-          "RealTimeFeedback",
-          "VisualFeedback"
-        ],
-        "userExperienceDesign": [
-          "DiscreetInput",
-          "HighAccuracy",
-          "OneHandUse",
-          "PortableDesign",
-          "SocialAcceptability"
-        ],
-        "image": "Papers/HARDWARE/Hardware预览图/2023-EFRing Enabling Thumb-to-Index-Finger Microgesture Interaction through Electric Field Sensing Using Single Smart Ring.png"
-      },
-      {
-        "id": 41,
-        "title": "SparseIMU Computational Design of Sparse IMU Layouts for Sensing Fine-grained Finger Microgestures",
-        "year": "2023",
-        "category": "hardware",
-        "hardwareDevices": [
-          "DataGloves",
-          "SmartRing",
-          "WearableSensor"
-        ],
-        "sensingTechnology": [
-          "Accelerometer",
-          "Gyroscope",
-          "IMU",
-          "Magnetometer",
-          "MotionSensor"
-        ],
-        "recognitionClassification": [
-          "ContinuousRecognition",
-          "DynamicGestureRecognition",
-          "FingerTracking",
-          "GestureRecognition",
-          "StaticGestureRecognition"
-        ],
-        "interactionModalities": [
-          "ContactBased",
-          "NonContactBased",
-          "TangibleInteraction"
-        ],
-        "gestureTypes": [
-          "DirectionalGesture",
-          "Flex",
-          "Grasp",
-          "SingleHand",
-          "Tap"
-        ],
-        "applicationScenarios": [
-          "Gaming",
-          "InVehicleInteraction",
-          "IoTControl",
-          "SmartHome",
-          "VR"
-        ],
-        "feedbackOutput": [
-          "RealTimeFeedback",
-          "VisualFeedback"
-        ],
-        "userExperienceDesign": [
-          "DiscreetInput",
-          "EncumberedInteraction",
-          "HandsFree",
-          "HighAccuracy",
-          "LowLatency",
-          "OneHandUse",
-          "PortableDesign"
-        ],
-        "image": "Papers/HARDWARE/Hardware预览图/2023-SparseIMU Computational Design of Sparse IMU Layouts for Sensing Fine-grained Finger Microgestures.png"
-      },
-      {
-        "id": 42,
-        "title": "VibAware Context-Aware Tap and Swipe Gestures Using Bio-Acoustic Sensing",
-        "year": "2023",
-        "category": "hardware",
-        "hardwareDevices": [
-          "SmartRing",
-          "SmartWatch",
-          "WearableSensor"
-        ],
-        "sensingTechnology": [
-          "Accelerometer",
-          "Bio-Sensor",
-          "OtherTechnology"
-        ],
-        "recognitionClassification": [
-          "ContinuousRecognition",
-          "DynamicGestureRecognition",
-          "GestureRecognition"
-        ],
-        "interactionModalities": [
-          "ContactBased",
-          "MultiModalInteraction",
-          "NonContactBased",
-          "TangibleInteraction"
-        ],
-        "gestureTypes": [
-          "Grasp",
-          "SingleHand",
-          "Swipe",
-          "Tap",
-          "Thumb-Index"
-        ],
-        "applicationScenarios": [
-          "AR",
-          "IoTControl",
-          "MediaControl",
-          "SmartHome",
-          "VR"
-        ],
-        "feedbackOutput": [
-          "RealTimeFeedback",
-          "VisualFeedback"
-        ],
-        "userExperienceDesign": [
-          "DiscreetInput",
-          "EncumberedInteraction",
-          "EyesFree",
-          "HighAccuracy",
-          "LowLatency",
-          "OneHandUse",
-          "PortableDesign",
-          "SocialAcceptability"
-        ],
-        "image": "Papers/HARDWARE/Hardware预览图/2023-VibAware Context-Aware Tap and Swipe Gestures Using Bio-Acoustic Sensing.png"
-      },
-      {
-        "id": 43,
-        "title": "MAF exploring mobile acoustic field for hand-to-face gesture interactions",
-        "year": "2024",
-        "category": "hardware",
-        "hardwareDevices": [
-          "OtherDevices",
-          "WearableSensor"
-        ],
-        "sensingTechnology": [
-          "OtherTechnology",
-          "UltrasonicSensor"
-        ],
-        "recognitionClassification": [
-          "DynamicGestureRecognition",
-          "GestureRecognition",
-          "StaticGestureRecognition"
-        ],
-        "interactionModalities": [
-          "BodyContactGesture",
-          "ContactBased",
-          "HandToFaceGesture",
-          "NonContactBased"
-        ],
-        "gestureTypes": [
-          "DirectionalGesture",
-          "Hold",
-          "SingleHand",
-          "Swipe",
-          "Tap"
-        ],
-        "applicationScenarios": [
-          "AR",
-          "Gaming",
-          "Healthcare",
-          "MediaControl",
-          "SmartHome",
-          "VR"
-        ],
-        "feedbackOutput": [
-          "RealTimeFeedback"
-        ],
-        "userExperienceDesign": [
-          "DiscreetInput",
-          "EyesFree",
-          "HandsFree",
-          "HighAccuracy",
-          "PortableDesign",
-          "SocialAcceptability"
-        ],
-        "image": "Papers/HARDWARE/Hardware预览图/2024 - MAF exploring mobile acoustic field for hand-to-face gesture interactions.png"
-      },
-      {
-        "id": 44,
-        "title": "RadarHand a wrist-worn radar for on-skin touch-based proprioceptive gestures",
-        "year": "2024",
-        "category": "hardware",
-        "hardwareDevices": [
-          "SmartWatch",
-          "WearableSensor",
-          "Wearables"
-        ],
-        "sensingTechnology": [
-          "RFSensing",
-          "RadarSensing"
-        ],
-        "recognitionClassification": [
-          "ContinuousRecognition",
-          "DynamicGestureRecognition",
-          "GestureRecognition",
-          "StaticGestureRecognition"
-        ],
-        "interactionModalities": [
-          "BackofDevices",
-          "BodyContactGesture",
-          "ContactBased"
-        ],
-        "gestureTypes": [
-          "DirectionalGesture",
-          "SingleHand",
-          "Swipe",
-          "Tap"
-        ],
-        "applicationScenarios": [
-          "AccessibilitySupport",
-          "Gaming",
-          "InVehicleInteraction",
-          "MediaControl",
-          "Navigation",
-          "SmartHome"
-        ],
-        "feedbackOutput": [
-          "ProprioceptiveFeedback",
-          "RealTimeFeedback"
-        ],
-        "userExperienceDesign": [
-          "EyesFree",
-          "HighAccuracy",
-          "OneHandUse",
-          "PortableDesign",
-          "SmallScreen",
-          "SocialAcceptability"
-        ],
-        "image": "Papers/HARDWARE/Hardware预览图/2024 - RadarHand a wrist-worn radar for on-skin touch-based proprioceptive gestures.png"
-      },
-      {
-        "id": 45,
-        "title": "Ring-a-pose a ring for continuous hand pose tracking",
-        "year": "2024",
-        "category": "hardware",
-        "hardwareDevices": [
-          "SmartRing",
-          "WearableSensor",
-          "Wearables"
-        ],
-        "sensingTechnology": [
-          "OtherTechnology",
-          "UltrasonicSensor"
-        ],
-        "recognitionClassification": [
-          "3DPoseEstimation",
-          "ContinuousRecognition",
-          "DynamicGestureRecognition",
-          "FingerTracking",
-          "GestureRecognition",
-          "HandTracking"
-        ],
-        "interactionModalities": [
-          "NonContactBased"
-        ],
-        "gestureTypes": [
-          "DirectionalGesture",
-          "Pinch",
-          "SingleHand",
-          "Swipe",
-          "Tap"
-        ],
-        "applicationScenarios": [
-          "AR",
-          "AccessibilitySupport",
-          "Gaming",
-          "MediaControl",
-          "SmartHome"
-        ],
-        "feedbackOutput": [
-          "RealTimeFeedback",
-          "VisualFeedback"
-        ],
-        "userExperienceDesign": [
-          "DiscreetInput",
-          "HandsFree",
-          "HighAccuracy",
-          "LowLatency",
-          "OneHandUse",
-          "PortableDesign",
-          "SocialAcceptability"
-        ],
-        "image": "Papers/HARDWARE/Hardware预览图/2024 - Ring-a-pose a ring for continuous hand pose tracking.png"
-      },
-      {
-        "id": 47,
-        "title": "HCMG Human-Capacitance based Micro Gesture for VR AR",
-        "year": "2024",
-        "category": "hardware",
-        "hardwareDevices": [
-          "ARGlasses",
-          "VRHeadset",
-          "WearableSensor",
-          "Wearables"
-        ],
-        "sensingTechnology": [
-          "Bio-Sensor",
-          "CapacitiveSensor"
-        ],
-        "recognitionClassification": [
-          "DynamicGestureRecognition",
-          "FingerTracking",
-          "GestureRecognition",
-          "HandTracking",
-          "StaticGestureRecognition"
-        ],
-        "interactionModalities": [
-          "ContactBased",
-          "DeviceContactGesture"
-        ],
-        "gestureTypes": [
-          "Grasp",
-          "Pinch",
-          "SingleHand",
-          "Tap"
-        ],
-        "applicationScenarios": [
-          "AR",
-          "AccessibilitySupport",
-          "Education",
-          "Gaming",
-          "Training",
-          "VR"
-        ],
-        "feedbackOutput": [
-          "RealTimeFeedback"
-        ],
-        "userExperienceDesign": [
-          "DiscreetInput",
-          "HighAccuracy",
-          "OneHandUse",
-          "PortableDesign"
-        ],
-        "image": "Papers/HARDWARE/Hardware预览图/2024-HCMG Human-Capacitance based Micro Gesture for VR AR.png"
-      },
-      {
-        "id": 48,
-        "title": "BudsID mobile-ready and expressive finger identification input for earbuds",
-        "year": "2025",
-        "category": "hardware",
-        "hardwareDevices": [
-          "SmartRing",
-          "WearableSensor",
-          "Wearables"
-        ],
-        "sensingTechnology": [
-          "CapacitiveSensor",
-          "IMU",
-          "Magnetometer"
-        ],
-        "recognitionClassification": [
-          "DynamicGestureRecognition",
-          "FingerTracking",
-          "GestureRecognition",
-          "StaticGestureRecognition"
-        ],
-        "interactionModalities": [
-          "ContactBased",
-          "DeviceContactGesture",
-          "DirectTouch",
-          "EarBasedInteraction"
-        ],
-        "gestureTypes": [
-          "MultiTouch",
-          "SingleHand",
-          "Tap"
-        ],
-        "applicationScenarios": [
-          "InVehicleInteraction",
-          "MediaControl",
-          "SmartHome"
-        ],
-        "feedbackOutput": [
-          "AudioFeedback",
-          "RealTimeFeedback"
-        ],
-        "userExperienceDesign": [
-          "DiscreetInput",
-          "EyesFree",
-          "HighAccuracy",
-          "PortableDesign",
-          "SocialAcceptability"
-        ],
-        "image": "Papers/HARDWARE/Hardware预览图/2025 - BudsID mobile-ready and expressive finger identification input for earbuds.png"
-      },
-      {
-        "id": 51,
-        "title": "DCSNN An Efficient and High-speed sEMG-based Transient-state Micro-gesture Recognition Method on Wearable Devices",
-        "year": "2025",
-        "category": "hardware",
-        "hardwareDevices": [
-          "OtherDevices",
-          "SmartWatch",
-          "WearableSensor",
-          "Wearables"
-        ],
-        "sensingTechnology": [
-          "Bio-Sensor",
-          "EMG",
-          "IMU"
-        ],
-        "recognitionClassification": [
-          "ContinuousRecognition",
-          "DynamicGestureRecognition",
-          "GestureRecognition",
-          "StaticGestureRecognition"
-        ],
-        "interactionModalities": [
-          "BodyContactGesture",
-          "InAirGesture",
-          "MultiModalInteraction",
-          "NonContactBased"
-        ],
-        "gestureTypes": [
-          "DirectionalGesture",
-          "Pinch",
-          "Swipe",
-          "Tap",
-          "Thumb-Index"
-        ],
-        "applicationScenarios": [
-          "AR",
-          "Gaming",
-          "IoTControl",
-          "MediaControl",
-          "Navigation",
-          "VR"
-        ],
-        "feedbackOutput": [
-          "RealTimeFeedback",
-          "VisualFeedback"
-        ],
-        "userExperienceDesign": [
-          "HandsFree",
-          "HighAccuracy",
-          "LowLatency",
-          "PortableDesign",
-          "UserAdaptation"
-        ],
-        "image": "Papers/HARDWARE/Hardware预览图/2025-DCSNN An Efficient and High-speed sEMG-based Transient-state Micro-gesture Recognition Method on Wearable Devices.png"
-      },
-      {
-        "id": 52,
-        "title": "VibRing A Wearable Vibroacoustic Sensor for Single-Handed Gesture Recognition",
-        "year": "2025",
-        "category": "hardware",
-        "hardwareDevices": [
-          "OtherDevices",
-          "SmartRing",
-          "WearableSensor",
-          "Wearables"
-        ],
-        "sensingTechnology": [
-          "OtherTechnology"
-        ],
-        "recognitionClassification": [
-          "ContinuousRecognition",
-          "DynamicGestureRecognition",
-          "GestureRecognition",
-          "StaticGestureRecognition"
-        ],
-        "interactionModalities": [
-          "BodyContactGesture",
-          "NonContactBased"
-        ],
-        "gestureTypes": [
-          "SingleHand",
-          "Tap",
-          "Thumb-Index"
-        ],
-        "applicationScenarios": [
-          "AR",
-          "Gaming",
-          "IoTControl",
-          "MediaControl",
-          "TextInput"
-        ],
-        "feedbackOutput": [
-          "RealTimeFeedback",
-          "VisualFeedback"
-        ],
-        "userExperienceDesign": [
-          "DiscreetInput",
-          "HighAccuracy",
-          "LowLatency",
-          "PortableDesign",
-          "SocialAcceptability",
-          "UserAdaptation"
-        ],
-        "image": "Papers/HARDWARE/Hardware预览图/2025-VibRing A Wearable Vibroacoustic Sensor for Single-Handed Gesture Recognition.png"
-      },
-      {
-        "id": 58,
-        "title": "AtaTouch robust finger pinch detection for a VR controller using RF return loss",
-        "year": "2021",
-        "category": "hardware",
-        "hardwareDevices": [
-          "VRHeadset",
-          "WearableSensor",
-          "Wearables"
-        ],
-        "sensingTechnology": [
-          "CapacitiveSensor",
-          "RFSensing"
-        ],
-        "recognitionClassification": [
-          "FingerTracking",
-          "GestureRecognition",
-          "StaticGestureRecognition"
-        ],
-        "interactionModalities": [
-          "ContactBased",
-          "DeviceContactGesture"
-        ],
-        "gestureTypes": [
-          "Grasp",
-          "Pinch",
-          "SingleHand",
-          "Thumb-Index"
-        ],
-        "applicationScenarios": [
-          "Gaming",
-          "ObjectManipulation",
-          "VR"
-        ],
-        "feedbackOutput": [
-          "RealTimeFeedback",
-          "VisualFeedback"
-        ],
-        "userExperienceDesign": [
-          "HighAccuracy",
-          "LowLatency",
-          "OcclusionAvoidance",
-          "OneHandUse"
-        ],
-        "image": "Papers/HARDWARE/Hardware预览图/2021 - AtaTouch robust finger pinch detection for a VR controller using RF return loss.png"
-      },
-      {
-        "id": 64,
-        "title": "Stick-To-XR Understanding Stick-Based User Interface Design for Extended Reality",
-        "year": "2024",
-        "category": "hardware",
-        "hardwareDevices": [
-          "HapticDevice",
-          "OtherDevices",
-          "VRHeadset"
-        ],
-        "sensingTechnology": [
-          "MotionSensor",
-          "OpticalTracking",
-          "PressureSensor"
-        ],
-        "recognitionClassification": [
-          "GestureRecognition",
-          "HandTracking",
-          "StaticGestureRecognition"
-        ],
-        "interactionModalities": [
-          "ContactBased",
-          "MultiModalInteraction",
-          "TangibleInteraction"
-        ],
-        "gestureTypes": [
-          "DualHand",
-          "Grasp",
-          "Hold",
-          "SingleHand"
-        ],
-        "applicationScenarios": [
-          "AR",
-          "Education",
-          "Gaming",
-          "VR"
-        ],
-        "feedbackOutput": [
-          "HapticFeedback",
-          "MultimodalFeedback",
-          "VisualFeedback"
-        ],
-        "userExperienceDesign": [
-          "OneHandUse",
-          "PortableDesign",
-          "UserAdaptation"
-        ],
-        "image": "Papers/HARDWARE/Hardware预览图/2024-Stick-To-XR Understanding Stick-Based User Interface Design for Extended Reality.png"
-      },
-      {
-        "id": 79,
-        "title": "Interacting with soli exploring fine-grained dynamic gesture recognition in the radio-frequency spectrum",
-        "year": "2016",
-        "category": "hardware",
-        "hardwareDevices": [
-          "OtherDevices",
-          "WearableSensor",
-          "Wearables"
-        ],
-        "sensingTechnology": [
-          "RFSensing",
-          "RadarSensing"
-        ],
-        "recognitionClassification": [
-          "ContinuousRecognition",
-          "DynamicGestureRecognition",
-          "GestureRecognition",
-          "MotionAnalysis"
-        ],
-        "interactionModalities": [
-          "InAirGesture",
-          "NonContactBased"
-        ],
-        "gestureTypes": [
-          "DirectionalGesture",
-          "Pinch",
-          "SingleHand",
-          "Swipe",
-          "Tap"
-        ],
-        "applicationScenarios": [
-          "MediaControl",
-          "ObjectManipulation",
-          "SmartHome"
-        ],
-        "feedbackOutput": [
-          "VisualFeedback"
-        ],
-        "userExperienceDesign": [
-          "DiscreetInput",
-          "EyesFree",
-          "HandsFree",
-          "HighAccuracy",
-          "LowLatency",
-          "OcclusionAvoidance",
-          "PortableDesign"
-        ],
-        "image": "Papers/HARDWARE/Hardware预览图/2016 - Interacting with soli exploring fine-grained dynamic gesture recognition in the radio-frequency spectrum.png"
-      },
-      {
-        "id": 85,
-        "title": "InfiniTouch finger-aware interaction on fully touch sensitive smartphones",
-        "year": "2018",
-        "category": "hardware",
-        "hardwareDevices": [
-          "SmartPhone",
-          "TouchScreen",
-          "WearableSensor"
-        ],
-        "sensingTechnology": [
-          "CapacitiveSensor",
-          "MotionSensor",
-          "OpticalTracking"
-        ],
-        "recognitionClassification": [
-          "3DPoseEstimation",
-          "DynamicGestureRecognition",
-          "FingerTracking",
-          "GestureRecognition",
-          "StaticGestureRecognition"
-        ],
-        "interactionModalities": [
-          "BackofDevices",
-          "ContactBased",
-          "DirectTouch",
-          "MultiModalInteraction"
-        ],
-        "gestureTypes": [
-          "Flex",
-          "Pinch",
-          "SingleHand",
-          "Swipe",
-          "Thumb-Index"
-        ],
-        "applicationScenarios": [
-          "AccessibilitySupport",
-          "MediaControl",
-          "ObjectManipulation",
-          "TextInput"
-        ],
-        "feedbackOutput": [
-          "RealTimeFeedback",
-          "VisualFeedback"
-        ],
-        "userExperienceDesign": [
-          "ElicitationStudy",
-          "FatFingerProblem",
-          "HighAccuracy",
-          "LowLatency",
-          "OneHandUse"
-        ],
-        "image": "Papers/HARDWARE/Hardware预览图/2018 - InfiniTouch finger-aware interaction on fully touch sensitive smartphones.png"
-      },
-      {
-        "id": 102,
-        "title": "ARO Exploring the Design of Smart-Ring Interactions for Encumbered Hands",
-        "year": "2021",
-        "category": "hardware",
-        "hardwareDevices": [
-          "SmartRing",
-          "WearableSensor",
-          "Wearables"
-        ],
-        "sensingTechnology": [
-          "Accelerometer",
-          "CapacitiveSensor",
-          "Gyroscope",
-          "IMU"
-        ],
-        "recognitionClassification": [
-          "DynamicGestureRecognition",
-          "FingerTracking",
-          "GestureRecognition"
-        ],
-        "interactionModalities": [
-          "ContactBased",
-          "DeviceContactGesture",
-          "InAirGesture"
-        ],
-        "gestureTypes": [
-          "DirectionalGesture",
-          "Grasp",
-          "SingleHand",
-          "Swipe",
-          "Tap",
-          "Thumb-Index"
-        ],
-        "applicationScenarios": [
-          "MediaControl",
-          "Navigation",
-          "ObjectManipulation"
-        ],
-        "feedbackOutput": [
-          "RealTimeFeedback",
-          "VisualFeedback"
-        ],
-        "userExperienceDesign": [
-          "DiscreetInput",
-          "ElicitationStudy",
-          "EncumberedInteraction",
-          "HandsFree",
-          "PortableDesign",
-          "SocialAcceptability"
-        ],
-        "image": "Papers/HARDWARE/Hardware预览图/2021-ARO Exploring the Design of Smart-Ring Interactions for Encumbered Hands.png"
-      },
-      {
-        "id": 110,
-        "title": "BikeGesture user elicitation and performance of micro hand gesture as input for cycling",
-        "year": "2017",
-        "category": "hardware",
-        "hardwareDevices": [
-          "DataGloves",
-          "WearableSensor",
-          "Wearables"
-        ],
-        "sensingTechnology": [
-          "Accelerometer",
-          "Bio-Sensor",
-          "IMU",
-          "PressureSensor"
-        ],
-        "recognitionClassification": [
-          "FingerTracking",
-          "GestureRecognition",
-          "StaticGestureRecognition"
-        ],
-        "interactionModalities": [
-          "ContactBased",
-          "MultiModalInteraction"
-        ],
-        "gestureTypes": [
-          "Flex",
-          "Grasp",
-          "Pinch",
-          "SingleHand",
-          "Tap"
-        ],
-        "applicationScenarios": [
-          "AthleticActivity",
-          "OtherScenarios"
-        ],
-        "feedbackOutput": [
-          "RealTimeFeedback"
-        ],
-        "userExperienceDesign": [
-          "EyesFree",
-          "HandsFree",
-          "HighAccuracy",
-          "LowLatency",
-          "SocialAcceptability"
-        ],
-        "image": "Papers/HARDWARE/Hardware预览图/2017 - BikeGesture user elicitation and performance of micro hand gesture as input for cycling.png"
-      },
-      {
-        "id": 115,
-        "title": "AnyButton unpowered, modeless and highly available mobile input using unmodified clothing buttons",
-        "year": "2014",
-        "category": "hardware",
-        "hardwareDevices": [
-          "WearableSensor",
-          "Wearables"
-        ],
-        "sensingTechnology": [
-          "Accelerometer",
-          "Gyroscope",
-          "IMU",
-          "MotionSensor"
-        ],
-        "recognitionClassification": [
-          "3DPoseEstimation",
-          "GestureRecognition",
-          "HandTracking",
-          "MotionAnalysis"
-        ],
-        "interactionModalities": [
-          "ContactBased",
-          "DeviceContactGesture",
-          "TangibleInteraction"
-        ],
-        "gestureTypes": [
-          "DirectionalGesture",
-          "Pinch",
-          "SingleHand",
-          "Tap",
-          "Thumb-Index"
-        ],
-        "applicationScenarios": [
-          "MediaControl",
-          "OtherScenarios"
-        ],
-        "feedbackOutput": [
-          "HapticFeedback"
-        ],
-        "userExperienceDesign": [
-          "DiscreetInput",
-          "HandsFree",
-          "PortableDesign",
-          "SocialAcceptability"
-        ],
-        "image": "Papers/HARDWARE/Hardware预览图/2014 - AnyButton unpowered, modeless and highly available mobile input using unmodified clothing buttons.png"
-      },
-      {
-        "id": 129,
-        "title": "Keep the phone in your pocket enabling smartphone operation with an IMU ring for visually impaired people",
-        "year": "2020",
-        "category": "hardware",
-        "hardwareDevices": [
-          "SmartRing",
-          "SmartPhone",
-          "WearableSensor"
-        ],
-        "sensingTechnology": [
-          "Accelerometer",
-          "Gyroscope",
-          "IMU"
-        ],
-        "recognitionClassification": [
-          "FingerTracking",
-          "GestureRecognition",
-          "MotionAnalysis"
-        ],
-        "interactionModalities": [
-          "ContactBased",
-          "TangibleInteraction"
-        ],
-        "gestureTypes": [
-          "SingleHand",
-          "Swipe",
-          "Tap"
-        ],
-        "applicationScenarios": [
-          "AccessibilitySupport"
-        ],
-        "feedbackOutput": [
-          "AudioFeedback"
-        ],
-        "userExperienceDesign": [
-          "DiscreetInput",
-          "HighAccuracy",
-          "PortableDesign",
-          "SocialAcceptability"
-        ],
-        "image": "Papers/HARDWARE/Hardware预览图/2020 - Keep the phone in your pocket enabling smartphone operation with an IMU ring for visually impaired people.png"
-      },
-      {
-        "id": 140,
-        "title": "WristFlex- low-power gesture input with wrist-worn pressure sensors",
-        "year": "2014",
-        "category": "hardware",
-        "hardwareDevices": [
-          "SmartWatch",
-          "WearableSensor",
-          "Wearables"
-        ],
-        "sensingTechnology": [
-          "Accelerometer",
-          "PressureSensor"
-        ],
-        "recognitionClassification": [
-          "GestureRecognition",
-          "StaticGestureRecognition"
-        ],
-        "interactionModalities": [
-          "BodyContactGesture",
-          "ContactBased"
-        ],
-        "gestureTypes": [
-          "Pinch",
-          "SingleHand",
-          "Thumb-Index"
-        ],
-        "applicationScenarios": [
-          "AthleticActivity",
-          "IoTControl",
-          "SmartHome"
-        ],
-        "feedbackOutput": [
-          "RealTimeFeedback",
-          "VisualFeedback"
-        ],
-        "userExperienceDesign": [
-          "DiscreetInput",
-          "HighAccuracy",
-          "OneHandUse",
-          "PortableDesign",
-          "SocialAcceptability"
-        ],
-        "image": "Papers/HARDWARE/Hardware预览图/2014 - WristFlex- low-power gesture input with wrist-worn pressure sensors.png"
-      },
-      {
-        "id": 141,
-        "title": "CyclopsRing- Enabling Whole-Hand and  Context-Aware Interactions Through a Fisheye Ring",
-        "year": "2015",
-        "category": "hardware",
-        "hardwareDevices": [
-          "OtherDevices",
-          "SmartRing",
-          "WearableSensor",
-          "Wearables"
-        ],
-        "sensingTechnology": [
-          "ComputerVision",
-          "OpticalTracking"
-        ],
-        "recognitionClassification": [
-          "DynamicGestureRecognition",
-          "GestureRecognition",
-          "HandTracking",
-          "StaticGestureRecognition"
-        ],
-        "interactionModalities": [
-          "BodyContactGesture",
-          "ContactBased",
-          "InAirGesture",
-          "NonContactBased"
-        ],
-        "gestureTypes": [
-          "DirectionalGesture",
-          "Pinch",
-          "SingleHand",
-          "Swipe"
-        ],
-        "applicationScenarios": [
-          "AR",
-          "Gaming",
-          "IoTControl",
-          "SmartHome",
-          "VR"
-        ],
-        "feedbackOutput": [
-          "HapticFeedback",
-          "VisualFeedback"
-        ],
-        "userExperienceDesign": [
-          "DiscreetInput",
-          "HandsFree",
-          "OneHandUse",
-          "PortableDesign",
-          "QWERTYLayout"
-        ],
-        "image": "Papers/HARDWARE/Hardware预览图/2015 - CyclopsRing- Enabling Whole-Hand and  Context-Aware Interactions Through a Fisheye Ring.png"
-      },
-      {
-        "id": 144,
-        "title": "ThumbRing- private interactions using one-handed thumb motion input on  finger segments",
-        "year": "2016",
-        "category": "hardware",
-        "hardwareDevices": [
-          "ARGlasses",
-          "SmartGlasses",
-          "SmartRing",
-          "Wearables"
-        ],
-        "sensingTechnology": [
-          "Accelerometer",
-          "Gyroscope",
-          "IMU",
-          "Magnetometer",
-          "MotionSensor"
-        ],
-        "recognitionClassification": [
-          "3DPoseEstimation",
-          "GestureRecognition",
-          "MotionAnalysis",
-          "StaticGestureRecognition"
-        ],
-        "interactionModalities": [
-          "BodyContactGesture",
-          "ContactBased",
-          "DirectTouch"
-        ],
-        "gestureTypes": [
-          "SingleHand",
-          "Swipe",
-          "Tap",
-          "Thumb-Index"
-        ],
-        "applicationScenarios": [
-          "AR",
-          "MediaControl",
-          "Navigation"
-        ],
-        "feedbackOutput": [
-          "HapticFeedback",
-          "VisualFeedback"
-        ],
-        "userExperienceDesign": [
-          "DiscreetInput",
-          "HighAccuracy",
-          "OneHandUse",
-          "PortableDesign",
-          "SocialAcceptability"
-        ],
-        "image": "Papers/HARDWARE/Hardware预览图/2016 - ThumbRing- private interactions using one-handed thumb motion input on  finger segments.png"
-      },
-      {
-        "id": 146,
-        "title": "Soli- Ubiquitous Gesture Sensing with Millimeter Wave Radar",
-        "year": "2016",
-        "category": "hardware",
-        "hardwareDevices": [
-          "OtherDevices",
-          "SmartWatch",
-          "VRHeadset",
-          "Wearables"
-        ],
-        "sensingTechnology": [
-          "MotionSensor",
-          "RFSensing",
-          "RadarSensing"
-        ],
-        "recognitionClassification": [
-          "3DPoseEstimation",
-          "ContinuousRecognition",
-          "DynamicGestureRecognition",
-          "FingerTracking",
-          "GestureRecognition"
-        ],
-        "interactionModalities": [
-          "InAirGesture",
-          "NonContactBased",
-          "TangibleInteraction"
-        ],
-        "gestureTypes": [
-          "Pinch",
-          "SingleHand",
-          "Swipe",
-          "Tap",
-          "Thumb-Index"
-        ],
-        "applicationScenarios": [
-          "Gaming",
-          "IoTControl",
-          "MediaControl",
-          "Navigation",
-          "SmartHome",
-          "VR"
-        ],
-        "feedbackOutput": [
-          "HapticFeedback",
-          "RealTimeFeedback",
-          "VisualFeedback"
-        ],
-        "userExperienceDesign": [
-          "HandsFree",
-          "HighAccuracy",
-          "LowLatency",
-          "OcclusionAvoidance",
-          "PortableDesign",
-          "SocialAcceptability"
-        ],
-        "image": "Papers/HARDWARE/Hardware预览图/2016-Soli- Ubiquitous Gesture Sensing with Millimeter Wave Radar..png"
-      },
-      {
-        "id": 147,
-        "title": "TouchRing- Subtle and  Always-Available Input Using a Multi-Touch Ring",
-        "year": "2016",
-        "category": "hardware",
-        "hardwareDevices": [
-          "SmartGlasses",
-          "SmartRing",
-          "TouchScreen",
-          "Wearables"
-        ],
-        "sensingTechnology": [
-          "CapacitiveSensor",
-          "OtherTechnology"
-        ],
-        "recognitionClassification": [
-          "DynamicGestureRecognition",
-          "GestureRecognition"
-        ],
-        "interactionModalities": [
-          "ContactBased",
-          "DirectTouch",
-          "MultiModalInteraction"
-        ],
-        "gestureTypes": [
-          "MultiTouch",
-          "SingleHand",
-          "Swipe",
-          "Tap",
-          "Thumb-Index"
-        ],
-        "applicationScenarios": [
-          "MediaControl",
-          "Navigation"
-        ],
-        "feedbackOutput": [
-          "HapticFeedback",
-          "VisualFeedback"
-        ],
-        "userExperienceDesign": [
-          "DiscreetInput",
-          "OneHandUse",
-          "PortableDesign",
-          "SocialAcceptability",
-          "TouchOptimized"
-        ],
-        "image": "Papers/HARDWARE/Hardware预览图/2016-TouchRing- Subtle and  Always-Available Input Using a Multi-Touch Ring.png"
-      },
-      {
-        "id": 148,
-        "title": "DigiTouch- Reconfigurable Thumb-to-Finger Input and Text Entry on Head-mounted Displays",
-        "year": "2017",
-        "category": "hardware",
-        "hardwareDevices": [
-          "ARGlasses",
-          "DataGloves",
-          "VRHeadset",
-          "WearableSensor",
-          "Wearables"
-        ],
-        "sensingTechnology": [
-          "CapacitiveSensor",
-          "PressureSensor"
-        ],
-        "recognitionClassification": [
-          "FingerTracking",
-          "GestureRecognition"
-        ],
-        "interactionModalities": [
-          "ContactBased",
-          "DeviceContactGesture"
-        ],
-        "gestureTypes": [
-          "Hold",
-          "SingleHand",
-          "Swipe",
-          "Tap",
-          "Thumb-Index"
-        ],
-        "applicationScenarios": [
-          "AR",
-          "TextInput",
-          "VR"
-        ],
-        "feedbackOutput": [
-          "HapticFeedback",
-          "ProprioceptiveFeedback",
-          "RealTimeFeedback"
-        ],
-        "userExperienceDesign": [
-          "DiscreetInput",
-          "EyesFree",
-          "HighAccuracy",
-          "OcclusionAvoidance",
-          "PortableDesign",
-          "QWERTYLayout",
-          "SocialAcceptability",
-          "UserAdaptation"
-        ],
-        "image": "Papers/HARDWARE/Hardware预览图/2017 - DigiTouch- Reconfigurable Thumb-to-Finger Input and Text Entry on Head-mounted Displays.png"
-      },
-      {
-        "id": 149,
-        "title": "FingerSound- Recognizing unistroke thumb gestures using a ring",
-        "year": "2017",
-        "category": "hardware",
-        "hardwareDevices": [
-          "SmartRing",
-          "SmartWatch",
-          "WearableSensor",
-          "Wearables"
-        ],
-        "sensingTechnology": [
-          "Gyroscope",
-          "MotionSensor",
-          "OtherTechnology"
-        ],
-        "recognitionClassification": [
-          "DynamicGestureRecognition",
-          "GestureRecognition",
-          "MotionAnalysis"
-        ],
-        "interactionModalities": [
-          "ContactBased",
-          "DeviceContactGesture",
-          "MultiModalInteraction"
-        ],
-        "gestureTypes": [
-          "DirectionalGesture",
-          "SingleHand",
-          "Swipe",
-          "Thumb-Index"
-        ],
-        "applicationScenarios": [
-          "AR",
-          "MediaControl",
-          "SmartHome",
-          "TextInput",
-          "VR"
-        ],
-        "feedbackOutput": [
-          "AudioFeedback",
-          "HapticFeedback",
-          "RealTimeFeedback"
-        ],
-        "userExperienceDesign": [
-          "DiscreetInput",
-          "EyesFree",
-          "HighAccuracy",
-          "MidasTouchProblem",
-          "PortableDesign",
-          "SocialAcceptability"
-        ],
-        "image": "Papers/HARDWARE/Hardware预览图/2017 - FingerSound- Recognizing unistroke thumb gestures using a ring..png"
-      },
-      {
-        "id": 153,
-        "title": "ThumbText- Text Entry for Wearable Devices Using a Miniature Ring",
-        "year": "2018",
-        "category": "hardware",
-        "hardwareDevices": [
-          "SmartGlasses",
-          "SmartRing",
-          "SmartWatch",
-          "TouchScreen",
-          "Wearables"
-        ],
-        "sensingTechnology": [
-          "CapacitiveSensor",
-          "OtherTechnology"
-        ],
-        "recognitionClassification": [
-          "DynamicGestureRecognition",
-          "GestureRecognition",
-          "StaticGestureRecognition"
-        ],
-        "interactionModalities": [
-          "ContactBased",
-          "DirectTouch",
-          "TangibleInteraction"
-        ],
-        "gestureTypes": [
-          "Hold",
-          "SingleHand",
-          "Swipe",
-          "Tap",
-          "Thumb-Index"
-        ],
-        "applicationScenarios": [
-          "TextInput"
-        ],
-        "feedbackOutput": [
-          "AudioFeedback",
-          "RealTimeFeedback",
-          "VisualFeedback"
-        ],
-        "userExperienceDesign": [
-          "OcclusionAvoidance",
-          "OneHandUse",
-          "PortableDesign",
-          "SmallScreen",
-          "UserAdaptation"
-        ],
-        "image": "Papers/HARDWARE/Hardware预览图/2018 - ThumbText- Text Entry for Wearable Devices Using a Miniature Ring.png"
-      },
-      {
-        "id": 154,
-        "title": "Tip-tap- battery-free discrete 2D fingertip input",
-        "year": "2019",
-        "category": "hardware",
-        "hardwareDevices": [
-          "DataGloves",
-          "WearableSensor",
-          "Wearables"
-        ],
-        "sensingTechnology": [
-          "CapacitiveSensor",
-          "RFSensing"
-        ],
-        "recognitionClassification": [
-          "FingerTracking",
-          "StaticGestureRecognition"
-        ],
-        "interactionModalities": [
-          "BodyContactGesture",
-          "ContactBased"
-        ],
-        "gestureTypes": [
-          "SingleHand",
-          "Tap",
-          "Thumb-Index"
-        ],
-        "applicationScenarios": [
-          "Healthcare",
-          "IndustryApplication",
-          "MediaControl"
-        ],
-        "feedbackOutput": [
-          "HapticFeedback"
-        ],
-        "userExperienceDesign": [
-          "DiscreetInput",
-          "EyesFree",
-          "HandsFree",
-          "OneHandUse",
-          "PortableDesign",
-          "SocialAcceptability"
-        ],
-        "image": "Papers/HARDWARE/Hardware预览图/2019- Tip-tap- battery-free discrete 2D fingertip input..png"
-      },
-      {
-        "id": 156,
-        "title": "QwertyRing- Text Entry on Physical Surfaces  Using a Ring",
-        "year": "2020",
-        "category": "hardware",
-        "hardwareDevices": [
-          "ARGlasses",
-          "SmartRing",
-          "VRHeadset",
-          "WearableSensor",
-          "Wearables"
-        ],
-        "sensingTechnology": [
-          "Accelerometer",
-          "Gyroscope",
-          "IMU",
-          "MotionSensor"
-        ],
-        "recognitionClassification": [
-          "DynamicGestureRecognition",
-          "FingerTracking",
-          "GestureRecognition",
-          "MotionAnalysis"
-        ],
-        "interactionModalities": [
-          "ContactBased",
-          "DeviceContactGesture"
-        ],
-        "gestureTypes": [
-          "Hold",
-          "SingleHand",
-          "Swipe",
-          "Tap"
-        ],
-        "applicationScenarios": [
-          "AR",
-          "SmartHome",
-          "TextInput",
-          "VR"
-        ],
-        "feedbackOutput": [
-          "RealTimeFeedback",
-          "VisualFeedback"
-        ],
-        "userExperienceDesign": [
-          "EyesFree",
-          "OneHandUse",
-          "PortableDesign",
-          "QWERTYLayout",
-          "TouchOptimized",
-          "UserAdaptation"
-        ],
-        "image": "Papers/HARDWARE/Hardware预览图/2020 - . QwertyRing- Text Entry on Physical Surfaces  Using a Ring..png"
-      },
-      {
-        "id": 157,
-        "title": "BiTipText- Bimanual Eyes-Free Text Entry on a Fingertip Keyboard ",
-        "year": "2020",
-        "category": "hardware",
-        "hardwareDevices": [
-          "SmartGlasses",
-          "SmartWatch",
-          "TouchScreen",
-          "WearableSensor",
-          "Wearables"
-        ],
-        "sensingTechnology": [
-          "CapacitiveSensor",
-          "MotionSensor",
-          "OpticalTracking"
-        ],
-        "recognitionClassification": [
-          "FingerTracking",
-          "GestureRecognition",
-          "MotionAnalysis",
-          "StaticGestureRecognition"
-        ],
-        "interactionModalities": [
-          "ContactBased",
-          "DirectTouch"
-        ],
-        "gestureTypes": [
-          "DualHand",
-          "Swipe",
-          "Tap",
-          "Thumb-Index"
-        ],
-        "applicationScenarios": [
-          "AR",
-          "TextInput",
-          "VR"
-        ],
-        "feedbackOutput": [
-          "RealTimeFeedback",
-          "VisualFeedback"
-        ],
-        "userExperienceDesign": [
-          "DiscreetInput",
-          "EyesFree",
-          "PortableDesign",
-          "QWERTYLayout",
-          "TouchOptimized",
-          "UserAdaptation"
-        ],
-        "image": "Papers/HARDWARE/Hardware预览图/2020-BiTipText- Bimanual Eyes-Free Text Entry on a Fingertip Keyboard.png"
-      },
-      {
-        "id": 159,
-        "title": "Ready, Steady, Touch! Sensing  Physical Contact with a Finger-Mounted IMU",
-        "year": "2020",
-        "category": "hardware",
-        "hardwareDevices": [
-          "SmartWatch",
-          "WearableSensor",
-          "Wearables"
-        ],
-        "sensingTechnology": [
-          "Accelerometer",
-          "Gyroscope",
-          "IMU",
-          "Magnetometer"
-        ],
-        "recognitionClassification": [
-          "ContinuousRecognition",
-          "DynamicGestureRecognition",
-          "FingerTracking"
-        ],
-        "interactionModalities": [
-          "BackofDevices",
-          "ContactBased",
-          "DeviceContactGesture",
-          "TangibleInteraction"
-        ],
-        "gestureTypes": [
-          "DirectionalGesture",
-          "SingleHand",
-          "Swipe",
-          "Tap",
-          "Thumb-Index"
-        ],
-        "applicationScenarios": [
-          "AR",
-          "MediaControl",
-          "Navigation",
-          "SmartHome",
-          "TextInput",
-          "VR"
-        ],
-        "feedbackOutput": [
-          "HapticFeedback",
-          "RealTimeFeedback"
-        ],
-        "userExperienceDesign": [
-          "HandsFree",
-          "HighAccuracy",
-          "LowLatency",
-          "PortableDesign",
-          "SocialAcceptability",
-          "TouchOptimized"
-        ],
-        "image": "Papers/HARDWARE/Hardware预览图/2020-Ready, Steady, Touch! Sensing  Physical Contact with a Finger-Mounted IMU.png"
-      },
-      {
-        "id": 164,
-        "title": "Abracadabra Wireless, High-Precision, and Unpowered Finger Input for Very Small Mobile Devices",
-        "year": "2009",
-        "category": "hardware",
-        "hardwareDevices": [
-          "SmartRing",
-          "SmartWatch",
-          "Wearables"
-        ],
-        "sensingTechnology": [
-          "Magnetometer",
-          "MotionSensor"
-        ],
-        "recognitionClassification": [
-          "DynamicGestureRecognition",
-          "FingerTracking",
-          "GestureRecognition",
-          "StaticGestureRecognition"
-        ],
-        "interactionModalities": [
-          "InAirGesture",
-          "NonContactBased",
-          "TangibleInteraction"
-        ],
-        "gestureTypes": [
-          "DirectionalGesture",
-          "Flex",
-          "Hold",
-          "SingleHand",
-          "Tap"
-        ],
-        "applicationScenarios": [
-          "MediaControl",
-          "Navigation",
-          "ObjectManipulation"
-        ],
-        "feedbackOutput": [
-          "RealTimeFeedback",
-          "VisualFeedback"
-        ],
-        "userExperienceDesign": [
-          "HandsFree",
-          "HighAccuracy",
-          "PortableDesign",
-          "SmallScreen"
-        ],
-        "image": "Papers/HARDWARE/Hardware预览图/2009-Abracadabra Wireless, High-Precision, and Unpowered Finger Input for Very Small Mobile Devices.png"
-      },
-      {
-        "id": 165,
-        "title": "Digits Freehand 3D Interactions Anywhere Using a Wrist-Worn Gloveless Sensor",
-        "year": "2012",
-        "category": "hardware",
-        "hardwareDevices": [
-          "SmartWatch",
-          "WearableSensor",
-          "Wearables"
-        ],
-        "sensingTechnology": [
-          "ComputerVision",
-          "IMU",
-          "OpticalTracking"
-        ],
-        "recognitionClassification": [
-          "3DPoseEstimation",
-          "ContinuousRecognition",
-          "FingerTracking",
-          "HandTracking"
-        ],
-        "interactionModalities": [
-          "InAirGesture",
-          "NonContactBased"
-        ],
-        "gestureTypes": [
-          "Flex",
-          "Grasp",
-          "Pinch",
-          "SingleHand"
-        ],
-        "applicationScenarios": [
-          "AR",
-          "Gaming",
-          "MR",
-          "ObjectManipulation",
-          "VR"
-        ],
-        "feedbackOutput": [
-          "RealTimeFeedback",
-          "VisualFeedback"
-        ],
-        "userExperienceDesign": [
-          "EyesFree",
-          "HandsFree",
-          "HighAccuracy",
-          "LowLatency",
-          "PortableDesign"
-        ],
-        "image": "Papers/HARDWARE/Hardware预览图/2012-Digits Freehand 3D Interactions Anywhere Using a Wrist-Worn Gloveless Sensor.png"
-      },
-      {
-        "id": 166,
-        "title": "TIMMi Finger-worn Textile Input Device with Multimodal Sensing in Mobile Interaction",
-        "year": "2015",
-        "category": "hardware",
-        "hardwareDevices": [
-          "Etextile",
-          "SmartRing",
-          "WearableSensor",
-          "Wearables"
-        ],
-        "sensingTechnology": [
-          "OtherTechnology",
-          "PressureSensor"
-        ],
-        "recognitionClassification": [
-          "ContinuousRecognition",
-          "FingerTracking",
-          "GestureRecognition"
-        ],
-        "interactionModalities": [
-          "ContactBased",
-          "DeviceContactGesture",
-          "MultiModalInteraction"
-        ],
-        "gestureTypes": [
-          "Flex",
-          "SingleHand",
-          "Swipe",
-          "Tap",
-          "Thumb-Index"
-        ],
-        "applicationScenarios": [
-          "MediaControl",
-          "OtherScenarios"
-        ],
-        "feedbackOutput": [
-          "HapticFeedback",
-          "RealTimeFeedback"
-        ],
-        "userExperienceDesign": [
-          "DiscreetInput",
-          "EyesFree",
-          "OneHandUse",
-          "PortableDesign",
-          "SocialAcceptability"
-        ],
-        "image": "Papers/HARDWARE/Hardware预览图/2015-TIMMi Finger-worn Textile Input Device with Multimodal Sensing in Mobile Interaction.png"
-      },
-      {
-        "id": 168,
-        "title": "zSense Enabling Shallow Depth Gesture Recognition for Greater Input Expressivity on Smart Wearables",
-        "year": "2015",
-        "category": "hardware",
-        "hardwareDevices": [
-          "SmartGlasses",
-          "SmartRing",
-          "SmartWatch",
-          "WearableSensor",
-          "Wearables"
-        ],
-        "sensingTechnology": [
-          "DepthSensing",
-          "OtherTechnology"
-        ],
-        "recognitionClassification": [
-          "ContinuousRecognition",
-          "DynamicGestureRecognition",
-          "FingerTracking",
-          "GestureRecognition",
-          "StaticGestureRecognition"
-        ],
-        "interactionModalities": [
-          "InAirGesture",
-          "NonContactBased"
-        ],
-        "gestureTypes": [
-          "DirectionalGesture",
-          "Pinch",
-          "SingleHand",
-          "Swipe",
-          "Tap"
-        ],
-        "applicationScenarios": [
-          "MediaControl",
-          "Navigation"
-        ],
-        "feedbackOutput": [
-          "RealTimeFeedback"
-        ],
-        "userExperienceDesign": [
-          "DiscreetInput",
-          "EyesFree",
-          "HandsFree",
-          "HighAccuracy",
-          "LowLatency",
-          "OneHandUse",
-          "PortableDesign",
-          "SmallScreen"
-        ],
-        "image": "Papers/HARDWARE/Hardware预览图/2015-zSense Enabling Shallow Depth Gesture Recognition for Greater Input Expressivity on Smart Wearables.png"
-      },
-      {
-        "id": 173,
-        "title": "DigiTap- an eyes-free VR:AR symbolic input device.",
-        "year": "2014",
-        "category": "hardware",
-        "image": "Papers/HARDWARE/Hardware预览图/2014 - DigiTap- an eyes-free VR:AR symbolic input device..png",
-        "hardwareDevices": [],
-        "sensingTechnology": [],
-        "recognitionClassification": [],
-        "interactionModalities": [],
-        "gestureTypes": [],
-        "applicationScenarios": [],
-        "feedbackOutput": [],
-        "userExperienceDesign": []
-      },
-      {
-        "id": 174,
-        "title": "LightRing- Always-Available 2D Input on Any Surface.",
-        "year": "2014",
-        "category": "hardware",
-        "image": "Papers/HARDWARE/Hardware预览图/2014 - LightRing- Always-Available 2D Input on Any Surface..png",
-        "hardwareDevices": [],
-        "sensingTechnology": [],
-        "recognitionClassification": [],
-        "interactionModalities": [],
-        "gestureTypes": [],
-        "applicationScenarios": [],
-        "feedbackOutput": [],
-        "userExperienceDesign": []
-      },
-      {
-        "id": 175,
-        "title": "OptiRing Low-Resolution Optical Sensing for Subtle Thumb-to-Index Input",
-        "year": "2023",
-        "category": "hardware",
-        "image": "Papers/HARDWARE/Hardware预览图/2023 -  OptiRing Low-Resolution Optical Sensing for Subtle Thumb-to-Index Input.png",
-        "hardwareDevices": [],
-        "sensingTechnology": [],
-        "recognitionClassification": [],
-        "interactionModalities": [],
-        "gestureTypes": [],
-        "applicationScenarios": [],
-        "feedbackOutput": [],
-        "userExperienceDesign": []
-      },
-      {
-        "id": 176,
-        "title": "PinchWatch  A Wearable Device for One-Handed Microinteractions",
-        "year": "2010",
-        "category": "hardware",
-        "image": "Papers/HARDWARE/Hardware预览图/2010-PinchWatch  A Wearable Device for One-Handed Microinteractions.png",
-        "hardwareDevices": [],
-        "sensingTechnology": [],
-        "recognitionClassification": [],
-        "interactionModalities": [],
-        "gestureTypes": [],
-        "applicationScenarios": [],
-        "feedbackOutput": [],
-        "userExperienceDesign": []
-      },
-      {
-        "id": 177,
-        "title": "iSkin Flexible, Stretchable and Visually Customizable On-Body Touch Sensors for Mobile Computing",
-        "year": "2015",
-        "category": "hardware",
-        "image": "Papers/HARDWARE/Hardware预览图/2015-iSkin Flexible, Stretchable and Visually Customizable On-Body Touch Sensors for Mobile Computing.png",
-        "hardwareDevices": [],
-        "sensingTechnology": [],
-        "recognitionClassification": [],
-        "interactionModalities": [],
-        "gestureTypes": [],
-        "applicationScenarios": [],
-        "feedbackOutput": [],
-        "userExperienceDesign": []
-      },
-      {
-        "id": 178,
-        "title": "Pyro thumb-tip gesture recognition using pyroelectric infrared sensing",
-        "year": "2017",
-        "category": "hardware",
-        "image": "Papers/HARDWARE/Hardware预览图/2017 - Pyro thumb-tip gesture recognition using pyroelectric infrared sensing.png",
-        "hardwareDevices": [],
-        "sensingTechnology": [],
-        "recognitionClassification": [],
-        "interactionModalities": [],
-        "gestureTypes": [],
-        "applicationScenarios": [],
-        "feedbackOutput": [],
-        "userExperienceDesign": []
-      },
-      {
-        "id": 179,
-        "title": "FingerPad-  private and subtle interaction using fingertips",
-        "year": "2013",
-        "category": "hardware",
-        "image": "Papers/HARDWARE/Hardware预览图/2013 - FingerPad-  private and subtle interaction using fingertips.png",
-        "hardwareDevices": [],
-        "sensingTechnology": [],
-        "recognitionClassification": [],
-        "interactionModalities": [],
-        "gestureTypes": [],
-        "applicationScenarios": [],
-        "feedbackOutput": [],
-        "userExperienceDesign": []
-      },
-      {
-        "id": 180,
-        "title": "Skinmarks Enabling interactions on body landmarks using conformal skin electronics",
-        "year": "2017",
-        "category": "hardware",
-        "image": "Papers/HARDWARE/Hardware预览图/2017-Skinmarks Enabling interactions on body landmarks using conformal skin electronics.png",
-        "hardwareDevices": [],
-        "sensingTechnology": [],
-        "recognitionClassification": [],
-        "interactionModalities": [],
-        "gestureTypes": [],
-        "applicationScenarios": [],
-        "feedbackOutput": [],
-        "userExperienceDesign": []
-      }
-    ],
-    "software": [
-      {
-        "id": 10,
-        "title": "Finger-writing with smartwatch a case for finger and hand gesture recognition using smartwatch",
-        "year": "2015",
-        "category": "software",
-        "hardwareDevices": [
-          "SmartWatch",
-          "Wearables"
-        ],
-        "sensingTechnology": [
-          "Accelerometer",
-          "Gyroscope",
-          "IMU",
-          "MotionSensor"
-        ],
-        "recognitionClassification": [
-          "DynamicGestureRecognition",
-          "FingerTracking",
-          "GestureRecognition",
-          "HandTracking",
-          "MotionAnalysis",
-          "StaticGestureRecognition",
-          "TrajectoryAnalysis"
-        ],
-        "interactionModalities": [
-          "ContactBased",
-          "InAirGesture",
-          "NonContactBased"
-        ],
-        "gestureTypes": [
-          "DirectionalGesture",
-          "Pinch",
-          "SingleHand",
-          "Swipe",
-          "Tap",
-          "Thumb-Index"
-        ],
-        "applicationScenarios": [
-          "IoTControl",
-          "MediaControl",
-          "SmartHome",
-          "TextInput"
-        ],
-        "feedbackOutput": [
-          "RealTimeFeedback",
-          "VisualFeedback"
-        ],
-        "userExperienceDesign": [
-          "DiscreetInput",
-          "HandsFree",
-          "HighAccuracy",
-          "OneHandUse",
-          "PortableDesign",
-          "SocialAcceptability"
-        ],
-        "image": "Papers/SOFTWARE/Software预览图/2015 - Finger-writing with smartwatch a case for finger and hand gesture recognition using smartwatch.png"
-      },
-      {
-        "id": 20,
-        "title": "Touch+finger extending touch-based user interface capabilities with idle finger gestures in the air",
-        "year": "2018",
-        "category": "software",
-        "hardwareDevices": [
-          "SmartRing",
-          "Tablet",
-          "TouchScreen",
-          "WearableSensor"
-        ],
-        "sensingTechnology": [
-          "Accelerometer",
-          "Gyroscope",
-          "IMU",
-          "Magnetometer"
-        ],
-        "recognitionClassification": [
-          "DynamicGestureRecognition",
-          "FingerTracking",
-          "GestureRecognition",
-          "StaticGestureRecognition"
-        ],
-        "interactionModalities": [
-          "ContactBased",
-          "DirectTouch",
-          "InAirGesture",
-          "MultiModalInteraction",
-          "NonContactBased"
-        ],
-        "gestureTypes": [
-          "DirectionalGesture",
-          "Hold",
-          "MultiTouch",
-          "Pinch",
-          "SingleHand",
-          "Swipe",
-          "Tap"
-        ],
-        "applicationScenarios": [
-          "DigitalArt",
-          "Gaming",
-          "MediaControl",
-          "ObjectManipulation"
-        ],
-        "feedbackOutput": [
-          "RealTimeFeedback",
-          "VisualFeedback"
-        ],
-        "userExperienceDesign": [
-          "HighAccuracy",
-          "SmallScreen",
-          "TouchOptimized"
-        ],
-        "image": "Papers/SOFTWARE/Software预览图/2018 - Touch+finger extending touch-based user interface capabilities with idle finger gestures in the air.png"
-      },
-      {
-        "id": 21,
-        "title": "FingerInput Capturing Expressive Single-Hand Thumb-to-Finger Microgestures",
-        "year": "2018",
-        "category": "software",
-        "hardwareDevices": [
-          "WearableSensor",
-          "Wearables"
-        ],
-        "sensingTechnology": [
-          "CapacitiveSensor",
-          "ComputerVision",
-          "DepthSensing"
-        ],
-        "recognitionClassification": [
-          "ContinuousRecognition",
-          "DynamicGestureRecognition",
-          "FingerTracking",
-          "GestureRecognition",
-          "HandTracking",
-          "StaticGestureRecognition"
-        ],
-        "interactionModalities": [
-          "BodyContactGesture",
-          "ContactBased",
-          "MultiModalInteraction"
-        ],
-        "gestureTypes": [
-          "DirectionalGesture",
-          "Flex",
-          "SingleHand",
-          "Swipe",
-          "Tap",
-          "Thumb-Index"
-        ],
-        "applicationScenarios": [
-          "DigitalArt",
-          "MediaControl"
-        ],
-        "feedbackOutput": [
-          "AudioFeedback",
-          "RealTimeFeedback",
-          "VisualFeedback"
-        ],
-        "userExperienceDesign": [
-          "DiscreetInput",
-          "EyesFree",
-          "HighAccuracy",
-          "OneHandUse"
-        ],
-        "image": "Papers/SOFTWARE/Software预览图/2018-FingerInput Capturing Expressive Single-Hand Thumb-to-Finger Microgestures.png"
-      },
-      {
-        "id": 23,
-        "title": "TipText eyes-free text entry on a fingertip keyboard",
-        "year": "2019",
-        "category": "software",
-        "hardwareDevices": [
-          "WearableSensor",
-          "Wearables"
-        ],
-        "sensingTechnology": [
-          "CapacitiveSensor",
-          "ComputerVision",
-          "OpticalTracking"
-        ],
-        "recognitionClassification": [
-          "FingerTracking",
-          "GestureRecognition",
-          "StaticGestureRecognition"
-        ],
-        "interactionModalities": [
-          "BodyContactGesture",
-          "ContactBased",
-          "DirectTouch"
-        ],
-        "gestureTypes": [
-          "SingleHand",
-          "Tap",
-          "Thumb-Index"
-        ],
-        "applicationScenarios": [
-          "AR",
-          "TextInput",
-          "VR"
-        ],
-        "feedbackOutput": [
-          "HapticFeedback",
-          "RealTimeFeedback",
-          "VisualFeedback"
-        ],
-        "userExperienceDesign": [
-          "DiscreetInput",
-          "EyesFree",
-          "HighAccuracy",
-          "OneHandUse",
-          "PortableDesign",
-          "QWERTYLayout",
-          "SmallScreen",
-          "SocialAcceptability"
-        ],
-        "image": "Papers/SOFTWARE/Software预览图/2019 - TipText eyes-free text entry on a fingertip keyboard.png"
-      },
-      {
-        "id": 27,
-        "title": "Finger gesture tracking for interactive applications a pilot study with sign languages",
-        "year": "2020",
-        "category": "software",
-        "hardwareDevices": [
-          "SmartRing",
-          "SmartWatch",
-          "WearableSensor",
-          "Wearables"
-        ],
-        "sensingTechnology": [
-          "Accelerometer",
-          "Gyroscope",
-          "IMU",
-          "Magnetometer",
-          "MotionSensor"
-        ],
-        "recognitionClassification": [
-          "ContinuousRecognition",
-          "DynamicGestureRecognition",
-          "FingerTracking",
-          "GestureRecognition",
-          "HandTracking",
-          "MotionAnalysis",
-          "TrajectoryAnalysis"
-        ],
-        "interactionModalities": [
-          "InAirGesture",
-          "NonContactBased"
-        ],
-        "gestureTypes": [
-          "DirectionalGesture",
-          "DualHand",
-          "SignLanguageRelated",
-          "SingleHand"
-        ],
-        "applicationScenarios": [
-          "AccessibilitySupport",
-          "Education",
-          "Healthcare",
-          "Training"
-        ],
-        "feedbackOutput": [
-          "AudioFeedback",
-          "MultimodalFeedback",
-          "RealTimeFeedback",
-          "VisualFeedback"
-        ],
-        "userExperienceDesign": [
-          "CommunicationAid",
-          "EncumberedInteraction",
-          "LowLatency",
-          "PortableDesign",
-          "UserAdaptation"
-        ],
-        "image": "Papers/GestureDesign/GestureDesign预览图/2020 - Finger gesture tracking for interactive applications a pilot study with sign languages.png"
-      },
-      {
-        "id": 46,
-        "title": "Studying the simultaneous visual representation of microgestures",
-        "year": "2024",
-        "category": "software",
-        "hardwareDevices": [
-          "SmartWatch",
-          "SmartPhone",
-          "Wearables"
-        ],
-        "sensingTechnology": [
-          "ComputerVision"
-        ],
-        "recognitionClassification": [
-          "DynamicGestureRecognition",
-          "FingerTracking",
-          "GestureRecognition",
-          "HandTracking",
-          "StaticGestureRecognition"
-        ],
-        "interactionModalities": [
-          "BodyContactGesture",
-          "ContactBased"
-        ],
-        "gestureTypes": [
-          "Hold",
-          "SingleHand",
-          "Swipe",
-          "Tap",
-          "Thumb-Index"
-        ],
-        "applicationScenarios": [
-          "MediaControl",
-          "SmartHome"
-        ],
-        "feedbackOutput": [
-          "VisualFeedback"
-        ],
-        "userExperienceDesign": [
-          "DiscreetInput",
-          "EyesFree",
-          "HandsFree",
-          "OneHandUse",
-          "SmallScreen",
-          "SocialAcceptability"
-        ],
-        "image": "Papers/SOFTWARE/Software预览图/2024 - Studying the simultaneous visual representation of microgestures.png"
-      },
-      {
-        "id": 49,
-        "title": "Gesture and audio-haptic guidance techniques to direct conversations with intelligent voice interfaces",
-        "year": "2025",
-        "category": "software",
-        "hardwareDevices": [
-          "HapticDevice",
-          "SmartGlasses",
-          "SmartRing",
-          "Wearables"
-        ],
-        "sensingTechnology": [
-          "CapacitiveSensor",
-          "IMU",
-          "OpticalTracking"
-        ],
-        "recognitionClassification": [
-          "DynamicGestureRecognition",
-          "GestureRecognition",
-          "StaticGestureRecognition"
-        ],
-        "interactionModalities": [
-          "ContactBased",
-          "MultiModalInteraction",
-          "VoiceGestureCombined"
-        ],
-        "gestureTypes": [
-          "Hold",
-          "SingleHand",
-          "Tap"
-        ],
-        "applicationScenarios": [
-          "AR",
-          "MediaControl"
-        ],
-        "feedbackOutput": [
-          "AudioFeedback",
-          "HapticFeedback",
-          "MultimodalFeedback"
-        ],
-        "userExperienceDesign": [
-          "HandsFree",
-          "LowLatency",
-          "SocialAcceptability",
-          "UserAdaptation"
-        ],
-        "image": "Papers/SOFTWARE/Software预览图/2025 - Gesture and audio-haptic guidance techniques to direct conversations with intelligent voice interfaces.png"
-      },
-      {
-        "id": 50,
-        "title": "LeakyFeeder In-air gesture control through leaky acoustic waves",
-        "year": "2025",
-        "category": "software",
-        "hardwareDevices": [
-          "OtherDevices",
-          "Wearables"
-        ],
-        "sensingTechnology": [
-          "OtherTechnology",
-          "UltrasonicSensor"
-        ],
-        "recognitionClassification": [
-          "3DPoseEstimation",
-          "ContinuousRecognition",
-          "DynamicGestureRecognition",
-          "FingerTracking",
-          "GestureRecognition",
-          "HandTracking"
-        ],
-        "interactionModalities": [
-          "EarBasedInteraction",
-          "InAirGesture",
-          "NonContactBased"
-        ],
-        "gestureTypes": [
-          "Hold",
-          "Pinch",
-          "SingleHand",
-          "Tap"
-        ],
-        "applicationScenarios": [
-          "AR",
-          "MediaControl",
-          "OtherScenarios",
-          "SmartHome",
-          "VR"
-        ],
-        "feedbackOutput": [
-          "AudioFeedback",
-          "RealTimeFeedback"
-        ],
-        "userExperienceDesign": [
-          "HandsFree",
-          "HighAccuracy",
-          "LowLatency",
-          "PortableDesign"
-        ],
-        "image": "Papers/SOFTWARE/Software预览图/2025 - LeakyFeeder In-air gesture control through leaky acoustic waves.png"
-      },
-      {
-        "id": 54,
-        "title": "Depth aware finger tapping on virtual displays",
-        "year": "2018",
-        "category": "software",
-        "hardwareDevices": [
-          "ARGlasses",
-          "SmartPhone",
-          "VRHeadset"
-        ],
-        "sensingTechnology": [
-          "ComputerVision",
-          "DepthSensing",
-          "UltrasonicSensor"
-        ],
-        "recognitionClassification": [
-          "DynamicGestureRecognition",
-          "FingerTracking",
-          "GestureRecognition",
-          "HandTracking",
-          "MotionAnalysis"
-        ],
-        "interactionModalities": [
-          "InAirGesture",
-          "MultiModalInteraction",
-          "NonContactBased"
-        ],
-        "gestureTypes": [
-          "DirectionalGesture",
-          "SingleHand",
-          "Tap"
-        ],
-        "applicationScenarios": [
-          "AR",
-          "MediaControl",
-          "TextInput",
-          "VR"
-        ],
-        "feedbackOutput": [
-          "AudioFeedback",
-          "MultimodalFeedback",
-          "RealTimeFeedback",
-          "VisualFeedback"
-        ],
-        "userExperienceDesign": [
-          "HandsFree",
-          "HighAccuracy",
-          "LowLatency"
-        ],
-        "image": "Papers/SOFTWARE/Software预览图/2018 - Depth aware finger tapping on virtual displays.png"
-      },
-      {
-        "id": 60,
-        "title": "GraV grasp volume data for the design of one-handed XR interfaces",
-        "year": "2024",
-        "category": "software",
-        "hardwareDevices": [
-          "ARGlasses",
-          "VRHeadset"
-        ],
-        "sensingTechnology": [
-          "ComputerVision"
-        ],
-        "recognitionClassification": [
-          "3DPoseEstimation",
-          "FingerTracking",
-          "GestureRecognition",
-          "HandTracking"
-        ],
-        "interactionModalities": [
-          "ContactBased",
-          "DirectTouch",
-          "TangibleInteraction"
-        ],
-        "gestureTypes": [
-          "Grasp",
-          "SingleHand",
-          "Thumb-Index"
-        ],
-        "applicationScenarios": [
-          "AR",
-          "ObjectManipulation",
-          "VR"
-        ],
-        "feedbackOutput": [
-          "HapticFeedback",
-          "VisualFeedback"
-        ],
-        "userExperienceDesign": [
-          "HandsFree",
-          "OneHandUse",
-          "UserAdaptation"
-        ],
-        "image": "Papers/SOFTWARE/Software预览图/2024 - GraV grasp volume data for the design of one-handed XR interfaces.png"
-      },
-      {
-        "id": 61,
-        "title": "HapticPilot authoring in-situ hand posture-adaptive vibrotactile feedback for virtual reality",
-        "year": "2024",
-        "category": "software",
-        "hardwareDevices": [
-          "DataGloves",
-          "HapticDevice",
-          "VRHeadset"
-        ],
-        "sensingTechnology": [
-          "MotionSensor",
-          "OpticalTracking"
-        ],
-        "recognitionClassification": [
-          "HandTracking",
-          "StaticGestureRecognition"
-        ],
-        "interactionModalities": [
-          "InAirGesture",
-          "MultiModalInteraction"
-        ],
-        "gestureTypes": [
-          "DirectionalGesture",
-          "SingleHand"
-        ],
-        "applicationScenarios": [
-          "DigitalArt",
-          "Gaming",
-          "VR"
-        ],
-        "feedbackOutput": [
-          "HapticFeedback",
-          "RealTimeFeedback"
-        ],
-        "userExperienceDesign": [
-          "HandsFree",
-          "LowLatency",
-          "UserAdaptation"
-        ],
-        "image": "Papers/SOFTWARE/Software预览图/2024 - HapticPilot authoring in-situ hand posture-adaptive vibrotactile feedback for virtual reality.png"
-      },
-      {
-        "id": 62,
-        "title": "TriPad touch input in AR on ordinary surfaces with hand tracking only",
-        "year": "2024",
-        "category": "software",
-        "hardwareDevices": [
-          "ARGlasses",
-          "VRHeadset"
-        ],
-        "sensingTechnology": [
-          "ComputerVision",
-          "DepthSensing",
-          "OpticalTracking"
-        ],
-        "recognitionClassification": [
-          "DynamicGestureRecognition",
-          "FingerTracking",
-          "HandTracking",
-          "StaticGestureRecognition"
-        ],
-        "interactionModalities": [
-          "ContactBased",
-          "DirectTouch",
-          "InAirGesture",
-          "MultiModalInteraction"
-        ],
-        "gestureTypes": [
-          "DirectionalGesture",
-          "MultiTouch",
-          "SingleHand",
-          "Tap"
-        ],
-        "applicationScenarios": [
-          "AR",
-          "Navigation",
-          "ObjectManipulation"
-        ],
-        "feedbackOutput": [
-          "AudioFeedback",
-          "RealTimeFeedback",
-          "VisualFeedback"
-        ],
-        "userExperienceDesign": [
-          "EyesFree",
-          "HandsFree",
-          "LowLatency",
-          "SocialAcceptability",
-          "TouchOptimized"
-        ],
-        "image": "Papers/SOFTWARE/Software预览图/2024 - TriPad touch input in AR on ordinary surfaces with hand tracking only.png"
-      },
-      {
-        "id": 63,
-        "title": "GraspUI Seamlessly Integrating Object-Centric Gestures within the Seven Phases of Grasping",
-        "year": "2024",
-        "category": "software",
-        "hardwareDevices": [
-          "ARGlasses",
-          "SmartGlasses",
-          "Wearables"
-        ],
-        "sensingTechnology": [
-          "ComputerVision",
-          "MotionSensor",
-          "OpticalTracking"
-        ],
-        "recognitionClassification": [
-          "DynamicGestureRecognition",
-          "FingerTracking",
-          "GestureRecognition",
-          "HandTracking",
-          "StaticGestureRecognition"
-        ],
-        "interactionModalities": [
-          "ContactBased",
-          "InAirGesture",
-          "MultiModalInteraction",
-          "TangibleInteraction"
-        ],
-        "gestureTypes": [
-          "Grasp",
-          "Hold",
-          "SingleHand",
-          "Swipe",
-          "Tap"
-        ],
-        "applicationScenarios": [
-          "AR",
-          "MediaControl",
-          "ObjectManipulation",
-          "SmartHome"
-        ],
-        "feedbackOutput": [
-          "RealTimeFeedback",
-          "VisualFeedback"
-        ],
-        "userExperienceDesign": [
-          "HandsFree",
-          "SocialAcceptability",
-          "UserAdaptation"
-        ],
-        "image": "Papers/SOFTWARE/Software预览图/2024-GraspUI Seamlessly Integrating Object-Centric Gestures within the Seven Phases of Grasping.png"
-      },
-      {
-        "id": 65,
-        "title": "STMG A Machine Learning Microgesture Recognition System for Supporting Thumb-Based VR AR Input",
-        "year": "2024",
-        "category": "software",
-        "hardwareDevices": [
-          "ARGlasses",
-          "VRHeadset"
-        ],
-        "sensingTechnology": [
-          "ComputerVision",
-          "MotionSensor",
-          "OpticalTracking"
-        ],
-        "recognitionClassification": [
-          "ContinuousRecognition",
-          "DynamicGestureRecognition",
-          "FingerTracking",
-          "GestureRecognition",
-          "HandTracking"
-        ],
-        "interactionModalities": [
-          "BodyContactGesture",
-          "ContactBased",
-          "MultiModalInteraction"
-        ],
-        "gestureTypes": [
-          "DirectionalGesture",
-          "Pinch",
-          "SingleHand",
-          "Swipe",
-          "Tap",
-          "Thumb-Index"
-        ],
-        "applicationScenarios": [
-          "AR",
-          "MediaControl",
-          "Navigation",
-          "ObjectManipulation",
-          "VR"
-        ],
-        "feedbackOutput": [
-          "RealTimeFeedback",
-          "VisualFeedback"
-        ],
-        "userExperienceDesign": [
-          "EyesFree",
-          "HandsFree",
-          "HighAccuracy",
-          "LowLatency",
-          "OneHandUse",
-          "UserAdaptation"
-        ],
-        "image": "Papers/SOFTWARE/Software预览图/2024-STMG A Machine Learning Microgesture Recognition System for Supporting Thumb-Based VR AR Input.png"
-      },
-      {
-        "id": 75,
-        "title": "Tactile feedback for above-device gesture interfaces adding touch to touchless interactions",
-        "year": "2014",
-        "category": "software",
-        "hardwareDevices": [
-          "HapticDevice",
-          "SmartRing",
-          "SmartWatch",
-          "SmartPhone",
-          "Wearables"
-        ],
-        "sensingTechnology": [
-          "OpticalTracking",
-          "UltrasonicSensor"
-        ],
-        "recognitionClassification": [
-          "FingerTracking",
-          "GestureRecognition",
-          "HandTracking"
-        ],
-        "interactionModalities": [
-          "InAirGesture",
-          "MultiModalInteraction",
-          "NonContactBased"
-        ],
-        "gestureTypes": [
-          "SingleHand"
-        ],
-        "applicationScenarios": [
-          "MediaControl"
-        ],
-        "feedbackOutput": [
-          "HapticFeedback",
-          "MultimodalFeedback",
-          "VisualFeedback"
-        ],
-        "userExperienceDesign": [
-          "HandsFree",
-          "SmallScreen",
-          "TouchOptimized"
-        ],
-        "image": "Papers/SOFTWARE/Software预览图/2014 - Tactile feedback for above-device gesture interfaces adding touch to touchless interactions.png"
-      },
-      {
-        "id": 78,
-        "title": " Finger-aware shortcuts",
-        "year": "2016",
-        "category": "software",
-        "hardwareDevices": [
-          "Keyboard"
-        ],
-        "sensingTechnology": [
-          "ComputerVision"
-        ],
-        "recognitionClassification": [
-          "FingerTracking",
-          "GestureRecognition",
-          "HandTracking",
-          "StaticGestureRecognition"
-        ],
-        "interactionModalities": [
-          "DeviceContactGesture"
-        ],
-        "gestureTypes": [
-          "DualHand",
-          "Hold",
-          "SingleHand"
-        ],
-        "applicationScenarios": [
-          "TextInput"
-        ],
-        "feedbackOutput": [
-          "VisualFeedback"
-        ],
-        "userExperienceDesign": [
-          "HighAccuracy",
-          "QWERTYLayout",
-          "UserAdaptation"
-        ],
-        "image": "Papers/SOFTWARE/Software预览图/2016 - Finger-aware shortcuts.png"
-      },
-      {
-        "id": 81,
-        "title": "WiFinger talk to your smart devices with finger-grained gesture",
-        "year": "2016",
-        "category": "software",
-        "hardwareDevices": [
-          "OtherDevices",
-          "SmartPhone"
-        ],
-        "sensingTechnology": [
-          "RFSensing"
-        ],
-        "recognitionClassification": [
-          "DynamicGestureRecognition",
-          "FingerTracking",
-          "GestureRecognition",
-          "MotionAnalysis"
-        ],
-        "interactionModalities": [
-          "InAirGesture",
-          "NonContactBased"
-        ],
-        "gestureTypes": [
-          "SignLanguageRelated",
-          "SingleHand"
-        ],
-        "applicationScenarios": [
-          "SmartHome",
-          "TextInput"
-        ],
-        "feedbackOutput": [
-          "VisualFeedback"
-        ],
-        "userExperienceDesign": [
-          "DiscreetInput",
-          "HandsFree",
-          "HighAccuracy"
-        ],
-        "image": "Papers/SOFTWARE/Software预览图/2016 - WiFinger talk to your smart devices with finger-grained gesture.png"
-      },
-      {
-        "id": 96,
-        "title": "TouchPose hand pose prediction, depth estimation, and touch classification from capacitive images",
-        "year": "2021",
-        "category": "software",
-        "hardwareDevices": [
-          "SmartPhone",
-          "Tablet",
-          "TouchScreen",
-          "WearableSensor"
-        ],
-        "sensingTechnology": [
-          "CapacitiveSensor",
-          "ComputerVision",
-          "DepthSensing",
-          "OpticalTracking"
-        ],
-        "recognitionClassification": [
-          "3DPoseEstimation",
-          "DynamicGestureRecognition",
-          "FingerTracking",
-          "GestureRecognition",
-          "HandTracking",
-          "StaticGestureRecognition"
-        ],
-        "interactionModalities": [
-          "ContactBased",
-          "DirectTouch",
-          "MultiModalInteraction",
-          "TangibleInteraction"
-        ],
-        "gestureTypes": [
-          "Grasp",
-          "MultiTouch",
-          "SingleHand"
-        ],
-        "applicationScenarios": [
-          "AR",
-          "DigitalArt",
-          "ObjectManipulation",
-          "TextInput",
-          "VR"
-        ],
-        "feedbackOutput": [
-          "RealTimeFeedback",
-          "VisualFeedback"
-        ],
-        "userExperienceDesign": [
-          "HighAccuracy",
-          "LowLatency",
-          "OcclusionAvoidance",
-          "TouchOptimized",
-          "UserAdaptation"
-        ],
-        "image": "Papers/SOFTWARE/Software预览图/2021 - TouchPose hand pose prediction, depth estimation, and touch classification from capacitive images.png"
-      },
-      {
-        "id": 97,
-        "title": "Watching your phone's back gesture recognition by sensing acoustical structure-borne propagation",
-        "year": "2021",
-        "category": "software",
-        "hardwareDevices": [
-          "OtherDevices",
-          "SmartPhone",
-          "WearableSensor"
-        ],
-        "sensingTechnology": [
-          "MotionSensor",
-          "OtherTechnology",
-          "UltrasonicSensor"
-        ],
-        "recognitionClassification": [
-          "ContinuousRecognition",
-          "DynamicGestureRecognition",
-          "GestureRecognition"
-        ],
-        "interactionModalities": [
-          "BackofDevices",
-          "DeviceContactGesture",
-          "NonContactBased"
-        ],
-        "gestureTypes": [
-          "DirectionalGesture",
-          "SingleHand",
-          "Swipe",
-          "Tap"
-        ],
-        "applicationScenarios": [
-          "AccessibilitySupport",
-          "IoTControl",
-          "OtherScenarios"
-        ],
-        "feedbackOutput": [
-          "AudioFeedback",
-          "MultimodalFeedback"
-        ],
-        "userExperienceDesign": [
-          "DiscreetInput",
-          "HighAccuracy",
-          "LowLatency",
-          "OcclusionAvoidance",
-          "PortableDesign",
-          "UserAdaptation"
-        ],
-        "image": "Papers/SOFTWARE/Software预览图/2021 - Watching your phone's back gesture recognition by sensing acoustical structure-borne propagation.png"
-      },
-      {
-        "id": 99,
-        "title": "Leveraging the properties of mmWave signals for 3D finger motion tracking for interactive IoT applications",
-        "year": "2022",
-        "category": "software",
-        "hardwareDevices": [
-          "OtherDevices",
-          "SmartPhone",
-          "WearableSensor"
-        ],
-        "sensingTechnology": [
-          "MotionSensor",
-          "RFSensing",
-          "RadarSensing"
-        ],
-        "recognitionClassification": [
-          "3DPoseEstimation",
-          "ContinuousRecognition",
-          "FingerTracking",
-          "HandTracking"
-        ],
-        "interactionModalities": [
-          "InAirGesture",
-          "NonContactBased"
-        ],
-        "gestureTypes": [
-          "Flex",
-          "SignLanguageRelated",
-          "SingleHand"
-        ],
-        "applicationScenarios": [
-          "AR",
-          "AccessibilitySupport",
-          "Healthcare",
-          "IoTControl",
-          "SmartHome",
-          "VR"
-        ],
-        "feedbackOutput": [
-          "RealTimeFeedback"
-        ],
-        "userExperienceDesign": [
-          "EyesFree",
-          "HandsFree",
-          "HighAccuracy",
-          "LowLatency",
-          "UserAdaptation"
-        ],
-        "image": "Papers/SOFTWARE/Software预览图/2022 - Leveraging the properties of mmWave signals for 3D finger motion tracking for interactive IoT applications.png"
-      },
-      {
-        "id": 100,
-        "title": "IndexPen Two Finger Text Input with Millimeter Wave Radar",
-        "year": "2022",
-        "category": "software",
-        "hardwareDevices": [
-          "OtherDevices",
-          "SmartPhone",
-          "WearableSensor"
-        ],
-        "sensingTechnology": [
-          "MotionSensor",
-          "RFSensing",
-          "RadarSensing"
-        ],
-        "recognitionClassification": [
-          "ContinuousRecognition",
-          "DynamicGestureRecognition",
-          "FingerTracking",
-          "GestureRecognition"
-        ],
-        "interactionModalities": [
-          "InAirGesture",
-          "NonContactBased"
-        ],
-        "gestureTypes": [
-          "SingleHand",
-          "Tap",
-          "Thumb-Index"
-        ],
-        "applicationScenarios": [
-          "AR",
-          "AccessibilitySupport",
-          "IoTControl",
-          "SmartHome",
-          "TextInput",
-          "VR"
-        ],
-        "feedbackOutput": [
-          "RealTimeFeedback",
-          "VisualFeedback"
-        ],
-        "userExperienceDesign": [
-          "EyesFree",
-          "HandsFree",
-          "HighAccuracy",
-          "LowLatency",
-          "SocialAcceptability",
-          "UserAdaptation"
-        ],
-        "image": "Papers/SOFTWARE/Software预览图/2022-IndexPen Two Finger Text Input with Millimeter Wave Radar.png"
-      },
-      {
-        "id": 104,
-        "title": "iFAD Gestures Understanding Users’ Gesture Input Performance with Index-Finger Augmentation Devices",
-        "year": "2023",
-        "category": "software",
-        "hardwareDevices": [
-          "SmartRing",
-          "WearableSensor",
-          "Wearables"
-        ],
-        "sensingTechnology": [
-          "Accelerometer",
-          "IMU",
-          "MotionSensor"
-        ],
-        "recognitionClassification": [
-          "DynamicGestureRecognition",
-          "FingerTracking",
-          "GestureRecognition",
-          "StaticGestureRecognition"
-        ],
-        "interactionModalities": [
-          "BodyContactGesture",
-          "ContactBased",
-          "DeviceContactGesture",
-          "InAirGesture",
-          "NonContactBased"
-        ],
-        "gestureTypes": [
-          "DirectionalGesture",
-          "Pinch",
-          "SingleHand",
-          "Swipe",
-          "Tap",
-          "Thumb-Index"
-        ],
-        "applicationScenarios": [
-          "MediaControl",
-          "SmartHome",
-          "TextInput"
-        ],
-        "feedbackOutput": [
-          "VisualFeedback"
-        ],
-        "userExperienceDesign": [
-          "DiscreetInput",
-          "EyesFree",
-          "HandsFree",
-          "OneHandUse",
-          "PortableDesign",
-          "SocialAcceptability",
-          "UserAdaptation"
-        ],
-        "image": "Papers/SOFTWARE/Software预览图/2023-iFAD Gestures Understanding Users’ Gesture Input Performance with Index-Finger Augmentation Devices.png"
-      },
-      {
-        "id": 105,
-        "title": "Persistent assistant seamless everyday AI interactions via intent grounding and multimodal feedback",
-        "year": "2025",
-        "category": "software",
-        "hardwareDevices": [
-          "ARGlasses",
-          "HapticDevice",
-          "SmartGlasses",
-          "Wearables"
-        ],
-        "sensingTechnology": [
-          "ComputerVision",
-          "OpticalTracking"
-        ],
-        "recognitionClassification": [
-          "GestureRecognition",
-          "HandTracking"
-        ],
-        "interactionModalities": [
-          "GazeBased",
-          "InAirGesture",
-          "MultiModalInteraction",
-          "NonContactBased",
-          "VoiceGestureCombined"
-        ],
-        "gestureTypes": [
-          "Pinch",
-          "SingleHand"
-        ],
-        "applicationScenarios": [
-          "AR",
-          "Navigation",
-          "SmartHome"
-        ],
-        "feedbackOutput": [
-          "AudioFeedback",
-          "HapticFeedback",
-          "MultimodalFeedback",
-          "RealTimeFeedback"
-        ],
-        "userExperienceDesign": [
-          "DiscreetInput",
-          "EyesFree",
-          "OneHandUse",
-          "SocialAcceptability",
-          "UserAdaptation"
-        ],
-        "image": "Papers/SOFTWARE/Software预览图/2025 - Persistent assistant seamless everyday AI interactions via intent grounding and multimodal feedback.png"
-      },
-      {
-        "id": 106,
-        "title": "Grasp Interaction with Tablets",
-        "year": "2011",
-        "category": "software",
-        "hardwareDevices": [
-          "Tablet",
-          "TouchScreen"
-        ],
-        "sensingTechnology": [
-          "Accelerometer",
-          "CapacitiveSensor",
-          "Gyroscope",
-          "IMU",
-          "Magnetometer"
-        ],
-        "recognitionClassification": [
-          "DynamicGestureRecognition",
-          "FingerTracking",
-          "GestureRecognition",
-          "HandTracking",
-          "StaticGestureRecognition"
-        ],
-        "interactionModalities": [
-          "BackofDevices",
-          "ContactBased",
-          "DirectTouch",
-          "MultiModalInteraction"
-        ],
-        "gestureTypes": [
-          "DualHand",
-          "Grasp",
-          "Pinch",
-          "SingleHand",
-          "Swipe",
-          "Tap"
-        ],
-        "applicationScenarios": [
-          "MediaControl",
-          "ObjectManipulation"
-        ],
-        "feedbackOutput": [
-          "HapticFeedback",
-          "VisualFeedback"
-        ],
-        "userExperienceDesign": [
-          "FatFingerProblem",
-          "MidasTouchProblem",
-          "OcclusionAvoidance",
-          "OneHandUse",
-          "SmallScreen",
-          "TouchOptimized"
-        ],
-        "image": "Papers/SOFTWARE/Software预览图/2011-Grasp Interaction with Tablets.png"
-      },
-      {
-        "id": 107,
-        "title": "Opportunistic synergy a classifier fusion engine for micro-gesture recognition",
-        "year": "2013",
-        "category": "software",
-        "hardwareDevices": [
-          "DrivingSimulator",
-          "WearableSensor",
-          "Wearables"
-        ],
-        "sensingTechnology": [
-          "Bio-Sensor",
-          "EMG",
-          "PressureSensor"
-        ],
-        "recognitionClassification": [
-          "ContinuousRecognition",
-          "GestureRecognition",
-          "StaticGestureRecognition"
-        ],
-        "interactionModalities": [
-          "ContactBased",
-          "DeviceContactGesture",
-          "MultiModalInteraction",
-          "TangibleInteraction"
-        ],
-        "gestureTypes": [
-          "Grasp",
-          "Hold",
-          "SingleHand",
-          "Tap"
-        ],
-        "applicationScenarios": [
-          "InVehicleInteraction"
-        ],
-        "feedbackOutput": [
-          "RealTimeFeedback"
-        ],
-        "userExperienceDesign": [
-          "DiscreetInput",
-          "EyesFree",
-          "HandsFree",
-          "HighAccuracy",
-          "LowLatency",
-          "OneHandUse",
-          "SocialAcceptability",
-          "UserAdaptation"
-        ],
-        "image": "Papers/SOFTWARE/Software预览图/2013 - Opportunistic synergy a classifier fusion engine for micro-gesture recognition.png"
-      },
-      {
-        "id": 125,
-        "title": "Blind people and mobile touch-based text-entry acknowledging the need for different flavors",
-        "year": "2011",
-        "category": "software",
-        "hardwareDevices": [
-          "SmartPhone",
-          "TouchScreen"
-        ],
-        "sensingTechnology": [
-          "PressureSensor"
-        ],
-        "recognitionClassification": [
-          "GestureRecognition"
-        ],
-        "interactionModalities": [
-          "ContactBased",
-          "DirectTouch",
-          "MultiModalInteraction"
-        ],
-        "gestureTypes": [
-          "DirectionalGesture",
-          "MultiTouch",
-          "Swipe",
-          "Tap"
-        ],
-        "applicationScenarios": [
-          "AccessibilitySupport",
-          "TextInput"
-        ],
-        "feedbackOutput": [
-          "AudioFeedback",
-          "MultimodalFeedback"
-        ],
-        "userExperienceDesign": [
-          "FatFingerProblem",
-          "QWERTYLayout",
-          "TouchOptimized",
-          "UserAdaptation"
-        ],
-        "image": "Papers/SOFTWARE/Software预览图/2011 - Blind people and mobile touch-based text-entry acknowledging the need for different flavors.png"
-      },
-      {
-        "id": 128,
-        "title": "Static fingerspelling recognition based on boundary tracing algorithm and chain code",
-        "year": "2018",
-        "category": "software",
-        "hardwareDevices": [
-          "OtherDevices"
-        ],
-        "sensingTechnology": [
-          "ComputerVision"
-        ],
-        "recognitionClassification": [
-          "FingerTracking",
-          "GestureRecognition",
-          "HandTracking",
-          "StaticGestureRecognition"
-        ],
-        "interactionModalities": [
-          "NonContactBased"
-        ],
-        "gestureTypes": [
-          "SignLanguageRelated",
-          "SingleHand"
-        ],
-        "applicationScenarios": [
-          "AccessibilitySupport"
-        ],
-        "feedbackOutput": [
-          "VisualFeedback"
-        ],
-        "userExperienceDesign": [
-          "HighAccuracy",
-          "UserAdaptation"
-        ],
-        "image": "Papers/SOFTWARE/Software预览图/2018 - Static fingerspelling recognition based on boundary tracing algorithm and chain code.png"
-      },
-      {
-        "id": 130,
-        "title": "Performance evaluation of pattern recognition networks using electromyography signal and time-domain features for the classification of hand gestures",
-        "year": "2020",
-        "category": "software",
-        "hardwareDevices": [
-          "WearableSensor"
-        ],
-        "sensingTechnology": [
-          "Bio-Sensor",
-          "EMG"
-        ],
-        "recognitionClassification": [
-          "DynamicGestureRecognition",
-          "FingerTracking",
-          "GestureRecognition",
-          "StaticGestureRecognition"
-        ],
-        "interactionModalities": [
-          "ContactBased"
-        ],
-        "gestureTypes": [
-          "Flex",
-          "Grasp",
-          "SingleHand",
-          "Thumb-Index"
-        ],
-        "applicationScenarios": [
-          "AccessibilitySupport",
-          "Healthcare"
-        ],
-        "feedbackOutput": [
-          "RealTimeFeedback"
-        ],
-        "userExperienceDesign": [
-          "CommunicationAid",
-          "HighAccuracy"
-        ],
-        "image": "Papers/SOFTWARE/Software预览图/2020 - Performance evaluation of pattern recognition networks using electromyography signal and time-domain features for the cl.png"
-      },
-      {
-        "id": 131,
-        "title": "Keep in touch combining touch interaction with thumb-to-finger µGestures for people with visual impairment",
-        "year": "2022",
-        "category": "software",
-        "hardwareDevices": [
-          "Tablet",
-          "TouchScreen",
-          "WearableSensor",
-          "Wearables"
-        ],
-        "sensingTechnology": [
-          "CapacitiveSensor",
-          "OtherTechnology"
-        ],
-        "recognitionClassification": [
-          "GestureRecognition",
-          "StaticGestureRecognition"
-        ],
-        "interactionModalities": [
-          "ContactBased",
-          "DirectTouch",
-          "MultiModalInteraction"
-        ],
-        "gestureTypes": [
-          "SingleHand",
-          "Swipe",
-          "Tap",
-          "Thumb-Index"
-        ],
-        "applicationScenarios": [
-          "AccessibilitySupport",
-          "Education",
-          "Navigation"
-        ],
-        "feedbackOutput": [
-          "AudioFeedback",
-          "MultimodalFeedback",
-          "RealTimeFeedback"
-        ],
-        "userExperienceDesign": [
-          "CommunicationAid",
-          "DiscreetInput",
-          "EyesFree",
-          "HighAccuracy",
-          "OneHandUse",
-          "TouchOptimized"
-        ],
-        "image": "Papers/SOFTWARE/Software预览图/2022 - Keep in touch combining touch interaction with thumb-to-finger µGestures for people with visual impairment.png"
-      },
-      {
-        "id": 132,
-        "title": "µGeT multimodal eyes-free text selection technique combining touch interaction and microgestures",
-        "year": "2023",
-        "category": "software",
-        "hardwareDevices": [
-          "Tablet",
-          "TouchScreen",
-          "Wearables"
-        ],
-        "sensingTechnology": [
-          "CapacitiveSensor",
-          "ComputerVision"
-        ],
-        "recognitionClassification": [
-          "GestureRecognition",
-          "StaticGestureRecognition"
-        ],
-        "interactionModalities": [
-          "BodyContactGesture",
-          "ContactBased",
-          "DirectTouch",
-          "MultiModalInteraction"
-        ],
-        "gestureTypes": [
-          "Hold",
-          "SingleHand",
-          "Swipe",
-          "Tap",
-          "Thumb-Index"
-        ],
-        "applicationScenarios": [
-          "AccessibilitySupport",
-          "TextInput"
-        ],
-        "feedbackOutput": [
-          "AudioFeedback",
-          "RealTimeFeedback"
-        ],
-        "userExperienceDesign": [
-          "DiscreetInput",
-          "EyesFree",
-          "OneHandUse",
-          "TouchOptimized"
-        ],
-        "image": "Papers/SOFTWARE/Software预览图/2023 - µGeT multimodal eyes-free text selection technique combining touch interaction and microgestures.png"
-      },
-      {
-        "id": 142,
-        "title": "Combining Ring Input with Hand  Tracking for Precise, Natural Interaction with Spatial Analytic Interfaces",
-        "year": "2016",
-        "category": "software",
-        "hardwareDevices": [
-          "ARGlasses",
-          "SmartRing",
-          "WearableSensor",
-          "Wearables"
-        ],
-        "sensingTechnology": [
-          "CapacitiveSensor",
-          "ComputerVision",
-          "DepthSensing",
-          "IMU",
-          "OpticalTracking"
-        ],
-        "recognitionClassification": [
-          "3DPoseEstimation",
-          "ContinuousRecognition",
-          "GestureRecognition",
-          "HandTracking"
-        ],
-        "interactionModalities": [
-          "ContactBased",
-          "DirectTouch",
-          "InAirGesture",
-          "MultiModalInteraction",
-          "NonContactBased"
-        ],
-        "gestureTypes": [
-          "DirectionalGesture",
-          "Grasp",
-          "Pinch",
-          "SingleHand",
-          "Swipe",
-          "Tap"
-        ],
-        "applicationScenarios": [
-          "AR",
-          "Navigation",
-          "ObjectManipulation"
-        ],
-        "feedbackOutput": [
-          "HapticFeedback",
-          "RealTimeFeedback",
-          "VisualFeedback"
-        ],
-        "userExperienceDesign": [
-          "HandsFree",
-          "HighAccuracy",
-          "LowLatency",
-          "PortableDesign"
-        ],
-        "image": "Papers/SOFTWARE/Software预览图/2016 - Combining Ring Input with Hand  Tracking for Precise, Natural Interaction with Spatial Analytic Interfaces..png"
-      },
-      {
-        "id": 145,
-        "title": "Interacting with Soli- Exploring Fine-Grained Dynamic  Gesture Recognition in the Radio-Frequency Spectrum",
-        "year": "2016",
-        "category": "software",
-        "hardwareDevices": [
-          "OtherDevices",
-          "Wearables"
-        ],
-        "sensingTechnology": [
-          "RFSensing",
-          "RadarSensing"
-        ],
-        "recognitionClassification": [
-          "ContinuousRecognition",
-          "DynamicGestureRecognition",
-          "GestureRecognition",
-          "MotionAnalysis"
-        ],
-        "interactionModalities": [
-          "InAirGesture",
-          "NonContactBased"
-        ],
-        "gestureTypes": [
-          "DirectionalGesture",
-          "Pinch",
-          "SingleHand",
-          "Swipe",
-          "Tap"
-        ],
-        "applicationScenarios": [
-          "IoTControl",
-          "MediaControl",
-          "Navigation"
-        ],
-        "feedbackOutput": [
-          "RealTimeFeedback",
-          "VisualFeedback"
-        ],
-        "userExperienceDesign": [
-          "HandsFree",
-          "HighAccuracy",
-          "LowLatency",
-          "OcclusionAvoidance"
-        ],
-        "image": "Papers/SOFTWARE/Software预览图/2016-Interacting with Soli- Exploring Fine-Grained Dynamic  Gesture Recognition in the Radio-Frequency Spectrum.png"
-      },
-      {
-        "id": 158,
-        "title": "EarBuddy- Enabling On-Face Interaction via Wireless Earbuds",
-        "year": "2020",
-        "category": "software",
-        "hardwareDevices": [
-          "SmartPhone",
-          "WearableSensor",
-          "Wearables"
-        ],
-        "sensingTechnology": [
-          "Bio-Sensor",
-          "OtherTechnology"
-        ],
-        "recognitionClassification": [
-          "DynamicGestureRecognition",
-          "GestureRecognition",
-          "StaticGestureRecognition"
-        ],
-        "interactionModalities": [
-          "BodyContactGesture",
-          "ContactBased",
-          "EarBasedInteraction"
-        ],
-        "gestureTypes": [
-          "SingleHand",
-          "Swipe",
-          "Tap"
-        ],
-        "applicationScenarios": [
-          "AccessibilitySupport",
-          "MediaControl",
-          "SmartHome"
-        ],
-        "feedbackOutput": [
-          "AudioFeedback",
-          "VisualFeedback"
-        ],
-        "userExperienceDesign": [
-          "DiscreetInput",
-          "EyesFree",
-          "OneHandUse",
-          "PortableDesign",
-          "SocialAcceptability"
-        ],
-        "image": "Papers/SOFTWARE/Software预览图/2020-EarBuddy- Enabling On-Face Interaction via Wireless Earbuds.png"
-      },
-      {
-        "id": 171,
-        "title": "A Usability User Study Concerning Free-Hand Microgesture and Wrist-Worn Sensors",
-        "year": "2014",
-        "category": "software",
-        "hardwareDevices": [
-          "WearableSensor",
-          "Wearables"
-        ],
-        "sensingTechnology": [
-          "ComputerVision",
-          "DepthSensing",
-          "OtherTechnology"
-        ],
-        "recognitionClassification": [
-          "FingerTracking",
-          "GestureRecognition",
-          "StaticGestureRecognition"
-        ],
-        "interactionModalities": [
-          "NonContactBased"
-        ],
-        "gestureTypes": [
-          "DualHand",
-          "Flex",
-          "Pinch",
-          "SingleHand"
-        ],
-        "applicationScenarios": [
-          "IndustryApplication",
-          "MediaControl",
-          "Navigation",
-          "TextInput"
-        ],
-        "feedbackOutput": [
-          "RealTimeFeedback",
-          "VisualFeedback"
-        ],
-        "userExperienceDesign": [
-          "DiscreetInput",
-          "HighAccuracy",
-          "OneHandUse",
-          "SocialAcceptability",
-          "UserAdaptation"
-        ],
-        "image": "Papers/SOFTWARE/Software预览图/2014-A Usability User Study Concerning Free-Hand Microgesture and Wrist-Worn Sensors.png"
-      },
-      {
-        "id": 181,
-        "title": "Press-n-paste copy-and-paste operations with pressure-sensitive caret navigation for miniaturized surface in mobile aug",
-        "year": "2021",
-        "category": "software",
-        "image": "Papers/SOFTWARE/Software预览图/2021 - Press-n-paste copy-and-paste operations with pressure-sensitive caret navigation for miniaturized surface in mobile aug.png",
-        "hardwareDevices": [],
-        "sensingTechnology": [],
-        "recognitionClassification": [],
-        "interactionModalities": [],
-        "gestureTypes": [],
-        "applicationScenarios": [],
-        "feedbackOutput": [],
-        "userExperienceDesign": []
-      },
-      {
-        "id": 182,
-        "title": "Vulture- A Mid-Air Word-Gesture Keyboard",
-        "year": "2014",
-        "category": "software",
-        "image": "Papers/SOFTWARE/Software预览图/2014 - Vulture- A Mid-Air Word-Gesture Keyboard.png",
-        "hardwareDevices": [],
-        "sensingTechnology": [],
-        "recognitionClassification": [],
-        "interactionModalities": [],
-        "gestureTypes": [],
-        "applicationScenarios": [],
-        "feedbackOutput": [],
-        "userExperienceDesign": []
-      }
-    ],
-    "GestureDesign": [
-      {
-        "id": 5,
-        "title": "Design space for finger gestures with hand-held tablets",
-        "year": "2012",
-        "category": "GestureDesign",
-        "hardwareDevices": [
-          "Tablet",
-          "TouchScreen",
-          "WearableSensor"
-        ],
-        "sensingTechnology": [
-          "Accelerometer",
-          "CapacitiveSensor",
-          "Gyroscope",
-          "MotionSensor"
-        ],
-        "recognitionClassification": [
-          "DynamicGestureRecognition",
-          "FingerTracking",
-          "GestureRecognition",
-          "StaticGestureRecognition"
-        ],
-        "interactionModalities": [
-          "ContactBased",
-          "DirectTouch"
-        ],
-        "gestureTypes": [
-          "DualHand",
-          "Grasp",
-          "MultiTouch",
-          "SingleHand",
-          "Swipe",
-          "Tap"
-        ],
-        "applicationScenarios": [
-          "MediaControl",
-          "Navigation",
-          "ObjectManipulation"
-        ],
-        "feedbackOutput": [
-          "HapticFeedback",
-          "MultimodalFeedback",
-          "ProprioceptiveFeedback"
-        ],
-        "userExperienceDesign": [
-          "FatFingerProblem",
-          "OcclusionAvoidance",
-          "SocialAcceptability",
-          "TouchOptimized",
-          "UserAdaptation"
-        ],
-        "image": "Papers/GestureDesign/GestureDesign预览图/2012 - Design space for finger gestures with hand-held tablets.png"
-      },
-      {
-        "id": 11,
-        "title": "Gunslinger subtle arms-down mid-air interaction",
-        "year": "2015",
-        "category": "GestureDesign",
-        "hardwareDevices": [
-          "TouchScreen",
-          "WearableSensor",
-          "Wearables"
-        ],
-        "sensingTechnology": [
-          "ComputerVision",
-          "DepthSensing",
-          "OpticalTracking"
-        ],
-        "recognitionClassification": [
-          "FingerTracking",
-          "GestureRecognition",
-          "HandTracking",
-          "StaticGestureRecognition"
-        ],
-        "interactionModalities": [
-          "InAirGesture",
-          "MultiModalInteraction",
-          "NonContactBased"
-        ],
-        "gestureTypes": [
-          "DirectionalGesture",
-          "DualHand",
-          "Hold",
-          "Pinch",
-          "SingleHand",
-          "Tap",
-          "Thumb-Index"
-        ],
-        "applicationScenarios": [
-          "MediaControl",
-          "Navigation",
-          "ObjectManipulation"
-        ],
-        "feedbackOutput": [
-          "AudioFeedback",
-          "RealTimeFeedback",
-          "VisualFeedback"
-        ],
-        "userExperienceDesign": [
-          "DiscreetInput",
-          "HandsFree",
-          "LowLatency",
-          "MidasTouchProblem",
-          "OcclusionAvoidance",
-          "OneHandUse",
-          "TouchOptimized"
-        ],
-        "image": "Papers/GestureDesign/GestureDesign预览图/2015 - Gunslinger subtle arms-down mid-air interaction.png"
-      },
-      {
-        "id": 13,
-        "title": "Designing a willing-to-use-in-public hand gestural interaction technique for smart glasses",
-        "year": "2016",
-        "category": "GestureDesign",
-        "hardwareDevices": [
-          "DataGloves",
-          "HapticDevice",
-          "SmartGlasses",
-          "WearableSensor",
-          "Wearables"
-        ],
-        "sensingTechnology": [
-          "IMU",
-          "MotionSensor",
-          "PressureSensor"
-        ],
-        "recognitionClassification": [
-          "DynamicGestureRecognition",
-          "FingerTracking",
-          "GestureRecognition",
-          "HandTracking",
-          "StaticGestureRecognition"
-        ],
-        "interactionModalities": [
-          "InAirGesture",
-          "MultiModalInteraction",
-          "NonContactBased",
-          "TangibleInteraction"
-        ],
-        "gestureTypes": [
-          "DirectionalGesture",
-          "Flex",
-          "Pinch",
-          "SingleHand",
-          "Swipe",
-          "Tap",
-          "Thumb-Index"
-        ],
-        "applicationScenarios": [
-          "AR",
-          "Navigation",
-          "ObjectManipulation",
-          "TextInput"
-        ],
-        "feedbackOutput": [
-          "HapticFeedback",
-          "MultimodalFeedback",
-          "RealTimeFeedback",
-          "VisualFeedback"
-        ],
-        "userExperienceDesign": [
-          "DiscreetInput",
-          "HandsFree",
-          "OcclusionAvoidance",
-          "PortableDesign",
-          "SocialAcceptability",
-          "TouchOptimized"
-        ],
-        "image": "Papers/HARDWARE/Hardware预览图/2016 - Designing a willing-to-use-in-public hand gestural interaction technique for smart glasses.png"
-      },
-      {
-        "id": 18,
-        "title": "Gestures for smart rings empirical results, insights, and design implications",
-        "year": "2018",
-        "category": "GestureDesign",
-        "hardwareDevices": [
-          "SmartRing",
-          "Wearables"
-        ],
-        "sensingTechnology": [
-          "IMU",
-          "MotionSensor"
-        ],
-        "recognitionClassification": [
-          "DynamicGestureRecognition",
-          "GestureRecognition",
-          "StaticGestureRecognition"
-        ],
-        "interactionModalities": [
-          "ContactBased",
-          "DirectTouch",
-          "InAirGesture",
-          "NonContactBased"
-        ],
-        "gestureTypes": [
-          "DirectionalGesture",
-          "DualHand",
-          "SingleHand",
-          "Swipe",
-          "Tap"
-        ],
-        "applicationScenarios": [
-          "IoTControl",
-          "SmartHome"
-        ],
-        "feedbackOutput": [
-          "HapticFeedback"
-        ],
-        "userExperienceDesign": [
-          "DiscreetInput",
-          "OneHandUse",
-          "PortableDesign",
-          "SocialAcceptability",
-          "UserAdaptation"
-        ],
-        "image": "Papers/GestureDesign/GestureDesign预览图/2018 - Gestures for smart rings empirical results, insights, and design implications.png"
-      },
-      {
-        "id": 25,
-        "title": "Exploring user defined gestures for ear-based interactions",
-        "year": "2020",
-        "category": "GestureDesign",
-        "hardwareDevices": [
-          "OtherDevices",
-          "SmartGlasses",
-          "Wearables"
-        ],
-        "sensingTechnology": [
-          "MotionSensor",
-          "OtherTechnology",
-          "PressureSensor"
-        ],
-        "recognitionClassification": [
-          "DynamicGestureRecognition",
-          "FingerTracking",
-          "GestureRecognition",
-          "HandTracking",
-          "StaticGestureRecognition"
-        ],
-        "interactionModalities": [
-          "BodyContactGesture",
-          "ContactBased",
-          "EarBasedInteraction",
-          "InAirGesture",
-          "NonContactBased"
-        ],
-        "gestureTypes": [
-          "DirectionalGesture",
-          "Pinch",
-          "SingleHand",
-          "Swipe",
-          "Tap"
-        ],
-        "applicationScenarios": [
-          "AccessibilitySupport",
-          "MediaControl",
-          "Navigation",
-          "OtherScenarios",
-          "SmartHome"
-        ],
-        "feedbackOutput": [
-          "AudioFeedback",
-          "HapticFeedback",
-          "RealTimeFeedback"
-        ],
-        "userExperienceDesign": [
-          "DiscreetInput",
-          "EyesFree",
-          "OneHandUse",
-          "SocialAcceptability",
-          "UserAdaptation"
-        ],
-        "image": "Papers/GestureDesign/GestureDesign预览图/2020 - Exploring user defined gestures for ear-based interactions.png"
-      },
-      {
-        "id": 28,
-        "title": "How subtle can it get A trimodal study of ring-sized interfaces for one-handed drone control",
-        "year": "2020",
-        "category": "GestureDesign",
-        "hardwareDevices": [
-          "OtherDevices",
-          "SmartRing",
-          "SmartPhone",
-          "Wearables"
-        ],
-        "sensingTechnology": [
-          "CapacitiveSensor",
-          "IMU",
-          "MotionSensor",
-          "PressureSensor"
-        ],
-        "recognitionClassification": [
-          "ContinuousRecognition",
-          "DynamicGestureRecognition",
-          "GestureRecognition"
-        ],
-        "interactionModalities": [
-          "ContactBased",
-          "MultiModalInteraction",
-          "TangibleInteraction"
-        ],
-        "gestureTypes": [
-          "DirectionalGesture",
-          "Flex",
-          "Hold",
-          "SingleHand",
-          "Thumb-Index"
-        ],
-        "applicationScenarios": [
-          "OtherScenarios"
-        ],
-        "feedbackOutput": [
-          "HapticFeedback",
-          "RealTimeFeedback",
-          "VisualFeedback"
-        ],
-        "userExperienceDesign": [
-          "DiscreetInput",
-          "HighAccuracy",
-          "LowLatency",
-          "OneHandUse",
-          "SocialAcceptability"
-        ],
-        "image": "Papers/GestureDesign/GestureDesign预览图/2020 - How subtle can it get A trimodal study of ring-sized interfaces for one-handed drone control.png"
-      },
-      {
-        "id": 33,
-        "title": "SoloFinger robust microgestures while grasping everyday objects",
-        "year": "2021",
-        "category": "GestureDesign",
-        "hardwareDevices": [
-          "DataGloves",
-          "OtherDevices"
-        ],
-        "sensingTechnology": [
-          "MotionSensor",
-          "OpticalTracking"
-        ],
-        "recognitionClassification": [
-          "DynamicGestureRecognition",
-          "FingerTracking",
-          "GestureRecognition",
-          "StaticGestureRecognition"
-        ],
-        "interactionModalities": [
-          "DeviceContactGesture",
-          "DirectTouch"
-        ],
-        "gestureTypes": [
-          "Flex",
-          "Grasp",
-          "SingleHand",
-          "Swipe",
-          "Tap"
-        ],
-        "applicationScenarios": [
-          "ObjectManipulation",
-          "OtherScenarios"
-        ],
-        "feedbackOutput": [
-          "RealTimeFeedback",
-          "VisualFeedback"
-        ],
-        "userExperienceDesign": [
-          "EncumberedInteraction",
-          "HighAccuracy"
-        ],
-        "image": "Papers/GestureDesign/GestureDesign预览图/2021 - SoloFinger robust microgestures while grasping everyday objects.png"
-      },
-      {
-        "id": 53,
-        "title": "Exploring mixed-scale gesture interaction",
-        "year": "2017",
-        "category": "GestureDesign",
-        "hardwareDevices": [
-          "ARGlasses",
-          "WearableSensor"
-        ],
-        "sensingTechnology": [
-          "ComputerVision",
-          "OpticalTracking",
-          "RadarSensing"
-        ],
-        "recognitionClassification": [
-          "ContinuousRecognition",
-          "DynamicGestureRecognition",
-          "FingerTracking",
-          "GestureRecognition",
-          "HandTracking",
-          "StaticGestureRecognition"
-        ],
-        "interactionModalities": [
-          "InAirGesture",
-          "MultiModalInteraction",
-          "NonContactBased"
-        ],
-        "gestureTypes": [
-          "DirectionalGesture",
-          "DualHand",
-          "Grasp",
-          "SingleHand"
-        ],
-        "applicationScenarios": [
-          "AR",
-          "MediaControl",
-          "ObjectManipulation"
-        ],
-        "feedbackOutput": [
-          "RealTimeFeedback",
-          "VisualFeedback"
-        ],
-        "userExperienceDesign": [
-          "HighAccuracy",
-          "SocialAcceptability"
-        ],
-        "image": "Papers/GestureDesign/GestureDesign预览图/2017 - Exploring mixed-scale gesture interaction.png"
-      },
-      {
-        "id": 55,
-        "title": "Experimental analysis of barehand mid-air mode-switching techniques in virtual reality",
-        "year": "2019",
-        "category": "GestureDesign",
-        "hardwareDevices": [
-          "VRHeadset",
-          "WearableSensor"
-        ],
-        "sensingTechnology": [
-          "OpticalTracking",
-          "PressureSensor"
-        ],
-        "recognitionClassification": [
-          "GestureRecognition",
-          "HandTracking",
-          "StaticGestureRecognition"
-        ],
-        "interactionModalities": [
-          "BodyContactGesture",
-          "InAirGesture",
-          "NonContactBased"
-        ],
-        "gestureTypes": [
-          "DirectionalGesture",
-          "DualHand",
-          "Grasp",
-          "Pinch",
-          "SingleHand"
-        ],
-        "applicationScenarios": [
-          "ObjectManipulation",
-          "VR"
-        ],
-        "feedbackOutput": [
-          "AudioFeedback",
-          "RealTimeFeedback",
-          "VisualFeedback"
-        ],
-        "userExperienceDesign": [
-          "HandsFree",
-          "HighAccuracy",
-          "LowLatency",
-          "UserAdaptation"
-        ],
-        "image": "Papers/GestureDesign/GestureDesign预览图/2019 - Experimental analysis of barehand mid-air mode-switching techniques in virtual reality.png"
-      },
-      {
-        "id": 56,
-        "title": "Characterizing in-air eyes-free typing movements in VR",
-        "year": "2020",
-        "category": "GestureDesign",
-        "hardwareDevices": [
-          "OtherDevices",
-          "VRHeadset"
-        ],
-        "sensingTechnology": [
-          "MotionSensor",
-          "OpticalTracking"
-        ],
-        "recognitionClassification": [
-          "3DPoseEstimation",
-          "ContinuousRecognition",
-          "DynamicGestureRecognition",
-          "FingerTracking",
-          "GestureRecognition",
-          "HandTracking",
-          "MotionAnalysis",
-          "TrajectoryAnalysis"
-        ],
-        "interactionModalities": [
-          "InAirGesture",
-          "NonContactBased"
-        ],
-        "gestureTypes": [
-          "DualHand",
-          "Flex",
-          "Tap"
-        ],
-        "applicationScenarios": [
-          "TextInput",
-          "VR"
-        ],
-        "feedbackOutput": [
-          "AudioFeedback",
-          "VisualFeedback"
-        ],
-        "userExperienceDesign": [
-          "EyesFree",
-          "HandsFree",
-          "HighAccuracy",
-          "QWERTYLayout"
-        ],
-        "image": "Papers/GestureDesign/GestureDesign预览图/2020 - Characterizing in-air eyes-free typing movements in VR.png"
-      },
-      {
-        "id": 57,
-        "title": "User gesture elicitation of common smartphone tasks for hand proximate user interfaces",
-        "year": "2020",
-        "category": "GestureDesign",
-        "hardwareDevices": [
-          "ARGlasses",
-          "SmartGlasses",
-          "SmartPhone"
-        ],
-        "sensingTechnology": [
-          "ComputerVision"
-        ],
-        "recognitionClassification": [
-          "DynamicGestureRecognition",
-          "GestureRecognition",
-          "HandTracking",
-          "StaticGestureRecognition"
-        ],
-        "interactionModalities": [
-          "BodyContactGesture",
-          "DirectTouch",
-          "InAirGesture"
-        ],
-        "gestureTypes": [
-          "Flex",
-          "Pinch",
-          "SingleHand",
-          "Swipe",
-          "Tap",
-          "Thumb-Index"
-        ],
-        "applicationScenarios": [
-          "AR",
-          "MR",
-          "MediaControl",
-          "Navigation"
-        ],
-        "feedbackOutput": [
-          "VisualFeedback"
-        ],
-        "userExperienceDesign": [
-          "OneHandUse",
-          "SocialAcceptability",
-          "UserAdaptation"
-        ],
-        "image": "Papers/GestureDesign/GestureDesign预览图/2020-User gesture elicitation of common smartphone tasks for hand proximate user interfaces.png"
-      },
-      {
-        "id": 66,
-        "title": "Understanding Gesture and Microgesture Inputs for Augmented Reality Maps",
-        "year": "2024",
-        "category": "GestureDesign",
-        "hardwareDevices": [
-          "ARGlasses",
-          "SmartGlasses",
-          "WearableSensor",
-          "Wearables"
-        ],
-        "sensingTechnology": [
-          "Accelerometer",
-          "CapacitiveSensor",
-          "ComputerVision",
-          "IMU",
-          "OpticalTracking"
-        ],
-        "recognitionClassification": [
-          "FingerTracking",
-          "GestureRecognition",
-          "HandTracking"
-        ],
-        "interactionModalities": [
-          "BodyContactGesture",
-          "ContactBased",
-          "MultiModalInteraction"
-        ],
-        "gestureTypes": [
-          "DirectionalGesture",
-          "SingleHand",
-          "Swipe",
-          "Tap"
-        ],
-        "applicationScenarios": [
-          "AR",
-          "Navigation"
-        ],
-        "feedbackOutput": [
-          "HapticFeedback",
-          "ProprioceptiveFeedback"
-        ],
-        "userExperienceDesign": [
-          "DiscreetInput",
-          "EyesFree",
-          "OneHandUse",
-          "SocialAcceptability"
-        ],
-        "image": "Papers/GestureDesign/GestureDesign预览图/2024-Understanding Gesture and Microgesture Inputs for Augmented Reality Maps.png"
-      },
-      {
-        "id": 67,
-        "title": "T2IRay Design of Thumb-to-Index based Indirect Pointing for Continuous and Robust AR VR Input",
-        "year": "2025",
-        "category": "GestureDesign",
-        "hardwareDevices": [
-          "ARGlasses",
-          "VRHeadset"
-        ],
-        "sensingTechnology": [
-          "ComputerVision",
-          "OpticalTracking"
-        ],
-        "recognitionClassification": [
-          "ContinuousRecognition",
-          "FingerTracking",
-          "GestureRecognition",
-          "HandTracking"
-        ],
-        "interactionModalities": [
-          "BodyContactGesture",
-          "ContactBased",
-          "MultiModalInteraction"
-        ],
-        "gestureTypes": [
-          "DirectionalGesture",
-          "SingleHand",
-          "Tap",
-          "Thumb-Index"
-        ],
-        "applicationScenarios": [
-          "AR",
-          "ObjectManipulation",
-          "VR"
-        ],
-        "feedbackOutput": [
-          "ProprioceptiveFeedback",
-          "VisualFeedback"
-        ],
-        "userExperienceDesign": [
-          "DiscreetInput",
-          "EyesFree",
-          "HighAccuracy",
-          "OneHandUse",
-          "SocialAcceptability"
-        ],
-        "image": "Papers/GestureDesign/GestureDesign预览图/2025-T2IRay Design of Thumb-to-Index based Indirect Pointing for Continuous and Robust AR VR Input.png"
-      },
-      {
-        "id": 68,
-        "title": "Key-press gestures recognition and interaction based on SEMG signals",
-        "year": "2010",
-        "category": "GestureDesign",
-        "hardwareDevices": [
-          "SmartPhone",
-          "WearableSensor",
-          "Wearables"
-        ],
-        "sensingTechnology": [
-          "Bio-Sensor",
-          "EMG"
-        ],
-        "recognitionClassification": [
-          "ContinuousRecognition",
-          "DynamicGestureRecognition",
-          "FingerTracking",
-          "GestureRecognition",
-          "StaticGestureRecognition"
-        ],
-        "interactionModalities": [
-          "BodyContactGesture",
-          "ContactBased",
-          "MultiModalInteraction"
-        ],
-        "gestureTypes": [
-          "Flex",
-          "Hold",
-          "SingleHand"
-        ],
-        "applicationScenarios": [
-          "MediaControl",
-          "TextInput"
-        ],
-        "feedbackOutput": [
-          "RealTimeFeedback",
-          "VisualFeedback"
-        ],
-        "userExperienceDesign": [
-          "DiscreetInput",
-          "EncumberedInteraction",
-          "EyesFree",
-          "HandsFree",
-          "HighAccuracy",
-          "OneHandUse",
-          "PortableDesign",
-          "SocialAcceptability"
-        ],
-        "image": "Papers/GestureDesign/GestureDesign预览图/2010 - Key-press gestures recognition and interaction based on SEMG signals.png"
-      },
-      {
-        "id": 69,
-        "title": "A study of on-device gestures",
-        "year": "2012",
-        "category": "GestureDesign",
-        "hardwareDevices": [
-          "SmartPhone"
-        ],
-        "sensingTechnology": [
-          "PressureSensor"
-        ],
-        "recognitionClassification": [
-          "GestureRecognition",
-          "MotionAnalysis"
-        ],
-        "interactionModalities": [
-          "BackofDevices",
-          "ContactBased",
-          "DeviceContactGesture"
-        ],
-        "gestureTypes": [
-          "Grasp",
-          "SingleHand",
-          "Swipe"
-        ],
-        "applicationScenarios": [
-          "MediaControl",
-          "Navigation",
-          "OtherScenarios"
-        ],
-        "feedbackOutput": [
-          "ProprioceptiveFeedback"
-        ],
-        "userExperienceDesign": [
-          "EncumberedInteraction",
-          "OcclusionAvoidance",
-          "OneHandUse"
-        ],
-        "image": "Papers/GestureDesign/GestureDesign预览图/2012 - A study of on-device gestures.png"
-      },
-      {
-        "id": 70,
-        "title": "PinchPad performance of touch-based gestures while grasping devices",
-        "year": "2012",
-        "category": "GestureDesign",
-        "hardwareDevices": [
-          "Tablet"
-        ],
-        "sensingTechnology": [
-          "CapacitiveSensor"
-        ],
-        "recognitionClassification": [
-          "FingerTracking",
-          "GestureRecognition",
-          "MotionAnalysis"
-        ],
-        "interactionModalities": [
-          "BackofDevices",
-          "ContactBased",
-          "DeviceContactGesture",
-          "DirectTouch"
-        ],
-        "gestureTypes": [
-          "Grasp",
-          "Pinch",
-          "Swipe",
-          "Tap"
-        ],
-        "applicationScenarios": [
-          "MediaControl"
-        ],
-        "feedbackOutput": [
-          "HapticFeedback",
-          "ProprioceptiveFeedback"
-        ],
-        "userExperienceDesign": [
-          "EyesFree",
-          "OcclusionAvoidance",
-          "OneHandUse"
-        ],
-        "image": "Papers/GestureDesign/GestureDesign预览图/2012 - PinchPad performance of touch-based gestures while grasping devices.png"
-      },
-      {
-        "id": 71,
-        "title": "The fat thumb using the thumb's contact size for single-handed mobile interaction",
-        "year": "2012",
-        "category": "GestureDesign",
-        "hardwareDevices": [
-          "SmartPhone"
-        ],
-        "sensingTechnology": [
-          "CapacitiveSensor",
-          "PressureSensor"
-        ],
-        "recognitionClassification": [
-          "FingerTracking",
-          "GestureRecognition"
-        ],
-        "interactionModalities": [
-          "ContactBased",
-          "DirectTouch"
-        ],
-        "gestureTypes": [
-          "SingleHand",
-          "Thumb-Index"
-        ],
-        "applicationScenarios": [
-          "MediaControl",
-          "Navigation"
-        ],
-        "feedbackOutput": [
-          "HapticFeedback",
-          "VisualFeedback"
-        ],
-        "userExperienceDesign": [
-          "FatFingerProblem",
-          "OneHandUse",
-          "SmallScreen",
-          "TouchOptimized"
-        ],
-        "image": "Papers/GestureDesign/GestureDesign预览图/2012 - The fat thumb using the thumb's contact size for single-handed mobile interaction.png"
-      },
-      {
-        "id": 72,
-        "title": "Exploring pinch and spread gestures on mobile devices",
-        "year": "2013",
-        "category": "GestureDesign",
-        "hardwareDevices": [
-          "SmartPhone",
-          "Tablet"
-        ],
-        "sensingTechnology": [
-          "CapacitiveSensor"
-        ],
-        "recognitionClassification": [
-          "GestureRecognition",
-          "MotionAnalysis"
-        ],
-        "interactionModalities": [
-          "DirectTouch",
-          "MultiModalInteraction"
-        ],
-        "gestureTypes": [
-          "DualHand",
-          "MultiTouch",
-          "Pinch",
-          "Thumb-Index"
-        ],
-        "applicationScenarios": [
-          "MediaControl"
-        ],
-        "feedbackOutput": [
-          "VisualFeedback"
-        ],
-        "userExperienceDesign": [
-          "HighAccuracy",
-          "SmallScreen",
-          "TouchOptimized"
-        ],
-        "image": "Papers/GestureDesign/GestureDesign预览图/2013 - Exploring pinch and spread gestures on mobile devices.png"
-      },
-      {
-        "id": 74,
-        "title": "Leap gestures for TV insights from an elicitation study",
-        "year": "2014",
-        "category": "GestureDesign",
-        "hardwareDevices": [
-          "OtherDevices"
-        ],
-        "sensingTechnology": [
-          "MotionSensor",
-          "OpticalTracking"
-        ],
-        "recognitionClassification": [
-          "3DPoseEstimation",
-          "DynamicGestureRecognition",
-          "FingerTracking",
-          "GestureRecognition",
-          "HandTracking",
-          "StaticGestureRecognition"
-        ],
-        "interactionModalities": [
-          "InAirGesture",
-          "NonContactBased"
-        ],
-        "gestureTypes": [
-          "Flex",
-          "Hold",
-          "SingleHand"
-        ],
-        "applicationScenarios": [
-          "MediaControl"
-        ],
-        "feedbackOutput": [
-          "VisualFeedback"
-        ],
-        "userExperienceDesign": [
-          "ElicitationStudy",
-          "HandsFree",
-          "SocialAcceptability",
-          "UserAdaptation"
-        ],
-        "image": "Papers/GestureDesign/GestureDesign预览图/2014 - Leap gestures for TV insights from an elicitation study.png"
-      },
-      {
-        "id": 76,
-        "title": "Interaction proxemics combining physical spaces for seamless gesture interaction",
-        "year": "2015",
-        "category": "GestureDesign",
-        "hardwareDevices": [
-          "OtherDevices",
-          "TouchScreen"
-        ],
-        "sensingTechnology": [
-          "DepthSensing",
-          "MotionSensor",
-          "OpticalTracking"
-        ],
-        "recognitionClassification": [
-          "FingerTracking",
-          "GestureRecognition",
-          "HandTracking"
-        ],
-        "interactionModalities": [
-          "DirectTouch",
-          "InAirGesture",
-          "MultiModalInteraction"
-        ],
-        "gestureTypes": [
-          "DirectionalGesture",
-          "DualHand",
-          "Pinch",
-          "SingleHand",
-          "Swipe",
-          "Tap"
-        ],
-        "applicationScenarios": [
-          "Navigation",
-          "ObjectManipulation",
-          "TextInput"
-        ],
-        "feedbackOutput": [
-          "AudioFeedback",
-          "VisualFeedback"
-        ],
-        "userExperienceDesign": [
-          "UserAdaptation"
-        ],
-        "image": "Papers/GestureDesign/GestureDesign预览图/2015 - Interaction proxemics combining physical spaces for seamless gesture interaction.png"
-      },
-      {
-        "id": 77,
-        "title": "Exploring non-touchscreen gestures for smartwatches",
-        "year": "2016",
-        "category": "GestureDesign",
-        "hardwareDevices": [
-          "SmartWatch",
-          "Wearables"
-        ],
-        "sensingTechnology": [
-          "MotionSensor",
-          "OpticalTracking"
-        ],
-        "recognitionClassification": [
-          "FingerTracking",
-          "GestureRecognition",
-          "HandTracking"
-        ],
-        "interactionModalities": [
-          "DeviceContactGesture",
-          "InAirGesture",
-          "MultiModalInteraction"
-        ],
-        "gestureTypes": [
-          "DirectionalGesture",
-          "Pinch",
-          "SingleHand",
-          "Swipe",
-          "Tap"
-        ],
-        "applicationScenarios": [
-          "MediaControl",
-          "Navigation"
-        ],
-        "feedbackOutput": [
-          "HapticFeedback",
-          "VisualFeedback"
-        ],
-        "userExperienceDesign": [
-          "DiscreetInput",
-          "ElicitationStudy",
-          "FatFingerProblem",
-          "OcclusionAvoidance",
-          "SmallScreen",
-          "SocialAcceptability"
-        ],
-        "image": "Papers/GestureDesign/GestureDesign预览图/2016 - Exploring non-touchscreen gestures for smartwatches.png"
-      },
-      {
-        "id": 80,
-        "title": "Investigating how the hand interacts with different mobile phones",
-        "year": "2016",
-        "category": "GestureDesign",
-        "hardwareDevices": [
-          "Keyboard",
-          "SmartPhone",
-          "TouchScreen"
-        ],
-        "sensingTechnology": [
-          "ComputerVision"
-        ],
-        "recognitionClassification": [
-          "MotionAnalysis"
-        ],
-        "interactionModalities": [
-          "ContactBased",
-          "DeviceContactGesture",
-          "DirectTouch"
-        ],
-        "gestureTypes": [
-          "DualHand",
-          "Grasp",
-          "Hold",
-          "SingleHand"
-        ],
-        "applicationScenarios": [
-          "MediaControl",
-          "TextInput"
-        ],
-        "feedbackOutput": [
-          "VisualFeedback"
-        ],
-        "userExperienceDesign": [
-          "ElicitationStudy",
-          "OneHandUse",
-          "TouchOptimized"
-        ],
-        "image": "Papers/GestureDesign/GestureDesign预览图/2016 - Investigating how the hand interacts with different mobile phones.png"
-      },
-      {
-        "id": 82,
-        "title": "Understanding grip shifts how form factors impact hand movements on mobile phones",
-        "year": "2017",
-        "category": "GestureDesign",
-        "hardwareDevices": [
-          "SmartPhone",
-          "TouchScreen"
-        ],
-        "sensingTechnology": [
-          "Accelerometer",
-          "Gyroscope",
-          "MotionSensor"
-        ],
-        "recognitionClassification": [
-          "GestureRecognition",
-          "MotionAnalysis"
-        ],
-        "interactionModalities": [
-          "ContactBased",
-          "DirectTouch"
-        ],
-        "gestureTypes": [
-          "DualHand",
-          "Hold",
-          "SingleHand",
-          "Tap",
-          "Thumb-Index"
-        ],
-        "applicationScenarios": [
-          "Navigation",
-          "TextInput"
-        ],
-        "feedbackOutput": [
-          "VisualFeedback"
-        ],
-        "userExperienceDesign": [
-          "OneHandUse",
-          "PortableDesign",
-          "SmallScreen",
-          "TouchOptimized"
-        ],
-        "image": "Papers/GestureDesign/GestureDesign预览图/2017 - Understanding grip shifts how form factors impact hand movements on mobile phones.png"
-      },
-      {
-        "id": 83,
-        "title": "Characterizing finger pitch and roll orientation during atomic touch actions",
-        "year": "2018",
-        "category": "GestureDesign",
-        "hardwareDevices": [
-          "Tablet",
-          "TouchScreen"
-        ],
-        "sensingTechnology": [
-          "Accelerometer",
-          "Gyroscope",
-          "IMU",
-          "Magnetometer"
-        ],
-        "recognitionClassification": [
-          "FingerTracking",
-          "GestureRecognition",
-          "MotionAnalysis"
-        ],
-        "interactionModalities": [
-          "ContactBased",
-          "DirectTouch"
-        ],
-        "gestureTypes": [
-          "DualHand",
-          "Hold",
-          "MultiTouch",
-          "Pinch",
-          "SingleHand",
-          "Swipe",
-          "Tap",
-          "Thumb-Index"
-        ],
-        "applicationScenarios": [
-          "ObjectManipulation"
-        ],
-        "feedbackOutput": [
-          "VisualFeedback"
-        ],
-        "userExperienceDesign": [
-          "ElicitationStudy",
-          "TouchOptimized"
-        ],
-        "image": "Papers/GestureDesign/GestureDesign预览图/2018 - Characterizing finger pitch and roll orientation during atomic touch actions.png"
-      },
-      {
-        "id": 84,
-        "title": "Fingers' range and comfortable area for one-handed smartphone interaction beyond the touchscreen",
-        "year": "2018",
-        "category": "GestureDesign",
-        "hardwareDevices": [
-          "SmartPhone",
-          "TouchScreen"
-        ],
-        "sensingTechnology": [
-          "OpticalTracking"
-        ],
-        "recognitionClassification": [
-          "FingerTracking",
-          "GestureRecognition",
-          "MotionAnalysis"
-        ],
-        "interactionModalities": [
-          "BackofDevices",
-          "ContactBased",
-          "DirectTouch"
-        ],
-        "gestureTypes": [
-          "SingleHand",
-          "Swipe",
-          "Tap",
-          "Thumb-Index"
-        ],
-        "applicationScenarios": [
-          "MediaControl",
-          "Navigation"
-        ],
-        "feedbackOutput": [
-          "VisualFeedback"
-        ],
-        "userExperienceDesign": [
-          "ElicitationStudy",
-          "FatFingerProblem",
-          "OcclusionAvoidance",
-          "OneHandUse",
-          "PortableDesign",
-          "TouchOptimized"
-        ],
-        "image": "Papers/GestureDesign/GestureDesign预览图/2018 - Fingers' range and comfortable area for one-handed smartphone interaction beyond the touchscreen.png"
-      },
-      {
-        "id": 86,
-        "title": "Pen + mid-air gestures eliciting contextual gestures",
-        "year": "2018",
-        "category": "GestureDesign",
-        "hardwareDevices": [
-          "Tablet",
-          "TouchScreen"
-        ],
-        "sensingTechnology": [
-          "ComputerVision",
-          "MotionSensor",
-          "OpticalTracking"
-        ],
-        "recognitionClassification": [
-          "DynamicGestureRecognition",
-          "GestureRecognition",
-          "HandTracking"
-        ],
-        "interactionModalities": [
-          "InAirGesture",
-          "MultiModalInteraction",
-          "NonContactBased",
-          "PenInput"
-        ],
-        "gestureTypes": [
-          "DirectionalGesture",
-          "DualHand",
-          "Grasp",
-          "Pinch",
-          "Swipe"
-        ],
-        "applicationScenarios": [
-          "DigitalArt",
-          "Education",
-          "MediaControl",
-          "ObjectManipulation"
-        ],
-        "feedbackOutput": [
-          "RealTimeFeedback",
-          "VisualFeedback"
-        ],
-        "userExperienceDesign": [
-          "ElicitationStudy",
-          "EncumberedInteraction",
-          "UserAdaptation"
-        ],
-        "image": "Papers/GestureDesign/GestureDesign预览图/2018 - Pen + mid-air gestures eliciting contextual gestures.png"
-      },
-      {
-        "id": 87,
-        "title": "Unimanual Pen Touch Input Using Variations of Precision Grip Postures",
-        "year": "2018",
-        "category": "GestureDesign",
-        "hardwareDevices": [
-          "Tablet",
-          "TouchScreen"
-        ],
-        "sensingTechnology": [
-          "CapacitiveSensor"
-        ],
-        "recognitionClassification": [
-          "GestureRecognition",
-          "HandTracking",
-          "StaticGestureRecognition"
-        ],
-        "interactionModalities": [
-          "ContactBased",
-          "MultiModalInteraction",
-          "PenInput"
-        ],
-        "gestureTypes": [
-          "Grasp",
-          "MultiTouch",
-          "SingleHand"
-        ],
-        "applicationScenarios": [
-          "DigitalArt",
-          "Education",
-          "ObjectManipulation",
-          "TextInput"
-        ],
-        "feedbackOutput": [
-          "RealTimeFeedback",
-          "VisualFeedback"
-        ],
-        "userExperienceDesign": [
-          "ElicitationStudy",
-          "HighAccuracy",
-          "OneHandUse",
-          "UserAdaptation"
-        ],
-        "image": "Papers/GestureDesign/GestureDesign预览图/2018-Unimanual Pen Touch Input Using Variations of Precision Grip Postures.png"
-      },
-      {
-        "id": 88,
-        "title": "Gaze-assisted typing for smart glasses",
-        "year": "2019",
-        "category": "GestureDesign",
-        "hardwareDevices": [
-          "SmartGlasses",
-          "VRHeadset",
-          "Wearables"
-        ],
-        "sensingTechnology": [
-          "CapacitiveSensor",
-          "OpticalTracking"
-        ],
-        "recognitionClassification": [
-          "DynamicGestureRecognition",
-          "GestureRecognition",
-          "StaticGestureRecognition"
-        ],
-        "interactionModalities": [
-          "ContactBased",
-          "DeviceContactGesture",
-          "GazeBased",
-          "MultiModalInteraction"
-        ],
-        "gestureTypes": [
-          "DirectionalGesture",
-          "SingleHand",
-          "Swipe",
-          "Tap"
-        ],
-        "applicationScenarios": [
-          "AccessibilitySupport",
-          "TextInput"
-        ],
-        "feedbackOutput": [
-          "AudioFeedback",
-          "RealTimeFeedback",
-          "VisualFeedback"
-        ],
-        "userExperienceDesign": [
-          "ElicitationStudy",
-          "EyesFree",
-          "LowLatency",
-          "MidasTouchProblem",
-          "OneHandUse",
-          "UserAdaptation"
-        ],
-        "image": "Papers/GestureDesign/GestureDesign预览图/2019 - Gaze-assisted typing for smart glasses.png"
-      },
-      {
-        "id": 89,
-        "title": "Investigating unintended inputs for one-handed touch interaction beyond the touchscreen",
-        "year": "2019",
-        "category": "GestureDesign",
-        "hardwareDevices": [
-          "SmartPhone",
-          "Wearables"
-        ],
-        "sensingTechnology": [
-          "CapacitiveSensor",
-          "MotionSensor",
-          "OpticalTracking"
-        ],
-        "recognitionClassification": [
-          "FingerTracking",
-          "MotionAnalysis",
-          "StaticGestureRecognition"
-        ],
-        "interactionModalities": [
-          "BackofDevices",
-          "ContactBased",
-          "DeviceContactGesture"
-        ],
-        "gestureTypes": [
-          "Grasp",
-          "SingleHand"
-        ],
-        "applicationScenarios": [
-          "OtherScenarios"
-        ],
-        "feedbackOutput": [
-          "RealTimeFeedback",
-          "VisualFeedback"
-        ],
-        "userExperienceDesign": [
-          "ElicitationStudy",
-          "EncumberedInteraction",
-          "FatFingerProblem",
-          "OcclusionAvoidance",
-          "OneHandUse",
-          "SocialAcceptability",
-          "UserAdaptation"
-        ],
-        "image": "Papers/GestureDesign/GestureDesign预览图/2019 - Investigating unintended inputs for one-handed touch interaction beyond the touchscreen.png"
-      },
-      {
-        "id": 90,
-        "title": "Expanding Side Touch Input on Mobile Phones",
-        "year": "2020",
-        "category": "GestureDesign",
-        "hardwareDevices": [
-          "SmartPhone",
-          "TouchScreen"
-        ],
-        "sensingTechnology": [
-          "CapacitiveSensor",
-          "MotionSensor",
-          "OpticalTracking"
-        ],
-        "recognitionClassification": [
-          "DynamicGestureRecognition",
-          "FingerTracking",
-          "GestureRecognition"
-        ],
-        "interactionModalities": [
-          "BackofDevices",
-          "ContactBased",
-          "DirectTouch"
-        ],
-        "gestureTypes": [
-          "DirectionalGesture",
-          "SingleHand",
-          "Swipe",
-          "Tap",
-          "Thumb-Index"
-        ],
-        "applicationScenarios": [
-          "AccessibilitySupport",
-          "MediaControl",
-          "Navigation",
-          "TextInput"
-        ],
-        "feedbackOutput": [
-          "HapticFeedback",
-          "VisualFeedback"
-        ],
-        "userExperienceDesign": [
-          "ElicitationStudy",
-          "FatFingerProblem",
-          "HighAccuracy",
-          "OcclusionAvoidance",
-          "OneHandUse",
-          "PortableDesign"
-        ],
-        "image": "Papers/GestureDesign/GestureDesign预览图/2020 - Expanding side touch input on mobile phones finger reachability and two-dimensional taps and flicks using the index and.png"
-      },
-      {
-        "id": 91,
-        "title": "MagTouch robust finger identification for a smartwatch using a magnet ring and a built-in magnetometer",
-        "year": "2020",
-        "category": "GestureDesign",
-        "hardwareDevices": [
-          "SmartRing",
-          "SmartWatch",
-          "Wearables"
-        ],
-        "sensingTechnology": [
-          "IMU",
-          "Magnetometer",
-          "MotionSensor"
-        ],
-        "recognitionClassification": [
-          "FingerTracking",
-          "GestureRecognition",
-          "StaticGestureRecognition"
-        ],
-        "interactionModalities": [
-          "ContactBased",
-          "DirectTouch",
-          "TangibleInteraction"
-        ],
-        "gestureTypes": [
-          "SingleHand",
-          "Tap"
-        ],
-        "applicationScenarios": [
-          "MediaControl",
-          "TextInput"
-        ],
-        "feedbackOutput": [
-          "RealTimeFeedback",
-          "VisualFeedback"
-        ],
-        "userExperienceDesign": [
-          "HighAccuracy",
-          "LowLatency",
-          "OneHandUse",
-          "PortableDesign",
-          "SocialAcceptability"
-        ],
-        "image": "Papers/GestureDesign/GestureDesign预览图/2020 - MagTouch robust finger identification for a smartwatch using a magnet ring and a built-in magnetometer.png"
-      },
-      {
-        "id": 92,
-        "title": "PenSight enhanced interaction with a pen-top camera",
-        "year": "2020",
-        "category": "GestureDesign",
-        "hardwareDevices": [
-          "OtherDevices",
-          "Tablet"
-        ],
-        "sensingTechnology": [
-          "ComputerVision",
-          "DepthSensing",
-          "OpticalTracking"
-        ],
-        "recognitionClassification": [
-          "3DPoseEstimation",
-          "FingerTracking",
-          "GestureRecognition",
-          "HandTracking",
-          "StaticGestureRecognition"
-        ],
-        "interactionModalities": [
-          "ContactBased",
-          "MultiModalInteraction",
-          "NonContactBased",
-          "PenInput",
-          "TangibleInteraction"
-        ],
-        "gestureTypes": [
-          "DualHand",
-          "Grasp"
-        ],
-        "applicationScenarios": [
-          "DigitalArt",
-          "Education",
-          "Navigation",
-          "ObjectManipulation",
-          "TextInput"
-        ],
-        "feedbackOutput": [
-          "RealTimeFeedback",
-          "VisualFeedback"
-        ],
-        "userExperienceDesign": [
-          "ElicitationStudy",
-          "EncumberedInteraction",
-          "HighAccuracy",
-          "LowLatency",
-          "OcclusionAvoidance",
-          "PortableDesign"
-        ],
-        "image": "Papers/GestureDesign/GestureDesign预览图/2020 - PenSight enhanced interaction with a pen-top camera.png"
-      },
-      {
-        "id": 93,
-        "title": "Shortcut gestures for mobile text editing on fully touch sensitive smartphones",
-        "year": "2020",
-        "category": "GestureDesign",
-        "hardwareDevices": [
-          "SmartPhone",
-          "TouchScreen",
-          "Wearables"
-        ],
-        "sensingTechnology": [
-          "CapacitiveSensor"
-        ],
-        "recognitionClassification": [
-          "ContinuousRecognition",
-          "DynamicGestureRecognition",
-          "GestureRecognition"
-        ],
-        "interactionModalities": [
-          "BackofDevices",
-          "ContactBased",
-          "DeviceContactGesture",
-          "MultiModalInteraction"
-        ],
-        "gestureTypes": [
-          "DirectionalGesture",
-          "Hold",
-          "MultiTouch",
-          "SingleHand",
-          "Swipe",
-          "Tap"
-        ],
-        "applicationScenarios": [
-          "AccessibilitySupport",
-          "OtherScenarios",
-          "TextInput"
-        ],
-        "feedbackOutput": [
-          "RealTimeFeedback",
-          "VisualFeedback"
-        ],
-        "userExperienceDesign": [
-          "FatFingerProblem",
-          "HighAccuracy",
-          "OcclusionAvoidance",
-          "OneHandUse",
-          "UserAdaptation"
-        ],
-        "image": "Papers/GestureDesign/GestureDesign预览图/2020 - Shortcut gestures for mobile text editing on fully touch sensitive smartphones.png"
-      },
-      {
-        "id": 94,
-        "title": "Eliciting tangible and gestural user interactions with and on a cooking pan",
-        "year": "2020",
-        "category": "GestureDesign",
-        "hardwareDevices": [
-          "OtherDevices"
-        ],
-        "sensingTechnology": [
-          "ComputerVision",
-          "OtherTechnology"
-        ],
-        "recognitionClassification": [
-          "DynamicGestureRecognition",
-          "GestureRecognition",
-          "StaticGestureRecognition"
-        ],
-        "interactionModalities": [
-          "ContactBased",
-          "DeviceContactGesture",
-          "TangibleInteraction"
-        ],
-        "gestureTypes": [
-          "Grasp",
-          "SingleHand",
-          "Swipe",
-          "Tap"
-        ],
-        "applicationScenarios": [
-          "OtherScenarios",
-          "SmartHome"
-        ],
-        "feedbackOutput": [
-          "MultimodalFeedback",
-          "VisualFeedback"
-        ],
-        "userExperienceDesign": [
-          "ElicitationStudy",
-          "EncumberedInteraction"
-        ],
-        "image": "Papers/GestureDesign/GestureDesign预览图/2020 - Eliciting tangible and gestural user interactions with and on a cooking pan.png"
-      },
-      {
-        "id": 95,
-        "title": "3D hand pose estimation on conventional capacitive touchscreens",
-        "year": "2021",
-        "category": "GestureDesign",
-        "hardwareDevices": [
-          "Tablet",
-          "TouchScreen"
-        ],
-        "sensingTechnology": [
-          "CapacitiveSensor"
-        ],
-        "recognitionClassification": [
-          "3DPoseEstimation",
-          "ContinuousRecognition",
-          "DynamicGestureRecognition",
-          "FingerTracking",
-          "GestureRecognition",
-          "HandTracking"
-        ],
-        "interactionModalities": [
-          "ContactBased",
-          "DeviceContactGesture",
-          "MultiModalInteraction"
-        ],
-        "gestureTypes": [
-          "DualHand",
-          "Grasp",
-          "MultiTouch",
-          "SingleHand"
-        ],
-        "applicationScenarios": [
-          "AR",
-          "DigitalArt",
-          "Gaming",
-          "ObjectManipulation",
-          "Training",
-          "VR"
-        ],
-        "feedbackOutput": [
-          "RealTimeFeedback",
-          "VisualFeedback"
-        ],
-        "userExperienceDesign": [
-          "ElicitationStudy",
-          "FatFingerProblem",
-          "HighAccuracy",
-          "LowLatency",
-          "OcclusionAvoidance",
-          "UserAdaptation"
-        ],
-        "image": "Papers/GestureDesign/GestureDesign预览图/2021 - 3D hand pose estimation on conventional capacitive touchscreens.png"
-      },
-      {
-        "id": 98,
-        "title": "A User-based Mid-air Hand Gesture Set for Spreadsheets",
-        "year": "2021",
-        "category": "GestureDesign",
-        "hardwareDevices": [
-          "OtherDevices",
-          "VRHeadset"
-        ],
-        "sensingTechnology": [
-          "ComputerVision",
-          "MotionSensor",
-          "OpticalTracking"
-        ],
-        "recognitionClassification": [
-          "DynamicGestureRecognition",
-          "GestureRecognition"
-        ],
-        "interactionModalities": [
-          "InAirGesture",
-          "NonContactBased"
-        ],
-        "gestureTypes": [
-          "Pinch",
-          "SingleHand",
-          "Swipe"
-        ],
-        "applicationScenarios": [
-          "OtherScenarios"
-        ],
-        "feedbackOutput": [
-          "RealTimeFeedback",
-          "VisualFeedback"
-        ],
-        "userExperienceDesign": [
-          "ElicitationStudy"
-        ],
-        "image": "Papers/GestureDesign/GestureDesign预览图/2021-A User-based Mid-air Hand Gesture Set for Spreadsheets.png"
-      },
-      {
-        "id": 101,
-        "title": "SoloFinger Robust Microgestures while Grasping Everyday Objects",
-        "year": "2021",
-        "category": "GestureDesign",
-        "hardwareDevices": [
-          "DataGloves",
-          "WearableSensor"
-        ],
-        "sensingTechnology": [
-          "MotionSensor",
-          "OpticalTracking"
-        ],
-        "recognitionClassification": [
-          "DynamicGestureRecognition",
-          "FingerTracking",
-          "GestureRecognition",
-          "MotionAnalysis"
-        ],
-        "interactionModalities": [
-          "ContactBased",
-          "DeviceContactGesture"
-        ],
-        "gestureTypes": [
-          "DirectionalGesture",
-          "Flex",
-          "SingleHand",
-          "Swipe",
-          "Tap"
-        ],
-        "applicationScenarios": [
-          "ObjectManipulation",
-          "OtherScenarios"
-        ],
-        "feedbackOutput": [
-          "RealTimeFeedback"
-        ],
-        "userExperienceDesign": [
-          "ElicitationStudy",
-          "HighAccuracy",
-          "LowLatency",
-          "OneHandUse"
-        ],
-        "image": "Papers/GestureDesign/GestureDesign预览图/2021 - SoloFinger robust microgestures while grasping everyday objects.png"
-      },
-      {
-        "id": 103,
-        "title": "Enabling voice-accompanying hand-to-face gesture recognition with cross-device sensing",
-        "year": "2023",
-        "category": "GestureDesign",
-        "hardwareDevices": [
-          "SmartRing",
-          "SmartWatch",
-          "WearableSensor",
-          "Wearables"
-        ],
-        "sensingTechnology": [
-          "Accelerometer",
-          "Gyroscope",
-          "IMU",
-          "UltrasonicSensor"
-        ],
-        "recognitionClassification": [
-          "GestureRecognition",
-          "StaticGestureRecognition"
-        ],
-        "interactionModalities": [
-          "BodyContactGesture",
-          "EarBasedInteraction",
-          "MultiModalInteraction",
-          "VoiceGestureCombined"
-        ],
-        "gestureTypes": [
-          "SingleHand"
-        ],
-        "applicationScenarios": [
-          "AR",
-          "IoTControl",
-          "SmartHome"
-        ],
-        "feedbackOutput": [
-          "AudioFeedback",
-          "RealTimeFeedback"
-        ],
-        "userExperienceDesign": [
-          "ElicitationStudy",
-          "HandsFree",
-          "LowLatency",
-          "SocialAcceptability"
-        ],
-        "image": "Papers/GestureDesign/GestureDesign预览图/2023 - Enabling voice-accompanying hand-to-face gesture recognition with cross-device sensing.png"
-      },
-      {
-        "id": 109,
-        "title": "The performance and preference of different fingers and chords for pointing, dragging, and object transformation",
-        "year": "2016",
-        "category": "GestureDesign",
-        "hardwareDevices": [
-          "Tablet",
-          "TouchScreen"
-        ],
-        "sensingTechnology": [
-          "CapacitiveSensor"
-        ],
-        "recognitionClassification": [
-          "DynamicGestureRecognition",
-          "FingerTracking",
-          "GestureRecognition",
-          "HandTracking",
-          "StaticGestureRecognition"
-        ],
-        "interactionModalities": [
-          "ContactBased",
-          "DirectTouch",
-          "MultiModalInteraction"
-        ],
-        "gestureTypes": [
-          "DirectionalGesture",
-          "DualHand",
-          "Hold",
-          "MultiTouch",
-          "Pinch",
-          "SingleHand",
-          "Tap",
-          "Thumb-Index"
-        ],
-        "applicationScenarios": [
-          "ObjectManipulation"
-        ],
-        "feedbackOutput": [
-          "RealTimeFeedback",
-          "VisualFeedback"
-        ],
-        "userExperienceDesign": [
-          "HighAccuracy",
-          "LowLatency",
-          "TouchOptimized",
-          "UserAdaptation"
-        ],
-        "image": "Papers/GestureDesign/GestureDesign预览图/2016 - The performance and preference of different fingers and chords for pointing, dragging, and object transformation.png"
-      },
-      {
-        "id": 112,
-        "title": "M[eye]cro eye-gaze+microgestures for multitasking and interruptions",
-        "year": "2021",
-        "category": "GestureDesign",
-        "hardwareDevices": [
-          "OtherDevices",
-          "WearableSensor"
-        ],
-        "sensingTechnology": [
-          "ComputerVision",
-          "OpticalTracking",
-          "PressureSensor"
-        ],
-        "recognitionClassification": [
-          "GestureRecognition",
-          "StaticGestureRecognition"
-        ],
-        "interactionModalities": [
-          "ContactBased",
-          "DeviceContactGesture",
-          "GazeBased",
-          "MultiModalInteraction"
-        ],
-        "gestureTypes": [
-          "Pinch",
-          "SingleHand",
-          "Tap",
-          "Thumb-Index"
-        ],
-        "applicationScenarios": [
-          "InVehicleInteraction",
-          "ObjectManipulation",
-          "OtherScenarios"
-        ],
-        "feedbackOutput": [
-          "MultimodalFeedback",
-          "VisualFeedback"
-        ],
-        "userExperienceDesign": [
-          "DiscreetInput",
-          "EyesFree",
-          "HighAccuracy",
-          "LowLatency",
-          "MidasTouchProblem",
-          "OneHandUse"
-        ],
-        "image": "Papers/GestureDesign/GestureDesign预览图/2021 - M[eye]cro eye-gaze+microgestures for multitasking and interruptions.png"
-      },
-      {
-        "id": 116,
-        "title": "Towards the establishment of a framework for intuitive multi-touch interaction design",
-        "year": "2012",
-        "category": "GestureDesign",
-        "hardwareDevices": [
-          "SmartPhone",
-          "Tablet",
-          "TouchScreen"
-        ],
-        "sensingTechnology": [
-          "CapacitiveSensor"
-        ],
-        "recognitionClassification": [
-          "GestureRecognition",
-          "HandTracking",
-          "MotionAnalysis"
-        ],
-        "interactionModalities": [
-          "ContactBased",
-          "DirectTouch",
-          "MultiModalInteraction"
-        ],
-        "gestureTypes": [
-          "DirectionalGesture",
-          "DualHand",
-          "MultiTouch",
-          "Pinch",
-          "SingleHand",
-          "Swipe",
-          "Tap"
-        ],
-        "applicationScenarios": [
-          "Navigation",
-          "ObjectManipulation",
-          "OtherScenarios"
-        ],
-        "feedbackOutput": [
-          "AudioFeedback",
-          "HapticFeedback",
-          "MultimodalFeedback",
-          "VisualFeedback"
-        ],
-        "userExperienceDesign": [
-          "FatFingerProblem",
-          "HighAccuracy",
-          "OcclusionAvoidance",
-          "TouchOptimized",
-          "UserAdaptation"
-        ],
-        "image": "Papers/GestureDesign/GestureDesign预览图/2012 - Towards the establishment of a framework for intuitive multi-touch interaction design.png"
-      },
-      {
-        "id": 117,
-        "title": "Grasping microgestures eliciting single-hand microgestures for handheld objects",
-        "year": "2019",
-        "category": "GestureDesign",
-        "hardwareDevices": [
-          "OtherDevices",
-          "SmartPhone"
-        ],
-        "sensingTechnology": [
-          "ComputerVision",
-          "Magnetometer",
-          "OtherTechnology"
-        ],
-        "recognitionClassification": [
-          "DynamicGestureRecognition",
-          "FingerTracking",
-          "GestureRecognition",
-          "StaticGestureRecognition"
-        ],
-        "interactionModalities": [
-          "BodyContactGesture",
-          "ContactBased",
-          "DeviceContactGesture",
-          "DirectTouch"
-        ],
-        "gestureTypes": [
-          "DirectionalGesture",
-          "Grasp",
-          "Pinch",
-          "SingleHand",
-          "Swipe",
-          "Tap"
-        ],
-        "applicationScenarios": [
-          "IoTControl",
-          "ObjectManipulation",
-          "OtherScenarios",
-          "SmartHome"
-        ],
-        "feedbackOutput": [
-          "RealTimeFeedback"
-        ],
-        "userExperienceDesign": [
-          "DiscreetInput",
-          "ElicitationStudy",
-          "EncumberedInteraction",
-          "OneHandUse"
-        ],
-        "image": "Papers/GestureDesign/GestureDesign预览图/2019 - Grasping microgestures eliciting single-hand microgestures for handheld objects.png"
-      },
-      {
-        "id": 118,
-        "title": "Rhythmic micro-gestures discreet interaction on-the-go",
-        "year": "2017",
-        "category": "GestureDesign",
-        "hardwareDevices": [
-          "OtherDevices"
-        ],
-        "sensingTechnology": [
-          "MotionSensor",
-          "OpticalTracking"
-        ],
-        "recognitionClassification": [
-          "DynamicGestureRecognition",
-          "GestureRecognition",
-          "HandTracking"
-        ],
-        "interactionModalities": [
-          "InAirGesture",
-          "MultiModalInteraction",
-          "NonContactBased"
-        ],
-        "gestureTypes": [
-          "DirectionalGesture",
-          "Flex",
-          "SingleHand",
-          "Tap"
-        ],
-        "applicationScenarios": [
-          "MediaControl",
-          "Navigation",
-          "OtherScenarios"
-        ],
-        "feedbackOutput": [
-          "AudioFeedback",
-          "MultimodalFeedback",
-          "RealTimeFeedback",
-          "VisualFeedback"
-        ],
-        "userExperienceDesign": [
-          "DiscreetInput",
-          "EyesFree",
-          "MidasTouchProblem",
-          "OneHandUse",
-          "PortableDesign",
-          "SocialAcceptability"
-        ],
-        "image": "Papers/GestureDesign/GestureDesign预览图/2017 - Rhythmic micro-gestures discreet interaction on-the-go.png"
-      },
-      {
-        "id": 119,
-        "title": "Studying the visual representation of microgestures",
-        "year": "2023",
-        "category": "GestureDesign",
-        "hardwareDevices": [
-          "ARGlasses",
-          "OtherDevices"
-        ],
-        "sensingTechnology": [
-          "Magnetometer",
-          "OtherTechnology"
-        ],
-        "recognitionClassification": [],
-        "interactionModalities": [
-          "BodyContactGesture",
-          "ContactBased"
-        ],
-        "gestureTypes": [
-          "Flex",
-          "Hold",
-          "SingleHand",
-          "Swipe",
-          "Tap",
-          "Thumb-Index"
-        ],
-        "applicationScenarios": [
-          "AR",
-          "Education"
-        ],
-        "feedbackOutput": [
-          "VisualFeedback"
-        ],
-        "userExperienceDesign": [
-          "DiscreetInput",
-          "ElicitationStudy",
-          "OneHandUse"
-        ],
-        "image": "Papers/GestureDesign/GestureDesign预览图/2023 - Studying the visual representation of microgestures.png"
-      },
-      {
-        "id": 120,
-        "title": "µGlyph a microgesture notation",
-        "year": "2023",
-        "category": "GestureDesign",
-        "hardwareDevices": [
-          "OtherDevices"
-        ],
-        "sensingTechnology": [
-          "OtherTechnology"
-        ],
-        "recognitionClassification": [],
-        "interactionModalities": [
-          "BodyContactGesture",
-          "ContactBased",
-          "NonContactBased"
-        ],
-        "gestureTypes": [
-          "Flex",
-          "Hold",
-          "SingleHand",
-          "Swipe",
-          "Tap",
-          "Thumb-Index"
-        ],
-        "applicationScenarios": [
-          "Education"
-        ],
-        "feedbackOutput": [
-          "VisualFeedback"
-        ],
-        "userExperienceDesign": [
-          "DiscreetInput",
-          "OneHandUse"
-        ],
-        "image": "Papers/GestureDesign/GestureDesign预览图/2023 - µGlyph a microgesture notation.png"
-      },
-      {
-        "id": 121,
-        "title": "User elicitation on single-hand microgestures",
-        "year": "2016",
-        "category": "GestureDesign",
-        "hardwareDevices": [
-          "OtherDevices",
-          "Wearables"
-        ],
-        "sensingTechnology": [
-          "ComputerVision"
-        ],
-        "recognitionClassification": [
-          "FingerTracking",
-          "GestureRecognition",
-          "HandTracking"
-        ],
-        "interactionModalities": [
-          "BodyContactGesture",
-          "ContactBased"
-        ],
-        "gestureTypes": [
-          "Pinch",
-          "SingleHand",
-          "Swipe",
-          "Tap"
-        ],
-        "applicationScenarios": [
-          "MediaControl",
-          "ObjectManipulation",
-          "TextInput"
-        ],
-        "feedbackOutput": [
-          "VisualFeedback"
-        ],
-        "userExperienceDesign": [
-          "ElicitationStudy",
-          "EyesFree",
-          "OneHandUse",
-          "SocialAcceptability"
-        ],
-        "image": "Papers/GestureDesign/GestureDesign预览图/2016 - User elicitation on single-hand microgestures.png"
-      },
-      {
-        "id": 122,
-        "title": "Would you do that understanding social acceptance of gestural interfaces",
-        "year": "2010",
-        "category": "GestureDesign",
-        "hardwareDevices": [
-          "OtherDevices",
-          "SmartPhone"
-        ],
-        "sensingTechnology": [
-          "Accelerometer",
-          "IMU",
-          "MotionSensor"
-        ],
-        "recognitionClassification": [
-          "GestureRecognition",
-          "MotionAnalysis"
-        ],
-        "interactionModalities": [
-          "ContactBased",
-          "DeviceContactGesture",
-          "InAirGesture",
-          "NonContactBased"
-        ],
-        "gestureTypes": [
-          "DirectionalGesture",
-          "SingleHand",
-          "Tap"
-        ],
-        "applicationScenarios": [
-          "MediaControl",
-          "OtherScenarios",
-          "SmartHome"
-        ],
-        "feedbackOutput": [
-          "AudioFeedback",
-          "VisualFeedback"
-        ],
-        "userExperienceDesign": [
-          "DiscreetInput",
-          "SocialAcceptability",
-          "UserAdaptation"
-        ],
-        "image": "Papers/GestureDesign/GestureDesign预览图/2010 - Would you do that understanding social acceptance of gestural interfaces.png"
-      },
-      {
-        "id": 123,
-        "title": "Hands as a controller user preferences for hand specific on-skin gestures",
-        "year": "2017",
-        "category": "GestureDesign",
-        "hardwareDevices": [
-          "OtherDevices"
-        ],
-        "sensingTechnology": [
-          "CapacitiveSensor",
-          "ComputerVision",
-          "IMU",
-          "RadarSensing",
-          "UltrasonicSensor"
-        ],
-        "recognitionClassification": [
-          "DynamicGestureRecognition",
-          "FingerTracking",
-          "GestureRecognition",
-          "HandTracking",
-          "StaticGestureRecognition"
-        ],
-        "interactionModalities": [
-          "BodyContactGesture",
-          "ContactBased"
-        ],
-        "gestureTypes": [
-          "DualHand",
-          "Pinch",
-          "Swipe",
-          "Tap"
-        ],
-        "applicationScenarios": [
-          "InVehicleInteraction",
-          "IoTControl",
-          "MediaControl",
-          "SmartHome"
-        ],
-        "feedbackOutput": [
-          "VisualFeedback"
-        ],
-        "userExperienceDesign": [
-          "ElicitationStudy",
-          "SocialAcceptability"
-        ],
-        "image": "Papers/GestureDesign/GestureDesign预览图/2017 - Hands as a controller user preferences for hand specific on-skin gestures.png"
-      },
-      {
-        "id": 124,
-        "title": "Designing More Private and Socially Acceptable Hand-to-Face Gestures for Heads-Up Computing",
-        "year": "2024",
-        "category": "GestureDesign",
-        "hardwareDevices": [
-          "ARGlasses",
-          "SmartGlasses",
-          "WearableSensor"
-        ],
-        "sensingTechnology": [
-          "IMU",
-          "MotionSensor"
-        ],
-        "recognitionClassification": [
-          "DynamicGestureRecognition",
-          "FingerTracking",
-          "GestureRecognition",
-          "StaticGestureRecognition"
-        ],
-        "interactionModalities": [
-          "BodyContactGesture",
-          "ContactBased"
-        ],
-        "gestureTypes": [
-          "SingleHand",
-          "Swipe",
-          "Tap"
-        ],
-        "applicationScenarios": [
-          "OtherScenarios",
-          "VR"
-        ],
-        "feedbackOutput": [
-          "HapticFeedback",
-          "ProprioceptiveFeedback"
-        ],
-        "userExperienceDesign": [
-          "DiscreetInput",
-          "SocialAcceptability"
-        ],
-        "image": "Papers/GestureDesign/GestureDesign预览图/2024-Designing More Private and Socially Acceptable Hand-to-Face Gestures for Heads-Up Computing.png"
-      },
-      {
-        "id": 126,
-        "title": "Interaction gestures for a wearable device defined by visually impaired children",
-        "year": "2016",
-        "category": "GestureDesign",
-        "hardwareDevices": [
-          "WearableSensor",
-          "Wearables"
-        ],
-        "sensingTechnology": [
-          "CapacitiveSensor",
-          "IMU",
-          "MotionSensor"
-        ],
-        "recognitionClassification": [
-          "GestureRecognition",
-          "MotionAnalysis"
-        ],
-        "interactionModalities": [
-          "ContactBased",
-          "DeviceContactGesture",
-          "MultiModalInteraction"
-        ],
-        "gestureTypes": [
-          "Hold",
-          "Swipe",
-          "Tap"
-        ],
-        "applicationScenarios": [
-          "AccessibilitySupport",
-          "Healthcare",
-          "Training"
-        ],
-        "feedbackOutput": [
-          "AudioFeedback",
-          "MultimodalFeedback",
-          "RealTimeFeedback"
-        ],
-        "userExperienceDesign": [
-          "ElicitationStudy",
-          "EyesFree",
-          "OneHandUse",
-          "PortableDesign",
-          "UserAdaptation"
-        ],
-        "image": "Papers/GestureDesign/GestureDesign预览图/2016 - Interaction gestures for a wearable device defined by visually impaired children.png"
-      },
-      {
-        "id": 127,
-        "title": "Investigating microinteractions for people with visual impairments and the potential role of on-body interaction",
-        "year": "2017",
-        "category": "GestureDesign",
-        "hardwareDevices": [
-          "SmartWatch",
-          "SmartPhone",
-          "WearableSensor",
-          "Wearables"
-        ],
-        "sensingTechnology": [
-          "ComputerVision",
-          "IMU",
-          "MotionSensor",
-          "OtherTechnology"
-        ],
-        "recognitionClassification": [
-          "GestureRecognition",
-          "MotionAnalysis"
-        ],
-        "interactionModalities": [
-          "BodyContactGesture",
-          "ContactBased",
-          "MultiModalInteraction"
-        ],
-        "gestureTypes": [
-          "SingleHand",
-          "Swipe",
-          "Tap"
-        ],
-        "applicationScenarios": [
-          "AccessibilitySupport",
-          "MediaControl",
-          "Navigation",
-          "OtherScenarios"
-        ],
-        "feedbackOutput": [
-          "AudioFeedback",
-          "RealTimeFeedback"
-        ],
-        "userExperienceDesign": [
-          "EyesFree",
-          "OneHandUse",
-          "PortableDesign",
-          "SocialAcceptability",
-          "UserAdaptation"
-        ],
-        "image": "Papers/GestureDesign/GestureDesign预览图/2017 - Investigating microinteractions for people with visual impairments and the potential role of on-body interaction.png"
-      },
-      {
-        "id": 133,
-        "title": "Designing upper-body gesture interaction with and for people with spinal muscular atrophy in VR",
-        "year": "2024",
-        "category": "GestureDesign",
-        "hardwareDevices": [
-          "VRHeadset",
-          "Wearables"
-        ],
-        "sensingTechnology": [
-          "CapacitiveSensor",
-          "ComputerVision"
-        ],
-        "recognitionClassification": [
-          "GestureRecognition",
-          "StaticGestureRecognition"
-        ],
-        "interactionModalities": [
-          "BodyContactGesture",
-          "GazeBased",
-          "InAirGesture",
-          "MultiModalInteraction"
-        ],
-        "gestureTypes": [
-          "DirectionalGesture",
-          "Pinch",
-          "SingleHand",
-          "Thumb-Index"
-        ],
-        "applicationScenarios": [
-          "AccessibilitySupport",
-          "VR"
-        ],
-        "feedbackOutput": [
-          "AudioFeedback",
-          "RealTimeFeedback"
-        ],
-        "userExperienceDesign": [
-          "EyesFree",
-          "HandsFree",
-          "OneHandUse",
-          "UserAdaptation"
-        ],
-        "image": "Papers/GestureDesign/GestureDesign预览图/2024 - Designing upper-body gesture interaction with and for people with spinal muscular atrophy in VR.png"
-      },
-      {
-        "id": 134,
-        "title": "Finger gesture tracking for interactive applications a pilot study with sign languages",
-        "year": "2020",
-        "category": "GestureDesign",
-        "hardwareDevices": [
-          "SmartRing",
-          "SmartWatch",
-          "WearableSensor"
-        ],
-        "sensingTechnology": [
-          "IMU",
-          "MotionSensor"
-        ],
-        "recognitionClassification": [
-          "ContinuousRecognition",
-          "DynamicGestureRecognition",
-          "FingerTracking",
-          "GestureRecognition",
-          "HandTracking"
-        ],
-        "interactionModalities": [
-          "InAirGesture",
-          "NonContactBased"
-        ],
-        "gestureTypes": [
-          "DirectionalGesture",
-          "DualHand",
-          "SignLanguageRelated",
-          "SingleHand"
-        ],
-        "applicationScenarios": [
-          "AccessibilitySupport",
-          "Education"
-        ],
-        "feedbackOutput": [
-          "AudioFeedback",
-          "RealTimeFeedback",
-          "VisualFeedback"
-        ],
-        "userExperienceDesign": [
-          "HighAccuracy",
-          "LowLatency",
-          "PortableDesign",
-          "SocialAcceptability",
-          "UserAdaptation"
-        ],
-        "image": "Papers/GestureDesign/GestureDesign预览图/2020 - Finger gesture tracking for interactive applications a pilot study with sign languages.png"
-      },
-      {
-        "id": 135,
-        "title": "A non-linear model of shape  and motion for tracking finger spelt American sign language",
-        "year": "2002",
-        "category": "GestureDesign",
-        "hardwareDevices": [
-          "OtherDevices"
-        ],
-        "sensingTechnology": [
-          "ComputerVision",
-          "OpticalTracking"
-        ],
-        "recognitionClassification": [
-          "GestureRecognition",
-          "HandTracking",
-          "MotionAnalysis",
-          "StaticGestureRecognition"
-        ],
-        "interactionModalities": [
-          "InAirGesture",
-          "NonContactBased"
-        ],
-        "gestureTypes": [
-          "SignLanguageRelated",
-          "SingleHand"
-        ],
-        "applicationScenarios": [
-          "AccessibilitySupport",
-          "Education"
-        ],
-        "feedbackOutput": [
-          "VisualFeedback"
-        ],
-        "userExperienceDesign": [
-          "HandsFree",
-          "HighAccuracy",
-          "SocialAcceptability"
-        ],
-        "image": "Papers/GestureDesign/GestureDesign预览图/2002-A non-linear model of shape  and motion for tracking finger spelt American sign language.png"
-      },
-      {
-        "id": 143,
-        "title": "DigitSpace Designing Thumb-to-Fingers Touch Interfaces for One-Handed and Eyes-Free Interactions",
-        "year": "2016",
-        "category": "GestureDesign",
-        "hardwareDevices": [
-          "SmartWatch",
-          "WearableSensor",
-          "Wearables"
-        ],
-        "sensingTechnology": [
-          "OpticalTracking",
-          "OtherTechnology"
-        ],
-        "recognitionClassification": [
-          "DynamicGestureRecognition",
-          "GestureRecognition",
-          "StaticGestureRecognition"
-        ],
-        "interactionModalities": [
-          "BodyContactGesture",
-          "ContactBased",
-          "DirectTouch"
-        ],
-        "gestureTypes": [
-          "SingleHand",
-          "Swipe",
-          "Tap",
-          "Thumb-Index"
-        ],
-        "applicationScenarios": [
-          "MediaControl",
-          "TextInput"
-        ],
-        "feedbackOutput": [
-          "HapticFeedback",
-          "VisualFeedback"
-        ],
-        "userExperienceDesign": [
-          "ElicitationStudy",
-          "EyesFree",
-          "HighAccuracy",
-          "OneHandUse",
-          "PortableDesign",
-          "UserAdaptation"
-        ],
-        "image": "Papers/GestureDesign/GestureDesign预览图/2016 - DigitSpace Designing Thumb-to-Fingers Touch Interfaces for One-Handed and Eyes-Free Interactions.png"
-      },
-      {
-        "id": 152,
-        "title": "Fingert9- Leveraging  thumb-to-finger interaction for same-side-hand text entry on smartwatches",
-        "year": "2018",
-        "category": "GestureDesign",
-        "hardwareDevices": [
-          "SmartWatch",
-          "TouchScreen",
-          "WearableSensor",
-          "Wearables"
-        ],
-        "sensingTechnology": [
-          "CapacitiveSensor",
-          "PressureSensor"
-        ],
-        "recognitionClassification": [
-          "FingerTracking",
-          "GestureRecognition",
-          "StaticGestureRecognition"
-        ],
-        "interactionModalities": [
-          "BodyContactGesture",
-          "ContactBased",
-          "DirectTouch"
-        ],
-        "gestureTypes": [
-          "Hold",
-          "SingleHand",
-          "Tap",
-          "Thumb-Index"
-        ],
-        "applicationScenarios": [
-          "TextInput"
-        ],
-        "feedbackOutput": [
-          "HapticFeedback",
-          "RealTimeFeedback",
-          "VisualFeedback"
-        ],
-        "userExperienceDesign": [
-          "ElicitationStudy",
-          "EyesFree",
-          "OcclusionAvoidance",
-          "OneHandUse",
-          "SmallScreen",
-          "UserAdaptation"
-        ],
-        "image": "Papers/GestureDesign/GestureDesign预览图/2018 - Fingert9- Leveraging  thumb-to-finger interaction for same-side-hand text entry on smartwatches.png"
-      },
-      {
-        "id": 155,
-        "title": "The missing interface- Micro-gestures on augmented objects",
-        "year": "2019",
-        "category": "GestureDesign",
-        "hardwareDevices": [
-          "ARGlasses",
-          "WearableSensor",
-          "Wearables"
-        ],
-        "sensingTechnology": [
-          "RFSensing",
-          "RadarSensing"
-        ],
-        "recognitionClassification": [
-          "DynamicGestureRecognition",
-          "FingerTracking",
-          "GestureRecognition",
-          "StaticGestureRecognition"
-        ],
-        "interactionModalities": [
-          "ContactBased",
-          "DeviceContactGesture",
-          "InAirGesture",
-          "NonContactBased"
-        ],
-        "gestureTypes": [
-          "SingleHand",
-          "Swipe"
-        ],
-        "applicationScenarios": [
-          "AR",
-          "IndustryApplication",
-          "Training"
-        ],
-        "feedbackOutput": [
-          "VisualFeedback"
-        ],
-        "userExperienceDesign": [
-          "DiscreetInput",
-          "OcclusionAvoidance",
-          "OneHandUse",
-          "PortableDesign"
-        ],
-        "image": "Papers/GestureDesign/GestureDesign预览图/2019-The missing interface- Micro-gestures on augmented objects.png"
-      },
-      {
-        "id": 162,
-        "title": "Design of 3D Microgestures for Commands in Virtual Reality or Augmented Reality",
-        "year": "2023",
-        "category": "GestureDesign",
-        "hardwareDevices": [
-          "ARGlasses",
-          "TouchScreen",
-          "VRHeadset"
-        ],
-        "sensingTechnology": [
-          "ComputerVision",
-          "MotionSensor"
-        ],
-        "recognitionClassification": [
-          "3DPoseEstimation",
-          "FingerTracking",
-          "GestureRecognition",
-          "HandTracking"
-        ],
-        "interactionModalities": [
-          "InAirGesture",
-          "MultiModalInteraction",
-          "NonContactBased"
-        ],
-        "gestureTypes": [
-          "DirectionalGesture",
-          "Grasp",
-          "Pinch",
-          "SingleHand",
-          "Swipe",
-          "Tap"
-        ],
-        "applicationScenarios": [
-          "AR",
-          "Gaming",
-          "MediaControl",
-          "Navigation",
-          "ObjectManipulation",
-          "VR"
-        ],
-        "feedbackOutput": [
-          "HapticFeedback",
-          "VisualFeedback"
-        ],
-        "userExperienceDesign": [
-          "HandsFree",
-          "HighAccuracy",
-          "LowLatency",
-          "SocialAcceptability",
-          "UserAdaptation"
-        ],
-        "image": "Papers/GestureDesign/GestureDesign预览图/2023- Design of 3D Microgestures for Commands in Virtual Reality or Augmented Reality.png"
-      },
-      {
-        "id": 167,
-        "title": "User-Defined Game Input for Smart Glasses in Public Space",
-        "year": "2015",
-        "category": "GestureDesign",
-        "hardwareDevices": [
-          "SmartGlasses"
-        ],
-        "sensingTechnology": [
-          "ComputerVision",
-          "MotionSensor",
-          "OpticalTracking"
-        ],
-        "recognitionClassification": [
-          "FingerTracking",
-          "GestureRecognition",
-          "HandTracking"
-        ],
-        "interactionModalities": [
-          "BodyContactGesture",
-          "ContactBased",
-          "InAirGesture",
-          "MultiModalInteraction",
-          "NonContactBased"
-        ],
-        "gestureTypes": [
-          "DirectionalGesture",
-          "SingleHand",
-          "Swipe",
-          "Tap"
-        ],
-        "applicationScenarios": [
-          "AR",
-          "Gaming"
-        ],
-        "feedbackOutput": [
-          "AudioFeedback",
-          "VisualFeedback"
-        ],
-        "userExperienceDesign": [
-          "DiscreetInput",
-          "ElicitationStudy",
-          "EyesFree",
-          "HandsFree",
-          "SocialAcceptability"
-        ],
-        "image": "Papers/GestureDesign/GestureDesign预览图/2015-User-Defined Game Input for Smart Glasses in Public Space.png"
-      },
-      {
-        "id": 172,
-        "title": "A Taxonomy of Microinteractions Defining Microgestures based on Ergonomic and Scenario-dependent Requirements",
-        "year": "2011",
-        "category": "GestureDesign",
-        "hardwareDevices": [
-          "WearableSensor",
-          "Wearables"
-        ],
-        "sensingTechnology": [
-          "Accelerometer",
-          "DepthSensing",
-          "EMG",
-          "PressureSensor"
-        ],
-        "recognitionClassification": [
-          "FingerTracking",
-          "GestureRecognition"
-        ],
-        "interactionModalities": [
-          "ContactBased",
-          "MultiModalInteraction"
-        ],
-        "gestureTypes": [
-          "Grasp",
-          "Pinch",
-          "SingleHand",
-          "Tap"
-        ],
-        "applicationScenarios": [
-          "InVehicleInteraction",
-          "MediaControl",
-          "Navigation"
-        ],
-        "feedbackOutput": [
-          "HapticFeedback",
-          "MultimodalFeedback"
-        ],
-        "userExperienceDesign": [
-          "ElicitationStudy",
-          "EncumberedInteraction",
-          "EyesFree",
-          "OneHandUse"
-        ],
-        "image": "Papers/GestureDesign/GestureDesign预览图/2011-A Taxonomy of Microinteractions Defining Microgestures based on Ergonomic and Scenario-dependent Requirements.png"
-      },
-      {
-        "id": 183,
-        "title": "The intuitive grasp interface design and evaluation of micro-gestures on the steering wheel for driving scenario",
-        "year": "2020",
-        "category": "GestureDesign",
-        "image": "Papers/GestureDesign/GestureDesign预览图/2020 - The intuitive grasp interface design and evaluation of micro-gestures on the steering wheel for driving scenario.png",
-        "hardwareDevices": [],
-        "sensingTechnology": [],
-        "recognitionClassification": [],
-        "interactionModalities": [],
-        "gestureTypes": [],
-        "applicationScenarios": [],
-        "feedbackOutput": [],
-        "userExperienceDesign": []
-      },
-      {
-        "id": 184,
-        "title": "Transferable Microgestures Across Hand Posture and Location Constraints- Leveraging the Middle, Ring, and Pinky Fingers",
-        "year": "2023",
-        "category": "GestureDesign",
-        "image": "Papers/GestureDesign/GestureDesign预览图/2023 - Transferable Microgestures Across Hand Posture and Location Constraints- Leveraging the Middle, Ring, and Pinky Fingers.png",
-        "hardwareDevices": [],
-        "sensingTechnology": [],
-        "recognitionClassification": [],
-        "interactionModalities": [],
-        "gestureTypes": [],
-        "applicationScenarios": [],
-        "feedbackOutput": [],
-        "userExperienceDesign": []
-      },
-      {
-        "id": 185,
-        "title": "Segtouch",
-        "year": "2017",
-        "category": "GestureDesign",
-        "image": "Papers/GestureDesign/GestureDesign预览图/2017-Segtouch.png",
-        "hardwareDevices": [],
-        "sensingTechnology": [],
-        "recognitionClassification": [],
-        "interactionModalities": [],
-        "gestureTypes": [],
-        "applicationScenarios": [],
-        "feedbackOutput": [],
-        "userExperienceDesign": []
-      },
-      {
-        "id": 186,
-        "title": "Arpège learning multitouch chord gestures vocabularies",
-        "year": "2013",
-        "category": "GestureDesign",
-        "image": "Papers/GestureDesign/GestureDesign预览图/2013 - Arpège learning multitouch chord gestures vocabularies.png",
-        "hardwareDevices": [],
-        "sensingTechnology": [],
-        "recognitionClassification": [],
-        "interactionModalities": [],
-        "gestureTypes": [],
-        "applicationScenarios": [],
-        "feedbackOutput": [],
-        "userExperienceDesign": []
-      },
-      {
-        "id": 187,
-        "title": "PalmType Using Palms as Keyboards for Smart Glasses",
-        "year": "2015",
-        "category": "GestureDesign",
-        "image": "Papers/GestureDesign/GestureDesign预览图/2015-PalmType Using Palms as Keyboards for Smart Glasses.png",
-        "hardwareDevices": [],
-        "sensingTechnology": [],
-        "recognitionClassification": [],
-        "interactionModalities": [],
-        "gestureTypes": [],
-        "applicationScenarios": [],
-        "feedbackOutput": [],
-        "userExperienceDesign": []
-      }
-    ]
-  },
   "stats": {
-    "totalPapers": 165,
+    "totalPapers": 173,
     "categories": {
-      "hardware": 64,
-      "software": 36,
-      "GestureDesign": 65
+      "hardware": 83,
+      "software": 37,
+      "GestureDesign": 53
     },
     "yearRange": {
-      "min": 2002,
-      "max": 2025
+      "min": 2004,
+      "max": 2026
     }
   }
 };
+
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = PAPERS_DATA;
+}
