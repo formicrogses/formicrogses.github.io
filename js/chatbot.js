@@ -2142,8 +2142,6 @@ ${truncatedText}`;
         link.dataset.paperId = paper.id || '';
         link.setAttribute('aria-label', `Open paper details for ${paper.title}`);
         link.addEventListener('click', (event) => {
-            event.preventDefault();
-            event.stopPropagation();
             this.openPaperFromChat(paper);
         });
 
