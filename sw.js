@@ -1,5 +1,5 @@
 // Service Worker for PWA support
-const CACHE_NAME = 'gesture-research-v19';
+const CACHE_NAME = 'gesture-research-v20';
 const PRECACHE_URLS = [
   './',
   './index.html',
@@ -8,8 +8,8 @@ const PRECACHE_URLS = [
   './js/modal.js?v=202608231800',
   './js/app.js?v=202605272335',
   './js/upload.js?v=202605272335',
-  './js/chatbot-config.js?v=202608231810',
-  './js/chatbot.js?v=202608231810',
+  './js/chatbot-config.js?v=202608231820',
+  './js/chatbot.js?v=202608231820',
   './papers-data-new.js?v=202608231230',
   './data/user-submissions.json'
 ];

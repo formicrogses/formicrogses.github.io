@@ -2164,9 +2164,17 @@ ${truncatedText}`;
             window.history.pushState({}, '', `#paper-${encodeURIComponent(paperKey)}`);
         }
 
-        const paperCard = paper.id !== undefined && paper.id !== null
+        let paperCard = paper.id !== undefined && paper.id !== null
             ? document.getElementById(`paper-${String(paper.id)}`)
             : null;
+
+        const galleryApp = window.app;
+        while (!paperCard && galleryApp && galleryApp.currentIndex < galleryApp.filteredPapers.length) {
+            galleryApp.loadMore();
+            paperCard = paper.id !== undefined && paper.id !== null
+                ? document.getElementById(`paper-${String(paper.id)}`)
+                : null;
+        }
 
         if (paperCard) {
             this.closeChat();
