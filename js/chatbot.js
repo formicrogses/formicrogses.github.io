@@ -2161,11 +2161,22 @@ ${truncatedText}`;
 
         const paperKey = String(paper.id || paper.title || '').trim();
         if (paperKey) {
-            window.history.replaceState({}, '', `#paper-${encodeURIComponent(paperKey)}`);
+            window.history.pushState({}, '', `#paper-${encodeURIComponent(paperKey)}`);
+        }
+
+        const paperCard = paper.id !== undefined && paper.id !== null
+            ? document.getElementById(`paper-${String(paper.id)}`)
+            : null;
+
+        if (paperCard) {
+            this.closeChat();
+            paperCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            paperCard.classList.add('clicked');
+            window.setTimeout(() => paperCard.classList.remove('clicked'), 600);
         }
 
         const modal = new PaperModalClass(paper);
-        modal.show();
+        window.setTimeout(() => modal.show(), paperCard ? 220 : 0);
     }
 
     formatMarkdown(text) {

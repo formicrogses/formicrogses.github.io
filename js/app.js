@@ -1,7 +1,7 @@
 // Main application logic
 class GestureResearchGallery {
     constructor() {
-        this.serviceWorkerVersion = '202608231802';
+        this.serviceWorkerVersion = '202608231810';
         this.isServiceWorkerRefreshing = false;
         this.allPapers = [];
         this.filteredPapers = [];
@@ -579,6 +579,11 @@ class GestureResearchGallery {
         item.tabIndex = 0;
         item.setAttribute('role', 'button');
         item.setAttribute('aria-label', `Open details for ${paper.title}`);
+        if (paper.id !== undefined && paper.id !== null) {
+            const paperId = String(paper.id);
+            item.id = `paper-${paperId}`;
+            item.dataset.paperId = paperId;
+        }
         
         const imageContainer = document.createElement('div');
         imageContainer.className = 'image-container loading';
