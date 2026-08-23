@@ -4,6 +4,7 @@ class GrokChatbot {
             provider: 'openai',
             model: 'grok-4.5',
             modelLabel: 'Grok 4.5',
+            responseLanguage: 'English only',
             apiEndpoint: 'https://api.duckcoding.ai/v1/chat/completions',
             apiKey: '',
             maxResponseTokens: 3072,
@@ -717,7 +718,10 @@ class GrokChatbot {
     }
 
     async callChatAPI(message, relevantPapers = []) {
-        const messages = [];
+        const messages = [{
+            role: 'system',
+            content: 'Language policy: Reply in English only. Never output Chinese characters or Chinese-language text, even when the user writes in Chinese. Understand Chinese input silently, but keep every assistant response in English.'
+        }];
 
         if (this.conversationHistory.length === 0) {
             messages.push({
@@ -769,7 +773,8 @@ class GrokChatbot {
         }
         
         const data = await response.json();
-        const aiResponse = data.choices?.[0]?.message?.content || 'No response generated';
+        const rawResponse = data.choices?.[0]?.message?.content || 'No response generated';
+        const aiResponse = this.enforceEnglishResponse(rawResponse);
 
         this.conversationHistory.push({
             role: 'user',
@@ -781,6 +786,13 @@ class GrokChatbot {
         });
         
         return aiResponse;
+    }
+
+    enforceEnglishResponse(text) {
+        const response = String(text || '').trim();
+        return /[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff]/.test(response)
+            ? 'I can only respond in English. Please ask again and I will provide an English answer.'
+            : response;
     }
 
     /**
@@ -1814,7 +1826,8 @@ To access these papers:
         let context = `You are a research assistant for a website about gesture and microgesture interaction papers.
 
 Core rules:
-- Respond in the same language as the user unless the user asks otherwise.
+- Respond in English only. Never output Chinese characters or Chinese-language text.
+- If the user writes in Chinese, understand the request silently and answer in English.
 - Be accurate and structured; give enough detail for useful research reading.
 - Always ground claims in the retrieved papers when paper evidence is available.
 - Cite paper title, year, and author when making a specific claim.
@@ -2122,19 +2135,19 @@ ${truncatedText}`;
     }
 
     createPaperReferenceButton(paper, label, variant = 'id') {
-        const button = document.createElement('button');
-        button.type = 'button';
-        button.className = `chatbot-paper-link chatbot-paper-link-${variant}`;
-        button.textContent = label;
-        button.dataset.paperId = paper.id || '';
-        button.setAttribute('aria-label', `Open paper details for ${paper.title}`);
-        button.addEventListener('click', (event) => {
+        const link = document.createElement('a');
+        link.href = `#paper-${encodeURIComponent(String(paper.id || paper.title))}`;
+        link.className = `chatbot-paper-link chatbot-paper-link-${variant}`;
+        link.textContent = label;
+        link.dataset.paperId = paper.id || '';
+        link.setAttribute('aria-label', `Open paper details for ${paper.title}`);
+        link.addEventListener('click', (event) => {
             event.preventDefault();
             event.stopPropagation();
             this.openPaperFromChat(paper);
         });
 
-        return button;
+        return link;
     }
 
     openPaperFromChat(paper) {

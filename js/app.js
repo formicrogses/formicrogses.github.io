@@ -1,7 +1,7 @@
 // Main application logic
 class GestureResearchGallery {
     constructor() {
-        this.serviceWorkerVersion = '202608231600';
+        this.serviceWorkerVersion = '202608231730';
         this.isServiceWorkerRefreshing = false;
         this.allPapers = [];
         this.filteredPapers = [];
