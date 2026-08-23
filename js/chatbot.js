@@ -2155,12 +2155,18 @@ ${truncatedText}`;
             return;
         }
 
-        if (typeof PaperModal === 'undefined') {
+        const PaperModalClass = window.PaperModal || (typeof PaperModal !== 'undefined' ? PaperModal : null);
+        if (!PaperModalClass) {
             console.warn('PaperModal is not available');
             return;
         }
 
-        const modal = new PaperModal(paper);
+        const paperKey = String(paper.id || paper.title || '').trim();
+        if (paperKey) {
+            window.history.replaceState({}, '', `#paper-${encodeURIComponent(paperKey)}`);
+        }
+
+        const modal = new PaperModalClass(paper);
         modal.show();
     }
 
