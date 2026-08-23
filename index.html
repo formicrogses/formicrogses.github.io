@@ -1820,6 +1820,8 @@
         }
 
         .meta-item {
+            min-width: 0;
+            flex: 1 1 180px;
             font-size: 12px;
         }
 
@@ -1833,6 +1835,7 @@
             color: #333;
             font-weight: 400;
             font-size: 12px;
+            overflow-wrap: anywhere;
         }
 
         .modal-section {
@@ -4082,9 +4085,8 @@
                             <input type="url" id="uploadUrlInput" aria-describedby="uploadStatus" aria-required="true">
                         </label>
                         <label class="upload-field">
-                            <span>DOI</span>
-                            <input type="text" id="uploadDoiInput" placeholder="10.xxxx/xxxx or https://doi.org/..." aria-describedby="uploadDoiHelp uploadStatus">
-                            <span class="upload-helper" id="uploadDoiHelp">Paste a DOI or DOI URL to autofill title, authors, journal/conference, and year.</span>
+                            <span>DOI URL</span>
+                            <input type="url" id="uploadDoiInput" placeholder="https://doi.org/..." aria-describedby="uploadStatus">
                         </label>
                         <label class="upload-field">
                             <span>Authors</span>
@@ -4156,7 +4158,7 @@
     </div>
     
     <!-- Scripts -->
-    <script src="papers-data-new.js?v=202608231200"></script>
+    <script src="papers-data-new.js?v=202608231230"></script>
     <script src="js/modal.js?v=202605272335"></script>
     <script src="js/app.js?v=202605272335"></script>
     <script src="js/upload.js?v=202605272335"></script>
